@@ -19,6 +19,7 @@ namespace uu_library_app
             Application.Run(new Form1());
             Console.WriteLine("Test");
             Console.WriteLine("Deneme");
+            Console.WriteLine("merhaba deneme ");
         }
     }
 }
