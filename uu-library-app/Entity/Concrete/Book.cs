@@ -8,5 +8,6 @@ namespace uu_library_app.Entity.Concrete
 {
     public class Book
     {
+        string s;
     }
 }
