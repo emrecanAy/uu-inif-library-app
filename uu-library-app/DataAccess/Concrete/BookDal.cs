@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace uu_library_app.DataAccess.Concrete
 {
-    class BookDal
+    public class BookDal
     {
+        
     }
 }

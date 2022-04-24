@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace uu_library_app.Entity.Concrete
 {
-    class Book
+    public class Book
     {
         
     }

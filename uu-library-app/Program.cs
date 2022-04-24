@@ -20,6 +20,7 @@ namespace uu_library_app
             Application.Run(new KutuphaneGorevlisiArayuz());
             Console.WriteLine("Test");
             Console.WriteLine("Deneme");
+            Console.WriteLine("merhaba deneme ");
         }
     }
 }
