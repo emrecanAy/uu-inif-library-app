@@ -8,5 +8,6 @@ namespace uu_library_app.Business.Concrete
 {
     class BookManager
     {
+        
     }
 }
