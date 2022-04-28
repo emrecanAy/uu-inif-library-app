@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace uu_library_app
 {
    public static class Program
@@ -17,7 +18,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KutuphaneGorevlisiArayuz());
+            Application.Run(new Form1());
             Console.WriteLine("Test");
             Console.WriteLine("Deneme");
             Console.WriteLine("merhaba deneme ");
