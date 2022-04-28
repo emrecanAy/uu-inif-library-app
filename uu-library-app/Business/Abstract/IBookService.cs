@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace uu_library_app.Business.Abstract
 {
-    interface IBookService
+    public interface IBookService
     {
     }
 }

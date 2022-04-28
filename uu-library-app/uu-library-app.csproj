@@ -47,10 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Abstract\IBookService.cs" />
+    <Compile Include="Business\Abstract\IDepartmentService.cs" />
     <Compile Include="Business\Concrete\BookManager.cs" />
+    <Compile Include="Business\Concrete\DepartmentManager.cs" />
     <Compile Include="DataAccess\Abstract\IBookDal.cs" />
-    <Compile Include="DataAccess\Concrete\BookDal.cs" />
+    <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
+    <Compile Include="DataAccess\Concrete\EntityFramework\BookDal.cs" />
+    <Compile Include="DataAccess\Concrete\EntityFramework\DepartmentDal.cs" />
     <Compile Include="Entity\Concrete\Book.cs" />
+    <Compile Include="Entity\Concrete\Department.cs" />
     <Compile Include="FormUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
