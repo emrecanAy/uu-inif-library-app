@@ -31,11 +31,20 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnAnalytics = new System.Windows.Forms.Button();
+            this.panelMembersSubMenu = new System.Windows.Forms.Panel();
+            this.btnListMember = new System.Windows.Forms.Button();
+            this.btnEditMember = new System.Windows.Forms.Button();
+            this.btnDeleteMember = new System.Windows.Forms.Button();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
+            this.panelBookSubMenu = new System.Windows.Forms.Panel();
+            this.btnListBook = new System.Windows.Forms.Button();
+            this.btnEditBook = new System.Windows.Forms.Button();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,7 +97,10 @@ namespace uu_library_app.FormUI
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panelMembersSubMenu.SuspendLayout();
+            this.panelBookSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -114,44 +126,234 @@ namespace uu_library_app.FormUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.pnlNav);
             this.panel1.Controls.Add(this.btnSettings);
-            this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnAnalytics);
+            this.panel1.Controls.Add(this.panelMembersSubMenu);
             this.panel1.Controls.Add(this.btnMembers);
+            this.panel1.Controls.Add(this.panelBookSubMenu);
+            this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnBooks);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 577);
+            this.panel1.Size = new System.Drawing.Size(186, 629);
             this.panel1.TabIndex = 0;
-            // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 193);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(3, 100);
-            this.pnlNav.TabIndex = 1;
             // 
             // btnSettings
             // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 297);
+            this.btnSettings.Location = new System.Drawing.Point(0, 517);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 33);
-            this.btnSettings.TabIndex = 8;
+            this.btnSettings.TabIndex = 13;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
+            // 
+            // btnAnalytics
+            // 
+            this.btnAnalytics.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnalytics.FlatAppearance.BorderSize = 0;
+            this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalytics.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("btnAnalytics.Image")));
+            this.btnAnalytics.Location = new System.Drawing.Point(0, 484);
+            this.btnAnalytics.Name = "btnAnalytics";
+            this.btnAnalytics.Size = new System.Drawing.Size(186, 33);
+            this.btnAnalytics.TabIndex = 12;
+            this.btnAnalytics.Text = "Analytics";
+            this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAnalytics.UseVisualStyleBackColor = true;
+            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
+            // 
+            // panelMembersSubMenu
+            // 
+            this.panelMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.panelMembersSubMenu.Controls.Add(this.btnListMember);
+            this.panelMembersSubMenu.Controls.Add(this.btnEditMember);
+            this.panelMembersSubMenu.Controls.Add(this.btnDeleteMember);
+            this.panelMembersSubMenu.Controls.Add(this.btnAddMember);
+            this.panelMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 372);
+            this.panelMembersSubMenu.Name = "panelMembersSubMenu";
+            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 112);
+            this.panelMembersSubMenu.TabIndex = 11;
+            // 
+            // btnListMember
+            // 
+            this.btnListMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListMember.FlatAppearance.BorderSize = 0;
+            this.btnListMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListMember.Location = new System.Drawing.Point(0, 84);
+            this.btnListMember.Name = "btnListMember";
+            this.btnListMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnListMember.Size = new System.Drawing.Size(186, 28);
+            this.btnListMember.TabIndex = 3;
+            this.btnListMember.Text = "List Member";
+            this.btnListMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListMember.UseVisualStyleBackColor = true;
+            this.btnListMember.Click += new System.EventHandler(this.btnListMember_Click);
+            // 
+            // btnEditMember
+            // 
+            this.btnEditMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditMember.FlatAppearance.BorderSize = 0;
+            this.btnEditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEditMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditMember.Location = new System.Drawing.Point(0, 56);
+            this.btnEditMember.Name = "btnEditMember";
+            this.btnEditMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnEditMember.Size = new System.Drawing.Size(186, 28);
+            this.btnEditMember.TabIndex = 2;
+            this.btnEditMember.Text = "Edit Member";
+            this.btnEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditMember.UseVisualStyleBackColor = true;
+            this.btnEditMember.Click += new System.EventHandler(this.btnEditMember_Click);
+            // 
+            // btnDeleteMember
+            // 
+            this.btnDeleteMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeleteMember.FlatAppearance.BorderSize = 0;
+            this.btnDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDeleteMember.Location = new System.Drawing.Point(0, 28);
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDeleteMember.Size = new System.Drawing.Size(186, 28);
+            this.btnDeleteMember.TabIndex = 1;
+            this.btnDeleteMember.Text = "Delete Member";
+            this.btnDeleteMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteMember.UseVisualStyleBackColor = true;
+            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
+            // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddMember.FlatAppearance.BorderSize = 0;
+            this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddMember.Location = new System.Drawing.Point(0, 0);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddMember.Size = new System.Drawing.Size(186, 28);
+            this.btnAddMember.TabIndex = 0;
+            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
+            // btnMembers
+            // 
+            this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMembers.FlatAppearance.BorderSize = 0;
+            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMembers.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
+            this.btnMembers.Location = new System.Drawing.Point(0, 339);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Size = new System.Drawing.Size(186, 33);
+            this.btnMembers.TabIndex = 10;
+            this.btnMembers.Text = "Members";
+            this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMembers.UseVisualStyleBackColor = true;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
+            this.btnMembers.Leave += new System.EventHandler(this.btnMembers_Leave);
+            // 
+            // panelBookSubMenu
+            // 
+            this.panelBookSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.panelBookSubMenu.Controls.Add(this.btnListBook);
+            this.panelBookSubMenu.Controls.Add(this.btnEditBook);
+            this.panelBookSubMenu.Controls.Add(this.btnDeleteBook);
+            this.panelBookSubMenu.Controls.Add(this.btnAddBook);
+            this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 227);
+            this.panelBookSubMenu.Name = "panelBookSubMenu";
+            this.panelBookSubMenu.Size = new System.Drawing.Size(186, 112);
+            this.panelBookSubMenu.TabIndex = 9;
+            // 
+            // btnListBook
+            // 
+            this.btnListBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListBook.FlatAppearance.BorderSize = 0;
+            this.btnListBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListBook.Location = new System.Drawing.Point(0, 84);
+            this.btnListBook.Name = "btnListBook";
+            this.btnListBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnListBook.Size = new System.Drawing.Size(186, 28);
+            this.btnListBook.TabIndex = 3;
+            this.btnListBook.Text = "List Book";
+            this.btnListBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListBook.UseVisualStyleBackColor = true;
+            this.btnListBook.Click += new System.EventHandler(this.btnListBook_Click);
+            // 
+            // btnEditBook
+            // 
+            this.btnEditBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditBook.FlatAppearance.BorderSize = 0;
+            this.btnEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEditBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditBook.Location = new System.Drawing.Point(0, 56);
+            this.btnEditBook.Name = "btnEditBook";
+            this.btnEditBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnEditBook.Size = new System.Drawing.Size(186, 28);
+            this.btnEditBook.TabIndex = 2;
+            this.btnEditBook.Text = "Edit Book";
+            this.btnEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditBook.UseVisualStyleBackColor = true;
+            this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeleteBook.FlatAppearance.BorderSize = 0;
+            this.btnDeleteBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDeleteBook.Location = new System.Drawing.Point(0, 28);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDeleteBook.Size = new System.Drawing.Size(186, 28);
+            this.btnDeleteBook.TabIndex = 1;
+            this.btnDeleteBook.Text = "Delete Book";
+            this.btnDeleteBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddBook.FlatAppearance.BorderSize = 0;
+            this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddBook.Location = new System.Drawing.Point(0, 0);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddBook.Size = new System.Drawing.Size(186, 28);
+            this.btnAddBook.TabIndex = 0;
+            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnLogOut
             // 
@@ -160,7 +362,7 @@ namespace uu_library_app.FormUI
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 543);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 587);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(186, 33);
             this.btnLogOut.TabIndex = 7;
@@ -170,48 +372,15 @@ namespace uu_library_app.FormUI
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             this.btnLogOut.Leave += new System.EventHandler(this.btnLogOut_Leave);
             // 
-            // btnAnalytics
-            // 
-            this.btnAnalytics.FlatAppearance.BorderSize = 0;
-            this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalytics.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("btnAnalytics.Image")));
-            this.btnAnalytics.Location = new System.Drawing.Point(0, 263);
-            this.btnAnalytics.Name = "btnAnalytics";
-            this.btnAnalytics.Size = new System.Drawing.Size(186, 33);
-            this.btnAnalytics.TabIndex = 6;
-            this.btnAnalytics.Text = "Analytics";
-            this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAnalytics.UseVisualStyleBackColor = true;
-            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
-            this.btnAnalytics.Leave += new System.EventHandler(this.btnAnalytics_Leave);
-            // 
-            // btnMembers
-            // 
-            this.btnMembers.FlatAppearance.BorderSize = 0;
-            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMembers.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
-            this.btnMembers.Location = new System.Drawing.Point(0, 229);
-            this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(186, 33);
-            this.btnMembers.TabIndex = 5;
-            this.btnMembers.Text = "Members";
-            this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMembers.UseVisualStyleBackColor = true;
-            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
-            this.btnMembers.Leave += new System.EventHandler(this.btnMembers_Leave);
-            // 
             // btnBooks
             // 
+            this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBooks.FlatAppearance.BorderSize = 0;
             this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBooks.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
-            this.btnBooks.Location = new System.Drawing.Point(0, 195);
+            this.btnBooks.Location = new System.Drawing.Point(0, 194);
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(186, 33);
             this.btnBooks.TabIndex = 4;
@@ -287,7 +456,7 @@ namespace uu_library_app.FormUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(196, 16);
+            this.label3.Location = new System.Drawing.Point(194, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 32);
             this.label3.TabIndex = 1;
@@ -300,7 +469,7 @@ namespace uu_library_app.FormUI
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(192, 77);
+            this.panel3.Location = new System.Drawing.Point(200, 105);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 130);
             this.panel3.TabIndex = 2;
@@ -355,7 +524,7 @@ namespace uu_library_app.FormUI
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(465, 77);
+            this.panel4.Location = new System.Drawing.Point(473, 105);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 130);
             this.panel4.TabIndex = 4;
@@ -410,7 +579,7 @@ namespace uu_library_app.FormUI
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(192, 242);
+            this.panel5.Location = new System.Drawing.Point(200, 270);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 130);
             this.panel5.TabIndex = 5;
@@ -465,7 +634,7 @@ namespace uu_library_app.FormUI
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(465, 242);
+            this.panel6.Location = new System.Drawing.Point(473, 270);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 130);
             this.panel6.TabIndex = 5;
@@ -520,7 +689,7 @@ namespace uu_library_app.FormUI
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label18);
-            this.panel7.Location = new System.Drawing.Point(747, 77);
+            this.panel7.Location = new System.Drawing.Point(755, 105);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 130);
             this.panel7.TabIndex = 6;
@@ -575,7 +744,7 @@ namespace uu_library_app.FormUI
             this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Controls.Add(this.label21);
-            this.panel8.Location = new System.Drawing.Point(750, 242);
+            this.panel8.Location = new System.Drawing.Point(758, 270);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(258, 130);
             this.panel8.TabIndex = 5;
@@ -630,7 +799,7 @@ namespace uu_library_app.FormUI
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
-            this.panel9.Location = new System.Drawing.Point(192, 395);
+            this.panel9.Location = new System.Drawing.Point(200, 423);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(258, 130);
             this.panel9.TabIndex = 5;
@@ -685,7 +854,7 @@ namespace uu_library_app.FormUI
             this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.label26);
             this.panel10.Controls.Add(this.label27);
-            this.panel10.Location = new System.Drawing.Point(465, 395);
+            this.panel10.Location = new System.Drawing.Point(473, 423);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(258, 130);
             this.panel10.TabIndex = 5;
@@ -740,7 +909,7 @@ namespace uu_library_app.FormUI
             this.panel11.Controls.Add(this.label28);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(747, 395);
+            this.panel11.Location = new System.Drawing.Point(755, 423);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(258, 130);
             this.panel11.TabIndex = 5;
@@ -788,12 +957,21 @@ namespace uu_library_app.FormUI
             this.label30.TabIndex = 0;
             this.label30.Text = "Borrowed Books";
             // 
+            // pnlNewNav
+            // 
+            this.pnlNewNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pnlNewNav.Location = new System.Drawing.Point(0, 193);
+            this.pnlNewNav.Name = "pnlNewNav";
+            this.pnlNewNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNewNav.TabIndex = 7;
+            // 
             // LibrarianInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1026, 577);
+            this.ClientSize = new System.Drawing.Size(1026, 629);
+            this.Controls.Add(this.pnlNewNav);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
@@ -811,6 +989,8 @@ namespace uu_library_app.FormUI
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);
+            this.panelMembersSubMenu.ResumeLayout(false);
+            this.panelBookSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -849,17 +1029,13 @@ namespace uu_library_app.FormUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnAnalytics;
-        private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -906,5 +1082,19 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Panel panelBookSubMenu;
+        private System.Windows.Forms.Button btnListBook;
+        private System.Windows.Forms.Button btnEditBook;
+        private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Panel panelMembersSubMenu;
+        private System.Windows.Forms.Button btnListMember;
+        private System.Windows.Forms.Button btnEditMember;
+        private System.Windows.Forms.Button btnDeleteMember;
+        private System.Windows.Forms.Button btnAddMember;
+        private System.Windows.Forms.Button btnMembers;
+        private System.Windows.Forms.Panel pnlNewNav;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnAnalytics;
     }
 }

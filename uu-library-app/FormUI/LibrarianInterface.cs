@@ -25,10 +25,38 @@ namespace uu_library_app.FormUI
         public LibrarianInterface()
         {
             InitializeComponent();
+            customizeDesign();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            pnlNav.Height = btnDashboard.Height;
-            pnlNav.Top = btnDashboard.Top;
-            pnlNav.Left = btnDashboard.Left;
+            pnlNewNav.Height = btnDashboard.Height;
+            pnlNewNav.Top = btnDashboard.Top;
+            pnlNewNav.Left = btnDashboard.Left;
+        }
+        private void customizeDesign()
+        {
+            panelBookSubMenu.Visible = false;
+            panelMembersSubMenu.Visible = false;
+            
+        }
+        private void hideSubMenu()
+        {
+            if (panelBookSubMenu.Visible == true)
+                panelBookSubMenu.Visible = false;
+            if (panelMembersSubMenu.Visible == true)
+                panelMembersSubMenu.Visible = false;
+
+
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
         }
 
         private void LibrarianInterface_Load(object sender, EventArgs e)
@@ -38,49 +66,52 @@ namespace uu_library_app.FormUI
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnDashboard.Height;
-            pnlNav.Top = btnDashboard.Top;
-            pnlNav.Left = btnDashboard.Left;
+            pnlNewNav.Height = btnDashboard.Height;
+            pnlNewNav.Top = btnDashboard.Top;
+            pnlNewNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnBooks.Height;
-            pnlNav.Top = btnBooks.Top;
-            pnlNav.Left = btnBooks.Left;
+            pnlNewNav.Height = btnBooks.Height;
+            pnlNewNav.Top = btnBooks.Top;
+            pnlNewNav.Left = btnBooks.Left;
             btnBooks.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(panelBookSubMenu);
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnMembers.Height;
-            pnlNav.Top = btnMembers.Top;
-            pnlNav.Left = btnMembers.Left;
+            pnlNewNav.Height = btnMembers.Height;
+            pnlNewNav.Top = btnMembers.Top;
+            pnlNewNav.Left = btnMembers.Left;
             btnMembers.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(panelMembersSubMenu);
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnAnalytics.Height;
-            pnlNav.Top = btnAnalytics.Top;
-            pnlNav.Left = btnAnalytics.Left;
+            pnlNewNav.Height = btnAnalytics.Height;
+            pnlNewNav.Top = btnAnalytics.Top;
+            pnlNewNav.Left = btnAnalytics.Left;
             btnAnalytics.BackColor = Color.FromArgb(46, 51, 73);
         }
 
+    
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnSettings.Height;
-            pnlNav.Top = btnSettings.Top;
-            pnlNav.Left = btnSettings.Left;
+            pnlNewNav.Height = btnSettings.Height;
+            pnlNewNav.Top = btnSettings.Top;
+            pnlNewNav.Left = btnSettings.Left;
             btnSettings.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnLogOut.Height;
-            pnlNav.Top = btnLogOut.Top;
-            pnlNav.Left = btnLogOut.Left;
+            pnlNewNav.Height = btnLogOut.Height;
+            pnlNewNav.Top = btnLogOut.Top;
+            pnlNewNav.Left = btnLogOut.Left;
             btnLogOut.BackColor = Color.FromArgb(46, 51, 73);
         }
 
@@ -113,5 +144,53 @@ namespace uu_library_app.FormUI
         {
             btnLogOut.BackColor = Color.FromArgb(24, 30, 54);
         }
+        #region CRUD Books Buttons
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnDeleteBook_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnEditBook_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnListBook_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+
+        #endregion
+
+        #region CRUD Members Buttons
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnDeleteMember_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnEditMember_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnListMember_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        #endregion
+
+     
     }
 }
