@@ -157,6 +157,7 @@ namespace uu_library_app.FormUI
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
             // 
             // btnAnalytics
             // 
@@ -174,6 +175,7 @@ namespace uu_library_app.FormUI
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
             this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
+            this.btnAnalytics.Leave += new System.EventHandler(this.btnAnalytics_Leave);
             // 
             // panelMembersSubMenu
             // 
@@ -195,13 +197,15 @@ namespace uu_library_app.FormUI
             this.btnListMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnListMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListMember.Image = ((System.Drawing.Image)(resources.GetObject("btnListMember.Image")));
             this.btnListMember.Location = new System.Drawing.Point(0, 84);
             this.btnListMember.Name = "btnListMember";
-            this.btnListMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnListMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnListMember.Size = new System.Drawing.Size(186, 28);
             this.btnListMember.TabIndex = 3;
-            this.btnListMember.Text = "List Member";
+            this.btnListMember.Text = " List Member";
             this.btnListMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListMember.UseVisualStyleBackColor = true;
             this.btnListMember.Click += new System.EventHandler(this.btnListMember_Click);
             // 
@@ -212,13 +216,15 @@ namespace uu_library_app.FormUI
             this.btnEditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnEditMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditMember.Image = ((System.Drawing.Image)(resources.GetObject("btnEditMember.Image")));
             this.btnEditMember.Location = new System.Drawing.Point(0, 56);
             this.btnEditMember.Name = "btnEditMember";
-            this.btnEditMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnEditMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnEditMember.Size = new System.Drawing.Size(186, 28);
             this.btnEditMember.TabIndex = 2;
-            this.btnEditMember.Text = "Edit Member";
+            this.btnEditMember.Text = " Edit Member";
             this.btnEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditMember.UseVisualStyleBackColor = true;
             this.btnEditMember.Click += new System.EventHandler(this.btnEditMember_Click);
             // 
@@ -229,13 +235,15 @@ namespace uu_library_app.FormUI
             this.btnDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDeleteMember.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteMember.Image")));
             this.btnDeleteMember.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteMember.Name = "btnDeleteMember";
-            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnDeleteMember.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteMember.TabIndex = 1;
-            this.btnDeleteMember.Text = "Delete Member";
+            this.btnDeleteMember.Text = " Delete Member";
             this.btnDeleteMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteMember.UseVisualStyleBackColor = true;
             this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
             // 
@@ -246,13 +254,15 @@ namespace uu_library_app.FormUI
             this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
             this.btnAddMember.Location = new System.Drawing.Point(0, 0);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAddMember.Size = new System.Drawing.Size(186, 28);
             this.btnAddMember.TabIndex = 0;
-            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.Text = " Add Member";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddMember.UseVisualStyleBackColor = true;
             this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
@@ -294,13 +304,14 @@ namespace uu_library_app.FormUI
             this.btnListBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnListBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListBook.Image = ((System.Drawing.Image)(resources.GetObject("btnListBook.Image")));
             this.btnListBook.Location = new System.Drawing.Point(0, 84);
             this.btnListBook.Name = "btnListBook";
-            this.btnListBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnListBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnListBook.Size = new System.Drawing.Size(186, 28);
             this.btnListBook.TabIndex = 3;
-            this.btnListBook.Text = "List Book";
-            this.btnListBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListBook.Text = " Book List";
+            this.btnListBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListBook.UseVisualStyleBackColor = true;
             this.btnListBook.Click += new System.EventHandler(this.btnListBook_Click);
             // 
@@ -311,13 +322,14 @@ namespace uu_library_app.FormUI
             this.btnEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnEditBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditBook.Image = ((System.Drawing.Image)(resources.GetObject("btnEditBook.Image")));
             this.btnEditBook.Location = new System.Drawing.Point(0, 56);
             this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnEditBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnEditBook.Size = new System.Drawing.Size(186, 28);
             this.btnEditBook.TabIndex = 2;
-            this.btnEditBook.Text = "Edit Book";
-            this.btnEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditBook.Text = " Edit Book";
+            this.btnEditBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditBook.UseVisualStyleBackColor = true;
             this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
@@ -328,13 +340,14 @@ namespace uu_library_app.FormUI
             this.btnDeleteBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteBook.Image")));
             this.btnDeleteBook.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnDeleteBook.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteBook.TabIndex = 1;
-            this.btnDeleteBook.Text = "Delete Book";
-            this.btnDeleteBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteBook.Text = " Delete Book";
+            this.btnDeleteBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteBook.UseVisualStyleBackColor = true;
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
@@ -345,13 +358,15 @@ namespace uu_library_app.FormUI
             this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddBook.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBook.Image")));
             this.btnAddBook.Location = new System.Drawing.Point(0, 0);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAddBook.Size = new System.Drawing.Size(186, 28);
             this.btnAddBook.TabIndex = 0;
-            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.Text = " Add Book";
             this.btnAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
@@ -384,7 +399,7 @@ namespace uu_library_app.FormUI
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(186, 33);
             this.btnBooks.TabIndex = 4;
-            this.btnBooks.Text = "    Books     ";
+            this.btnBooks.Text = "Books     ";
             this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
@@ -402,7 +417,7 @@ namespace uu_library_app.FormUI
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(186, 33);
             this.btnDashboard.TabIndex = 3;
-            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.Text = " Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
@@ -454,9 +469,9 @@ namespace uu_library_app.FormUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(194, 32);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(205, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 32);
             this.label3.TabIndex = 1;

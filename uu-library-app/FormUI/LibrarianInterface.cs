@@ -113,6 +113,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Top = btnLogOut.Top;
             pnlNewNav.Left = btnLogOut.Left;
             btnLogOut.BackColor = Color.FromArgb(46, 51, 73);
+            Application.Exit();
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
@@ -130,6 +131,7 @@ namespace uu_library_app.FormUI
             btnMembers.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+        
         private void btnAnalytics_Leave(object sender, EventArgs e)
         {
             btnAnalytics.BackColor = Color.FromArgb(24, 30, 54);
@@ -189,8 +191,9 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
+
+
         #endregion
 
-     
     }
 }
