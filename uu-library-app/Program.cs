@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using uu_library_app.FormUI;
 
 namespace uu_library_app
 {
@@ -17,10 +18,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KutuphaneGorevlisiArayuz());
-            Console.WriteLine("Test");
-            Console.WriteLine("Deneme");
-            Console.WriteLine("merhaba deneme ");
+            Application.Run(new Form1());
         }
     }
 }
