@@ -31,6 +31,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
         }
+        #region Methods
         private void customizeDesign()
         {
             panelBookSubMenu.Visible = false;
@@ -58,14 +59,30 @@ namespace uu_library_app.FormUI
                 subMenu.Visible = false;
             }
         }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
 
+        }
+#endregion
         private void LibrarianInterface_Load(object sender, EventArgs e)
         {
 
         }
-
+        #region Buttons Click Events
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+           
             pnlNewNav.Height = btnDashboard.Height;
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
@@ -115,7 +132,8 @@ namespace uu_library_app.FormUI
             btnLogOut.BackColor = Color.FromArgb(46, 51, 73);
             Application.Exit();
         }
-
+#endregion
+        #region Buttons Leave
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
@@ -146,9 +164,11 @@ namespace uu_library_app.FormUI
         {
             btnLogOut.BackColor = Color.FromArgb(24, 30, 54);
         }
+#endregion
         #region CRUD Books Buttons
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            openChildForm(new Add_Book());
             hideSubMenu();
         }
 
@@ -169,7 +189,6 @@ namespace uu_library_app.FormUI
 
 
         #endregion
-
         #region CRUD Members Buttons
         private void btnAddMember_Click(object sender, EventArgs e)
         {

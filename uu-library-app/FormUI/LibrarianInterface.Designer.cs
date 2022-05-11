@@ -98,6 +98,7 @@ namespace uu_library_app.FormUI
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.pnlNewNav = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelMembersSubMenu.SuspendLayout();
             this.panelBookSubMenu.SuspendLayout();
@@ -121,6 +122,7 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -471,11 +473,11 @@ namespace uu_library_app.FormUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(205, 22);
+            this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 32);
+            this.label3.Size = new System.Drawing.Size(180, 32);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Dashboard";
+            this.label3.Text = "Dashboard :";
             // 
             // panel3
             // 
@@ -484,7 +486,7 @@ namespace uu_library_app.FormUI
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(200, 105);
+            this.panel3.Location = new System.Drawing.Point(15, 105);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 130);
             this.panel3.TabIndex = 2;
@@ -539,7 +541,7 @@ namespace uu_library_app.FormUI
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(473, 105);
+            this.panel4.Location = new System.Drawing.Point(565, 105);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 130);
             this.panel4.TabIndex = 4;
@@ -594,7 +596,7 @@ namespace uu_library_app.FormUI
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(200, 270);
+            this.panel5.Location = new System.Drawing.Point(15, 275);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 130);
             this.panel5.TabIndex = 5;
@@ -649,7 +651,7 @@ namespace uu_library_app.FormUI
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(473, 270);
+            this.panel6.Location = new System.Drawing.Point(565, 275);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 130);
             this.panel6.TabIndex = 5;
@@ -704,7 +706,7 @@ namespace uu_library_app.FormUI
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label18);
-            this.panel7.Location = new System.Drawing.Point(755, 105);
+            this.panel7.Location = new System.Drawing.Point(290, 105);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 130);
             this.panel7.TabIndex = 6;
@@ -759,7 +761,7 @@ namespace uu_library_app.FormUI
             this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Controls.Add(this.label21);
-            this.panel8.Location = new System.Drawing.Point(758, 270);
+            this.panel8.Location = new System.Drawing.Point(290, 275);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(258, 130);
             this.panel8.TabIndex = 5;
@@ -814,7 +816,7 @@ namespace uu_library_app.FormUI
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
-            this.panel9.Location = new System.Drawing.Point(200, 423);
+            this.panel9.Location = new System.Drawing.Point(15, 445);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(258, 130);
             this.panel9.TabIndex = 5;
@@ -869,7 +871,7 @@ namespace uu_library_app.FormUI
             this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.label26);
             this.panel10.Controls.Add(this.label27);
-            this.panel10.Location = new System.Drawing.Point(473, 423);
+            this.panel10.Location = new System.Drawing.Point(565, 445);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(258, 130);
             this.panel10.TabIndex = 5;
@@ -924,7 +926,7 @@ namespace uu_library_app.FormUI
             this.panel11.Controls.Add(this.label28);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(755, 423);
+            this.panel11.Location = new System.Drawing.Point(290, 445);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(258, 130);
             this.panel11.TabIndex = 5;
@@ -980,23 +982,31 @@ namespace uu_library_app.FormUI
             this.pnlNewNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNewNav.TabIndex = 7;
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Controls.Add(this.panel3);
+            this.panelChildForm.Controls.Add(this.panel5);
+            this.panelChildForm.Controls.Add(this.label3);
+            this.panelChildForm.Controls.Add(this.panel11);
+            this.panelChildForm.Controls.Add(this.panel9);
+            this.panelChildForm.Controls.Add(this.panel8);
+            this.panelChildForm.Controls.Add(this.panel10);
+            this.panelChildForm.Controls.Add(this.panel7);
+            this.panelChildForm.Controls.Add(this.panel4);
+            this.panelChildForm.Controls.Add(this.panel6);
+            this.panelChildForm.Location = new System.Drawing.Point(182, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(850, 629);
+            this.panelChildForm.TabIndex = 8;
+            // 
             // LibrarianInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1026, 629);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnlNewNav);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrarianInterface";
@@ -1036,8 +1046,9 @@ namespace uu_library_app.FormUI
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1111,5 +1122,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Panel pnlNewNav;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAnalytics;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }
