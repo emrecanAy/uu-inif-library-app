@@ -55,6 +55,12 @@
     <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\BookDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\DepartmentDal.cs" />
+    <Compile Include="Delete-Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete-Student.Designer.cs">
+      <DependentUpon>Delete-Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Concrete\Book.cs" />
     <Compile Include="Entity\Concrete\Department.cs" />
     <Compile Include="FormUI\Add-Student.cs">
