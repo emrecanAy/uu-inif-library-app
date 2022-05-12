@@ -67,6 +67,12 @@
     <Compile Include="Delete-Student.Designer.cs">
       <DependentUpon>Delete-Student.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit-Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit-Student.Designer.cs">
+      <DependentUpon>Edit-Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Concrete\Book.cs" />
     <Compile Include="Entity\Concrete\Department.cs" />
     <Compile Include="FormUI\Add-Student.cs">
@@ -83,9 +89,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add-Book.resx">
-      <DependentUpon>Add-Book.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
     </EmbeddedResource>

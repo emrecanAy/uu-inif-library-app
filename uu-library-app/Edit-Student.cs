@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace uu_library_app
 {
-    public partial class Delete_Student : Form
+    public partial class Edit_Student : Form
     {
-        public Delete_Student()
+        public Edit_Student()
         {
             InitializeComponent();
-        }
-
-        private void Delete_Student_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
