@@ -46,14 +46,6 @@ namespace uu_library_app.FormUI
             this.picboxOkulNo = new System.Windows.Forms.PictureBox();
             this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.lblOkulNo = new System.Windows.Forms.Label();
-            this.picboxSifreTekrar = new System.Windows.Forms.PictureBox();
-            this.picboxSifre = new System.Windows.Forms.PictureBox();
-            this.pnlSifreTekrar = new System.Windows.Forms.Panel();
-            this.txtSifreTekrar = new System.Windows.Forms.TextBox();
-            this.pnlSifre = new System.Windows.Forms.Panel();
-            this.txtSifre = new System.Windows.Forms.TextBox();
-            this.lblSifreTekrar = new System.Windows.Forms.Label();
-            this.lblSifre = new System.Windows.Forms.Label();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.picboxBack2 = new System.Windows.Forms.PictureBox();
@@ -62,8 +54,6 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSifreTekrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSifre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +64,7 @@ namespace uu_library_app.FormUI
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(176, 143);
+            this.lblAd.Location = new System.Drawing.Point(176, 165);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(125, 25);
             this.lblAd.TabIndex = 0;
@@ -86,7 +76,7 @@ namespace uu_library_app.FormUI
             this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblSoyad.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblSoyad.ForeColor = System.Drawing.Color.White;
-            this.lblSoyad.Location = new System.Drawing.Point(451, 143);
+            this.lblSoyad.Location = new System.Drawing.Point(451, 165);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(153, 25);
             this.lblSoyad.TabIndex = 1;
@@ -98,7 +88,7 @@ namespace uu_library_app.FormUI
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(220, 177);
+            this.txtAd.Location = new System.Drawing.Point(220, 199);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 27);
             this.txtAd.TabIndex = 1;
@@ -106,7 +96,7 @@ namespace uu_library_app.FormUI
             // pnlAd
             // 
             this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(181, 211);
+            this.pnlAd.Location = new System.Drawing.Point(181, 233);
             this.pnlAd.Name = "pnlAd";
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 3;
@@ -114,7 +104,7 @@ namespace uu_library_app.FormUI
             // pnlSoyad
             // 
             this.pnlSoyad.BackColor = System.Drawing.Color.White;
-            this.pnlSoyad.Location = new System.Drawing.Point(456, 211);
+            this.pnlSoyad.Location = new System.Drawing.Point(456, 233);
             this.pnlSoyad.Name = "pnlSoyad";
             this.pnlSoyad.Size = new System.Drawing.Size(203, 1);
             this.pnlSoyad.TabIndex = 7;
@@ -125,7 +115,7 @@ namespace uu_library_app.FormUI
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtSoyad.Location = new System.Drawing.Point(496, 177);
+            this.txtSoyad.Location = new System.Drawing.Point(496, 199);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(164, 27);
             this.txtSoyad.TabIndex = 2;
@@ -133,7 +123,7 @@ namespace uu_library_app.FormUI
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(181, 175);
+            this.picboxAd.Location = new System.Drawing.Point(181, 197);
             this.picboxAd.Name = "picboxAd";
             this.picboxAd.Size = new System.Drawing.Size(36, 36);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +133,7 @@ namespace uu_library_app.FormUI
             // picboxSoyad
             // 
             this.picboxSoyad.Image = ((System.Drawing.Image)(resources.GetObject("picboxSoyad.Image")));
-            this.picboxSoyad.Location = new System.Drawing.Point(456, 175);
+            this.picboxSoyad.Location = new System.Drawing.Point(456, 197);
             this.picboxSoyad.Name = "picboxSoyad";
             this.picboxSoyad.Size = new System.Drawing.Size(36, 36);
             this.picboxSoyad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,7 +146,7 @@ namespace uu_library_app.FormUI
             this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(176, 259);
+            this.lblEmail.Location = new System.Drawing.Point(176, 281);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(196, 25);
             this.lblEmail.TabIndex = 10;
@@ -168,7 +158,7 @@ namespace uu_library_app.FormUI
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(222, 291);
+            this.txtEmail.Location = new System.Drawing.Point(222, 313);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(439, 27);
             this.txtEmail.TabIndex = 3;
@@ -176,7 +166,7 @@ namespace uu_library_app.FormUI
             // picboxEmail
             // 
             this.picboxEmail.Image = ((System.Drawing.Image)(resources.GetObject("picboxEmail.Image")));
-            this.picboxEmail.Location = new System.Drawing.Point(181, 287);
+            this.picboxEmail.Location = new System.Drawing.Point(181, 309);
             this.picboxEmail.Name = "picboxEmail";
             this.picboxEmail.Size = new System.Drawing.Size(36, 36);
             this.picboxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +176,7 @@ namespace uu_library_app.FormUI
             // pnlEmail
             // 
             this.pnlEmail.BackColor = System.Drawing.Color.White;
-            this.pnlEmail.Location = new System.Drawing.Point(181, 323);
+            this.pnlEmail.Location = new System.Drawing.Point(181, 345);
             this.pnlEmail.Name = "pnlEmail";
             this.pnlEmail.Size = new System.Drawing.Size(481, 1);
             this.pnlEmail.TabIndex = 13;
@@ -194,7 +184,7 @@ namespace uu_library_app.FormUI
             // pnlOkulNo
             // 
             this.pnlOkulNo.BackColor = System.Drawing.Color.White;
-            this.pnlOkulNo.Location = new System.Drawing.Point(181, 435);
+            this.pnlOkulNo.Location = new System.Drawing.Point(181, 457);
             this.pnlOkulNo.Name = "pnlOkulNo";
             this.pnlOkulNo.Size = new System.Drawing.Size(481, 1);
             this.pnlOkulNo.TabIndex = 16;
@@ -202,7 +192,7 @@ namespace uu_library_app.FormUI
             // picboxOkulNo
             // 
             this.picboxOkulNo.Image = ((System.Drawing.Image)(resources.GetObject("picboxOkulNo.Image")));
-            this.picboxOkulNo.Location = new System.Drawing.Point(181, 399);
+            this.picboxOkulNo.Location = new System.Drawing.Point(181, 421);
             this.picboxOkulNo.Name = "picboxOkulNo";
             this.picboxOkulNo.Size = new System.Drawing.Size(36, 36);
             this.picboxOkulNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +205,7 @@ namespace uu_library_app.FormUI
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(222, 404);
+            this.txtOkulNo.Location = new System.Drawing.Point(222, 426);
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
             this.txtOkulNo.TabIndex = 4;
@@ -226,95 +216,11 @@ namespace uu_library_app.FormUI
             this.lblOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblOkulNo.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblOkulNo.ForeColor = System.Drawing.Color.White;
-            this.lblOkulNo.Location = new System.Drawing.Point(176, 371);
+            this.lblOkulNo.Location = new System.Drawing.Point(176, 393);
             this.lblOkulNo.Name = "lblOkulNo";
             this.lblOkulNo.Size = new System.Drawing.Size(209, 25);
             this.lblOkulNo.TabIndex = 17;
             this.lblOkulNo.Text = "Okul Numaranızı Girin :";
-            // 
-            // picboxSifreTekrar
-            // 
-            this.picboxSifreTekrar.Image = ((System.Drawing.Image)(resources.GetObject("picboxSifreTekrar.Image")));
-            this.picboxSifreTekrar.Location = new System.Drawing.Point(456, 509);
-            this.picboxSifreTekrar.Name = "picboxSifreTekrar";
-            this.picboxSifreTekrar.Size = new System.Drawing.Size(36, 36);
-            this.picboxSifreTekrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSifreTekrar.TabIndex = 25;
-            this.picboxSifreTekrar.TabStop = false;
-            // 
-            // picboxSifre
-            // 
-            this.picboxSifre.Image = ((System.Drawing.Image)(resources.GetObject("picboxSifre.Image")));
-            this.picboxSifre.Location = new System.Drawing.Point(181, 509);
-            this.picboxSifre.Name = "picboxSifre";
-            this.picboxSifre.Size = new System.Drawing.Size(36, 36);
-            this.picboxSifre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSifre.TabIndex = 24;
-            this.picboxSifre.TabStop = false;
-            // 
-            // pnlSifreTekrar
-            // 
-            this.pnlSifreTekrar.BackColor = System.Drawing.Color.White;
-            this.pnlSifreTekrar.Location = new System.Drawing.Point(456, 545);
-            this.pnlSifreTekrar.Name = "pnlSifreTekrar";
-            this.pnlSifreTekrar.Size = new System.Drawing.Size(203, 1);
-            this.pnlSifreTekrar.TabIndex = 23;
-            // 
-            // txtSifreTekrar
-            // 
-            this.txtSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSifreTekrar.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSifreTekrar.ForeColor = System.Drawing.Color.White;
-            this.txtSifreTekrar.Location = new System.Drawing.Point(496, 511);
-            this.txtSifreTekrar.Name = "txtSifreTekrar";
-            this.txtSifreTekrar.PasswordChar = '*';
-            this.txtSifreTekrar.Size = new System.Drawing.Size(164, 27);
-            this.txtSifreTekrar.TabIndex = 6;
-            // 
-            // pnlSifre
-            // 
-            this.pnlSifre.BackColor = System.Drawing.Color.White;
-            this.pnlSifre.Location = new System.Drawing.Point(181, 545);
-            this.pnlSifre.Name = "pnlSifre";
-            this.pnlSifre.Size = new System.Drawing.Size(203, 1);
-            this.pnlSifre.TabIndex = 21;
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSifre.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSifre.ForeColor = System.Drawing.Color.White;
-            this.txtSifre.Location = new System.Drawing.Point(220, 511);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(164, 27);
-            this.txtSifre.TabIndex = 5;
-            // 
-            // lblSifreTekrar
-            // 
-            this.lblSifreTekrar.AutoSize = true;
-            this.lblSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblSifreTekrar.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.lblSifreTekrar.ForeColor = System.Drawing.Color.White;
-            this.lblSifreTekrar.Location = new System.Drawing.Point(451, 477);
-            this.lblSifreTekrar.Name = "lblSifreTekrar";
-            this.lblSifreTekrar.Size = new System.Drawing.Size(235, 25);
-            this.lblSifreTekrar.TabIndex = 19;
-            this.lblSifreTekrar.Text = "Lütfen Şifreyi Tekrar Girin :";
-            // 
-            // lblSifre
-            // 
-            this.lblSifre.AutoSize = true;
-            this.lblSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblSifre.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.lblSifre.ForeColor = System.Drawing.Color.White;
-            this.lblSifre.Location = new System.Drawing.Point(176, 477);
-            this.lblSifre.Name = "lblSifre";
-            this.lblSifre.Size = new System.Drawing.Size(137, 25);
-            this.lblSifre.TabIndex = 18;
-            this.lblSifre.Text = "Şifrenizi Girin :";
             // 
             // lblBaslik
             // 
@@ -357,7 +263,7 @@ namespace uu_library_app.FormUI
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(344, 572);
+            this.btnEkle.Location = new System.Drawing.Point(344, 523);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(148, 35);
             this.btnEkle.TabIndex = 29;
@@ -374,14 +280,6 @@ namespace uu_library_app.FormUI
             this.Controls.Add(this.picboxBack2);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.lblBaslik);
-            this.Controls.Add(this.picboxSifreTekrar);
-            this.Controls.Add(this.picboxSifre);
-            this.Controls.Add(this.pnlSifreTekrar);
-            this.Controls.Add(this.txtSifreTekrar);
-            this.Controls.Add(this.pnlSifre);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.lblSifreTekrar);
-            this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.lblOkulNo);
             this.Controls.Add(this.pnlOkulNo);
             this.Controls.Add(this.picboxOkulNo);
@@ -407,8 +305,6 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSifreTekrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSifre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).EndInit();
             this.ResumeLayout(false);
@@ -434,14 +330,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.PictureBox picboxOkulNo;
         private System.Windows.Forms.TextBox txtOkulNo;
         private System.Windows.Forms.Label lblOkulNo;
-        private System.Windows.Forms.PictureBox picboxSifreTekrar;
-        private System.Windows.Forms.PictureBox picboxSifre;
-        private System.Windows.Forms.Panel pnlSifreTekrar;
-        private System.Windows.Forms.TextBox txtSifreTekrar;
-        private System.Windows.Forms.Panel pnlSifre;
-        private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.Label lblSifreTekrar;
-        private System.Windows.Forms.Label lblSifre;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.PictureBox picboxBack2;
