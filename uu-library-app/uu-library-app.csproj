@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add-Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add-Book.Designer.cs">
+      <DependentUpon>Add-Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="Business\Abstract\IBookService.cs" />
     <Compile Include="Business\Abstract\IDepartmentService.cs" />
     <Compile Include="Business\Concrete\BookManager.cs" />
@@ -77,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add-Book.resx">
+      <DependentUpon>Add-Book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
     </EmbeddedResource>
