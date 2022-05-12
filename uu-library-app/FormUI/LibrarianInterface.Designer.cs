@@ -32,15 +32,16 @@ namespace uu_library_app.FormUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnAnalytics = new System.Windows.Forms.Button();
+            this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
+            this.btnReceive = new System.Windows.Forms.Button();
+            this.btnLending = new System.Windows.Forms.Button();
+            this.btnDeposit = new System.Windows.Forms.Button();
             this.panelMembersSubMenu = new System.Windows.Forms.Panel();
-            this.btnListMember = new System.Windows.Forms.Button();
             this.btnEditMember = new System.Windows.Forms.Button();
             this.btnDeleteMember = new System.Windows.Forms.Button();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.panelBookSubMenu = new System.Windows.Forms.Panel();
-            this.btnListBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@ namespace uu_library_app.FormUI
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.pnlDepositSubMenu.SuspendLayout();
             this.panelMembersSubMenu.SuspendLayout();
             this.panelBookSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,7 +131,8 @@ namespace uu_library_app.FormUI
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.btnSettings);
-            this.panel1.Controls.Add(this.btnAnalytics);
+            this.panel1.Controls.Add(this.pnlDepositSubMenu);
+            this.panel1.Controls.Add(this.btnDeposit);
             this.panel1.Controls.Add(this.panelMembersSubMenu);
             this.panel1.Controls.Add(this.btnMembers);
             this.panel1.Controls.Add(this.panelBookSubMenu);
@@ -151,65 +154,91 @@ namespace uu_library_app.FormUI
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 517);
+            this.btnSettings.Location = new System.Drawing.Point(0, 518);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 33);
-            this.btnSettings.TabIndex = 13;
+            this.btnSettings.TabIndex = 14;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
             // 
-            // btnAnalytics
+            // pnlDepositSubMenu
             // 
-            this.btnAnalytics.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAnalytics.FlatAppearance.BorderSize = 0;
-            this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalytics.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("btnAnalytics.Image")));
-            this.btnAnalytics.Location = new System.Drawing.Point(0, 484);
-            this.btnAnalytics.Name = "btnAnalytics";
-            this.btnAnalytics.Size = new System.Drawing.Size(186, 33);
-            this.btnAnalytics.TabIndex = 12;
-            this.btnAnalytics.Text = "Analytics";
-            this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAnalytics.UseVisualStyleBackColor = true;
-            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
-            this.btnAnalytics.Leave += new System.EventHandler(this.btnAnalytics_Leave);
+            this.pnlDepositSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
+            this.pnlDepositSubMenu.Controls.Add(this.btnLending);
+            this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 460);
+            this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
+            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 58);
+            this.pnlDepositSubMenu.TabIndex = 13;
+            // 
+            // btnReceive
+            // 
+            this.btnReceive.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReceive.FlatAppearance.BorderSize = 0;
+            this.btnReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceive.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReceive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnReceive.Image = ((System.Drawing.Image)(resources.GetObject("btnReceive.Image")));
+            this.btnReceive.Location = new System.Drawing.Point(0, 28);
+            this.btnReceive.Name = "btnReceive";
+            this.btnReceive.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnReceive.Size = new System.Drawing.Size(186, 28);
+            this.btnReceive.TabIndex = 1;
+            this.btnReceive.Text = " Receive";
+            this.btnReceive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReceive.UseVisualStyleBackColor = true;
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
+            // 
+            // btnLending
+            // 
+            this.btnLending.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLending.FlatAppearance.BorderSize = 0;
+            this.btnLending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnLending.Image = ((System.Drawing.Image)(resources.GetObject("btnLending.Image")));
+            this.btnLending.Location = new System.Drawing.Point(0, 0);
+            this.btnLending.Name = "btnLending";
+            this.btnLending.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnLending.Size = new System.Drawing.Size(186, 28);
+            this.btnLending.TabIndex = 0;
+            this.btnLending.Text = " Lending";
+            this.btnLending.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLending.UseVisualStyleBackColor = true;
+            this.btnLending.Click += new System.EventHandler(this.btnLending_Click);
+            // 
+            // btnDeposit
+            // 
+            this.btnDeposit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeposit.FlatAppearance.BorderSize = 0;
+            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeposit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDeposit.Image = ((System.Drawing.Image)(resources.GetObject("btnDeposit.Image")));
+            this.btnDeposit.Location = new System.Drawing.Point(0, 427);
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Size = new System.Drawing.Size(186, 33);
+            this.btnDeposit.TabIndex = 12;
+            this.btnDeposit.Text = "Deposit";
+            this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
+            this.btnDeposit.Leave += new System.EventHandler(this.btnDeposit_Leave);
             // 
             // panelMembersSubMenu
             // 
             this.panelMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.panelMembersSubMenu.Controls.Add(this.btnListMember);
             this.panelMembersSubMenu.Controls.Add(this.btnEditMember);
             this.panelMembersSubMenu.Controls.Add(this.btnDeleteMember);
             this.panelMembersSubMenu.Controls.Add(this.btnAddMember);
             this.panelMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 372);
+            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 342);
             this.panelMembersSubMenu.Name = "panelMembersSubMenu";
-            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 112);
+            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 85);
             this.panelMembersSubMenu.TabIndex = 11;
-            // 
-            // btnListMember
-            // 
-            this.btnListMember.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListMember.FlatAppearance.BorderSize = 0;
-            this.btnListMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListMember.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnListMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnListMember.Image = ((System.Drawing.Image)(resources.GetObject("btnListMember.Image")));
-            this.btnListMember.Location = new System.Drawing.Point(0, 84);
-            this.btnListMember.Name = "btnListMember";
-            this.btnListMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnListMember.Size = new System.Drawing.Size(186, 28);
-            this.btnListMember.TabIndex = 3;
-            this.btnListMember.Text = " List Member";
-            this.btnListMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListMember.UseVisualStyleBackColor = true;
-            this.btnListMember.Click += new System.EventHandler(this.btnListMember_Click);
             // 
             // btnEditMember
             // 
@@ -276,7 +305,7 @@ namespace uu_library_app.FormUI
             this.btnMembers.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
-            this.btnMembers.Location = new System.Drawing.Point(0, 339);
+            this.btnMembers.Location = new System.Drawing.Point(0, 309);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(186, 33);
             this.btnMembers.TabIndex = 10;
@@ -289,33 +318,14 @@ namespace uu_library_app.FormUI
             // panelBookSubMenu
             // 
             this.panelBookSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.panelBookSubMenu.Controls.Add(this.btnListBook);
             this.panelBookSubMenu.Controls.Add(this.btnEditBook);
             this.panelBookSubMenu.Controls.Add(this.btnDeleteBook);
             this.panelBookSubMenu.Controls.Add(this.btnAddBook);
             this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBookSubMenu.Location = new System.Drawing.Point(0, 227);
             this.panelBookSubMenu.Name = "panelBookSubMenu";
-            this.panelBookSubMenu.Size = new System.Drawing.Size(186, 112);
+            this.panelBookSubMenu.Size = new System.Drawing.Size(186, 82);
             this.panelBookSubMenu.TabIndex = 9;
-            // 
-            // btnListBook
-            // 
-            this.btnListBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListBook.FlatAppearance.BorderSize = 0;
-            this.btnListBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListBook.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnListBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnListBook.Image = ((System.Drawing.Image)(resources.GetObject("btnListBook.Image")));
-            this.btnListBook.Location = new System.Drawing.Point(0, 84);
-            this.btnListBook.Name = "btnListBook";
-            this.btnListBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnListBook.Size = new System.Drawing.Size(186, 28);
-            this.btnListBook.TabIndex = 3;
-            this.btnListBook.Text = " Book List";
-            this.btnListBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListBook.UseVisualStyleBackColor = true;
-            this.btnListBook.Click += new System.EventHandler(this.btnListBook_Click);
             // 
             // btnEditBook
             // 
@@ -1014,6 +1024,7 @@ namespace uu_library_app.FormUI
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);
+            this.pnlDepositSubMenu.ResumeLayout(false);
             this.panelMembersSubMenu.ResumeLayout(false);
             this.panelBookSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1109,19 +1120,20 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panelBookSubMenu;
-        private System.Windows.Forms.Button btnListBook;
         private System.Windows.Forms.Button btnEditBook;
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Panel panelMembersSubMenu;
-        private System.Windows.Forms.Button btnListMember;
         private System.Windows.Forms.Button btnEditMember;
         private System.Windows.Forms.Button btnDeleteMember;
         private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Panel pnlNewNav;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnAnalytics;
+        private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Panel pnlDepositSubMenu;
+        private System.Windows.Forms.Button btnReceive;
+        private System.Windows.Forms.Button btnLending;
     }
 }

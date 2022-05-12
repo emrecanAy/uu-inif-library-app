@@ -36,6 +36,7 @@ namespace uu_library_app.FormUI
         {
             panelBookSubMenu.Visible = false;
             panelMembersSubMenu.Visible = false;
+            pnlDepositSubMenu.Visible = false;
             
         }
         private void hideSubMenu()
@@ -44,6 +45,8 @@ namespace uu_library_app.FormUI
                 panelBookSubMenu.Visible = false;
             if (panelMembersSubMenu.Visible == true)
                 panelMembersSubMenu.Visible = false;
+            if (pnlDepositSubMenu.Visible == true)
+                pnlDepositSubMenu.Visible = false;
 
 
         }
@@ -107,15 +110,14 @@ namespace uu_library_app.FormUI
             showSubMenu(panelMembersSubMenu);
         }
 
-        private void btnAnalytics_Click(object sender, EventArgs e)
+        private void btnDeposit_Click(object sender, EventArgs e)
         {
-            pnlNewNav.Height = btnAnalytics.Height;
-            pnlNewNav.Top = btnAnalytics.Top;
-            pnlNewNav.Left = btnAnalytics.Left;
-            btnAnalytics.BackColor = Color.FromArgb(46, 51, 73);
+            pnlNewNav.Height = btnDeposit.Height;
+            pnlNewNav.Top = btnDeposit.Top;
+            pnlNewNav.Left = btnDeposit.Left;
+            btnDeposit.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(pnlDepositSubMenu);
         }
-
-    
         private void btnSettings_Click(object sender, EventArgs e)
         {
             pnlNewNav.Height = btnSettings.Height;
@@ -123,6 +125,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Left = btnSettings.Left;
             btnSettings.BackColor = Color.FromArgb(46, 51, 73);
         }
+
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
@@ -150,9 +153,9 @@ namespace uu_library_app.FormUI
         }
 
         
-        private void btnAnalytics_Leave(object sender, EventArgs e)
+        private void btnDeposit_Leave(object sender, EventArgs e)
         {
-            btnAnalytics.BackColor = Color.FromArgb(24, 30, 54);
+            btnDeposit.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void btnSettings_Leave(object sender, EventArgs e)
@@ -182,11 +185,6 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
-        private void btnListBook_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
 
         #endregion
         #region CRUD Members Buttons
@@ -206,14 +204,22 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
-        private void btnListMember_Click(object sender, EventArgs e)
+        private void btnLending_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
 
 
+
+
         #endregion
 
+       
     }
 }
