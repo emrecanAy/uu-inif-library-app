@@ -16,5 +16,10 @@ namespace uu_library_app
         {
             InitializeComponent();
         }
+
+        private void Delete_Student_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
