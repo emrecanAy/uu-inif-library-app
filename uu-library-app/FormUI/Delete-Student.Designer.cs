@@ -29,7 +29,6 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete_Student));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picboxAd = new System.Windows.Forms.PictureBox();
@@ -83,7 +82,6 @@ namespace uu_library_app
             // 
             // picboxAd
             // 
-            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
             this.picboxAd.Location = new System.Drawing.Point(580, 137);
             this.picboxAd.Name = "picboxAd";
             this.picboxAd.Size = new System.Drawing.Size(32, 32);
@@ -124,7 +122,6 @@ namespace uu_library_app
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(580, 216);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -165,7 +162,6 @@ namespace uu_library_app
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(580, 296);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
@@ -206,7 +202,6 @@ namespace uu_library_app
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(580, 379);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
@@ -259,7 +254,6 @@ namespace uu_library_app
             // picboxBack
             // 
             this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
             this.picboxBack.Location = new System.Drawing.Point(171, 12);
             this.picboxBack.Name = "picboxBack";
             this.picboxBack.Size = new System.Drawing.Size(80, 80);
@@ -270,7 +264,6 @@ namespace uu_library_app
             // picboxBack2
             // 
             this.picboxBack2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack2.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack2.Image")));
             this.picboxBack2.Location = new System.Drawing.Point(557, 12);
             this.picboxBack2.Name = "picboxBack2";
             this.picboxBack2.Size = new System.Drawing.Size(80, 80);
@@ -283,7 +276,7 @@ namespace uu_library_app
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(840, 481);
+            this.ClientSize = new System.Drawing.Size(840, 629);
             this.Controls.Add(this.picboxBack2);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.button1);

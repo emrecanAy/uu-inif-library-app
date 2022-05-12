@@ -568,9 +568,9 @@ namespace uu_library_app
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(562, 193);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 25);
+            this.label9.Size = new System.Drawing.Size(138, 25);
             this.label9.TabIndex = 78;
-            this.label9.Text = "Bulunduğu Kütüphane :";
+            this.label9.Text = "Kitap Durumu :";
             // 
             // pictureBox10
             // 
@@ -773,8 +773,9 @@ namespace uu_library_app
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(310, 281);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 25);
+            this.label15.Size = new System.Drawing.Size(113, 25);
             this.label15.TabIndex = 106;
+            this.label15.Text = "Kütüphane :";
             // 
             // Add_Book
             // 

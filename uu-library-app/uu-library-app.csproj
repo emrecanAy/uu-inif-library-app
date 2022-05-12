@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add-Book.cs">
+    <Compile Include="FormUI\Add-Book.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add-Book.Designer.cs">
+    <Compile Include="FormUI\Add-Book.Designer.cs">
       <DependentUpon>Add-Book.cs</DependentUpon>
     </Compile>
     <Compile Include="Business\Abstract\IBookService.cs" />
@@ -61,16 +61,16 @@
     <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\BookDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\DepartmentDal.cs" />
-    <Compile Include="Delete-Student.cs">
+    <Compile Include="FormUI\Delete-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delete-Student.Designer.cs">
+    <Compile Include="FormUI\Delete-Student.Designer.cs">
       <DependentUpon>Delete-Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit-Student.cs">
+    <Compile Include="FormUI\Edit-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit-Student.Designer.cs">
+    <Compile Include="FormUI\Edit-Student.Designer.cs">
       <DependentUpon>Edit-Student.cs</DependentUpon>
     </Compile>
     <Compile Include="Entity\Concrete\Book.cs" />
@@ -89,8 +89,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormUI\Add-Book.resx">
+      <DependentUpon>Add-Book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Delete-Student.resx">
+      <DependentUpon>Delete-Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
