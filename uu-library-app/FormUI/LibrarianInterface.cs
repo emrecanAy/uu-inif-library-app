@@ -168,7 +168,7 @@ namespace uu_library_app.FormUI
         #region CRUD Books Buttons
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            openChildForm(new Add_Book());
+            
             hideSubMenu();
         }
 
@@ -192,6 +192,7 @@ namespace uu_library_app.FormUI
         #region CRUD Members Buttons
         private void btnAddMember_Click(object sender, EventArgs e)
         {
+            openChildForm(new Add_Book());
             hideSubMenu();
         }
 
