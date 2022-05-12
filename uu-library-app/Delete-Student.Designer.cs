@@ -49,18 +49,22 @@ namespace uu_library_app
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
+            this.picboxBack2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(249, 33);
+            this.label1.Location = new System.Drawing.Point(245, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 32);
             this.label1.TabIndex = 0;
@@ -245,12 +249,34 @@ namespace uu_library_app
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(639, 438);
+            this.button1.Location = new System.Drawing.Point(638, 432);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 29);
+            this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 36;
             this.button1.Text = "Sil";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(171, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 37;
+            this.picboxBack.TabStop = false;
+            // 
+            // picboxBack2
+            // 
+            this.picboxBack2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack2.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack2.Image")));
+            this.picboxBack2.Location = new System.Drawing.Point(557, 12);
+            this.picboxBack2.Name = "picboxBack2";
+            this.picboxBack2.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack2.TabIndex = 38;
+            this.picboxBack2.TabStop = false;
             // 
             // Delete_Student
             // 
@@ -258,6 +284,8 @@ namespace uu_library_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(840, 481);
+            this.Controls.Add(this.picboxBack2);
+            this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel3);
@@ -288,6 +316,8 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +344,7 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox picboxBack;
+        private System.Windows.Forms.PictureBox picboxBack2;
     }
 }
