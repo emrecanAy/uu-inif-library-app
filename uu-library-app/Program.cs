@@ -18,8 +18,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LibrarianInterface());
-            
+            Application.Run(new Form1());
         }
     }
 }
