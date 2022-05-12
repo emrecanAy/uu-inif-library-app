@@ -57,11 +57,11 @@
     <Compile Include="DataAccess\Concrete\EntityFramework\DepartmentDal.cs" />
     <Compile Include="Entity\Concrete\Book.cs" />
     <Compile Include="Entity\Concrete\Department.cs" />
-    <Compile Include="FormUI\Add-Book.cs">
+    <Compile Include="FormUI\Add-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Add-Book.Designer.cs">
-      <DependentUpon>Add-Book.cs</DependentUpon>
+    <Compile Include="FormUI\Add-Student.Designer.cs">
+      <DependentUpon>Add-Student.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\LibrarianInterface.cs">
       <SubType>Form</SubType>
@@ -71,8 +71,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormUI\Add-Book.resx">
-      <DependentUpon>Add-Book.cs</DependentUpon>
+    <EmbeddedResource Include="FormUI\Add-Student.resx">
+      <DependentUpon>Add-Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
