@@ -31,9 +31,6 @@ namespace uu_library_app.FormUI
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-<<<<<<< HEAD
-        
-=======
         private void Add_Student_Load(object sender, EventArgs e)
         {
 
@@ -48,9 +45,8 @@ namespace uu_library_app.FormUI
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            Student studentToAdd = new Student("hmjbjhbkmnö","jkdsflsdf" , txtAd.Text, txtSoyad.Text, txtOkulNo.Text, txtEmail.Text, "sadfasd", DateTime.Now);
+            Student studentToAdd = new Student("hmjbjhbkmnö", "jkdsflsdf", txtAd.Text, txtSoyad.Text, txtOkulNo.Text, txtEmail.Text, "sadfasd", DateTime.Now);
             _service.Add(studentToAdd);
         }
->>>>>>> 4bdb76d9eef3ab9779f7ef3b0d4cbc19a1e6f493
     }
 }
