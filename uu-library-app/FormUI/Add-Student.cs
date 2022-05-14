@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace uu_library_app.FormUI
 {
-    public partial class Add_Book : Form
+    public partial class Add_Student : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -23,15 +23,12 @@ namespace uu_library_app.FormUI
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public Add_Book()
+        public Add_Student()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-        private void Add_Book_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

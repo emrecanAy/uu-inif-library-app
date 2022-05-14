@@ -158,10 +158,11 @@ namespace uu_library_app.FormUI
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 33);
             this.btnSettings.TabIndex = 14;
-            this.btnSettings.Text = "Settings";
+            this.btnSettings.Text = "Ayarlar";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave_1);
             // 
             // pnlDepositSubMenu
             // 
@@ -184,10 +185,10 @@ namespace uu_library_app.FormUI
             this.btnReceive.Image = ((System.Drawing.Image)(resources.GetObject("btnReceive.Image")));
             this.btnReceive.Location = new System.Drawing.Point(0, 28);
             this.btnReceive.Name = "btnReceive";
-            this.btnReceive.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnReceive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReceive.Size = new System.Drawing.Size(186, 28);
             this.btnReceive.TabIndex = 1;
-            this.btnReceive.Text = " Receive";
+            this.btnReceive.Text = "Ödünç Almak";
             this.btnReceive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReceive.UseVisualStyleBackColor = true;
             this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
@@ -202,10 +203,10 @@ namespace uu_library_app.FormUI
             this.btnLending.Image = ((System.Drawing.Image)(resources.GetObject("btnLending.Image")));
             this.btnLending.Location = new System.Drawing.Point(0, 0);
             this.btnLending.Name = "btnLending";
-            this.btnLending.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnLending.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnLending.Size = new System.Drawing.Size(186, 28);
             this.btnLending.TabIndex = 0;
-            this.btnLending.Text = " Lending";
+            this.btnLending.Text = "Ödünç vermek";
             this.btnLending.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLending.UseVisualStyleBackColor = true;
             this.btnLending.Click += new System.EventHandler(this.btnLending_Click);
@@ -222,7 +223,7 @@ namespace uu_library_app.FormUI
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Size = new System.Drawing.Size(186, 33);
             this.btnDeposit.TabIndex = 12;
-            this.btnDeposit.Text = "Deposit";
+            this.btnDeposit.Text = "Ödünç Kitap";
             this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDeposit.UseVisualStyleBackColor = true;
             this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
@@ -309,7 +310,7 @@ namespace uu_library_app.FormUI
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(186, 33);
             this.btnMembers.TabIndex = 10;
-            this.btnMembers.Text = "Members";
+            this.btnMembers.Text = "   Üyeler";
             this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
@@ -340,7 +341,7 @@ namespace uu_library_app.FormUI
             this.btnEditBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnEditBook.Size = new System.Drawing.Size(186, 28);
             this.btnEditBook.TabIndex = 2;
-            this.btnEditBook.Text = " Edit Book";
+            this.btnEditBook.Text = " Kitap Güncelle";
             this.btnEditBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditBook.UseVisualStyleBackColor = true;
             this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
@@ -355,10 +356,10 @@ namespace uu_library_app.FormUI
             this.btnDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteBook.Image")));
             this.btnDeleteBook.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDeleteBook.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteBook.TabIndex = 1;
-            this.btnDeleteBook.Text = " Delete Book";
+            this.btnDeleteBook.Text = " Kitap Sil";
             this.btnDeleteBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteBook.UseVisualStyleBackColor = true;
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
@@ -373,10 +374,10 @@ namespace uu_library_app.FormUI
             this.btnAddBook.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBook.Image")));
             this.btnAddBook.Location = new System.Drawing.Point(0, 0);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddBook.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAddBook.Size = new System.Drawing.Size(186, 28);
             this.btnAddBook.TabIndex = 0;
-            this.btnAddBook.Text = " Add Book";
+            this.btnAddBook.Text = " Kitap Ekle";
             this.btnAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddBook.UseVisualStyleBackColor = true;
@@ -393,7 +394,7 @@ namespace uu_library_app.FormUI
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(186, 33);
             this.btnLogOut.TabIndex = 7;
-            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.Text = "Çıkış";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
@@ -411,7 +412,7 @@ namespace uu_library_app.FormUI
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(186, 33);
             this.btnBooks.TabIndex = 4;
-            this.btnBooks.Text = "Books     ";
+            this.btnBooks.Text = "Kitaplar";
             this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
@@ -429,7 +430,7 @@ namespace uu_library_app.FormUI
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(186, 33);
             this.btnDashboard.TabIndex = 3;
-            this.btnDashboard.Text = " Dashboard";
+            this.btnDashboard.Text = "Ana Sayfa";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
@@ -485,9 +486,9 @@ namespace uu_library_app.FormUI
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 32);
+            this.label3.Size = new System.Drawing.Size(172, 32);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Dashboard :";
+            this.label3.Text = "Ana Sayfa :";
             // 
             // panel3
             // 
@@ -540,9 +541,9 @@ namespace uu_library_app.FormUI
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(19, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 25);
+            this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Borrowed Books";
+            this.label4.Text = "Toplam Kitap ";
             // 
             // panel4
             // 
@@ -650,9 +651,9 @@ namespace uu_library_app.FormUI
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(19, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 25);
+            this.label12.Size = new System.Drawing.Size(110, 25);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Borrowed Books";
+            this.label12.Text = "Toplam Üye";
             // 
             // panel6
             // 
@@ -870,9 +871,9 @@ namespace uu_library_app.FormUI
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(19, 9);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(149, 25);
+            this.label24.Size = new System.Drawing.Size(187, 25);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Borrowed Books";
+            this.label24.Text = "Emanet Verilen Kitap";
             // 
             // panel10
             // 
@@ -1020,7 +1021,7 @@ namespace uu_library_app.FormUI
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrarianInterface";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);

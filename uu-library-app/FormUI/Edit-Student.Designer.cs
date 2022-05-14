@@ -33,18 +33,18 @@ namespace uu_library_app
             this.picboxBack2 = new System.Windows.Forms.PictureBox();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.picboxAd = new System.Windows.Forms.PictureBox();
             this.pnlAd = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@ namespace uu_library_app
             // 
             this.picboxBack2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.picboxBack2.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack2.Image")));
-            this.picboxBack2.Location = new System.Drawing.Point(609, 12);
+            this.picboxBack2.Location = new System.Drawing.Point(606, 6);
             this.picboxBack2.Name = "picboxBack2";
             this.picboxBack2.Size = new System.Drawing.Size(80, 80);
             this.picboxBack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +75,7 @@ namespace uu_library_app
             // 
             this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(139, 12);
+            this.picboxBack.Location = new System.Drawing.Point(136, 6);
             this.picboxBack.Name = "picboxBack";
             this.picboxBack.Size = new System.Drawing.Size(80, 80);
             this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,28 +87,29 @@ namespace uu_library_app
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(212, 35);
+            this.label1.Location = new System.Drawing.Point(209, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(404, 32);
             this.label1.TabIndex = 39;
             this.label1.Text = "Öğrenci Güncelleme Formu :";
             // 
-            // button1
+            // btnGuncelle
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(617, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 35);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "Güncelle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(658, 481);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(101, 35);
+            this.btnGuncelle.TabIndex = 59;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(559, 363);
+            this.pictureBox3.Location = new System.Drawing.Point(600, 428);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,21 +119,21 @@ namespace uu_library_app
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(559, 399);
+            this.panel3.Location = new System.Drawing.Point(600, 464);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(203, 1);
             this.panel3.TabIndex = 57;
             // 
-            // textBox3
+            // txtOkulNo
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(598, 365);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 22);
-            this.textBox3.TabIndex = 56;
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(639, 430);
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.Size = new System.Drawing.Size(164, 22);
+            this.txtOkulNo.TabIndex = 56;
             // 
             // label4
             // 
@@ -140,7 +141,7 @@ namespace uu_library_app
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(555, 339);
+            this.label4.Location = new System.Drawing.Point(596, 404);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 21);
             this.label4.TabIndex = 55;
@@ -149,7 +150,7 @@ namespace uu_library_app
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(559, 280);
+            this.pictureBox2.Location = new System.Drawing.Point(600, 345);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,21 +160,21 @@ namespace uu_library_app
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(559, 316);
+            this.panel2.Location = new System.Drawing.Point(600, 381);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 1);
             this.panel2.TabIndex = 53;
             // 
-            // textBox2
+            // txtMail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(598, 282);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 22);
-            this.textBox2.TabIndex = 52;
+            this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMail.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtMail.ForeColor = System.Drawing.Color.White;
+            this.txtMail.Location = new System.Drawing.Point(639, 347);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(164, 22);
+            this.txtMail.TabIndex = 52;
             // 
             // label3
             // 
@@ -181,7 +182,7 @@ namespace uu_library_app
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(555, 256);
+            this.label3.Location = new System.Drawing.Point(596, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 51;
@@ -190,7 +191,7 @@ namespace uu_library_app
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(559, 200);
+            this.pictureBox1.Location = new System.Drawing.Point(600, 265);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,21 +201,21 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(559, 236);
+            this.panel1.Location = new System.Drawing.Point(600, 301);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 1);
             this.panel1.TabIndex = 49;
             // 
-            // textBox1
+            // txtSoyad
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(598, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 22);
-            this.textBox1.TabIndex = 48;
+            this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtSoyad.ForeColor = System.Drawing.Color.White;
+            this.txtSoyad.Location = new System.Drawing.Point(639, 267);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(164, 22);
+            this.txtSoyad.TabIndex = 48;
             // 
             // label2
             // 
@@ -222,7 +223,7 @@ namespace uu_library_app
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(555, 176);
+            this.label2.Location = new System.Drawing.Point(596, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 47;
@@ -231,7 +232,7 @@ namespace uu_library_app
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(559, 121);
+            this.picboxAd.Location = new System.Drawing.Point(600, 186);
             this.picboxAd.Name = "picboxAd";
             this.picboxAd.Size = new System.Drawing.Size(32, 32);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +242,7 @@ namespace uu_library_app
             // pnlAd
             // 
             this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(559, 157);
+            this.pnlAd.Location = new System.Drawing.Point(600, 222);
             this.pnlAd.Name = "pnlAd";
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 45;
@@ -252,7 +253,7 @@ namespace uu_library_app
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 12F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(598, 123);
+            this.txtAd.Location = new System.Drawing.Point(639, 188);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 22);
             this.txtAd.TabIndex = 44;
@@ -263,7 +264,7 @@ namespace uu_library_app
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(555, 97);
+            this.lblAd.Location = new System.Drawing.Point(596, 162);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(36, 21);
             this.lblAd.TabIndex = 43;
@@ -272,32 +273,33 @@ namespace uu_library_app
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 97);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(484, 354);
+            this.dataGridView1.Size = new System.Drawing.Size(568, 470);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Edit_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(840, 481);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(840, 629);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtOkulNo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.picboxAd);
             this.Controls.Add(this.pnlAd);
@@ -310,6 +312,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit_Student";
             this.Text = "Edit_Student";
+            this.Load += new System.EventHandler(this.Edit_Student_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -327,18 +330,18 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox picboxBack2;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOkulNo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picboxAd;
         private System.Windows.Forms.Panel pnlAd;

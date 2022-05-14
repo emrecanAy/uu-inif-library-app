@@ -18,7 +18,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add_Book());
+            Application.Run(new LibrarianInterface());
         }
     }
 }

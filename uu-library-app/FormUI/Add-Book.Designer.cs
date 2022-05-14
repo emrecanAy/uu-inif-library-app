@@ -42,10 +42,6 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -98,7 +94,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -122,7 +117,7 @@ namespace uu_library_app
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(341, 582);
+            this.btnEkle.Location = new System.Drawing.Point(338, 527);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(148, 35);
             this.btnEkle.TabIndex = 49;
@@ -244,47 +239,6 @@ namespace uu_library_app
             this.lblAd.TabIndex = 30;
             this.lblAd.Text = "Adı :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 313);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(56, 349);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 1);
-            this.panel1.TabIndex = 52;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(96, 315);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 51;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(51, 281);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Başlık :";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -370,7 +324,7 @@ namespace uu_library_app
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(315, 408);
+            this.pictureBox5.Location = new System.Drawing.Point(315, 407);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 36);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -657,7 +611,7 @@ namespace uu_library_app
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(315, 501);
+            this.pictureBox12.Location = new System.Drawing.Point(56, 313);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(36, 36);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -667,7 +621,7 @@ namespace uu_library_app
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(315, 537);
+            this.panel12.Location = new System.Drawing.Point(56, 349);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(203, 1);
             this.panel12.TabIndex = 96;
@@ -678,7 +632,7 @@ namespace uu_library_app
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.textBox12.ForeColor = System.Drawing.Color.White;
-            this.textBox12.Location = new System.Drawing.Point(355, 503);
+            this.textBox12.Location = new System.Drawing.Point(96, 315);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(164, 27);
             this.textBox12.TabIndex = 95;
@@ -689,7 +643,7 @@ namespace uu_library_app
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(310, 469);
+            this.label12.Location = new System.Drawing.Point(51, 281);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 25);
             this.label12.TabIndex = 94;
@@ -831,10 +785,6 @@ namespace uu_library_app
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.picboxBack2);
             this.Controls.Add(this.picboxBack);
@@ -854,7 +804,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -886,10 +835,6 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblAd;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox2;

@@ -167,7 +167,11 @@ namespace uu_library_app.FormUI
         {
             btnLogOut.BackColor = Color.FromArgb(24, 30, 54);
         }
-#endregion
+        private void btnSettings_Leave_1(object sender, EventArgs e)
+        {
+            btnSettings.BackColor = Color.FromArgb(24, 30, 54);
+        }
+        #endregion
         #region CRUD Books Buttons
         private void btnAddBook_Click(object sender, EventArgs e)
         {
@@ -190,17 +194,19 @@ namespace uu_library_app.FormUI
         #region CRUD Members Buttons
         private void btnAddMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Add_Book());
+            openChildForm(new Add_Student());
             hideSubMenu();
         }
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
+            openChildForm(new Delete_Student());
             hideSubMenu();
         }
 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
+            openChildForm(new Edit_Student());
             hideSubMenu();
         }
 
@@ -218,8 +224,9 @@ namespace uu_library_app.FormUI
 
 
 
+
         #endregion
 
-       
+        
     }
 }
