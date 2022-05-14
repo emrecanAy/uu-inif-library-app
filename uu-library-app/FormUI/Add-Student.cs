@@ -9,10 +9,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uu_library_app.Business.Abstract;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.FormUI
 {
-    public partial class Add_Book : Form
+    public partial class Add_Student : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -23,15 +25,28 @@ namespace uu_library_app.FormUI
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public Add_Book()
+        public Add_Student()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-        private void Add_Book_Load(object sender, EventArgs e)
+        private void Add_Student_Load(object sender, EventArgs e)
         {
 
+        }
+
+        IStudentService _service;
+
+        public Add_Student(IStudentService service)
+        {
+            _service = service;
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            Student studentToAdd = new Student("hmjbjhbkmnö","jkdsflsdf" , txtAd.Text, txtSoyad.Text, txtOkulNo.Text, txtEmail.Text, "sadfasd", DateTime.Now);
+            _service.Add(studentToAdd);
         }
     }
 }

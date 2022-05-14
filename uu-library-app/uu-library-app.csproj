@@ -47,6 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Abstract\ILanguageService.cs" />
+    <Compile Include="Business\Abstract\IStudentService.cs" />
+    <Compile Include="Business\Concrete\LanguageManager.cs" />
+    <Compile Include="Business\Concrete\StudentManager.cs" />
+    <Compile Include="DataAccess\Abstract\ILanguageDal.cs" />
+    <Compile Include="DataAccess\Abstract\IStudentDal.cs" />
+    <Compile Include="DataAccess\Concrete\LanguageDal.cs" />
+    <Compile Include="DataAccess\Concrete\StudentDal.cs" />
+    <Compile Include="Entity\Concrete\Language.cs" />
+    <Compile Include="Entity\Concrete\Student.cs" />
     <Compile Include="FormUI\Add-Book.cs">
       <SubType>Form</SubType>
     </Compile>

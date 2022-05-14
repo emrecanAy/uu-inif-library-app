@@ -190,7 +190,7 @@ namespace uu_library_app.FormUI
         #region CRUD Members Buttons
         private void btnAddMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Add_Book());
+            openChildForm(new Add_Student());
             hideSubMenu();
         }
 
