@@ -111,6 +111,9 @@
     <EmbeddedResource Include="FormUI\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\author-actions.resx">
+      <DependentUpon>author-actions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Delete-Student.resx">
       <DependentUpon>Delete-Student.cs</DependentUpon>
     </EmbeddedResource>
