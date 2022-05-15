@@ -109,6 +109,12 @@
     <Compile Include="FormUI\LibrarianInterface.Designer.cs">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
     </Compile>
+    <Compile Include="Language-Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Language-Operations.Designer.cs">
+      <DependentUpon>Language-Operations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="publisher-actions.cs">
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language-Operations.resx">
+      <DependentUpon>Language-Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
