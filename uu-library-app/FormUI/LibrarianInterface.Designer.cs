@@ -171,7 +171,7 @@ namespace uu_library_app.FormUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 740);
+            this.panel1.Size = new System.Drawing.Size(186, 750);
             this.panel1.TabIndex = 0;
             // 
             // pnlDigerSubMenu
@@ -503,7 +503,7 @@ namespace uu_library_app.FormUI
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 708);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 707);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(186, 40);
             this.btnLogOut.TabIndex = 7;
@@ -1296,7 +1296,7 @@ namespace uu_library_app.FormUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.ClientSize = new System.Drawing.Size(1200, 750);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnlNewNav);
             this.Controls.Add(this.panel1);

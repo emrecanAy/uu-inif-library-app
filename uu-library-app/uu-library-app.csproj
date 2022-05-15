@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category-Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category-Operations.Designer.cs">
+      <DependentUpon>Category-Operations.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\author-actions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Category-Operations.resx">
+      <DependentUpon>Category-Operations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Add-Book.resx">
       <DependentUpon>Add-Book.cs</DependentUpon>
     </EmbeddedResource>
