@@ -31,7 +31,12 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSettings = new System.Windows.Forms.Button();
+            this.pnlDigerSubMenu = new System.Windows.Forms.Panel();
+            this.btnKategori = new System.Windows.Forms.Button();
+            this.btnDil = new System.Windows.Forms.Button();
+            this.btnYayinevi = new System.Windows.Forms.Button();
+            this.btnYazar = new System.Windows.Forms.Button();
+            this.btnDigerislemler = new System.Windows.Forms.Button();
             this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
             this.btnReceive = new System.Windows.Forms.Button();
             this.btnLending = new System.Windows.Forms.Button();
@@ -100,7 +105,23 @@ namespace uu_library_app.FormUI
             this.label30 = new System.Windows.Forms.Label();
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.pnlDigerSubMenu.SuspendLayout();
             this.pnlDepositSubMenu.SuspendLayout();
             this.panelMembersSubMenu.SuspendLayout();
             this.panelBookSubMenu.SuspendLayout();
@@ -125,12 +146,19 @@ namespace uu_library_app.FormUI
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelChildForm.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.btnSettings);
+            this.panel1.Controls.Add(this.pnlDigerSubMenu);
+            this.panel1.Controls.Add(this.btnDigerislemler);
             this.panel1.Controls.Add(this.pnlDepositSubMenu);
             this.panel1.Controls.Add(this.btnDeposit);
             this.panel1.Controls.Add(this.panelMembersSubMenu);
@@ -143,26 +171,111 @@ namespace uu_library_app.FormUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 629);
+            this.panel1.Size = new System.Drawing.Size(186, 750);
             this.panel1.TabIndex = 0;
             // 
-            // btnSettings
+            // pnlDigerSubMenu
             // 
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 518);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(186, 33);
-            this.btnSettings.TabIndex = 14;
-            this.btnSettings.Text = "Ayarlar";
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave_1);
+            this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
+            this.pnlDigerSubMenu.Controls.Add(this.btnDil);
+            this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
+            this.pnlDigerSubMenu.Controls.Add(this.btnYazar);
+            this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 576);
+            this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
+            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 112);
+            this.pnlDigerSubMenu.TabIndex = 15;
+            // 
+            // btnKategori
+            // 
+            this.btnKategori.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKategori.FlatAppearance.BorderSize = 0;
+            this.btnKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKategori.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnKategori.Image = ((System.Drawing.Image)(resources.GetObject("btnKategori.Image")));
+            this.btnKategori.Location = new System.Drawing.Point(0, 84);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnKategori.Size = new System.Drawing.Size(186, 28);
+            this.btnKategori.TabIndex = 3;
+            this.btnKategori.Text = "Kategori İşlemleri";
+            this.btnKategori.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKategori.UseVisualStyleBackColor = true;
+            this.btnKategori.Click += new System.EventHandler(this.btnKategori_Click);
+            // 
+            // btnDil
+            // 
+            this.btnDil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDil.FlatAppearance.BorderSize = 0;
+            this.btnDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDil.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDil.Image = ((System.Drawing.Image)(resources.GetObject("btnDil.Image")));
+            this.btnDil.Location = new System.Drawing.Point(0, 56);
+            this.btnDil.Name = "btnDil";
+            this.btnDil.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnDil.Size = new System.Drawing.Size(186, 28);
+            this.btnDil.TabIndex = 2;
+            this.btnDil.Text = "Dil İşlemleri";
+            this.btnDil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDil.UseVisualStyleBackColor = true;
+            this.btnDil.Click += new System.EventHandler(this.btnDil_Click);
+            // 
+            // btnYayinevi
+            // 
+            this.btnYayinevi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYayinevi.FlatAppearance.BorderSize = 0;
+            this.btnYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYayinevi.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnYayinevi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnYayinevi.Image = ((System.Drawing.Image)(resources.GetObject("btnYayinevi.Image")));
+            this.btnYayinevi.Location = new System.Drawing.Point(0, 28);
+            this.btnYayinevi.Name = "btnYayinevi";
+            this.btnYayinevi.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnYayinevi.Size = new System.Drawing.Size(186, 28);
+            this.btnYayinevi.TabIndex = 1;
+            this.btnYayinevi.Text = "Yayınevi İşlemleri";
+            this.btnYayinevi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnYayinevi.UseVisualStyleBackColor = true;
+            this.btnYayinevi.Click += new System.EventHandler(this.btnYayinevi_Click);
+            // 
+            // btnYazar
+            // 
+            this.btnYazar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYazar.FlatAppearance.BorderSize = 0;
+            this.btnYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYazar.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnYazar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnYazar.Image = ((System.Drawing.Image)(resources.GetObject("btnYazar.Image")));
+            this.btnYazar.Location = new System.Drawing.Point(0, 0);
+            this.btnYazar.Name = "btnYazar";
+            this.btnYazar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnYazar.Size = new System.Drawing.Size(186, 28);
+            this.btnYazar.TabIndex = 0;
+            this.btnYazar.Text = "Yazar İşlemleri";
+            this.btnYazar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnYazar.UseVisualStyleBackColor = true;
+            this.btnYazar.Click += new System.EventHandler(this.btnYazar_Click);
+            // 
+            // btnDigerislemler
+            // 
+            this.btnDigerislemler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDigerislemler.FlatAppearance.BorderSize = 0;
+            this.btnDigerislemler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDigerislemler.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDigerislemler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDigerislemler.Image = ((System.Drawing.Image)(resources.GetObject("btnDigerislemler.Image")));
+            this.btnDigerislemler.Location = new System.Drawing.Point(0, 536);
+            this.btnDigerislemler.Name = "btnDigerislemler";
+            this.btnDigerislemler.Size = new System.Drawing.Size(186, 40);
+            this.btnDigerislemler.TabIndex = 14;
+            this.btnDigerislemler.Text = "Diğer İşlemler";
+            this.btnDigerislemler.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDigerislemler.UseVisualStyleBackColor = true;
+            this.btnDigerislemler.Click += new System.EventHandler(this.btnDigerislemler_click);
+            this.btnDigerislemler.Leave += new System.EventHandler(this.btnSettings_Leave_1);
             // 
             // pnlDepositSubMenu
             // 
@@ -170,7 +283,7 @@ namespace uu_library_app.FormUI
             this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
             this.pnlDepositSubMenu.Controls.Add(this.btnLending);
             this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 460);
+            this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 478);
             this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
             this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 58);
             this.pnlDepositSubMenu.TabIndex = 13;
@@ -216,12 +329,12 @@ namespace uu_library_app.FormUI
             this.btnDeposit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDeposit.FlatAppearance.BorderSize = 0;
             this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDeposit.Image = ((System.Drawing.Image)(resources.GetObject("btnDeposit.Image")));
-            this.btnDeposit.Location = new System.Drawing.Point(0, 427);
+            this.btnDeposit.Location = new System.Drawing.Point(0, 438);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(186, 33);
+            this.btnDeposit.Size = new System.Drawing.Size(186, 40);
             this.btnDeposit.TabIndex = 12;
             this.btnDeposit.Text = "Ödünç Kitap";
             this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -236,9 +349,9 @@ namespace uu_library_app.FormUI
             this.panelMembersSubMenu.Controls.Add(this.btnDeleteMember);
             this.panelMembersSubMenu.Controls.Add(this.btnAddMember);
             this.panelMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 342);
+            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 356);
             this.panelMembersSubMenu.Name = "panelMembersSubMenu";
-            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 85);
+            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 82);
             this.panelMembersSubMenu.TabIndex = 11;
             // 
             // btnEditMember
@@ -303,12 +416,12 @@ namespace uu_library_app.FormUI
             this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMembers.FlatAppearance.BorderSize = 0;
             this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMembers.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
-            this.btnMembers.Location = new System.Drawing.Point(0, 309);
+            this.btnMembers.Location = new System.Drawing.Point(0, 316);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(186, 33);
+            this.btnMembers.Size = new System.Drawing.Size(186, 40);
             this.btnMembers.TabIndex = 10;
             this.btnMembers.Text = "   Üyeler";
             this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -323,7 +436,7 @@ namespace uu_library_app.FormUI
             this.panelBookSubMenu.Controls.Add(this.btnDeleteBook);
             this.panelBookSubMenu.Controls.Add(this.btnAddBook);
             this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 227);
+            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 234);
             this.panelBookSubMenu.Name = "panelBookSubMenu";
             this.panelBookSubMenu.Size = new System.Drawing.Size(186, 82);
             this.panelBookSubMenu.TabIndex = 9;
@@ -387,12 +500,12 @@ namespace uu_library_app.FormUI
             // 
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(3, 587);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 708);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(186, 33);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 40);
             this.btnLogOut.TabIndex = 7;
             this.btnLogOut.Text = "Çıkış";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -405,12 +518,12 @@ namespace uu_library_app.FormUI
             this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBooks.FlatAppearance.BorderSize = 0;
             this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
             this.btnBooks.Location = new System.Drawing.Point(0, 194);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(186, 33);
+            this.btnBooks.Size = new System.Drawing.Size(186, 40);
             this.btnBooks.TabIndex = 4;
             this.btnBooks.Text = "Kitaplar";
             this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -497,7 +610,7 @@ namespace uu_library_app.FormUI
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(15, 105);
+            this.panel3.Location = new System.Drawing.Point(17, 82);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 130);
             this.panel3.TabIndex = 2;
@@ -552,7 +665,7 @@ namespace uu_library_app.FormUI
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(565, 105);
+            this.panel4.Location = new System.Drawing.Point(697, 82);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 130);
             this.panel4.TabIndex = 4;
@@ -607,7 +720,7 @@ namespace uu_library_app.FormUI
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(15, 275);
+            this.panel5.Location = new System.Drawing.Point(17, 252);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 130);
             this.panel5.TabIndex = 5;
@@ -662,7 +775,7 @@ namespace uu_library_app.FormUI
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(565, 275);
+            this.panel6.Location = new System.Drawing.Point(697, 252);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 130);
             this.panel6.TabIndex = 5;
@@ -717,7 +830,7 @@ namespace uu_library_app.FormUI
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label18);
-            this.panel7.Location = new System.Drawing.Point(290, 105);
+            this.panel7.Location = new System.Drawing.Point(353, 82);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 130);
             this.panel7.TabIndex = 6;
@@ -772,7 +885,7 @@ namespace uu_library_app.FormUI
             this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Controls.Add(this.label21);
-            this.panel8.Location = new System.Drawing.Point(290, 275);
+            this.panel8.Location = new System.Drawing.Point(353, 252);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(258, 130);
             this.panel8.TabIndex = 5;
@@ -827,7 +940,7 @@ namespace uu_library_app.FormUI
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
-            this.panel9.Location = new System.Drawing.Point(15, 445);
+            this.panel9.Location = new System.Drawing.Point(17, 422);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(258, 130);
             this.panel9.TabIndex = 5;
@@ -882,7 +995,7 @@ namespace uu_library_app.FormUI
             this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.label26);
             this.panel10.Controls.Add(this.label27);
-            this.panel10.Location = new System.Drawing.Point(565, 445);
+            this.panel10.Location = new System.Drawing.Point(697, 422);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(258, 130);
             this.panel10.TabIndex = 5;
@@ -937,7 +1050,7 @@ namespace uu_library_app.FormUI
             this.panel11.Controls.Add(this.label28);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(290, 445);
+            this.panel11.Location = new System.Drawing.Point(353, 422);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(258, 130);
             this.panel11.TabIndex = 5;
@@ -995,7 +1108,10 @@ namespace uu_library_app.FormUI
             // 
             // panelChildForm
             // 
+            this.panelChildForm.Controls.Add(this.panel12);
             this.panelChildForm.Controls.Add(this.panel3);
+            this.panelChildForm.Controls.Add(this.panel13);
+            this.panelChildForm.Controls.Add(this.panel14);
             this.panelChildForm.Controls.Add(this.panel5);
             this.panelChildForm.Controls.Add(this.label3);
             this.panelChildForm.Controls.Add(this.panel11);
@@ -1005,17 +1121,182 @@ namespace uu_library_app.FormUI
             this.panelChildForm.Controls.Add(this.panel7);
             this.panelChildForm.Controls.Add(this.panel4);
             this.panelChildForm.Controls.Add(this.panel6);
-            this.panelChildForm.Location = new System.Drawing.Point(182, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(184, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(850, 629);
+            this.panelChildForm.Size = new System.Drawing.Size(1015, 750);
             this.panelChildForm.TabIndex = 8;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel12.Controls.Add(this.pictureBox11);
+            this.panel12.Controls.Add(this.label31);
+            this.panel12.Controls.Add(this.label32);
+            this.panel12.Controls.Add(this.label33);
+            this.panel12.Location = new System.Drawing.Point(353, 580);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(258, 130);
+            this.panel12.TabIndex = 6;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label31.Location = new System.Drawing.Point(17, 106);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(140, 17);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Details of Last 13 Days";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.label32.Location = new System.Drawing.Point(83, 52);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(37, 39);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "0";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(19, 9);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(149, 25);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Borrowed Books";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel13.Controls.Add(this.pictureBox12);
+            this.panel13.Controls.Add(this.label34);
+            this.panel13.Controls.Add(this.label35);
+            this.panel13.Controls.Add(this.label36);
+            this.panel13.Location = new System.Drawing.Point(17, 580);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(258, 130);
+            this.panel13.TabIndex = 7;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label34.Location = new System.Drawing.Point(17, 106);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(140, 17);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Details of Last 13 Days";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.label35.Location = new System.Drawing.Point(83, 52);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(37, 39);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(19, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(187, 25);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Emanet Verilen Kitap";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel14.Controls.Add(this.pictureBox13);
+            this.panel14.Controls.Add(this.label37);
+            this.panel14.Controls.Add(this.label38);
+            this.panel14.Controls.Add(this.label39);
+            this.panel14.Location = new System.Drawing.Point(697, 580);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(258, 130);
+            this.panel14.TabIndex = 8;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox13.TabIndex = 3;
+            this.pictureBox13.TabStop = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label37.Location = new System.Drawing.Point(17, 106);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(140, 17);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "Details of Last 13 Days";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.label38.Location = new System.Drawing.Point(83, 52);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(37, 39);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "0";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(19, 9);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(149, 25);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Borrowed Books";
             // 
             // LibrarianInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1026, 629);
+            this.ClientSize = new System.Drawing.Size(1200, 750);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnlNewNav);
             this.Controls.Add(this.panel1);
@@ -1025,6 +1306,7 @@ namespace uu_library_app.FormUI
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);
+            this.pnlDigerSubMenu.ResumeLayout(false);
             this.pnlDepositSubMenu.ResumeLayout(false);
             this.panelMembersSubMenu.ResumeLayout(false);
             this.panelBookSubMenu.ResumeLayout(false);
@@ -1060,6 +1342,15 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1132,9 +1423,29 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Panel pnlNewNav;
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnDigerislemler;
         private System.Windows.Forms.Panel pnlDepositSubMenu;
         private System.Windows.Forms.Button btnReceive;
         private System.Windows.Forms.Button btnLending;
+        private System.Windows.Forms.Panel pnlDigerSubMenu;
+        private System.Windows.Forms.Button btnKategori;
+        private System.Windows.Forms.Button btnDil;
+        private System.Windows.Forms.Button btnYayinevi;
+        private System.Windows.Forms.Button btnYazar;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
     }
 }

@@ -37,6 +37,7 @@ namespace uu_library_app.FormUI
             panelBookSubMenu.Visible = false;
             panelMembersSubMenu.Visible = false;
             pnlDepositSubMenu.Visible = false;
+            pnlDigerSubMenu.Visible = false;
             
         }
         private void hideSubMenu()
@@ -47,6 +48,8 @@ namespace uu_library_app.FormUI
                 panelMembersSubMenu.Visible = false;
             if (pnlDepositSubMenu.Visible == true)
                 pnlDepositSubMenu.Visible = false;
+            if (pnlDigerSubMenu.Visible == true)
+                pnlDigerSubMenu.Visible = false;
 
 
         }
@@ -118,12 +121,13 @@ namespace uu_library_app.FormUI
             btnDeposit.BackColor = Color.FromArgb(46, 51, 73);
             showSubMenu(pnlDepositSubMenu);
         }
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void btnDigerislemler_click(object sender, EventArgs e)
         {
-            pnlNewNav.Height = btnSettings.Height;
-            pnlNewNav.Top = btnSettings.Top;
-            pnlNewNav.Left = btnSettings.Left;
-            btnSettings.BackColor = Color.FromArgb(46, 51, 73);
+            pnlNewNav.Height = btnDigerislemler.Height;
+            pnlNewNav.Top = btnDigerislemler.Top;
+            pnlNewNav.Left = btnDigerislemler.Left;
+            btnDigerislemler.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(pnlDigerSubMenu);
         }
 
 
@@ -160,7 +164,7 @@ namespace uu_library_app.FormUI
 
         private void btnSettings_Leave(object sender, EventArgs e)
         {
-            btnSettings.BackColor = Color.FromArgb(24, 30, 54);
+            btnDigerislemler.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void btnLogOut_Leave(object sender, EventArgs e)
@@ -169,7 +173,7 @@ namespace uu_library_app.FormUI
         }
         private void btnSettings_Leave_1(object sender, EventArgs e)
         {
-            btnSettings.BackColor = Color.FromArgb(24, 30, 54);
+            btnDigerislemler.BackColor = Color.FromArgb(24, 30, 54);
         }
         #endregion
         #region CRUD Books Buttons
@@ -220,13 +224,26 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
+        private void btnYazar_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+        private void btnYayinevi_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+        private void btnDil_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
 
-
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
 
 
 
         #endregion
-
-        
     }
 }

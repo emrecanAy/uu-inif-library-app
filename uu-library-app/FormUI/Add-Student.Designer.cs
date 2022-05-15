@@ -49,12 +49,17 @@
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.picboxBack2 = new System.Windows.Forms.PictureBox();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBolum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAd
@@ -63,7 +68,7 @@
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(176, 165);
+            this.lblAd.Location = new System.Drawing.Point(252, 173);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(128, 28);
             this.lblAd.TabIndex = 0;
@@ -75,7 +80,7 @@
             this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblSoyad.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblSoyad.ForeColor = System.Drawing.Color.White;
-            this.lblSoyad.Location = new System.Drawing.Point(451, 165);
+            this.lblSoyad.Location = new System.Drawing.Point(527, 173);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(153, 25);
             this.lblSoyad.TabIndex = 1;
@@ -87,7 +92,7 @@
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(220, 199);
+            this.txtAd.Location = new System.Drawing.Point(296, 207);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 27);
             this.txtAd.TabIndex = 1;
@@ -95,7 +100,7 @@
             // pnlAd
             // 
             this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(181, 233);
+            this.pnlAd.Location = new System.Drawing.Point(257, 241);
             this.pnlAd.Name = "pnlAd";
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 3;
@@ -103,7 +108,7 @@
             // pnlSoyad
             // 
             this.pnlSoyad.BackColor = System.Drawing.Color.White;
-            this.pnlSoyad.Location = new System.Drawing.Point(456, 233);
+            this.pnlSoyad.Location = new System.Drawing.Point(532, 241);
             this.pnlSoyad.Name = "pnlSoyad";
             this.pnlSoyad.Size = new System.Drawing.Size(203, 1);
             this.pnlSoyad.TabIndex = 7;
@@ -114,7 +119,7 @@
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtSoyad.Location = new System.Drawing.Point(496, 199);
+            this.txtSoyad.Location = new System.Drawing.Point(572, 207);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(164, 27);
             this.txtSoyad.TabIndex = 2;
@@ -122,7 +127,7 @@
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(181, 197);
+            this.picboxAd.Location = new System.Drawing.Point(257, 205);
             this.picboxAd.Name = "picboxAd";
             this.picboxAd.Size = new System.Drawing.Size(36, 36);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +137,7 @@
             // picboxSoyad
             // 
             this.picboxSoyad.Image = ((System.Drawing.Image)(resources.GetObject("picboxSoyad.Image")));
-            this.picboxSoyad.Location = new System.Drawing.Point(456, 197);
+            this.picboxSoyad.Location = new System.Drawing.Point(532, 205);
             this.picboxSoyad.Name = "picboxSoyad";
             this.picboxSoyad.Size = new System.Drawing.Size(36, 36);
             this.picboxSoyad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,7 +150,7 @@
             this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(176, 281);
+            this.lblEmail.Location = new System.Drawing.Point(252, 289);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(196, 25);
             this.lblEmail.TabIndex = 10;
@@ -157,7 +162,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(222, 313);
+            this.txtEmail.Location = new System.Drawing.Point(298, 321);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(439, 27);
             this.txtEmail.TabIndex = 3;
@@ -165,7 +170,7 @@
             // picboxEmail
             // 
             this.picboxEmail.Image = ((System.Drawing.Image)(resources.GetObject("picboxEmail.Image")));
-            this.picboxEmail.Location = new System.Drawing.Point(181, 309);
+            this.picboxEmail.Location = new System.Drawing.Point(257, 317);
             this.picboxEmail.Name = "picboxEmail";
             this.picboxEmail.Size = new System.Drawing.Size(36, 36);
             this.picboxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,7 +180,7 @@
             // pnlEmail
             // 
             this.pnlEmail.BackColor = System.Drawing.Color.White;
-            this.pnlEmail.Location = new System.Drawing.Point(181, 345);
+            this.pnlEmail.Location = new System.Drawing.Point(257, 353);
             this.pnlEmail.Name = "pnlEmail";
             this.pnlEmail.Size = new System.Drawing.Size(481, 1);
             this.pnlEmail.TabIndex = 13;
@@ -183,7 +188,7 @@
             // pnlOkulNo
             // 
             this.pnlOkulNo.BackColor = System.Drawing.Color.White;
-            this.pnlOkulNo.Location = new System.Drawing.Point(181, 457);
+            this.pnlOkulNo.Location = new System.Drawing.Point(257, 465);
             this.pnlOkulNo.Name = "pnlOkulNo";
             this.pnlOkulNo.Size = new System.Drawing.Size(481, 1);
             this.pnlOkulNo.TabIndex = 16;
@@ -191,7 +196,7 @@
             // picboxOkulNo
             // 
             this.picboxOkulNo.Image = ((System.Drawing.Image)(resources.GetObject("picboxOkulNo.Image")));
-            this.picboxOkulNo.Location = new System.Drawing.Point(181, 421);
+            this.picboxOkulNo.Location = new System.Drawing.Point(257, 429);
             this.picboxOkulNo.Name = "picboxOkulNo";
             this.picboxOkulNo.Size = new System.Drawing.Size(36, 36);
             this.picboxOkulNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +209,7 @@
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(222, 426);
+            this.txtOkulNo.Location = new System.Drawing.Point(298, 434);
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
             this.txtOkulNo.TabIndex = 4;
@@ -215,7 +220,7 @@
             this.lblOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblOkulNo.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblOkulNo.ForeColor = System.Drawing.Color.White;
-            this.lblOkulNo.Location = new System.Drawing.Point(176, 393);
+            this.lblOkulNo.Location = new System.Drawing.Point(252, 401);
             this.lblOkulNo.Name = "lblOkulNo";
             this.lblOkulNo.Size = new System.Drawing.Size(209, 25);
             this.lblOkulNo.TabIndex = 17;
@@ -226,7 +231,7 @@
             this.lblBaslik.AutoSize = true;
             this.lblBaslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold);
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(120, 51);
+            this.lblBaslik.Location = new System.Drawing.Point(200, 45);
             this.lblBaslik.Name = "lblBaslik";
             this.lblBaslik.Size = new System.Drawing.Size(600, 32);
             this.lblBaslik.TabIndex = 26;
@@ -246,7 +251,7 @@
             // 
             this.picboxBack2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.picboxBack2.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack2.Image")));
-            this.picboxBack2.Location = new System.Drawing.Point(728, 12);
+            this.picboxBack2.Location = new System.Drawing.Point(903, 12);
             this.picboxBack2.Name = "picboxBack2";
             this.picboxBack2.Size = new System.Drawing.Size(100, 100);
             this.picboxBack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -262,7 +267,7 @@
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(344, 523);
+            this.btnEkle.Location = new System.Drawing.Point(420, 610);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(148, 35);
             this.btnEkle.TabIndex = 29;
@@ -270,12 +275,57 @@
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(252, 495);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 25);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Bölümünüzü Girin :";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(257, 559);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(481, 1);
+            this.panel1.TabIndex = 32;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(257, 523);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtBolum
+            // 
+            this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtBolum.ForeColor = System.Drawing.Color.White;
+            this.txtBolum.Location = new System.Drawing.Point(298, 528);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.Size = new System.Drawing.Size(439, 27);
+            this.txtBolum.TabIndex = 30;
+            // 
             // Add_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(840, 629);
+            this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtBolum);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.picboxBack2);
             this.Controls.Add(this.picboxBack);
@@ -306,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +384,9 @@
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.PictureBox picboxBack2;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBolum;
     }
 }
