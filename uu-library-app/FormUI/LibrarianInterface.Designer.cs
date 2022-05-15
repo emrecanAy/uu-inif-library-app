@@ -578,7 +578,7 @@ namespace uu_library_app.FormUI
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(149)))));
             this.label1.Location = new System.Drawing.Point(27, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
+            this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Uludag University";
             // 
@@ -599,7 +599,7 @@ namespace uu_library_app.FormUI
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 32);
+            this.label3.Size = new System.Drawing.Size(171, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ana Sayfa :";
             // 
@@ -1302,7 +1302,7 @@ namespace uu_library_app.FormUI
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrarianInterface";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);

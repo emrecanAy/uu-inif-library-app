@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category-Operations.cs">
+    <Compile Include="FormUI\Category-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category-Operations.Designer.cs">
+    <Compile Include="FormUI\Category-Operations.Designer.cs">
       <DependentUpon>Category-Operations.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\author-actions.cs">
@@ -109,21 +109,21 @@
     <Compile Include="FormUI\LibrarianInterface.Designer.cs">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="Language-Operations.cs">
+    <Compile Include="FormUI\Language-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Language-Operations.Designer.cs">
+    <Compile Include="FormUI\Language-Operations.Designer.cs">
       <DependentUpon>Language-Operations.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="publisher-actions.cs">
+    <Compile Include="FormUI\publisher-actions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="publisher-actions.Designer.cs">
+    <Compile Include="FormUI\publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Category-Operations.resx">
+    <EmbeddedResource Include="FormUI\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Add-Book.resx">
@@ -144,7 +144,7 @@
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language-Operations.resx">
+    <EmbeddedResource Include="FormUI\Language-Operations.resx">
       <DependentUpon>Language-Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,7 +156,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="publisher-actions.resx">
+    <EmbeddedResource Include="FormUI\publisher-actions.resx">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
