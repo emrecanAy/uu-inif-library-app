@@ -60,6 +60,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -244,7 +246,7 @@
             this.lblBaslik.AutoSize = true;
             this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(78, 65);
+            this.lblBaslik.Location = new System.Drawing.Point(85, 28);
             this.lblBaslik.Name = "lblBaslik";
             this.lblBaslik.Size = new System.Drawing.Size(231, 40);
             this.lblBaslik.TabIndex = 26;
@@ -254,7 +256,7 @@
             // 
             this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(5, 49);
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
             this.picboxBack.Name = "picboxBack";
             this.picboxBack.Size = new System.Drawing.Size(70, 70);
             this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,6 +314,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
@@ -381,11 +385,12 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(560, 65);
+            this.panel3.Location = new System.Drawing.Point(560, 140);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(441, 645);
+            this.panel3.Size = new System.Drawing.Size(441, 570);
             this.panel3.TabIndex = 35;
             // 
             // dataGridView1
@@ -401,7 +406,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 13F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 4);
+            this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(270, 21);
             this.label2.TabIndex = 36;
@@ -410,10 +415,29 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel5.Location = new System.Drawing.Point(560, 94);
+            this.panel5.Location = new System.Drawing.Point(-1, 27);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(441, 1);
             this.panel5.TabIndex = 37;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel4.Location = new System.Drawing.Point(0, 28);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(524, 1);
+            this.panel4.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 21);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Yeni üye/öğrenci kaydı :";
             // 
             // Add_Student
             // 
@@ -421,7 +445,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.picboxBack);
@@ -479,5 +502,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
