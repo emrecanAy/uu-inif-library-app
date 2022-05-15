@@ -364,10 +364,10 @@ namespace uu_library_app.FormUI
             this.btnEditMember.Image = ((System.Drawing.Image)(resources.GetObject("btnEditMember.Image")));
             this.btnEditMember.Location = new System.Drawing.Point(0, 56);
             this.btnEditMember.Name = "btnEditMember";
-            this.btnEditMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditMember.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
             this.btnEditMember.Size = new System.Drawing.Size(186, 28);
             this.btnEditMember.TabIndex = 2;
-            this.btnEditMember.Text = " Edit Member";
+            this.btnEditMember.Text = " Öğrenci Düzenle";
             this.btnEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditMember.UseVisualStyleBackColor = true;
@@ -383,10 +383,10 @@ namespace uu_library_app.FormUI
             this.btnDeleteMember.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteMember.Image")));
             this.btnDeleteMember.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteMember.Name = "btnDeleteMember";
-            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
             this.btnDeleteMember.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteMember.TabIndex = 1;
-            this.btnDeleteMember.Text = " Delete Member";
+            this.btnDeleteMember.Text = " Öğrenci Sil";
             this.btnDeleteMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteMember.UseVisualStyleBackColor = true;
@@ -402,10 +402,10 @@ namespace uu_library_app.FormUI
             this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
             this.btnAddMember.Location = new System.Drawing.Point(0, 0);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddMember.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnAddMember.Size = new System.Drawing.Size(186, 28);
             this.btnAddMember.TabIndex = 0;
-            this.btnAddMember.Text = " Add Member";
+            this.btnAddMember.Text = " Öğrenci Ekle";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddMember.UseVisualStyleBackColor = true;
@@ -423,7 +423,7 @@ namespace uu_library_app.FormUI
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(186, 40);
             this.btnMembers.TabIndex = 10;
-            this.btnMembers.Text = "   Üyeler";
+            this.btnMembers.Text = "   Öğrenciler";
             this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
@@ -578,7 +578,7 @@ namespace uu_library_app.FormUI
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(149)))));
             this.label1.Location = new System.Drawing.Point(27, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 16);
+            this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Uludag University";
             // 
@@ -599,7 +599,7 @@ namespace uu_library_app.FormUI
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 32);
+            this.label3.Size = new System.Drawing.Size(172, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ana Sayfa :";
             // 

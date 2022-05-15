@@ -66,7 +66,7 @@ namespace uu_library_app.FormUI
             }
         }
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -179,17 +179,19 @@ namespace uu_library_app.FormUI
         #region CRUD Books Buttons
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new Add_Books());
             hideSubMenu();
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
+            
             hideSubMenu();
         }
 
         private void btnEditBook_Click(object sender, EventArgs e)
         {
+            
             hideSubMenu();
         }
 

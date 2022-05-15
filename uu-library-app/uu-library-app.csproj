@@ -47,16 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormUI\Category-Operations.cs">
+    <Compile Include="FormUI\Other-Operations\Category-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Category-Operations.Designer.cs">
+    <Compile Include="FormUI\Other-Operations\Category-Operations.Designer.cs">
       <DependentUpon>Category-Operations.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\author-actions.cs">
+    <Compile Include="FormUI\Other-Operations\author-actions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\author-actions.Designer.cs">
+    <Compile Include="FormUI\Other-Operations\author-actions.Designer.cs">
       <DependentUpon>author-actions.cs</DependentUpon>
     </Compile>
     <Compile Include="Business\Abstract\ILanguageService.cs" />
@@ -69,12 +69,6 @@
     <Compile Include="DataAccess\Concrete\StudentDal.cs" />
     <Compile Include="Entity\Concrete\Language.cs" />
     <Compile Include="Entity\Concrete\Student.cs" />
-    <Compile Include="FormUI\Add-Book.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\Add-Book.Designer.cs">
-      <DependentUpon>Add-Book.cs</DependentUpon>
-    </Compile>
     <Compile Include="Business\Abstract\IBookService.cs" />
     <Compile Include="Business\Abstract\IDepartmentService.cs" />
     <Compile Include="Business\Concrete\BookManager.cs" />
@@ -83,24 +77,24 @@
     <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\BookDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\DepartmentDal.cs" />
-    <Compile Include="FormUI\Delete-Student.cs">
+    <Compile Include="FormUI\Student\Delete-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Delete-Student.Designer.cs">
+    <Compile Include="FormUI\Student\Delete-Student.Designer.cs">
       <DependentUpon>Delete-Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Edit-Student.cs">
+    <Compile Include="FormUI\Student\Edit-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Edit-Student.Designer.cs">
+    <Compile Include="FormUI\Student\Edit-Student.Designer.cs">
       <DependentUpon>Edit-Student.cs</DependentUpon>
     </Compile>
     <Compile Include="Entity\Concrete\Book.cs" />
     <Compile Include="Entity\Concrete\Department.cs" />
-    <Compile Include="FormUI\Add-Student.cs">
+    <Compile Include="FormUI\Student\Add-Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Add-Student.Designer.cs">
+    <Compile Include="FormUI\Student\Add-Student.Designer.cs">
       <DependentUpon>Add-Student.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\LibrarianInterface.cs">
@@ -109,43 +103,49 @@
     <Compile Include="FormUI\LibrarianInterface.Designer.cs">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Language-Operations.cs">
+    <Compile Include="FormUI\Other-Operations\Language-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Language-Operations.Designer.cs">
+    <Compile Include="FormUI\Other-Operations\Language-Operations.Designer.cs">
       <DependentUpon>Language-Operations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Book\Add_Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Book\Add_Books.Designer.cs">
+      <DependentUpon>Add_Books.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormUI\publisher-actions.cs">
+    <Compile Include="FormUI\Other-Operations\publisher-actions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\publisher-actions.Designer.cs">
+    <Compile Include="FormUI\Other-Operations\publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormUI\Category-Operations.resx">
+    <EmbeddedResource Include="FormUI\Other-Operations\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Add-Book.resx">
-      <DependentUpon>Add-Book.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Add-Student.resx">
+    <EmbeddedResource Include="FormUI\Student\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\author-actions.resx">
+    <EmbeddedResource Include="FormUI\Other-Operations\author-actions.resx">
       <DependentUpon>author-actions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Delete-Student.resx">
+    <EmbeddedResource Include="FormUI\Student\Delete-Student.resx">
       <DependentUpon>Delete-Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Edit-Student.resx">
+    <EmbeddedResource Include="FormUI\Student\Edit-Student.resx">
       <DependentUpon>Edit-Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Language-Operations.resx">
+    <EmbeddedResource Include="FormUI\Other-Operations\Language-Operations.resx">
       <DependentUpon>Language-Operations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Book\Add_Books.resx">
+      <DependentUpon>Add_Books.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,7 +156,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormUI\publisher-actions.resx">
+    <EmbeddedResource Include="FormUI\Other-Operations\publisher-actions.resx">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

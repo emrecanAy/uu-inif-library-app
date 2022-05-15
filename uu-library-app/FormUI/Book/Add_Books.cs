@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace uu_library_app
 {
-    public partial class Add_Book : Form
+    public partial class Add_Books : Form
     {
-        public Add_Book()
+        public Add_Books()
         {
             InitializeComponent();
         }

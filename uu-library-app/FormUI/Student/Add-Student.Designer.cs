@@ -52,16 +52,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -314,6 +314,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel8);
@@ -340,10 +341,29 @@
             this.panel2.Controls.Add(this.picboxEmail);
             this.panel2.Controls.Add(this.pnlEmail);
             this.panel2.Controls.Add(this.txtOkulNo);
-            this.panel2.Location = new System.Drawing.Point(12, 140);
+            this.panel2.Location = new System.Drawing.Point(14, 140);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 566);
             this.panel2.TabIndex = 34;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 21);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Yeni üye/öğrenci kaydı :";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel4.Location = new System.Drawing.Point(0, 28);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(524, 1);
+            this.panel4.TabIndex = 38;
             // 
             // panel8
             // 
@@ -388,10 +408,18 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(560, 140);
+            this.panel3.Location = new System.Drawing.Point(557, 140);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(441, 570);
             this.panel3.TabIndex = 35;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel5.Location = new System.Drawing.Point(-1, 27);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(441, 1);
+            this.panel5.TabIndex = 37;
             // 
             // dataGridView1
             // 
@@ -411,33 +439,6 @@
             this.label2.Size = new System.Drawing.Size(270, 21);
             this.label2.TabIndex = 36;
             this.label2.Text = "Son Eklenen Üyeler/Öğrenciler :";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel5.Location = new System.Drawing.Point(-1, 27);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(441, 1);
-            this.panel5.TabIndex = 37;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel4.Location = new System.Drawing.Point(0, 28);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(524, 1);
-            this.panel4.TabIndex = 38;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 21);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Yeni üye/öğrenci kaydı :";
             // 
             // Add_Student
             // 
