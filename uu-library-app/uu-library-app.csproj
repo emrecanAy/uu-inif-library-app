@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormUI\author-actions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\author-actions.Designer.cs">
+      <DependentUpon>author-actions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Business\Abstract\ILanguageService.cs" />
     <Compile Include="Business\Abstract\IStudentService.cs" />
     <Compile Include="Business\Concrete\LanguageManager.cs" />

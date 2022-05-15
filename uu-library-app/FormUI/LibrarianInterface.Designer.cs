@@ -171,7 +171,7 @@ namespace uu_library_app.FormUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 750);
+            this.panel1.Size = new System.Drawing.Size(186, 740);
             this.panel1.TabIndex = 0;
             // 
             // pnlDigerSubMenu
@@ -1296,7 +1296,7 @@ namespace uu_library_app.FormUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1200, 750);
+            this.ClientSize = new System.Drawing.Size(1200, 740);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnlNewNav);
             this.Controls.Add(this.panel1);
