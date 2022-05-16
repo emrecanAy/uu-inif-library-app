@@ -81,28 +81,28 @@ namespace uu_library_app
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -559,11 +559,11 @@ namespace uu_library_app
             // lblBaslik
             // 
             this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold);
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(98, 38);
+            this.lblBaslik.Location = new System.Drawing.Point(98, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(564, 32);
+            this.lblBaslik.Size = new System.Drawing.Size(565, 40);
             this.lblBaslik.TabIndex = 178;
             this.lblBaslik.Text = "Kütüphaneye Yeni Kitap Ekleme Formu :";
             // 
@@ -714,133 +714,40 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 640);
             this.panel1.TabIndex = 230;
             // 
-            // dataGridView1
+            // panel24
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(427, 638);
-            this.dataGridView1.TabIndex = 231;
+            this.panel24.Location = new System.Drawing.Point(80, 622);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(165, 1);
+            this.panel24.TabIndex = 233;
             // 
-            // panel4
+            // panel25
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Location = new System.Drawing.Point(569, 98);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(429, 640);
-            this.panel4.TabIndex = 232;
+            this.panel25.Location = new System.Drawing.Point(81, 163);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(165, 1);
+            this.panel25.TabIndex = 234;
             // 
-            // comboBox1
+            // panel28
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox1.Location = new System.Drawing.Point(339, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 31);
-            this.comboBox1.TabIndex = 233;
+            this.panel28.Location = new System.Drawing.Point(339, 163);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(165, 1);
+            this.panel28.TabIndex = 235;
             // 
-            // comboBox2
+            // panel26
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox2.Location = new System.Drawing.Point(80, 133);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(165, 31);
-            this.comboBox2.TabIndex = 234;
+            this.panel26.Location = new System.Drawing.Point(340, 78);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(165, 1);
+            this.panel26.TabIndex = 234;
             // 
-            // comboBox3
+            // panel27
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox3.Location = new System.Drawing.Point(339, 133);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(165, 31);
-            this.comboBox3.TabIndex = 235;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox4.ForeColor = System.Drawing.Color.White;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox4.Location = new System.Drawing.Point(80, 221);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(165, 31);
-            this.comboBox4.TabIndex = 236;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox5.ForeColor = System.Drawing.Color.White;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox5.Location = new System.Drawing.Point(80, 592);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(165, 31);
-            this.comboBox5.TabIndex = 237;
-            // 
-            // panel14
-            // 
-            this.panel14.Location = new System.Drawing.Point(80, 133);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(165, 1);
-            this.panel14.TabIndex = 233;
-            // 
-            // panel15
-            // 
-            this.panel15.Location = new System.Drawing.Point(339, 48);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(165, 1);
-            this.panel15.TabIndex = 234;
-            // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(339, 133);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(165, 1);
-            this.panel16.TabIndex = 234;
-            // 
-            // panel17
-            // 
-            this.panel17.Location = new System.Drawing.Point(81, 221);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(165, 1);
-            this.panel17.TabIndex = 235;
-            // 
-            // panel18
-            // 
-            this.panel18.Location = new System.Drawing.Point(80, 592);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(165, 1);
-            this.panel18.TabIndex = 235;
+            this.panel27.Location = new System.Drawing.Point(81, 251);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(165, 1);
+            this.panel27.TabIndex = 234;
             // 
             // panel19
             // 
@@ -877,40 +784,133 @@ namespace uu_library_app
             this.panel23.Size = new System.Drawing.Size(1, 31);
             this.panel23.TabIndex = 234;
             // 
-            // panel24
+            // panel14
             // 
-            this.panel24.Location = new System.Drawing.Point(80, 622);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(165, 1);
-            this.panel24.TabIndex = 233;
+            this.panel14.Location = new System.Drawing.Point(80, 133);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(165, 1);
+            this.panel14.TabIndex = 233;
             // 
-            // panel25
+            // panel16
             // 
-            this.panel25.Location = new System.Drawing.Point(81, 163);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(165, 1);
-            this.panel25.TabIndex = 234;
+            this.panel16.Location = new System.Drawing.Point(339, 133);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(165, 1);
+            this.panel16.TabIndex = 234;
             // 
-            // panel26
+            // panel17
             // 
-            this.panel26.Location = new System.Drawing.Point(340, 78);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(165, 1);
-            this.panel26.TabIndex = 234;
+            this.panel17.Location = new System.Drawing.Point(81, 221);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(165, 1);
+            this.panel17.TabIndex = 235;
             // 
-            // panel27
+            // panel15
             // 
-            this.panel27.Location = new System.Drawing.Point(81, 251);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(165, 1);
-            this.panel27.TabIndex = 234;
+            this.panel15.Location = new System.Drawing.Point(339, 48);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(165, 1);
+            this.panel15.TabIndex = 234;
             // 
-            // panel28
+            // panel18
             // 
-            this.panel28.Location = new System.Drawing.Point(339, 163);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(165, 1);
-            this.panel28.TabIndex = 235;
+            this.panel18.Location = new System.Drawing.Point(80, 592);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(165, 1);
+            this.panel18.TabIndex = 235;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox5.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox5.ForeColor = System.Drawing.Color.White;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "İşletme"});
+            this.comboBox5.Location = new System.Drawing.Point(80, 592);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(165, 31);
+            this.comboBox5.TabIndex = 237;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox4.ForeColor = System.Drawing.Color.White;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "İşletme"});
+            this.comboBox4.Location = new System.Drawing.Point(80, 221);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(165, 31);
+            this.comboBox4.TabIndex = 236;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "İşletme"});
+            this.comboBox3.Location = new System.Drawing.Point(339, 133);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(165, 31);
+            this.comboBox3.TabIndex = 235;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "İşletme"});
+            this.comboBox2.Location = new System.Drawing.Point(80, 133);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(165, 31);
+            this.comboBox2.TabIndex = 234;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "İşletme"});
+            this.comboBox1.Location = new System.Drawing.Point(339, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 31);
+            this.comboBox1.TabIndex = 233;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(427, 638);
+            this.dataGridView1.TabIndex = 231;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(569, 98);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(429, 640);
+            this.panel4.TabIndex = 232;
             // 
             // Add_Books
             // 

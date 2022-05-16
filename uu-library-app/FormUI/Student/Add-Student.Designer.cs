@@ -248,9 +248,9 @@
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 28);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(231, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(345, 40);
             this.lblBaslik.TabIndex = 26;
-            this.lblBaslik.Text = "Öğrenci Ekleme";
+            this.lblBaslik.Text = "Öğrenci Ekleme Formu :";
             // 
             // picboxBack
             // 
@@ -353,9 +353,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 21);
+            this.label3.Size = new System.Drawing.Size(274, 21);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Yeni üye/öğrenci kaydı :";
+            this.label3.Text = "Yeni üye/öğrenci kayıt İşlemleri :";
             // 
             // panel4
             // 

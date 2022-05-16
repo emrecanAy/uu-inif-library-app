@@ -92,9 +92,9 @@ namespace uu_library_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(84, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 40);
+            this.label1.Size = new System.Drawing.Size(409, 40);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Öğrenci Güncelleme ";
+            this.label1.Text = "Öğrenci Güncelleme Formu :";
             // 
             // btnGuncelle
             // 
@@ -291,9 +291,9 @@ namespace uu_library_app
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(4, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(398, 21);
+            this.label5.Size = new System.Drawing.Size(414, 21);
             this.label5.TabIndex = 39;
-            this.label5.Text = "Üye/Öğrenci Güncelleme ve Düzenleme Formu :";
+            this.label5.Text = "Üye/Öğrenci Güncelleme ve Düzenleme İşlemleri :";
             // 
             // panel5
             // 
