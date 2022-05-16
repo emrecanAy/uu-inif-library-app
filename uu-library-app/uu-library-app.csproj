@@ -93,6 +93,12 @@
     <Compile Include="Business\Concrete\DepositBookManager.cs" />
     <Compile Include="DataAccess\Abstract\IDepositBookDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\DepositBookDal.cs" />
+    <Compile Include="FormUI\Book\delete-book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Book\delete-book.Designer.cs">
+      <DependentUpon>delete-book.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Book\edit-book.cs">
       <SubType>Form</SubType>
     </Compile>
