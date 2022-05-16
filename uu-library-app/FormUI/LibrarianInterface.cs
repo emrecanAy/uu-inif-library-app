@@ -74,8 +74,8 @@ namespace uu_library_app.FormUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panelChildFormNew.Controls.Add(childForm);
+            panelChildFormNew.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
@@ -83,12 +83,12 @@ namespace uu_library_app.FormUI
 #endregion
         private void LibrarianInterface_Load(object sender, EventArgs e)
         {
-
+            openChildForm(new Dashboard());
         }
         #region Buttons Click Events
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-           
+            openChildForm(new Dashboard());
             pnlNewNav.Height = btnDashboard.Height;
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
