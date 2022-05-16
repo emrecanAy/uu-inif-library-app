@@ -182,6 +182,9 @@
     <Compile Include="FormUI\Other-Operations\publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormUI\Book\delete-book.resx">
+      <DependentUpon>delete-book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\edit-book.resx">
       <DependentUpon>edit-book.cs</DependentUpon>
     </EmbeddedResource>
