@@ -230,9 +230,9 @@ namespace uu_library_app
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(37, 373);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 25);
+            this.label13.Size = new System.Drawing.Size(110, 25);
             this.label13.TabIndex = 214;
-            this.label13.Text = "Stok Adeti :";
+            this.label13.Text = "Stok Adedi :";
             // 
             // pictureBox7
             // 
@@ -917,7 +917,7 @@ namespace uu_library_app
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.ClientSize = new System.Drawing.Size(1015, 740);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);

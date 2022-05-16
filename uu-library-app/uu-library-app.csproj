@@ -174,6 +174,12 @@
     <Compile Include="FormUI\Book\Add_Books.Designer.cs">
       <DependentUpon>Add_Books.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\login-panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\login-panel.Designer.cs">
+      <DependentUpon>login-panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormUI\Other-Operations\publisher-actions.cs">
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\edit-book.resx">
       <DependentUpon>edit-book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\login-panel.resx">
+      <DependentUpon>login-panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>

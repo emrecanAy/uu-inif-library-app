@@ -520,9 +520,9 @@ namespace uu_library_app
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(37, 373);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 25);
+            this.label13.Size = new System.Drawing.Size(110, 25);
             this.label13.TabIndex = 214;
-            this.label13.Text = "Stok Adeti :";
+            this.label13.Text = "Stok Adedi :";
             // 
             // pictureBox7
             // 
