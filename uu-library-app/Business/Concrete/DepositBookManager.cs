@@ -20,27 +20,27 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(DepositBook depositBook)
         {
-            throw new NotImplementedException();
+            _depositBook.Add(depositBook);
         }
 
         public void Delete(DepositBook depositBook)
         {
-            throw new NotImplementedException();
+            _depositBook.Delete(depositBook);
         }
 
         public List<DepositBook> getAll()
         {
-            throw new NotImplementedException();
+            return _depositBook.getAll();
         }
 
         public DepositBook getById(string id)
         {
-            throw new NotImplementedException();
+            return _depositBook.getById(id);
         }
 
         public void Update(DepositBook depositBook)
         {
-            throw new NotImplementedException();
+            _depositBook.Update(depositBook);
         }
     }
 }
