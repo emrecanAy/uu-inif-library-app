@@ -185,13 +185,13 @@ namespace uu_library_app.FormUI
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new delete_book());
             hideSubMenu();
         }
 
         private void btnEditBook_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new edit_book());
             hideSubMenu();
         }
 
@@ -218,34 +218,47 @@ namespace uu_library_app.FormUI
 
         private void btnLending_Click(object sender, EventArgs e)
         {
+            openChildForm(new Borrowing_Book());
             hideSubMenu();
         }
 
         private void btnReceive_Click(object sender, EventArgs e)
         {
+            openChildForm(new Get_Book_Back());
             hideSubMenu();
         }
 
         private void btnYazar_Click(object sender, EventArgs e)
         {
+            openChildForm(new author_actions());
             hideSubMenu();
         }
         private void btnYayinevi_Click(object sender, EventArgs e)
         {
+            openChildForm(new publisher_actions());
             hideSubMenu();
         }
         private void btnDil_Click(object sender, EventArgs e)
         {
+            openChildForm(new Language_Operations());
             hideSubMenu();
         }
 
         private void btnKategori_Click(object sender, EventArgs e)
         {
+            openChildForm(new Category_Operations());
+            hideSubMenu();
+        }
+
+        private void btnBolum_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Department_Operations());
             hideSubMenu();
         }
 
 
-
         #endregion
+
+        
     }
 }

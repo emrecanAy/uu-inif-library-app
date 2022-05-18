@@ -31,6 +31,7 @@ namespace uu_library_app
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Affairs));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -44,7 +45,6 @@ namespace uu_library_app
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnlSoyad = new System.Windows.Forms.Panel();
             this.picboxAd = new System.Windows.Forms.PictureBox();
             this.picboxSoyad = new System.Windows.Forms.PictureBox();
@@ -52,16 +52,16 @@ namespace uu_library_app
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.picboxEmail = new System.Windows.Forms.PictureBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,6 +102,17 @@ namespace uu_library_app
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 372);
             this.panel2.TabIndex = 184;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(63, 286);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(439, 27);
+            this.textBox1.TabIndex = 39;
             // 
             // label3
             // 
@@ -228,22 +239,6 @@ namespace uu_library_app
             this.txtSoyad.Size = new System.Drawing.Size(164, 27);
             this.txtSoyad.TabIndex = 2;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(10, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 35);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Sorgula";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // pnlSoyad
             // 
             this.pnlSoyad.BackColor = System.Drawing.Color.White;
@@ -316,6 +311,22 @@ namespace uu_library_app
             this.pnlEmail.Size = new System.Drawing.Size(481, 1);
             this.pnlEmail.TabIndex = 13;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(10, 105);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(148, 35);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Sorgula";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -358,17 +369,6 @@ namespace uu_library_app
             this.textBox2.Size = new System.Drawing.Size(400, 27);
             this.textBox2.TabIndex = 39;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(63, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(439, 27);
-            this.textBox1.TabIndex = 39;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -403,14 +403,6 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(453, 235);
             this.panel3.TabIndex = 187;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel9.Location = new System.Drawing.Point(2, 31);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(453, 1);
-            this.panel9.TabIndex = 39;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -421,6 +413,14 @@ namespace uu_library_app
             this.label2.Size = new System.Drawing.Size(287, 21);
             this.label2.TabIndex = 40;
             this.label2.Text = "Ödünç Alınan Kitapların Durumu :";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel9.Location = new System.Drawing.Point(2, 31);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(453, 1);
+            this.panel9.TabIndex = 39;
             // 
             // button3
             // 

@@ -89,18 +89,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Borrowing-Book.cs">
+    <Compile Include="Business\Abstract\IAuthorService.cs" />
+    <Compile Include="Business\Concrete\AuthorManager.cs" />
+    <Compile Include="DataAccess\Abstract\IAuthorDal.cs" />
+    <Compile Include="DataAccess\Concrete\AuthorDal.cs" />
+    <Compile Include="Entity\Concrete\Author.cs" />
+    <Compile Include="FormUI\Deposit\Borrowing-Book.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Borrowing-Book.Designer.cs">
+    <Compile Include="FormUI\Deposit\Borrowing-Book.Designer.cs">
       <DependentUpon>Borrowing-Book.cs</DependentUpon>
     </Compile>
     <Compile Include="Business\Abstract\IDepositBookService.cs" />
     <Compile Include="Business\Concrete\DepositBookManager.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="FormUI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="FormUI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\Abstract\IDepositBookDal.cs" />
@@ -198,10 +203,10 @@
     <Compile Include="FormUI\login-panel.Designer.cs">
       <DependentUpon>login-panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Get-Book-Back.cs">
+    <Compile Include="FormUI\Deposit\Get-Book-Back.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Get-Book-Back.Designer.cs">
+    <Compile Include="FormUI\Deposit\Get-Book-Back.Designer.cs">
       <DependentUpon>Get-Book-Back.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -212,22 +217,22 @@
     <Compile Include="FormUI\Other-Operations\publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sign-Up.cs">
+    <Compile Include="FormUI\Sign-Up.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sign-Up.Designer.cs">
+    <Compile Include="FormUI\Sign-Up.Designer.cs">
       <DependentUpon>Sign-Up.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student-Affairs.cs">
+    <Compile Include="FormUI\Student-Affairs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student-Affairs.Designer.cs">
+    <Compile Include="FormUI\Student-Affairs.Designer.cs">
       <DependentUpon>Student-Affairs.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Borrowing-Book.resx">
+    <EmbeddedResource Include="FormUI\Deposit\Borrowing-Book.resx">
       <DependentUpon>Borrowing-Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="FormUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Department-Operations.resx">
@@ -266,7 +271,7 @@
     <EmbeddedResource Include="FormUI\Book\Add_Books.resx">
       <DependentUpon>Add_Books.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Get-Book-Back.resx">
+    <EmbeddedResource Include="FormUI\Deposit\Get-Book-Back.resx">
       <DependentUpon>Get-Book-Back.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -281,10 +286,10 @@
     <EmbeddedResource Include="FormUI\Other-Operations\publisher-actions.resx">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sign-Up.resx">
+    <EmbeddedResource Include="FormUI\Sign-Up.resx">
       <DependentUpon>Sign-Up.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student-Affairs.resx">
+    <EmbeddedResource Include="FormUI\Student-Affairs.resx">
       <DependentUpon>Student-Affairs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

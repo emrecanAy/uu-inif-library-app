@@ -32,6 +32,7 @@ namespace uu_library_app.FormUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDigerSubMenu = new System.Windows.Forms.Panel();
+            this.btnBolum = new System.Windows.Forms.Button();
             this.btnKategori = new System.Windows.Forms.Button();
             this.btnDil = new System.Windows.Forms.Button();
             this.btnYayinevi = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@ namespace uu_library_app.FormUI
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlDigerSubMenu.SuspendLayout();
@@ -92,7 +92,7 @@ namespace uu_library_app.FormUI
             // pnlDigerSubMenu
             // 
             this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.pnlDigerSubMenu.Controls.Add(this.button1);
+            this.pnlDigerSubMenu.Controls.Add(this.btnBolum);
             this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
             this.pnlDigerSubMenu.Controls.Add(this.btnDil);
             this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
@@ -102,6 +102,24 @@ namespace uu_library_app.FormUI
             this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
             this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 140);
             this.pnlDigerSubMenu.TabIndex = 15;
+            // 
+            // btnBolum
+            // 
+            this.btnBolum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBolum.FlatAppearance.BorderSize = 0;
+            this.btnBolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBolum.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnBolum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnBolum.Image = ((System.Drawing.Image)(resources.GetObject("btnBolum.Image")));
+            this.btnBolum.Location = new System.Drawing.Point(0, 112);
+            this.btnBolum.Name = "btnBolum";
+            this.btnBolum.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnBolum.Size = new System.Drawing.Size(186, 28);
+            this.btnBolum.TabIndex = 4;
+            this.btnBolum.Text = "Bölüm İşlemleri ";
+            this.btnBolum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBolum.UseVisualStyleBackColor = true;
+            this.btnBolum.Click += new System.EventHandler(this.btnBolum_Click);
             // 
             // btnKategori
             // 
@@ -516,23 +534,6 @@ namespace uu_library_app.FormUI
             this.pnlNewNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNewNav.TabIndex = 7;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 112);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(186, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Bölüm İşlemleri ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // panelChildFormNew
             // 
             this.panelChildFormNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -597,7 +598,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnDil;
         private System.Windows.Forms.Button btnYayinevi;
         private System.Windows.Forms.Button btnYazar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBolum;
         private System.Windows.Forms.Panel panelChildFormNew;
     }
 }
