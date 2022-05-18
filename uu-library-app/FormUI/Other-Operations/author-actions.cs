@@ -28,6 +28,9 @@ namespace uu_library_app
      
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            string createGUID = System.Guid.NewGuid().ToString();
+            txtId.Text = createGUID;
+
             manager = new AuthorManager(new AuthorDal());
             Author addToAuthor = new Author(txtId.Text, txtAd.Text, txtSoyad.Text, DateTime.Now, false);
             manager.Add(addToAuthor);

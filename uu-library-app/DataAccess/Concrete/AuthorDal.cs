@@ -35,7 +35,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public void Delete(Author author)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Update(Author author)
