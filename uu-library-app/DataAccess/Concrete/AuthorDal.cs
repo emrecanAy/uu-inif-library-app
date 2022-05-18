@@ -38,6 +38,11 @@ namespace uu_library_app.DataAccess.Concrete
             
         }
 
+        public List<Author> getbyAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Author author)
         {
             throw new NotImplementedException();

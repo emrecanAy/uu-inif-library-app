@@ -42,5 +42,10 @@ namespace uu_library_app
             //Author authorToAdd = new Author(txtId.Text, txtAd.Text, txtSoyad.Text, DateTime.Now, false);
             //_service.Add(authorToAdd);
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

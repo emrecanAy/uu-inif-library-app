@@ -25,6 +25,11 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Author author)
         {
+            _service.Delete(author);
+        }
+
+        public List<Author> getbyAll()
+        {
             throw new NotImplementedException();
         }
 

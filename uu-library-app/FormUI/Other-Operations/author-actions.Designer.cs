@@ -51,12 +51,14 @@ namespace uu_library_app
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.dgwDelete = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -198,6 +200,7 @@ namespace uu_library_app
             this.btnSil.TabIndex = 77;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -286,11 +289,21 @@ namespace uu_library_app
             this.txtId.BackColor = System.Drawing.Color.White;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.Location = new System.Drawing.Point(824, 12);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(164, 22);
             this.txtId.TabIndex = 84;
+            this.txtId.Visible = false;
+            // 
+            // dgwDelete
+            // 
+            this.dgwDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwDelete.Location = new System.Drawing.Point(433, 40);
+            this.dgwDelete.Name = "dgwDelete";
+            this.dgwDelete.Size = new System.Drawing.Size(570, 52);
+            this.dgwDelete.TabIndex = 85;
+            this.dgwDelete.Visible = false;
             // 
             // author_actions
             // 
@@ -298,6 +311,7 @@ namespace uu_library_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.dgwDelete);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel3);
@@ -314,6 +328,7 @@ namespace uu_library_app
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +357,6 @@ namespace uu_library_app
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.DataGridView dgwDelete;
     }
 }
