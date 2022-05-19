@@ -58,7 +58,6 @@ namespace uu_library_app
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -103,6 +102,7 @@ namespace uu_library_app
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -405,17 +405,6 @@ namespace uu_library_app
             this.panel5.Size = new System.Drawing.Size(203, 1);
             this.panel5.TabIndex = 196;
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(341, 313);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 27);
-            this.textBox5.TabIndex = 195;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -641,6 +630,7 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.dateTime1);
             this.panel1.Controls.Add(this.panel24);
             this.panel1.Controls.Add(this.panel25);
             this.panel1.Controls.Add(this.panel28);
@@ -690,7 +680,6 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.panel6);
@@ -912,6 +901,19 @@ namespace uu_library_app
             this.panel4.Size = new System.Drawing.Size(429, 640);
             this.panel4.TabIndex = 232;
             // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(341, 312);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(198, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 233;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -977,7 +979,6 @@ namespace uu_library_app
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel6;
@@ -1022,5 +1023,6 @@ namespace uu_library_app
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private FormUI.Toolbox.DateTime dateTime1;
     }
 }
