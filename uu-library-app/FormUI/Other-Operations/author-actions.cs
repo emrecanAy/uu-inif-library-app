@@ -18,7 +18,7 @@ namespace uu_library_app
 {
     public partial class author_actions : Form
     {
-        AuthorManager manager;
+        AuthorManager manager = new AuthorManager(new AuthorDal());
 
         public author_actions()
         {
@@ -28,24 +28,50 @@ namespace uu_library_app
      
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            txtId.Text = createGUID;
+            string createGUID = System.Guid.NewGuid().ToString(); 
+            Author authorToAdd = new Author(createGUID, txtAd.Text, txtSoyad.Text);
 
-            manager = new AuthorManager(new AuthorDal());
-            Author addToAuthor = new Author(txtId.Text, txtAd.Text, txtSoyad.Text, DateTime.Now, false);
-            manager.Add(addToAuthor);
-            txtId.Clear();
-            txtAd.Clear();
-            txtSoyad.Clear();
-
-
-            //Author authorToAdd = new Author(txtId.Text, txtAd.Text, txtSoyad.Text, DateTime.Now, false);
-            //_service.Add(authorToAdd);
+            try
+            {
+                manager.Add(authorToAdd);
+                txtId.Clear();
+                txtAd.Clear();
+                txtSoyad.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
+                manager.Delete(txtId.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
+            
+        }
 
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            Author authorToUpdate = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
+            try
+            {
+                manager.Update(authorToUpdate);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
         }
     }
 }

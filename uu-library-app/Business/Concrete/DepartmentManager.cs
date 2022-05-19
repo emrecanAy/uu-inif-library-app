@@ -11,20 +11,26 @@ namespace uu_library_app.Business.Concrete
 {
     public class DepartmentManager:IDepartmentService
     {
-        IDepartmentService _department;
-        public DepartmentManager(IDepartmentService department)
+        IDepartmentDal _department;
+        public DepartmentManager(IDepartmentDal department)
         {
             this._department = department;
         }
 
-        public void Add(Department book)
+        public void Add(Department department)
         {
-            _department.Add(book);
+            if(department.Name != null)
+            {
+                _department.Add(department);
+            }
         }
 
-        public void Delete(Department book)
+        public void Delete(string id)
         {
-            _department.Delete(book);
+            if(id != null)
+            {
+                _department.Delete(id);
+            }       
         }
 
         public List<Department> getAll()
@@ -32,14 +38,13 @@ namespace uu_library_app.Business.Concrete
             return _department.getAll();
         }
 
-        public Book getById(string id)
+        public void Update(Department department)
         {
-            return _department.getById(id);
-        }
-
-        public void Update(Department book)
-        {
-            _department.Update(book);
+            if(department.Name != null || department.Name.Length > 0)
+            {
+                _department.Update(department);
+            }
+            
         }
     }
 }

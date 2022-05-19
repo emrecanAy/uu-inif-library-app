@@ -7,7 +7,7 @@ using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.DataAccess.Abstract
 {
-    interface IBookDal
+    public interface IBookDal
     {
         List<Book> getAll();
         List<Book> getAllByCategory(string categoryId);
@@ -15,7 +15,7 @@ namespace uu_library_app.DataAccess.Abstract
         List<Book> getAllSortedByAddedDate();
         void Add(Book book);
         void Update(Book book);
-        void Delete(Book book);
+        void Delete(string id);
         Book getById(string id);
         
 

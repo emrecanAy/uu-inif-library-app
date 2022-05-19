@@ -13,6 +13,8 @@ namespace uu_library_app.Entity.Concrete
         private DateTime createdAt;
         private bool deleted;
 
+        public Language() { }
+
         public Language(string id, string languageName)
         {
             this.id = id;

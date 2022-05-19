@@ -12,6 +12,6 @@ namespace uu_library_app.Business.Abstract
         List<Language> getAll();
         void Add(Language student);
         void Update(Language student);
-        void Delete(Language student);
+        void Delete(string id);
     }
 }

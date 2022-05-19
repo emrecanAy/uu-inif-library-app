@@ -22,9 +22,9 @@ namespace uu_library_app.Business.Concrete
             _service.Add(language);
         }
 
-        public void Delete(Language language)
+        public void Delete(string id)
         {
-            _service.Delete(language);
+            _service.Delete(id);
         }
 
         public List<Language> getAll()

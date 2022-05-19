@@ -16,5 +16,10 @@ namespace uu_library_app
         {
             InitializeComponent();
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

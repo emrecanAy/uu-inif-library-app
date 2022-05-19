@@ -9,9 +9,9 @@ namespace uu_library_app.DataAccess.Abstract
 {
     public interface IAuthorDal
     {
-        List<Author> getbyAll();
+        List<Author> getAll();
         void Add(Author author);
         void Update(Author author);
-        void Delete(Author author);
+        void Delete(string id);
     }
 }

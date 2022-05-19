@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Author
+    public class Category
     {
         private string id;
-        private string firstName;
-        private string lastName;
+        private string name;
         private DateTime createdAt;
         private bool deleted;
 
-        public Author() { }
-        public Author(string id, string firstName, string lastName)
+        public Category() { }
+
+        public Category(string id, string name)
         {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
+            this.Id = id;
+            this.Name = name;
         }
 
         public string Id { get => id; set => id = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
+        public string Name { get => name; set => name = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
         public bool Deleted { get => deleted; set => deleted = value; }
     }

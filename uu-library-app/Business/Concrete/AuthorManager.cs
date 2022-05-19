@@ -20,22 +20,32 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(Author author)
         {
-            _service.Add(author);
+            if(author.FirstName != null && author.LastName != null)
+            {
+                _service.Add(author);
+            }
         }
 
-        public void Delete(Author author)
+        public void Delete(string id)
         {
-            _service.Delete(author);
+            if(id != null)
+            {
+                _service.Delete(id);
+            }
         }
 
-        public List<Author> getbyAll()
+        public List<Author> getAll()
         {
-            throw new NotImplementedException();
+            return _service.getAll();
         }
 
         public void Update(Author author)
         {
-            throw new NotImplementedException();
+            if(author.FirstName != null && author.LastName != null)
+            {
+                _service.Update(author);
+            }
+            
         }
     }
 }
