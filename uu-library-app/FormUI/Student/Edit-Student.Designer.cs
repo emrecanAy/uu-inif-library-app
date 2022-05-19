@@ -92,9 +92,9 @@ namespace uu_library_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(84, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 40);
+            this.label1.Size = new System.Drawing.Size(436, 40);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Öğrenci Güncelleme Formu :";
+            this.label1.Text = "Öğrenci Güncelleme İşlemleri :";
             // 
             // btnGuncelle
             // 

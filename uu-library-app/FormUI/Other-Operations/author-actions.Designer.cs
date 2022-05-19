@@ -68,9 +68,9 @@ namespace uu_library_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(98, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 40);
+            this.label1.Size = new System.Drawing.Size(231, 40);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Yazar İşlemleri Formu :";
+            this.label1.Text = "Yazar İşlemleri :";
             // 
             // picboxBack
             // 
@@ -179,11 +179,11 @@ namespace uu_library_app
             // btnEkle
             // 
             this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(12, 326);
+            this.btnEkle.Location = new System.Drawing.Point(48, 294);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(101, 35);
+            this.btnEkle.Size = new System.Drawing.Size(203, 43);
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
@@ -192,11 +192,11 @@ namespace uu_library_app
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(186, 326);
+            this.btnSil.Location = new System.Drawing.Point(48, 359);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(101, 35);
+            this.btnSil.Size = new System.Drawing.Size(203, 41);
             this.btnSil.TabIndex = 77;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
@@ -205,11 +205,11 @@ namespace uu_library_app
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(100, 389);
+            this.btnGuncelle.Location = new System.Drawing.Point(48, 423);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(101, 35);
+            this.btnGuncelle.Size = new System.Drawing.Size(203, 45);
             this.btnGuncelle.TabIndex = 78;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;

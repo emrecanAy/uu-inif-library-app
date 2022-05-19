@@ -714,9 +714,9 @@ namespace uu_library_app
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(296, 279);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 25);
+            this.label5.Size = new System.Drawing.Size(173, 25);
             this.label5.TabIndex = 194;
-            this.label5.Text = "Yayınlanma Tarihi :";
+            this.label5.Text = "Yayımlanma Tarihi :";
             // 
             // pictureBox6
             // 
@@ -908,9 +908,9 @@ namespace uu_library_app
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(98, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(598, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(275, 40);
             this.lblBaslik.TabIndex = 233;
-            this.lblBaslik.Text = "Kütüphanedeki Kitabı Güncelleme Formu :";
+            this.lblBaslik.Text = "Kitap Güncelleme :";
             // 
             // edit_book
             // 

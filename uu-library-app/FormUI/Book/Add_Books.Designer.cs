@@ -80,6 +80,7 @@ namespace uu_library_app
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -102,7 +103,6 @@ namespace uu_library_app
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -413,9 +413,9 @@ namespace uu_library_app
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(296, 279);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 25);
+            this.label5.Size = new System.Drawing.Size(173, 25);
             this.label5.TabIndex = 194;
-            this.label5.Text = "Yayınlanma Tarihi :";
+            this.label5.Text = "Yayımlanma Tarihi :";
             // 
             // pictureBox6
             // 
@@ -552,9 +552,9 @@ namespace uu_library_app
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(98, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(565, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(276, 40);
             this.lblBaslik.TabIndex = 178;
-            this.lblBaslik.Text = "Kütüphaneye Yeni Kitap Ekleme Formu :";
+            this.lblBaslik.Text = "Yeni Kitap Ekleme :";
             // 
             // picboxSoyad
             // 
@@ -702,6 +702,19 @@ namespace uu_library_app
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 640);
             this.panel1.TabIndex = 230;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(341, 312);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(198, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 233;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
             // 
             // panel24
             // 
@@ -900,19 +913,6 @@ namespace uu_library_app
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(429, 640);
             this.panel4.TabIndex = 232;
-            // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(341, 312);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(198, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 233;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
             // 
             // Add_Books
             // 

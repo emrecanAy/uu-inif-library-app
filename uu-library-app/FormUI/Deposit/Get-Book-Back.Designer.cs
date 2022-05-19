@@ -41,27 +41,9 @@ namespace uu_library_app
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.picboxAd = new System.Windows.Forms.PictureBox();
-            this.pnlAd = new System.Windows.Forms.Panel();
-            this.txtAd = new System.Windows.Forms.TextBox();
-            this.lblAd = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -69,22 +51,40 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.picboxAd = new System.Windows.Forms.PictureBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlAd = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblAd = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // picboxBack
@@ -105,9 +105,9 @@ namespace uu_library_app
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(374, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(323, 40);
             this.lblBaslik.TabIndex = 182;
-            this.lblBaslik.Text = "Kitap Geri Alma İşlemleri :";
+            this.lblBaslik.Text = "Teslim Alma İşlemleri :";
             // 
             // panel5
             // 
@@ -197,209 +197,48 @@ namespace uu_library_app
             this.panel2.Size = new System.Drawing.Size(516, 488);
             this.panel2.TabIndex = 244;
             // 
-            // label1
+            // panel12
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 21);
-            this.label1.TabIndex = 235;
-            this.label1.Text = "Kitap Bilgisi :";
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.btnEkle);
+            this.panel12.Controls.Add(this.textBox2);
+            this.panel12.Controls.Add(this.panel24);
+            this.panel12.Controls.Add(this.panel19);
+            this.panel12.Controls.Add(this.panel18);
+            this.panel12.Controls.Add(this.pictureBox9);
+            this.panel12.Controls.Add(this.panel9);
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.Location = new System.Drawing.Point(277, 121);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(225, 230);
+            this.panel12.TabIndex = 285;
             // 
-            // panel3
+            // btnEkle
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel3.Location = new System.Drawing.Point(0, 25);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(517, 1);
-            this.panel3.TabIndex = 234;
+            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEkle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEkle.FlatAppearance.BorderSize = 2;
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(41, 146);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(148, 35);
+            this.btnEkle.TabIndex = 283;
+            this.btnEkle.Text = "Geri Al";
+            this.btnEkle.UseVisualStyleBackColor = false;
             // 
-            // pictureBox10
+            // textBox2
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(18, 315);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 276;
-            this.pictureBox10.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(18, 351);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(203, 1);
-            this.panel10.TabIndex = 275;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(58, 317);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 27);
-            this.textBox10.TabIndex = 274;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 283);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 25);
-            this.label10.TabIndex = 273;
-            this.label10.Text = "Yazar :";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(18, 235);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 272;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(18, 271);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(203, 1);
-            this.panel8.TabIndex = 271;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(58, 237);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 27);
-            this.textBox6.TabIndex = 270;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 203);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 25);
-            this.label6.TabIndex = 269;
-            this.label6.Text = "ISBN :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(57, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 268;
-            // 
-            // panel28
-            // 
-            this.panel28.Location = new System.Drawing.Point(56, 185);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(165, 1);
-            this.panel28.TabIndex = 267;
-            // 
-            // panel22
-            // 
-            this.panel22.Location = new System.Drawing.Point(56, 155);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1, 31);
-            this.panel22.TabIndex = 265;
-            // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(56, 155);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(165, 1);
-            this.panel16.TabIndex = 266;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(18, 152);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 264;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(18, 188);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(203, 1);
-            this.panel7.TabIndex = 263;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
-            this.label4.TabIndex = 262;
-            this.label4.Text = "Yayınevi :";
-            // 
-            // picboxAd
-            // 
-            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(18, 72);
-            this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(36, 36);
-            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxAd.TabIndex = 261;
-            this.picboxAd.TabStop = false;
-            // 
-            // pnlAd
-            // 
-            this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(18, 108);
-            this.pnlAd.Name = "pnlAd";
-            this.pnlAd.Size = new System.Drawing.Size(203, 1);
-            this.pnlAd.TabIndex = 260;
-            // 
-            // txtAd
-            // 
-            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(57, 74);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 27);
-            this.txtAd.TabIndex = 259;
-            // 
-            // lblAd
-            // 
-            this.lblAd.AutoSize = true;
-            this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(13, 40);
-            this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(102, 28);
-            this.lblAd.TabIndex = 258;
-            this.lblAd.Text = "Kitap Adı :";
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(53, 78);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(164, 27);
+            this.textBox2.TabIndex = 277;
             // 
             // panel24
             // 
@@ -479,48 +318,213 @@ namespace uu_library_app
             this.panel11.Size = new System.Drawing.Size(259, 428);
             this.panel11.TabIndex = 284;
             // 
-            // textBox2
+            // picboxAd
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(53, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 27);
-            this.textBox2.TabIndex = 277;
+            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
+            this.picboxAd.Location = new System.Drawing.Point(18, 72);
+            this.picboxAd.Name = "picboxAd";
+            this.picboxAd.Size = new System.Drawing.Size(36, 36);
+            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxAd.TabIndex = 261;
+            this.picboxAd.TabStop = false;
             // 
-            // panel12
+            // panel22
             // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.btnEkle);
-            this.panel12.Controls.Add(this.textBox2);
-            this.panel12.Controls.Add(this.panel24);
-            this.panel12.Controls.Add(this.panel19);
-            this.panel12.Controls.Add(this.panel18);
-            this.panel12.Controls.Add(this.pictureBox9);
-            this.panel12.Controls.Add(this.panel9);
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.Location = new System.Drawing.Point(277, 121);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(225, 230);
-            this.panel12.TabIndex = 285;
+            this.panel22.Location = new System.Drawing.Point(56, 155);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(1, 31);
+            this.panel22.TabIndex = 265;
             // 
-            // btnEkle
+            // panel16
             // 
-            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEkle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEkle.FlatAppearance.BorderSize = 2;
-            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(41, 146);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(148, 35);
-            this.btnEkle.TabIndex = 283;
-            this.btnEkle.Text = "Geri Al";
-            this.btnEkle.UseVisualStyleBackColor = false;
+            this.panel16.Location = new System.Drawing.Point(56, 155);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(165, 1);
+            this.panel16.TabIndex = 266;
+            // 
+            // panel28
+            // 
+            this.panel28.Location = new System.Drawing.Point(56, 185);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(165, 1);
+            this.panel28.TabIndex = 267;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(18, 152);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 264;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(57, 155);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(164, 27);
+            this.textBox1.TabIndex = 268;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(18, 188);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(203, 1);
+            this.panel7.TabIndex = 263;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(13, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 25);
+            this.label6.TabIndex = 269;
+            this.label6.Text = "ISBN :";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(18, 315);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 276;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(13, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.TabIndex = 262;
+            this.label4.Text = "Yayınevi :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox6.ForeColor = System.Drawing.Color.White;
+            this.textBox6.Location = new System.Drawing.Point(58, 237);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(164, 27);
+            this.textBox6.TabIndex = 270;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Location = new System.Drawing.Point(18, 351);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(203, 1);
+            this.panel10.TabIndex = 275;
+            // 
+            // pnlAd
+            // 
+            this.pnlAd.BackColor = System.Drawing.Color.White;
+            this.pnlAd.Location = new System.Drawing.Point(18, 108);
+            this.pnlAd.Name = "pnlAd";
+            this.pnlAd.Size = new System.Drawing.Size(203, 1);
+            this.pnlAd.TabIndex = 260;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(18, 271);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(203, 1);
+            this.panel8.TabIndex = 271;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox10.ForeColor = System.Drawing.Color.White;
+            this.textBox10.Location = new System.Drawing.Point(58, 317);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(164, 27);
+            this.textBox10.TabIndex = 274;
+            // 
+            // txtAd
+            // 
+            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAd.ForeColor = System.Drawing.Color.White;
+            this.txtAd.Location = new System.Drawing.Point(57, 74);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.ReadOnly = true;
+            this.txtAd.Size = new System.Drawing.Size(164, 27);
+            this.txtAd.TabIndex = 259;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(18, 235);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 272;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 283);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 25);
+            this.label10.TabIndex = 273;
+            this.label10.Text = "Yazar :";
+            // 
+            // lblAd
+            // 
+            this.lblAd.AutoSize = true;
+            this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAd.ForeColor = System.Drawing.Color.White;
+            this.lblAd.Location = new System.Drawing.Point(13, 40);
+            this.lblAd.Name = "lblAd";
+            this.lblAd.Size = new System.Drawing.Size(102, 28);
+            this.lblAd.TabIndex = 258;
+            this.lblAd.Text = "Kitap Adı :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 21);
+            this.label1.TabIndex = 235;
+            this.label1.Text = "Kitap Bilgisi :";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel3.Location = new System.Drawing.Point(0, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(517, 1);
+            this.panel3.TabIndex = 234;
             // 
             // Get_Book_Back
             // 
@@ -545,15 +549,15 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

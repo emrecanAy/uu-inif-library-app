@@ -251,6 +251,7 @@ namespace uu_library_app
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(56, 553);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(164, 27);
             this.textBox4.TabIndex = 267;
             // 
@@ -293,6 +294,7 @@ namespace uu_library_app
             this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(56, 472);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(164, 27);
             this.textBox3.TabIndex = 263;
             // 
@@ -335,6 +337,7 @@ namespace uu_library_app
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(56, 394);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(164, 27);
             this.textBox2.TabIndex = 259;
             // 
@@ -391,6 +394,7 @@ namespace uu_library_app
             this.textBox10.ForeColor = System.Drawing.Color.White;
             this.textBox10.Location = new System.Drawing.Point(57, 311);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(164, 27);
             this.textBox10.TabIndex = 255;
             // 
@@ -432,6 +436,7 @@ namespace uu_library_app
             this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Location = new System.Drawing.Point(57, 231);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(164, 27);
             this.textBox6.TabIndex = 251;
             // 
@@ -455,6 +460,7 @@ namespace uu_library_app
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(56, 149);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 249;
             // 
@@ -554,6 +560,7 @@ namespace uu_library_app
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(56, 68);
             this.txtAd.Name = "txtAd";
+            this.txtAd.ReadOnly = true;
             this.txtAd.Size = new System.Drawing.Size(164, 27);
             this.txtAd.TabIndex = 240;
             // 

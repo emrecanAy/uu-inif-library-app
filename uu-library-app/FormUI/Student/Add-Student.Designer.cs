@@ -81,9 +81,9 @@
             this.lblAd.ForeColor = System.Drawing.Color.White;
             this.lblAd.Location = new System.Drawing.Point(16, 87);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(128, 28);
+            this.lblAd.Size = new System.Drawing.Size(46, 28);
             this.lblAd.TabIndex = 0;
-            this.lblAd.Text = "Adınızı Girin :";
+            this.lblAd.Text = "Ad :";
             // 
             // lblSoyad
             // 
@@ -93,9 +93,9 @@
             this.lblSoyad.ForeColor = System.Drawing.Color.White;
             this.lblSoyad.Location = new System.Drawing.Point(291, 87);
             this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(153, 25);
+            this.lblSoyad.Size = new System.Drawing.Size(72, 25);
             this.lblSoyad.TabIndex = 1;
-            this.lblSoyad.Text = "Soyadınızı Girin :";
+            this.lblSoyad.Text = "Soyad :";
             // 
             // txtAd
             // 
@@ -165,9 +165,9 @@
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(16, 175);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(196, 25);
+            this.lblEmail.Size = new System.Drawing.Size(134, 25);
             this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "E-Mail Adresini Girin :";
+            this.lblEmail.Text = "E-Mail Adresi :";
             // 
             // txtEmail
             // 
@@ -237,9 +237,9 @@
             this.lblOkulNo.ForeColor = System.Drawing.Color.White;
             this.lblOkulNo.Location = new System.Drawing.Point(16, 268);
             this.lblOkulNo.Name = "lblOkulNo";
-            this.lblOkulNo.Size = new System.Drawing.Size(209, 25);
+            this.lblOkulNo.Size = new System.Drawing.Size(146, 25);
             this.lblOkulNo.TabIndex = 17;
-            this.lblOkulNo.Text = "Okul Numaranızı Girin :";
+            this.lblOkulNo.Text = "Okul Numarası :";
             // 
             // lblBaslik
             // 
@@ -248,9 +248,9 @@
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 28);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(345, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(372, 40);
             this.lblBaslik.TabIndex = 26;
-            this.lblBaslik.Text = "Öğrenci Ekleme Formu :";
+            this.lblBaslik.Text = "Öğrenci Ekleme İşlemleri :";
             // 
             // picboxBack
             // 
@@ -288,9 +288,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(16, 362);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 25);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Bölümünüzü Girin :";
+            this.label1.Text = "Bölüm :";
             // 
             // panel1
             // 
