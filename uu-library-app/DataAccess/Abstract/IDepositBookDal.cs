@@ -13,6 +13,6 @@ namespace uu_library_app.DataAccess.Abstract
         void Add(DepositBook depositBook);
         void Update(DepositBook depositBook);
         void Delete(DepositBook depositBook);
-        DepositBook getById(string id);
+       
     }
 }

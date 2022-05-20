@@ -20,7 +20,10 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(DepositBook depositBook)
         {
-            _depositBook.Add(depositBook);
+            if (depositBook.DepositDate != null || depositBook.StudentId != null || depositBook.BookId != null)
+            {
+                _depositBook.Add(depositBook);
+            }
         }
 
         public void Delete(DepositBook depositBook)
