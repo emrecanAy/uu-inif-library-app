@@ -10,8 +10,8 @@ namespace uu_library_app.Business.Concrete
 {
     internal class DepositBookManager : IDepositBookService
     {
-        IDepositBookService _depositBook;
-        public DepositBookManager(IDepositBookService depositBook)
+        IDepositBookDal _depositBook;
+        public DepositBookManager(IDepositBookDal depositBook)
         {
             this._depositBook = depositBook;
         }
@@ -34,11 +34,6 @@ namespace uu_library_app.Business.Concrete
         public List<DepositBook> getAll()
         {
             return _depositBook.getAll();
-        }
-
-        public DepositBook getById(string id)
-        {
-            return _depositBook.getById(id);
         }
 
         public void Update(DepositBook depositBook)

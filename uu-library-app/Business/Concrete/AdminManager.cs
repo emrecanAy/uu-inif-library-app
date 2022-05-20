@@ -12,7 +12,6 @@ namespace uu_library_app.Business.Concrete
     public class AdminManager : IAdminService
     {
         IAdminDal _admin;
-
         public AdminManager(IAdminDal admin)
         {
             _admin = admin;

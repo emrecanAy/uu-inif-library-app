@@ -31,6 +31,7 @@ namespace uu_library_app
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_panel));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace uu_library_app
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -69,6 +69,18 @@ namespace uu_library_app
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(292, 325);
             this.panel5.TabIndex = 65;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(192)))));
+            this.linkLabel1.Location = new System.Drawing.Point(91, 247);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(117, 13);
+            this.linkLabel1.TabIndex = 65;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Üye olmak için tıklayın !";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button2
             // 
@@ -189,17 +201,6 @@ namespace uu_library_app
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(192)))));
-            this.linkLabel1.Location = new System.Drawing.Point(91, 247);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(117, 13);
-            this.linkLabel1.TabIndex = 65;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Üye olmak için tıklayın !";
             // 
             // login_panel
             // 

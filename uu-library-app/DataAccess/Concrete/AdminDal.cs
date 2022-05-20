@@ -9,7 +9,6 @@ using MySql.Data.MySqlClient;
 
 namespace uu_library_app.DataAccess.Concrete
 {
-
     internal class AdminDal : IAdminDal
     {
         MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");

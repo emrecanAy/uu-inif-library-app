@@ -28,6 +28,10 @@ namespace uu_library_app
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Sign_Up sign_Up = new Sign_Up();
+            sign_Up.Show();
+        }
     }
 }

@@ -31,11 +31,23 @@ namespace uu_library_app
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_Up));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSifreTekrar = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -46,24 +58,12 @@ namespace uu_library_app
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.picboxEmail = new System.Windows.Forms.PictureBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -76,9 +76,9 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtSifre);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtSifreTekrar);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -86,7 +86,7 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblSoyad);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtAd);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.txtSoyad);
             this.panel2.Controls.Add(this.btnEkle);
@@ -101,6 +101,138 @@ namespace uu_library_app
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 534);
             this.panel2.TabIndex = 35;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(152, 379);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(203, 1);
+            this.panel6.TabIndex = 44;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(209, 351);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 25);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Üye Tipi :";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.radioButton2.Location = new System.Drawing.Point(183, 426);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(187, 29);
+            this.radioButton2.TabIndex = 48;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Kütüphane Görevlisi";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.radioButton1.Location = new System.Drawing.Point(183, 386);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(133, 29);
+            this.radioButton1.TabIndex = 47;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Ögrenci İsleri";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 28);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Şifre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(288, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 25);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Şifre Tekrar:";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSifre.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSifre.ForeColor = System.Drawing.Color.White;
+            this.txtSifre.Location = new System.Drawing.Point(57, 291);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(164, 27);
+            this.txtSifre.TabIndex = 41;
+            this.txtSifre.UseSystemPasswordChar = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(18, 325);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(203, 1);
+            this.panel1.TabIndex = 43;
+            // 
+            // txtSifreTekrar
+            // 
+            this.txtSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSifreTekrar.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSifreTekrar.ForeColor = System.Drawing.Color.White;
+            this.txtSifreTekrar.Location = new System.Drawing.Point(333, 291);
+            this.txtSifreTekrar.Name = "txtSifreTekrar";
+            this.txtSifreTekrar.Size = new System.Drawing.Size(164, 27);
+            this.txtSifreTekrar.TabIndex = 42;
+            this.txtSifreTekrar.UseSystemPasswordChar = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(293, 325);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(203, 1);
+            this.panel3.TabIndex = 44;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, 289);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(293, 289);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 46;
+            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -145,16 +277,16 @@ namespace uu_library_app
             this.lblSoyad.TabIndex = 1;
             this.lblSoyad.Text = "Soyadınızı Girin :";
             // 
-            // textBox2
+            // txtAd
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(57, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAd.ForeColor = System.Drawing.Color.White;
+            this.txtAd.Location = new System.Drawing.Point(57, 121);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(164, 27);
+            this.txtAd.TabIndex = 1;
             // 
             // panel5
             // 
@@ -190,6 +322,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 29;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // pnlSoyad
             // 
@@ -263,136 +396,6 @@ namespace uu_library_app
             this.pnlEmail.Size = new System.Drawing.Size(481, 1);
             this.pnlEmail.TabIndex = 13;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 257);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 28);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Adınızı Girin :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(288, 257);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 25);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Soyadınızı Girin :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(57, 291);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 41;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(18, 325);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 1);
-            this.panel1.TabIndex = 43;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(333, 291);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 27);
-            this.textBox3.TabIndex = 42;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(293, 325);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(203, 1);
-            this.panel3.TabIndex = 44;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 289);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(293, 289);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 46;
-            this.pictureBox2.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.radioButton1.Location = new System.Drawing.Point(183, 386);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(133, 29);
-            this.radioButton1.TabIndex = 47;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ögrenci İsleri";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.radioButton2.Location = new System.Drawing.Point(183, 426);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(187, 29);
-            this.radioButton2.TabIndex = 48;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kütüphane Görevlisi";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(209, 351);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 25);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Üye Tipi :";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(152, 379);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(203, 1);
-            this.panel6.TabIndex = 44;
-            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,11 +408,11 @@ namespace uu_library_app
             this.Text = "Sign_Up";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,9 +422,9 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSifreTekrar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -429,7 +432,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSoyad;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.Button btnEkle;

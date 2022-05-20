@@ -108,6 +108,8 @@
     <Compile Include="Business\Concrete\CategoryManager.cs" />
     <Compile Include="Business\Concrete\LocationManager.cs" />
     <Compile Include="Business\Concrete\PublisherManager.cs" />
+    <Compile Include="Core\Helpers\DbConnection.cs" />
+    <Compile Include="Core\Utils\FileWriter.cs" />
     <Compile Include="DataAccess\Abstract\IAdminDal.cs" />
     <Compile Include="DataAccess\Abstract\IAuthorDal.cs" />
     <Compile Include="DataAccess\Abstract\ICategoryDal.cs" />
@@ -340,9 +342,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\calendawhitepng.png" />
   </ItemGroup>

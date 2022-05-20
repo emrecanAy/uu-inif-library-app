@@ -76,6 +76,7 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,12 +117,13 @@ namespace uu_library_app
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Location = new System.Drawing.Point(511, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 64);
+            this.panel4.Size = new System.Drawing.Size(492, 84);
             this.panel4.TabIndex = 233;
             // 
             // label3
@@ -129,24 +131,25 @@ namespace uu_library_app
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 13F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 2);
+            this.label3.Location = new System.Drawing.Point(4, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 21);
+            this.label3.Size = new System.Drawing.Size(106, 21);
             this.label3.TabIndex = 235;
-            this.label3.Text = "Öğrenci Seçme :";
+            this.label3.Text = "Öğrenci No:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(-1, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 1);
             this.panel1.TabIndex = 234;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(484, 31);
             this.dataGridView1.TabIndex = 231;
@@ -592,6 +595,20 @@ namespace uu_library_app
             this.btnEkle.Text = "Ödünç Ver";
             this.btnEkle.UseVisualStyleBackColor = false;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(116, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.ReadOnly = true;
+            this.txtSearch.Size = new System.Drawing.Size(371, 27);
+            this.txtSearch.TabIndex = 270;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            // 
             // Borrowing_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,6 +624,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Borrowing_Book";
             this.Text = "Borrowing_Book";
+            this.Load += new System.EventHandler(this.Borrowing_Book_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -676,5 +694,6 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
