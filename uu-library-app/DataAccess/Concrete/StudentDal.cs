@@ -38,27 +38,225 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        public void Delete(Student student)
+        public void Update(Student student)
         {
             conn.Open();
-            MySqlCommand commandToDelete = new MySqlCommand("SELECT * FROM Student WHERE id=@p1", conn);
-            commandToDelete.Parameters.AddWithValue("@p1", student.Id);
-            commandToDelete.ExecuteReader();
+            try
+            {
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET (firstName=@p2, lastName=@p3, number=@p4, card=@p5, eMail=@p6, departmentId=@p7) WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", student.Id);
+                commandToUpdate.Parameters.AddWithValue("@p2", student.FirstName);
+                commandToUpdate.Parameters.AddWithValue("@p3", student.LastName);
+                commandToUpdate.Parameters.AddWithValue("@p4", student.Number);
+                commandToUpdate.Parameters.AddWithValue("@p5", student.Card);
+                commandToUpdate.Parameters.AddWithValue("@p6", student.Email);
+                commandToUpdate.Parameters.AddWithValue("@p7", student.DepartmentId);
+                commandToUpdate.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+
+            conn.Close();
         }
 
+        public void Delete(string id)
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET deleted=1 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+
+            conn.Close();
+        }
+
+        public Student findByName(string name)
+        {
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE firstName=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", name);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        public Student findByNumber(string number)
+        {
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE number=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", number);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        List<Student> students;
         public List<Student> getAll()
         {
-            throw new NotImplementedException();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    Student student = new Student();
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                    students.Add(student);
+                }
+                conn.Close();
+                return students;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        public List<Student> getAllSortedByAddedDate()
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false ORDER BY createdAt ASC", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    Student student = new Student();
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                    students.Add(student);
+                }
+                conn.Close();
+                return students;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        public List<Student> getAllSortedByName()
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false ORDER BY firstName ASC", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    Student student = new Student();
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                    students.Add(student);
+                }
+                conn.Close();
+                return students;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
         }
 
         public Student getById(string id)
         {
-            throw new NotImplementedException();
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE id=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", id);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
         }
 
-        public void Update(Student student)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

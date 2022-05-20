@@ -27,9 +27,30 @@ namespace uu_library_app.Business.Concrete
 
         }
 
-        public void Delete(Student student)
+        public void Delete(string id)
         {
-            _service.Delete(student);
+            if(id != null)
+            {
+                _service.Delete(id);
+            }
+        }
+
+        public Student findByName(string name)
+        {
+            if(name == null)
+            {
+                return null;
+            }
+            return _service.findByName(name);
+        }
+
+        public Student findByNumber(string number)
+        {
+            if(number == null)
+            {
+                return null;
+            }
+            return _service.findByNumber(number);
         }
 
         public List<Student> getAll()
@@ -37,14 +58,31 @@ namespace uu_library_app.Business.Concrete
             return _service.getAll();
         }
 
+        public List<Student> getAllSortedByAddedDate()
+        {
+            return _service.getAllSortedByAddedDate();
+        }
+
+        public List<Student> getAllSortedByName()
+        {
+            return _service.getAllSortedByName();
+        }
+
         public Student getById(string id)
         {
+            if(id == null)
+            {
+                return null;
+            }
             return _service.getById(id);
         }
 
         public void Update(Student student)
         {
-            _service.Update(student);
+            if (student.FirstName != null || student.LastName != null || student.Email != null || student.Number != null || student.Card != null || student.Id != null)
+            {
+                _service.Update(student);
+            }
         }
     }
 }

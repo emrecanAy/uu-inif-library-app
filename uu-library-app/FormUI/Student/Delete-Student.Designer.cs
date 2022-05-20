@@ -36,7 +36,6 @@ namespace uu_library_app
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +62,8 @@ namespace uu_library_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBolum = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -77,12 +78,13 @@ namespace uu_library_app
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.txtId);
+            this.panel10.Controls.Add(this.txtBolum);
             this.panel10.Controls.Add(this.label7);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.panel7);
             this.panel10.Controls.Add(this.panel9);
             this.panel10.Controls.Add(this.panel8);
-            this.panel10.Controls.Add(this.comboBox1);
             this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.label6);
@@ -148,21 +150,6 @@ namespace uu_library_app
             this.panel8.Size = new System.Drawing.Size(1, 31);
             this.panel8.TabIndex = 67;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox1.Location = new System.Drawing.Point(78, 424);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 31);
-            this.comboBox1.TabIndex = 66;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -204,6 +191,7 @@ namespace uu_library_app
             this.btnDelete.TabIndex = 59;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // pictureBox3
             // 
@@ -231,6 +219,7 @@ namespace uu_library_app
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(79, 343);
             this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.ReadOnly = true;
             this.txtOkulNo.Size = new System.Drawing.Size(164, 22);
             this.txtOkulNo.TabIndex = 56;
             // 
@@ -272,6 +261,7 @@ namespace uu_library_app
             this.txtMail.ForeColor = System.Drawing.Color.White;
             this.txtMail.Location = new System.Drawing.Point(79, 260);
             this.txtMail.Name = "txtMail";
+            this.txtMail.ReadOnly = true;
             this.txtMail.Size = new System.Drawing.Size(164, 22);
             this.txtMail.TabIndex = 52;
             // 
@@ -313,6 +303,7 @@ namespace uu_library_app
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
             this.txtSoyad.Location = new System.Drawing.Point(79, 180);
             this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.ReadOnly = true;
             this.txtSoyad.Size = new System.Drawing.Size(164, 22);
             this.txtSoyad.TabIndex = 48;
             // 
@@ -354,6 +345,7 @@ namespace uu_library_app
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(79, 101);
             this.txtAd.Name = "txtAd";
+            this.txtAd.ReadOnly = true;
             this.txtAd.Size = new System.Drawing.Size(164, 22);
             this.txtAd.TabIndex = 44;
             // 
@@ -401,11 +393,13 @@ namespace uu_library_app
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(687, 525);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // picboxBack
             // 
@@ -428,6 +422,31 @@ namespace uu_library_app
             this.label1.Size = new System.Drawing.Size(341, 40);
             this.label1.TabIndex = 69;
             this.label1.Text = "Öğrenci Silme İşlemleri:";
+            // 
+            // txtBolum
+            // 
+            this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtBolum.ForeColor = System.Drawing.Color.White;
+            this.txtBolum.Location = new System.Drawing.Point(79, 430);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.ReadOnly = true;
+            this.txtBolum.Size = new System.Drawing.Size(164, 22);
+            this.txtBolum.TabIndex = 70;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(61, 50);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(164, 22);
+            this.txtId.TabIndex = 71;
+            this.txtId.Visible = false;
             // 
             // Delete_Student
             // 
@@ -469,7 +488,6 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
@@ -496,5 +514,7 @@ namespace uu_library_app
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBolum;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

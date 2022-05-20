@@ -78,9 +78,24 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        public void Update(Language student)
+        public void Update(Language language)
         {
-            throw new NotImplementedException();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Language SET language=@p2 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", language.Id);
+                commandToUpdate.Parameters.AddWithValue("@p2", language.LanguageName);
+                commandToUpdate.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+
+            conn.Close();
         }
     }
 }

@@ -99,9 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Abstract\IAuthorService.cs" />
+    <Compile Include="Business\Abstract\IPublisherService.cs" />
     <Compile Include="Business\Concrete\AuthorManager.cs" />
+    <Compile Include="Business\Concrete\PublisherManager.cs" />
     <Compile Include="DataAccess\Abstract\IAuthorDal.cs" />
+    <Compile Include="DataAccess\Abstract\IPublisherDal.cs" />
     <Compile Include="DataAccess\Concrete\AuthorDal.cs" />
+    <Compile Include="DataAccess\Concrete\PublisherDal.cs" />
     <Compile Include="Entity\Concrete\Admin.cs" />
     <Compile Include="Entity\Concrete\Author.cs" />
     <Compile Include="Entity\Concrete\Category.cs" />

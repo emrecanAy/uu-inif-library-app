@@ -242,6 +242,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Category_Operations";
             this.Text = "Category_Operations";
+            this.Load += new System.EventHandler(this.Category_Operations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             this.panel3.ResumeLayout(false);

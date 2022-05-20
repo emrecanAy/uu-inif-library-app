@@ -18,7 +18,8 @@ namespace uu_library_app.Entity.Concrete
         private DateTime createdAt;
         private bool deleted;
 
-        public Student(string id, string departmentId, string firstName, string lastName, string number, string card, string email, DateTime createdAt)
+        public Student() { }
+        public Student(string id, string departmentId, string firstName, string lastName, string number, string card, string email)
         {
             this.Id = id;
             this.DepartmentId = departmentId;
@@ -27,7 +28,6 @@ namespace uu_library_app.Entity.Concrete
             this.Number = number;
             this.Card = card;
             this.Email = email;
-            this.CreatedAt = createdAt;
         }
 
         public string Id { get => id; set => id = value; }

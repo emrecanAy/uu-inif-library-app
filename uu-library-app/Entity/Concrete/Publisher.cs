@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace uu_library_app.Entity.Concrete
 {
-    class Publisher
+    public class Publisher
     {
+        private string id;
+        private string name;
+        private DateTime createdAt;
+        private bool deleted;
+        public Publisher() { }
+        public Publisher(string id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
+        public bool Deleted { get => deleted; set => deleted = value; }
     }
 }

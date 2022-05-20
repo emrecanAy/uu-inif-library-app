@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,22 +7,20 @@ using System.Threading.Tasks;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 
-
-namespace uu_library_app.DataAccess.Concrete.EntityFramework
+namespace uu_library_app.DataAccess.Concrete
 {
-    public class DepartmentDal : IDepartmentDal
+    public class PublisherDal : IPublisherDal
     {
-
         MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
 
-        public void Add(Department department)
+        public void Add(Publisher publisher)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Department (id, name) VALUES (@p1, @p2)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Publisher (id, name) VALUES (@p1, @p2)", conn);
             try
             {
-                commandToAdd.Parameters.AddWithValue("@p1", department.Id);
-                commandToAdd.Parameters.AddWithValue("@p2", department.Name);
+                commandToAdd.Parameters.AddWithValue("@p1", publisher.Id);
+                commandToAdd.Parameters.AddWithValue("@p2", publisher.Name);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -31,7 +29,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
                 Console.WriteLine("Hatalı ekleme!");
                 throw;
             }
-            
+
             conn.Close();
         }
 
@@ -40,7 +38,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Department SET deleted=1 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Publisher SET deleted=1 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", id);
                 commandToUpdate.ExecuteNonQuery();
 
@@ -54,8 +52,8 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Close();
         }
 
-        List<Department> departments;
-        public List<Department> getAll()
+        List<Publisher> publishers;
+        public List<Publisher> getAll()
         {
             conn.Open();
             try
@@ -64,31 +62,31 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
-                    Department department = new Department();
-                    department.Id = reader[0].ToString();
-                    department.Name = reader[1].ToString();
-                    department.CreatedAt = Convert.ToDateTime(reader[2]);
-                    department.Deleted = Convert.ToBoolean(reader[3]);
-                    departments.Add(department);
+                    Publisher publisher = new Publisher();
+                    publisher.Id = reader[0].ToString();
+                    publisher.Name = reader[1].ToString();
+                    publisher.CreatedAt = Convert.ToDateTime(reader[2]);
+                    publisher.Deleted = Convert.ToBoolean(reader[3]);
+                    publishers.Add(publisher);
                 }
                 conn.Close();
-                return departments;
+                return publishers;
             }
             catch (Exception)
             {
                 Console.WriteLine("Something went wrong!");
                 throw;
-            }    
+            }
         }
 
-        public void Update(Department department)
+        public void Update(Publisher publisher)
         {
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Department SET name=@p2 WHERE id=@p1 ", conn);
-                commandToUpdate.Parameters.AddWithValue("@p1", department.Id);
-                commandToUpdate.Parameters.AddWithValue("@p2", department.Name);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Publisher SET name=@p2 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", publisher.Id);
+                commandToUpdate.Parameters.AddWithValue("@p2", publisher.Name);
                 commandToUpdate.ExecuteNonQuery();
 
             }

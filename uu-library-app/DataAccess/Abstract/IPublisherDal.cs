@@ -7,11 +7,11 @@ using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.DataAccess.Abstract
 {
-    public interface ILanguageDal
+    public interface IPublisherDal
     {
-        List<Language> getAll();
-        void Add(Language language);
-        void Update(Language language);
+        List<Publisher> getAll();
+        void Add(Publisher publisher);
+        void Update(Publisher publisher);
         void Delete(string id);
     }
 }

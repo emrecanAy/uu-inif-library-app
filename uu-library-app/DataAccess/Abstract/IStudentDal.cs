@@ -10,9 +10,13 @@ namespace uu_library_app.DataAccess.Abstract
     public interface IStudentDal
     {
         List<Student> getAll();
+        List<Student> getAllSortedByName();
+        List<Student> getAllSortedByAddedDate();
         void Add(Student student);
         void Update(Student student);
-        void Delete(Student student);
+        void Delete(string id);
         Student getById(string id);
+        Student findByName(string name);
+        Student findByNumber(string number);
     }
 }

@@ -19,12 +19,20 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(Language language)
         {
-            _service.Add(language);
+            if(language.LanguageName != null && language.LanguageName.Length > 0)
+            {
+                _service.Add(language);
+            }
+            
         }
 
         public void Delete(string id)
         {
-            _service.Delete(id);
+            if(id != null)
+            {
+                _service.Delete(id);
+            }
+            
         }
 
         public List<Language> getAll()
@@ -34,7 +42,10 @@ namespace uu_library_app.Business.Concrete
 
         public void Update(Language language)
         {
-            _service.Update(language);
+            if (language.LanguageName != null && language.LanguageName.Length > 0)
+            {
+                _service.Update(language);
+            }
         }
     }
 }

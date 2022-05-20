@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Entity.Concrete;
 
-namespace uu_library_app.DataAccess.Abstract
+namespace uu_library_app.Business.Abstract
 {
-    public interface ILanguageDal
+    public interface IPublisherService
     {
-        List<Language> getAll();
-        void Add(Language language);
-        void Update(Language language);
+        List<Publisher> getAll();
+        void Add(Publisher publisher);
+        void Update(Publisher publisher);
         void Delete(string id);
     }
 }

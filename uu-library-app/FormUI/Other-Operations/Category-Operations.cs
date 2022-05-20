@@ -16,5 +16,10 @@ namespace uu_library_app
         {
             InitializeComponent();
         }
+
+        private void Category_Operations_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
