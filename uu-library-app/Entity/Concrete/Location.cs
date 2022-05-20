@@ -9,22 +9,22 @@ namespace uu_library_app.Entity.Concrete
 {
     public class Location : IBaseModelWithIdAndDate
     {
-        /*
-          
-          IBaseModelWithIdAndDate'i implemente ettiği için 
-         
-            public string id;
-            public DateTime createdAt;
-            public bool deleted;
-            
-         yukarıdaki field'ları tekrar eklemeye gerek yok. Çünkü onlar IBaseModelWithIdAndDate'de var.
-         Bu şekilde her bir varlık class'ından 3'er satır kod azaltmış oluyoruz.
-         Bu field'lar tüm class'larda ortak olduğu için tekrar tekrar hepsine yazmak yerine ortak bir yerden çekelim dedim.
+        private string shelf;
 
-         Siz sadece bu class'a özgü olan fieldları ekleyin yeterli. Yukarıdaki üçü her türlü olacak zaten.
-         Not: bunların da getter ve setter'larını yazmayı unutmayın.
-         Örnek için bkz. Department.cs
-            
-         */
+        public Location()
+        {
+        }
+
+        public Location(string id, string shelf)
+        {
+            this.id = id;
+            this.shelf = shelf;
+
+        }
+
+        public string Id { get => id; set => id = value; }
+        public string Shelf { get => shelf; set => shelf = value; }
+        public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
+        public bool Deleted { get => deleted; set => deleted = value; }
     }
 }
