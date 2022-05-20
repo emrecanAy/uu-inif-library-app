@@ -43,7 +43,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET (firstName=@p2, lastName=@p3, number=@p4, card=@p5, eMail=@p6, departmentId=@p7) WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET firstName=@p2, lastName=@p3, number=@p4, card=@p5, eMail=@p6, departmentId=@p7 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", student.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", student.FirstName);
                 commandToUpdate.Parameters.AddWithValue("@p3", student.LastName);
@@ -53,6 +53,8 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToUpdate.Parameters.AddWithValue("@p7", student.DepartmentId);
                 commandToUpdate.ExecuteNonQuery();
 
+              
+
             }
             catch (Exception)
             {
@@ -61,6 +63,7 @@ namespace uu_library_app.DataAccess.Concrete
             }
 
             conn.Close();
+
         }
 
         public void Delete(string id)

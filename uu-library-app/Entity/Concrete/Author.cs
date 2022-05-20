@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Author
+    public class Author : IBaseModelWithIdAndDate
     {
-        private string id;
         private string firstName;
         private string lastName;
-        private DateTime createdAt;
-        private bool deleted;
-
         public Author() { }
         public Author(string id, string firstName, string lastName)
         {

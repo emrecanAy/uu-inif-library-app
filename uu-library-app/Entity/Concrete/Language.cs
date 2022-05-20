@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Language
+    public class Language : IBaseModelWithIdAndDate
     {
-        private string id;
         private string languageName;
-        private DateTime createdAt;
-        private bool deleted;
-
         public Language() { }
-
         public Language(string id, string languageName)
         {
             this.id = id;

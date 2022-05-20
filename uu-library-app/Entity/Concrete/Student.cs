@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Student
+    public class Student : IBaseModelWithIdAndDate
     {
-        private string id;
         private string departmentId;
         private string firstName;
         private string lastName;
         private string number;
         private string card;
         private string email;
-        private DateTime createdAt;
-        private bool deleted;
-
         public Student() { }
         public Student(string id, string departmentId, string firstName, string lastName, string number, string card, string email)
         {

@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Publisher
+    public class Publisher : IBaseModelWithIdAndDate
     {
-        private string id;
         private string name;
-        private DateTime createdAt;
-        private bool deleted;
         public Publisher() { }
         public Publisher(string id, string name)
         {

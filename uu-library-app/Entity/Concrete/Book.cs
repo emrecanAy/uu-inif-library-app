@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Book
+    public class Book : IBaseModelWithIdAndDate
     {
-        private string id;
         private string bookName;
         private string languageId;
         private string authorId;
@@ -22,8 +22,6 @@ namespace uu_library_app.Entity.Concrete
         private int stockCount;
         private bool status;
         private string interpreter;
-        private DateTime createdAt;
-        private bool deleted;
 
         public Book() { }
 

@@ -49,7 +49,7 @@ namespace uu_library_app.DataAccess.Concrete
         {
             conn.Open();
 
-            MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Book SET (bookName=@p2, languageId=@p3, authorId=@p4, categoryId=@p5, publisherId=@p6, pageCount=@p7, isbnNumber=@p8, publishDate=@p9, publishCount=@p10, stockCount=@p11, locationId=@p12, status=@p13, interpreter=@p14) WHERE id=@p1", conn);
+            MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Book SET bookName=@p2, languageId=@p3, authorId=@p4, categoryId=@p5, publisherId=@p6, pageCount=@p7, isbnNumber=@p8, publishDate=@p9, publishCount=@p10, stockCount=@p11, locationId=@p12, status=@p13, interpreter=@p14 WHERE id=@p1", conn);
             try
             {
                 commandToUpdate.Parameters.AddWithValue("@p1", book.Id);
