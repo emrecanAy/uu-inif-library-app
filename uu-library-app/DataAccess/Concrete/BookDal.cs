@@ -97,7 +97,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Book> books;
+        List<Book> books=new List<Book>();
         
         public List<Book> getAll()
         {

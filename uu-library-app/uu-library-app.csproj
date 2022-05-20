@@ -100,18 +100,22 @@
   <ItemGroup>
     <Compile Include="Business\Abstract\IAdminService.cs" />
     <Compile Include="Business\Abstract\IAuthorService.cs" />
+    <Compile Include="Business\Abstract\ICategoryService.cs" />
     <Compile Include="Business\Abstract\ILocationService.cs" />
     <Compile Include="Business\Abstract\IPublisherService.cs" />
     <Compile Include="Business\Concrete\AdminManager.cs" />
     <Compile Include="Business\Concrete\AuthorManager.cs" />
+    <Compile Include="Business\Concrete\CategoryManager.cs" />
     <Compile Include="Business\Concrete\LocationManager.cs" />
     <Compile Include="Business\Concrete\PublisherManager.cs" />
     <Compile Include="DataAccess\Abstract\IAdminDal.cs" />
     <Compile Include="DataAccess\Abstract\IAuthorDal.cs" />
+    <Compile Include="DataAccess\Abstract\ICategoryDal.cs" />
     <Compile Include="DataAccess\Abstract\ILocationDal.cs" />
     <Compile Include="DataAccess\Abstract\IPublisherDal.cs" />
     <Compile Include="DataAccess\Concrete\AdminDal.cs" />
     <Compile Include="DataAccess\Concrete\AuthorDal.cs" />
+    <Compile Include="DataAccess\Concrete\CategoryDal.cs" />
     <Compile Include="DataAccess\Concrete\LocationDal.cs" />
     <Compile Include="DataAccess\Concrete\PublisherDal.cs" />
     <Compile Include="Entity\Abstract\IBaseModelWithIdAndDate.cs" />

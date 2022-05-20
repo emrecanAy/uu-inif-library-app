@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlConnector;
+using MySql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +55,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Close();
         }
 
-        List<Department> departments;
+        List<Department> departments=new List<Department>();
         public List<Department> getAll()
         {
             conn.Open();

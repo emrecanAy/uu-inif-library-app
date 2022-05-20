@@ -52,7 +52,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Publisher> publishers;
+        List<Publisher> publishers=new List<Publisher>();
         public List<Publisher> getAll()
         {
             conn.Open();

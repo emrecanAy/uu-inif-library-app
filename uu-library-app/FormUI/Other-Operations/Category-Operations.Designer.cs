@@ -43,6 +43,7 @@ namespace uu_library_app
             this.label1 = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -85,6 +86,7 @@ namespace uu_library_app
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 32);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -93,6 +95,7 @@ namespace uu_library_app
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(656, 537);
             this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel5
             // 
@@ -172,13 +175,14 @@ namespace uu_library_app
             this.lblAd.ForeColor = System.Drawing.Color.White;
             this.lblAd.Location = new System.Drawing.Point(41, 112);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(99, 25);
+            this.lblAd.Size = new System.Drawing.Size(125, 25);
             this.lblAd.TabIndex = 55;
-            this.lblAd.Text = "Yazar Adı :";
+            this.lblAd.Text = "Kategori Adı :";
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtId);
             this.panel4.Controls.Add(this.btnGuncelle);
             this.panel4.Controls.Add(this.btnSil);
             this.panel4.Controls.Add(this.btnEkle);
@@ -193,6 +197,18 @@ namespace uu_library_app
             this.panel4.Size = new System.Drawing.Size(312, 573);
             this.panel4.TabIndex = 84;
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(67, 37);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(164, 22);
+            this.txtId.TabIndex = 86;
+            this.txtId.Visible = false;
+            // 
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -204,6 +220,7 @@ namespace uu_library_app
             this.btnGuncelle.TabIndex = 85;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -216,6 +233,7 @@ namespace uu_library_app
             this.btnSil.TabIndex = 84;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -228,6 +246,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 83;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // Category_Operations
             // 
@@ -273,5 +292,6 @@ namespace uu_library_app
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

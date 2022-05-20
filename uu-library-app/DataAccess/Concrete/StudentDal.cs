@@ -143,7 +143,7 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<Student> students;
+        List<Student> students=new List<Student>();
         public List<Student> getAll()
         {
             conn.Open();

@@ -10,18 +10,17 @@ using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.DataAccess.Concrete
 {
-    public class AuthorDal : IAuthorDal
+    public class CategoryDal : ICategoryDal
     {
         MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
-        public void Add(Author author)
+        public void Add(Category category)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Author (id, firstName, lastName) VALUES (@p1, @p2, @p3)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Category (id,name) VALUES (@p1, @p2)", conn);
             try
             {
-                commandToAdd.Parameters.AddWithValue("@p1", author.Id);
-                commandToAdd.Parameters.AddWithValue("@p2", author.FirstName);
-                commandToAdd.Parameters.AddWithValue("@p3", author.LastName);
+                commandToAdd.Parameters.AddWithValue("@p1",category.Id  );
+                commandToAdd.Parameters.AddWithValue("@p2",category.Name );
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -39,7 +38,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Author SET deleted=1 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Department SET deleted=1 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", id);
                 commandToUpdate.ExecuteNonQuery();
 
@@ -49,47 +48,44 @@ namespace uu_library_app.DataAccess.Concrete
                 Console.WriteLine("Something went wrong!");
                 throw;
             }
+
             conn.Close();
         }
-
-        List<Author> authors=new List<Author>();
-        public List<Author> getAll()
+        List<Category> categories=new List<Category>();
+        public List<Category> getAll()
         {
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Author WHERE deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
-                    Author author = new Author();
-                    author.Id= reader[0].ToString();
-                    author.FirstName = reader[1].ToString();
-                    author.LastName = reader[2].ToString();
-                    author.CreatedAt = Convert.ToDateTime(reader[3]);
-                    author.Deleted = Convert.ToBoolean(reader[4]);
-                    authors.Add(author);
+                    Category category = new Category();
+                    category.Id = reader[0].ToString();
+                    category.Name = reader[1].ToString();
+                    category.CreatedAt = Convert.ToDateTime(reader[2]);
+                    category.Deleted = Convert.ToBoolean(reader[3]);
+                    categories.Add(category);
                 }
                 conn.Close();
-                return authors;
+                return categories;
             }
             catch (Exception)
             {
                 Console.WriteLine("Something went wrong!");
                 throw;
             }
-
         }
 
-        public void Update(Author author)
+        public void Update(Category category)
         {
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Author SET (firstName=@p2, lastName=@p3) WHERE id=@p1 ", conn);
-                commandToUpdate.Parameters.AddWithValue("@p1", author.Id);
-                commandToUpdate.Parameters.AddWithValue("@p2", author.FirstName);
-                commandToUpdate.Parameters.AddWithValue("@p3", author.LastName);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Category SET name=@p2 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", category.Id);
+                commandToUpdate.Parameters.AddWithValue("@p2", category.Name);
                 commandToUpdate.ExecuteNonQuery();
 
             }
@@ -102,4 +98,5 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
     }
+    
 }

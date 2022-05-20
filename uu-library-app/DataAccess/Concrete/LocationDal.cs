@@ -52,7 +52,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Location> locations;
+        List<Location> locations=new List<Location>();
         public List<Location> getAll()
         {
             conn.Open();

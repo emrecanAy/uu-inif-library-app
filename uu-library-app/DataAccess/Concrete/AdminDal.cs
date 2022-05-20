@@ -57,7 +57,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Admin> admins;
+        List<Admin> admins=new List<Admin>();
 
         public List<Admin> getAll()
         {
