@@ -256,6 +256,9 @@
     <Compile Include="FormUI\Toolbox\DateTime.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormUI\Toolbox\project-button.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormUI\Toolbox\wehCombBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
