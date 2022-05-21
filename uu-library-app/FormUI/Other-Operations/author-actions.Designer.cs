@@ -88,7 +88,7 @@ namespace uu_library_app
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
             this.picboxAd.Location = new System.Drawing.Point(48, 119);
             this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(32, 32);
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxAd.TabIndex = 58;
             this.picboxAd.TabStop = false;
@@ -129,7 +129,7 @@ namespace uu_library_app
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(48, 214);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;

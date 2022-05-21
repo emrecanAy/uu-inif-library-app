@@ -116,7 +116,7 @@ namespace uu_library_app.FormUI
             this.btnKonum.Image = ((System.Drawing.Image)(resources.GetObject("btnKonum.Image")));
             this.btnKonum.Location = new System.Drawing.Point(0, 140);
             this.btnKonum.Name = "btnKonum";
-            this.btnKonum.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.btnKonum.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnKonum.Size = new System.Drawing.Size(186, 28);
             this.btnKonum.TabIndex = 5;
             this.btnKonum.Text = "Konum İşlemleri ";
@@ -134,7 +134,7 @@ namespace uu_library_app.FormUI
             this.btnBolum.Image = ((System.Drawing.Image)(resources.GetObject("btnBolum.Image")));
             this.btnBolum.Location = new System.Drawing.Point(0, 112);
             this.btnBolum.Name = "btnBolum";
-            this.btnBolum.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnBolum.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnBolum.Size = new System.Drawing.Size(186, 28);
             this.btnBolum.TabIndex = 4;
             this.btnBolum.Text = "Bölüm İşlemleri ";
@@ -152,7 +152,7 @@ namespace uu_library_app.FormUI
             this.btnKategori.Image = ((System.Drawing.Image)(resources.GetObject("btnKategori.Image")));
             this.btnKategori.Location = new System.Drawing.Point(0, 84);
             this.btnKategori.Name = "btnKategori";
-            this.btnKategori.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnKategori.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
             this.btnKategori.Size = new System.Drawing.Size(186, 28);
             this.btnKategori.TabIndex = 3;
             this.btnKategori.Text = "Kategori İşlemleri";
@@ -170,7 +170,7 @@ namespace uu_library_app.FormUI
             this.btnDil.Image = ((System.Drawing.Image)(resources.GetObject("btnDil.Image")));
             this.btnDil.Location = new System.Drawing.Point(0, 56);
             this.btnDil.Name = "btnDil";
-            this.btnDil.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnDil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDil.Size = new System.Drawing.Size(186, 28);
             this.btnDil.TabIndex = 2;
             this.btnDil.Text = "Dil İşlemleri";
@@ -188,7 +188,7 @@ namespace uu_library_app.FormUI
             this.btnYayinevi.Image = ((System.Drawing.Image)(resources.GetObject("btnYayinevi.Image")));
             this.btnYayinevi.Location = new System.Drawing.Point(0, 28);
             this.btnYayinevi.Name = "btnYayinevi";
-            this.btnYayinevi.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnYayinevi.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
             this.btnYayinevi.Size = new System.Drawing.Size(186, 28);
             this.btnYayinevi.TabIndex = 1;
             this.btnYayinevi.Text = "Yayınevi İşlemleri";
@@ -206,7 +206,7 @@ namespace uu_library_app.FormUI
             this.btnYazar.Image = ((System.Drawing.Image)(resources.GetObject("btnYazar.Image")));
             this.btnYazar.Location = new System.Drawing.Point(0, 0);
             this.btnYazar.Name = "btnYazar";
-            this.btnYazar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnYazar.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnYazar.Size = new System.Drawing.Size(186, 28);
             this.btnYazar.TabIndex = 0;
             this.btnYazar.Text = "Yazar İşlemleri";
@@ -254,7 +254,7 @@ namespace uu_library_app.FormUI
             this.btnTeslimSorgu.Image = ((System.Drawing.Image)(resources.GetObject("btnTeslimSorgu.Image")));
             this.btnTeslimSorgu.Location = new System.Drawing.Point(0, 56);
             this.btnTeslimSorgu.Name = "btnTeslimSorgu";
-            this.btnTeslimSorgu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTeslimSorgu.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnTeslimSorgu.Size = new System.Drawing.Size(186, 28);
             this.btnTeslimSorgu.TabIndex = 2;
             this.btnTeslimSorgu.Text = "Teslim Sorgusu";
@@ -272,7 +272,7 @@ namespace uu_library_app.FormUI
             this.btnReceive.Image = ((System.Drawing.Image)(resources.GetObject("btnReceive.Image")));
             this.btnReceive.Location = new System.Drawing.Point(0, 28);
             this.btnReceive.Name = "btnReceive";
-            this.btnReceive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReceive.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnReceive.Size = new System.Drawing.Size(186, 28);
             this.btnReceive.TabIndex = 1;
             this.btnReceive.Text = "Kitabı Geri Alma";
@@ -290,7 +290,7 @@ namespace uu_library_app.FormUI
             this.btnLending.Image = ((System.Drawing.Image)(resources.GetObject("btnLending.Image")));
             this.btnLending.Location = new System.Drawing.Point(0, 0);
             this.btnLending.Name = "btnLending";
-            this.btnLending.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnLending.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnLending.Size = new System.Drawing.Size(186, 28);
             this.btnLending.TabIndex = 0;
             this.btnLending.Text = "Kitap Ödünç verme";
@@ -338,7 +338,7 @@ namespace uu_library_app.FormUI
             this.btnEditMember.Image = ((System.Drawing.Image)(resources.GetObject("btnEditMember.Image")));
             this.btnEditMember.Location = new System.Drawing.Point(0, 56);
             this.btnEditMember.Name = "btnEditMember";
-            this.btnEditMember.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.btnEditMember.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnEditMember.Size = new System.Drawing.Size(186, 28);
             this.btnEditMember.TabIndex = 2;
             this.btnEditMember.Text = " Öğrenci Düzenle";
@@ -357,7 +357,7 @@ namespace uu_library_app.FormUI
             this.btnDeleteMember.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteMember.Image")));
             this.btnDeleteMember.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteMember.Name = "btnDeleteMember";
-            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnDeleteMember.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteMember.TabIndex = 1;
             this.btnDeleteMember.Text = " Öğrenci Sil";
@@ -376,7 +376,7 @@ namespace uu_library_app.FormUI
             this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
             this.btnAddMember.Location = new System.Drawing.Point(0, 0);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnAddMember.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.btnAddMember.Size = new System.Drawing.Size(186, 28);
             this.btnAddMember.TabIndex = 0;
             this.btnAddMember.Text = " Öğrenci Ekle";
@@ -425,7 +425,7 @@ namespace uu_library_app.FormUI
             this.btnEditBook.Image = ((System.Drawing.Image)(resources.GetObject("btnEditBook.Image")));
             this.btnEditBook.Location = new System.Drawing.Point(0, 56);
             this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditBook.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnEditBook.Size = new System.Drawing.Size(186, 28);
             this.btnEditBook.TabIndex = 2;
             this.btnEditBook.Text = " Kitap Güncelle";
@@ -443,7 +443,7 @@ namespace uu_library_app.FormUI
             this.btnDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteBook.Image")));
             this.btnDeleteBook.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDeleteBook.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.btnDeleteBook.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteBook.TabIndex = 1;
             this.btnDeleteBook.Text = " Kitap Sil";
@@ -461,7 +461,7 @@ namespace uu_library_app.FormUI
             this.btnAddBook.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBook.Image")));
             this.btnAddBook.Location = new System.Drawing.Point(0, 0);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAddBook.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnAddBook.Size = new System.Drawing.Size(186, 28);
             this.btnAddBook.TabIndex = 0;
             this.btnAddBook.Text = " Kitap Ekle";

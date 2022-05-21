@@ -264,9 +264,9 @@ namespace uu_library_app
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(14, 74);
+            this.pictureBox9.Location = new System.Drawing.Point(14, 75);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 279;
             this.pictureBox9.TabStop = false;
@@ -321,9 +321,9 @@ namespace uu_library_app
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(18, 72);
+            this.picboxAd.Location = new System.Drawing.Point(18, 73);
             this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(36, 36);
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxAd.TabIndex = 261;
             this.picboxAd.TabStop = false;
@@ -352,9 +352,9 @@ namespace uu_library_app
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(18, 152);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 153);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 264;
             this.pictureBox3.TabStop = false;
@@ -394,9 +394,9 @@ namespace uu_library_app
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(18, 315);
+            this.pictureBox10.Location = new System.Drawing.Point(18, 316);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 276;
             this.pictureBox10.TabStop = false;
@@ -476,9 +476,9 @@ namespace uu_library_app
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(18, 235);
+            this.pictureBox6.Location = new System.Drawing.Point(18, 236);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 272;
             this.pictureBox6.TabStop = false;

@@ -31,6 +31,8 @@ namespace uu_library_app
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete_Student));
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtBolum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -62,8 +64,6 @@ namespace uu_library_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBolum = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -110,6 +110,31 @@ namespace uu_library_app
             this.panel10.Size = new System.Drawing.Size(286, 562);
             this.panel10.TabIndex = 72;
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(61, 50);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(164, 22);
+            this.txtId.TabIndex = 71;
+            this.txtId.Visible = false;
+            // 
+            // txtBolum
+            // 
+            this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtBolum.ForeColor = System.Drawing.Color.White;
+            this.txtBolum.Location = new System.Drawing.Point(79, 427);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.ReadOnly = true;
+            this.txtBolum.Size = new System.Drawing.Size(164, 22);
+            this.txtBolum.TabIndex = 70;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -153,9 +178,9 @@ namespace uu_library_app
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(40, 425);
+            this.pictureBox4.Location = new System.Drawing.Point(40, 426);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 64;
             this.pictureBox4.TabStop = false;
@@ -196,9 +221,9 @@ namespace uu_library_app
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(40, 341);
+            this.pictureBox3.Location = new System.Drawing.Point(40, 342);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 58;
             this.pictureBox3.TabStop = false;
@@ -238,9 +263,9 @@ namespace uu_library_app
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(40, 258);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 259);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
@@ -280,9 +305,9 @@ namespace uu_library_app
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 178);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 179);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
@@ -322,9 +347,9 @@ namespace uu_library_app
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(40, 99);
+            this.picboxAd.Location = new System.Drawing.Point(40, 100);
             this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(32, 32);
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxAd.TabIndex = 46;
             this.picboxAd.TabStop = false;
@@ -422,31 +447,6 @@ namespace uu_library_app
             this.label1.Size = new System.Drawing.Size(341, 40);
             this.label1.TabIndex = 69;
             this.label1.Text = "Öğrenci Silme İşlemleri:";
-            // 
-            // txtBolum
-            // 
-            this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBolum.ForeColor = System.Drawing.Color.White;
-            this.txtBolum.Location = new System.Drawing.Point(79, 430);
-            this.txtBolum.Name = "txtBolum";
-            this.txtBolum.ReadOnly = true;
-            this.txtBolum.Size = new System.Drawing.Size(164, 22);
-            this.txtBolum.TabIndex = 70;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(61, 50);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(164, 22);
-            this.txtId.TabIndex = 71;
-            this.txtId.Visible = false;
             // 
             // Delete_Student
             // 

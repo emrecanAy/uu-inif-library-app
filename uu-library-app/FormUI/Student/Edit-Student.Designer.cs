@@ -57,13 +57,13 @@ namespace uu_library_app
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.wehCombox1 = new NewCombobox.Toolbox.wehCombox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -115,7 +115,7 @@ namespace uu_library_app
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(40, 341);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 58;
             this.pictureBox3.TabStop = false;
@@ -156,7 +156,7 @@ namespace uu_library_app
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(40, 258);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
@@ -197,7 +197,7 @@ namespace uu_library_app
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(40, 178);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
@@ -236,9 +236,9 @@ namespace uu_library_app
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(40, 99);
+            this.picboxAd.Location = new System.Drawing.Point(40, 101);
             this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(32, 32);
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxAd.TabIndex = 46;
             this.picboxAd.TabStop = false;
@@ -319,7 +319,7 @@ namespace uu_library_app
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(40, 425);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 64;
             this.pictureBox4.TabStop = false;
@@ -351,21 +351,6 @@ namespace uu_library_app
             this.panel7.Size = new System.Drawing.Size(165, 1);
             this.panel7.TabIndex = 65;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Yönetim Bilişim Sistemleri",
-            "İşletme"});
-            this.comboBox1.Location = new System.Drawing.Point(78, 424);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 31);
-            this.comboBox1.TabIndex = 66;
-            // 
             // panel8
             // 
             this.panel8.Location = new System.Drawing.Point(78, 424);
@@ -383,13 +368,13 @@ namespace uu_library_app
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.wehCombox1);
             this.panel10.Controls.Add(this.txtId);
             this.panel10.Controls.Add(this.label7);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.panel7);
             this.panel10.Controls.Add(this.panel9);
             this.panel10.Controls.Add(this.panel8);
-            this.panel10.Controls.Add(this.comboBox1);
             this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.label6);
@@ -415,6 +400,18 @@ namespace uu_library_app
             this.panel10.Size = new System.Drawing.Size(286, 562);
             this.panel10.TabIndex = 68;
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(56, 50);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(164, 22);
+            this.txtId.TabIndex = 70;
+            this.txtId.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -434,17 +431,22 @@ namespace uu_library_app
             this.panel11.Size = new System.Drawing.Size(286, 1);
             this.panel11.TabIndex = 69;
             // 
-            // txtId
+            // wehCombox1
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(56, 50);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(164, 22);
-            this.txtId.TabIndex = 70;
-            this.txtId.Visible = false;
+            this.wehCombox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.wehCombox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.wehCombox1.BorderSize = 0;
+            this.wehCombox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.wehCombox1.ForeColor = System.Drawing.Color.DimGray;
+            this.wehCombox1.IconColor = System.Drawing.Color.White;
+            this.wehCombox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.wehCombox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.wehCombox1.Location = new System.Drawing.Point(76, 424);
+            this.wehCombox1.MinimumSize = new System.Drawing.Size(164, 27);
+            this.wehCombox1.Name = "wehCombox1";
+            this.wehCombox1.Size = new System.Drawing.Size(168, 27);
+            this.wehCombox1.TabIndex = 234;
+            this.wehCombox1.Texts = "";
             // 
             // Edit_Student
             // 
@@ -504,12 +506,12 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox txtId;
+        private NewCombobox.Toolbox.wehCombox wehCombox1;
     }
 }

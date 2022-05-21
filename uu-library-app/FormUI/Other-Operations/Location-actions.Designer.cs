@@ -206,9 +206,9 @@ namespace uu_library_app.FormUI.Other_Operations
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(46, 140);
+            this.picboxAd.Location = new System.Drawing.Point(46, 141);
             this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(32, 32);
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxAd.TabIndex = 58;
             this.picboxAd.TabStop = false;

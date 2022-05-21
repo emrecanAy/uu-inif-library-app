@@ -80,12 +80,12 @@ namespace uu_library_app
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wehCombox3 = new NewCombobox.Toolbox.wehCombox();
             this.wehCombox2 = new NewCombobox.Toolbox.wehCombox();
             this.wehCombox1 = new NewCombobox.Toolbox.wehCombox();
             this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.wehCombox3 = new NewCombobox.Toolbox.wehCombox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -535,9 +535,9 @@ namespace uu_library_app
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(98, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(276, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(195, 40);
             this.lblBaslik.TabIndex = 178;
-            this.lblBaslik.Text = "Yeni Kitap Ekleme :";
+            this.lblBaslik.Text = "Kitap Ekleme";
             // 
             // picboxSoyad
             // 
@@ -669,6 +669,24 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 640);
             this.panel1.TabIndex = 230;
             // 
+            // wehCombox3
+            // 
+            this.wehCombox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.wehCombox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.wehCombox3.BorderSize = 0;
+            this.wehCombox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.wehCombox3.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.wehCombox3.ForeColor = System.Drawing.Color.White;
+            this.wehCombox3.IconColor = System.Drawing.Color.White;
+            this.wehCombox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.wehCombox3.ListTextColor = System.Drawing.Color.DimGray;
+            this.wehCombox3.Location = new System.Drawing.Point(78, 592);
+            this.wehCombox3.MinimumSize = new System.Drawing.Size(164, 27);
+            this.wehCombox3.Name = "wehCombox3";
+            this.wehCombox3.Size = new System.Drawing.Size(164, 27);
+            this.wehCombox3.TabIndex = 237;
+            this.wehCombox3.Texts = "";
+            // 
             // wehCombox2
             // 
             this.wehCombox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -734,24 +752,6 @@ namespace uu_library_app
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(429, 640);
             this.panel4.TabIndex = 232;
-            // 
-            // wehCombox3
-            // 
-            this.wehCombox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox3.BorderSize = 0;
-            this.wehCombox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox3.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.wehCombox3.ForeColor = System.Drawing.Color.White;
-            this.wehCombox3.IconColor = System.Drawing.Color.White;
-            this.wehCombox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox3.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox3.Location = new System.Drawing.Point(78, 592);
-            this.wehCombox3.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox3.Name = "wehCombox3";
-            this.wehCombox3.Size = new System.Drawing.Size(164, 27);
-            this.wehCombox3.TabIndex = 237;
-            this.wehCombox3.Texts = "";
             // 
             // Add_Books
             // 
