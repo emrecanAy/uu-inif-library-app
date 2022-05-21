@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Abstract;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -19,7 +20,7 @@ namespace uu_library_app
 {
     public partial class author_actions : Form
     {
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         AuthorManager manager = new AuthorManager(new AuthorDal());
 
         public author_actions()

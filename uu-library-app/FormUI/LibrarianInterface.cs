@@ -271,8 +271,12 @@ namespace uu_library_app.FormUI
 
 
 
+
         #endregion
 
-       
+        private void panelChildFormNew_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

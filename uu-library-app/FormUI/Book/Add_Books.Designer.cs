@@ -80,6 +80,20 @@ namespace uu_library_app
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -94,20 +108,6 @@ namespace uu_library_app
             this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -123,9 +123,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox11
@@ -713,6 +713,105 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 640);
             this.panel1.TabIndex = 230;
             // 
+            // panel14
+            // 
+            this.panel14.Location = new System.Drawing.Point(79, 529);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(164, 1);
+            this.panel14.TabIndex = 235;
+            // 
+            // panel27
+            // 
+            this.panel27.Location = new System.Drawing.Point(78, 129);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1, 31);
+            this.panel27.TabIndex = 234;
+            // 
+            // panel28
+            // 
+            this.panel28.Location = new System.Drawing.Point(78, 216);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(1, 31);
+            this.panel28.TabIndex = 234;
+            // 
+            // panel29
+            // 
+            this.panel29.Location = new System.Drawing.Point(336, 130);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(1, 31);
+            this.panel29.TabIndex = 234;
+            // 
+            // panel30
+            // 
+            this.panel30.Location = new System.Drawing.Point(336, 44);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(1, 31);
+            this.panel30.TabIndex = 234;
+            // 
+            // panel31
+            // 
+            this.panel31.Location = new System.Drawing.Point(78, 590);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(1, 31);
+            this.panel31.TabIndex = 234;
+            // 
+            // panel32
+            // 
+            this.panel32.Location = new System.Drawing.Point(79, 500);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(1, 31);
+            this.panel32.TabIndex = 234;
+            // 
+            // panel25
+            // 
+            this.panel25.Location = new System.Drawing.Point(78, 620);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(164, 1);
+            this.panel25.TabIndex = 234;
+            // 
+            // panel26
+            // 
+            this.panel26.Location = new System.Drawing.Point(78, 247);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(164, 1);
+            this.panel26.TabIndex = 234;
+            // 
+            // panel24
+            // 
+            this.panel24.Location = new System.Drawing.Point(78, 590);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(164, 1);
+            this.panel24.TabIndex = 234;
+            // 
+            // panel20
+            // 
+            this.panel20.Location = new System.Drawing.Point(336, 159);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(164, 1);
+            this.panel20.TabIndex = 234;
+            // 
+            // panel21
+            // 
+            this.panel21.Location = new System.Drawing.Point(79, 159);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(164, 1);
+            this.panel21.TabIndex = 234;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(336, 73);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(164, 1);
+            this.panel22.TabIndex = 234;
+            // 
+            // panel23
+            // 
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(164, 1);
+            this.panel23.TabIndex = 234;
+            // 
             // panel15
             // 
             this.panel15.Location = new System.Drawing.Point(78, 499);
@@ -851,105 +950,6 @@ namespace uu_library_app
             this.panel4.Size = new System.Drawing.Size(429, 640);
             this.panel4.TabIndex = 232;
             // 
-            // panel20
-            // 
-            this.panel20.Location = new System.Drawing.Point(336, 159);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(164, 1);
-            this.panel20.TabIndex = 234;
-            // 
-            // panel21
-            // 
-            this.panel21.Location = new System.Drawing.Point(79, 159);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(164, 1);
-            this.panel21.TabIndex = 234;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Location = new System.Drawing.Point(336, 73);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(164, 1);
-            this.panel22.TabIndex = 234;
-            // 
-            // panel23
-            // 
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(164, 1);
-            this.panel23.TabIndex = 234;
-            // 
-            // panel24
-            // 
-            this.panel24.Location = new System.Drawing.Point(78, 590);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(164, 1);
-            this.panel24.TabIndex = 234;
-            // 
-            // panel25
-            // 
-            this.panel25.Location = new System.Drawing.Point(78, 620);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(164, 1);
-            this.panel25.TabIndex = 234;
-            // 
-            // panel26
-            // 
-            this.panel26.Location = new System.Drawing.Point(78, 247);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(164, 1);
-            this.panel26.TabIndex = 234;
-            // 
-            // panel27
-            // 
-            this.panel27.Location = new System.Drawing.Point(78, 129);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(1, 31);
-            this.panel27.TabIndex = 234;
-            // 
-            // panel28
-            // 
-            this.panel28.Location = new System.Drawing.Point(78, 216);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(1, 31);
-            this.panel28.TabIndex = 234;
-            // 
-            // panel29
-            // 
-            this.panel29.Location = new System.Drawing.Point(336, 130);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(1, 31);
-            this.panel29.TabIndex = 234;
-            // 
-            // panel30
-            // 
-            this.panel30.Location = new System.Drawing.Point(336, 44);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(1, 31);
-            this.panel30.TabIndex = 234;
-            // 
-            // panel31
-            // 
-            this.panel31.Location = new System.Drawing.Point(78, 590);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(1, 31);
-            this.panel31.TabIndex = 234;
-            // 
-            // panel32
-            // 
-            this.panel32.Location = new System.Drawing.Point(79, 500);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(1, 31);
-            this.panel32.TabIndex = 234;
-            // 
-            // panel14
-            // 
-            this.panel14.Location = new System.Drawing.Point(79, 529);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(164, 1);
-            this.panel14.TabIndex = 235;
-            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -963,6 +963,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Books";
             this.Text = "Kitap_Ekle";
+            this.Load += new System.EventHandler(this.Add_Books_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -979,9 +980,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

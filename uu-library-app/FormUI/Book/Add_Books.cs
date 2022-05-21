@@ -17,6 +17,9 @@ namespace uu_library_app
             InitializeComponent();
         }
 
-       
+        private void Add_Books_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

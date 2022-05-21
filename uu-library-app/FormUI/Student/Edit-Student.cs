@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql;
 using MySql.Data.MySqlClient;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -22,7 +23,7 @@ namespace uu_library_app
             InitializeComponent();
         }
 
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         StudentManager manager = new StudentManager(new StudentDal());
 
         private void listDataToTable()

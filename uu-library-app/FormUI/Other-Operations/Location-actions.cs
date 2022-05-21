@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -21,7 +22,7 @@ namespace uu_library_app.FormUI.Other_Operations
             InitializeComponent();
         }
 
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LocationManager manager = new LocationManager(new LocationDal());
 
         private void clearAllFields()

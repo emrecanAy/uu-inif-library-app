@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.Core.Helpers;
 
 namespace uu_library_app
 {
@@ -21,7 +22,7 @@ namespace uu_library_app
         {
             InitializeComponent();
         }
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         CategoryManager manager = new CategoryManager(new CategoryDal());
         private void listDataToTable()
         {

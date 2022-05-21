@@ -49,5 +49,10 @@ namespace uu_library_app
             }
 
         }
+
+        private void Sign_Up_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -581,6 +581,7 @@ namespace uu_library_app.FormUI
             this.panelChildFormNew.Name = "panelChildFormNew";
             this.panelChildFormNew.Size = new System.Drawing.Size(1015, 750);
             this.panelChildFormNew.TabIndex = 9;
+            this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
             // 
             // LibrarianInterface
             // 
