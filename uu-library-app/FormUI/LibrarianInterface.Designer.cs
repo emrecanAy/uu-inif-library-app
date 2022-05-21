@@ -32,6 +32,7 @@ namespace uu_library_app.FormUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDigerSubMenu = new System.Windows.Forms.Panel();
+            this.btnKonum = new System.Windows.Forms.Button();
             this.btnBolum = new System.Windows.Forms.Button();
             this.btnKategori = new System.Windows.Forms.Button();
             this.btnDil = new System.Windows.Forms.Button();
@@ -92,6 +93,7 @@ namespace uu_library_app.FormUI
             // pnlDigerSubMenu
             // 
             this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDigerSubMenu.Controls.Add(this.btnKonum);
             this.pnlDigerSubMenu.Controls.Add(this.btnBolum);
             this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
             this.pnlDigerSubMenu.Controls.Add(this.btnDil);
@@ -100,8 +102,26 @@ namespace uu_library_app.FormUI
             this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 564);
             this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
-            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 140);
+            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 168);
             this.pnlDigerSubMenu.TabIndex = 15;
+            // 
+            // btnKonum
+            // 
+            this.btnKonum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKonum.FlatAppearance.BorderSize = 0;
+            this.btnKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKonum.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnKonum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnKonum.Image = ((System.Drawing.Image)(resources.GetObject("btnKonum.Image")));
+            this.btnKonum.Location = new System.Drawing.Point(0, 140);
+            this.btnKonum.Name = "btnKonum";
+            this.btnKonum.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.btnKonum.Size = new System.Drawing.Size(186, 28);
+            this.btnKonum.TabIndex = 5;
+            this.btnKonum.Text = "Konum İşlemleri ";
+            this.btnKonum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKonum.UseVisualStyleBackColor = true;
+            this.btnKonum.Click += new System.EventHandler(this.btnKonum_Click);
             // 
             // btnBolum
             // 
@@ -600,5 +620,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnYazar;
         private System.Windows.Forms.Button btnBolum;
         private System.Windows.Forms.Panel panelChildFormNew;
+        private System.Windows.Forms.Button btnKonum;
     }
 }

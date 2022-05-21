@@ -191,6 +191,12 @@
     <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
     <Compile Include="DataAccess\Concrete\BookDal.cs" />
     <Compile Include="DataAccess\Concrete\DepartmentDal.cs" />
+    <Compile Include="FormUI\Other-Operations\Location-actions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Other-Operations\Location-actions.Designer.cs">
+      <DependentUpon>Location-actions.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Student\Delete-Student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     <Compile Include="FormUI\Toolbox\DateTime.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormUI\Toolbox\wehCombBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormUI\Other-Operations\publisher-actions.cs">
@@ -284,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Other-Operations\Location-actions.resx">
+      <DependentUpon>Location-actions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>

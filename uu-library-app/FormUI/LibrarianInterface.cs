@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using uu_library_app.FormUI.Other_Operations;
 
 namespace uu_library_app.FormUI
 {
@@ -256,9 +257,16 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
+        private void btnKonum_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Location_actions());   
+            hideSubMenu();
+        }
+
+
 
         #endregion
 
-        
+       
     }
 }
