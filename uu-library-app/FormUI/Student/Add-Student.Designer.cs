@@ -52,6 +52,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -59,7 +63,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.wehCombox1 = new NewCombobox.Toolbox.wehCombox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -313,7 +316,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.wehCombox1);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel4);
@@ -341,6 +347,39 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 566);
             this.panel2.TabIndex = 34;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(57, 404);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1, 31);
+            this.panel8.TabIndex = 36;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(57, 433);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(445, 1);
+            this.panel6.TabIndex = 36;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(57, 403);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(445, 1);
+            this.panel7.TabIndex = 37;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(57, 403);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(445, 31);
+            this.comboBox1.TabIndex = 36;
             // 
             // txtId
             // 
@@ -415,23 +454,6 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Son Eklenen Üyeler/Öğrenciler :";
             // 
-            // wehCombox1
-            // 
-            this.wehCombox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox1.BorderSize = 0;
-            this.wehCombox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox1.ForeColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.IconColor = System.Drawing.Color.White;
-            this.wehCombox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.Location = new System.Drawing.Point(57, 405);
-            this.wehCombox1.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox1.Name = "wehCombox1";
-            this.wehCombox1.Size = new System.Drawing.Size(445, 27);
-            this.wehCombox1.TabIndex = 234;
-            this.wehCombox1.Texts = "";
-            // 
             // Add_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,6 +517,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtId;
-        private NewCombobox.Toolbox.wehCombox wehCombox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel8;
     }
 }

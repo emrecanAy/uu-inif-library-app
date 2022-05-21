@@ -56,14 +56,14 @@ namespace uu_library_app
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.wehCombox1 = new NewCombobox.Toolbox.wehCombox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -344,37 +344,16 @@ namespace uu_library_app
             this.label6.TabIndex = 61;
             this.label6.Text = "Bölüm :";
             // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(79, 454);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(165, 1);
-            this.panel7.TabIndex = 65;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(78, 424);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 31);
-            this.panel8.TabIndex = 67;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(79, 424);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(165, 1);
-            this.panel9.TabIndex = 66;
-            // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.wehCombox1);
+            this.panel10.Controls.Add(this.panel8);
+            this.panel10.Controls.Add(this.panel9);
+            this.panel10.Controls.Add(this.panel7);
             this.panel10.Controls.Add(this.txtId);
             this.panel10.Controls.Add(this.label7);
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.panel7);
-            this.panel10.Controls.Add(this.panel9);
-            this.panel10.Controls.Add(this.panel8);
+            this.panel10.Controls.Add(this.comboBox1);
             this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.label6);
@@ -431,22 +410,38 @@ namespace uu_library_app
             this.panel11.Size = new System.Drawing.Size(286, 1);
             this.panel11.TabIndex = 69;
             // 
-            // wehCombox1
+            // comboBox1
             // 
-            this.wehCombox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox1.BorderSize = 0;
-            this.wehCombox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox1.ForeColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.IconColor = System.Drawing.Color.White;
-            this.wehCombox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.Location = new System.Drawing.Point(76, 424);
-            this.wehCombox1.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox1.Name = "wehCombox1";
-            this.wehCombox1.Size = new System.Drawing.Size(168, 27);
-            this.wehCombox1.TabIndex = 234;
-            this.wehCombox1.Texts = "";
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(75, 424);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 31);
+            this.comboBox1.TabIndex = 71;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(75, 424);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 31);
+            this.panel7.TabIndex = 69;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(75, 454);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(168, 1);
+            this.panel8.TabIndex = 69;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(75, 424);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(168, 1);
+            this.panel9.TabIndex = 70;
             // 
             // Edit_Student
             // 
@@ -505,13 +500,13 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox txtId;
-        private NewCombobox.Toolbox.wehCombox wehCombox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel7;
     }
 }

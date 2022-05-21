@@ -33,9 +33,31 @@ namespace uu_library_app
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.wehCombox3 = new NewCombobox.Toolbox.wehCombox();
-            this.wehCombox2 = new NewCombobox.Toolbox.wehCombox();
-            this.wehCombox1 = new NewCombobox.Toolbox.wehCombox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -89,6 +111,7 @@ namespace uu_library_app
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -126,9 +149,30 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.wehCombox3);
-            this.panel1.Controls.Add(this.wehCombox2);
-            this.panel1.Controls.Add(this.wehCombox1);
+            this.panel1.Controls.Add(this.panel14);
+            this.panel1.Controls.Add(this.panel27);
+            this.panel1.Controls.Add(this.panel28);
+            this.panel1.Controls.Add(this.panel29);
+            this.panel1.Controls.Add(this.panel30);
+            this.panel1.Controls.Add(this.panel31);
+            this.panel1.Controls.Add(this.panel32);
+            this.panel1.Controls.Add(this.panel25);
+            this.panel1.Controls.Add(this.panel26);
+            this.panel1.Controls.Add(this.panel24);
+            this.panel1.Controls.Add(this.panel20);
+            this.panel1.Controls.Add(this.panel21);
+            this.panel1.Controls.Add(this.panel22);
+            this.panel1.Controls.Add(this.panel15);
+            this.panel1.Controls.Add(this.panel16);
+            this.panel1.Controls.Add(this.panel17);
+            this.panel1.Controls.Add(this.panel18);
+            this.panel1.Controls.Add(this.panel19);
+            this.panel1.Controls.Add(this.comboBox6);
+            this.panel1.Controls.Add(this.comboBox5);
+            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.dateTime1);
             this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.panel11);
@@ -182,58 +226,211 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 640);
             this.panel1.TabIndex = 239;
             // 
-            // wehCombox3
+            // panel14
             // 
-            this.wehCombox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox3.BorderSize = 0;
-            this.wehCombox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox3.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.wehCombox3.ForeColor = System.Drawing.Color.White;
-            this.wehCombox3.IconColor = System.Drawing.Color.White;
-            this.wehCombox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox3.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox3.Location = new System.Drawing.Point(78, 592);
-            this.wehCombox3.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox3.Name = "wehCombox3";
-            this.wehCombox3.Size = new System.Drawing.Size(164, 27);
-            this.wehCombox3.TabIndex = 237;
-            this.wehCombox3.Texts = "";
+            this.panel14.Location = new System.Drawing.Point(79, 529);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(164, 1);
+            this.panel14.TabIndex = 235;
             // 
-            // wehCombox2
+            // panel27
             // 
-            this.wehCombox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox2.BorderSize = 0;
-            this.wehCombox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox2.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.wehCombox2.ForeColor = System.Drawing.Color.White;
-            this.wehCombox2.IconColor = System.Drawing.Color.White;
-            this.wehCombox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox2.Location = new System.Drawing.Point(78, 130);
-            this.wehCombox2.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox2.Name = "wehCombox2";
-            this.wehCombox2.Size = new System.Drawing.Size(164, 27);
-            this.wehCombox2.TabIndex = 236;
-            this.wehCombox2.Texts = "";
+            this.panel27.Location = new System.Drawing.Point(78, 129);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1, 31);
+            this.panel27.TabIndex = 234;
             // 
-            // wehCombox1
+            // panel28
             // 
-            this.wehCombox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.wehCombox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.wehCombox1.BorderSize = 0;
-            this.wehCombox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wehCombox1.ForeColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.IconColor = System.Drawing.Color.White;
-            this.wehCombox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wehCombox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.wehCombox1.Location = new System.Drawing.Point(337, 43);
-            this.wehCombox1.MinimumSize = new System.Drawing.Size(164, 27);
-            this.wehCombox1.Name = "wehCombox1";
-            this.wehCombox1.Size = new System.Drawing.Size(164, 27);
-            this.wehCombox1.TabIndex = 233;
-            this.wehCombox1.Texts = "";
+            this.panel28.Location = new System.Drawing.Point(78, 216);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(1, 31);
+            this.panel28.TabIndex = 234;
+            // 
+            // panel29
+            // 
+            this.panel29.Location = new System.Drawing.Point(336, 130);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(1, 31);
+            this.panel29.TabIndex = 234;
+            // 
+            // panel30
+            // 
+            this.panel30.Location = new System.Drawing.Point(336, 44);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(1, 31);
+            this.panel30.TabIndex = 234;
+            // 
+            // panel31
+            // 
+            this.panel31.Location = new System.Drawing.Point(78, 590);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(1, 31);
+            this.panel31.TabIndex = 234;
+            // 
+            // panel32
+            // 
+            this.panel32.Location = new System.Drawing.Point(79, 500);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(1, 31);
+            this.panel32.TabIndex = 234;
+            // 
+            // panel25
+            // 
+            this.panel25.Location = new System.Drawing.Point(78, 620);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(164, 1);
+            this.panel25.TabIndex = 234;
+            // 
+            // panel26
+            // 
+            this.panel26.Location = new System.Drawing.Point(78, 247);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(164, 1);
+            this.panel26.TabIndex = 234;
+            // 
+            // panel24
+            // 
+            this.panel24.Location = new System.Drawing.Point(78, 590);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(164, 1);
+            this.panel24.TabIndex = 234;
+            // 
+            // panel20
+            // 
+            this.panel20.Location = new System.Drawing.Point(336, 159);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(164, 1);
+            this.panel20.TabIndex = 234;
+            // 
+            // panel21
+            // 
+            this.panel21.Location = new System.Drawing.Point(79, 159);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(164, 1);
+            this.panel21.TabIndex = 234;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(336, 73);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(164, 1);
+            this.panel22.TabIndex = 234;
+            // 
+            // panel23
+            // 
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(164, 1);
+            this.panel23.TabIndex = 234;
+            // 
+            // panel15
+            // 
+            this.panel15.Location = new System.Drawing.Point(78, 499);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(164, 1);
+            this.panel15.TabIndex = 234;
+            // 
+            // panel16
+            // 
+            this.panel16.Location = new System.Drawing.Point(78, 217);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(164, 1);
+            this.panel16.TabIndex = 234;
+            // 
+            // panel17
+            // 
+            this.panel17.Location = new System.Drawing.Point(336, 129);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(164, 1);
+            this.panel17.TabIndex = 234;
+            // 
+            // panel18
+            // 
+            this.panel18.Location = new System.Drawing.Point(79, 129);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(164, 1);
+            this.panel18.TabIndex = 234;
+            // 
+            // panel19
+            // 
+            this.panel19.Location = new System.Drawing.Point(336, 43);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(164, 1);
+            this.panel19.TabIndex = 234;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox6.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(78, 590);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(164, 31);
+            this.comboBox6.TabIndex = 243;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox5.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox5.ForeColor = System.Drawing.Color.White;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(79, 499);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(164, 31);
+            this.comboBox5.TabIndex = 242;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox4.ForeColor = System.Drawing.Color.White;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(78, 217);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(164, 31);
+            this.comboBox4.TabIndex = 241;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(336, 129);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(164, 31);
+            this.comboBox3.TabIndex = 240;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(78, 129);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(164, 31);
+            this.comboBox2.TabIndex = 239;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(336, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 31);
+            this.comboBox1.TabIndex = 238;
             // 
             // dateTime1
             // 
@@ -290,7 +487,7 @@ namespace uu_library_app
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(148, 34);
             this.btnEkle.TabIndex = 181;
-            this.btnEkle.Text = "Ekle";
+            this.btnEkle.Text = "Güncelle";
             this.btnEkle.UseVisualStyleBackColor = false;
             // 
             // label11
@@ -771,6 +968,7 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -795,9 +993,31 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private NewCombobox.Toolbox.wehCombox wehCombox3;
-        private NewCombobox.Toolbox.wehCombox wehCombox2;
-        private NewCombobox.Toolbox.wehCombox wehCombox1;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
         private FormUI.Toolbox.DateTime dateTime1;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel11;
