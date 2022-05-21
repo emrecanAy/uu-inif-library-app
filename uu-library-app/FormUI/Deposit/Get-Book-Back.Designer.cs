@@ -105,9 +105,9 @@ namespace uu_library_app
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 30);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(323, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(315, 40);
             this.lblBaslik.TabIndex = 182;
-            this.lblBaslik.Text = "Teslim Alma İşlemleri :";
+            this.lblBaslik.Text = "Teslim Alma İşlemleri ";
             // 
             // panel5
             // 

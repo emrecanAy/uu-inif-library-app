@@ -249,9 +249,9 @@
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 28);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(372, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(364, 40);
             this.lblBaslik.TabIndex = 26;
-            this.lblBaslik.Text = "Öğrenci Ekleme İşlemleri :";
+            this.lblBaslik.Text = "Öğrenci Ekleme İşlemleri ";
             // 
             // picboxBack
             // 

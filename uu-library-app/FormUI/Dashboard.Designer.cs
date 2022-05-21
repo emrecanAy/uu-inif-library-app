@@ -421,9 +421,9 @@ namespace uu_library_app
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 32);
+            this.label3.Size = new System.Drawing.Size(163, 32);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Ana Sayfa :";
+            this.label3.Text = "Ana Sayfa ";
             // 
             // panel11
             // 

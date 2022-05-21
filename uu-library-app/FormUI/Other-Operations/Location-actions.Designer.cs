@@ -114,9 +114,9 @@ namespace uu_library_app.FormUI.Other_Operations
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(98, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 40);
+            this.label1.Size = new System.Drawing.Size(250, 40);
             this.label1.TabIndex = 85;
-            this.label1.Text = "Konum İşlemleri :";
+            this.label1.Text = "Konum İşlemleri ";
             // 
             // panel4
             // 

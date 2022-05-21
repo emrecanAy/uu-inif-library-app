@@ -57,13 +57,13 @@ namespace uu_library_app
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -93,9 +93,9 @@ namespace uu_library_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(84, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(436, 40);
+            this.label1.Size = new System.Drawing.Size(428, 40);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Öğrenci Güncelleme İşlemleri :";
+            this.label1.Text = "Öğrenci Güncelleme İşlemleri ";
             // 
             // btnGuncelle
             // 
@@ -379,6 +379,27 @@ namespace uu_library_app
             this.panel10.Size = new System.Drawing.Size(286, 562);
             this.panel10.TabIndex = 68;
             // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(75, 454);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(168, 1);
+            this.panel8.TabIndex = 69;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(75, 424);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(168, 1);
+            this.panel9.TabIndex = 70;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(75, 424);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 31);
+            this.panel7.TabIndex = 69;
+            // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -421,27 +442,6 @@ namespace uu_library_app
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(168, 31);
             this.comboBox1.TabIndex = 71;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(75, 424);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 31);
-            this.panel7.TabIndex = 69;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(75, 454);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(168, 1);
-            this.panel8.TabIndex = 69;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(75, 424);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(168, 1);
-            this.panel9.TabIndex = 70;
             // 
             // Edit_Student
             // 

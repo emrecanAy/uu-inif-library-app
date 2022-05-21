@@ -168,9 +168,9 @@ namespace uu_library_app.FormUI.Deposit
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 29);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(302, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(294, 40);
             this.lblBaslik.TabIndex = 238;
-            this.lblBaslik.Text = "Sicil Sorgu İşlemleri :";
+            this.lblBaslik.Text = "Sicil Sorgu İşlemleri ";
             // 
             // panel2
             // 
