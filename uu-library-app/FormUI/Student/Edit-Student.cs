@@ -104,7 +104,7 @@ namespace uu_library_app
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            comboBox1.SelectedItem = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
 }

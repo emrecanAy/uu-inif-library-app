@@ -277,9 +277,9 @@ namespace uu_library_app
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Location = new System.Drawing.Point(12, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(695, 562);
@@ -310,6 +310,8 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 32);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(687, 525);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);

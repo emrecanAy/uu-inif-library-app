@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 
@@ -11,7 +12,7 @@ namespace uu_library_app.DataAccess.Concrete
 {
     public class StudentDal : IStudentDal
     {
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
 
         public void Add(Student student)
         {

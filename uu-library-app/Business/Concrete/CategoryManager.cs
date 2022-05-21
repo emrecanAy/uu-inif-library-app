@@ -28,7 +28,10 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(string id)
         {
-            _service.Delete(id);
+            if(id != null)
+            {
+                _service.Delete(id);
+            }
         }
 
         public List<Category> getAll()

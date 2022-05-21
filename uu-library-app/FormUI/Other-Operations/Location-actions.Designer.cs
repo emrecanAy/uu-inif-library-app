@@ -95,6 +95,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(656, 537);
             this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // picboxBack
             // 
@@ -159,6 +160,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnGuncelle.TabIndex = 85;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -171,6 +173,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnSil.TabIndex = 84;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -183,6 +186,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnEkle.TabIndex = 83;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label4
             // 
@@ -257,6 +261,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Location_actions";
             this.Text = "Location_actions";
+            this.Load += new System.EventHandler(this.Location_actions_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

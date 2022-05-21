@@ -167,6 +167,7 @@ namespace uu_library_app
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 32);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -175,6 +176,7 @@ namespace uu_library_app
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(656, 537);
             this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnEkle
             // 
@@ -321,6 +323,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "author_actions";
             this.Text = "author_actions";
+            this.Load += new System.EventHandler(this.author_actions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

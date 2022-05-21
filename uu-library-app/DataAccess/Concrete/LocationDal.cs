@@ -83,7 +83,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Location SET name=@p2 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Location SET shelf=@p2 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", location.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", location.Shelf);
                 commandToUpdate.ExecuteNonQuery();

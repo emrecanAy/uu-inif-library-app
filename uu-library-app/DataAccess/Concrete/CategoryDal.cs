@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.Core.Helpers;
 
 namespace uu_library_app.DataAccess.Concrete
 {
     public class CategoryDal : ICategoryDal
     {
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         public void Add(Category category)
         {
             conn.Open();
@@ -38,7 +39,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Department SET deleted=1 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Category SET deleted=1 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", id);
                 commandToUpdate.ExecuteNonQuery();
 
@@ -57,7 +58,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Category WHERE deleted=false", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {

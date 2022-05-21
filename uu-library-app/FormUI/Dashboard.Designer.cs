@@ -54,7 +54,7 @@ namespace uu_library_app
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblToplamUye = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@ namespace uu_library_app
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblToplamKategori = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@ namespace uu_library_app
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblToplamYazar = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -138,6 +138,7 @@ namespace uu_library_app
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1015, 750);
             this.panelChildForm.TabIndex = 9;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // panel12
             // 
@@ -364,7 +365,7 @@ namespace uu_library_app
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.lblToplamUye);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(17, 252);
             this.panel5.Name = "panel5";
@@ -392,16 +393,16 @@ namespace uu_library_app
             this.label10.TabIndex = 2;
             this.label10.Text = "Details of Last 13 Days";
             // 
-            // label11
+            // lblToplamUye
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label11.Location = new System.Drawing.Point(83, 52);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 39);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "0";
+            this.lblToplamUye.AutoSize = true;
+            this.lblToplamUye.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamUye.Location = new System.Drawing.Point(83, 52);
+            this.lblToplamUye.Name = "lblToplamUye";
+            this.lblToplamUye.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamUye.TabIndex = 1;
+            this.lblToplamUye.Text = "0";
             // 
             // label12
             // 
@@ -540,7 +541,7 @@ namespace uu_library_app
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.label19);
-            this.panel8.Controls.Add(this.label20);
+            this.panel8.Controls.Add(this.lblToplamKategori);
             this.panel8.Controls.Add(this.label21);
             this.panel8.Location = new System.Drawing.Point(353, 252);
             this.panel8.Name = "panel8";
@@ -568,16 +569,16 @@ namespace uu_library_app
             this.label19.TabIndex = 2;
             this.label19.Text = "Details of Last 13 Days";
             // 
-            // label20
+            // lblToplamKategori
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label20.Location = new System.Drawing.Point(83, 52);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 39);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "0";
+            this.lblToplamKategori.AutoSize = true;
+            this.lblToplamKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamKategori.Location = new System.Drawing.Point(83, 52);
+            this.lblToplamKategori.Name = "lblToplamKategori";
+            this.lblToplamKategori.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamKategori.TabIndex = 1;
+            this.lblToplamKategori.Text = "0";
             // 
             // label21
             // 
@@ -588,7 +589,7 @@ namespace uu_library_app
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(149, 25);
             this.label21.TabIndex = 0;
-            this.label21.Text = "Borrowed Books";
+            this.label21.Text = "Toplam Kategori";
             // 
             // panel10
             // 
@@ -650,7 +651,7 @@ namespace uu_library_app
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.lblToplamYazar);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Location = new System.Drawing.Point(353, 82);
             this.panel7.Name = "panel7";
@@ -678,16 +679,16 @@ namespace uu_library_app
             this.label16.TabIndex = 2;
             this.label16.Text = "Details of Last 13 Days";
             // 
-            // label17
+            // lblToplamYazar
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label17.Location = new System.Drawing.Point(83, 52);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 39);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "0";
+            this.lblToplamYazar.AutoSize = true;
+            this.lblToplamYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamYazar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamYazar.Location = new System.Drawing.Point(83, 52);
+            this.lblToplamYazar.Name = "lblToplamYazar";
+            this.lblToplamYazar.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamYazar.TabIndex = 1;
+            this.lblToplamYazar.Text = "0";
             // 
             // label18
             // 
@@ -696,9 +697,9 @@ namespace uu_library_app
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(19, 9);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 25);
+            this.label18.Size = new System.Drawing.Size(123, 25);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Total Books";
+            this.label18.Text = "Toplam Yazar";
             // 
             // panel4
             // 
@@ -820,6 +821,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -888,7 +890,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblToplamUye;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel11;
@@ -904,7 +906,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblToplamKategori;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -914,7 +916,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblToplamYazar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox3;

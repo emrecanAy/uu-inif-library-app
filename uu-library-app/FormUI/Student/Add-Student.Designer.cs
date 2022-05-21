@@ -416,8 +416,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(557, 140);
             this.panel3.Name = "panel3";
@@ -439,6 +439,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(433, 604);
             this.dataGridView1.TabIndex = 37;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);

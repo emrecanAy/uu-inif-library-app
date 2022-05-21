@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 
@@ -21,7 +22,7 @@ namespace uu_library_app
             InitializeComponent();
         }
 
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
         private void listDepositBookDataToTable()
@@ -65,22 +66,57 @@ namespace uu_library_app
 
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
-            listStudentDataToTable();
+         
+          listStudentDataToTable();
+          txtAra.Text = "Öğrenci numarasını giriniz...";
+          txtAra.ForeColor = Color.Silver;
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             
+
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)13)
+           
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView();
+            dataView = dt.DefaultView;
+            dataView.RowFilter = "number like '"+txtAra.Text+"%'";
+            dataGridView1.DataSource = dataView;
+            dataGridView1.Visible = true;
+        }
+
+        private void txtAra_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtAra.Text == "Öğrenci numarasını giriniz...")
             {
-                DataView dv = dt.DefaultView;
-                dv.RowFilter = string.Format("firstName like '%{0}%'", txtSearch.Text);
-                dataGridView1.DataSource = dv.ToTable();
+                txtAra.Text = "";
             }
+
+        }
+
+        private void txtAra_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtAra.Text.Trim() == "")
+            {
+                txtAra.Text = "Öğrenci numarasını giriniz...";
+                txtAra.ForeColor = Color.Silver;
+            }
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOgrenciAdSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() +" "+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }
