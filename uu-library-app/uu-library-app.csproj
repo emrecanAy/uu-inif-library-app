@@ -126,6 +126,12 @@
     <Compile Include="Entity\Concrete\Category.cs" />
     <Compile Include="Entity\Concrete\Location.cs" />
     <Compile Include="Entity\Concrete\Publisher.cs" />
+    <Compile Include="FormUI\Deposit\Book_query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Deposit\Book_query.Designer.cs">
+      <DependentUpon>Book_query.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Deposit\Borrowing-Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     <Compile Include="FormUI\Student-Affairs.Designer.cs">
       <DependentUpon>Student-Affairs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormUI\Deposit\Book_query.resx">
+      <DependentUpon>Book_query.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Deposit\Borrowing-Book.resx">
       <DependentUpon>Borrowing-Book.cs</DependentUpon>
     </EmbeddedResource>

@@ -40,6 +40,7 @@ namespace uu_library_app.FormUI
             this.btnYazar = new System.Windows.Forms.Button();
             this.btnDigerislemler = new System.Windows.Forms.Button();
             this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
+            this.btnTeslimSorgu = new System.Windows.Forms.Button();
             this.btnReceive = new System.Windows.Forms.Button();
             this.btnLending = new System.Windows.Forms.Button();
             this.btnDeposit = new System.Windows.Forms.Button();
@@ -100,7 +101,7 @@ namespace uu_library_app.FormUI
             this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
             this.pnlDigerSubMenu.Controls.Add(this.btnYazar);
             this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 564);
+            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 592);
             this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
             this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 168);
             this.pnlDigerSubMenu.TabIndex = 15;
@@ -221,7 +222,7 @@ namespace uu_library_app.FormUI
             this.btnDigerislemler.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDigerislemler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDigerislemler.Image = ((System.Drawing.Image)(resources.GetObject("btnDigerislemler.Image")));
-            this.btnDigerislemler.Location = new System.Drawing.Point(0, 527);
+            this.btnDigerislemler.Location = new System.Drawing.Point(0, 555);
             this.btnDigerislemler.Name = "btnDigerislemler";
             this.btnDigerislemler.Size = new System.Drawing.Size(186, 37);
             this.btnDigerislemler.TabIndex = 14;
@@ -234,13 +235,32 @@ namespace uu_library_app.FormUI
             // pnlDepositSubMenu
             // 
             this.pnlDepositSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDepositSubMenu.Controls.Add(this.btnTeslimSorgu);
             this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
             this.pnlDepositSubMenu.Controls.Add(this.btnLending);
             this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 469);
             this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
-            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 58);
+            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 86);
             this.pnlDepositSubMenu.TabIndex = 13;
+            // 
+            // btnTeslimSorgu
+            // 
+            this.btnTeslimSorgu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeslimSorgu.FlatAppearance.BorderSize = 0;
+            this.btnTeslimSorgu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeslimSorgu.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTeslimSorgu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTeslimSorgu.Image = ((System.Drawing.Image)(resources.GetObject("btnTeslimSorgu.Image")));
+            this.btnTeslimSorgu.Location = new System.Drawing.Point(0, 56);
+            this.btnTeslimSorgu.Name = "btnTeslimSorgu";
+            this.btnTeslimSorgu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTeslimSorgu.Size = new System.Drawing.Size(186, 28);
+            this.btnTeslimSorgu.TabIndex = 2;
+            this.btnTeslimSorgu.Text = "Teslim Sorgusu";
+            this.btnTeslimSorgu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeslimSorgu.UseVisualStyleBackColor = true;
+            this.btnTeslimSorgu.Click += new System.EventHandler(this.btnTeslimSorgu_Click);
             // 
             // btnReceive
             // 
@@ -621,5 +641,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnBolum;
         private System.Windows.Forms.Panel panelChildFormNew;
         private System.Windows.Forms.Button btnKonum;
+        private System.Windows.Forms.Button btnTeslimSorgu;
     }
 }

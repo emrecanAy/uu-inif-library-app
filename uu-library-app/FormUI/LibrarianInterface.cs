@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using uu_library_app.FormUI.Other_Operations;
+using uu_library_app.FormUI.Deposit;
 
 namespace uu_library_app.FormUI
 {
@@ -260,6 +261,11 @@ namespace uu_library_app.FormUI
         private void btnKonum_Click(object sender, EventArgs e)
         {
             openChildForm(new Location_actions());   
+            hideSubMenu();
+        }
+        private void btnTeslimSorgu_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Book_query());
             hideSubMenu();
         }
 
