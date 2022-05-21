@@ -87,7 +87,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Author SET (firstName=@p2, lastName=@p3) WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Author SET firstName=@p2, lastName=@p3 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", author.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", author.FirstName);
                 commandToUpdate.Parameters.AddWithValue("@p3", author.LastName);
