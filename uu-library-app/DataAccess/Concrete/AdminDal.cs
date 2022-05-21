@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 using MySql.Data.MySqlClient;
+using uu_library_app.Core.Helpers;
 
 namespace uu_library_app.DataAccess.Concrete
 {
     internal class AdminDal : IAdminDal
     {
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
 
         public void Add(Admin admin)
         {

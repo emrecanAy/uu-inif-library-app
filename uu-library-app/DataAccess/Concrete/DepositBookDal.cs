@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql;
 using MySql.Data.MySqlClient;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 
@@ -13,7 +14,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
 
     public class DepositBookDal : IDepositBookDal
     {
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         public void Add(DepositBook depositBook)
         {
             conn.Open();

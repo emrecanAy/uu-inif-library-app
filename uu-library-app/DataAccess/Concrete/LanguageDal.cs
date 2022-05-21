@@ -7,13 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.Core.Helpers;
 
 namespace uu_library_app.DataAccess.Concrete
 {
     public class LanguageDal : ILanguageDal
     {
 
-        MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;uid=ASSEMSoft;pwd=Assemsoft1320..!;database=ASSEMSoft");
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         public void Add(Language language)
         {
             conn.Open();
