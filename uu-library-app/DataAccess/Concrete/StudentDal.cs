@@ -54,8 +54,6 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToUpdate.Parameters.AddWithValue("@p7", student.DepartmentId);
                 commandToUpdate.ExecuteNonQuery();
 
-              
-
             }
             catch (Exception)
             {

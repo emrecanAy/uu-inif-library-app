@@ -109,6 +109,7 @@
     <Compile Include="Business\Concrete\LocationManager.cs" />
     <Compile Include="Business\Concrete\PublisherManager.cs" />
     <Compile Include="Core\Helpers\DbConnection.cs" />
+    <Compile Include="Core\Helpers\SqlCommandHelper.cs" />
     <Compile Include="Core\Utils\FileWriter.cs" />
     <Compile Include="DataAccess\Abstract\IAdminDal.cs" />
     <Compile Include="DataAccess\Abstract\IAuthorDal.cs" />

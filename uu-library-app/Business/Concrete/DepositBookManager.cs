@@ -26,9 +26,14 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(DepositBook depositBook)
+        public void Delete(string id)
         {
-            _depositBook.Delete(depositBook);
+            _depositBook.Delete(id);
+        }
+
+        public List<DepositBook> findAllByStudentId(string studentId)
+        {
+            return _depositBook.findAllByStudentId(studentId);
         }
 
         public List<DepositBook> getAll()

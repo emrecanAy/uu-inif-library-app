@@ -38,11 +38,8 @@ namespace uu_library_app
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -52,36 +49,31 @@ namespace uu_library_app
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.cmbYazar = new System.Windows.Forms.ComboBox();
+            this.cmbKonum = new System.Windows.Forms.ComboBox();
+            this.cmbYayinevi = new System.Windows.Forms.ComboBox();
+            this.cmbKategori = new System.Windows.Forms.ComboBox();
+            this.cmbDil = new System.Windows.Forms.ComboBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.txtCevirmen = new System.Windows.Forms.TextBox();
+            this.btnSil = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtStokAdet = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCiltNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtSayfaSayisi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -91,7 +83,7 @@ namespace uu_library_app
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIsbn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -108,6 +100,8 @@ namespace uu_library_app
             this.lblAd = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -117,7 +111,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -139,12 +132,15 @@ namespace uu_library_app
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(427, 638);
             this.dataGridView1.TabIndex = 231;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel1
             // 
@@ -154,11 +150,8 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.panel28);
             this.panel1.Controls.Add(this.panel29);
             this.panel1.Controls.Add(this.panel30);
-            this.panel1.Controls.Add(this.panel31);
             this.panel1.Controls.Add(this.panel32);
-            this.panel1.Controls.Add(this.panel25);
             this.panel1.Controls.Add(this.panel26);
-            this.panel1.Controls.Add(this.panel24);
             this.panel1.Controls.Add(this.panel20);
             this.panel1.Controls.Add(this.panel21);
             this.panel1.Controls.Add(this.panel22);
@@ -167,36 +160,32 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.panel17);
             this.panel1.Controls.Add(this.panel18);
             this.panel1.Controls.Add(this.panel19);
-            this.panel1.Controls.Add(this.comboBox6);
-            this.panel1.Controls.Add(this.comboBox5);
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbYazar);
+            this.panel1.Controls.Add(this.cmbKonum);
+            this.panel1.Controls.Add(this.cmbYayinevi);
+            this.panel1.Controls.Add(this.cmbKategori);
+            this.panel1.Controls.Add(this.cmbDil);
             this.panel1.Controls.Add(this.dateTime1);
             this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.panel11);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.btnEkle);
+            this.panel1.Controls.Add(this.txtCevirmen);
+            this.panel1.Controls.Add(this.btnSil);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox13);
             this.panel1.Controls.Add(this.panel13);
-            this.panel1.Controls.Add(this.textBox13);
+            this.panel1.Controls.Add(this.txtStokAdet);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtCiltNo);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtSayfaSayisi);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.textBox10);
@@ -206,7 +195,7 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtIsbn);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.panel3);
@@ -261,13 +250,6 @@ namespace uu_library_app
             this.panel30.Size = new System.Drawing.Size(1, 31);
             this.panel30.TabIndex = 234;
             // 
-            // panel31
-            // 
-            this.panel31.Location = new System.Drawing.Point(78, 590);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(1, 31);
-            this.panel31.TabIndex = 234;
-            // 
             // panel32
             // 
             this.panel32.Location = new System.Drawing.Point(79, 500);
@@ -275,26 +257,12 @@ namespace uu_library_app
             this.panel32.Size = new System.Drawing.Size(1, 31);
             this.panel32.TabIndex = 234;
             // 
-            // panel25
-            // 
-            this.panel25.Location = new System.Drawing.Point(78, 620);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(164, 1);
-            this.panel25.TabIndex = 234;
-            // 
             // panel26
             // 
             this.panel26.Location = new System.Drawing.Point(78, 247);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(164, 1);
             this.panel26.TabIndex = 234;
-            // 
-            // panel24
-            // 
-            this.panel24.Location = new System.Drawing.Point(78, 590);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(164, 1);
-            this.panel24.TabIndex = 234;
             // 
             // panel20
             // 
@@ -360,90 +328,65 @@ namespace uu_library_app
             this.panel19.Size = new System.Drawing.Size(164, 1);
             this.panel19.TabIndex = 234;
             // 
-            // comboBox6
+            // cmbYazar
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox6.ForeColor = System.Drawing.Color.White;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(78, 590);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(164, 31);
-            this.comboBox6.TabIndex = 243;
+            this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbYazar.ForeColor = System.Drawing.Color.White;
+            this.cmbYazar.FormattingEnabled = true;
+            this.cmbYazar.Location = new System.Drawing.Point(79, 499);
+            this.cmbYazar.Name = "cmbYazar";
+            this.cmbYazar.Size = new System.Drawing.Size(164, 31);
+            this.cmbYazar.TabIndex = 242;
             // 
-            // comboBox5
+            // cmbKonum
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox5.ForeColor = System.Drawing.Color.White;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(79, 499);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(164, 31);
-            this.comboBox5.TabIndex = 242;
+            this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKonum.ForeColor = System.Drawing.Color.White;
+            this.cmbKonum.FormattingEnabled = true;
+            this.cmbKonum.Location = new System.Drawing.Point(78, 217);
+            this.cmbKonum.Name = "cmbKonum";
+            this.cmbKonum.Size = new System.Drawing.Size(164, 31);
+            this.cmbKonum.TabIndex = 241;
             // 
-            // comboBox4
+            // cmbYayinevi
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox4.ForeColor = System.Drawing.Color.White;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(78, 217);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(164, 31);
-            this.comboBox4.TabIndex = 241;
+            this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
+            this.cmbYayinevi.FormattingEnabled = true;
+            this.cmbYayinevi.Location = new System.Drawing.Point(336, 129);
+            this.cmbYayinevi.Name = "cmbYayinevi";
+            this.cmbYayinevi.Size = new System.Drawing.Size(164, 31);
+            this.cmbYayinevi.TabIndex = 240;
             // 
-            // comboBox3
+            // cmbKategori
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(336, 129);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(164, 31);
-            this.comboBox3.TabIndex = 240;
+            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKategori.ForeColor = System.Drawing.Color.White;
+            this.cmbKategori.FormattingEnabled = true;
+            this.cmbKategori.Location = new System.Drawing.Point(78, 129);
+            this.cmbKategori.Name = "cmbKategori";
+            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
+            this.cmbKategori.TabIndex = 239;
             // 
-            // comboBox2
+            // cmbDil
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(78, 129);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 31);
-            this.comboBox2.TabIndex = 239;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(336, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 31);
-            this.comboBox1.TabIndex = 238;
-            // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(336, 307);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(191, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 233;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
+            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbDil.ForeColor = System.Drawing.Color.White;
+            this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.Location = new System.Drawing.Point(336, 43);
+            this.cmbDil.Name = "cmbDil";
+            this.cmbDil.Size = new System.Drawing.Size(164, 31);
+            this.cmbDil.TabIndex = 238;
             // 
             // pictureBox11
             // 
@@ -463,32 +406,33 @@ namespace uu_library_app
             this.panel11.Size = new System.Drawing.Size(200, 1);
             this.panel11.TabIndex = 224;
             // 
-            // textBox11
+            // txtCevirmen
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox11.ForeColor = System.Drawing.Color.White;
-            this.textBox11.Location = new System.Drawing.Point(341, 220);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(164, 27);
-            this.textBox11.TabIndex = 223;
+            this.txtCevirmen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtCevirmen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCevirmen.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtCevirmen.ForeColor = System.Drawing.Color.White;
+            this.txtCevirmen.Location = new System.Drawing.Point(341, 220);
+            this.txtCevirmen.Name = "txtCevirmen";
+            this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
+            this.txtCevirmen.TabIndex = 223;
             // 
-            // btnEkle
+            // btnSil
             // 
-            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEkle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEkle.FlatAppearance.BorderSize = 2;
-            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(336, 586);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(148, 34);
-            this.btnEkle.TabIndex = 181;
-            this.btnEkle.Text = "Sil";
-            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSil.FlatAppearance.BorderSize = 2;
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnSil.ForeColor = System.Drawing.Color.White;
+            this.btnSil.Location = new System.Drawing.Point(192, 576);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(148, 34);
+            this.btnSil.TabIndex = 181;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label11
             // 
@@ -550,16 +494,16 @@ namespace uu_library_app
             this.panel13.Size = new System.Drawing.Size(200, 1);
             this.panel13.TabIndex = 216;
             // 
-            // textBox13
+            // txtStokAdet
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox13.ForeColor = System.Drawing.Color.White;
-            this.textBox13.Location = new System.Drawing.Point(82, 404);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(164, 27);
-            this.textBox13.TabIndex = 215;
+            this.txtStokAdet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtStokAdet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStokAdet.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtStokAdet.ForeColor = System.Drawing.Color.White;
+            this.txtStokAdet.Location = new System.Drawing.Point(82, 404);
+            this.txtStokAdet.Name = "txtStokAdet";
+            this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
+            this.txtStokAdet.TabIndex = 215;
             // 
             // label13
             // 
@@ -591,16 +535,16 @@ namespace uu_library_app
             this.panel7.Size = new System.Drawing.Size(200, 1);
             this.panel7.TabIndex = 212;
             // 
-            // textBox7
+            // txtCiltNo
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(341, 500);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(164, 27);
-            this.textBox7.TabIndex = 211;
+            this.txtCiltNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtCiltNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCiltNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtCiltNo.ForeColor = System.Drawing.Color.White;
+            this.txtCiltNo.Location = new System.Drawing.Point(341, 500);
+            this.txtCiltNo.Name = "txtCiltNo";
+            this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
+            this.txtCiltNo.TabIndex = 211;
             // 
             // label7
             // 
@@ -632,16 +576,16 @@ namespace uu_library_app
             this.panel8.Size = new System.Drawing.Size(200, 1);
             this.panel8.TabIndex = 208;
             // 
-            // textBox8
+            // txtSayfaSayisi
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(341, 404);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(164, 27);
-            this.textBox8.TabIndex = 207;
+            this.txtSayfaSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSayfaSayisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSayfaSayisi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSayfaSayisi.ForeColor = System.Drawing.Color.White;
+            this.txtSayfaSayisi.Location = new System.Drawing.Point(341, 404);
+            this.txtSayfaSayisi.Name = "txtSayfaSayisi";
+            this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
+            this.txtSayfaSayisi.TabIndex = 207;
             // 
             // label8
             // 
@@ -654,36 +598,6 @@ namespace uu_library_app
             this.label8.Size = new System.Drawing.Size(118, 25);
             this.label8.TabIndex = 206;
             this.label8.Text = "Sayfa Sayısı :";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(42, 590);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 205;
-            this.pictureBox9.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(42, 625);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 1);
-            this.panel9.TabIndex = 204;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(37, 557);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 25);
-            this.label9.TabIndex = 202;
-            this.label9.Text = "Kitap Durumu :";
             // 
             // pictureBox10
             // 
@@ -774,16 +688,16 @@ namespace uu_library_app
             this.panel6.Size = new System.Drawing.Size(200, 1);
             this.panel6.TabIndex = 192;
             // 
-            // textBox6
+            // txtIsbn
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(82, 311);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 27);
-            this.textBox6.TabIndex = 191;
+            this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIsbn.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtIsbn.ForeColor = System.Drawing.Color.White;
+            this.txtIsbn.Location = new System.Drawing.Point(82, 311);
+            this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.Size = new System.Drawing.Size(164, 27);
+            this.txtIsbn.TabIndex = 191;
             // 
             // label6
             // 
@@ -950,12 +864,38 @@ namespace uu_library_app
             this.lblBaslik.TabIndex = 241;
             this.lblBaslik.Text = "Kitap Silme";
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(333, 43);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(164, 27);
+            this.txtId.TabIndex = 244;
+            this.txtId.Visible = false;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(336, 307);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(191, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 233;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
             // delete_book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.lblBaslik);
@@ -963,6 +903,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "delete_book";
             this.Text = "delete_book";
+            this.Load += new System.EventHandler(this.delete_book_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -973,7 +914,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -997,11 +937,8 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
@@ -1011,36 +948,32 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbYazar;
+        private System.Windows.Forms.ComboBox cmbKonum;
+        private System.Windows.Forms.ComboBox cmbYayinevi;
+        private System.Windows.Forms.ComboBox cmbKategori;
+        private System.Windows.Forms.ComboBox cmbDil;
         private FormUI.Toolbox.DateTime dateTime1;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.TextBox txtCevirmen;
+        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtStokAdet;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCiltNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSayfaSayisi;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox10;
@@ -1050,7 +983,7 @@ namespace uu_library_app
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIsbn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
@@ -1067,5 +1000,6 @@ namespace uu_library_app
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

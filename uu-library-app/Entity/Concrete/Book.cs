@@ -25,7 +25,7 @@ namespace uu_library_app.Entity.Concrete
 
         public Book() { }
 
-        public Book(string id, string bookName, string languageId, string authorId, string categoryId, string publisherId, string locationId, int pageCount, string isbnNumber, DateTime publishDate, int publishCount, int stockCount, bool status, string interpreter)
+        public Book(string id, string bookName, string languageId, string authorId, string categoryId, string publisherId, string locationId, int pageCount, string isbnNumber, DateTime publishDate, int publishCount, int stockCount, string interpreter)
         {
             this.Id = id;
             this.BookName = bookName;
@@ -39,7 +39,6 @@ namespace uu_library_app.Entity.Concrete
             this.PublishDate = publishDate;
             this.PublishCount = publishCount;
             this.StockCount = stockCount;
-            this.Status = status;
             this.Interpreter = interpreter;
         }
 

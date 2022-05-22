@@ -12,7 +12,9 @@ namespace uu_library_app.DataAccess.Abstract
         List<DepositBook> getAll();
         void Add(DepositBook depositBook);
         void Update(DepositBook depositBook);
-        void Delete(DepositBook depositBook);
-       
+        void Delete(string id);
+        List<DepositBook> findAllByStudentId(string studentId);
+
+
     }
 }
