@@ -34,7 +34,6 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -43,14 +42,15 @@ namespace uu_library_app
             this.btnEkle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,17 +96,6 @@ namespace uu_library_app
             this.dataGridView1.Size = new System.Drawing.Size(656, 537);
             this.dataGridView1.TabIndex = 75;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 86;
-            this.picboxBack.TabStop = false;
             // 
             // label1
             // 
@@ -207,16 +196,6 @@ namespace uu_library_app
             this.panel5.Size = new System.Drawing.Size(312, 1);
             this.panel5.TabIndex = 82;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -248,6 +227,27 @@ namespace uu_library_app
             this.label2.TabIndex = 67;
             this.label2.Text = "Yayınevi Adı :";
             // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 86;
+            this.picboxBack.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 141);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
+            // 
             // publisher_actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,9 +265,9 @@ namespace uu_library_app
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

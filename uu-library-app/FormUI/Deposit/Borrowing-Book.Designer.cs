@@ -33,6 +33,7 @@ namespace uu_library_app
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -76,7 +77,6 @@ namespace uu_library_app
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.txtAra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -125,6 +125,20 @@ namespace uu_library_app
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(492, 84);
             this.panel4.TabIndex = 233;
+            // 
+            // txtAra
+            // 
+            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(115, 9);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(372, 26);
+            this.txtAra.TabIndex = 270;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
+            this.txtAra.MouseEnter += new System.EventHandler(this.txtAra_MouseEnter);
+            this.txtAra.MouseLeave += new System.EventHandler(this.txtAra_MouseLeave);
             // 
             // label3
             // 
@@ -189,6 +203,7 @@ namespace uu_library_app
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(3, 28);
             this.dataGridView3.Name = "dataGridView3";
@@ -598,20 +613,6 @@ namespace uu_library_app
             this.lblAd.Size = new System.Drawing.Size(102, 28);
             this.lblAd.TabIndex = 239;
             this.lblAd.Text = "Kitap Adı :";
-            // 
-            // txtAra
-            // 
-            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAra.ForeColor = System.Drawing.Color.White;
-            this.txtAra.Location = new System.Drawing.Point(115, 9);
-            this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(372, 26);
-            this.txtAra.TabIndex = 270;
-            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
-            this.txtAra.MouseEnter += new System.EventHandler(this.txtAra_MouseEnter);
-            this.txtAra.MouseLeave += new System.EventHandler(this.txtAra_MouseLeave);
             // 
             // Borrowing_Book
             // 

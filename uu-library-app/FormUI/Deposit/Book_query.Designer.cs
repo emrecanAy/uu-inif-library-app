@@ -92,6 +92,7 @@ namespace uu_library_app.FormUI.Deposit
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(3, 28);
             this.dataGridView3.Name = "dataGridView3";
@@ -204,6 +205,7 @@ namespace uu_library_app.FormUI.Deposit
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(3, 28);
             this.dataGridView2.Name = "dataGridView2";
@@ -242,6 +244,7 @@ namespace uu_library_app.FormUI.Deposit
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(3, 28);
             this.dataGridView4.Name = "dataGridView4";

@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormUI\Book\book-listing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Book\book-listing.Designer.cs">
+      <DependentUpon>book-listing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Business\Abstract\IAdminService.cs" />
     <Compile Include="Business\Abstract\IAuthorService.cs" />
     <Compile Include="Business\Abstract\ICategoryService.cs" />
@@ -283,6 +289,15 @@
     <Compile Include="FormUI\Student-Affairs.Designer.cs">
       <DependentUpon>Student-Affairs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\Student\student-listing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Student\student-listing.Designer.cs">
+      <DependentUpon>student-listing.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormUI\Book\book-listing.resx">
+      <DependentUpon>book-listing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Deposit\Book_query.resx">
       <DependentUpon>Book_query.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Deposit\Get-Book-Back.resx">
       <DependentUpon>Get-Book-Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Student\student-listing.resx">
+      <DependentUpon>student-listing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -145,7 +145,7 @@ namespace uu_library_app
             this.radioButton1.Size = new System.Drawing.Size(133, 29);
             this.radioButton1.TabIndex = 47;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ögrenci İsleri";
+            this.radioButton1.Text = "Ögrenci İşleri";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label1

@@ -301,6 +301,7 @@ namespace uu_library_app
             // 
             // dgwDelete
             // 
+            this.dgwDelete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwDelete.Location = new System.Drawing.Point(433, 40);
             this.dgwDelete.Name = "dgwDelete";
