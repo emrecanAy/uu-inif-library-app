@@ -266,6 +266,7 @@ namespace uu_library_app.FormUI.Deposit
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Book_query";
             this.Text = "Book_query";
+            this.Load += new System.EventHandler(this.Book_query_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();

@@ -17,7 +17,7 @@ namespace uu_library_app.DataAccess.Concrete
         {
             conn.Open();
 
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, name, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", book.Id);
@@ -111,17 +111,17 @@ namespace uu_library_app.DataAccess.Concrete
                 {
                     Book book = new Book();
                     book.Id = reader[0].ToString();
-                    book.LanguageId = reader[1].ToString();
-                    book.AuthorId = reader[2].ToString();
-                    book.CategoryId = reader[3].ToString();
-                    book.PublisherId = reader[4].ToString();
-                    book.PageCount = Convert.ToInt32(reader[7]);
-                    book.IsbnNumber = reader[8].ToString();
-                    book.PublishDate = Convert.ToDateTime(reader[9]);//
-                    book.PublishCount = Convert.ToInt32(reader[10]);
-                    book.StockCount = Convert.ToInt32(reader[11]);
-                    book.LocationId = reader[5].ToString();
-                    book.BookName = reader[6].ToString();
+                    book.LanguageId = reader[2].ToString();
+                    book.AuthorId = reader[3].ToString();
+                    book.CategoryId = reader[4].ToString();
+                    book.PublisherId = reader[5].ToString();
+                    book.PageCount = Convert.ToInt32(reader[6]);
+                    book.IsbnNumber = reader[7].ToString();
+                    book.PublishDate = Convert.ToDateTime(reader[8]);
+                    book.PublishCount = Convert.ToInt32(reader[9]);
+                    book.StockCount = Convert.ToInt32(reader[10]);
+                    book.LocationId = reader[11].ToString();
+                    book.BookName = reader[1].ToString();
                     book.Status = Convert.ToBoolean(reader[12]);
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
@@ -253,30 +253,31 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
+        
         public Book getById(string id)
         {
-            Book book = new Book();
+            
             conn.Open();
             try
             {
+                Book book = new Book();
                 MySqlCommand commandToGetAllByCategory = new MySqlCommand("SELECT * FROM Book WHERE id=@p1", conn);
                 commandToGetAllByCategory.Parameters.AddWithValue("@p1", id);
                 MySqlDataReader reader = commandToGetAllByCategory.ExecuteReader();
                 while (reader.Read())
-                {
-                    
+                {               
                     book.Id = reader[0].ToString();
-                    book.LanguageId = reader[1].ToString();
-                    book.AuthorId = reader[2].ToString();
-                    book.CategoryId = reader[3].ToString();
-                    book.PublisherId = reader[4].ToString();
-                    book.PageCount = Convert.ToInt32(reader[5]);
-                    book.IsbnNumber = reader[6].ToString();
-                    book.PublishDate = Convert.ToDateTime(reader[7]);
-                    book.PublishCount = Convert.ToInt32(reader[8]);
-                    book.StockCount = Convert.ToInt32(reader[9]);
-                    book.LocationId = reader[10].ToString();
-                    book.BookName = reader[11].ToString();
+                    book.LanguageId = reader[2].ToString();
+                    book.AuthorId = reader[3].ToString();
+                    book.CategoryId = reader[4].ToString();
+                    book.PublisherId = reader[5].ToString();
+                    book.PageCount = Convert.ToInt32(reader[6]);
+                    book.IsbnNumber = reader[7].ToString();
+                    book.PublishDate = Convert.ToDateTime(reader[8]);
+                    book.PublishCount = Convert.ToInt32(reader[9]);
+                    book.StockCount = Convert.ToInt32(reader[10]);
+                    book.LocationId = reader[11].ToString();
+                    book.BookName = reader[1].ToString();
                     book.Status = Convert.ToBoolean(reader[12]);
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();

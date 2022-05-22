@@ -52,19 +52,19 @@ namespace uu_library_app
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
+            this.txtAdSoyad = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtYazar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIsbn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtYayinevi = new System.Windows.Forms.TextBox();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -75,8 +75,10 @@ namespace uu_library_app
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAd = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
+            this.txtKitapId = new System.Windows.Forms.TextBox();
+            this.txtOgrenciId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -209,6 +211,7 @@ namespace uu_library_app
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(692, 603);
             this.dataGridView3.TabIndex = 231;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // panel2
             // 
@@ -223,19 +226,19 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtOgrenciAdSoyad);
+            this.panel2.Controls.Add(this.txtAdSoyad);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txtYazar);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.txtIsbn);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtYayinevi);
             this.panel2.Controls.Add(this.panel28);
             this.panel2.Controls.Add(this.panel22);
             this.panel2.Controls.Add(this.panel16);
@@ -246,7 +249,7 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pnlAd);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txtAd);
+            this.panel2.Controls.Add(this.txtKitapAd);
             this.panel2.Controls.Add(this.lblAd);
             this.panel2.Location = new System.Drawing.Point(739, 102);
             this.panel2.Name = "panel2";
@@ -268,6 +271,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 239;
             this.btnEkle.Text = "Ödünç Ver";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label8
             // 
@@ -289,7 +293,6 @@ namespace uu_library_app
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(56, 540);
             this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.ReadOnly = true;
             this.txtOkulNo.Size = new System.Drawing.Size(164, 27);
             this.txtOkulNo.TabIndex = 267;
             // 
@@ -332,7 +335,6 @@ namespace uu_library_app
             this.txtBolum.ForeColor = System.Drawing.Color.White;
             this.txtBolum.Location = new System.Drawing.Point(56, 459);
             this.txtBolum.Name = "txtBolum";
-            this.txtBolum.ReadOnly = true;
             this.txtBolum.Size = new System.Drawing.Size(164, 27);
             this.txtBolum.TabIndex = 263;
             // 
@@ -367,17 +369,16 @@ namespace uu_library_app
             this.label5.TabIndex = 258;
             this.label5.Text = "Ad Soyad :";
             // 
-            // txtOgrenciAdSoyad
+            // txtAdSoyad
             // 
-            this.txtOgrenciAdSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOgrenciAdSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOgrenciAdSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtOgrenciAdSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(56, 381);
-            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
-            this.txtOgrenciAdSoyad.ReadOnly = true;
-            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(164, 27);
-            this.txtOgrenciAdSoyad.TabIndex = 259;
+            this.txtAdSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAdSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAdSoyad.ForeColor = System.Drawing.Color.White;
+            this.txtAdSoyad.Location = new System.Drawing.Point(56, 381);
+            this.txtAdSoyad.Name = "txtAdSoyad";
+            this.txtAdSoyad.Size = new System.Drawing.Size(164, 27);
+            this.txtAdSoyad.TabIndex = 259;
             // 
             // panel11
             // 
@@ -424,17 +425,16 @@ namespace uu_library_app
             this.panel10.Size = new System.Drawing.Size(203, 1);
             this.panel10.TabIndex = 256;
             // 
-            // textBox10
+            // txtYazar
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(57, 298);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(164, 27);
-            this.textBox10.TabIndex = 255;
+            this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYazar.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYazar.ForeColor = System.Drawing.Color.White;
+            this.txtYazar.Location = new System.Drawing.Point(57, 298);
+            this.txtYazar.Name = "txtYazar";
+            this.txtYazar.Size = new System.Drawing.Size(164, 27);
+            this.txtYazar.TabIndex = 255;
             // 
             // label10
             // 
@@ -466,17 +466,16 @@ namespace uu_library_app
             this.panel8.Size = new System.Drawing.Size(203, 1);
             this.panel8.TabIndex = 252;
             // 
-            // textBox6
+            // txtIsbn
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(57, 219);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(164, 27);
-            this.textBox6.TabIndex = 251;
+            this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIsbn.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtIsbn.ForeColor = System.Drawing.Color.White;
+            this.txtIsbn.Location = new System.Drawing.Point(57, 219);
+            this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.Size = new System.Drawing.Size(164, 27);
+            this.txtIsbn.TabIndex = 251;
             // 
             // label6
             // 
@@ -490,17 +489,16 @@ namespace uu_library_app
             this.label6.TabIndex = 250;
             this.label6.Text = "ISBN :";
             // 
-            // textBox1
+            // txtYayinevi
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(56, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 249;
+            this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinevi.ForeColor = System.Drawing.Color.White;
+            this.txtYayinevi.Location = new System.Drawing.Point(56, 137);
+            this.txtYayinevi.Name = "txtYayinevi";
+            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinevi.TabIndex = 249;
             // 
             // panel28
             // 
@@ -590,17 +588,16 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(260, 1);
             this.panel3.TabIndex = 239;
             // 
-            // txtAd
+            // txtKitapAd
             // 
-            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(56, 60);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.ReadOnly = true;
-            this.txtAd.Size = new System.Drawing.Size(164, 27);
-            this.txtAd.TabIndex = 240;
+            this.txtKitapAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKitapAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKitapAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKitapAd.ForeColor = System.Drawing.Color.White;
+            this.txtKitapAd.Location = new System.Drawing.Point(56, 60);
+            this.txtKitapAd.Name = "txtKitapAd";
+            this.txtKitapAd.Size = new System.Drawing.Size(164, 27);
+            this.txtKitapAd.TabIndex = 240;
             // 
             // lblAd
             // 
@@ -614,12 +611,41 @@ namespace uu_library_app
             this.lblAd.TabIndex = 239;
             this.lblAd.Text = "Kitap Adı :";
             // 
+            // txtKitapId
+            // 
+            this.txtKitapId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKitapId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKitapId.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKitapId.ForeColor = System.Drawing.Color.White;
+            this.txtKitapId.Location = new System.Drawing.Point(146, 8);
+            this.txtKitapId.Name = "txtKitapId";
+            this.txtKitapId.ReadOnly = true;
+            this.txtKitapId.Size = new System.Drawing.Size(64, 27);
+            this.txtKitapId.TabIndex = 270;
+            this.txtKitapId.Visible = false;
+            this.txtKitapId.TextChanged += new System.EventHandler(this.txtKitapId_TextChanged);
+            // 
+            // txtOgrenciId
+            // 
+            this.txtOgrenciId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOgrenciId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOgrenciId.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOgrenciId.ForeColor = System.Drawing.Color.White;
+            this.txtOgrenciId.Location = new System.Drawing.Point(232, 9);
+            this.txtOgrenciId.Name = "txtOgrenciId";
+            this.txtOgrenciId.ReadOnly = true;
+            this.txtOgrenciId.Size = new System.Drawing.Size(64, 27);
+            this.txtOgrenciId.TabIndex = 271;
+            this.txtOgrenciId.Visible = false;
+            // 
             // Borrowing_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.txtOgrenciId);
+            this.Controls.Add(this.txtKitapId);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -667,9 +693,9 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picboxAd;
         private System.Windows.Forms.Panel pnlAd;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtKitapAd;
         private System.Windows.Forms.Label lblAd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtYayinevi;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel16;
@@ -678,12 +704,12 @@ namespace uu_library_app
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIsbn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtYazar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtOkulNo;
@@ -694,10 +720,12 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOgrenciAdSoyad;
+        private System.Windows.Forms.TextBox txtAdSoyad;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.TextBox txtKitapId;
+        private System.Windows.Forms.TextBox txtOgrenciId;
     }
 }

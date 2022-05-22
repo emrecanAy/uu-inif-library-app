@@ -65,7 +65,7 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblEmanetVerilenKitap = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -486,7 +486,7 @@ namespace uu_library_app
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label22);
-            this.panel9.Controls.Add(this.label23);
+            this.panel9.Controls.Add(this.lblEmanetVerilenKitap);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Location = new System.Drawing.Point(17, 422);
             this.panel9.Name = "panel9";
@@ -514,16 +514,16 @@ namespace uu_library_app
             this.label22.TabIndex = 2;
             this.label22.Text = "Details of Last 13 Days";
             // 
-            // label23
+            // lblEmanetVerilenKitap
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label23.Location = new System.Drawing.Point(83, 52);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 39);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "0";
+            this.lblEmanetVerilenKitap.AutoSize = true;
+            this.lblEmanetVerilenKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmanetVerilenKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblEmanetVerilenKitap.Location = new System.Drawing.Point(83, 52);
+            this.lblEmanetVerilenKitap.Name = "lblEmanetVerilenKitap";
+            this.lblEmanetVerilenKitap.Size = new System.Drawing.Size(37, 39);
+            this.lblEmanetVerilenKitap.TabIndex = 1;
+            this.lblEmanetVerilenKitap.Text = "0";
             // 
             // label24
             // 
@@ -901,7 +901,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblEmanetVerilenKitap;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox7;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 
-namespace uu_library_app.DataAccess.Concrete.EntityFramework
+namespace uu_library_app.DataAccess.Concrete
 {
 
     public class DepositBookDal : IDepositBookDal
@@ -18,15 +19,13 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
         public void Add(DepositBook depositBook)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO DepositBook (id,studentId,bookId,depositDate,createdAt,deleted) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO DepositBook (id,depositDate,studentId,bookId) VALUES (@p1, @p2, @p3, @p4)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", depositBook.Id);
-                commandToAdd.Parameters.AddWithValue("@p2", depositBook.StudentId);
-                commandToAdd.Parameters.AddWithValue("@p3", depositBook.BookId);
-                commandToAdd.Parameters.AddWithValue("@p4", depositBook.DepositDate);
-                commandToAdd.Parameters.AddWithValue("@p5", depositBook.CreatedAt);
-                commandToAdd.Parameters.AddWithValue("@p6", depositBook.Deleted);
+                commandToAdd.Parameters.AddWithValue("@p2", depositBook.DepositDate);
+                commandToAdd.Parameters.AddWithValue("@p3", depositBook.StudentId);
+                commandToAdd.Parameters.AddWithValue("@p4", depositBook.BookId);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -57,7 +56,9 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
 
             conn.Close();
         }
+        
         List<DepositBook> depositBooks = new List<DepositBook>();
+        
         public List<DepositBook> getAll()
         {
             conn.Open();
@@ -85,6 +86,8 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
                 throw;
             }
         }
+
+        BindingList<DepositBook> deposits = new BindingList<DepositBook>();
         public List<DepositBook> findAllByStudentId(string studentId)
         {
             conn.Open();
@@ -100,8 +103,6 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
                     depositBook.DepositDate = Convert.ToDateTime(reader[1]);
                     depositBook.StudentId = reader[2].ToString();
                     depositBook.BookId = reader[3].ToString();
-
-
                     depositBooks.Add(depositBook);
                 }
                 conn.Close();
@@ -138,7 +139,25 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
 
 
         }
-        
+
+        public void depositBook(string id)
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE DepositBook SET status=1 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+
+            conn.Close();
+        }
     }
 }
 

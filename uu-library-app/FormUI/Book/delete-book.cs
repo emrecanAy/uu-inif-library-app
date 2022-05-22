@@ -30,12 +30,12 @@ namespace uu_library_app
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[2].HeaderText = "Yazar";
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].HeaderText = "Publisher";
-            dataGridView1.Columns[5].Visible = false;
-            dataGridView1.Columns[6].HeaderText = "İsim";
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[3].HeaderText = "Yazar";
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[5].HeaderText = "Yayınevi";
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "İsim";
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             dataGridView1.Columns[9].Visible = false;
@@ -81,18 +81,18 @@ namespace uu_library_app
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
-            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

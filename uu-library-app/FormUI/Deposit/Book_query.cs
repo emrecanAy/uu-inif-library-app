@@ -16,5 +16,10 @@ namespace uu_library_app.FormUI.Deposit
         {
             InitializeComponent();
         }
+
+        private void Book_query_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

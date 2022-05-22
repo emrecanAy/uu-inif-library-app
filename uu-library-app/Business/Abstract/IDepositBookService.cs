@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace uu_library_app.Business.Abstract
         void Add(DepositBook depositBook);
         void Update(DepositBook depositBook);
         void Delete(string id);
+        void depositBook(string id);
         List<DepositBook> findAllByStudentId(string studentId);
 
     }

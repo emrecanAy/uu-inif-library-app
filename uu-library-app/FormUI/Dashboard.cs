@@ -27,6 +27,7 @@ namespace uu_library_app
         AuthorManager authorManager = new AuthorManager(new AuthorDal());
         CategoryManager categoryManager = new CategoryManager(new CategoryDal());
         BookManager bookManager = new BookManager(new BookDal());
+        DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
@@ -35,15 +36,11 @@ namespace uu_library_app
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            int studentsCount = studentManager.getAll().Count();
-            int authorsCount = authorManager.getAll().Count();
-            int categoriesCount = categoryManager.getAll().Count();
-            int booksCount = bookManager.getAll().Count();
-
-            lblToplamUye.Text = studentsCount.ToString();
-            lblToplamYazar.Text = authorsCount.ToString();
-            lblToplamKategori.Text = categoriesCount.ToString();
-            lblToplamKitap.Text = booksCount.ToString();
+            lblToplamUye.Text = studentManager.getAll().Count().ToString();
+            lblToplamYazar.Text = authorManager.getAll().Count().ToString();
+            lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
+            lblToplamKitap.Text = bookManager.getAll().Count().ToString();
+            lblEmanetVerilenKitap.Text = depositBookManager.getAll().Count().ToString();
         }
     }
 }

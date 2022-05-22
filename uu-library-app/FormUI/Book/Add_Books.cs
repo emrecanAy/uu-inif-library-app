@@ -31,12 +31,12 @@ namespace uu_library_app
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[2].HeaderText = "Yazar";
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].HeaderText = "Publisher";
-            dataGridView1.Columns[5].Visible = false;
-            dataGridView1.Columns[6].HeaderText = "İsim";
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[3].HeaderText = "Yazar";
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[5].HeaderText = "Yayınevi";
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "İsim";
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             dataGridView1.Columns[9].Visible = false;

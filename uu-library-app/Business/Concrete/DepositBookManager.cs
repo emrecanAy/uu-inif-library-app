@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,6 @@ namespace uu_library_app.Business.Concrete
         {
             this._depositBook = depositBook;
         }
-
-
-
         public void Add(DepositBook depositBook)
         {
             if (depositBook.DepositDate != null || depositBook.StudentId != null || depositBook.BookId != null)
@@ -28,7 +26,19 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(string id)
         {
-            _depositBook.Delete(id);
+            if(id != "")
+            {
+                _depositBook.Delete(id);
+            }
+            
+        }
+
+        public void depositBook(string id)
+        {
+            if (id != "")
+            {
+                _depositBook.depositBook(id);
+            }
         }
 
         public List<DepositBook> findAllByStudentId(string studentId)
