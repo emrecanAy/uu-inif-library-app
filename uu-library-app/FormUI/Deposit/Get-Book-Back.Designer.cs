@@ -540,6 +540,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Get_Book_Back";
             this.Text = "Get_Book_Back";
+            this.Load += new System.EventHandler(this.Get_Book_Back_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

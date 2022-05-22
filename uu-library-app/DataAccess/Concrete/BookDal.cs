@@ -17,7 +17,7 @@ namespace uu_library_app.DataAccess.Concrete
         {
             conn.Open();
 
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, name, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", book.Id);
@@ -115,13 +115,13 @@ namespace uu_library_app.DataAccess.Concrete
                     book.AuthorId = reader[2].ToString();
                     book.CategoryId = reader[3].ToString();
                     book.PublisherId = reader[4].ToString();
-                    book.PageCount = Convert.ToInt32(reader[5]);
-                    book.IsbnNumber = reader[6].ToString();
-                    book.PublishDate = Convert.ToDateTime(reader[7]);
-                    book.PublishCount = Convert.ToInt32(reader[8]);
-                    book.StockCount = Convert.ToInt32(reader[9]);
-                    book.LocationId = reader[10].ToString();
-                    book.BookName = reader[11].ToString();
+                    book.PageCount = Convert.ToInt32(reader[7]);
+                    book.IsbnNumber = reader[8].ToString();
+                    book.PublishDate = Convert.ToDateTime(reader[9]);//
+                    book.PublishCount = Convert.ToInt32(reader[10]);
+                    book.StockCount = Convert.ToInt32(reader[11]);
+                    book.LocationId = reader[5].ToString();
+                    book.BookName = reader[6].ToString();
                     book.Status = Convert.ToBoolean(reader[12]);
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();

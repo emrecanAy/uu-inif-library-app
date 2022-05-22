@@ -39,9 +39,23 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Close();
         }
 
-        public void Delete(DepositBook depositBook)
+        public void Delete(string id)
         {
-            throw new NotImplementedException();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE DepositBook SET deleted=1 WHERE id=@p1 ", conn);
+                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+
+            conn.Close();
         }
         List<DepositBook> depositBooks = new List<DepositBook>();
         public List<DepositBook> getAll()
@@ -49,7 +63,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
@@ -71,8 +85,36 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
                 throw;
             }
         }
+        public List<DepositBook> findAllByStudentId(string studentId)
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", studentId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    DepositBook depositBook = new DepositBook();
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
 
-        
+
+                    depositBooks.Add(depositBook);
+                }
+                conn.Close();
+                return depositBooks;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+
 
         public void Update(DepositBook depositBook)
         {

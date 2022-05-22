@@ -39,7 +39,7 @@ namespace uu_library_app
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblToplamKitap = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -200,7 +200,7 @@ namespace uu_library_app
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblToplamKitap);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(17, 82);
             this.panel3.Name = "panel3";
@@ -228,16 +228,16 @@ namespace uu_library_app
             this.label6.TabIndex = 2;
             this.label6.Text = "Details of Last 13 Days";
             // 
-            // label5
+            // lblToplamKitap
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(83, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 39);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "0";
+            this.lblToplamKitap.AutoSize = true;
+            this.lblToplamKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamKitap.Location = new System.Drawing.Point(83, 52);
+            this.lblToplamKitap.Name = "lblToplamKitap";
+            this.lblToplamKitap.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamKitap.TabIndex = 1;
+            this.lblToplamKitap.Text = "0";
             // 
             // label4
             // 
@@ -875,7 +875,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblToplamKitap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox12;
