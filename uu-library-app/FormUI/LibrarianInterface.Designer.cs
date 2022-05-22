@@ -45,11 +45,13 @@ namespace uu_library_app.FormUI
             this.btnLending = new System.Windows.Forms.Button();
             this.btnDeposit = new System.Windows.Forms.Button();
             this.panelMembersSubMenu = new System.Windows.Forms.Panel();
+            this.btnUyeListele = new System.Windows.Forms.Button();
             this.btnEditMember = new System.Windows.Forms.Button();
             this.btnDeleteMember = new System.Windows.Forms.Button();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.panelBookSubMenu = new System.Windows.Forms.Panel();
+            this.btnListele = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
@@ -62,8 +64,6 @@ namespace uu_library_app.FormUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
-            this.btnListele = new System.Windows.Forms.Button();
-            this.btnUyeListele = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlDigerSubMenu.SuspendLayout();
             this.pnlDepositSubMenu.SuspendLayout();
@@ -331,6 +331,25 @@ namespace uu_library_app.FormUI
             this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 110);
             this.panelMembersSubMenu.TabIndex = 11;
             // 
+            // btnUyeListele
+            // 
+            this.btnUyeListele.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUyeListele.FlatAppearance.BorderSize = 0;
+            this.btnUyeListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUyeListele.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnUyeListele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnUyeListele.Image = ((System.Drawing.Image)(resources.GetObject("btnUyeListele.Image")));
+            this.btnUyeListele.Location = new System.Drawing.Point(0, 84);
+            this.btnUyeListele.Name = "btnUyeListele";
+            this.btnUyeListele.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUyeListele.Size = new System.Drawing.Size(186, 28);
+            this.btnUyeListele.TabIndex = 3;
+            this.btnUyeListele.Text = " Öğrenci Listele";
+            this.btnUyeListele.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUyeListele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUyeListele.UseVisualStyleBackColor = true;
+            this.btnUyeListele.Click += new System.EventHandler(this.btnUyeListele_Click);
+            // 
             // btnEditMember
             // 
             this.btnEditMember.Dock = System.Windows.Forms.DockStyle.Top;
@@ -418,6 +437,24 @@ namespace uu_library_app.FormUI
             this.panelBookSubMenu.Name = "panelBookSubMenu";
             this.panelBookSubMenu.Size = new System.Drawing.Size(186, 110);
             this.panelBookSubMenu.TabIndex = 9;
+            // 
+            // btnListele
+            // 
+            this.btnListele.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListele.FlatAppearance.BorderSize = 0;
+            this.btnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListele.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListele.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.Image")));
+            this.btnListele.Location = new System.Drawing.Point(0, 84);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnListele.Size = new System.Drawing.Size(186, 28);
+            this.btnListele.TabIndex = 3;
+            this.btnListele.Text = "Kitap Listele";
+            this.btnListele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnEditBook
             // 
@@ -586,41 +623,6 @@ namespace uu_library_app.FormUI
             this.panelChildFormNew.Size = new System.Drawing.Size(1015, 750);
             this.panelChildFormNew.TabIndex = 9;
             this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
-            // 
-            // btnListele
-            // 
-            this.btnListele.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListele.FlatAppearance.BorderSize = 0;
-            this.btnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListele.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnListele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnListele.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.Image")));
-            this.btnListele.Location = new System.Drawing.Point(0, 84);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnListele.Size = new System.Drawing.Size(186, 28);
-            this.btnListele.TabIndex = 3;
-            this.btnListele.Text = "Kitap Listele";
-            this.btnListele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListele.UseVisualStyleBackColor = true;
-            // 
-            // btnUyeListele
-            // 
-            this.btnUyeListele.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUyeListele.FlatAppearance.BorderSize = 0;
-            this.btnUyeListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUyeListele.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnUyeListele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnUyeListele.Image = ((System.Drawing.Image)(resources.GetObject("btnUyeListele.Image")));
-            this.btnUyeListele.Location = new System.Drawing.Point(0, 84);
-            this.btnUyeListele.Name = "btnUyeListele";
-            this.btnUyeListele.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnUyeListele.Size = new System.Drawing.Size(186, 28);
-            this.btnUyeListele.TabIndex = 3;
-            this.btnUyeListele.Text = " Öğrenci Listele";
-            this.btnUyeListele.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUyeListele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUyeListele.UseVisualStyleBackColor = true;
             // 
             // LibrarianInterface
             // 

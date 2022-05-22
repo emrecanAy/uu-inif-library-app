@@ -114,6 +114,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "student_listing";
             this.Text = "student_listing";
+            this.Load += new System.EventHandler(this.student_listing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

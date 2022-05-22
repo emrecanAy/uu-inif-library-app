@@ -67,12 +67,7 @@ namespace uu_library_app
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            //DataTable dt = new DataTable();
-            //DataView dataView = new DataView();
-            //dataView = dt.DefaultView;
-            //dataView.RowFilter = "number like '"+txtAra.Text+"%'";
-            //dataGridView1.DataSource = dataView;
-            //dataGridView1.Visible = true;
+            
         }
 
         private void txtAra_MouseEnter(object sender, EventArgs e)
@@ -113,13 +108,6 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
-            /*
-            datagridde seçilen kitabın count'una bakılacak.
-            eğer count = 0 ise elimizde bulunmuyor diye uyarı çıkarsın.
-            eğer count mesela 10 ise karşı kişiye verilsin. ve count -1 azaltılsın.
-
-             */
 
             if(txtKitapId.Text == "" || txtKitapAd.Text == "")
             {

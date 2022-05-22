@@ -33,31 +33,32 @@ namespace uu_library_app.FormUI.Deposit
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvAlinanKitaplar = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOgrenci = new System.Windows.Forms.DataGridView();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvTeslimEdilmeyenKitaplar = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvTeslimEdilenKitaplar = new System.Windows.Forms.DataGridView();
+            this.txtOgrenciId = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgrenci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilmeyenKitaplar)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -65,7 +66,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.dataGridView3);
+            this.panel5.Controls.Add(this.dgvAlinanKitaplar);
             this.panel5.Location = new System.Drawing.Point(12, 102);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(293, 636);
@@ -90,14 +91,14 @@ namespace uu_library_app.FormUI.Deposit
             this.panel6.Size = new System.Drawing.Size(700, 1);
             this.panel6.TabIndex = 234;
             // 
-            // dataGridView3
+            // dgvAlinanKitaplar
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 28);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(692, 603);
-            this.dataGridView3.TabIndex = 231;
+            this.dgvAlinanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlinanKitaplar.Location = new System.Drawing.Point(3, 28);
+            this.dgvAlinanKitaplar.Name = "dgvAlinanKitaplar";
+            this.dgvAlinanKitaplar.Size = new System.Drawing.Size(289, 603);
+            this.dgvAlinanKitaplar.TabIndex = 231;
             // 
             // panel4
             // 
@@ -105,7 +106,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.dgvOgrenci);
             this.panel4.Location = new System.Drawing.Point(511, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(492, 84);
@@ -142,14 +143,16 @@ namespace uu_library_app.FormUI.Deposit
             this.panel1.Size = new System.Drawing.Size(492, 1);
             this.panel1.TabIndex = 234;
             // 
-            // dataGridView1
+            // dgvOgrenci
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(484, 31);
-            this.dataGridView1.TabIndex = 231;
+            this.dgvOgrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOgrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOgrenci.Location = new System.Drawing.Point(3, 48);
+            this.dgvOgrenci.Name = "dgvOgrenci";
+            this.dgvOgrenci.RowTemplate.Height = 30;
+            this.dgvOgrenci.Size = new System.Drawing.Size(484, 31);
+            this.dgvOgrenci.TabIndex = 231;
+            this.dgvOgrenci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOgrenci_CellClick);
             // 
             // picboxBack
             // 
@@ -178,7 +181,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dgvTeslimEdilmeyenKitaplar);
             this.panel2.Location = new System.Drawing.Point(344, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(293, 636);
@@ -203,21 +206,21 @@ namespace uu_library_app.FormUI.Deposit
             this.panel3.Size = new System.Drawing.Size(700, 1);
             this.panel3.TabIndex = 234;
             // 
-            // dataGridView2
+            // dgvTeslimEdilmeyenKitaplar
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 28);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(692, 603);
-            this.dataGridView2.TabIndex = 231;
+            this.dgvTeslimEdilmeyenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeslimEdilmeyenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeslimEdilmeyenKitaplar.Location = new System.Drawing.Point(3, 28);
+            this.dgvTeslimEdilmeyenKitaplar.Name = "dgvTeslimEdilmeyenKitaplar";
+            this.dgvTeslimEdilmeyenKitaplar.Size = new System.Drawing.Size(285, 603);
+            this.dgvTeslimEdilmeyenKitaplar.TabIndex = 231;
             // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.dataGridView4);
+            this.panel7.Controls.Add(this.dgvTeslimEdilenKitaplar);
             this.panel7.Location = new System.Drawing.Point(682, 102);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(293, 636);
@@ -242,14 +245,27 @@ namespace uu_library_app.FormUI.Deposit
             this.panel8.Size = new System.Drawing.Size(700, 1);
             this.panel8.TabIndex = 234;
             // 
-            // dataGridView4
+            // dgvTeslimEdilenKitaplar
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 28);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(692, 603);
-            this.dataGridView4.TabIndex = 231;
+            this.dgvTeslimEdilenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeslimEdilenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeslimEdilenKitaplar.Location = new System.Drawing.Point(3, 28);
+            this.dgvTeslimEdilenKitaplar.Name = "dgvTeslimEdilenKitaplar";
+            this.dgvTeslimEdilenKitaplar.Size = new System.Drawing.Size(289, 603);
+            this.dgvTeslimEdilenKitaplar.TabIndex = 231;
+            // 
+            // txtOgrenciId
+            // 
+            this.txtOgrenciId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOgrenciId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOgrenciId.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOgrenciId.ForeColor = System.Drawing.Color.White;
+            this.txtOgrenciId.Location = new System.Drawing.Point(414, 12);
+            this.txtOgrenciId.Name = "txtOgrenciId";
+            this.txtOgrenciId.ReadOnly = true;
+            this.txtOgrenciId.Size = new System.Drawing.Size(50, 27);
+            this.txtOgrenciId.TabIndex = 271;
+            this.txtOgrenciId.Visible = false;
             // 
             // Book_query
             // 
@@ -257,6 +273,7 @@ namespace uu_library_app.FormUI.Deposit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.txtOgrenciId);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
@@ -269,17 +286,17 @@ namespace uu_library_app.FormUI.Deposit
             this.Load += new System.EventHandler(this.Book_query_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgrenci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilmeyenKitaplar)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,21 +307,22 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvAlinanKitaplar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOgrenci;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvTeslimEdilmeyenKitaplar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvTeslimEdilenKitaplar;
+        private System.Windows.Forms.TextBox txtOgrenciId;
     }
 }

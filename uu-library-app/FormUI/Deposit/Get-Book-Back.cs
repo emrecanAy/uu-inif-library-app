@@ -51,22 +51,7 @@ namespace uu_library_app
 
         private void Get_Book_Back_Load(object sender, EventArgs e)
         {
-            /*
-            Öğrenci listesi datagridine tüm öğrenciler listelenecek.
-            Öğrenci seçildiği anda o öğrencinin id'si tutulacak.
-            string studentId = seçilenRowData;
-
-            Bu öğrenci id'siyle DepositBook içerisinde bir find işlemi yapılacak.
-            O zaman DepositBookDal'da findAllByStudentId metodu olacak.
-            O metod sadece seçilen öğrenciye zimmetlenmiş kitapları getirecek.
-
-            Ve gelen o öğrenciye zimmetlenmiş kitap datası Daha Önce Alınan Kitaplar datagridinde listelenecek.
-
-             */
-
             DataListerHelper.listStudentDataToTable(dgvOgrenci, conn);
-
-
         }
 
         private void dgvOgrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,7 +74,7 @@ namespace uu_library_app
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            dgvDahaOnceAlinanKitaplar.DataSource = depositBookManager.findAllByStudentId(txtOgrenciId.Text);
+            
         }
 
         private void dgvOgrenci_SelectionChanged(object sender, EventArgs e)
@@ -119,6 +104,21 @@ namespace uu_library_app
             datagridde seçilen kitabın count'una okunacak.
             kitap teslim alındığında o kitabın count'u +1 artırılacak.
             Yeni sorgu olanağı: count'u 0 olan kitapları getir. count'u 0 olmayan kitaplar    
+             */
+
+            /*
+            
+            -> DepositBook tablosunda teslimAlmaTarihi ve teslimEdilmesiGerekenTarih de tutulmali.
+
+            Kitap ödünç verilirken ödünç ver butonuna basılıp kayıt yapıldığında teslimEdilmesiGerekenTarih
+            default olarak DateTime.Now + 15 olarak kaydedilecek.(15 gün max teslim süresi)
+
+            Kitap teslim alındığında   
+            teslimAlmaTarihi DateTime.Now olarak güncellenecek.
+            Sonra kıyas yapılacak.
+            int kacGunGecikti = teslimAlmaTarihi - teslimEdilmesiGerekenTarih;
+            int cezaPuani = kacGunGecikti * -5; gibi gibi vs vs.
+
              */
 
 

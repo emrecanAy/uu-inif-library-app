@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uu_library_app.Core.Helpers;
 
 namespace uu_library_app
 {
@@ -17,6 +19,11 @@ namespace uu_library_app
             InitializeComponent();
         }
 
-        
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+
+        private void book_listing_Load(object sender, EventArgs e)
+        {
+            DataListerHelper.listBookDataToTable(dataGridView1, conn);
+        }
     }
 }

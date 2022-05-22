@@ -33,9 +33,9 @@ namespace uu_library_app
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,13 +74,14 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(991, 627);
             this.panel1.TabIndex = 89;
             // 
-            // panel2
+            // dataGridView1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel2.Location = new System.Drawing.Point(-1, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 1);
-            this.panel2.TabIndex = 0;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(983, 583);
+            this.dataGridView1.TabIndex = 83;
             // 
             // label3
             // 
@@ -93,14 +94,13 @@ namespace uu_library_app
             this.label3.TabIndex = 82;
             this.label3.Text = "Kitap Listeleme İşlemleri :";
             // 
-            // dataGridView1
+            // panel2
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(983, 583);
-            this.dataGridView1.TabIndex = 83;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(995, 1);
+            this.panel2.TabIndex = 0;
             // 
             // book_listing
             // 
@@ -114,6 +114,7 @@ namespace uu_library_app
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "book_listing";
             this.Text = "book_listing";
+            this.Load += new System.EventHandler(this.book_listing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
