@@ -186,6 +186,25 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        public static void listInnerJoinAllStudentsNotConcatDataToTable(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Student.eMail, Department.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[1].HeaderText = "Ad";
+            dataGrid.Columns[2].HeaderText = "Soyad";
+            dataGrid.Columns[3].HeaderText = "Okul No";
+            dataGrid.Columns[4].HeaderText = "Eposta";
+            dataGrid.Columns[5].HeaderText = "Bölüm";
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
         public static void listInnerJoinSomeBookDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();

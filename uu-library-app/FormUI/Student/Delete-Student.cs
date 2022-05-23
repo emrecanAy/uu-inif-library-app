@@ -46,7 +46,8 @@ namespace uu_library_app
         private void Delete_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            listDataToTable();
+            DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             conn.Close();
         }
 
@@ -56,8 +57,8 @@ namespace uu_library_app
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

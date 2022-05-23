@@ -26,25 +26,6 @@ namespace uu_library_app
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         StudentManager manager = new StudentManager(new StudentDal());
 
-        private void listDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Student WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Ad";
-            dataGridView1.Columns[2].HeaderText = "Soyad";
-            dataGridView1.Columns[3].HeaderText = "Okul No";
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].HeaderText = "Eposta";
-            dataGridView1.Columns[6].HeaderText = "Bölüm";
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-        }
-
         private void clearAllFields()
         {
             txtId.Clear();
@@ -57,7 +38,8 @@ namespace uu_library_app
         private void Edit_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            listDataToTable();
+            DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
             DataSet ds = new DataSet();
@@ -84,7 +66,7 @@ namespace uu_library_app
                 manager.Update(studentToUpdate);
                 MessageBox.Show("Başarıyla güncellendi!");
                 clearAllFields();
-                listDataToTable();   
+                DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             }
             catch (Exception)
             {
@@ -104,8 +86,8 @@ namespace uu_library_app
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
     }
 }

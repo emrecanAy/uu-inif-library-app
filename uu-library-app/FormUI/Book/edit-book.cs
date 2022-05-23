@@ -44,7 +44,7 @@ namespace uu_library_app
 
         private void edit_book_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             #region crud1
             conn.Open();
             DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
