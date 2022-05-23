@@ -103,7 +103,7 @@ namespace uu_library_app.FormUI
             conn.Open();
             listDataToTable();
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-            DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
+            DataListerHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
             DataSet ds = new DataSet();
@@ -124,6 +124,12 @@ namespace uu_library_app.FormUI
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
         }
     }
 }
