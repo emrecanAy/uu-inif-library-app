@@ -17,6 +17,21 @@ namespace uu_library_app.Business.Concrete
             _admin = admin;
         }
 
+        public AdminManager()
+        {
+        }
+
+        public bool checkIfEmailEqualsToPassword(string eMail, string password)
+        {
+            Admin admin = _admin.getByEmail(eMail);
+                if (admin.Password != password)
+            {
+                return false;
+            }
+            return true;
+            
+        }
+
         public void Add(Admin admin)
         {
             if (admin.FirstName != null || admin.LastName != null || admin.EMail != null || admin.Password != null || admin.Id != null)
@@ -36,6 +51,17 @@ namespace uu_library_app.Business.Concrete
         public List<Admin> getAll()
         {
             return _admin.getAll();
+        }
+
+        public Admin getbyEmail(string eMail)
+        {
+            
+            return _admin.getByEmail(eMail);
+        }
+
+        internal string checkIfEmailEqualsToPassword(string text)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Admin admin)
