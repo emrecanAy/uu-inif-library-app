@@ -35,7 +35,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgvAlinanKitaplar = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvOgrenci = new System.Windows.Forms.DataGridView();
@@ -103,7 +103,7 @@ namespace uu_library_app.FormUI.Deposit
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtSearch);
+            this.panel4.Controls.Add(this.txtAra);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.dgvOgrenci);
@@ -112,17 +112,17 @@ namespace uu_library_app.FormUI.Deposit
             this.panel4.Size = new System.Drawing.Size(492, 84);
             this.panel4.TabIndex = 240;
             // 
-            // txtSearch
+            // txtAra
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(116, 9);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.ReadOnly = true;
-            this.txtSearch.Size = new System.Drawing.Size(371, 27);
-            this.txtSearch.TabIndex = 270;
+            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(116, 9);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(371, 27);
+            this.txtAra.TabIndex = 270;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
             // label3
             // 
@@ -149,6 +149,7 @@ namespace uu_library_app.FormUI.Deposit
             this.dgvOgrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOgrenci.Location = new System.Drawing.Point(3, 48);
             this.dgvOgrenci.Name = "dgvOgrenci";
+            this.dgvOgrenci.ReadOnly = true;
             this.dgvOgrenci.RowTemplate.Height = 30;
             this.dgvOgrenci.Size = new System.Drawing.Size(484, 31);
             this.dgvOgrenci.TabIndex = 231;
@@ -309,7 +310,7 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dgvAlinanKitaplar;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvOgrenci;

@@ -153,5 +153,17 @@ namespace uu_library_app
             }
             
         }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+        }
+
+        private void txtKitapAra_TextChanged(object sender, EventArgs e)
+        {
+            (dgvDahaOnceAlinanKitaplar.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtKitapAra.Text);
+        }
     }
 }

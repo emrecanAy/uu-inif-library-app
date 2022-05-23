@@ -30,9 +30,15 @@ namespace uu_library_app.FormUI.Deposit
         private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtOgrenciId.Text = dgvOgrenci.Rows[e.RowIndex].Cells[0].Value.ToString();
-            DataListerHelper.listAllTakenBooksDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listUndepositBooksDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listDepositBooksDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listAllTakenBooksConcatAuthorNameDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listUndepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listDepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
         }
     }
 }
