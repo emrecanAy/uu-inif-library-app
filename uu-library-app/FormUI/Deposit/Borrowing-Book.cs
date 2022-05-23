@@ -27,37 +27,18 @@ namespace uu_library_app
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
         BookManager bookManager = new BookManager(new BookDal());
-        private void listDepositBookDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("Select * From DepositBook WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[1].HeaderText = "";
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.ColumnHeadersVisible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-
-        }
+     
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
 
             DataListerHelper.listBorrowingBookStudentDataToTable(dataGridView1, conn);
             DataListerHelper.listInnerJoinBorrowingBookDataToTable(dataGridView3, conn);
-            txtAra.Text = "Öğrenci numarasını giriniz...";
-            txtAra.ForeColor = Color.Silver;
-
-            
-
+      
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             
-
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -65,17 +46,15 @@ namespace uu_library_app
            
         }
 
+        DataView dataView = new DataView();
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void txtAra_MouseEnter(object sender, EventArgs e)
         {
-            if (txtAra.Text == "Öğrenci numarasını giriniz...")
-            {
-                txtAra.Text = "";
-            }
+            
 
         }
 

@@ -24,6 +24,17 @@ namespace uu_library_app
         private void book_listing_Load(object sender, EventArgs e)
         {
             DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
+           
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            DataView dataView = new DataView();
+            dataView = dt.DefaultView;
+            dataView.RowFilter = "bookName like '" + txtSearch.Text + "%'";
+            dataGridView1.DataSource = dataView;
+            dataGridView1.Visible = true;
         }
     }
 }
