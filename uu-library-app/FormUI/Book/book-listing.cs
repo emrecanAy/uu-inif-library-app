@@ -24,17 +24,28 @@ namespace uu_library_app
         private void book_listing_Load(object sender, EventArgs e)
         {
             DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
-           
+            Dictionary<string, string> comboSource = new Dictionary<string, string>();
+            comboSource.Add("bookName", "Kitap");
+            comboSource.Add("authorFullName", "Yazar");
+            comboSource.Add("categoryName", "Kategori");
+            comboSource.Add("language", "Dil");
+            comboSource.Add("publisherName", "Yayınevi");
+            comboSource.Add("isbnNumber", "ISBN");
+            comboSource.Add("shelf", "Konum");
+            comboSource.Add("interpreterName", "Çevirmen");
+            cmbAranacakAlan.DataSource = new BindingSource(comboSource, null);
+            cmbAranacakAlan.DisplayMember = "Value";
+            cmbAranacakAlan.ValueMember = "Key";
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            DataView dataView = new DataView();
-            dataView = dt.DefaultView;
-            dataView.RowFilter = "bookName like '" + txtSearch.Text + "%'";
-            dataGridView1.DataSource = dataView;
-            dataGridView1.Visible = true;
+            string value = cmbAranacakAlan.SelectedValue.ToString();
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format(""+value+ " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", txtAra.Text);
+            //string.Format("+"+value+" LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
+
         }
     }
 }

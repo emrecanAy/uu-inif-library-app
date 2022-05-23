@@ -37,8 +37,9 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmbAranacakAlan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,6 +71,7 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbAranacakAlan);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
@@ -95,9 +97,9 @@ namespace uu_library_app
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(11, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 21);
+            this.label3.Size = new System.Drawing.Size(132, 21);
             this.label3.TabIndex = 82;
-            this.label3.Text = "Kitap Listeleme İşlemleri :";
+            this.label3.Text = "Aranacak Alan:";
             // 
             // panel2
             // 
@@ -110,24 +112,24 @@ namespace uu_library_app
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtSearch);
+            this.panel4.Controls.Add(this.txtAra);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(511, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(492, 37);
             this.panel4.TabIndex = 241;
             // 
-            // txtSearch
+            // txtAra
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(104, 6);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(371, 27);
-            this.txtSearch.TabIndex = 270;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(45, 6);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(430, 27);
+            this.txtAra.TabIndex = 270;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -136,9 +138,21 @@ namespace uu_library_app
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 235;
-            this.label2.Text = "Kitap Ara :";
+            this.label2.Text = "Ara:";
+            // 
+            // cmbAranacakAlan
+            // 
+            this.cmbAranacakAlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbAranacakAlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAranacakAlan.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbAranacakAlan.ForeColor = System.Drawing.Color.White;
+            this.cmbAranacakAlan.FormattingEnabled = true;
+            this.cmbAranacakAlan.Location = new System.Drawing.Point(148, 3);
+            this.cmbAranacakAlan.Name = "cmbAranacakAlan";
+            this.cmbAranacakAlan.Size = new System.Drawing.Size(344, 31);
+            this.cmbAranacakAlan.TabIndex = 241;
             // 
             // book_listing
             // 
@@ -174,7 +188,8 @@ namespace uu_library_app
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbAranacakAlan;
     }
 }
