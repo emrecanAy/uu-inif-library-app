@@ -50,9 +50,8 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,6 +63,8 @@ namespace uu_library_app
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtAra = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -277,44 +278,34 @@ namespace uu_library_app
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtAra);
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(12, 125);
+            this.panel4.Location = new System.Drawing.Point(12, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(695, 562);
+            this.panel4.Size = new System.Drawing.Size(695, 579);
             this.panel4.TabIndex = 60;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(4, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(414, 21);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Üye/Öğrenci Güncelleme ve Düzenleme İşlemleri :";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel5.Location = new System.Drawing.Point(0, 29);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(695, 1);
-            this.panel5.TabIndex = 40;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(687, 525);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel5.Location = new System.Drawing.Point(0, 36);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(695, 1);
+            this.panel5.TabIndex = 40;
             // 
             // pictureBox4
             // 
@@ -376,9 +367,9 @@ namespace uu_library_app
             this.panel10.Controls.Add(this.pnlAd);
             this.panel10.Controls.Add(this.txtAd);
             this.panel10.Controls.Add(this.lblAd);
-            this.panel10.Location = new System.Drawing.Point(715, 125);
+            this.panel10.Location = new System.Drawing.Point(715, 108);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(286, 562);
+            this.panel10.Size = new System.Drawing.Size(286, 579);
             this.panel10.TabIndex = 68;
             // 
             // panel8
@@ -428,7 +419,7 @@ namespace uu_library_app
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel11.Location = new System.Drawing.Point(0, 28);
+            this.panel11.Location = new System.Drawing.Point(0, 36);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(286, 1);
             this.panel11.TabIndex = 69;
@@ -444,6 +435,29 @@ namespace uu_library_app
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(168, 31);
             this.comboBox1.TabIndex = 71;
+            // 
+            // txtAra
+            // 
+            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(111, 6);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(579, 27);
+            this.txtAra.TabIndex = 276;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(8, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 21);
+            this.label8.TabIndex = 275;
+            this.label8.Text = "Öğrenci No:";
             // 
             // Edit_Student
             // 
@@ -497,7 +511,6 @@ namespace uu_library_app
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel6;
@@ -510,5 +523,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -89,5 +89,11 @@ namespace uu_library_app
             txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+        }
     }
 }
