@@ -45,8 +45,8 @@ namespace uu_library_app
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
 
-            DataListerHelper.listStudentDataToTable(dataGridView1, conn);
-            DataListerHelper.listBookDataToTable(dataGridView3, conn);
+            DataListerHelper.listBorrowingBookStudentDataToTable(dataGridView1, conn);
+            DataListerHelper.listInnerJoinBorrowingBookDataToTable(dataGridView3, conn);
             txtAra.Text = "Öğrenci numarasını giriniz...";
             txtAra.ForeColor = Color.Silver;
 
@@ -92,8 +92,8 @@ namespace uu_library_app
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtOgrenciId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAdSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() +" "+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtAdSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
@@ -101,9 +101,9 @@ namespace uu_library_app
         {
             txtKitapId.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtKitapAd.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtIsbn.Text = dataGridView3.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtYayinevi.Text = dataGridView3.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtYazar.Text = dataGridView3.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtIsbn.Text = dataGridView3.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtYayinevi.Text = dataGridView3.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtYazar.Text = dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

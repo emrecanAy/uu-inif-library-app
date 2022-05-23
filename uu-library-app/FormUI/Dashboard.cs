@@ -40,7 +40,9 @@ namespace uu_library_app
             lblToplamYazar.Text = authorManager.getAll().Count().ToString();
             lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
             lblToplamKitap.Text = bookManager.getAll().Count().ToString();
-            lblEmanetVerilenKitap.Text = depositBookManager.getAll().Count().ToString();
+            lblTumEmanetKitaplar.Text = depositBookManager.getAll().Count().ToString();
+            lblEmanetVerilenKitap.Text = depositBookManager.getAllUndeposited().Count().ToString();
+            lblTeslimEdilenKitap.Text = depositBookManager.getAllDeposited().Count().ToString();
         }
     }
 }

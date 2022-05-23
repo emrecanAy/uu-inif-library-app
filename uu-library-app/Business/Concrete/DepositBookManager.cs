@@ -51,6 +51,16 @@ namespace uu_library_app.Business.Concrete
             return _depositBook.getAll();
         }
 
+        public List<DepositBook> getAllDeposited()
+        {
+            return _depositBook.getAllDeposited();
+        }
+
+        public List<DepositBook> getAllUndeposited()
+        {
+            return _depositBook.getAllUndeposited();
+        }
+
         public void Update(DepositBook depositBook)
         {
             _depositBook.Update(depositBook);

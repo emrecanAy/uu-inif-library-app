@@ -24,32 +24,6 @@ namespace uu_library_app
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         BookManager bookManager = new BookManager(new BookDal());
-        private void listDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Book WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
-            dataGridView1.Columns[3].HeaderText = "Yazar";
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[5].HeaderText = "Yayınevi";
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "İsim";
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[9].Visible = false;
-            dataGridView1.Columns[10].Visible = false;
-            dataGridView1.Columns[11].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[14].Visible = false;
-            dataGridView1.Columns[15].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-        }
-
         private void clearAllFields()
         {
             txtId.Clear();
@@ -74,8 +48,7 @@ namespace uu_library_app
             
             #region crud1
             conn.Open();
-            listDataToTable();
-            //listDataToTable();
+            DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
             MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
             MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
             MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
@@ -141,7 +114,7 @@ namespace uu_library_app
             {
                 bookManager.Add(bookToAdd);
                 MessageBox.Show("Başarıyla eklendi!");
-                listDataToTable();
+                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
             }
             catch (Exception)

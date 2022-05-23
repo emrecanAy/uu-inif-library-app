@@ -22,7 +22,7 @@ namespace uu_library_app
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         private void student_listing_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listStudentDataToTable(dataGridView1, conn);
+            DataListerHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
         }
     }
 }

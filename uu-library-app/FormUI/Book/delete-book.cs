@@ -23,32 +23,7 @@ namespace uu_library_app
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         BookManager bookManager = new BookManager(new BookDal());
-        private void listDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Book WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
-            dataGridView1.Columns[3].HeaderText = "Yazar";
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[5].HeaderText = "Yayınevi";
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "İsim";
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[9].Visible = false;
-            dataGridView1.Columns[10].Visible = false;
-            dataGridView1.Columns[11].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[14].Visible = false;
-            dataGridView1.Columns[15].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-        }
-
+       
         private void clearAllFields()
         {
             txtId.Clear();
@@ -73,7 +48,7 @@ namespace uu_library_app
 
             #region
             conn.Open();
-            listDataToTable();
+            DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
             conn.Close();
             #endregion
         }
@@ -82,17 +57,17 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
-            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString(); //ciltNo eklenecek
             txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -106,7 +81,7 @@ namespace uu_library_app
             try
             {
                 bookManager.Delete(txtId.Text);
-                listDataToTable();
+                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi...");
             }

@@ -72,13 +72,65 @@ namespace uu_library_app.DataAccess.Concrete
                     depositBook.Id = reader[0].ToString();
                     depositBook.DepositDate = Convert.ToDateTime(reader[1]);
                     depositBook.StudentId = reader[2].ToString();
-                    depositBook.BookId = reader[3].ToString();
-                    
-                    
+                    depositBook.BookId = reader[3].ToString();   
                     depositBooks.Add(depositBook);
                 }
                 conn.Close();
                 return depositBooks;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        List<DepositBook> undepositedBooks = new List<DepositBook>();
+        public List<DepositBook> getAllUndeposited()
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND status=0", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    DepositBook depositBook = new DepositBook();
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    undepositedBooks.Add(depositBook);
+                }
+                conn.Close();
+                return undepositedBooks;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        List<DepositBook> depositedBooks = new List<DepositBook>();
+        public List<DepositBook> getAllDeposited()
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND status=1", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    DepositBook depositBook = new DepositBook();
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    depositedBooks.Add(depositBook);
+                }
+                conn.Close();
+                return depositedBooks;
             }
             catch (Exception)
             {

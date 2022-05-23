@@ -23,7 +23,7 @@ namespace uu_library_app
 
         private void book_listing_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listBookDataToTable(dataGridView1, conn);
+            DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
         }
     }
 }

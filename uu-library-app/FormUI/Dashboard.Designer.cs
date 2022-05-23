@@ -60,12 +60,12 @@ namespace uu_library_app
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lblEmanetVerilenKitap = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.lblEmanetVerilenKitap = new System.Windows.Forms.Label();
+            this.lblTumEmanetKitaplar = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -75,7 +75,7 @@ namespace uu_library_app
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lblTeslimEdilenKitap = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -431,7 +431,7 @@ namespace uu_library_app
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel11.Controls.Add(this.pictureBox10);
             this.panel11.Controls.Add(this.label28);
-            this.panel11.Controls.Add(this.label29);
+            this.panel11.Controls.Add(this.lblEmanetVerilenKitap);
             this.panel11.Controls.Add(this.label30);
             this.panel11.Location = new System.Drawing.Point(353, 422);
             this.panel11.Name = "panel11";
@@ -459,16 +459,16 @@ namespace uu_library_app
             this.label28.TabIndex = 2;
             this.label28.Text = "Details of Last 13 Days";
             // 
-            // label29
+            // lblEmanetVerilenKitap
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label29.Location = new System.Drawing.Point(83, 52);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(37, 39);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "0";
+            this.lblEmanetVerilenKitap.AutoSize = true;
+            this.lblEmanetVerilenKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmanetVerilenKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblEmanetVerilenKitap.Location = new System.Drawing.Point(83, 52);
+            this.lblEmanetVerilenKitap.Name = "lblEmanetVerilenKitap";
+            this.lblEmanetVerilenKitap.Size = new System.Drawing.Size(37, 39);
+            this.lblEmanetVerilenKitap.TabIndex = 1;
+            this.lblEmanetVerilenKitap.Text = "0";
             // 
             // label30
             // 
@@ -477,16 +477,16 @@ namespace uu_library_app
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(19, 9);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(149, 25);
+            this.label30.Size = new System.Drawing.Size(187, 25);
             this.label30.TabIndex = 0;
-            this.label30.Text = "Borrowed Books";
+            this.label30.Text = "Emanet Verilen Kitap";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label22);
-            this.panel9.Controls.Add(this.lblEmanetVerilenKitap);
+            this.panel9.Controls.Add(this.lblTumEmanetKitaplar);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Location = new System.Drawing.Point(17, 422);
             this.panel9.Name = "panel9";
@@ -514,16 +514,16 @@ namespace uu_library_app
             this.label22.TabIndex = 2;
             this.label22.Text = "Details of Last 13 Days";
             // 
-            // lblEmanetVerilenKitap
+            // lblTumEmanetKitaplar
             // 
-            this.lblEmanetVerilenKitap.AutoSize = true;
-            this.lblEmanetVerilenKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmanetVerilenKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblEmanetVerilenKitap.Location = new System.Drawing.Point(83, 52);
-            this.lblEmanetVerilenKitap.Name = "lblEmanetVerilenKitap";
-            this.lblEmanetVerilenKitap.Size = new System.Drawing.Size(37, 39);
-            this.lblEmanetVerilenKitap.TabIndex = 1;
-            this.lblEmanetVerilenKitap.Text = "0";
+            this.lblTumEmanetKitaplar.AutoSize = true;
+            this.lblTumEmanetKitaplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTumEmanetKitaplar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblTumEmanetKitaplar.Location = new System.Drawing.Point(83, 52);
+            this.lblTumEmanetKitaplar.Name = "lblTumEmanetKitaplar";
+            this.lblTumEmanetKitaplar.Size = new System.Drawing.Size(37, 39);
+            this.lblTumEmanetKitaplar.TabIndex = 1;
+            this.lblTumEmanetKitaplar.Text = "0";
             // 
             // label24
             // 
@@ -532,9 +532,9 @@ namespace uu_library_app
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(19, 9);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(187, 25);
+            this.label24.Size = new System.Drawing.Size(185, 25);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Emanet Verilen Kitap";
+            this.label24.Text = "Tüm Emanet Kitaplar";
             // 
             // panel8
             // 
@@ -596,7 +596,7 @@ namespace uu_library_app
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel10.Controls.Add(this.pictureBox9);
             this.panel10.Controls.Add(this.label25);
-            this.panel10.Controls.Add(this.label26);
+            this.panel10.Controls.Add(this.lblTeslimEdilenKitap);
             this.panel10.Controls.Add(this.label27);
             this.panel10.Location = new System.Drawing.Point(697, 422);
             this.panel10.Name = "panel10";
@@ -624,16 +624,16 @@ namespace uu_library_app
             this.label25.TabIndex = 2;
             this.label25.Text = "Details of Last 13 Days";
             // 
-            // label26
+            // lblTeslimEdilenKitap
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label26.Location = new System.Drawing.Point(83, 52);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 39);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "0";
+            this.lblTeslimEdilenKitap.AutoSize = true;
+            this.lblTeslimEdilenKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeslimEdilenKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblTeslimEdilenKitap.Location = new System.Drawing.Point(83, 52);
+            this.lblTeslimEdilenKitap.Name = "lblTeslimEdilenKitap";
+            this.lblTeslimEdilenKitap.Size = new System.Drawing.Size(37, 39);
+            this.lblTeslimEdilenKitap.TabIndex = 1;
+            this.lblTeslimEdilenKitap.Text = "0";
             // 
             // label27
             // 
@@ -642,9 +642,9 @@ namespace uu_library_app
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(19, 9);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(149, 25);
+            this.label27.Size = new System.Drawing.Size(169, 25);
             this.label27.TabIndex = 0;
-            this.label27.Text = "Borrowed Books";
+            this.label27.Text = "Teslim Edilen Kitap";
             // 
             // panel7
             // 
@@ -896,12 +896,12 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lblEmanetVerilenKitap;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lblEmanetVerilenKitap;
+        private System.Windows.Forms.Label lblTumEmanetKitaplar;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -911,7 +911,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lblTeslimEdilenKitap;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox6;

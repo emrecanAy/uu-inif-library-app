@@ -102,6 +102,7 @@ namespace uu_library_app.FormUI
         {
             conn.Open();
             listDataToTable();
+            DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
             DataSet ds = new DataSet();

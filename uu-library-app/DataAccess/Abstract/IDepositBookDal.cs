@@ -11,6 +11,8 @@ namespace uu_library_app.DataAccess.Abstract
     public interface IDepositBookDal
     {
         List<DepositBook> getAll();
+        List<DepositBook> getAllUndeposited();
+        List<DepositBook> getAllDeposited();
         void Add(DepositBook depositBook);
         void Update(DepositBook depositBook);
         void Delete(string id);
