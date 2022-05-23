@@ -24,11 +24,12 @@ namespace uu_library_app
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+        BookManager bookManager = new BookManager(new BookDal());
 
         private void listDataToTable()
         {
             DataTable dt = new DataTable();
-            MySqlCommand getAllCommand = new MySqlCommand("SELECT DepositBook.depositDate, Student.number, Student.firstName, Student.lastName, Book.bookName'bookName', Book.isbnNumber, Author.firstName'authorFirstName', Author.lastName'authorLastName', Publisher.name'publisherName', Book.id, DepositBook.id FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Student.id=@p1 AND DepositBook.status=0", conn);
+            MySqlCommand getAllCommand = new MySqlCommand("SELECT DepositBook.depositDate, Student.number, Student.firstName, Student.lastName, Book.bookName'bookName', Book.isbnNumber, Author.firstName'authorFirstName', Author.lastName'authorLastName', Publisher.name'publisherName', Book.id, DepositBook.id, DepositBook.status FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Student.id=@p1 AND DepositBook.status=0", conn);
 
             var studentId = dgvOgrenci.CurrentRow.Cells[0].Value.ToString();
             getAllCommand.Parameters.AddWithValue("@p1", studentId);
@@ -47,6 +48,7 @@ namespace uu_library_app
             dgvDahaOnceAlinanKitaplar.Columns[8].Visible = false;
             dgvDahaOnceAlinanKitaplar.Columns[9].Visible = false;
             dgvDahaOnceAlinanKitaplar.Columns[10].Visible = false;
+            dgvDahaOnceAlinanKitaplar.Columns[11].Visible = false;
         }
 
         private void Get_Book_Back_Load(object sender, EventArgs e)
@@ -99,6 +101,15 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+
+            Book book = bookManager.getById(txtKitapId.Text);
+            book.StockCount = book.StockCount + 1;
+            bookManager.Update(book);
+
+            DepositBook depositBook = new DepositBook();
+            depositBook.Status = true;
+            depositBookManager.Update(depositBook);
+            Console.WriteLine("Stok Adet :"+book.StockCount);
 
             /*
             datagridde seçilen kitabın count'una okunacak.

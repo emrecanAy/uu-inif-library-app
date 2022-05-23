@@ -174,7 +174,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE DepositBook SET id=@p2, depositDate=@p3, studentId=@p4, bookId=@p5 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE DepositBook SET depositDate=@p2, studentId=@p3, bookId=@p4 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", depositBook.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", depositBook.DepositDate);
                 commandToUpdate.Parameters.AddWithValue("@p3", depositBook.StudentId);

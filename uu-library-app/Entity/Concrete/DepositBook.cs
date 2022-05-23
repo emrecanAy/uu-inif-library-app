@@ -12,6 +12,9 @@ namespace uu_library_app.Entity.Concrete
         private string studentId;
         private string bookId;
         private DateTime depositDate;
+        private bool status;
+        private DateTime escrowDate;
+        private DateTime dateShouldBeEscrow;
         public DepositBook() { }
         public DepositBook(string id, string studentId, string bookId, DateTime depositDate)
         {
@@ -27,5 +30,8 @@ namespace uu_library_app.Entity.Concrete
         public DateTime DepositDate { get => depositDate; set => depositDate = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
         public bool Deleted { get => deleted; set => deleted = value; }
+        public bool Status { get => status; set => status = value; }
+        public DateTime EscrowDate { get => escrowDate; set => escrowDate = value; }
+        public DateTime DateShouldBeEscrow { get => dateShouldBeEscrow; set => dateShouldBeEscrow = value; }
     }
 }
