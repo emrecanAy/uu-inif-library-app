@@ -82,5 +82,11 @@ namespace uu_library_app
             }
            
         }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+        }
     }
 }
