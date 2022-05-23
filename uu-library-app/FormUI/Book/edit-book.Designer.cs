@@ -54,6 +54,7 @@ namespace uu_library_app
             this.cmbYayinevi = new System.Windows.Forms.ComboBox();
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.cmbDil = new System.Windows.Forms.ComboBox();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtCevirmen = new System.Windows.Forms.TextBox();
@@ -101,7 +102,8 @@ namespace uu_library_app
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.txtAra = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -388,6 +390,19 @@ namespace uu_library_app
             this.cmbDil.Name = "cmbDil";
             this.cmbDil.Size = new System.Drawing.Size(164, 31);
             this.cmbDil.TabIndex = 238;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(336, 307);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(191, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 233;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
             // 
             // pictureBox11
             // 
@@ -876,20 +891,30 @@ namespace uu_library_app
             this.txtId.Size = new System.Drawing.Size(164, 27);
             this.txtId.TabIndex = 244;
             this.txtId.Visible = false;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
-            // dateTime1
+            // txtAra
             // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(336, 307);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(191, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 233;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
+            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(733, 66);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(264, 27);
+            this.txtAra.TabIndex = 247;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(566, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 25);
+            this.label1.TabIndex = 248;
+            this.label1.Text = "Kitaplar içinde ara:";
             // 
             // edit_book
             // 
@@ -898,6 +923,8 @@ namespace uu_library_app
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.txtAra);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);
@@ -1004,5 +1031,7 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.Label label1;
     }
 }
