@@ -901,6 +901,7 @@ namespace uu_library_app
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(264, 27);
             this.txtAra.TabIndex = 244;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
             // txtId
             // 

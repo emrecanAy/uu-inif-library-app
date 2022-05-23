@@ -134,6 +134,10 @@ namespace uu_library_app
              */
         }
 
-
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
+        }
     }
 }
