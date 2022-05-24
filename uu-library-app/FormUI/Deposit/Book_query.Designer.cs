@@ -97,6 +97,7 @@ namespace uu_library_app.FormUI.Deposit
             this.dgvAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlinanKitaplar.Location = new System.Drawing.Point(3, 28);
             this.dgvAlinanKitaplar.Name = "dgvAlinanKitaplar";
+            this.dgvAlinanKitaplar.ReadOnly = true;
             this.dgvAlinanKitaplar.Size = new System.Drawing.Size(289, 603);
             this.dgvAlinanKitaplar.TabIndex = 231;
             // 
@@ -213,6 +214,7 @@ namespace uu_library_app.FormUI.Deposit
             this.dgvTeslimEdilmeyenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeslimEdilmeyenKitaplar.Location = new System.Drawing.Point(3, 28);
             this.dgvTeslimEdilmeyenKitaplar.Name = "dgvTeslimEdilmeyenKitaplar";
+            this.dgvTeslimEdilmeyenKitaplar.ReadOnly = true;
             this.dgvTeslimEdilmeyenKitaplar.Size = new System.Drawing.Size(285, 603);
             this.dgvTeslimEdilmeyenKitaplar.TabIndex = 231;
             // 
@@ -252,6 +254,7 @@ namespace uu_library_app.FormUI.Deposit
             this.dgvTeslimEdilenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeslimEdilenKitaplar.Location = new System.Drawing.Point(3, 28);
             this.dgvTeslimEdilenKitaplar.Name = "dgvTeslimEdilenKitaplar";
+            this.dgvTeslimEdilenKitaplar.ReadOnly = true;
             this.dgvTeslimEdilenKitaplar.Size = new System.Drawing.Size(289, 603);
             this.dgvTeslimEdilenKitaplar.TabIndex = 231;
             // 

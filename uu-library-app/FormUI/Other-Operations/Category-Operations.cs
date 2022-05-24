@@ -68,10 +68,10 @@ namespace uu_library_app
                 listDataToTable();
                 clearAllFields();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
+                throw ex;
             }
         }
 

@@ -23,6 +23,7 @@ namespace uu_library_app
 
         private void book_listing_Load(object sender, EventArgs e)
         {
+            //dataGridView1.
             DataListerHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
             comboSource.Add("bookName", "Kitap");

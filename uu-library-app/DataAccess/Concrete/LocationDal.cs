@@ -16,11 +16,12 @@ namespace uu_library_app.DataAccess.Concrete
         public void Add(Location location)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Location (id,shelf) VALUES (@p1, @p2)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Location (id, shelf, categoryId) VALUES (@p1, @p2, @p3)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", location.Id);
                 commandToAdd.Parameters.AddWithValue("@p2", location.Shelf);
+                commandToAdd.Parameters.AddWithValue("@p3", location.CategoryId);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -84,9 +85,10 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Location SET shelf=@p2 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Location SET shelf=@p2, categoryId=@p3 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", location.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", location.Shelf);
+                commandToUpdate.Parameters.AddWithValue("@p3", location.CategoryId);
                 commandToUpdate.ExecuteNonQuery();
 
             }

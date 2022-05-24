@@ -20,6 +20,7 @@ namespace uu_library_app
 {
     public partial class author_actions : Form
     {
+
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         AuthorManager manager = new AuthorManager(new AuthorDal());
 
@@ -38,7 +39,7 @@ namespace uu_library_app
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[4].Visible = false;
-            dataGridView1.ColumnHeadersVisible = false;
+            //dataGridView1.ColumnHeadersVisible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
@@ -126,9 +127,19 @@ namespace uu_library_app
 
         private void author_actions_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            listDataToTable();
+            try
+            {
+                conn.Open();
+                listDataToTable();
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Server down!");
+            }
             conn.Close();
+
+
         }
     }
 }

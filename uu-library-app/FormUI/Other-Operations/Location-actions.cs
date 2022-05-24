@@ -34,13 +34,12 @@ namespace uu_library_app.FormUI.Other_Operations
         private void listDataToTable()
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Location WHERE deleted=false", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Location.id, Location.shelf, Category.name FROM Location INNER JOIN Category ON Location.categoryId=Category.id WHERE Location.deleted=0", conn);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            dataGridView1.Columns[1].HeaderText = "";
+            dataGridView1.Columns[1].HeaderText = "Konum";
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "Kategori";
             dataGridView1.ColumnHeadersVisible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -55,7 +54,7 @@ namespace uu_library_app.FormUI.Other_Operations
                 return;
             }
 
-            Location locationToAdd = new Location(createGUID, txtAd.Text);
+            Location locationToAdd = new Location(createGUID, txtAd.Text, cmbKategori.SelectedValue.ToString());
             try
             {
                 manager.Add(locationToAdd);
@@ -92,7 +91,7 @@ namespace uu_library_app.FormUI.Other_Operations
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Location locationToUpdate = new Location(txtId.Text, txtAd.Text);
+            Location locationToUpdate = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
 
             try
             {
@@ -116,6 +115,15 @@ namespace uu_library_app.FormUI.Other_Operations
         {
             conn.Open();
             listDataToTable();
+            MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
+            DataSet dsCategories = new DataSet();
+            daCategories.Fill(dsCategories);
+            SqlCommandHelper.getCategoriesCommand(conn).ExecuteNonQuery();
+
+            //Konum
+            cmbKategori.DataSource = dsCategories.Tables[0];
+            cmbKategori.DisplayMember = "name";
+            cmbKategori.ValueMember = "id";
             conn.Close();
         }
 
@@ -123,6 +131,7 @@ namespace uu_library_app.FormUI.Other_Operations
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

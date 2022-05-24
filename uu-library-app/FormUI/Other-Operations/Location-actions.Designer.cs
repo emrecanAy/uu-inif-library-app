@@ -47,11 +47,19 @@ namespace uu_library_app.FormUI.Other_Operations
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.cmbKategori = new System.Windows.Forms.ComboBox();
+            this.picboxSoyad = new System.Windows.Forms.PictureBox();
+            this.pnlSoyad = new System.Windows.Forms.Panel();
+            this.lblSoyad = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -91,6 +99,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.dataGridView1.Location = new System.Drawing.Point(2, 32);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(656, 537);
@@ -122,6 +131,13 @@ namespace uu_library_app.FormUI.Other_Operations
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel27);
+            this.panel4.Controls.Add(this.panel21);
+            this.panel4.Controls.Add(this.panel18);
+            this.panel4.Controls.Add(this.cmbKategori);
+            this.panel4.Controls.Add(this.picboxSoyad);
+            this.panel4.Controls.Add(this.pnlSoyad);
+            this.panel4.Controls.Add(this.lblSoyad);
             this.panel4.Controls.Add(this.txtId);
             this.panel4.Controls.Add(this.btnGuncelle);
             this.panel4.Controls.Add(this.btnSil);
@@ -154,7 +170,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(46, 385);
+            this.btnGuncelle.Location = new System.Drawing.Point(46, 415);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(203, 45);
             this.btnGuncelle.TabIndex = 85;
@@ -167,7 +183,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(46, 321);
+            this.btnSil.Location = new System.Drawing.Point(46, 351);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(203, 41);
             this.btnSil.TabIndex = 84;
@@ -180,7 +196,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(46, 256);
+            this.btnEkle.Location = new System.Drawing.Point(46, 286);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(203, 43);
             this.btnEkle.TabIndex = 83;
@@ -248,6 +264,69 @@ namespace uu_library_app.FormUI.Other_Operations
             this.lblAd.TabIndex = 55;
             this.lblAd.Text = "Konum :";
             // 
+            // panel27
+            // 
+            this.panel27.Location = new System.Drawing.Point(85, 220);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1, 31);
+            this.panel27.TabIndex = 243;
+            // 
+            // panel21
+            // 
+            this.panel21.Location = new System.Drawing.Point(86, 250);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(164, 1);
+            this.panel21.TabIndex = 244;
+            // 
+            // panel18
+            // 
+            this.panel18.Location = new System.Drawing.Point(86, 220);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(164, 1);
+            this.panel18.TabIndex = 245;
+            // 
+            // cmbKategori
+            // 
+            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKategori.ForeColor = System.Drawing.Color.White;
+            this.cmbKategori.FormattingEnabled = true;
+            this.cmbKategori.Location = new System.Drawing.Point(85, 220);
+            this.cmbKategori.Name = "cmbKategori";
+            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
+            this.cmbKategori.TabIndex = 246;
+            // 
+            // picboxSoyad
+            // 
+            this.picboxSoyad.Image = ((System.Drawing.Image)(resources.GetObject("picboxSoyad.Image")));
+            this.picboxSoyad.Location = new System.Drawing.Point(50, 221);
+            this.picboxSoyad.Name = "picboxSoyad";
+            this.picboxSoyad.Size = new System.Drawing.Size(30, 30);
+            this.picboxSoyad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxSoyad.TabIndex = 242;
+            this.picboxSoyad.TabStop = false;
+            // 
+            // pnlSoyad
+            // 
+            this.pnlSoyad.BackColor = System.Drawing.Color.White;
+            this.pnlSoyad.Location = new System.Drawing.Point(49, 251);
+            this.pnlSoyad.Name = "pnlSoyad";
+            this.pnlSoyad.Size = new System.Drawing.Size(200, 1);
+            this.pnlSoyad.TabIndex = 241;
+            // 
+            // lblSoyad
+            // 
+            this.lblSoyad.AutoSize = true;
+            this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblSoyad.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.lblSoyad.ForeColor = System.Drawing.Color.White;
+            this.lblSoyad.Location = new System.Drawing.Point(44, 188);
+            this.lblSoyad.Name = "lblSoyad";
+            this.lblSoyad.Size = new System.Drawing.Size(92, 25);
+            this.lblSoyad.TabIndex = 240;
+            this.lblSoyad.Text = "Kategori :";
+            // 
             // Location_actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +348,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +373,12 @@ namespace uu_library_app.FormUI.Other_Operations
         private System.Windows.Forms.Panel pnlAd;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label lblAd;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.ComboBox cmbKategori;
+        private System.Windows.Forms.PictureBox picboxSoyad;
+        private System.Windows.Forms.Panel pnlSoyad;
+        private System.Windows.Forms.Label lblSoyad;
     }
 }

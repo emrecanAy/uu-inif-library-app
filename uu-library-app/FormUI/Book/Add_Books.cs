@@ -45,56 +45,69 @@ namespace uu_library_app
 
         private void Add_Books_Load(object sender, EventArgs e)
         {
-            
+
             #region crud1
-            conn.Open();
-            DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
-            MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
-            MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
-            MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
-            MySqlDataAdapter daLanguages = new MySqlDataAdapter(SqlCommandHelper.getLanguagesCommand(conn));
-            MySqlDataAdapter daPublishers = new MySqlDataAdapter(SqlCommandHelper.getPublishersCommand(conn));
-            DataSet dsCategories = new DataSet();
-            DataSet dsLocations = new DataSet();
-            DataSet dsAuthors = new DataSet();
-            DataSet dsLanguages = new DataSet();
-            DataSet dsPublishers = new DataSet();
-            daCategories.Fill(dsCategories);
-            daLocations.Fill(dsLocations);
-            daAuthors.Fill(dsAuthors);
-            daLanguages.Fill(dsLanguages);
-            daPublishers.Fill(dsPublishers);
-            SqlCommandHelper.getCategoriesCommand(conn).ExecuteNonQuery();
-            SqlCommandHelper.getLocationsCommand(conn).ExecuteNonQuery();
-            SqlCommandHelper.getAuthorsCommand(conn).ExecuteNonQuery();
-            SqlCommandHelper.getLanguagesCommand(conn).ExecuteNonQuery();
-            SqlCommandHelper.getPublishersCommand(conn).ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn.Open();
+                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
+                MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
+                MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
+                MySqlDataAdapter daLanguages = new MySqlDataAdapter(SqlCommandHelper.getLanguagesCommand(conn));
+                MySqlDataAdapter daPublishers = new MySqlDataAdapter(SqlCommandHelper.getPublishersCommand(conn));
+                DataSet dsCategories = new DataSet();
+                DataSet dsLocations = new DataSet();
+                DataSet dsAuthors = new DataSet();
+                DataSet dsLanguages = new DataSet();
+                DataSet dsPublishers = new DataSet();
+                daCategories.Fill(dsCategories);
+                daLocations.Fill(dsLocations);
+                daAuthors.Fill(dsAuthors);
+                daLanguages.Fill(dsLanguages);
+                daPublishers.Fill(dsPublishers);
+                SqlCommandHelper.getCategoriesCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getLocationsCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getAuthorsCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getLanguagesCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getPublishersCommand(conn).ExecuteNonQuery();
+                conn.Close();
 
-            //Kategori
-            cmbKategori.DataSource = dsCategories.Tables[0];
-            cmbKategori.DisplayMember = "name";
-            cmbKategori.ValueMember = "id";
+                //Kategori
+                cmbKategori.DataSource = dsCategories.Tables[0];
+                cmbKategori.DisplayMember = "name";
+                cmbKategori.ValueMember = "id";
 
-            //Konum
-            cmbKonum.DataSource = dsLocations.Tables[0];
-            cmbKonum.DisplayMember = "shelf";
-            cmbKonum.ValueMember = "id";
+                //Konum
+                cmbKonum.DataSource = dsLocations.Tables[0];
+                cmbKonum.DisplayMember = "shelf";
+                cmbKonum.ValueMember = "id";
 
-            //Yazar
-            cmbYazar.DataSource = dsAuthors.Tables[0];
-            cmbYazar.DisplayMember = "firstName"; //Tekrar bakılacak. Ad ve soyad comboboxta yanyana yazması lazım.
-            cmbYazar.ValueMember = "id";
+                //Yazar
+                cmbYazar.DataSource = dsAuthors.Tables[0];
+                cmbYazar.DisplayMember = "firstName"; //Tekrar bakılacak. Ad ve soyad comboboxta yanyana yazması lazım.
+                cmbYazar.ValueMember = "id";
 
-            //Dil
-            cmbDil.DataSource = dsLanguages.Tables[0];
-            cmbDil.DisplayMember = "language"; 
-            cmbDil.ValueMember = "id";
+                //Dil
+                cmbDil.DataSource = dsLanguages.Tables[0];
+                cmbDil.DisplayMember = "language";
+                cmbDil.ValueMember = "id";
 
-            //Yayınevi
-            cmbYayinevi.DataSource = dsPublishers.Tables[0];
-            cmbYayinevi.DisplayMember = "name";
-            cmbYayinevi.ValueMember = "id";
+                //Yayınevi
+                cmbYayinevi.DataSource = dsPublishers.Tables[0];
+                cmbYayinevi.DisplayMember = "name";
+                cmbYayinevi.ValueMember = "id";
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+                return;
+            }
+            
+
+            
 
             #endregion
         }
@@ -138,6 +151,11 @@ namespace uu_library_app
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

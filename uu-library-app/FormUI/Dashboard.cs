@@ -36,13 +36,27 @@ namespace uu_library_app
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            lblToplamUye.Text = studentManager.getAll().Count().ToString();
-            lblToplamYazar.Text = authorManager.getAll().Count().ToString();
-            lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
-            lblToplamKitap.Text = bookManager.getAll().Count().ToString();
-            lblTumEmanetKitaplar.Text = depositBookManager.getAll().Count().ToString();
-            lblEmanetVerilenKitap.Text = depositBookManager.getAllUndeposited().Count().ToString();
-            lblTeslimEdilenKitap.Text = depositBookManager.getAllDeposited().Count().ToString();
+            try
+            {
+                conn.Open();
+                lblToplamUye.Text = studentManager.getAll().Count().ToString();
+                lblToplamYazar.Text = authorManager.getAll().Count().ToString();
+                lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
+                lblToplamKitap.Text = bookManager.getAll().Count().ToString();
+                lblTumEmanetKitaplar.Text = depositBookManager.getAll().Count().ToString();
+                lblEmanetVerilenKitap.Text = depositBookManager.getAllUndeposited().Count().ToString();
+                lblTeslimEdilenKitap.Text = depositBookManager.getAllDeposited().Count().ToString();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+                return;
+            }
+
+            
+            
         }
     }
 }

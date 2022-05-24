@@ -25,10 +25,10 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Console.WriteLine("Hatalı ekleme!");
-                throw;
+                throw ex;
             }
 
             conn.Close();
