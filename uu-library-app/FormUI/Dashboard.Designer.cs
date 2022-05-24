@@ -33,65 +33,54 @@ namespace uu_library_app
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblToplamKitap = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
             this.lblEnCokOkunanKitaplar = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.lblToplamUye = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.lblEmanetVerilenKitap = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.lblTumEmanetKitaplar = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.lblToplamKategori = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.lblTeslimEdilenKitap = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.lblToplamYazar = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.listEnCokOkunanKitaplar = new System.Windows.Forms.ListBox();
             this.panelChildForm.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -122,6 +111,7 @@ namespace uu_library_app
             // panelChildForm
             // 
             this.panelChildForm.Controls.Add(this.panel12);
+            this.panelChildForm.Controls.Add(this.lblEnCokOkunanKitaplar);
             this.panelChildForm.Controls.Add(this.panel3);
             this.panelChildForm.Controls.Add(this.panel13);
             this.panelChildForm.Controls.Add(this.panel14);
@@ -144,12 +134,11 @@ namespace uu_library_app
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel12.Controls.Add(this.pictureBox11);
-            this.panel12.Controls.Add(this.label31);
             this.panel12.Controls.Add(this.label32);
             this.panel12.Controls.Add(this.label33);
             this.panel12.Location = new System.Drawing.Point(353, 580);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(258, 130);
+            this.panel12.Size = new System.Drawing.Size(258, 150);
             this.panel12.TabIndex = 6;
             // 
             // pictureBox11
@@ -161,17 +150,6 @@ namespace uu_library_app
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label31.Location = new System.Drawing.Point(17, 106);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(140, 17);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "Details of Last 13 Days";
             // 
             // label32
             // 
@@ -199,12 +177,11 @@ namespace uu_library_app
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.lblToplamKitap);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(17, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(258, 130);
+            this.panel3.Size = new System.Drawing.Size(258, 150);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
@@ -216,17 +193,6 @@ namespace uu_library_app
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(17, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Details of Last 13 Days";
             // 
             // lblToplamKitap
             // 
@@ -253,13 +219,12 @@ namespace uu_library_app
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel13.Controls.Add(this.listEnCokOkunanKitaplar);
             this.panel13.Controls.Add(this.pictureBox12);
-            this.panel13.Controls.Add(this.label34);
-            this.panel13.Controls.Add(this.lblEnCokOkunanKitaplar);
             this.panel13.Controls.Add(this.label36);
             this.panel13.Location = new System.Drawing.Point(17, 580);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(258, 130);
+            this.panel13.Size = new System.Drawing.Size(258, 150);
             this.panel13.TabIndex = 7;
             // 
             // pictureBox12
@@ -272,23 +237,12 @@ namespace uu_library_app
             this.pictureBox12.TabIndex = 3;
             this.pictureBox12.TabStop = false;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label34.Location = new System.Drawing.Point(17, 106);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(140, 17);
-            this.label34.TabIndex = 2;
-            this.label34.Text = "Details of Last 13 Days";
-            // 
             // lblEnCokOkunanKitaplar
             // 
             this.lblEnCokOkunanKitaplar.AutoSize = true;
             this.lblEnCokOkunanKitaplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEnCokOkunanKitaplar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblEnCokOkunanKitaplar.Location = new System.Drawing.Point(21, 61);
+            this.lblEnCokOkunanKitaplar.Location = new System.Drawing.Point(296, 554);
             this.lblEnCokOkunanKitaplar.Name = "lblEnCokOkunanKitaplar";
             this.lblEnCokOkunanKitaplar.Size = new System.Drawing.Size(17, 18);
             this.lblEnCokOkunanKitaplar.TabIndex = 1;
@@ -309,12 +263,11 @@ namespace uu_library_app
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel14.Controls.Add(this.pictureBox13);
-            this.panel14.Controls.Add(this.label37);
             this.panel14.Controls.Add(this.label38);
             this.panel14.Controls.Add(this.label39);
             this.panel14.Location = new System.Drawing.Point(697, 580);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(258, 130);
+            this.panel14.Size = new System.Drawing.Size(258, 150);
             this.panel14.TabIndex = 8;
             // 
             // pictureBox13
@@ -326,17 +279,6 @@ namespace uu_library_app
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox13.TabIndex = 3;
             this.pictureBox13.TabStop = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label37.Location = new System.Drawing.Point(17, 106);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(140, 17);
-            this.label37.TabIndex = 2;
-            this.label37.Text = "Details of Last 13 Days";
             // 
             // label38
             // 
@@ -364,12 +306,11 @@ namespace uu_library_app
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.lblToplamUye);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(17, 252);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(258, 130);
+            this.panel5.Size = new System.Drawing.Size(258, 150);
             this.panel5.TabIndex = 5;
             // 
             // pictureBox4
@@ -381,17 +322,6 @@ namespace uu_library_app
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label10.Location = new System.Drawing.Point(17, 106);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 17);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Details of Last 13 Days";
             // 
             // lblToplamUye
             // 
@@ -430,12 +360,11 @@ namespace uu_library_app
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel11.Controls.Add(this.pictureBox10);
-            this.panel11.Controls.Add(this.label28);
             this.panel11.Controls.Add(this.lblEmanetVerilenKitap);
             this.panel11.Controls.Add(this.label30);
             this.panel11.Location = new System.Drawing.Point(353, 422);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(258, 130);
+            this.panel11.Size = new System.Drawing.Size(258, 150);
             this.panel11.TabIndex = 5;
             // 
             // pictureBox10
@@ -447,17 +376,6 @@ namespace uu_library_app
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label28.Location = new System.Drawing.Point(17, 106);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(140, 17);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Details of Last 13 Days";
             // 
             // lblEmanetVerilenKitap
             // 
@@ -485,12 +403,11 @@ namespace uu_library_app
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.lblTumEmanetKitaplar);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Location = new System.Drawing.Point(17, 422);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(258, 130);
+            this.panel9.Size = new System.Drawing.Size(258, 150);
             this.panel9.TabIndex = 5;
             // 
             // pictureBox8
@@ -502,17 +419,6 @@ namespace uu_library_app
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label22.Location = new System.Drawing.Point(17, 106);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(140, 17);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Details of Last 13 Days";
             // 
             // lblTumEmanetKitaplar
             // 
@@ -540,12 +446,11 @@ namespace uu_library_app
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.lblToplamKategori);
             this.panel8.Controls.Add(this.label21);
             this.panel8.Location = new System.Drawing.Point(353, 252);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(258, 130);
+            this.panel8.Size = new System.Drawing.Size(258, 150);
             this.panel8.TabIndex = 5;
             // 
             // pictureBox7
@@ -557,17 +462,6 @@ namespace uu_library_app
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label19.Location = new System.Drawing.Point(17, 106);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(140, 17);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Details of Last 13 Days";
             // 
             // lblToplamKategori
             // 
@@ -595,12 +489,11 @@ namespace uu_library_app
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.lblTeslimEdilenKitap);
             this.panel10.Controls.Add(this.label27);
             this.panel10.Location = new System.Drawing.Point(697, 422);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(258, 130);
+            this.panel10.Size = new System.Drawing.Size(258, 150);
             this.panel10.TabIndex = 5;
             // 
             // pictureBox9
@@ -612,17 +505,6 @@ namespace uu_library_app
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label25.Location = new System.Drawing.Point(17, 106);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(140, 17);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "Details of Last 13 Days";
             // 
             // lblTeslimEdilenKitap
             // 
@@ -650,12 +532,11 @@ namespace uu_library_app
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.lblToplamYazar);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Location = new System.Drawing.Point(353, 82);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(258, 130);
+            this.panel7.Size = new System.Drawing.Size(258, 150);
             this.panel7.TabIndex = 6;
             // 
             // pictureBox6
@@ -667,17 +548,6 @@ namespace uu_library_app
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label16.Location = new System.Drawing.Point(17, 106);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 17);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Details of Last 13 Days";
             // 
             // lblToplamYazar
             // 
@@ -705,12 +575,11 @@ namespace uu_library_app
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(697, 82);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 130);
+            this.panel4.Size = new System.Drawing.Size(258, 150);
             this.panel4.TabIndex = 4;
             // 
             // pictureBox3
@@ -722,17 +591,6 @@ namespace uu_library_app
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label7.Location = new System.Drawing.Point(17, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Details of Last 13 Days";
             // 
             // label8
             // 
@@ -760,12 +618,11 @@ namespace uu_library_app
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Location = new System.Drawing.Point(697, 252);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(258, 130);
+            this.panel6.Size = new System.Drawing.Size(258, 150);
             this.panel6.TabIndex = 5;
             // 
             // pictureBox5
@@ -777,17 +634,6 @@ namespace uu_library_app
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label13.Location = new System.Drawing.Point(17, 106);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(140, 17);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Details of Last 13 Days";
             // 
             // label14
             // 
@@ -810,6 +656,18 @@ namespace uu_library_app
             this.label15.Size = new System.Drawing.Size(149, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Borrowed Books";
+            // 
+            // listEnCokOkunanKitaplar
+            // 
+            this.listEnCokOkunanKitaplar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.listEnCokOkunanKitaplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listEnCokOkunanKitaplar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.listEnCokOkunanKitaplar.FormattingEnabled = true;
+            this.listEnCokOkunanKitaplar.ItemHeight = 20;
+            this.listEnCokOkunanKitaplar.Location = new System.Drawing.Point(24, 43);
+            this.listEnCokOkunanKitaplar.Name = "listEnCokOkunanKitaplar";
+            this.listEnCokOkunanKitaplar.Size = new System.Drawing.Size(150, 84);
+            this.listEnCokOkunanKitaplar.TabIndex = 4;
             // 
             // Dashboard
             // 
@@ -869,64 +727,53 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblToplamKitap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblEnCokOkunanKitaplar;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblToplamUye;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lblEmanetVerilenKitap;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lblTumEmanetKitaplar;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblToplamKategori;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label lblTeslimEdilenKitap;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblToplamYazar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ListBox listEnCokOkunanKitaplar;
     }
 }

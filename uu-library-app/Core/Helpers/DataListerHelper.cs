@@ -15,15 +15,27 @@ namespace uu_library_app.Core.Helpers
         BookManager bookManager = new BookManager(new BookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
         
-        public List<Book> getMostFrequentBookData(string[] arr, int n)
+        public List<Book> getMostFrequentBookData(string[] arr)
         {
             List<Book> bookList = new List<Book>();
-            string[] mostFrequentBooks = ArrayFindersHelper.mostFrequentMultiple(arr, n);
-            foreach (string id in mostFrequentBooks)
+            //string[] mostFrequentBooks = ArrayFindersHelper.mostFrequentMultiple(arr, n);
+
+            foreach(string id in arr)
+            {
+                Console.WriteLine("En çok okunan idler"+ id);
+            }
+
+            foreach (string id in arr)
             {
                 Book book = bookManager.getById(id);
+                Console.WriteLine("En çok okunan kitaplar"+ book.BookName);
                 bookList.Add(book);
             }
+
+            //foreach(Book book in bookList)
+            //{
+            //    Console.WriteLine(book.BookName);
+            //}
 
             return bookList;
         }
@@ -52,6 +64,7 @@ namespace uu_library_app.Core.Helpers
                 books.Add(id);
             }
             string[] readBooksArr = books.ToArray();
+
             return readBooksArr;
         }
 

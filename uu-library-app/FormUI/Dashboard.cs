@@ -51,17 +51,29 @@ namespace uu_library_app
 
                 string enCokOkunanKitaplar="";
                 string[] booksArr = dataListerHelper.getReadBooks(conn);
-                foreach(Book book in dataListerHelper.getMostFrequentBookData(booksArr, booksArr.Length))
+
+                string[] mostFrequentBooks = ArrayFindersHelper.mostFrequentMultiple(booksArr, booksArr.Length);
+
+                //dataListerHelper.getMostFrequentBookData(mostFrequentBooks);
+                foreach(Book book in dataListerHelper.getMostFrequentBookData(mostFrequentBooks))
                 {
                     enCokOkunanKitaplar += book.BookName;
+                    listEnCokOkunanKitaplar.Items.Add(book.BookName);
                 }
                 lblEnCokOkunanKitaplar.Text = enCokOkunanKitaplar;
+
+                /*
+                En çok okunan kitapların idlerini getReadBooks ile array olarak getir.
+                sonra bu tüm okunmuş kitaplar array'ini getMostFrequentBookData metoduna ver.
+                 
+                 */
+
+
+
                 conn.Close();
             }
             catch (Exception)
             {
-                //MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
              wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
               "Sunucuya bağlanırken bir hata oluştu!",
               MessageBoxButtons.OK,
