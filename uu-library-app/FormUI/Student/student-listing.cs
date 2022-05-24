@@ -22,7 +22,7 @@ namespace uu_library_app
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         private void student_listing_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
             comboSource.Add("studentFullName", "Öğrenci Adı");
             comboSource.Add("number", "Okul No");

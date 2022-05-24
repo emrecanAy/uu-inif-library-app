@@ -38,7 +38,7 @@ namespace uu_library_app
         private void Edit_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
@@ -66,7 +66,7 @@ namespace uu_library_app
                 manager.Update(studentToUpdate);
                 MessageBox.Show("Başarıyla güncellendi!");
                 clearAllFields();
-                DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             }
             catch (Exception)
             {

@@ -47,7 +47,7 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             #region crud1
             conn.Open();
-            DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
             MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
             MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
             MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
@@ -130,7 +130,7 @@ namespace uu_library_app
             {
                 bookManager.Update(bookToUpdate);
                 MessageBox.Show("Başarıyla güncellendi!");
-                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
             }
             catch (Exception)

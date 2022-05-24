@@ -29,6 +29,7 @@ namespace uu_library_app
         CategoryManager categoryManager = new CategoryManager(new CategoryDal());
         BookManager bookManager = new BookManager(new BookDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+        DataListerHelper dataListerHelper = new DataListerHelper();
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
@@ -47,13 +48,21 @@ namespace uu_library_app
                 lblTumEmanetKitaplar.Text = depositBookManager.getAll().Count().ToString();
                 lblEmanetVerilenKitap.Text = depositBookManager.getAllUndeposited().Count().ToString();
                 lblTeslimEdilenKitap.Text = depositBookManager.getAllDeposited().Count().ToString();
+
+                string enCokOkunanKitaplar="";
+                string[] booksArr = dataListerHelper.getReadBooks(conn);
+                foreach(Book book in dataListerHelper.getMostFrequentBookData(booksArr, booksArr.Length))
+                {
+                    enCokOkunanKitaplar += book.BookName;
+                }
+                lblEnCokOkunanKitaplar.Text = enCokOkunanKitaplar;
                 conn.Close();
             }
             catch (Exception)
             {
                 //MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-             var result = wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
+             wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
               "Sunucuya bağlanırken bir hata oluştu!",
               MessageBoxButtons.OK,
               MessageBoxIcon.Warning);

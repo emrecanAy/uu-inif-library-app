@@ -46,7 +46,7 @@ namespace uu_library_app
         private void Delete_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            DataListerHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             conn.Close();
         }

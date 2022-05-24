@@ -48,7 +48,7 @@ namespace uu_library_app
 
             #region
             conn.Open();
-            DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
             conn.Close();
             #endregion
         }
@@ -81,7 +81,7 @@ namespace uu_library_app
             try
             {
                 bookManager.Delete(txtId.Text);
-                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi...");
             }

@@ -31,8 +31,8 @@ namespace uu_library_app
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
 
-            DataListerHelper.listBorrowingBookStudentDataToTable(dataGridView1, conn);
-            DataListerHelper.listInnerJoinBorrowingBookDataToTable(dataGridView3, conn);
+            DataListerToTableHelper.listBorrowingBookStudentDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView3, conn);
       
         }
 

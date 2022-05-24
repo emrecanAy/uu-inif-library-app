@@ -103,7 +103,7 @@ namespace uu_library_app.FormUI
             conn.Open();
             listDataToTable();
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-            DataListerHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
             DataSet ds = new DataSet();

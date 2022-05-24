@@ -53,7 +53,7 @@ namespace uu_library_app
 
         private void Get_Book_Back_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listStudentDataToTable(dgvOgrenci, conn);
+            DataListerToTableHelper.listStudentDataToTable(dgvOgrenci, conn);
         }
 
         private void dgvOgrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -98,7 +98,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Abstract\IEntityService.cs" />
+    <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
+    <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="FormUI\Book\book-listing.cs">
       <SubType>Form</SubType>
     </Compile>

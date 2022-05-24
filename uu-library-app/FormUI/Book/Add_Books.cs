@@ -50,7 +50,7 @@ namespace uu_library_app
             try
             {
                 conn.Open();
-                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
                 MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
                 MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
@@ -126,7 +126,7 @@ namespace uu_library_app
             {
                 bookManager.Add(bookToAdd);
                 MessageBox.Show("Başarıyla eklendi!");
-                DataListerHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
             }
             catch (Exception)

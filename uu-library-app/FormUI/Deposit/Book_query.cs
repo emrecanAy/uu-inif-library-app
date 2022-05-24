@@ -23,16 +23,16 @@ namespace uu_library_app.FormUI.Deposit
 
         private void Book_query_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listStudentDataToTable(dgvOgrenci, conn);
+            DataListerToTableHelper.listStudentDataToTable(dgvOgrenci, conn);
             
         }
 
         private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtOgrenciId.Text = dgvOgrenci.Rows[e.RowIndex].Cells[0].Value.ToString();
-            DataListerHelper.listAllTakenBooksConcatAuthorNameDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listUndepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listDepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
+            DataListerToTableHelper.listAllTakenBooksConcatAuthorNameDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
+            DataListerToTableHelper.listUndepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
+            DataListerToTableHelper.listDepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
         }
 
         private void txtAra_TextChanged(object sender, EventArgs e)

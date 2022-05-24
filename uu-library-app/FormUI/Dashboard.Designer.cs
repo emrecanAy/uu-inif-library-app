@@ -44,7 +44,7 @@ namespace uu_library_app
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.lblEnCokOkunanKitaplar = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -255,7 +255,7 @@ namespace uu_library_app
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel13.Controls.Add(this.pictureBox12);
             this.panel13.Controls.Add(this.label34);
-            this.panel13.Controls.Add(this.label35);
+            this.panel13.Controls.Add(this.lblEnCokOkunanKitaplar);
             this.panel13.Controls.Add(this.label36);
             this.panel13.Location = new System.Drawing.Point(17, 580);
             this.panel13.Name = "panel13";
@@ -283,16 +283,16 @@ namespace uu_library_app
             this.label34.TabIndex = 2;
             this.label34.Text = "Details of Last 13 Days";
             // 
-            // label35
+            // lblEnCokOkunanKitaplar
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label35.Location = new System.Drawing.Point(83, 52);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(37, 39);
-            this.label35.TabIndex = 1;
-            this.label35.Text = "0";
+            this.lblEnCokOkunanKitaplar.AutoSize = true;
+            this.lblEnCokOkunanKitaplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEnCokOkunanKitaplar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblEnCokOkunanKitaplar.Location = new System.Drawing.Point(21, 61);
+            this.lblEnCokOkunanKitaplar.Name = "lblEnCokOkunanKitaplar";
+            this.lblEnCokOkunanKitaplar.Size = new System.Drawing.Size(17, 18);
+            this.lblEnCokOkunanKitaplar.TabIndex = 1;
+            this.lblEnCokOkunanKitaplar.Text = "0";
             // 
             // label36
             // 
@@ -301,9 +301,9 @@ namespace uu_library_app
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(19, 9);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(187, 25);
+            this.label36.Size = new System.Drawing.Size(223, 25);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Emanet Verilen Kitap";
+            this.label36.Text = "En Çok Okunan Kitap(lar)";
             // 
             // panel14
             // 
@@ -880,7 +880,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lblEnCokOkunanKitaplar;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.PictureBox pictureBox13;
