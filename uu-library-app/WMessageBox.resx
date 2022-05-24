@@ -117,26 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="calendawhitepng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendawhitepng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBoxIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABF1JREFUWEfF
+        l3tMW1Ucx+fbGB9/mJgYH3/4iDEx8Q+jfyqJpaWjtBTW4jJGyXTTObfgtsTFONNEsC2lr9tuvNwGQVDG
+        HsZFWOIYm4P2tr23LX1QHAM2NqGv0e4Bo0A5noOHKe5YbjvUT/L9o7253++555z7+527hgsFSuYRQRXz
+        NE/lfIFf6XhOrOl9DF/69xBVWp+Rmpw6GcWeL6t1R7Y1+SI724KTnzT7Y+UNnojMyIzJKaaZX9X3Gr5l
+        dUBPuw4al9W7Ix3O6NxgdA6MJhbu0IWrKdDlTyxsPeSNyCimB80Qtsie3Gr6ZbmZGWm1hWdIof+kk4HE
+        wvp97MTaGmcutsocYXXfi3IzO24dnSKGrCR/eBYo6j1X8w1OHrbkjlIJ7l1nYrxnhm4skMy5yjuRBHIT
+        O85TM09ga26I9XaFtvPiNZJppjrCxGZLKKYRW3OjxMz60OhJhplqBGq9hZ2QKQMPYvv0CKnOhzbWuiIk
+        s2y199hQVKCxvoUj0iNQWV/a2RoIk4yyVd3py7cEapscR6QnT9P7yq624P83gBxlz6OKOs+qDuDL4xks
+        AQK+/4HV2oTD8RQooVwpicE5Vmhg2gRqWiI7fPg+HEWmUOcoV/00miAZZqo2RwR82j4K9jvmQNWpBNj6
+        7fCkWM+M5Vc7N+G4O0GFCNZz3+nz1++6EJXW9gMzPQvqmNRtUXQSbG4eihfqmW6hkn4cxy5HqKGflVNs
+        BJVUkvlKQvdt+sYHKn9OLAv/q/Z2RuclBsZLbOeoz5fXe8KokJAC0qlrIAHKG33gqzThS/r8RChZoGNO
+        4Ng/gRvxSJc/fnsJrCNToB2upy9EnpE/2nEcbG8ZAFuaBoGxb4YYSFLZgWBMpLXl4GhYC2ocb25r8sdQ
+        6MFzvyXhTITeM7PdxSa2csM+1qeoc4c/PuRP7W7/FVS0DoLNB/2gtM4Ldnw3AqrP3CCGpJP27E0gNbJn
+        F8NRzRZp6X6p3hGGTaRHanTs4Gv7nlq8iBGo7a+XNQ7EdOemgaH3FrDYl2+ybCQ1usIrvp5LCFR0cUXH
+        2BTJKFttaAiEeOre53FEevLUdOnuY1eSJKNspTgQDPM0tldxRHqE1dZ3PmoZniQZZSuZpT/M+eCCikcR
+        5Q6RjLKRBRYqWKaHsT03Co3sycpTiQWSYaaCyzkl0jNfYGtuoENrkckd3e+YJ5pylaF3Gkhgb4Bd+GFs
+        zZ0CnbNiY8PAZLaDQFMvozxRVHewZebA0e+RW/rjevgkpJB0Qh0S9gL4+mV4av47a2scb4sNzOXt31+8
+        TtmSxLAloaqHgpd+7/kxNCOuYYzYKnveqGceyNfa34e9Plhsdoc/bLkwuevolZnPfgiBio5L0x80D8WK
+        TK4Jqcn1i8TAXtoCf6u6r8HBzINiyh1Bewpb3T1oSvNUthy+xlqYp7LK+Bo6F320LpVadN5A/8E36bhY
+        7xwX6Zw3hVq7dQ0A9ywa/Ne8+7X9SfSpn6Psuf93FoR05iq0B6oAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,12 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+             var result = wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
+              "Sunucuya bağlanırken bir hata oluştu!",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Warning);
                 Application.Exit();
                 return;
             }

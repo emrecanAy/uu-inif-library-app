@@ -270,6 +270,13 @@
     <Compile Include="FormUI\Toolbox\wehCombBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="FormUI\Toolbox\WehMessageBox.cs" />
+    <Compile Include="WMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMessageBox.Designer.cs">
+      <DependentUpon>WMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormUI\Other-Operations\publisher-actions.cs">
@@ -353,6 +360,9 @@
     <EmbeddedResource Include="FormUI\Student\student-listing.resx">
       <DependentUpon>student-listing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WMessageBox.resx">
+      <DependentUpon>WMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -386,9 +396,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendawhitepng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

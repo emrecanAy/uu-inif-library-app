@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace button.Toolbox
 {
-    public class melikebutton : Button
+    public class RadiusButton : Button
     {
         private int borderSize = 0;
         private int borderRadius = 40;
@@ -77,7 +77,7 @@ namespace button.Toolbox
             set { this.ForeColor = value; }
         }
 
-        public melikebutton()
+        public RadiusButton()
         {
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
