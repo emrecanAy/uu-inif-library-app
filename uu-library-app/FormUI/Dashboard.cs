@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
+using uu_library_app.Core.RoutinCustomJobs;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -30,10 +31,11 @@ namespace uu_library_app
         BookManager bookManager = new BookManager(new BookDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         DataListerHelper dataListerHelper = new DataListerHelper();
+        MailSenderJob mailSenderJob = new MailSenderJob();
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
-
+                
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

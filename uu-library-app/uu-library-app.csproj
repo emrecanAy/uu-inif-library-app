@@ -266,6 +266,12 @@
     <Compile Include="FormUI\Deposit\Get-Book-Back.Designer.cs">
       <DependentUpon>Get-Book-Back.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\TextBoxHelper\WehTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormUI\TextBoxHelper\WehTextBox.Designer.cs">
+      <DependentUpon>WehTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Toolbox\DateTime.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\student-listing.resx">
       <DependentUpon>student-listing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\TextBoxHelper\WehTextBox.resx">
+      <DependentUpon>WehTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WMessageBox.resx">
       <DependentUpon>WMessageBox.cs</DependentUpon>
