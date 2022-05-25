@@ -104,6 +104,7 @@
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />
     <Compile Include="Core\RoutinCustomJobs\MailSenderJob.cs" />
+    <Compile Include="Core\Utils\MailSender.cs" />
     <Compile Include="FormUI\Book\book-listing.cs">
       <SubType>Form</SubType>
     </Compile>

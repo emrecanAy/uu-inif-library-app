@@ -18,7 +18,6 @@ namespace uu_library_app.Core.Helpers
         public List<Book> getMostFrequentBookData(string[] arr)
         {
             List<Book> bookList = new List<Book>();
-            //string[] mostFrequentBooks = ArrayFindersHelper.mostFrequentMultiple(arr, n);
 
             foreach(string id in arr)
             {
@@ -31,12 +30,6 @@ namespace uu_library_app.Core.Helpers
                 Console.WriteLine("En çok okunan kitaplar"+ book.BookName);
                 bookList.Add(book);
             }
-
-            //foreach(Book book in bookList)
-            //{
-            //    Console.WriteLine(book.BookName);
-            //}
-
             return bookList;
         }
 
