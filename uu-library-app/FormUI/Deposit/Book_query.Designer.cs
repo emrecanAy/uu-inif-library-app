@@ -50,6 +50,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgvTeslimEdilenKitaplar = new System.Windows.Forms.DataGridView();
             this.txtOgrenciId = new System.Windows.Forms.TextBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).BeginInit();
             this.panel4.SuspendLayout();
@@ -104,7 +105,7 @@ namespace uu_library_app.FormUI.Deposit
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtAra);
+            this.panel4.Controls.Add(this.wehTextBox1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.dgvOgrenci);
@@ -119,7 +120,7 @@ namespace uu_library_app.FormUI.Deposit
             this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtAra.ForeColor = System.Drawing.Color.White;
-            this.txtAra.Location = new System.Drawing.Point(116, 9);
+            this.txtAra.Location = new System.Drawing.Point(109, 72);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(371, 27);
             this.txtAra.TabIndex = 270;
@@ -271,12 +272,35 @@ namespace uu_library_app.FormUI.Deposit
             this.txtOgrenciId.TabIndex = 271;
             this.txtOgrenciId.Visible = false;
             // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(109, 8);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Öğrenci Numarası Giriniz !";
+            this.wehTextBox1.Size = new System.Drawing.Size(371, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            // 
             // Book_query
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.txtOgrenciId);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
@@ -328,5 +352,6 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView dgvTeslimEdilenKitaplar;
         private System.Windows.Forms.TextBox txtOgrenciId;
+        private TextBoxHelper.WehTextBox wehTextBox1;
     }
 }

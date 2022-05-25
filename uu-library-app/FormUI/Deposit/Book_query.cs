@@ -40,5 +40,11 @@ namespace uu_library_app.FormUI.Deposit
             (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
         }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
     }
 }
