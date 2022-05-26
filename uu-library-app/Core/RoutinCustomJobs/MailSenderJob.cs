@@ -15,6 +15,8 @@ namespace uu_library_app.Core.RoutinCustomJobs
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         BookManager bookManager = new BookManager(new BookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
+        AuthorManager authorManager = new AuthorManager(new AuthorDal());
+        SettingsManager settingsManager = new SettingsManager(new SettingsDal());
         public void everyDayCheckAndSendMail()
         {
             List<DepositBook> depositBooksList = depositBookManager.getAll();
@@ -27,14 +29,18 @@ namespace uu_library_app.Core.RoutinCustomJobs
                     int daysPast = Convert.ToInt32(howManyDaysPast);
                     Student student = studentManager.getById(depositBook.StudentId);
                     Book book = bookManager.getById(depositBook.BookId);
+                    Author author = authorManager.getById(book.AuthorId);
+                    string pastDays = daysPast.ToString();
+
                     if (daysPast == -3) //bu günü helperda static olarak tutalım. oradan düzenleriz sadece. veya gecikme süresi kısmı ui'da da seçtirebiliriz.
                     {
-                        MailSender.SendMailReminding(student, book, depositBook);
+                        pastDays = pastDays.Substring(1);
+                        MailSender.SendMailReminding(student, book, author, depositBook, pastDays);
                         Console.WriteLine("Hatırlatma maili " + student.FirstName + " kişisine gönderildi!");
                     }
                     if (daysPast < -6) //bu günü helperda static olarak tutalım. oradan düzenleriz sadece. veya gecikme süresi kısmı ui'da da seçtirebiliriz.
                     {
-                        MailSender.SendMailForExpired(student, book, depositBook);
+                        MailSender.SendMailForExpired(student, book, author, depositBook, pastDays);
                         Console.WriteLine("Gecikme maili " + student.FirstName + " kişisine gönderildi!");
                     }
 

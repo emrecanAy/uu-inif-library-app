@@ -7,14 +7,10 @@ using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Abstract
 {
-    public interface IAuthorService
+    public interface ISettingsService
     {
-        List<Author> getAll();
-        void Add(Author author);
-        void Update(Author author);
-        void Delete(string id);
-        Author getById(string id);
-
+        Settings getSettings();
+        void Update(Settings settings);
+        void AddOrUpdate(Settings settings);
     }
-
 }

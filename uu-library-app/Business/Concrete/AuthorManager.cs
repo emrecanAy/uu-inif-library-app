@@ -39,6 +39,11 @@ namespace uu_library_app.Business.Concrete
             return _service.getAll();
         }
 
+        public Author getById(string id)
+        {
+            return _service.getById(id);
+        }
+
         public void Update(Author author)
         {
             if(author.FirstName != null && author.LastName != null)

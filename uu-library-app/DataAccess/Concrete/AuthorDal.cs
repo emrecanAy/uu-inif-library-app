@@ -102,5 +102,30 @@ namespace uu_library_app.DataAccess.Concrete
 
             conn.Close();
         }
+
+        public Author getById(string id)
+        {
+            Author author = new Author();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Author WHERE id=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", id);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    author.Id = reader[0].ToString();
+                    author.FirstName = reader[1].ToString();
+                    author.LastName = reader[2].ToString();
+                }
+                conn.Close();
+                return author;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

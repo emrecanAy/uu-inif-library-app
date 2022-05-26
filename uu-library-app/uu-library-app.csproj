@@ -99,12 +99,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Abstract\IEntityService.cs" />
+    <Compile Include="Business\Abstract\ISettingsService.cs" />
+    <Compile Include="Business\Concrete\SettingsManager.cs" />
     <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />
     <Compile Include="Core\RoutinCustomJobs\MailSenderJob.cs" />
     <Compile Include="Core\Utils\MailSender.cs" />
+    <Compile Include="DataAccess\Abstract\ISettingsDal.cs" />
+    <Compile Include="DataAccess\Concrete\SettingsDal.cs" />
+    <Compile Include="Entity\Concrete\Settings.cs" />
     <Compile Include="FormUI\Book\book-listing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +221,12 @@
     </Compile>
     <Compile Include="FormUI\Other-Operations\Location-actions.Designer.cs">
       <DependentUpon>Location-actions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Other-Operations\settings-test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Other-Operations\settings-test.Designer.cs">
+      <DependentUpon>settings-test.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\Student\Delete-Student.cs">
       <SubType>Form</SubType>
@@ -344,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Location-actions.resx">
       <DependentUpon>Location-actions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Other-Operations\settings-test.resx">
+      <DependentUpon>settings-test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
