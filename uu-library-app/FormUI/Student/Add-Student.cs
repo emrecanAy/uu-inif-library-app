@@ -100,7 +100,9 @@ namespace uu_library_app.FormUI
 
         private void Add_Student_Load_1(object sender, EventArgs e)
         {
+
             conn.Open();
+
             listDataToTable();
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
@@ -114,6 +116,23 @@ namespace uu_library_app.FormUI
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+
+            ToolTip Aciklama = new ToolTip();
+            Aciklama.ToolTipTitle = "Kitap Adı Giriniz !";
+            Aciklama.ToolTipIcon = ToolTipIcon.Info;
+            Aciklama.IsBalloon = true;
+            Aciklama.SetToolTip(txtAra, "    ");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

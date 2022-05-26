@@ -518,7 +518,7 @@ namespace uu_library_app.FormUI
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 707);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 857);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(186, 40);
             this.btnLogOut.TabIndex = 7;

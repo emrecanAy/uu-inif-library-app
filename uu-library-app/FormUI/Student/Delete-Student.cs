@@ -47,19 +47,21 @@ namespace uu_library_app
         {
             conn.Open();
             DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
-            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.White;
             conn.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-        }
+        
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -83,10 +85,43 @@ namespace uu_library_app
            
         }
 
+       
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!");
+                return;
+            }
+
+            try
+            {
+                manager.Delete(txtId.Text);
+                listDataToTable();
+                MessageBox.Show("Başarılı bir şekilde silindi.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!");
+                throw;
+            }
+        }
+
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+           string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
     }
 }
