@@ -43,6 +43,7 @@ namespace uu_library_app
         }
 
 
+
         private void Add_Books_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -55,6 +56,11 @@ namespace uu_library_app
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ScrollBars = ScrollBars.None;
+            cmbKategori.Text = "";
+            if (cmbKategori.Text == "")
+                cmbKategori.Text = "Select one of the answers";
+
             #region crud1
             try
             {
@@ -86,6 +92,7 @@ namespace uu_library_app
                 cmbKategori.DataSource = dsCategories.Tables[0];
                 cmbKategori.DisplayMember = "name";
                 cmbKategori.ValueMember = "id";
+                cmbKategori.Text = "";
 
                 //Konum
                 cmbKonum.DataSource = dsLocations.Tables[0];

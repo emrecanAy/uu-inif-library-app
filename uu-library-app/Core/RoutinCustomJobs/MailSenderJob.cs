@@ -31,7 +31,7 @@ namespace uu_library_app.Core.RoutinCustomJobs
                     Book book = bookManager.getById(depositBook.BookId);
                     Author author = authorManager.getById(book.AuthorId);
                     string pastDays = daysPast.ToString();
-
+                      
                     if (daysPast == -3) //bu günü helperda static olarak tutalım. oradan düzenleriz sadece. veya gecikme süresi kısmı ui'da da seçtirebiliriz.
                     {
                         pastDays = pastDays.Substring(1);

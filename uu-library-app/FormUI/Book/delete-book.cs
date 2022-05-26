@@ -34,12 +34,12 @@ namespace uu_library_app
             txtIsbn.Clear();
             txtSayfaSayisi.Clear();
             txtStokAdet.Clear();
-            cmbDil.Text = "";
-            cmbKategori.Text = "";
-            cmbKonum.Text = "";
-            cmbYayinevi.Text = "";
-            cmbYazar.Text = "";
-            cmbDil.ResetText();
+            txtDil.Text = "";
+            txtKategori.Text = "";
+            txtKonum.Text = "";
+            txtYayinevi.Text = "";
+            txtYazar.Text = "";
+            txtDil.ResetText();
         }
 
 
@@ -55,6 +55,7 @@ namespace uu_library_app
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ScrollBars = ScrollBars.None;
             #region
             conn.Open();
             DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
@@ -93,12 +94,13 @@ namespace uu_library_app
             txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtYayinlanmaTarihi.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            txtYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
         }
 

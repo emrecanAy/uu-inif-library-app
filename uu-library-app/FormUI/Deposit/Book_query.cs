@@ -46,6 +46,7 @@ namespace uu_library_app.FormUI.Deposit
             dgvDeneme.Columns[7].Visible = false;
             dgvDeneme.Columns[8].Visible = false;
             dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+            dgvDeneme.ScrollBars = ScrollBars.None;
 
 
 

@@ -51,12 +51,6 @@ namespace uu_library_app
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.cmbYazar = new System.Windows.Forms.ComboBox();
-            this.cmbKonum = new System.Windows.Forms.ComboBox();
-            this.cmbYayinevi = new System.Windows.Forms.ComboBox();
-            this.cmbKategori = new System.Windows.Forms.ComboBox();
-            this.cmbDil = new System.Windows.Forms.ComboBox();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtCevirmen = new System.Windows.Forms.TextBox();
@@ -106,6 +100,12 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.cmbYayinevi = new System.Windows.Forms.ComboBox();
+            this.cmbDil = new System.Windows.Forms.ComboBox();
+            this.cmbYazar = new System.Windows.Forms.ComboBox();
+            this.cmbKonum = new System.Windows.Forms.ComboBox();
+            this.cmbKategori = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -351,79 +351,6 @@ namespace uu_library_app
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(164, 1);
             this.panel19.TabIndex = 297;
-            // 
-            // cmbYazar
-            // 
-            this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbYazar.ForeColor = System.Drawing.Color.White;
-            this.cmbYazar.FormattingEnabled = true;
-            this.cmbYazar.Location = new System.Drawing.Point(79, 634);
-            this.cmbYazar.Name = "cmbYazar";
-            this.cmbYazar.Size = new System.Drawing.Size(164, 31);
-            this.cmbYazar.TabIndex = 307;
-            // 
-            // cmbKonum
-            // 
-            this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbKonum.ForeColor = System.Drawing.Color.White;
-            this.cmbKonum.FormattingEnabled = true;
-            this.cmbKonum.Location = new System.Drawing.Point(78, 283);
-            this.cmbKonum.Name = "cmbKonum";
-            this.cmbKonum.Size = new System.Drawing.Size(164, 31);
-            this.cmbKonum.TabIndex = 306;
-            // 
-            // cmbYayinevi
-            // 
-            this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
-            this.cmbYayinevi.FormattingEnabled = true;
-            this.cmbYayinevi.Location = new System.Drawing.Point(336, 163);
-            this.cmbYayinevi.Name = "cmbYayinevi";
-            this.cmbYayinevi.Size = new System.Drawing.Size(164, 31);
-            this.cmbYayinevi.TabIndex = 305;
-            // 
-            // cmbKategori
-            // 
-            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbKategori.ForeColor = System.Drawing.Color.White;
-            this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(78, 163);
-            this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
-            this.cmbKategori.TabIndex = 304;
-            // 
-            // cmbDil
-            // 
-            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbDil.ForeColor = System.Drawing.Color.White;
-            this.cmbDil.FormattingEnabled = true;
-            this.cmbDil.Location = new System.Drawing.Point(336, 52);
-            this.cmbDil.Name = "cmbDil";
-            this.cmbDil.Size = new System.Drawing.Size(164, 31);
-            this.cmbDil.TabIndex = 303;
-            // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(336, 399);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(191, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 287;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
             // 
             // pictureBox11
             // 
@@ -953,6 +880,80 @@ namespace uu_library_app
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(336, 399);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(191, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 287;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
+            // cmbYayinevi
+            // 
+            this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
+            this.cmbYayinevi.FormattingEnabled = true;
+            this.cmbYayinevi.Location = new System.Drawing.Point(336, 163);
+            this.cmbYayinevi.Name = "cmbYayinevi";
+            this.cmbYayinevi.Size = new System.Drawing.Size(164, 31);
+            this.cmbYayinevi.TabIndex = 305;
+            // 
+            // cmbDil
+            // 
+            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbDil.ForeColor = System.Drawing.Color.White;
+            this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.Location = new System.Drawing.Point(336, 52);
+            this.cmbDil.Name = "cmbDil";
+            this.cmbDil.Size = new System.Drawing.Size(164, 31);
+            this.cmbDil.TabIndex = 303;
+            // 
+            // cmbYazar
+            // 
+            this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbYazar.ForeColor = System.Drawing.Color.White;
+            this.cmbYazar.FormattingEnabled = true;
+            this.cmbYazar.Location = new System.Drawing.Point(79, 634);
+            this.cmbYazar.Name = "cmbYazar";
+            this.cmbYazar.Size = new System.Drawing.Size(164, 31);
+            this.cmbYazar.TabIndex = 307;
+            // 
+            // cmbKonum
+            // 
+            this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKonum.ForeColor = System.Drawing.Color.White;
+            this.cmbKonum.FormattingEnabled = true;
+            this.cmbKonum.Location = new System.Drawing.Point(78, 283);
+            this.cmbKonum.Name = "cmbKonum";
+            this.cmbKonum.Size = new System.Drawing.Size(164, 31);
+            this.cmbKonum.TabIndex = 306;
+            // 
+            // cmbKategori
+            // 
+            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKategori.ForeColor = System.Drawing.Color.White;
+            this.cmbKategori.FormattingEnabled = true;
+            this.cmbKategori.Location = new System.Drawing.Point(78, 163);
+            this.cmbKategori.Name = "cmbKategori";
+            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
+            this.cmbKategori.TabIndex = 304;
+            // 
             // edit_book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1016,12 +1017,6 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.ComboBox cmbYazar;
-        private System.Windows.Forms.ComboBox cmbKonum;
-        private System.Windows.Forms.ComboBox cmbYayinevi;
-        private System.Windows.Forms.ComboBox cmbKategori;
-        private System.Windows.Forms.ComboBox cmbDil;
-        private FormUI.Toolbox.DateTime dateTime1;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox txtCevirmen;
@@ -1071,5 +1066,11 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox4;
         private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
+        private FormUI.Toolbox.DateTime dateTime1;
+        private System.Windows.Forms.ComboBox cmbYayinevi;
+        private System.Windows.Forms.ComboBox cmbDil;
+        private System.Windows.Forms.ComboBox cmbYazar;
+        private System.Windows.Forms.ComboBox cmbKonum;
+        private System.Windows.Forms.ComboBox cmbKategori;
     }
 }
