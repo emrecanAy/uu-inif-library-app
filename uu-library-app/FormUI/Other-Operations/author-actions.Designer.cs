@@ -51,14 +51,12 @@ namespace uu_library_app
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.dgwDelete = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +84,7 @@ namespace uu_library_app
             // picboxAd
             // 
             this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(48, 119);
+            this.picboxAd.Location = new System.Drawing.Point(48, 184);
             this.picboxAd.Name = "picboxAd";
             this.picboxAd.Size = new System.Drawing.Size(30, 30);
             this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +94,7 @@ namespace uu_library_app
             // pnlAd
             // 
             this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(48, 155);
+            this.pnlAd.Location = new System.Drawing.Point(48, 220);
             this.pnlAd.Name = "pnlAd";
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 57;
@@ -107,7 +105,7 @@ namespace uu_library_app
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 12F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(87, 121);
+            this.txtAd.Location = new System.Drawing.Point(87, 186);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 22);
             this.txtAd.TabIndex = 56;
@@ -118,7 +116,7 @@ namespace uu_library_app
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(43, 91);
+            this.lblAd.Location = new System.Drawing.Point(43, 156);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(99, 25);
             this.lblAd.TabIndex = 55;
@@ -127,7 +125,7 @@ namespace uu_library_app
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 214);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 279);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +135,7 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(48, 250);
+            this.panel1.Location = new System.Drawing.Point(48, 315);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 1);
             this.panel1.TabIndex = 69;
@@ -148,7 +146,7 @@ namespace uu_library_app
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 12F);
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtSoyad.Location = new System.Drawing.Point(87, 216);
+            this.txtSoyad.Location = new System.Drawing.Point(87, 281);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(164, 22);
             this.txtSoyad.TabIndex = 68;
@@ -159,7 +157,7 @@ namespace uu_library_app
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 186);
+            this.label2.Location = new System.Drawing.Point(43, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 25);
             this.label2.TabIndex = 67;
@@ -184,7 +182,7 @@ namespace uu_library_app
             this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(48, 294);
+            this.btnEkle.Location = new System.Drawing.Point(48, 394);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(203, 43);
             this.btnEkle.TabIndex = 76;
@@ -197,7 +195,7 @@ namespace uu_library_app
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(48, 359);
+            this.btnSil.Location = new System.Drawing.Point(48, 497);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(203, 41);
             this.btnSil.TabIndex = 77;
@@ -210,7 +208,7 @@ namespace uu_library_app
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(48, 423);
+            this.btnGuncelle.Location = new System.Drawing.Point(48, 599);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(203, 45);
             this.btnGuncelle.TabIndex = 78;
@@ -226,7 +224,7 @@ namespace uu_library_app
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(13, 124);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(662, 573);
+            this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 79;
             // 
             // label3
@@ -264,9 +262,9 @@ namespace uu_library_app
             this.panel4.Controls.Add(this.pnlAd);
             this.panel4.Controls.Add(this.txtAd);
             this.panel4.Controls.Add(this.lblAd);
-            this.panel4.Location = new System.Drawing.Point(691, 124);
+            this.panel4.Location = new System.Drawing.Point(897, 121);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(312, 573);
+            this.panel4.Size = new System.Drawing.Size(312, 767);
             this.panel4.TabIndex = 80;
             // 
             // label4
@@ -300,23 +298,12 @@ namespace uu_library_app
             this.txtId.TabIndex = 84;
             this.txtId.Visible = false;
             // 
-            // dgwDelete
-            // 
-            this.dgwDelete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwDelete.Location = new System.Drawing.Point(433, 40);
-            this.dgwDelete.Name = "dgwDelete";
-            this.dgwDelete.Size = new System.Drawing.Size(570, 52);
-            this.dgwDelete.TabIndex = 85;
-            this.dgwDelete.Visible = false;
-            // 
             // author_actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1015, 750);
-            this.Controls.Add(this.dgwDelete);
+            this.ClientSize = new System.Drawing.Size(1255, 900);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel3);
@@ -334,7 +321,6 @@ namespace uu_library_app
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +349,5 @@ namespace uu_library_app
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.DataGridView dgwDelete;
     }
 }

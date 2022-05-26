@@ -51,27 +51,6 @@ namespace uu_library_app
                 lblEmanetVerilenKitap.Text = depositBookManager.getAllUndeposited().Count().ToString();
                 lblTeslimEdilenKitap.Text = depositBookManager.getAllDeposited().Count().ToString();
 
-                string enCokOkunanKitaplar="";
-                string[] booksArr = dataListerHelper.getReadBooks(conn);
-
-                string[] mostFrequentBooks = ArrayFindersHelper.mostFrequentMultiple(booksArr, booksArr.Length);
-
-                //dataListerHelper.getMostFrequentBookData(mostFrequentBooks);
-                foreach(Book book in dataListerHelper.getMostFrequentBookData(mostFrequentBooks))
-                {
-                    enCokOkunanKitaplar += book.BookName;
-                    listEnCokOkunanKitaplar.Items.Add(book.BookName);
-                }
-                lblEnCokOkunanKitaplar.Text = enCokOkunanKitaplar;
-
-                /*
-                En çok okunan kitapların idlerini getReadBooks ile array olarak getir.
-                sonra bu tüm okunmuş kitaplar array'ini getMostFrequentBookData metoduna ver.
-                 
-                 */
-
-
-
                 conn.Close();
             }
             catch (Exception)

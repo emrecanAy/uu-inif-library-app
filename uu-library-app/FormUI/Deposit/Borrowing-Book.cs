@@ -30,10 +30,30 @@ namespace uu_library_app
      
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
+            dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDeneme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvDeneme.EnableHeadersVisualStyles = false;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvDeneme.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
+            DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView2, conn);
 
-            DataListerToTableHelper.listBorrowingBookStudentDataToTable(dataGridView1, conn);
-            DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView3, conn);
-      
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView2.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView2.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -47,45 +67,6 @@ namespace uu_library_app
         }
 
         DataView dataView = new DataView();
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
-        }
-
-        private void txtAra_MouseEnter(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void txtAra_MouseLeave(object sender, EventArgs e)
-        {
-            if (txtAra.Text.Trim() == "")
-            {
-                txtAra.Text = "Öğrenci numarasını giriniz...";
-                txtAra.ForeColor = Color.Silver;
-            }
-
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtOgrenciId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAdSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-        }
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtKitapId.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtKitapAd.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtIsbn.Text = dataGridView3.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtYayinevi.Text = dataGridView3.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtYazar.Text = dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString();
-        }
-
         private void btnEkle_Click(object sender, EventArgs e)
         {
 
@@ -129,6 +110,29 @@ namespace uu_library_app
         private void txtKitapId_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtKitapId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtKitapAd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtIsbn.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtYayinevi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtYazar.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dgvDeneme.DataSource as DataTable).DefaultView.RowFilter =
+           string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }

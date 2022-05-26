@@ -23,28 +23,57 @@ namespace uu_library_app.FormUI.Deposit
 
         private void Book_query_Load(object sender, EventArgs e)
         {
-            DataListerToTableHelper.listStudentDataToTable(dgvOgrenci, conn);
-            
-        }
 
-        private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtOgrenciId.Text = dgvOgrenci.Rows[e.RowIndex].Cells[0].Value.ToString();
-            DataListerToTableHelper.listAllTakenBooksConcatAuthorNameDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
-            DataListerToTableHelper.listUndepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
-            DataListerToTableHelper.listDepositBooksConcatAuthorNameDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
-        }
+            //DataListerHelper.listStudentDataToTable(dgvOgrenci, conn);
+            //DataListerHelper.listStudentDataToTable(dgvDeneme, conn);
+            dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDeneme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvDeneme.EnableHeadersVisualStyles = false;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvDeneme.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Student WHERE deleted=false", conn);
+            da.Fill(dt);
+            dgvDeneme.DataSource = dt;
+            dgvDeneme.ColumnHeadersVisible = false;
+            dgvDeneme.Columns[0].Visible = false;
+            dgvDeneme.Columns[4].Visible = false;
+            dgvDeneme.Columns[5].Visible = false;
+            dgvDeneme.Columns[6].Visible = false;
+            dgvDeneme.Columns[7].Visible = false;
+            dgvDeneme.Columns[8].Visible = false;
+            dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+
+
+            dgvDeneme.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
-            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
+            (dgvDeneme.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+            DataListerHelper.listAllTakenBooksDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listUndepositBooksDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listDepositBooksDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
+        }
+
+        private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+            DataListerHelper.listAllTakenBooksDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listUndepositBooksDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
+            DataListerHelper.listDepositBooksDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
         }
     }
 }

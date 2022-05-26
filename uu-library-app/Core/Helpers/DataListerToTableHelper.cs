@@ -59,6 +59,24 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        public static void listStudentDataToTableBookQuery(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Student WHERE deleted=false", conn);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            //dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            //dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            //dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            //dataGrid.EnableHeadersVisualStyles = false;
+            //dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //dataGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            //dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            //dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
         public static void listBorrowingBookStudentDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();

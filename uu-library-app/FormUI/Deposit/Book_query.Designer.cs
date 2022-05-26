@@ -29,49 +29,81 @@ namespace uu_library_app.FormUI.Deposit
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Book_query));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvAlinanKitaplar = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dgvAlinanKitaplar = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvDeneme = new System.Windows.Forms.DataGridView();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvOgrenci = new System.Windows.Forms.DataGridView();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvTeslimEdilmeyenKitaplar = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvTeslimEdilmeyenKitaplar = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dgvTeslimEdilenKitaplar = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dgvTeslimEdilenKitaplar = new System.Windows.Forms.DataGridView();
             this.txtOgrenciId = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOgrenci)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilmeyenKitaplar)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.dgvAlinanKitaplar);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.dgvAlinanKitaplar);
             this.panel5.Location = new System.Drawing.Point(12, 102);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(390, 786);
             this.panel5.TabIndex = 241;
+            // 
+            // dgvAlinanKitaplar
+            // 
+            this.dgvAlinanKitaplar.AllowUserToResizeRows = false;
+            this.dgvAlinanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlinanKitaplar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvAlinanKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAlinanKitaplar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvAlinanKitaplar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlinanKitaplar.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlinanKitaplar.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvAlinanKitaplar.GridColor = System.Drawing.Color.White;
+            this.dgvAlinanKitaplar.Location = new System.Drawing.Point(8, 32);
+            this.dgvAlinanKitaplar.Name = "dgvAlinanKitaplar";
+            this.dgvAlinanKitaplar.ReadOnly = true;
+            this.dgvAlinanKitaplar.RowHeadersVisible = false;
+            this.dgvAlinanKitaplar.RowTemplate.Height = 30;
+            this.dgvAlinanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAlinanKitaplar.Size = new System.Drawing.Size(377, 749);
+            this.dgvAlinanKitaplar.TabIndex = 272;
             // 
             // label2
             // 
@@ -92,27 +124,45 @@ namespace uu_library_app.FormUI.Deposit
             this.panel6.Size = new System.Drawing.Size(700, 1);
             this.panel6.TabIndex = 234;
             // 
-            // dgvAlinanKitaplar
-            // 
-            this.dgvAlinanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlinanKitaplar.Location = new System.Drawing.Point(3, 28);
-            this.dgvAlinanKitaplar.Name = "dgvAlinanKitaplar";
-            this.dgvAlinanKitaplar.ReadOnly = true;
-            this.dgvAlinanKitaplar.Size = new System.Drawing.Size(382, 753);
-            this.dgvAlinanKitaplar.TabIndex = 231;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.dgvDeneme);
             this.panel4.Controls.Add(this.wehTextBox1);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.dgvOgrenci);
             this.panel4.Location = new System.Drawing.Point(751, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(492, 84);
             this.panel4.TabIndex = 240;
+            // 
+            // dgvDeneme
+            // 
+            this.dgvDeneme.AllowUserToResizeRows = false;
+            this.dgvDeneme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeneme.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvDeneme.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDeneme.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvDeneme.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeneme.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvDeneme.GridColor = System.Drawing.Color.White;
+            this.dgvDeneme.Location = new System.Drawing.Point(3, 42);
+            this.dgvDeneme.Name = "dgvDeneme";
+            this.dgvDeneme.ReadOnly = true;
+            this.dgvDeneme.RowHeadersVisible = false;
+            this.dgvDeneme.RowTemplate.Height = 30;
+            this.dgvDeneme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeneme.Size = new System.Drawing.Size(477, 37);
+            this.dgvDeneme.TabIndex = 273;
+            this.dgvDeneme.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDeneme_CellClick);
             // 
             // wehTextBox1
             // 
@@ -122,50 +172,19 @@ namespace uu_library_app.FormUI.Deposit
             this.wehTextBox1.BorderSize = 1;
             this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(109, 8);
+            this.wehTextBox1.Location = new System.Drawing.Point(40, 8);
             this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.wehTextBox1.Multiline = false;
             this.wehTextBox1.Name = "wehTextBox1";
             this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.wehTextBox1.PasswordChar = false;
             this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Öğrenci Numarası Giriniz !";
-            this.wehTextBox1.Size = new System.Drawing.Size(371, 29);
+            this.wehTextBox1.PlaceholderText = "Lütfen Geçerli Bir Öğrenci Numarası Giriniz !";
+            this.wehTextBox1.Size = new System.Drawing.Size(440, 29);
             this.wehTextBox1.TabIndex = 236;
             this.wehTextBox1.Texts = "";
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 21);
-            this.label3.TabIndex = 235;
-            this.label3.Text = "Öğrenci No:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel1.Location = new System.Drawing.Point(-1, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 1);
-            this.panel1.TabIndex = 234;
-            // 
-            // dgvOgrenci
-            // 
-            this.dgvOgrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvOgrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOgrenci.Location = new System.Drawing.Point(3, 48);
-            this.dgvOgrenci.Name = "dgvOgrenci";
-            this.dgvOgrenci.ReadOnly = true;
-            this.dgvOgrenci.RowTemplate.Height = 30;
-            this.dgvOgrenci.Size = new System.Drawing.Size(484, 31);
-            this.dgvOgrenci.TabIndex = 231;
-            this.dgvOgrenci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOgrenci_CellClick);
             // 
             // txtAra
             // 
@@ -177,7 +196,6 @@ namespace uu_library_app.FormUI.Deposit
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(371, 27);
             this.txtAra.TabIndex = 270;
-            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
             // picboxBack
             // 
@@ -204,13 +222,41 @@ namespace uu_library_app.FormUI.Deposit
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dgvTeslimEdilmeyenKitaplar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dgvTeslimEdilmeyenKitaplar);
             this.panel2.Location = new System.Drawing.Point(432, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(390, 786);
             this.panel2.TabIndex = 242;
+            // 
+            // dgvTeslimEdilmeyenKitaplar
+            // 
+            this.dgvTeslimEdilmeyenKitaplar.AllowUserToResizeRows = false;
+            this.dgvTeslimEdilmeyenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeslimEdilmeyenKitaplar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvTeslimEdilmeyenKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTeslimEdilmeyenKitaplar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvTeslimEdilmeyenKitaplar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTeslimEdilmeyenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeslimEdilmeyenKitaplar.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTeslimEdilmeyenKitaplar.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvTeslimEdilmeyenKitaplar.GridColor = System.Drawing.Color.White;
+            this.dgvTeslimEdilmeyenKitaplar.Location = new System.Drawing.Point(3, 32);
+            this.dgvTeslimEdilmeyenKitaplar.Name = "dgvTeslimEdilmeyenKitaplar";
+            this.dgvTeslimEdilmeyenKitaplar.ReadOnly = true;
+            this.dgvTeslimEdilmeyenKitaplar.RowHeadersVisible = false;
+            this.dgvTeslimEdilmeyenKitaplar.RowTemplate.Height = 30;
+            this.dgvTeslimEdilmeyenKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTeslimEdilmeyenKitaplar.Size = new System.Drawing.Size(382, 749);
+            this.dgvTeslimEdilmeyenKitaplar.TabIndex = 273;
             // 
             // label1
             // 
@@ -231,26 +277,44 @@ namespace uu_library_app.FormUI.Deposit
             this.panel3.Size = new System.Drawing.Size(700, 1);
             this.panel3.TabIndex = 234;
             // 
-            // dgvTeslimEdilmeyenKitaplar
-            // 
-            this.dgvTeslimEdilmeyenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTeslimEdilmeyenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTeslimEdilmeyenKitaplar.Location = new System.Drawing.Point(3, 28);
-            this.dgvTeslimEdilmeyenKitaplar.Name = "dgvTeslimEdilmeyenKitaplar";
-            this.dgvTeslimEdilmeyenKitaplar.ReadOnly = true;
-            this.dgvTeslimEdilmeyenKitaplar.Size = new System.Drawing.Size(382, 753);
-            this.dgvTeslimEdilmeyenKitaplar.TabIndex = 231;
-            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.dgvTeslimEdilenKitaplar);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.dgvTeslimEdilenKitaplar);
             this.panel7.Location = new System.Drawing.Point(853, 102);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(390, 786);
             this.panel7.TabIndex = 243;
+            // 
+            // dgvTeslimEdilenKitaplar
+            // 
+            this.dgvTeslimEdilenKitaplar.AllowUserToResizeRows = false;
+            this.dgvTeslimEdilenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeslimEdilenKitaplar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvTeslimEdilenKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTeslimEdilenKitaplar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvTeslimEdilenKitaplar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTeslimEdilenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeslimEdilenKitaplar.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTeslimEdilenKitaplar.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvTeslimEdilenKitaplar.GridColor = System.Drawing.Color.White;
+            this.dgvTeslimEdilenKitaplar.Location = new System.Drawing.Point(3, 32);
+            this.dgvTeslimEdilenKitaplar.Name = "dgvTeslimEdilenKitaplar";
+            this.dgvTeslimEdilenKitaplar.ReadOnly = true;
+            this.dgvTeslimEdilenKitaplar.RowHeadersVisible = false;
+            this.dgvTeslimEdilenKitaplar.RowTemplate.Height = 30;
+            this.dgvTeslimEdilenKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTeslimEdilenKitaplar.Size = new System.Drawing.Size(382, 749);
+            this.dgvTeslimEdilenKitaplar.TabIndex = 274;
             // 
             // label4
             // 
@@ -271,16 +335,6 @@ namespace uu_library_app.FormUI.Deposit
             this.panel8.Size = new System.Drawing.Size(700, 1);
             this.panel8.TabIndex = 234;
             // 
-            // dgvTeslimEdilenKitaplar
-            // 
-            this.dgvTeslimEdilenKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTeslimEdilenKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTeslimEdilenKitaplar.Location = new System.Drawing.Point(3, 28);
-            this.dgvTeslimEdilenKitaplar.Name = "dgvTeslimEdilenKitaplar";
-            this.dgvTeslimEdilenKitaplar.ReadOnly = true;
-            this.dgvTeslimEdilenKitaplar.Size = new System.Drawing.Size(382, 753);
-            this.dgvTeslimEdilenKitaplar.TabIndex = 231;
-            // 
             // txtOgrenciId
             // 
             this.txtOgrenciId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -293,6 +347,15 @@ namespace uu_library_app.FormUI.Deposit
             this.txtOgrenciId.Size = new System.Drawing.Size(50, 27);
             this.txtOgrenciId.TabIndex = 271;
             this.txtOgrenciId.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 272;
+            this.pictureBox1.TabStop = false;
             // 
             // Book_query
             // 
@@ -316,8 +379,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOgrenci)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -325,6 +387,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,23 +398,22 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dgvAlinanKitaplar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtAra;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvOgrenci;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvTeslimEdilmeyenKitaplar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView dgvTeslimEdilenKitaplar;
         private System.Windows.Forms.TextBox txtOgrenciId;
         private TextBoxHelper.WehTextBox wehTextBox1;
+        private System.Windows.Forms.DataGridView dgvAlinanKitaplar;
+        private System.Windows.Forms.DataGridView dgvTeslimEdilmeyenKitaplar;
+        private System.Windows.Forms.DataGridView dgvTeslimEdilenKitaplar;
+        private System.Windows.Forms.DataGridView dgvDeneme;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

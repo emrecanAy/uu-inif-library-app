@@ -55,12 +55,6 @@ namespace uu_library_app
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-            ToolTip Aciklama = new ToolTip();
-            Aciklama.ToolTipTitle = "Kitap Adı Giriniz !";
-            Aciklama.ToolTipIcon = ToolTipIcon.Info;
-            Aciklama.IsBalloon = true;
-            Aciklama.SetToolTip(txtAra, "    ");
             #region crud1
             try
             {
@@ -171,15 +165,10 @@ namespace uu_library_app
              */
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-          string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
-        }
-
-        private void txtAra_MouseEnter(object sender, EventArgs e)
-        {
-
+          string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }

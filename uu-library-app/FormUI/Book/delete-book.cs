@@ -62,16 +62,6 @@ namespace uu_library_app
             #endregion
         }
 
-      
-
-      
-
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
-        }
-
         private void btnSil_Click(object sender, EventArgs e)
         {
             if (txtId.Text == "")
@@ -109,6 +99,13 @@ namespace uu_library_app
             cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+           string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }

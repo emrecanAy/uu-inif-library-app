@@ -107,17 +107,6 @@ namespace uu_library_app
 
             #endregion
         }
-
-        
-
-      
-
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
-        }
-
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "")
@@ -140,6 +129,12 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
                 throw;
             }
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+          string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

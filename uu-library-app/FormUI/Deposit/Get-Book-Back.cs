@@ -54,20 +54,20 @@ namespace uu_library_app
         private void Get_Book_Back_Load(object sender, EventArgs e)
         {
             DataListerToTableHelper.listStudentDataToTable(dgvOgrenci, conn);
+            dgvDahaOnceAlinanKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDahaOnceAlinanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDahaOnceAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvDahaOnceAlinanKitaplar.EnableHeadersVisualStyles = false;
+            dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvDahaOnceAlinanKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvDahaOnceAlinanKitaplar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
-        private void dgvOgrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-        private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtOgrenciId.Text = dgvOgrenci.Rows[e.RowIndex].Cells[0].Value.ToString();
-            conn.Open();
-            listDataToTable();
-            conn.Close();
-
-        }
+       
+  
 
         private void txtOgrenciId_TextChanged(object sender, EventArgs e)
         {
@@ -79,15 +79,9 @@ namespace uu_library_app
             
         }
 
-        private void dgvOgrenci_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
 
-        private void dgvOgrenci_DataSourceChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void dgvDahaOnceAlinanKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -154,16 +148,34 @@ namespace uu_library_app
             
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
-        }
-
         private void txtKitapAra_TextChanged(object sender, EventArgs e)
         {
             (dgvDahaOnceAlinanKitaplar.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtKitapAra.Text);
+        }
+
+        private void dgvOgrenci_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOgrenciId.Text = dgvOgrenci.Rows[e.RowIndex].Cells[0].Value.ToString();
+            conn.Open();
+            listDataToTable();
+            conn.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtKitapId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[9].Value.ToString();
+            txtAd.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtYayinevi.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtIsbn.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtYazar.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[6].Value.ToString() + " " + dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtDepositBookId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[10].Value.ToString();
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }
