@@ -44,11 +44,18 @@ namespace uu_library_app
             this.panel2 = new System.Windows.Forms.Panel();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dateTime2 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -122,6 +129,7 @@ namespace uu_library_app
             // cmbAranacakAlan
             // 
             this.cmbAranacakAlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbAranacakAlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAranacakAlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAranacakAlan.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbAranacakAlan.ForeColor = System.Drawing.Color.White;
@@ -200,12 +208,74 @@ namespace uu_library_app
             this.label1.TabIndex = 242;
             this.label1.Text = "Öğrenci Listeleme";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(806, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 21);
+            this.label2.TabIndex = 291;
+            this.label2.Text = "Tarih Aralığı :";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox2);
+            this.panel7.Controls.Add(this.dateTime2);
+            this.panel7.Controls.Add(this.dateTime1);
+            this.panel7.Location = new System.Drawing.Point(810, 43);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(435, 68);
+            this.panel7.TabIndex = 292;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(208, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 291;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dateTime2
+            // 
+            this.dateTime2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime2.BorderSize = 0;
+            this.dateTime2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime2.Location = new System.Drawing.Point(239, 19);
+            this.dateTime2.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime2.Name = "dateTime2";
+            this.dateTime2.Size = new System.Drawing.Size(191, 35);
+            this.dateTime2.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime2.TabIndex = 289;
+            this.dateTime2.TextColor = System.Drawing.Color.White;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.CustomFormat = "";
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(-1, 19);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(196, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 288;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
             // student_listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);
@@ -221,6 +291,8 @@ namespace uu_library_app
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +313,10 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FormUI.Toolbox.DateTime dateTime2;
+        private FormUI.Toolbox.DateTime dateTime1;
     }
 }

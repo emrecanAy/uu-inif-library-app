@@ -104,8 +104,8 @@ namespace uu_library_app
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -122,8 +122,8 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSil
@@ -259,6 +259,7 @@ namespace uu_library_app
             // cmbYazar
             // 
             this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYazar.ForeColor = System.Drawing.Color.White;
@@ -271,6 +272,7 @@ namespace uu_library_app
             // cmbKonum
             // 
             this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbKonum.ForeColor = System.Drawing.Color.White;
@@ -283,6 +285,7 @@ namespace uu_library_app
             // cmbYayinevi
             // 
             this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
@@ -295,6 +298,7 @@ namespace uu_library_app
             // cmbKategori
             // 
             this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbKategori.ForeColor = System.Drawing.Color.White;
@@ -307,6 +311,7 @@ namespace uu_library_app
             // cmbDil
             // 
             this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbDil.ForeColor = System.Drawing.Color.White;
@@ -901,17 +906,6 @@ namespace uu_library_app
             this.panel4.Size = new System.Drawing.Size(674, 756);
             this.panel4.TabIndex = 257;
             // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 255;
-            this.picboxBack.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -939,6 +933,17 @@ namespace uu_library_app
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(666, 748);
             this.dataGridView1.TabIndex = 85;
+            // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 255;
+            this.picboxBack.TabStop = false;
             // 
             // delete_book
             // 
@@ -975,8 +980,8 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,11 +29,12 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEkle = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@ namespace uu_library_app
             this.txtSayfaSayisi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -104,9 +106,8 @@ namespace uu_library_app
             this.lblBaslik = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -123,7 +124,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -159,6 +159,34 @@ namespace uu_library_app
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(674, 756);
             this.panel4.TabIndex = 248;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(666, 748);
+            this.dataGridView1.TabIndex = 84;
             // 
             // btnEkle
             // 
@@ -304,6 +332,7 @@ namespace uu_library_app
             // cmbYazar
             // 
             this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYazar.ForeColor = System.Drawing.Color.White;
@@ -316,6 +345,7 @@ namespace uu_library_app
             // cmbKonum
             // 
             this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbKonum.ForeColor = System.Drawing.Color.White;
@@ -328,6 +358,7 @@ namespace uu_library_app
             // cmbYayinevi
             // 
             this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
@@ -340,6 +371,7 @@ namespace uu_library_app
             // cmbKategori
             // 
             this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbKategori.ForeColor = System.Drawing.Color.White;
@@ -352,6 +384,7 @@ namespace uu_library_app
             // cmbDil
             // 
             this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbDil.ForeColor = System.Drawing.Color.White;
@@ -628,6 +661,19 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 756);
             this.panel1.TabIndex = 247;
             // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(336, 399);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(191, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 287;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
@@ -900,47 +946,6 @@ namespace uu_library_app
             this.panel9.Size = new System.Drawing.Size(305, 1);
             this.panel9.TabIndex = 253;
             // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(336, 399);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(191, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 287;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(666, 748);
-            this.dataGridView1.TabIndex = 84;
-            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -960,6 +965,7 @@ namespace uu_library_app
             this.Text = "Kitap_Ekle";
             this.Load += new System.EventHandler(this.Add_Books_Load);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -977,7 +983,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

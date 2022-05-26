@@ -201,6 +201,7 @@ namespace uu_library_app
             this.txtBolum.ForeColor = System.Drawing.Color.White;
             this.txtBolum.Location = new System.Drawing.Point(57, 494);
             this.txtBolum.Name = "txtBolum";
+            this.txtBolum.ReadOnly = true;
             this.txtBolum.Size = new System.Drawing.Size(445, 27);
             this.txtBolum.TabIndex = 39;
             // 
@@ -296,6 +297,7 @@ namespace uu_library_app
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(57, 154);
             this.txtAd.Name = "txtAd";
+            this.txtAd.ReadOnly = true;
             this.txtAd.Size = new System.Drawing.Size(164, 27);
             this.txtAd.TabIndex = 1;
             // 
@@ -326,6 +328,7 @@ namespace uu_library_app
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
             this.txtSoyad.Location = new System.Drawing.Point(332, 154);
             this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.ReadOnly = true;
             this.txtSoyad.Size = new System.Drawing.Size(164, 27);
             this.txtSoyad.TabIndex = 2;
             // 
@@ -416,6 +419,7 @@ namespace uu_library_app
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(57, 266);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(439, 27);
             this.txtEmail.TabIndex = 3;
             // 
@@ -457,6 +461,7 @@ namespace uu_library_app
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(57, 380);
             this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.ReadOnly = true;
             this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
             this.txtOkulNo.TabIndex = 4;
             // 
