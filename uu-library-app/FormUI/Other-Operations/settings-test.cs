@@ -25,8 +25,8 @@ namespace uu_library_app.FormUI.Other_Operations
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Settings settings = new Settings(settingsManager.getSettings().Id, txtSenderPassword.Text, Convert.ToInt32(numericRemindingDay.Value), Convert.ToInt32(numericDepositDay.Value), txtRemindingMailHeader.Text, richRemindMailText.Text, txtExpiredMailHeader.Text, richExpiredMailText.Text);
-            settingsManager.Update(settings);
+        //    Settings settings = new Settings(settingsManager.getSettings().Id, txtSenderPassword.Text, Convert.ToInt32(numericRemindingDay.Value), Convert.ToInt32(numericDepositDay.Value), txtRemindingMailHeader.Text, richRemindMailText.Text, txtExpiredMailHeader.Text, richExpiredMailText.Text);
+        //    settingsManager.Update(settings);
         }
     }
 }

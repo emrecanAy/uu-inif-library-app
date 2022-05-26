@@ -58,7 +58,7 @@ namespace uu_library_app.FormUI.TextBoxHelper
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WehTextBox";
             this.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.Size = new System.Drawing.Size(250, 30);
+            this.Size = new System.Drawing.Size(250, 25);
             this.ResumeLayout(false);
             this.PerformLayout();
 

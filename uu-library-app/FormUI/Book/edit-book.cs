@@ -44,7 +44,17 @@ namespace uu_library_app
 
         private void edit_book_Load(object sender, EventArgs e)
         {
-            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            
             #region crud1
             conn.Open();
             DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
@@ -98,22 +108,14 @@ namespace uu_library_app
             #endregion
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString(); //ciltNo eklenecek
-            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+        
 
+      
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -123,7 +125,7 @@ namespace uu_library_app
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
             }
-            
+
             Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
 
             try
@@ -139,10 +141,22 @@ namespace uu_library_app
                 throw;
             }
         }
-        private void txtAra_TextChanged_1(object sender, EventArgs e)
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", txtAra.Text);
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString(); //ciltNo eklenecek
+            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

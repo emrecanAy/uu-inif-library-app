@@ -30,20 +30,25 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(book_listing));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbAranacakAlan = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtAra = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbAranacakAlan = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picboxBack
@@ -71,28 +76,56 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.cmbAranacakAlan);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(991, 627);
+            this.panel1.Size = new System.Drawing.Size(1233, 777);
             this.panel1.TabIndex = 89;
+            // 
+            // cmbAranacakAlan
+            // 
+            this.cmbAranacakAlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbAranacakAlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAranacakAlan.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbAranacakAlan.ForeColor = System.Drawing.Color.White;
+            this.cmbAranacakAlan.FormattingEnabled = true;
+            this.cmbAranacakAlan.Location = new System.Drawing.Point(149, 2);
+            this.cmbAranacakAlan.Name = "cmbAranacakAlan";
+            this.cmbAranacakAlan.Size = new System.Drawing.Size(292, 31);
+            this.cmbAranacakAlan.TabIndex = 241;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(983, 583);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1225, 733);
             this.dataGridView1.TabIndex = 83;
             // 
             // label3
@@ -111,17 +144,17 @@ namespace uu_library_app
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.panel2.Location = new System.Drawing.Point(-1, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 1);
+            this.panel2.Size = new System.Drawing.Size(1233, 1);
             this.panel2.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.txtAra);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(511, 111);
+            this.panel4.Location = new System.Drawing.Point(810, 111);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 37);
+            this.panel4.Size = new System.Drawing.Size(435, 37);
             this.panel4.TabIndex = 241;
             // 
             // txtAra
@@ -130,41 +163,49 @@ namespace uu_library_app
             this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtAra.ForeColor = System.Drawing.Color.White;
-            this.txtAra.Location = new System.Drawing.Point(45, 6);
+            this.txtAra.Location = new System.Drawing.Point(37, 4);
             this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(430, 27);
+            this.txtAra.Size = new System.Drawing.Size(393, 27);
             this.txtAra.TabIndex = 270;
             this.txtAra.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 21);
-            this.label2.TabIndex = 235;
-            this.label2.Text = "Ara:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 271;
+            this.pictureBox1.TabStop = false;
             // 
-            // cmbAranacakAlan
+            // panel3
             // 
-            this.cmbAranacakAlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbAranacakAlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAranacakAlan.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbAranacakAlan.ForeColor = System.Drawing.Color.White;
-            this.cmbAranacakAlan.FormattingEnabled = true;
-            this.cmbAranacakAlan.Location = new System.Drawing.Point(148, 3);
-            this.cmbAranacakAlan.Name = "cmbAranacakAlan";
-            this.cmbAranacakAlan.Size = new System.Drawing.Size(344, 31);
-            this.cmbAranacakAlan.TabIndex = 241;
+            this.panel3.Location = new System.Drawing.Point(149, 32);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(292, 1);
+            this.panel3.TabIndex = 242;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(149, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(292, 1);
+            this.panel5.TabIndex = 243;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(149, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 31);
+            this.panel6.TabIndex = 242;
             // 
             // book_listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1015, 750);
+            this.ClientSize = new System.Drawing.Size(1255, 900);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);
@@ -179,6 +220,7 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +236,10 @@ namespace uu_library_app
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtAra;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbAranacakAlan;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
     }
 }
