@@ -35,13 +35,13 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        public void Delete(string id)
+        public void Delete(Author author)
         {
             conn.Open();
             try
             {
                 MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Author SET deleted=1 WHERE id=@p1 ", conn);
-                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.Parameters.AddWithValue("@p1", author.id);
                 commandToUpdate.ExecuteNonQuery();
 
             }

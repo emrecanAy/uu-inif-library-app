@@ -26,11 +26,11 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(string id)
+        public void Delete(Author author)
         {
-            if(id != null)
+            if(author != null)
             {
-                _service.Delete(id);
+                _service.Delete(author);
             }
         }
 

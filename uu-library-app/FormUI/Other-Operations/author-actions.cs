@@ -89,10 +89,14 @@ namespace uu_library_app
             
             try
             {
-                manager.Delete(txtId.Text);
-                //burada log yapılacak.
-                listDataToTable();
+                
+                Author authorToDelete = new Author(txtId.Text,txtAd.Text,txtSoyad.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString() ,_admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ] silindi! -Tarih: " + DateTime.Now);
+                manager.Delete(authorToDelete);
+                logger.Log(log);
                 clearAllFields();
+                MessageBox.Show("Başarıyla silindi...");
+
             }
             catch (Exception)
             {

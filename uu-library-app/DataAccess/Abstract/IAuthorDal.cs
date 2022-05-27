@@ -12,7 +12,7 @@ namespace uu_library_app.DataAccess.Abstract
         List<Author> getAll();
         void Add(Author author);
         void Update(Author author);
-        void Delete(string id);
+        void Delete(Author author);
         Author getById(string id);
     }
 }
