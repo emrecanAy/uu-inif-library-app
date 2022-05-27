@@ -106,6 +106,13 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.btnHızlıKonum = new System.Windows.Forms.Button();
+            this.btnHızlıBolum = new System.Windows.Forms.Button();
+            this.btnHızlıKategori = new System.Windows.Forms.Button();
+            this.btnHızlıDil = new System.Windows.Forms.Button();
+            this.btnHızlıYayinevi = new System.Windows.Forms.Button();
+            this.btnHızlıYazar = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
@@ -125,6 +132,7 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel24.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtId
@@ -957,12 +965,98 @@ namespace uu_library_app
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.btnHızlıKonum);
+            this.panel24.Controls.Add(this.btnHızlıBolum);
+            this.panel24.Controls.Add(this.btnHızlıKategori);
+            this.panel24.Controls.Add(this.btnHızlıDil);
+            this.panel24.Controls.Add(this.btnHızlıYayinevi);
+            this.panel24.Controls.Add(this.btnHızlıYazar);
+            this.panel24.Location = new System.Drawing.Point(755, 12);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(488, 35);
+            this.panel24.TabIndex = 255;
+            // 
+            // btnHızlıKonum
+            // 
+            this.btnHızlıKonum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıKonum.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıKonum.Location = new System.Drawing.Point(408, 0);
+            this.btnHızlıKonum.Name = "btnHızlıKonum";
+            this.btnHızlıKonum.Size = new System.Drawing.Size(80, 35);
+            this.btnHızlıKonum.TabIndex = 260;
+            this.btnHızlıKonum.Text = "Konum Ekle";
+            this.btnHızlıKonum.UseVisualStyleBackColor = true;
+            // 
+            // btnHızlıBolum
+            // 
+            this.btnHızlıBolum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıBolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıBolum.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıBolum.Location = new System.Drawing.Point(328, 0);
+            this.btnHızlıBolum.Name = "btnHızlıBolum";
+            this.btnHızlıBolum.Size = new System.Drawing.Size(80, 35);
+            this.btnHızlıBolum.TabIndex = 259;
+            this.btnHızlıBolum.Text = "Bölüm Ekle";
+            this.btnHızlıBolum.UseVisualStyleBackColor = true;
+            // 
+            // btnHızlıKategori
+            // 
+            this.btnHızlıKategori.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıKategori.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıKategori.Location = new System.Drawing.Point(246, 0);
+            this.btnHızlıKategori.Name = "btnHızlıKategori";
+            this.btnHızlıKategori.Size = new System.Drawing.Size(82, 35);
+            this.btnHızlıKategori.TabIndex = 258;
+            this.btnHızlıKategori.Text = "Kategori Ekle";
+            this.btnHızlıKategori.UseVisualStyleBackColor = true;
+            // 
+            // btnHızlıDil
+            // 
+            this.btnHızlıDil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıDil.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıDil.Location = new System.Drawing.Point(164, 0);
+            this.btnHızlıDil.Name = "btnHızlıDil";
+            this.btnHızlıDil.Size = new System.Drawing.Size(82, 35);
+            this.btnHızlıDil.TabIndex = 257;
+            this.btnHızlıDil.Text = "Dil Ekle";
+            this.btnHızlıDil.UseVisualStyleBackColor = true;
+            // 
+            // btnHızlıYayinevi
+            // 
+            this.btnHızlıYayinevi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıYayinevi.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıYayinevi.Location = new System.Drawing.Point(82, 0);
+            this.btnHızlıYayinevi.Name = "btnHızlıYayinevi";
+            this.btnHızlıYayinevi.Size = new System.Drawing.Size(82, 35);
+            this.btnHızlıYayinevi.TabIndex = 256;
+            this.btnHızlıYayinevi.Text = "Yayınevi Ekle";
+            this.btnHızlıYayinevi.UseVisualStyleBackColor = true;
+            // 
+            // btnHızlıYazar
+            // 
+            this.btnHızlıYazar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıYazar.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıYazar.Location = new System.Drawing.Point(0, 0);
+            this.btnHızlıYazar.Name = "btnHızlıYazar";
+            this.btnHızlıYazar.Size = new System.Drawing.Size(82, 35);
+            this.btnHızlıYazar.TabIndex = 255;
+            this.btnHızlıYazar.Text = "Yazar Ekle";
+            this.btnHızlıYazar.UseVisualStyleBackColor = true;
+            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.panel24);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel4);
@@ -993,6 +1087,7 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel24.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1074,5 +1169,12 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox4;
         private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Button btnHızlıKonum;
+        private System.Windows.Forms.Button btnHızlıBolum;
+        private System.Windows.Forms.Button btnHızlıKategori;
+        private System.Windows.Forms.Button btnHızlıDil;
+        private System.Windows.Forms.Button btnHızlıYayinevi;
+        private System.Windows.Forms.Button btnHızlıYazar;
     }
 }

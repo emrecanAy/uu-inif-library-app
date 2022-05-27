@@ -81,6 +81,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -172,6 +173,12 @@
     </Compile>
     <Compile Include="DataAccess\Abstract\IDepositBookDal.cs" />
     <Compile Include="DataAccess\Concrete\DepositBookDal.cs" />
+    <Compile Include="FormUI\Gosterge-Paneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Gosterge-Paneli.Designer.cs">
+      <DependentUpon>Gosterge-Paneli.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Other-Operations\Department-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Gosterge-Paneli.resx">
+      <DependentUpon>Gosterge-Paneli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Department-Operations.resx">
       <DependentUpon>Department-Operations.cs</DependentUpon>
