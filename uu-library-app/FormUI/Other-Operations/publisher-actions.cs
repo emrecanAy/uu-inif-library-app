@@ -17,12 +17,15 @@ namespace uu_library_app
 {
     public partial class publisher_actions : Form
     {
-        public publisher_actions()
+        private Admin _admin;
+        public publisher_actions(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         PublisherManager manager = new PublisherManager(new PublisherDal());
 
         private void listDataToTable()
@@ -59,6 +62,8 @@ namespace uu_library_app
             try
             {
                 manager.Add(publisherToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -102,6 +107,8 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(publisherToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToUpdate.Id + " | " + publisherToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

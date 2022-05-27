@@ -18,11 +18,13 @@ namespace uu_library_app
 {
     public partial class Category_Operations : Form
     {
+        private Admin _admin;
         public Category_Operations()
         {
             InitializeComponent();
         }
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         CategoryManager manager = new CategoryManager(new CategoryDal());
         private void listDataToTable()
         {
@@ -65,6 +67,8 @@ namespace uu_library_app
             try
             {
                 manager.Add(categoryToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -85,6 +89,7 @@ namespace uu_library_app
             try
             {
                 manager.Delete(txtId.Text);
+                //buraya log yapılcak
                 listDataToTable();
                 clearAllFields();
             }
@@ -107,6 +112,8 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(categoryToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

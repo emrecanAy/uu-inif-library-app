@@ -11,17 +11,21 @@ using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app
 {
     public partial class delete_book : Form
     {
-        public delete_book()
+        private Admin _admin;
+        public delete_book(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         BookManager bookManager = new BookManager(new BookDal());
        
         private void clearAllFields()
@@ -73,7 +77,10 @@ namespace uu_library_app
 
             try
             {
-                bookManager.Delete(txtId.Text);
+                Book bookToDelete = new Book(txtId.Text, txtAd.Text, txtDil.Text, txtYazar.Text, txtKategori.Text, txtYayinevi.Text, txtKonum.Text, Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(txtYayinlanmaTarihi.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToDelete.Id + " | " + bookToDelete.BookName + " ] silindi! -Tarih: " + DateTime.Now);
+                bookManager.Delete(bookToDelete);
+                logger.Log(log);
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi...");

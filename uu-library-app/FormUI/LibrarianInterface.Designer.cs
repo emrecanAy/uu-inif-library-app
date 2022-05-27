@@ -59,7 +59,7 @@ namespace uu_library_app.FormUI
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAdmin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
@@ -566,7 +566,7 @@ namespace uu_library_app.FormUI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblAdmin);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -575,16 +575,16 @@ namespace uu_library_app.FormUI
             this.panel2.Size = new System.Drawing.Size(186, 161);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // lblAdmin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(65, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Şenol Şen";
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblAdmin.Location = new System.Drawing.Point(59, 124);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(55, 12);
+            this.lblAdmin.TabIndex = 2;
+            this.lblAdmin.Text = "Şenol Şen";
             // 
             // label1
             // 
@@ -657,7 +657,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelBookSubMenu;

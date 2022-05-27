@@ -34,11 +34,11 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(string id)
+        public void Delete(Book book)
         {
-            if(id != null && id.Length > 0)
+            if(book != null)
             {
-                _service.Delete(id);
+                _service.Delete(book);
             }
         }
 

@@ -215,6 +215,7 @@ namespace uu_library_app
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "login_panel";
             this.Text = "login_panel";
+            this.Load += new System.EventHandler(this.login_panel_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -17,13 +17,17 @@ namespace uu_library_app
 {
     public partial class Add_Books : Form
     {
-        public Add_Books()
+        private Admin _admin;
+        public Add_Books(Admin admin)
         { 
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         BookManager bookManager = new BookManager(new BookDal());
+        LoggerManager logger = new LoggerManager(new LoggerDal());
+        AdminManager adminManager = new AdminManager(new AdminDal());
         private void clearAllFields()
         {
             txtId.Clear();
@@ -142,14 +146,16 @@ namespace uu_library_app
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "")
             {
-
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
             }
+
             Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
             try
             {
                 bookManager.Add(bookToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 MessageBox.Show("Başarıyla eklendi!");
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();

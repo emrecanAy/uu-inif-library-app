@@ -20,13 +20,16 @@ namespace uu_library_app
 {
     public partial class author_actions : Form
     {
+        private Admin _admin;
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         AuthorManager manager = new AuthorManager(new AuthorDal());
 
-        public author_actions()
+        public author_actions(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         private void listDataToTable()
@@ -64,6 +67,8 @@ namespace uu_library_app
             try
             {
                 manager.Add(authorToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToAdd.Id + " | " + authorToAdd.FirstName+" "+authorToAdd.LastName+""+"] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -85,6 +90,7 @@ namespace uu_library_app
             try
             {
                 manager.Delete(txtId.Text);
+                //burada log yapılacak.
                 listDataToTable();
                 clearAllFields();
             }
@@ -108,6 +114,8 @@ namespace uu_library_app
             try
             {
                 manager.Update(authorToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToUpdate.Id + " | " + authorToUpdate.FirstName + " " + authorToUpdate.LastName + "" + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

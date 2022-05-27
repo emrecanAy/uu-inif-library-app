@@ -18,12 +18,15 @@ namespace uu_library_app
 {
     public partial class Borrowing_Book : Form
     {
-        public Borrowing_Book()
+        private Admin _admin;
+        public Borrowing_Book(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
         BookManager bookManager = new BookManager(new BookDal());
@@ -87,12 +90,15 @@ namespace uu_library_app
                 Book book = bookManager.getById(txtKitapId.Text);
                 Console.WriteLine(book.BookName);
                 DepositBook depositBookToAdd = new DepositBook(createGUID, txtOgrenciId.Text, txtKitapId.Text, DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBookToAdd.Id + " | KitapId:" + depositBookToAdd.BookId + " ] ödünç verildi! -Tarih: " + DateTime.Now);
+
                 if (book.StockCount == 0)
                 {
                     MessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları ödünç verildi!");
                     return;
                 }
                 depositBookManager.Add(depositBookToAdd);
+                logger.Log(log);
                 MessageBox.Show("Kitap başarıyla ödünç verildi!");
                 book.StockCount = book.StockCount - 1;
                 bookManager.Update(book);

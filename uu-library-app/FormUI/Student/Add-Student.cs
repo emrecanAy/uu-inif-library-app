@@ -20,6 +20,7 @@ namespace uu_library_app.FormUI
 {
     public partial class Add_Student : Form
     {
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect,
@@ -29,15 +30,18 @@ namespace uu_library_app.FormUI
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public Add_Student()
+
+        Admin _admin;
+        public Add_Student(Admin admin)
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
-
 
         private void Add_Student_Load(object sender, EventArgs e)
         {
@@ -87,6 +91,8 @@ namespace uu_library_app.FormUI
             {
                 Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
                 manager.Add(studentToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 clearAllFields();
                 listDataToTable();
             }

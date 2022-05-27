@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using uu_library_app.FormUI.Other_Operations;
 using uu_library_app.FormUI.Deposit;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.FormUI
 {
@@ -24,7 +25,9 @@ namespace uu_library_app.FormUI
             int nWidthEllipse,
             int nHeightEllipse
             );
-        public LibrarianInterface()
+
+        private Admin _admin;
+        public LibrarianInterface(Admin admin)
         {
             InitializeComponent();
             customizeDesign();
@@ -32,6 +35,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Height = btnDashboard.Height;
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
+            _admin = admin;
         }
         #region Methods
         private void customizeDesign()
@@ -86,6 +90,7 @@ namespace uu_library_app.FormUI
         private void LibrarianInterface_Load(object sender, EventArgs e)
         {
             openChildForm(new Dashboard());
+            lblAdmin.Text = _admin.FirstName + " " + _admin.LastName;
         }
         #region Buttons Click Events
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -182,19 +187,19 @@ namespace uu_library_app.FormUI
         #region CRUD Books Buttons
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            openChildForm(new Add_Books());
+            openChildForm(new Add_Books(_admin));
             hideSubMenu();
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
-            openChildForm(new delete_book());
+            openChildForm(new delete_book(_admin));
             hideSubMenu();
         }
 
         private void btnEditBook_Click(object sender, EventArgs e)
         {
-            openChildForm(new edit_book());
+            openChildForm(new edit_book(_admin));
             hideSubMenu();
         }
 
@@ -233,7 +238,7 @@ namespace uu_library_app.FormUI
 
         private void btnLending_Click(object sender, EventArgs e)
         {
-            openChildForm(new Borrowing_Book());
+            openChildForm(new Borrowing_Book(_admin));
             hideSubMenu();
         }
 

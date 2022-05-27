@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
 
@@ -17,12 +18,15 @@ namespace uu_library_app
 {
     public partial class Department_Operations : Form
     {
-        public Department_Operations()
+        private Admin _admin;
+        public Department_Operations(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         DepartmentManager manager = new DepartmentManager(new DepartmentDal());
 
         private void listDataToTable()
@@ -61,6 +65,8 @@ namespace uu_library_app
             try
             {
                 manager.Add(departmentToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -82,6 +88,7 @@ namespace uu_library_app
             try
             {
                 manager.Delete(txtId.Text);
+                //buraya log yapılacak
                 listDataToTable();
                 clearAllFields();
             }
@@ -105,6 +112,8 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(departmentToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToUpdate.Id + " | " + departmentToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

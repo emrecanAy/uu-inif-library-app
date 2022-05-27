@@ -139,5 +139,32 @@ namespace uu_library_app.DataAccess.Concrete
                 }
             
         }
+
+        public Admin GetById(string id)
+        {
+            Admin admin = new Admin();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Admin WHERE id=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", id);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    admin.id = reader[0].ToString();
+                    admin.FirstName = reader[1].ToString();
+                    admin.LastName = reader[2].ToString();
+                    admin.EMail = reader[3].ToString();
+                    admin.Password = reader[4].ToString();
+                }
+                conn.Close();
+                return admin;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

@@ -79,13 +79,13 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        public void Delete(string id)
+        public void Delete(Book book)
         {
             conn.Open();
             try
             {
                 MySqlCommand commandToSetDeleted = new MySqlCommand("UPDATE Book SET deleted=1 WHERE id=@p1 ", conn);
-                commandToSetDeleted.Parameters.AddWithValue("@p1", id);
+                commandToSetDeleted.Parameters.AddWithValue("@p1", book.id);
                 commandToSetDeleted.ExecuteNonQuery();
 
             }

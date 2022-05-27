@@ -17,12 +17,15 @@ namespace uu_library_app
 {
     public partial class Get_Book_Back : Form
     {
-        public Get_Book_Back()
+        private Admin _admin;
+        public Get_Book_Back(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         BookManager bookManager = new BookManager(new BookDal());
 
@@ -103,29 +106,6 @@ namespace uu_library_app
             DepositBook depositBook = new DepositBook();
             depositBook.Status = true;
             depositBookManager.Update(depositBook);
-            Console.WriteLine("Stok Adet :"+book.StockCount);
-
-            /*
-            datagridde seçilen kitabın count'una okunacak.
-            kitap teslim alındığında o kitabın count'u +1 artırılacak.
-            Yeni sorgu olanağı: count'u 0 olan kitapları getir. count'u 0 olmayan kitaplar    
-             */
-
-            /*
-            
-            -> DepositBook tablosunda teslimAlmaTarihi ve teslimEdilmesiGerekenTarih de tutulmali.
-
-            Kitap ödünç verilirken ödünç ver butonuna basılıp kayıt yapıldığında teslimEdilmesiGerekenTarih
-            default olarak DateTime.Now + 15 olarak kaydedilecek.(15 gün max teslim süresi)
-
-            Kitap teslim alındığında   
-            teslimAlmaTarihi DateTime.Now olarak güncellenecek.
-            Sonra kıyas yapılacak.
-            int kacGunGecikti = teslimAlmaTarihi - teslimEdilmesiGerekenTarih;
-            int cezaPuani = kacGunGecikti * -5; gibi gibi vs vs.
-
-             */
-
 
 
             if (txtDepositBookId.Text == "")
@@ -137,6 +117,8 @@ namespace uu_library_app
             try
             {
                 depositBookManager.depositBook(txtDepositBookId.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBook.Id + " | KitapId:" + depositBook.BookId + " ] teslim alındı! -Tarih: " + DateTime.Now);
+                logger.Log(log);   
                 MessageBox.Show("Kitap başarıyla teslim alındı...");
                 listDataToTable();
             }

@@ -71,5 +71,10 @@ namespace uu_library_app.Business.Concrete
                 _admin.Update(admin);
             }
         }
+
+        public Admin GetById(string id)
+        {
+            return _admin.GetById(id);
+        }
     }
 }

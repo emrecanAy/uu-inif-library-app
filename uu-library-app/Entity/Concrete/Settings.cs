@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class Settings
+    public class Settings : IBaseModelWithIdAndDate
     {
-        private string id;
         private string senderEmail;
         private string senderPassword;
         private int remindingDay;
@@ -17,7 +17,6 @@ namespace uu_library_app.Entity.Concrete
         private string remindingMailText;
         private string expiredMailHeader;
         private string expiredMailText;
-        private DateTime createdAt;
 
         public Settings() { }
         public Settings(string id, string senderEmail, string senderPassword, int remindingDay, int depositDay, string remindingMailHeader, string remindingMailText, string expiredMailHeader, string expiredMailText)

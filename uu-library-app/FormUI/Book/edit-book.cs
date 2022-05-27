@@ -17,12 +17,15 @@ namespace uu_library_app
 {
     public partial class edit_book : Form
     {
-        public edit_book()
+        private Admin _admin;
+        public edit_book(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         BookManager bookManager = new BookManager(new BookDal());
         private void clearAllFields()
         {
@@ -117,10 +120,11 @@ namespace uu_library_app
             }
 
             Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
-
+            Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] güncellendi! -Tarih: " + DateTime.Now);
             try
             {
                 bookManager.Update(bookToUpdate);
+                logger.Log(log);
                 MessageBox.Show("Başarıyla güncellendi!");
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();

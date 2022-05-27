@@ -14,5 +14,6 @@ namespace uu_library_app.DataAccess.Abstract
         void Update(Admin department);
         void Delete(string id);
         Admin getByEmail(string eMail);
+        Admin GetById(string id);
     }
 }

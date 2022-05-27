@@ -17,12 +17,15 @@ namespace uu_library_app
 {
     public partial class Language_Operations : Form
     {
-        public Language_Operations()
+        private Admin _admin;
+        public Language_Operations(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         LanguageManager manager = new LanguageManager(new LanguageDal());
 
         private void clearAllFields()
@@ -59,6 +62,8 @@ namespace uu_library_app
             try
             {
                 manager.Add(languageToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -79,6 +84,7 @@ namespace uu_library_app
                     return;
                 }
                 manager.Delete(txtId.Text);
+                //buraya log eklenecek
                 listDataToTable();
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi.");
@@ -102,6 +108,8 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(languageToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

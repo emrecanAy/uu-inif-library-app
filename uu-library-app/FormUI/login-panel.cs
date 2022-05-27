@@ -50,7 +50,7 @@ namespace uu_library_app
                 if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtPassword.Text) == true)
                 {
                     this.Hide();
-                    LibrarianInterface openApp = new LibrarianInterface();
+                    LibrarianInterface openApp = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
                     openApp.Show();
                     MessageBox.Show("Giriş Başarılı");
                 }
@@ -62,6 +62,11 @@ namespace uu_library_app
                 throw;
             }    
             
+        }
+
+        private void login_panel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,12 +17,16 @@ namespace uu_library_app.FormUI.Other_Operations
 {
     public partial class Location_actions : Form
     {
-        public Location_actions()
+        private Admin _admin;
+
+        public Location_actions(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         LocationManager manager = new LocationManager(new LocationDal());
 
         private void clearAllFields()
@@ -58,6 +62,8 @@ namespace uu_library_app.FormUI.Other_Operations
             try
             {
                 manager.Add(locationToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }
@@ -101,6 +107,8 @@ namespace uu_library_app.FormUI.Other_Operations
                     return;
                 }
                 manager.Update(locationToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "] güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 listDataToTable();
                 clearAllFields();
             }

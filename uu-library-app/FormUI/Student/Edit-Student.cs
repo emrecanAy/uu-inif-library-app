@@ -18,12 +18,15 @@ namespace uu_library_app
 {
     public partial class Edit_Student : Form
     {
-        public Edit_Student()
+        Admin _admin;
+        public Edit_Student(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
 
         private void clearAllFields()
@@ -63,10 +66,6 @@ namespace uu_library_app
             comboBox1.ValueMember = "id";
         }
 
-       
-
-       
-
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
@@ -95,6 +94,8 @@ namespace uu_library_app
             {
                 Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
                 manager.Update(studentToUpdate);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 MessageBox.Show("Başarıyla güncellendi!");
                 clearAllFields();
                 DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);

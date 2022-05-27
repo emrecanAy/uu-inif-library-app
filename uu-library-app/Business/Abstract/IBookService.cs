@@ -15,7 +15,7 @@ namespace uu_library_app.Business.Abstract
         List<Book> getAllSortedByAddedDate();
         void Add(Book book);
         void Update(Book book);
-        void Delete(string id);
+        void Delete(Book book);
         Book getById(string id);
     }
 }
