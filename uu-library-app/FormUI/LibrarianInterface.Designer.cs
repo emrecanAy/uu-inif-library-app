@@ -31,18 +31,10 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlDigerSubMenu = new System.Windows.Forms.Panel();
-            this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
-            this.panelMembersSubMenu = new System.Windows.Forms.Panel();
-            this.panelBookSubMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblAdmin = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlNewNav = new System.Windows.Forms.Panel();
-            this.panelChildFormNew = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMailSettings = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.pnlDigerSubMenu = new System.Windows.Forms.Panel();
             this.btnKonum = new System.Windows.Forms.Button();
             this.btnBolum = new System.Windows.Forms.Button();
             this.btnKategori = new System.Windows.Forms.Button();
@@ -50,15 +42,18 @@ namespace uu_library_app.FormUI
             this.btnYayinevi = new System.Windows.Forms.Button();
             this.btnYazar = new System.Windows.Forms.Button();
             this.btnDigerislemler = new System.Windows.Forms.Button();
+            this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
             this.btnTeslimSorgu = new System.Windows.Forms.Button();
             this.btnReceive = new System.Windows.Forms.Button();
             this.btnLending = new System.Windows.Forms.Button();
             this.btnDeposit = new System.Windows.Forms.Button();
+            this.panelMembersSubMenu = new System.Windows.Forms.Panel();
             this.btnUyeListele = new System.Windows.Forms.Button();
             this.btnEditMember = new System.Windows.Forms.Button();
             this.btnDeleteMember = new System.Windows.Forms.Button();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
+            this.panelBookSubMenu = new System.Windows.Forms.Panel();
             this.btnListele = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
@@ -66,14 +61,19 @@ namespace uu_library_app.FormUI
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlNewNav = new System.Windows.Forms.Panel();
+            this.panelChildFormNew = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnlDigerSubMenu.SuspendLayout();
             this.pnlDepositSubMenu.SuspendLayout();
             this.panelMembersSubMenu.SuspendLayout();
             this.panelBookSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,109 +98,6 @@ namespace uu_library_app.FormUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 900);
             this.panel1.TabIndex = 0;
-            // 
-            // pnlDigerSubMenu
-            // 
-            this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.pnlDigerSubMenu.Controls.Add(this.btnKonum);
-            this.pnlDigerSubMenu.Controls.Add(this.btnBolum);
-            this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
-            this.pnlDigerSubMenu.Controls.Add(this.btnDil);
-            this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
-            this.pnlDigerSubMenu.Controls.Add(this.btnYazar);
-            this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 648);
-            this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
-            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 168);
-            this.pnlDigerSubMenu.TabIndex = 15;
-            // 
-            // pnlDepositSubMenu
-            // 
-            this.pnlDepositSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.pnlDepositSubMenu.Controls.Add(this.btnTeslimSorgu);
-            this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
-            this.pnlDepositSubMenu.Controls.Add(this.btnLending);
-            this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 525);
-            this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
-            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 86);
-            this.pnlDepositSubMenu.TabIndex = 13;
-            // 
-            // panelMembersSubMenu
-            // 
-            this.panelMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.panelMembersSubMenu.Controls.Add(this.btnUyeListele);
-            this.panelMembersSubMenu.Controls.Add(this.btnEditMember);
-            this.panelMembersSubMenu.Controls.Add(this.btnDeleteMember);
-            this.panelMembersSubMenu.Controls.Add(this.btnAddMember);
-            this.panelMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 378);
-            this.panelMembersSubMenu.Name = "panelMembersSubMenu";
-            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 110);
-            this.panelMembersSubMenu.TabIndex = 11;
-            // 
-            // panelBookSubMenu
-            // 
-            this.panelBookSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.panelBookSubMenu.Controls.Add(this.btnListele);
-            this.panelBookSubMenu.Controls.Add(this.btnEditBook);
-            this.panelBookSubMenu.Controls.Add(this.btnDeleteBook);
-            this.panelBookSubMenu.Controls.Add(this.btnAddBook);
-            this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 231);
-            this.panelBookSubMenu.Name = "panelBookSubMenu";
-            this.panelBookSubMenu.Size = new System.Drawing.Size(186, 110);
-            this.panelBookSubMenu.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblAdmin);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 161);
-            this.panel2.TabIndex = 1;
-            // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblAdmin.Location = new System.Drawing.Point(59, 124);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(55, 12);
-            this.lblAdmin.TabIndex = 2;
-            this.lblAdmin.Text = "Şenol Şen";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(27, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Uludag University";
-            // 
-            // pnlNewNav
-            // 
-            this.pnlNewNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNewNav.Location = new System.Drawing.Point(0, 193);
-            this.pnlNewNav.Name = "pnlNewNav";
-            this.pnlNewNav.Size = new System.Drawing.Size(3, 100);
-            this.pnlNewNav.TabIndex = 7;
-            // 
-            // panelChildFormNew
-            // 
-            this.panelChildFormNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelChildFormNew.Location = new System.Drawing.Point(181, 0);
-            this.panelChildFormNew.Name = "panelChildFormNew";
-            this.panelChildFormNew.Size = new System.Drawing.Size(1255, 900);
-            this.panelChildFormNew.TabIndex = 9;
-            this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
             // 
             // panel3
             // 
@@ -246,6 +143,22 @@ namespace uu_library_app.FormUI
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave_2);
+            // 
+            // pnlDigerSubMenu
+            // 
+            this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDigerSubMenu.Controls.Add(this.btnKonum);
+            this.pnlDigerSubMenu.Controls.Add(this.btnBolum);
+            this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
+            this.pnlDigerSubMenu.Controls.Add(this.btnDil);
+            this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
+            this.pnlDigerSubMenu.Controls.Add(this.btnYazar);
+            this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 648);
+            this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
+            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 168);
+            this.pnlDigerSubMenu.TabIndex = 15;
             // 
             // btnKonum
             // 
@@ -373,6 +286,18 @@ namespace uu_library_app.FormUI
             this.btnDigerislemler.Click += new System.EventHandler(this.btnDigerislemler_click);
             this.btnDigerislemler.Leave += new System.EventHandler(this.btnSettings_Leave_1);
             // 
+            // pnlDepositSubMenu
+            // 
+            this.pnlDepositSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDepositSubMenu.Controls.Add(this.btnTeslimSorgu);
+            this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
+            this.pnlDepositSubMenu.Controls.Add(this.btnLending);
+            this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 525);
+            this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
+            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 86);
+            this.pnlDepositSubMenu.TabIndex = 13;
+            // 
             // btnTeslimSorgu
             // 
             this.btnTeslimSorgu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -444,6 +369,19 @@ namespace uu_library_app.FormUI
             this.btnDeposit.UseVisualStyleBackColor = true;
             this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             this.btnDeposit.Leave += new System.EventHandler(this.btnDeposit_Leave);
+            // 
+            // panelMembersSubMenu
+            // 
+            this.panelMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.panelMembersSubMenu.Controls.Add(this.btnUyeListele);
+            this.panelMembersSubMenu.Controls.Add(this.btnEditMember);
+            this.panelMembersSubMenu.Controls.Add(this.btnDeleteMember);
+            this.panelMembersSubMenu.Controls.Add(this.btnAddMember);
+            this.panelMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMembersSubMenu.Location = new System.Drawing.Point(0, 378);
+            this.panelMembersSubMenu.Name = "panelMembersSubMenu";
+            this.panelMembersSubMenu.Size = new System.Drawing.Size(186, 110);
+            this.panelMembersSubMenu.TabIndex = 11;
             // 
             // btnUyeListele
             // 
@@ -538,6 +476,19 @@ namespace uu_library_app.FormUI
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             this.btnMembers.Leave += new System.EventHandler(this.btnMembers_Leave);
+            // 
+            // panelBookSubMenu
+            // 
+            this.panelBookSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.panelBookSubMenu.Controls.Add(this.btnListele);
+            this.panelBookSubMenu.Controls.Add(this.btnEditBook);
+            this.panelBookSubMenu.Controls.Add(this.btnDeleteBook);
+            this.panelBookSubMenu.Controls.Add(this.btnAddBook);
+            this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 231);
+            this.panelBookSubMenu.Name = "panelBookSubMenu";
+            this.panelBookSubMenu.Size = new System.Drawing.Size(186, 110);
+            this.panelBookSubMenu.TabIndex = 9;
             // 
             // btnListele
             // 
@@ -665,6 +616,39 @@ namespace uu_library_app.FormUI
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblAdmin);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 161);
+            this.panel2.TabIndex = 1;
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblAdmin.Location = new System.Drawing.Point(59, 124);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(55, 12);
+            this.lblAdmin.TabIndex = 2;
+            this.lblAdmin.Text = "Şenol Şen";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(27, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Uludag University";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -674,6 +658,23 @@ namespace uu_library_app.FormUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnlNewNav
+            // 
+            this.pnlNewNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pnlNewNav.Location = new System.Drawing.Point(0, 193);
+            this.pnlNewNav.Name = "pnlNewNav";
+            this.pnlNewNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNewNav.TabIndex = 7;
+            // 
+            // panelChildFormNew
+            // 
+            this.panelChildFormNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelChildFormNew.Location = new System.Drawing.Point(181, 0);
+            this.panelChildFormNew.Name = "panelChildFormNew";
+            this.panelChildFormNew.Size = new System.Drawing.Size(1255, 900);
+            this.panelChildFormNew.TabIndex = 9;
+            this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
             // 
             // LibrarianInterface
             // 
@@ -690,13 +691,13 @@ namespace uu_library_app.FormUI
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.pnlDigerSubMenu.ResumeLayout(false);
             this.pnlDepositSubMenu.ResumeLayout(false);
             this.panelMembersSubMenu.ResumeLayout(false);
             this.panelBookSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

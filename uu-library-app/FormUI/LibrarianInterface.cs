@@ -36,6 +36,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Height = btnDashboard.Height;
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
+            panel3.Left = btnDashboard.Left;
             _admin = admin;
         }
         #region Methods
@@ -45,6 +46,7 @@ namespace uu_library_app.FormUI
             panelMembersSubMenu.Visible = false;
             pnlDepositSubMenu.Visible = false;
             pnlDigerSubMenu.Visible = false;
+            panel3.Visible = false;
             
         }
         private void hideSubMenu()
@@ -311,7 +313,12 @@ namespace uu_library_app.FormUI
             pnlNewNav.Top = btnSettings.Top;
             pnlNewNav.Left = btnSettings.Left;
             btnBooks.BackColor = Color.FromArgb(46, 51, 73);
-            showSubMenu(panelBookSubMenu);
+            showSubMenu(panel3);
+        }
+
+        private void btnSettings_Leave_2(object sender, EventArgs e)
+        {
+            btnSettings.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }
