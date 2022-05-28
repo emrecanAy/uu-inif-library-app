@@ -51,27 +51,7 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            if (txtAd.Text == "")
-            {
-                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
-                return;
-            }
-            Publisher publisherToAdd = new Publisher(createGUID, txtAd.Text);
-
-            try
-            {
-                manager.Add(publisherToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -83,7 +63,8 @@ namespace uu_library_app
             }
             try
             {
-                manager.Delete(txtId.Text);
+                Publisher publisher = new Publisher(txtId.Text, txtAd.Text);
+                manager.Delete(publisher);
                 MessageBox.Show("Başarıyla silindi!");
                 listDataToTable();
                 clearAllFields();
@@ -141,6 +122,31 @@ namespace uu_library_app
             conn.Open();
             listDataToTable();
             conn.Close();
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+            if (txtAd.Text == "")
+            {
+                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
+                return;
+            }
+            Publisher publisherToAdd = new Publisher(createGUID, txtAd.Text);
+
+            try
+            {
+                manager.Add(publisherToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

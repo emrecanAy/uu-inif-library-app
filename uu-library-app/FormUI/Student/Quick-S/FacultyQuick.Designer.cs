@@ -83,6 +83,7 @@ namespace uu_library_app.FormUI.Settings
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 90;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label4
             // 
@@ -115,6 +116,7 @@ namespace uu_library_app.FormUI.Settings
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // picboxAd
             // 

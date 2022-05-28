@@ -14,7 +14,7 @@ namespace uu_library_app.Business.Abstract
         List<Student> getAllSortedByAddedDate();
         void Add(Student student);
         void Update(Student student);
-        void Delete(string id);
+        void Delete(Student student);
         Student getById(string id);
         Student findByName(string name);
         Student findByEmail(string email);

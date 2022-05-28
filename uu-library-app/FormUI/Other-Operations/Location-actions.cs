@@ -51,27 +51,7 @@ namespace uu_library_app.FormUI.Other_Operations
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            if (txtAd.Text == "")
-            {
-                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
-                return;
-            }
-
-            Location locationToAdd = new Location(createGUID, txtAd.Text, cmbKategori.SelectedValue.ToString());
-            try
-            {
-                manager.Add(locationToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -83,7 +63,8 @@ namespace uu_library_app.FormUI.Other_Operations
                     MessageBox.Show("Lütfen silinecek dili seçin...");
                     return;
                 }
-                manager.Delete(txtId.Text);
+                Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
+                manager.Delete(location);
                 listDataToTable();
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi.");
@@ -151,6 +132,31 @@ namespace uu_library_app.FormUI.Other_Operations
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+            if (txtAd.Text == "")
+            {
+                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
+                return;
+            }
+
+            Location locationToAdd = new Location(createGUID, txtAd.Text, cmbKategori.SelectedValue.ToString());
+            try
+            {
+                manager.Add(locationToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

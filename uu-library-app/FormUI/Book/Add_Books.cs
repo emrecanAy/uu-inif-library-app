@@ -12,6 +12,8 @@ using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Book.Quick_Menu;
+using uu_library_app.FormUI.Settings;
 
 namespace uu_library_app
 {
@@ -132,9 +134,6 @@ namespace uu_library_app
             #endregion
         }
 
-        
-
-      
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
@@ -182,6 +181,36 @@ namespace uu_library_app
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
           string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void btnHizliYazar_Click(object sender, EventArgs e)
+        {
+            AuthorQuick quick = new AuthorQuick(_admin);
+            quick.Show();
+        }
+
+        private void btnHizliYayinevi_Click(object sender, EventArgs e)
+        {
+            PublisherQuick quick = new PublisherQuick(_admin);
+            quick.Show();
+        }
+
+        private void btnHizliDil_Click(object sender, EventArgs e)
+        {
+            LanguageQuick quick = new LanguageQuick(_admin);
+            quick.Show();
+        }
+
+        private void btnHizliKategori_Click(object sender, EventArgs e)
+        {
+            CategoryQuick quick = new CategoryQuick(_admin);
+            quick.Show();
+        }
+
+        private void btnHizliKonum_Click(object sender, EventArgs e)
+        {
+            LocationQuick quick = new LocationQuick(_admin);
+            quick.Show();
         }
     }
 }

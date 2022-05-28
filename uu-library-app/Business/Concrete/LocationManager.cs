@@ -25,11 +25,11 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(string id)
+        public void Delete(Location location)
         {
-            if (id != null)
+            if (location != null)
             {
-                _location.Delete(id);
+                _location.Delete(location);
             }
         }
 

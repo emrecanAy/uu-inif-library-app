@@ -38,7 +38,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.btnEkle = new System.Windows.Forms.Button();
             this.picboxAd = new System.Windows.Forms.PictureBox();
             this.pnlAd = new System.Windows.Forms.Panel();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtDil = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -55,7 +55,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.panel4.Controls.Add(this.btnEkle);
             this.panel4.Controls.Add(this.picboxAd);
             this.panel4.Controls.Add(this.pnlAd);
-            this.panel4.Controls.Add(this.txtAd);
+            this.panel4.Controls.Add(this.txtDil);
             this.panel4.Controls.Add(this.lblAd);
             this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Name = "panel4";
@@ -83,6 +83,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 90;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label4
             // 
@@ -115,6 +116,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // picboxAd
             // 
@@ -134,16 +136,16 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 57;
             // 
-            // txtAd
+            // txtDil
             // 
-            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(58, 73);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 22);
-            this.txtAd.TabIndex = 56;
+            this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtDil.ForeColor = System.Drawing.Color.White;
+            this.txtDil.Location = new System.Drawing.Point(58, 73);
+            this.txtDil.Name = "txtDil";
+            this.txtDil.Size = new System.Drawing.Size(164, 22);
+            this.txtDil.TabIndex = 56;
             // 
             // lblAd
             // 
@@ -185,7 +187,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.PictureBox picboxAd;
         private System.Windows.Forms.Panel pnlAd;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtDil;
         private System.Windows.Forms.Label lblAd;
     }
 }

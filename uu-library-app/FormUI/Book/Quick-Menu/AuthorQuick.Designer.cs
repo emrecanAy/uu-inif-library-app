@@ -31,19 +31,19 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorQuick));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.picboxAd = new System.Windows.Forms.PictureBox();
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picboxAd = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +70,18 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(239, 279);
             this.panel4.TabIndex = 89;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(208, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 90;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label4
             // 
@@ -114,6 +126,17 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(19, 166);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -146,6 +169,16 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.label2.TabIndex = 67;
             this.label2.Text = "Yazar Soyadı :";
             // 
+            // picboxAd
+            // 
+            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
+            this.picboxAd.Location = new System.Drawing.Point(19, 71);
+            this.picboxAd.Name = "picboxAd";
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
+            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxAd.TabIndex = 58;
+            this.picboxAd.TabStop = false;
+            // 
             // pnlAd
             // 
             this.pnlAd.BackColor = System.Drawing.Color.White;
@@ -176,37 +209,6 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.lblAd.Size = new System.Drawing.Size(99, 25);
             this.lblAd.TabIndex = 55;
             this.lblAd.Text = "Yazar Adı :";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(208, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 90;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 166);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picboxAd
-            // 
-            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(19, 71);
-            this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(30, 30);
-            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxAd.TabIndex = 58;
-            this.picboxAd.TabStop = false;
             // 
             // AuthorQuick
             // 

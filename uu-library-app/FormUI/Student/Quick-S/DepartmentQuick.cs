@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.DataAccess.Concrete;
+using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.FormUI.Settings
 {
-    public partial class CategoryQuick : Form
+    public partial class DepartmentQuick : Form
     {
         private Admin _admin;
-        public CategoryQuick(Admin admin)
+        public DepartmentQuick(Admin admin)
         {
             InitializeComponent();
-            _admin = admin;
         }
 
-        CategoryManager manager = new CategoryManager(new CategoryDal());
         LoggerManager logger = new LoggerManager(new LoggerDal());
+        DepartmentManager manager = new DepartmentManager(new DepartmentDal());
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -33,18 +33,18 @@ namespace uu_library_app.FormUI.Settings
                 MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
                 return;
             }
-            
+            Department departmentToAdd = new Department(createGUID, txtAd.Text);
+
             try
             {
-                Category categoryToAdd = new Category(createGUID, txtAd.Text);
-                manager.Add(categoryToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                manager.Add(departmentToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw ex;
+                throw;
             }
         }
 

@@ -24,11 +24,11 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(string id)
+        public void Delete(DepositBook depositBook)
         {
-            if(id != "")
+            if(depositBook != null)
             {
-                _depositBook.Delete(id);
+                _depositBook.Delete(depositBook);
             }
             
         }

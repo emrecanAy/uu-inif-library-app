@@ -28,11 +28,11 @@ namespace uu_library_app.Business.Concrete
 
         }
 
-        public void Delete(string id)
+        public void Delete(Student student)
         {
-            if(id != null)
+            if(student != null)
             {
-                _service.Delete(id);
+                _service.Delete(student);
             }
         }
 

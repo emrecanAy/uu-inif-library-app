@@ -67,7 +67,8 @@ namespace uu_library_app
             }
             try
             {
-                manager.Delete(txtId.Text);
+                Department department = new Department(txtId.Text, txtAd.Text);
+                manager.Delete(department);
                 //buraya log yapılacak
                 listDataToTable();
                 clearAllFields();

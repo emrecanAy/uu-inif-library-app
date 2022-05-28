@@ -139,7 +139,8 @@ namespace uu_library_app
             }
             try
             {
-                manager.Delete(txtId.Text);
+                Category category = new Category(txtId.Text, txtAd.Text);
+                manager.Delete(category);
                 //buraya log yapılcak
                 listDataToTable();
                 clearAllFields();

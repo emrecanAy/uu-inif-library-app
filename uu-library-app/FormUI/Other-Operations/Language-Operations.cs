@@ -51,32 +51,10 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            if (txtDil.Text == "" || txtDil.Text.Length < 3)
-            {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
-                return;
-            }
-            Language languageToAdd = new Language(createGUID, txtDil.Text);
-
-            try
-            {
-                manager.Add(languageToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-           
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -136,7 +114,8 @@ namespace uu_library_app
                     MessageBox.Show("Lütfen silinecek dili seçin...");
                     return;
                 }
-                manager.Delete(txtId.Text);
+                Language language = new Language(txtId.Text, txtDil.Text);
+                manager.Delete(language);
                 //buraya log eklenecek
                 listDataToTable();
                 clearAllFields();
@@ -145,6 +124,31 @@ namespace uu_library_app
             catch (Exception)
             {
                 MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+            if (txtDil.Text == "" || txtDil.Text.Length < 3)
+            {
+                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                return;
+            }
+            Language languageToAdd = new Language(createGUID, txtDil.Text);
+
+            try
+            {
+                manager.Add(languageToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
         }

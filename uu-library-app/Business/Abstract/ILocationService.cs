@@ -12,6 +12,6 @@ namespace uu_library_app.Business.Abstract
         List<Location> getAll();
         void Add(Location location);
         void Update(Location location);
-        void Delete(string id);
+        void Delete(Location location);
     }
 }

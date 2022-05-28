@@ -46,8 +46,8 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +131,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 83;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // label4
             // 
@@ -222,17 +223,6 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 91;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(98, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 40);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Yayınevi İşlemleri ";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -260,6 +250,17 @@ namespace uu_library_app
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(815, 725);
             this.dataGridView1.TabIndex = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(98, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(263, 40);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Yayınevi İşlemleri ";
             // 
             // publisher_actions
             // 

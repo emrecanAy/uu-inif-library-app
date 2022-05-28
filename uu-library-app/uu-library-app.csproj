@@ -314,10 +314,10 @@
     <Compile Include="FormUI\Book\Quick-Menu\CategoryQuick.Designer.cs">
       <DependentUpon>CategoryQuick.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Book\Quick-Menu\DepartmentQuick.cs">
+    <Compile Include="FormUI\Student\Quick-S\DepartmentQuick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Book\Quick-Menu\DepartmentQuick.Designer.cs">
+    <Compile Include="FormUI\Student\Quick-S\DepartmentQuick.Designer.cs">
       <DependentUpon>DepartmentQuick.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\Student\Quick-S\FacultyQuick.cs">
@@ -487,7 +487,7 @@
     <EmbeddedResource Include="FormUI\Book\Quick-Menu\CategoryQuick.resx">
       <DependentUpon>CategoryQuick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Book\Quick-Menu\DepartmentQuick.resx">
+    <EmbeddedResource Include="FormUI\Student\Quick-S\DepartmentQuick.resx">
       <DependentUpon>DepartmentQuick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Quick-S\FacultyQuick.resx">

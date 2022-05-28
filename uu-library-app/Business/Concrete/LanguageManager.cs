@@ -26,11 +26,11 @@ namespace uu_library_app.Business.Concrete
             
         }
 
-        public void Delete(string id)
+        public void Delete(Language language)
         {
-            if(id != null)
+            if(language != null)
             {
-                _service.Delete(id);
+                _service.Delete(language);
             }
             
         }

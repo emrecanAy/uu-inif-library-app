@@ -31,15 +31,15 @@ namespace uu_library_app.FormUI.Settings
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryQuick));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.picboxAd = new System.Windows.Forms.PictureBox();
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picboxAd = new System.Windows.Forms.PictureBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
@@ -61,6 +61,29 @@ namespace uu_library_app.FormUI.Settings
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(239, 191);
             this.panel4.TabIndex = 90;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(122, 5);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(32, 22);
+            this.txtId.TabIndex = 91;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(208, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 90;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label4
             // 
@@ -93,6 +116,17 @@ namespace uu_library_app.FormUI.Settings
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // picboxAd
+            // 
+            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
+            this.picboxAd.Location = new System.Drawing.Point(19, 71);
+            this.picboxAd.Name = "picboxAd";
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
+            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxAd.TabIndex = 58;
+            this.picboxAd.TabStop = false;
             // 
             // pnlAd
             // 
@@ -124,38 +158,6 @@ namespace uu_library_app.FormUI.Settings
             this.lblAd.Size = new System.Drawing.Size(125, 25);
             this.lblAd.TabIndex = 55;
             this.lblAd.Text = "Kategori Adı :";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(208, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 90;
-            this.pictureBox2.TabStop = false;
-            // 
-            // picboxAd
-            // 
-            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(19, 71);
-            this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(30, 30);
-            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxAd.TabIndex = 58;
-            this.picboxAd.TabStop = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(122, 5);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(32, 22);
-            this.txtId.TabIndex = 91;
             // 
             // CategoryQuick
             // 

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app
 {
@@ -59,33 +60,10 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
             conn.Close();
-        }
-
-        
+        }    
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if(txtId.Text == "")
-            {
-                MessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!");
-                return;
-            }
-
-            try
-            {
-                manager.Delete(txtId.Text);
-                listDataToTable();
-                MessageBox.Show("Başarılı bir şekilde silindi.");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!");
-                throw;
-            }
-           
-        }
-
-       
+        {}
 
         private void btnSil_Click(object sender, EventArgs e)
         {
@@ -97,7 +75,8 @@ namespace uu_library_app
 
             try
             {
-                manager.Delete(txtId.Text);
+                Student student = new Student(txtId.Text, txtBolum.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                manager.Delete(student);
                 listDataToTable();
                 MessageBox.Show("Başarılı bir şekilde silindi.");
             }

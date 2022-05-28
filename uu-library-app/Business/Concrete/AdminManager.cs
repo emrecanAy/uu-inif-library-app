@@ -52,7 +52,6 @@ namespace uu_library_app.Business.Concrete
             }
             
         }
-
         public void Add(Admin admin, string verificationCode)
         {
             if (admin.FirstName != null || admin.LastName != null || admin.EMail != null || admin.Password != null || admin.Id != null)
@@ -62,11 +61,11 @@ namespace uu_library_app.Business.Concrete
             }
         }
 
-        public void Delete(string id)
+        public void Delete(Admin admin)
         {
-            if (id != null)
+            if (admin.Id != null)
             {
-                _service.Delete(id);
+                _service.Delete(admin.Id);
             }
         }
 
