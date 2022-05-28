@@ -66,11 +66,7 @@ namespace uu_library_app
             comboBox1.ValueMember = "id";
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
-        }
+    
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -105,6 +101,12 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!");
                 throw;
             }
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Text);
         }
     }
     }

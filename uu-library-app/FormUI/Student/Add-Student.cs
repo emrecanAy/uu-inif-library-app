@@ -138,7 +138,7 @@ namespace uu_library_app.FormUI
             Aciklama.ToolTipTitle = "Kitap Adı Giriniz !";
             Aciklama.ToolTipIcon = ToolTipIcon.Info;
             Aciklama.IsBalloon = true;
-            Aciklama.SetToolTip(txtAra, "    ");
+            Aciklama.SetToolTip(wehTextBox1, "    ");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,15 +151,16 @@ namespace uu_library_app.FormUI
             
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
-        }
-
+   
         private void txtOkulNo_TextChanged(object sender, EventArgs e)
         {
             txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+              string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Text);
         }
     }
 }

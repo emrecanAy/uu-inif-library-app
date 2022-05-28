@@ -29,7 +29,7 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -108,7 +108,6 @@ namespace uu_library_app
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btnHızlıKonum = new System.Windows.Forms.Button();
-            this.btnHızlıBolum = new System.Windows.Forms.Button();
             this.btnHızlıKategori = new System.Windows.Forms.Button();
             this.btnHızlıDil = new System.Windows.Forms.Button();
             this.btnHızlıYayinevi = new System.Windows.Forms.Button();
@@ -141,7 +140,7 @@ namespace uu_library_app
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(755, 19);
+            this.txtId.Location = new System.Drawing.Point(512, 10);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(164, 27);
             this.txtId.TabIndex = 249;
@@ -166,14 +165,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -968,14 +967,13 @@ namespace uu_library_app
             // panel24
             // 
             this.panel24.Controls.Add(this.btnHızlıKonum);
-            this.panel24.Controls.Add(this.btnHızlıBolum);
             this.panel24.Controls.Add(this.btnHızlıKategori);
             this.panel24.Controls.Add(this.btnHızlıDil);
             this.panel24.Controls.Add(this.btnHızlıYayinevi);
             this.panel24.Controls.Add(this.btnHızlıYazar);
-            this.panel24.Location = new System.Drawing.Point(755, 12);
+            this.panel24.Location = new System.Drawing.Point(833, 12);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(488, 35);
+            this.panel24.Size = new System.Drawing.Size(410, 35);
             this.panel24.TabIndex = 255;
             // 
             // btnHızlıKonum
@@ -983,24 +981,12 @@ namespace uu_library_app
             this.btnHızlıKonum.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHızlıKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHızlıKonum.ForeColor = System.Drawing.Color.White;
-            this.btnHızlıKonum.Location = new System.Drawing.Point(408, 0);
+            this.btnHızlıKonum.Location = new System.Drawing.Point(328, 0);
             this.btnHızlıKonum.Name = "btnHızlıKonum";
             this.btnHızlıKonum.Size = new System.Drawing.Size(80, 35);
             this.btnHızlıKonum.TabIndex = 260;
             this.btnHızlıKonum.Text = "Konum Ekle";
             this.btnHızlıKonum.UseVisualStyleBackColor = true;
-            // 
-            // btnHızlıBolum
-            // 
-            this.btnHızlıBolum.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHızlıBolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHızlıBolum.ForeColor = System.Drawing.Color.White;
-            this.btnHızlıBolum.Location = new System.Drawing.Point(328, 0);
-            this.btnHızlıBolum.Name = "btnHızlıBolum";
-            this.btnHızlıBolum.Size = new System.Drawing.Size(80, 35);
-            this.btnHızlıBolum.TabIndex = 259;
-            this.btnHızlıBolum.Text = "Bölüm Ekle";
-            this.btnHızlıBolum.UseVisualStyleBackColor = true;
             // 
             // btnHızlıKategori
             // 
@@ -1171,7 +1157,6 @@ namespace uu_library_app
         private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Button btnHızlıKonum;
-        private System.Windows.Forms.Button btnHızlıBolum;
         private System.Windows.Forms.Button btnHızlıKategori;
         private System.Windows.Forms.Button btnHızlıDil;
         private System.Windows.Forms.Button btnHızlıYayinevi;

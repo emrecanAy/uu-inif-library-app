@@ -43,11 +43,11 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
             string value = cmbAranacakAlan.SelectedValue.ToString();
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", txtAra.Text);
+            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Text);
         }
     }
 }

@@ -58,6 +58,12 @@ namespace uu_library_app
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtYayinlanmaTarihi = new System.Windows.Forms.TextBox();
+            this.txtYayinevi = new System.Windows.Forms.TextBox();
+            this.txtDil = new System.Windows.Forms.TextBox();
+            this.txtYazar = new System.Windows.Forms.TextBox();
+            this.txtKonum = new System.Windows.Forms.TextBox();
+            this.txtKategori = new System.Windows.Forms.TextBox();
             this.txtStokAdet = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -100,12 +106,6 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.txtKategori = new System.Windows.Forms.TextBox();
-            this.txtKonum = new System.Windows.Forms.TextBox();
-            this.txtYazar = new System.Windows.Forms.TextBox();
-            this.txtDil = new System.Windows.Forms.TextBox();
-            this.txtYayinevi = new System.Windows.Forms.TextBox();
-            this.txtYayinlanmaTarihi = new System.Windows.Forms.TextBox();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -418,6 +418,72 @@ namespace uu_library_app
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 756);
             this.panel1.TabIndex = 256;
+            // 
+            // txtYayinlanmaTarihi
+            // 
+            this.txtYayinlanmaTarihi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYayinlanmaTarihi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYayinlanmaTarihi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinlanmaTarihi.ForeColor = System.Drawing.Color.White;
+            this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 404);
+            this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
+            this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinlanmaTarihi.TabIndex = 314;
+            // 
+            // txtYayinevi
+            // 
+            this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinevi.ForeColor = System.Drawing.Color.White;
+            this.txtYayinevi.Location = new System.Drawing.Point(336, 164);
+            this.txtYayinevi.Name = "txtYayinevi";
+            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinevi.TabIndex = 313;
+            // 
+            // txtDil
+            // 
+            this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtDil.ForeColor = System.Drawing.Color.White;
+            this.txtDil.Location = new System.Drawing.Point(337, 55);
+            this.txtDil.Name = "txtDil";
+            this.txtDil.Size = new System.Drawing.Size(164, 27);
+            this.txtDil.TabIndex = 312;
+            // 
+            // txtYazar
+            // 
+            this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYazar.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYazar.ForeColor = System.Drawing.Color.White;
+            this.txtYazar.Location = new System.Drawing.Point(78, 635);
+            this.txtYazar.Name = "txtYazar";
+            this.txtYazar.Size = new System.Drawing.Size(164, 27);
+            this.txtYazar.TabIndex = 311;
+            // 
+            // txtKonum
+            // 
+            this.txtKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKonum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKonum.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKonum.ForeColor = System.Drawing.Color.White;
+            this.txtKonum.Location = new System.Drawing.Point(78, 286);
+            this.txtKonum.Name = "txtKonum";
+            this.txtKonum.Size = new System.Drawing.Size(164, 27);
+            this.txtKonum.TabIndex = 310;
+            // 
+            // txtKategori
+            // 
+            this.txtKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKategori.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKategori.ForeColor = System.Drawing.Color.White;
+            this.txtKategori.Location = new System.Drawing.Point(78, 167);
+            this.txtKategori.Name = "txtKategori";
+            this.txtKategori.Size = new System.Drawing.Size(164, 27);
+            this.txtKategori.TabIndex = 309;
             // 
             // txtStokAdet
             // 
@@ -873,78 +939,12 @@ namespace uu_library_app
             this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.wehTextBox1.PasswordChar = false;
             this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girip Üzerin Tıklayınız !";
+            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girip Üzerine Tıklayınız !";
             this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
             this.wehTextBox1.TabIndex = 236;
             this.wehTextBox1.Texts = "";
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
-            // 
-            // txtKategori
-            // 
-            this.txtKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtKategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKategori.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtKategori.ForeColor = System.Drawing.Color.White;
-            this.txtKategori.Location = new System.Drawing.Point(78, 167);
-            this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(164, 27);
-            this.txtKategori.TabIndex = 309;
-            // 
-            // txtKonum
-            // 
-            this.txtKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtKonum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKonum.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtKonum.ForeColor = System.Drawing.Color.White;
-            this.txtKonum.Location = new System.Drawing.Point(78, 286);
-            this.txtKonum.Name = "txtKonum";
-            this.txtKonum.Size = new System.Drawing.Size(164, 27);
-            this.txtKonum.TabIndex = 310;
-            // 
-            // txtYazar
-            // 
-            this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYazar.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtYazar.ForeColor = System.Drawing.Color.White;
-            this.txtYazar.Location = new System.Drawing.Point(78, 635);
-            this.txtYazar.Name = "txtYazar";
-            this.txtYazar.Size = new System.Drawing.Size(164, 27);
-            this.txtYazar.TabIndex = 311;
-            // 
-            // txtDil
-            // 
-            this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtDil.ForeColor = System.Drawing.Color.White;
-            this.txtDil.Location = new System.Drawing.Point(337, 55);
-            this.txtDil.Name = "txtDil";
-            this.txtDil.Size = new System.Drawing.Size(164, 27);
-            this.txtDil.TabIndex = 312;
-            // 
-            // txtYayinevi
-            // 
-            this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtYayinevi.ForeColor = System.Drawing.Color.White;
-            this.txtYayinevi.Location = new System.Drawing.Point(336, 164);
-            this.txtYayinevi.Name = "txtYayinevi";
-            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinevi.TabIndex = 313;
-            // 
-            // txtYayinlanmaTarihi
-            // 
-            this.txtYayinlanmaTarihi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtYayinlanmaTarihi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinlanmaTarihi.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtYayinlanmaTarihi.ForeColor = System.Drawing.Color.White;
-            this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 404);
-            this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
-            this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinlanmaTarihi.TabIndex = 314;
             // 
             // delete_book
             // 

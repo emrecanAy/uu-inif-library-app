@@ -108,11 +108,7 @@ namespace uu_library_app
             }
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-           string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
-        }
+     
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -122,6 +118,12 @@ namespace uu_library_app
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+      string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Text);
         }
     }
 }

@@ -29,11 +29,8 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete_Student));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtAra = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete_Student));
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -66,7 +63,9 @@ namespace uu_library_app
             this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,37 +75,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(934, 93);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(305, 1);
-            this.panel9.TabIndex = 265;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(937, 62);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 264;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtAra
-            // 
-            this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAra.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAra.ForeColor = System.Drawing.Color.White;
-            this.txtAra.Location = new System.Drawing.Point(971, 63);
-            this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(268, 26);
-            this.txtAra.TabIndex = 263;
-            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
             // panel3
             // 
@@ -487,15 +458,54 @@ namespace uu_library_app
             this.lblBaslik.TabIndex = 258;
             this.lblBaslik.Text = "Öğrenci Silme İşlemleri";
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.wehTextBox1);
+            this.panel5.Location = new System.Drawing.Point(755, 52);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(488, 40);
+            this.panel5.TabIndex = 263;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 272;
+            this.pictureBox4.TabStop = false;
+            // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Öğrencinin Adını Girip Üzerine Tıklayınız !";
+            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            // 
             // Delete_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtAra);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel2);
@@ -507,7 +517,6 @@ namespace uu_library_app
             this.Name = "Delete_Student";
             this.Text = "Delete_Student";
             this.Load += new System.EventHandler(this.Delete_Student_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -518,16 +527,14 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtId;
@@ -560,5 +567,8 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.TextBox txtBolum;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
     }
 }
