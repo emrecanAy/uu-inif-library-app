@@ -35,13 +35,13 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        public void Delete(string id)
+        public void Delete(Language language)
         {
             conn.Open();
             try
             {
                 MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Language SET deleted=1 WHERE id=@p1 ", conn);
-                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.Parameters.AddWithValue("@p1", language.Id);
                 commandToUpdate.ExecuteNonQuery();
 
             }

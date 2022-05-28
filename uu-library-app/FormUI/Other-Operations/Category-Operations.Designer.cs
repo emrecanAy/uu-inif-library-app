@@ -77,6 +77,7 @@ namespace uu_library_app
             this.btnSil.TabIndex = 88;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnEkle
             // 
@@ -89,6 +90,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 87;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // txtId
             // 

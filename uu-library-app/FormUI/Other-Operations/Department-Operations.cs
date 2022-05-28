@@ -54,27 +54,7 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            if(txtAd.Text == "" || txtAd.Text.Length < 3)
-            {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
-                return;
-            }
-            Department departmentToAdd = new Department(createGUID, txtAd.Text);
-
-            try
-            {
-                manager.Add(departmentToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+            
             
         }
 
@@ -135,6 +115,31 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+            if (txtAd.Text == "" || txtAd.Text.Length < 3)
+            {
+                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                return;
+            }
+            Department departmentToAdd = new Department(createGUID, txtAd.Text);
+
+            try
+            {
+                manager.Add(departmentToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

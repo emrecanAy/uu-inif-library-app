@@ -154,7 +154,7 @@ namespace uu_library_app
             try
             {
                 bookManager.Add(bookToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] "+_admin.FirstName+" "+_admin.LastName+" tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 MessageBox.Show("Başarıyla eklendi!");
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);

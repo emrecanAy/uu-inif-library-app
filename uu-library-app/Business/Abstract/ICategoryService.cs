@@ -12,6 +12,6 @@ namespace uu_library_app.Business.Abstract
         List<Category> getAll();
         void Add(Category category);
         void Update(Category category);
-        void Delete(string id);
+        void Delete(Category category);
     }
 }

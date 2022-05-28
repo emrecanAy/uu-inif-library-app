@@ -12,7 +12,7 @@ namespace uu_library_app.Business.Abstract
         List<Admin> getAll();
         void Add(Admin admin, string verificationCode);
         void Update(Admin admin);
-        void Delete(string id);
+        void Delete(Admin admin);
         Admin getbyEmail(string eMail);
         Admin GetById(string id);
     }

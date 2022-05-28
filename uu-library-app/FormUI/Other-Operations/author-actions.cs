@@ -55,28 +55,7 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-
-            if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
-            {
-                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
-                return;
-            }
-
-            Author authorToAdd = new Author(createGUID, txtAd.Text, txtSoyad.Text);
-            try
-            {
-                manager.Add(authorToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToAdd.Id + " | " + authorToAdd.FirstName+" "+authorToAdd.LastName+""+"] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
-                throw;
-            }
+            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -151,6 +130,32 @@ namespace uu_library_app
                 clearAllFields();
                 MessageBox.Show("Başarıyla silindi...");
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
+            {
+                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
+                return;
+            }
+
+            Author authorToAdd = new Author(createGUID, txtAd.Text, txtSoyad.Text);
+            try
+            {
+                manager.Add(authorToAdd);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToAdd.Id + " | " + authorToAdd.FirstName + " " + authorToAdd.LastName + "" + "] eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
             }
             catch (Exception)
             {

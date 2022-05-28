@@ -12,6 +12,6 @@ namespace uu_library_app.DataAccess.Abstract
         List<Department> getAll();
         void Add(Department department);
         void Update(Department department);
-        void Delete(string id);
+        void Delete(Department department);
     }
 }

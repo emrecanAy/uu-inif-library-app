@@ -35,13 +35,13 @@ namespace uu_library_app.DataAccess.Concrete
 
         }
 
-        public void Delete(string id)
+        public void Delete(Location location)
         {
             conn.Open();
             try
             {
                 MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Location SET deleted=1 WHERE id=@p1 ", conn);
-                commandToUpdate.Parameters.AddWithValue("@p1", id);
+                commandToUpdate.Parameters.AddWithValue("@p1", location.Id);
                 commandToUpdate.ExecuteNonQuery();
 
             }

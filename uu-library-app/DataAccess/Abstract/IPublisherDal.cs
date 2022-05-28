@@ -12,6 +12,6 @@ namespace uu_library_app.DataAccess.Abstract
         List<Publisher> getAll();
         void Add(Publisher publisher);
         void Update(Publisher publisher);
-        void Delete(string id);
+        void Delete(Publisher publisher);
     }
 }

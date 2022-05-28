@@ -101,6 +101,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 83;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // label4
             // 

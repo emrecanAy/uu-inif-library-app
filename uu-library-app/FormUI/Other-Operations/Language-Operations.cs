@@ -76,24 +76,7 @@ namespace uu_library_app
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if(txtId.Text == "")
-                {
-                    MessageBox.Show("Lütfen silinecek dili seçin...");
-                    return;
-                }
-                manager.Delete(txtId.Text);
-                //buraya log eklenecek
-                listDataToTable();
-                clearAllFields();
-                MessageBox.Show("Başarıyla silindi.");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+           
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -131,6 +114,28 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "")
+                {
+                    MessageBox.Show("Lütfen silinecek dili seçin...");
+                    return;
+                }
+                manager.Delete(txtId.Text);
+                //buraya log eklenecek
+                listDataToTable();
+                clearAllFields();
+                MessageBox.Show("Başarıyla silindi.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

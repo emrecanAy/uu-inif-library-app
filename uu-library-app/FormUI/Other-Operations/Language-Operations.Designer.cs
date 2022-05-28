@@ -171,6 +171,7 @@
             this.btnSil.TabIndex = 84;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnEkle
             // 

@@ -12,6 +12,6 @@ namespace uu_library_app.DataAccess.Abstract
         List<Language> getAll();
         void Add(Language language);
         void Update(Language language);
-        void Delete(string id);
+        void Delete(Language language);
     }
 }
