@@ -1,7 +1,7 @@
 ﻿
-namespace uu_library_app
+namespace uu_library_app.FormUI.Other_Operations
 {
-    partial class Department_Operations
+    partial class Faculty_Operations
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,9 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Department_Operations));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Faculty_Operations));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
@@ -41,19 +42,36 @@ namespace uu_library_app
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtId);
+            this.panel4.Controls.Add(this.btnGuncelle);
+            this.panel4.Controls.Add(this.btnSil);
+            this.panel4.Controls.Add(this.btnEkle);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.picboxAd);
+            this.panel4.Controls.Add(this.pnlAd);
+            this.panel4.Controls.Add(this.txtAd);
+            this.panel4.Controls.Add(this.lblAd);
+            this.panel4.Location = new System.Drawing.Point(897, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(312, 767);
+            this.panel4.TabIndex = 96;
             // 
             // txtId
             // 
@@ -102,7 +120,7 @@ namespace uu_library_app
             this.btnEkle.TabIndex = 83;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label4
             // 
@@ -111,9 +129,9 @@ namespace uu_library_app
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 21);
+            this.label4.Size = new System.Drawing.Size(147, 21);
             this.label4.TabIndex = 82;
-            this.label4.Text = "Bölüm Bilgileri :";
+            this.label4.Text = "Fakülte Bilgileri :";
             // 
             // panel5
             // 
@@ -160,79 +178,9 @@ namespace uu_library_app
             this.lblAd.ForeColor = System.Drawing.Color.White;
             this.lblAd.Location = new System.Drawing.Point(43, 220);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(108, 25);
+            this.lblAd.Size = new System.Drawing.Size(113, 25);
             this.lblAd.TabIndex = 55;
-            this.lblAd.Text = "Bölüm Adı :";
-            // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 90;
-            this.picboxBack.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(98, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 40);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Bölüm İşlemleri";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(371, 21);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "Bölüm Ekleme/Silme/Güncelleme İşlemleri :";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel2.Location = new System.Drawing.Point(-1, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(823, 1);
-            this.panel2.TabIndex = 81;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(13, 124);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(823, 764);
-            this.panel3.TabIndex = 91;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtId);
-            this.panel4.Controls.Add(this.btnGuncelle);
-            this.panel4.Controls.Add(this.btnSil);
-            this.panel4.Controls.Add(this.btnEkle);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.picboxAd);
-            this.panel4.Controls.Add(this.pnlAd);
-            this.panel4.Controls.Add(this.txtAd);
-            this.panel4.Controls.Add(this.lblAd);
-            this.panel4.Location = new System.Drawing.Point(897, 121);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(312, 767);
-            this.panel4.TabIndex = 92;
+            this.lblAd.Text = "Fakülte Adı :";
             // 
             // dataGridView1
             // 
@@ -260,29 +208,81 @@ namespace uu_library_app
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(815, 725);
-            this.dataGridView1.TabIndex = 88;
+            this.dataGridView1.TabIndex = 87;
             // 
-            // Department_Operations
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(378, 21);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Fakülte Ekleme/Silme/Güncelleme İşlemleri :";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(823, 1);
+            this.panel2.TabIndex = 81;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(98, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 40);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Fakülte İşlemleri";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Location = new System.Drawing.Point(13, 124);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(823, 764);
+            this.panel3.TabIndex = 95;
+            // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 94;
+            this.picboxBack.TabStop = false;
+            // 
+            // Faculty_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Department_Operations";
-            this.Text = "Department_Operations";
-            this.Load += new System.EventHandler(this.Department_Operations_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.Name = "Faculty_Operations";
+            this.Text = "Faculty_Operations";
+            this.Load += new System.EventHandler(this.Faculty_Operations_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +290,7 @@ namespace uu_library_app
 
         #endregion
 
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
@@ -300,12 +301,11 @@ namespace uu_library_app
         private System.Windows.Forms.Panel pnlAd;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label lblAd;
-        private System.Windows.Forms.PictureBox picboxBack;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox picboxBack;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

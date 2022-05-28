@@ -266,6 +266,12 @@
     <Compile Include="DataAccess\Abstract\IDepartmentDal.cs" />
     <Compile Include="DataAccess\Concrete\BookDal.cs" />
     <Compile Include="DataAccess\Concrete\DepartmentDal.cs" />
+    <Compile Include="FormUI\Other-Operations\Faculty-Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Other-Operations\Faculty-Operations.Designer.cs">
+      <DependentUpon>Faculty-Operations.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Other-Operations\Location-actions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,12 @@
     </Compile>
     <Compile Include="FormUI\Other-Operations\settings-test.Designer.cs">
       <DependentUpon>settings-test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Settings\Mail-Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Settings\Mail-Operations.Designer.cs">
+      <DependentUpon>Mail-Operations.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\Student\Delete-Student.cs">
       <SubType>Form</SubType>
@@ -409,11 +421,17 @@
     <EmbeddedResource Include="FormUI\Other-Operations\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Other-Operations\Faculty-Operations.resx">
+      <DependentUpon>Faculty-Operations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Location-actions.resx">
       <DependentUpon>Location-actions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\settings-test.resx">
       <DependentUpon>settings-test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Settings\Mail-Operations.resx">
+      <DependentUpon>Mail-Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>

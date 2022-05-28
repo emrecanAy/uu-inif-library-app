@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using uu_library_app.FormUI.Other_Operations;
 using uu_library_app.FormUI.Deposit;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Settings;
 
 namespace uu_library_app.FormUI
 {
@@ -56,6 +57,8 @@ namespace uu_library_app.FormUI
                 pnlDepositSubMenu.Visible = false;
             if (pnlDigerSubMenu.Visible == true)
                 pnlDigerSubMenu.Visible = false;
+            if (panel3.Visible == true)
+                panel3.Visible = false;
 
 
         }
@@ -286,6 +289,11 @@ namespace uu_library_app.FormUI
             openChildForm(new Book_query());
             hideSubMenu();
         }
+        private void btnMailSettings_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Mail_Operations());
+            hideSubMenu();
+        }
 
 
 
@@ -297,6 +305,13 @@ namespace uu_library_app.FormUI
 
         }
 
-        
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            pnlNewNav.Height = btnSettings.Height;
+            pnlNewNav.Top = btnSettings.Top;
+            pnlNewNav.Left = btnSettings.Left;
+            btnBooks.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(panelBookSubMenu);
+        }
     }
 }
