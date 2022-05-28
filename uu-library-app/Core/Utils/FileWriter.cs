@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -51,14 +52,44 @@ namespace uu_library_app.Core.Helpers
             sw.Close();
         }
 
-        public static void ToXml(DataTable dt, DataSet ds, MySqlDataAdapter da, string fileName, string filePath, string rootName, string tableName)
+        public static void ToXML(DataSet ds, string filePath, string fileName, string rootName)
         {
-            da.Fill(dt);
-            dt.TableName = tableName;
             ds.DataSetName = rootName;
-            ds.Tables.Add(dt);
-            ds.WriteXml(fileName + ".xml");
+            ds.WriteXml(filePath + ".xml");
 
         }
+
+        public static void ToJSON(DataSet ds, string fileName)
+        {
+            string json = JsonConvert.SerializeObject(ds, Formatting.Indented);
+            int startIndex = json.IndexOf("[") - 1;
+            int endIndex = json.IndexOf("]") + 1;
+            int length = endIndex - startIndex + 1;
+            json = json.Substring(startIndex, length);
+            File.WriteAllText(fileName + ".json", json);
+
+        }
+
+        public static void ToEXCEL(DataTable dt, string fileName)
+        {
+            var lines = new List<string>();
+
+            string[] columnNames = dt.Columns
+                .Cast<DataColumn>()
+                .Select(column => column.ColumnName)
+                .ToArray();
+
+            var header = string.Join(",", columnNames.Select(name => $"\"{name}\""));
+            lines.Add(header);
+
+            var valueLines = dt.AsEnumerable()
+                .Select(row => string.Join(",", row.ItemArray.Select(val => $"\"{val}\"")));
+
+            lines.AddRange(valueLines);
+
+            File.WriteAllLines(fileName + ".xlsx", lines);
+        }
+
+
     }
 }

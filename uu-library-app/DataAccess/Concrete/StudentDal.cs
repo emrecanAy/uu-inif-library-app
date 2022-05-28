@@ -259,6 +259,35 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-       
+        public Student findByEmail(string email)
+        {
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE eMail=@p1 AND deleted=false", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", email);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+
     }
 }

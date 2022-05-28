@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
+using uu_library_app.Core.Utils;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 
@@ -24,12 +25,12 @@ namespace uu_library_app.Business.Concrete
         public bool checkIfEmailEqualsToPassword(string eMail, string password)
         {
             Admin admin = _admin.getByEmail(eMail);
-                if (admin.Password != password)
+            if (StringEncoder.Decrypt(admin.Password) != password)
             {
                 return false;
             }
             return true;
-            
+
         }
 
         public void Add(Admin admin)
@@ -57,11 +58,6 @@ namespace uu_library_app.Business.Concrete
         {
             
             return _admin.getByEmail(eMail);
-        }
-
-        internal string checkIfEmailEqualsToPassword(string text)
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(Admin admin)

@@ -214,7 +214,7 @@ namespace uu_library_app.FormUI
         #region CRUD Members Buttons
         private void btnAddMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Add_Student());
+            openChildForm(new Add_Student(_admin));
             hideSubMenu();
         }
 
@@ -232,7 +232,7 @@ namespace uu_library_app.FormUI
 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Edit_Student());
+            openChildForm(new Edit_Student(_admin));
             hideSubMenu();
         }
 
@@ -244,23 +244,23 @@ namespace uu_library_app.FormUI
 
         private void btnReceive_Click(object sender, EventArgs e)
         {
-            openChildForm(new Get_Book_Back());
+            openChildForm(new Get_Book_Back(_admin));
             hideSubMenu();
         }
 
         private void btnYazar_Click(object sender, EventArgs e)
         {
-            openChildForm(new author_actions());
+            openChildForm(new author_actions(_admin));
             hideSubMenu();
         }
         private void btnYayinevi_Click(object sender, EventArgs e)
         {
-            openChildForm(new publisher_actions());
+            openChildForm(new publisher_actions(_admin));
             hideSubMenu();
         }
         private void btnDil_Click(object sender, EventArgs e)
         {
-            openChildForm(new Language_Operations());
+            openChildForm(new Language_Operations(_admin));
             hideSubMenu();
         }
 
@@ -272,13 +272,13 @@ namespace uu_library_app.FormUI
 
         private void btnBolum_Click(object sender, EventArgs e)
         {
-            openChildForm(new Department_Operations());
+            openChildForm(new Department_Operations(_admin));
             hideSubMenu();
         }
 
         private void btnKonum_Click(object sender, EventArgs e)
         {
-            openChildForm(new Location_actions());   
+            openChildForm(new Location_actions(_admin));   
             hideSubMenu();
         }
         private void btnTeslimSorgu_Click(object sender, EventArgs e)

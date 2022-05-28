@@ -18,5 +18,6 @@ namespace uu_library_app.DataAccess.Abstract
         Student getById(string id);
         Student findByName(string name);
         Student findByNumber(string number);
+        Student findByEmail(string email);
     }
 }

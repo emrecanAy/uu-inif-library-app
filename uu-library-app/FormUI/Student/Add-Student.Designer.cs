@@ -39,12 +39,12 @@
             this.picboxAd = new System.Windows.Forms.PictureBox();
             this.picboxSoyad = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.picboxEmail = new System.Windows.Forms.PictureBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
             this.pnlOkulNo = new System.Windows.Forms.Panel();
             this.picboxOkulNo = new System.Windows.Forms.PictureBox();
-            this.txtOkulNo = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblOkulNo = new System.Windows.Forms.Label();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
@@ -169,20 +169,21 @@
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(16, 235);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(134, 25);
+            this.lblEmail.Size = new System.Drawing.Size(137, 25);
             this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "E-Mail Adresi :";
+            this.lblEmail.Text = "Okul Numarası";
             // 
-            // txtEmail
+            // txtOkulNo
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(57, 266);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(439, 27);
-            this.txtEmail.TabIndex = 3;
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(57, 266);
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
+            this.txtOkulNo.TabIndex = 3;
+            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged);
             // 
             // picboxEmail
             // 
@@ -222,16 +223,16 @@
             this.picboxOkulNo.TabIndex = 15;
             this.picboxOkulNo.TabStop = false;
             // 
-            // txtOkulNo
+            // txtEmail
             // 
-            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(57, 380);
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
-            this.txtOkulNo.TabIndex = 4;
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(57, 380);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(439, 27);
+            this.txtEmail.TabIndex = 4;
             // 
             // lblOkulNo
             // 
@@ -241,9 +242,9 @@
             this.lblOkulNo.ForeColor = System.Drawing.Color.White;
             this.lblOkulNo.Location = new System.Drawing.Point(16, 350);
             this.lblOkulNo.Name = "lblOkulNo";
-            this.lblOkulNo.Size = new System.Drawing.Size(146, 25);
+            this.lblOkulNo.Size = new System.Drawing.Size(134, 25);
             this.lblOkulNo.TabIndex = 17;
-            this.lblOkulNo.Text = "Okul Numarası :";
+            this.lblOkulNo.Text = "E-Mail Adresi :";
             // 
             // lblBaslik
             // 
@@ -340,11 +341,11 @@
             this.panel2.Controls.Add(this.lblOkulNo);
             this.panel2.Controls.Add(this.lblEmail);
             this.panel2.Controls.Add(this.pnlOkulNo);
-            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.txtOkulNo);
             this.panel2.Controls.Add(this.picboxOkulNo);
             this.panel2.Controls.Add(this.picboxEmail);
             this.panel2.Controls.Add(this.pnlEmail);
-            this.panel2.Controls.Add(this.txtOkulNo);
+            this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Location = new System.Drawing.Point(22, 98);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 756);
@@ -527,12 +528,12 @@
         private System.Windows.Forms.PictureBox picboxAd;
         private System.Windows.Forms.PictureBox picboxSoyad;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtOkulNo;
         private System.Windows.Forms.PictureBox picboxEmail;
         private System.Windows.Forms.Panel pnlEmail;
         private System.Windows.Forms.Panel pnlOkulNo;
         private System.Windows.Forms.PictureBox picboxOkulNo;
-        private System.Windows.Forms.TextBox txtOkulNo;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblOkulNo;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.PictureBox picboxBack;

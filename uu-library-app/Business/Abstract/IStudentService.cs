@@ -17,6 +17,7 @@ namespace uu_library_app.Business.Abstract
         void Delete(string id);
         Student getById(string id);
         Student findByName(string name);
+        Student findByEmail(string email);
         Student findByNumber(string number);
     }
 }

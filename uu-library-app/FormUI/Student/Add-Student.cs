@@ -71,8 +71,8 @@ namespace uu_library_app.FormUI
         {
             txtId.Clear();
             txtAd.Clear();
-            txtEmail.Clear();
             txtOkulNo.Clear();
+            txtEmail.Clear();
             txtSoyad.Clear();
             comboBox1.ResetText();
         }
@@ -81,7 +81,7 @@ namespace uu_library_app.FormUI
         {
             string createGUID = System.Guid.NewGuid().ToString();
 
-            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || txtOkulNo.Text == "" || comboBox1.Text == "")
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtOkulNo.Text == "" || txtEmail.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("Lütfen geçerli değerler giriniz!");
                 return;
@@ -89,7 +89,7 @@ namespace uu_library_app.FormUI
 
             try
             {
-                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text, "CARD-ID", txtOkulNo.Text);
                 manager.Add(studentToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
@@ -155,6 +155,11 @@ namespace uu_library_app.FormUI
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", txtAra.Text);
+        }
+
+        private void txtOkulNo_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
         }
     }
 }
