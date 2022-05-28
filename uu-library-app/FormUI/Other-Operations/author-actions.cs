@@ -81,28 +81,7 @@ namespace uu_library_app
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if(txtId.Text == "")
-            {
-                MessageBox.Show("Silmek istediğiniz konumu seçin!");
-                return;
-            }
             
-            try
-            {
-                
-                Author authorToDelete = new Author(txtId.Text,txtAd.Text,txtSoyad.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString() ,_admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ] silindi! -Tarih: " + DateTime.Now);
-                manager.Delete(authorToDelete);
-                logger.Log(log);
-                clearAllFields();
-                MessageBox.Show("Başarıyla silindi...");
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
-                throw;
-            }
             
         }
 
@@ -152,6 +131,32 @@ namespace uu_library_app
             conn.Close();
 
 
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Silmek istediğiniz konumu seçin!");
+                return;
+            }
+
+            try
+            {
+
+                Author authorToDelete = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ] silindi! -Tarih: " + DateTime.Now);
+                manager.Delete(authorToDelete);
+                logger.Log(log);
+                clearAllFields();
+                MessageBox.Show("Başarıyla silindi...");
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
         }
     }
 }

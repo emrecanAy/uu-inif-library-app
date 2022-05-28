@@ -12,19 +12,15 @@ namespace uu_library_app.Business.Concrete
 {
     public class AdminManager : IAdminService
     {
-        IAdminDal _admin;
-        public AdminManager(IAdminDal admin)
+        IAdminDal _service;
+        public AdminManager(IAdminDal service)
         {
-            _admin = admin;
-        }
-
-        public AdminManager()
-        {
+            _service = service;
         }
 
         public bool checkIfEmailEqualsToPassword(string eMail, string password)
         {
-            Admin admin = _admin.getByEmail(eMail);
+            Admin admin = _service.getByEmail(eMail);
             if (StringEncoder.Decrypt(admin.Password) != password)
             {
                 return false;
@@ -32,12 +28,37 @@ namespace uu_library_app.Business.Concrete
             return true;
 
         }
+        public bool checkIfEmailVerificated(string code, string verificationCode)
+        {
+            if(verificationCode == code)
+            {
+                return true;
+            }
+            return false;
+        }
 
-        public void Add(Admin admin)
+       
+        public void sendEmailVerificationCode(string email, string code)
+        {
+            //string code = EmailVerificator.GenerateCode();
+            try
+            {
+                MailSender.SendMail(email, code);          
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
+        }
+
+        public void Add(Admin admin, string verificationCode)
         {
             if (admin.FirstName != null || admin.LastName != null || admin.EMail != null || admin.Password != null || admin.Id != null)
             {
-                _admin.Add(admin);
+             _service.Add(admin);
+             Console.WriteLine("Kayıt başarılı!");
             }
         }
 
@@ -45,32 +66,32 @@ namespace uu_library_app.Business.Concrete
         {
             if (id != null)
             {
-                _admin.Delete(id);
+                _service.Delete(id);
             }
         }
 
         public List<Admin> getAll()
         {
-            return _admin.getAll();
+            return _service.getAll();
         }
 
         public Admin getbyEmail(string eMail)
         {
             
-            return _admin.getByEmail(eMail);
+            return _service.getByEmail(eMail);
         }
 
         public void Update(Admin admin)
         {
             if (admin.FirstName != null || admin.LastName != null || admin.EMail != null || admin.Password != null || admin.Id != null)
             {
-                _admin.Update(admin);
+                _service.Update(admin);
             }
         }
 
         public Admin GetById(string id)
         {
-            return _admin.GetById(id);
+            return _service.GetById(id);
         }
     }
 }

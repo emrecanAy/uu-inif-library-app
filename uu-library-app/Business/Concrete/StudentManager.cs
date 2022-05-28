@@ -85,12 +85,15 @@ namespace uu_library_app.Business.Concrete
                 _service.Update(student);
             }
         }
-
+        public Student findByEmail(string email)
+        {
+            return _service.findByEmail(email);
+        }
         public bool isValidRegex(string email) //Utils'e koy.
         {
             //Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             //Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$");
-            Regex regex = new Regex(@"/\.(?:uludag|edu|tr)|@ogr/");
+            Regex regex = new Regex(@"/\.(?:uludag|edu|tr)|@ogr.uludag.edu.tr/");
             Match match = regex.Match(email);
             if (match.Success)
                 return true;
@@ -118,9 +121,5 @@ namespace uu_library_app.Business.Concrete
             return false;
         }
 
-        public Student findByEmail(string email)
-        {
-            return _service.findByEmail(email);
-        }
     }
 }

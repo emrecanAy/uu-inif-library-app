@@ -134,6 +134,7 @@ namespace uu_library_app
             this.btnSil.TabIndex = 77;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnEkle
             // 

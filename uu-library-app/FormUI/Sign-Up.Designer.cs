@@ -31,10 +31,6 @@ namespace uu_library_app
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_Up));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -58,22 +54,29 @@ namespace uu_library_app
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.picboxEmail = new System.Windows.Forms.PictureBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelOnayMail = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtOnayKodu = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnOnay = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
+            this.panelOnayMail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.panelOnayMail);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtSifre);
@@ -101,52 +104,6 @@ namespace uu_library_app
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 534);
             this.panel2.TabIndex = 35;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(152, 379);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(203, 1);
-            this.panel6.TabIndex = 44;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(209, 351);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 25);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Üye Tipi :";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.radioButton2.Location = new System.Drawing.Point(183, 426);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(187, 29);
-            this.radioButton2.TabIndex = 48;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kütüphane Görevlisi";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.radioButton1.Location = new System.Drawing.Point(183, 386);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(133, 29);
-            this.radioButton1.TabIndex = 47;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ögrenci İşleri";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -396,6 +353,91 @@ namespace uu_library_app
             this.pnlEmail.Size = new System.Drawing.Size(481, 1);
             this.pnlEmail.TabIndex = 13;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(18, 476);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 27);
+            this.textBox1.TabIndex = 50;
+            this.textBox1.UseSystemPasswordChar = true;
+            // 
+            // panelOnayMail
+            // 
+            this.panelOnayMail.Controls.Add(this.btnOnay);
+            this.panelOnayMail.Controls.Add(this.label5);
+            this.panelOnayMail.Controls.Add(this.txtOnayKodu);
+            this.panelOnayMail.Controls.Add(this.pictureBox4);
+            this.panelOnayMail.Controls.Add(this.panel6);
+            this.panelOnayMail.Location = new System.Drawing.Point(18, 349);
+            this.panelOnayMail.Name = "panelOnayMail";
+            this.panelOnayMail.Size = new System.Drawing.Size(481, 110);
+            this.panelOnayMail.TabIndex = 51;
+            this.panelOnayMail.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(26, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 25);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Onay Kodu:";
+            // 
+            // txtOnayKodu
+            // 
+            this.txtOnayKodu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOnayKodu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOnayKodu.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOnayKodu.ForeColor = System.Drawing.Color.White;
+            this.txtOnayKodu.Location = new System.Drawing.Point(71, 52);
+            this.txtOnayKodu.Name = "txtOnayKodu";
+            this.txtOnayKodu.Size = new System.Drawing.Size(164, 27);
+            this.txtOnayKodu.TabIndex = 53;
+            this.txtOnayKodu.UseSystemPasswordChar = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(31, 86);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(203, 1);
+            this.panel6.TabIndex = 54;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(31, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 55;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnOnay
+            // 
+            this.btnOnay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnOnay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOnay.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOnay.FlatAppearance.BorderSize = 2;
+            this.btnOnay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOnay.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnOnay.ForeColor = System.Drawing.Color.White;
+            this.btnOnay.Location = new System.Drawing.Point(288, 44);
+            this.btnOnay.Name = "btnOnay";
+            this.btnOnay.Size = new System.Drawing.Size(170, 35);
+            this.btnOnay.TabIndex = 52;
+            this.btnOnay.Text = "Onay";
+            this.btnOnay.UseVisualStyleBackColor = false;
+            this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
+            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,6 +456,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
+            this.panelOnayMail.ResumeLayout(false);
+            this.panelOnayMail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,9 +489,12 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox picboxEmail;
         private System.Windows.Forms.Panel pnlEmail;
+        private System.Windows.Forms.Panel panelOnayMail;
+        private System.Windows.Forms.Button btnOnay;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtOnayKodu;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

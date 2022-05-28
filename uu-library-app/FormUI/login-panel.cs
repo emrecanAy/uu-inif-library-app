@@ -47,7 +47,7 @@ namespace uu_library_app
         {
             try
             {
-                if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtPassword.Text) == true)
+                if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtPassword.Text))
                 {
                     this.Hide();
                     LibrarianInterface openApp = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));

@@ -10,8 +10,8 @@ namespace uu_library_app.Business.Abstract
     public interface IAdminService
     {
         List<Admin> getAll();
-        void Add(Admin department);
-        void Update(Admin department);
+        void Add(Admin admin, string verificationCode);
+        void Update(Admin admin);
         void Delete(string id);
         Admin getbyEmail(string eMail);
         Admin GetById(string id);

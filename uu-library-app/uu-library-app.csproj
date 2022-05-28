@@ -127,7 +127,16 @@
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />
+    <Compile Include="Core\Results\DataResult.cs" />
+    <Compile Include="Core\Results\ErrorDataResult.cs" />
+    <Compile Include="Core\Results\ErrorResult.cs" />
+    <Compile Include="Core\Results\IDataResult.cs" />
+    <Compile Include="Core\Results\IResult.cs" />
+    <Compile Include="Core\Results\Result.cs" />
+    <Compile Include="Core\Results\SuccessDataResult.cs" />
+    <Compile Include="Core\Results\SuccessResult.cs" />
     <Compile Include="Core\RoutinCustomJobs\MailSenderJob.cs" />
+    <Compile Include="Core\Utils\EmailVerificator.cs" />
     <Compile Include="Core\Utils\MailSender.cs" />
     <Compile Include="Core\Utils\StringEncoder.cs" />
     <Compile Include="DataAccess\Abstract\IFacultyDal.cs" />

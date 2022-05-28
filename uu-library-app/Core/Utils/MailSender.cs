@@ -10,6 +10,31 @@ namespace uu_library_app.Core.Utils
 {
     public static class MailSender
     {
+        public static void SendMail(string email, string verificationCode)
+        {
+            string senderMailAddress = "inif.assemsoft@gmail.com"; //bunlar globals diye klasör açılıp oradan getirilecek. UI'dan set edilebilecek.
+
+            try
+            {
+                Console.WriteLine("Method call at" + DateTime.Now);
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress(senderMailAddress);
+                mail.To.Add(email);
+                mail.Subject = "INIF-AssemSoft Email Doğrulama";
+                mail.Body = "Eposta doğrulama kodunuz: " + verificationCode;
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(senderMailAddress, "PassWord_123"); //bunlar globals diye klasör açılıp orada bir class'da tutulup oradan getirilecek.
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+                Console.WriteLine("Mail sent at" + DateTime.Now);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static void SendMailForExpired(Student student, Book book, Author author, DepositBook depositBook, string pastDays)
         {
 
@@ -69,5 +94,7 @@ namespace uu_library_app.Core.Utils
                 throw ex;
             }
         }
+        
+
     }
 }
