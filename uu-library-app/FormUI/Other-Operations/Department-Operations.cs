@@ -68,6 +68,8 @@ namespace uu_library_app
             try
             {
                 Department department = new Department(txtId.Text, txtAd.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + department.Id + " | " + department.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 manager.Delete(department);
                 //buraya log yapılacak
                 listDataToTable();
@@ -93,7 +95,7 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(departmentToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToUpdate.Id + " | " + departmentToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToUpdate.Id + " | " + departmentToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -142,7 +144,7 @@ namespace uu_library_app
             try
             {
                 manager.Add(departmentToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();

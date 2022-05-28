@@ -64,6 +64,8 @@ namespace uu_library_app
             try
             {
                 Publisher publisher = new Publisher(txtId.Text, txtAd.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisher.Id + " | " + publisher.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 manager.Delete(publisher);
                 MessageBox.Show("Başarıyla silindi!");
                 listDataToTable();
@@ -88,7 +90,7 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(publisherToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToUpdate.Id + " | " + publisherToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToUpdate.Id + " | " + publisherToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -137,7 +139,7 @@ namespace uu_library_app
             try
             {
                 manager.Add(publisherToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();

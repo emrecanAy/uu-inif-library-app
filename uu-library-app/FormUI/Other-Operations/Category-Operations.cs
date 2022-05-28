@@ -84,7 +84,7 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(categoryToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "] güncellendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "]"+_admin.FirstName+" "+_admin.LastName+" tarafından güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -117,7 +117,7 @@ namespace uu_library_app
             try
             {
                 manager.Add(categoryToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -140,7 +140,9 @@ namespace uu_library_app
             try
             {
                 Category category = new Category(txtId.Text, txtAd.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + category.Id + " | " + category.Name + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                 manager.Delete(category);
+                logger.Log(log);
                 //buraya log yapılcak
                 listDataToTable();
                 clearAllFields();

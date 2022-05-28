@@ -69,7 +69,7 @@ namespace uu_library_app
                     return;
                 }
                 manager.Update(languageToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "] güncellendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -115,6 +115,8 @@ namespace uu_library_app
                     return;
                 }
                 Language language = new Language(txtId.Text, txtDil.Text);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + language.Id + " | " + language.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 manager.Delete(language);
                 //buraya log eklenecek
                 listDataToTable();
@@ -141,7 +143,7 @@ namespace uu_library_app
             try
             {
                 manager.Add(languageToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();

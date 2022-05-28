@@ -64,6 +64,8 @@ namespace uu_library_app.FormUI.Other_Operations
                     return;
                 }
                 Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + location.Id + " | " + location.Shelf + " | KategoriId: " + location.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
                 manager.Delete(location);
                 listDataToTable();
                 clearAllFields();
@@ -88,7 +90,7 @@ namespace uu_library_app.FormUI.Other_Operations
                     return;
                 }
                 manager.Update(locationToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "] güncellendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
@@ -147,7 +149,7 @@ namespace uu_library_app.FormUI.Other_Operations
             try
             {
                 manager.Add(locationToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 listDataToTable();
                 clearAllFields();
