@@ -1,5 +1,5 @@
 ﻿
-namespace uu_library_app.FormUI.Settings
+namespace uu_library_app.FormUI.MailSettings
 {
     partial class CategoryQuick
     {

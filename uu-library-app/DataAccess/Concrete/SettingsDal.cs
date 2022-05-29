@@ -16,6 +16,7 @@ namespace uu_library_app.DataAccess.Concrete
         
         public void AddOrUpdate(Settings settings)
         {
+            /*UPDATED AT SORGUYA EKLENECEK*/
             conn.Open();
             MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Settings (id, senderEmail, senderPassword, remindingDay, depositDay, remindingMailHeader, remindingMailText, expiredMailHeader, expiredMailText) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9) ON DUPLICATE KEY UPDATE senderEmail = @p2,senderPassword = @p3,remindingDay = @p4,depositDay = @p5,remindingMailHeader = @p6,remindingMailText = @p7,expiredMailHeader = @p8,expiredMailText = @p9", conn);
             try
@@ -29,6 +30,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToAdd.Parameters.AddWithValue("@p7", settings.RemindingMailText);
                 commandToAdd.Parameters.AddWithValue("@p8", settings.ExpiredMailHeader);
                 commandToAdd.Parameters.AddWithValue("@p9", settings.ExpiredMailText);
+                commandToAdd.Parameters.AddWithValue("@p10", settings.UpdatedAt);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -61,6 +63,7 @@ namespace uu_library_app.DataAccess.Concrete
                     settings.RemindingMailText = reader[6].ToString();
                     settings.ExpiredMailHeader = reader[7].ToString();
                     settings.ExpiredMailText = reader[8].ToString();
+                    settings.UpdatedAt = Convert.ToDateTime(reader[9].ToString());
 
                 }
                 conn.Close();
@@ -78,7 +81,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Settings SET senderEmail=@p2, senderPassword=@p3, remindingDay=@p4, depositDay=@p5, remindingMailHeader=@p6, remindingMailText=@p7, expiredMailHeader=@p8, expiredMailText=@p9 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Settings SET senderEmail=@p2, senderPassword=@p3, remindingDay=@p4, depositDay=@p5, remindingMailHeader=@p6, remindingMailText=@p7, expiredMailHeader=@p8, expiredMailText=@p9, updatedAt=@p10 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", settings.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", settings.SenderEmail);
                 commandToUpdate.Parameters.AddWithValue("@p3", settings.SenderPassword);
@@ -88,6 +91,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToUpdate.Parameters.AddWithValue("@p7", settings.RemindingMailText);
                 commandToUpdate.Parameters.AddWithValue("@p8", settings.ExpiredMailHeader);
                 commandToUpdate.Parameters.AddWithValue("@p9", settings.ExpiredMailText);
+                commandToUpdate.Parameters.AddWithValue("@p10", settings.UpdatedAt);
                 commandToUpdate.ExecuteNonQuery();
                 Console.WriteLine("Güncellendi!");
 

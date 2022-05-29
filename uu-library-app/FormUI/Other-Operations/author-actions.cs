@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,11 +76,21 @@ namespace uu_library_app
             Author authorToUpdate = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
             try
             {
-                manager.Update(authorToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToUpdate.Id + " | " + authorToUpdate.FirstName + " " + authorToUpdate.LastName + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(authorToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToUpdate.Id + " | " + authorToUpdate.FirstName + " " + authorToUpdate.LastName + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+                
             }
             catch (Exception)
             {
@@ -133,14 +144,20 @@ namespace uu_library_app
 
             try
             {
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
 
-                Author authorToDelete = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                manager.Delete(authorToDelete);
-                logger.Log(log);
-                clearAllFields();
-                MessageBox.Show("Başarıyla silindi...");
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Author authorToDelete = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    manager.Delete(authorToDelete);
+                    logger.Log(log);
+                    clearAllFields();
 
+                }
             }
             catch (Exception)
             {

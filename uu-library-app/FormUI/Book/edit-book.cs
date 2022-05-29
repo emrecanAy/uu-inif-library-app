@@ -133,7 +133,6 @@ namespace uu_library_app
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     bookManager.Update(bookToUpdate);
                     logger.Log(log);
-                    MessageBox.Show("Başarıyla güncellendi!");
                     DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                     clearAllFields();
 

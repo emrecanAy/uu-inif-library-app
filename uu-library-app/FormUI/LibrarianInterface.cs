@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using uu_library_app.FormUI.Other_Operations;
 using uu_library_app.FormUI.Deposit;
 using uu_library_app.Entity.Concrete;
-using uu_library_app.FormUI.Settings;
+using uu_library_app.FormUI.MailSettings;
 
 namespace uu_library_app.FormUI
 {
@@ -94,7 +94,7 @@ namespace uu_library_app.FormUI
 #endregion
         private void LibrarianInterface_Load(object sender, EventArgs e)
         {
-            openChildForm(new Dashboard());
+            openChildForm(new Gosterge_Paneli());
             lblAdmin.Text = _admin.FirstName + " " + _admin.LastName;
         }
         #region Buttons Click Events
@@ -271,7 +271,7 @@ namespace uu_library_app.FormUI
 
         private void btnKategori_Click(object sender, EventArgs e)
         {
-            openChildForm(new Category_Operations());
+            openChildForm(new Category_Operations(_admin));
             hideSubMenu();
         }
 
@@ -293,7 +293,7 @@ namespace uu_library_app.FormUI
         }
         private void btnMailSettings_Click(object sender, EventArgs e)
         {
-            openChildForm(new Mail_Operations());
+            openChildForm(new Mail_Operations(_admin));
             hideSubMenu();
         }
         private void btnFakulte_Click(object sender, EventArgs e)

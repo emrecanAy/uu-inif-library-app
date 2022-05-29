@@ -13,15 +13,17 @@ using uu_library_app.Business.Concrete;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.Core.Helpers;
+using MessageBoxDenemesi;
 
 namespace uu_library_app
 {
     public partial class Category_Operations : Form
     {
         private Admin _admin;
-        public Category_Operations()
+        public Category_Operations(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LoggerManager logger = new LoggerManager(new LoggerDal());
@@ -82,12 +84,24 @@ namespace uu_library_app
                 {
                     MessageBox.Show("Geçerli bir değer giriniz!");
                     return;
+                
                 }
-                manager.Update(categoryToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "]"+_admin.FirstName+" "+_admin.LastName+" tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(categoryToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+                
             }
             catch (Exception)
             {
@@ -139,13 +153,21 @@ namespace uu_library_app
             }
             try
             {
-                Category category = new Category(txtId.Text, txtAd.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + category.Id + " | " + category.Name + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                manager.Delete(category);
-                logger.Log(log);
-                //buraya log yapılcak
-                listDataToTable();
-                clearAllFields();
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Category category = new Category(txtId.Text, txtAd.Text);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + category.Id + " | " + category.Name + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    manager.Delete(category);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+                
             }
             catch (Exception)
             {

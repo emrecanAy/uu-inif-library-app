@@ -302,12 +302,6 @@
     <Compile Include="FormUI\Other-Operations\Location-actions.Designer.cs">
       <DependentUpon>Location-actions.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Other-Operations\settings-test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\Other-Operations\settings-test.Designer.cs">
-      <DependentUpon>settings-test.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUI\Book\Quick-Menu\CategoryQuick.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,10 +320,10 @@
     <Compile Include="FormUI\Student\Quick-S\FacultyQuick.Designer.cs">
       <DependentUpon>FacultyQuick.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Settings\Mail-Operations.cs">
+    <Compile Include="FormUI\MailSettings\Mail-Operations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Settings\Mail-Operations.Designer.cs">
+    <Compile Include="FormUI\MailSettings\Mail-Operations.Designer.cs">
       <DependentUpon>Mail-Operations.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\Student\Delete-Student.cs">
@@ -490,9 +484,6 @@
     <EmbeddedResource Include="FormUI\Other-Operations\Location-actions.resx">
       <DependentUpon>Location-actions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Other-Operations\settings-test.resx">
-      <DependentUpon>settings-test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\Quick-Menu\CategoryQuick.resx">
       <DependentUpon>CategoryQuick.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,7 +493,7 @@
     <EmbeddedResource Include="FormUI\Student\Quick-S\FacultyQuick.resx">
       <DependentUpon>FacultyQuick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Settings\Mail-Operations.resx">
+    <EmbeddedResource Include="FormUI\MailSettings\Mail-Operations.resx">
       <DependentUpon>Mail-Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Add-Student.resx">

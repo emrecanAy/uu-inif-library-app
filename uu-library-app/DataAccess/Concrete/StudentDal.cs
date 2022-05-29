@@ -17,7 +17,7 @@ namespace uu_library_app.DataAccess.Concrete
         public void Add(Student student)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Student (id, firstName, lastName, number, card, eMail, departmentId) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Student (id, firstName, lastName, number, card, eMail, departmentId, facultyId) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", student.Id);
@@ -27,6 +27,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToAdd.Parameters.AddWithValue("@p5", student.Card);
                 commandToAdd.Parameters.AddWithValue("@p6", student.Email);
                 commandToAdd.Parameters.AddWithValue("@p7", student.DepartmentId);
+                commandToAdd.Parameters.AddWithValue("@p8", student.FacultyId);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
             }
@@ -44,7 +45,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET firstName=@p2, lastName=@p3, number=@p4, card=@p5, eMail=@p6, departmentId=@p7 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Student SET firstName=@p2, lastName=@p3, number=@p4, card=@p5, eMail=@p6, departmentId=@p7, facultyId=@p8 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", student.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", student.FirstName);
                 commandToUpdate.Parameters.AddWithValue("@p3", student.LastName);
@@ -52,6 +53,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToUpdate.Parameters.AddWithValue("@p5", student.Card);
                 commandToUpdate.Parameters.AddWithValue("@p6", student.Email);
                 commandToUpdate.Parameters.AddWithValue("@p7", student.DepartmentId);
+                commandToUpdate.Parameters.AddWithValue("@p8", student.FacultyId);
                 commandToUpdate.ExecuteNonQuery();
 
             }
@@ -102,6 +104,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
                 }
                 conn.Close();
                 return student;
@@ -131,6 +134,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                 }
                 conn.Close();
                 return student;
@@ -160,6 +165,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                     students.Add(student);
                 }
                 conn.Close();
@@ -189,6 +196,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                     students.Add(student);
                 }
                 conn.Close();
@@ -218,6 +227,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                     students.Add(student);
                 }
                 conn.Close();
@@ -248,6 +259,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                 }
                 conn.Close();
                 return student;
@@ -277,6 +290,8 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[7].ToString();
+
                 }
                 conn.Close();
                 return student;

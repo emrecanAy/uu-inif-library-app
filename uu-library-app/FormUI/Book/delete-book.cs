@@ -78,7 +78,7 @@ namespace uu_library_app
 
             try
             {
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
                 "Uyarı!",
                   MessageBoxButtons.YesNo,
                   MessageBoxIcon.Warning);

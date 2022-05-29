@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,13 +64,23 @@ namespace uu_library_app.FormUI.Other_Operations
                     MessageBox.Show("Lütfen silinecek dili seçin...");
                     return;
                 }
-                Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + location.Id + " | " + location.Shelf + " | KategoriId: " + location.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                manager.Delete(location);
-                listDataToTable();
-                clearAllFields();
-                MessageBox.Show("Başarıyla silindi.");
+
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + location.Id + " | " + location.Shelf + " | KategoriId: " + location.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    manager.Delete(location);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+                
             }
             catch (Exception)
             {
@@ -89,11 +100,21 @@ namespace uu_library_app.FormUI.Other_Operations
                     MessageBox.Show("Geçerli bir değer giriniz!");
                     return;
                 }
-                manager.Update(locationToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(locationToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+                
             }
             catch (Exception)
             {

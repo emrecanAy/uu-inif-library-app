@@ -77,6 +77,7 @@ namespace uu_library_app
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -96,7 +97,7 @@ namespace uu_library_app
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
                     manager.Update(studentToUpdate);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);

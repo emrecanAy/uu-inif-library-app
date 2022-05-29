@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,11 +69,21 @@ namespace uu_library_app
                     MessageBox.Show("Geçerli bir değer giriniz!");
                     return;
                 }
-                manager.Update(languageToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(languageToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+               
             }
             catch (Exception)
             {
@@ -114,14 +125,22 @@ namespace uu_library_app
                     MessageBox.Show("Lütfen silinecek dili seçin...");
                     return;
                 }
-                Language language = new Language(txtId.Text, txtDil.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + language.Id + " | " + language.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                manager.Delete(language);
-                //buraya log eklenecek
-                listDataToTable();
-                clearAllFields();
-                MessageBox.Show("Başarıyla silindi.");
+
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Language language = new Language(txtId.Text, txtDil.Text);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + language.Id + " | " + language.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    manager.Delete(language);
+                    listDataToTable();
+                    clearAllFields();
+                }
+                
             }
             catch (Exception)
             {

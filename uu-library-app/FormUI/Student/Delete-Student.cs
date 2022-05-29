@@ -29,25 +29,6 @@ namespace uu_library_app
         LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
 
-        private void listDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Student WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Ad";
-            dataGridView1.Columns[2].HeaderText = "Soyad";
-            dataGridView1.Columns[3].HeaderText = "Okul No";
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].HeaderText = "Eposta";
-            dataGridView1.Columns[6].HeaderText = "Bölüm";
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-        }
-
         private void Delete_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
@@ -79,23 +60,19 @@ namespace uu_library_app
 
             try
             {
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
                 "Uyarı!",
                   MessageBoxButtons.YesNo,
                   MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Student student = new Student(txtId.Text, txtBolum.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    Student student = new Student(txtId.Text, txtBolum.Text, txtFakulte.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
                     manager.Delete(student);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + student.Id + " | " + student.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
                     DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
-                }
-
-                
-                listDataToTable();
-                MessageBox.Show("Başarılı bir şekilde silindi.");
+                }    
             }
             catch (Exception)
             {
@@ -114,6 +91,7 @@ namespace uu_library_app
             txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

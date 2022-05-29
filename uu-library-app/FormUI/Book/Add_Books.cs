@@ -13,7 +13,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.Book.Quick_Menu;
-using uu_library_app.FormUI.Settings;
+using uu_library_app.FormUI.MailSettings;
 
 namespace uu_library_app
 {

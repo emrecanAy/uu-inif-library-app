@@ -15,8 +15,9 @@ namespace uu_library_app.Entity.Concrete
         private string number;
         private string card;
         private string email;
+        private string facultyId;
         public Student() { }
-        public Student(string id, string departmentId, string firstName, string lastName, string number, string card, string email)
+        public Student(string id, string departmentId, string facultyId, string firstName, string lastName, string number, string card, string email)
         {
             this.Id = id;
             this.DepartmentId = departmentId;
@@ -25,6 +26,7 @@ namespace uu_library_app.Entity.Concrete
             this.Number = number;
             this.Card = card;
             this.Email = email;
+            this.FacultyId = facultyId;
         }
 
         public string Id { get => id; set => id = value; }
@@ -36,5 +38,6 @@ namespace uu_library_app.Entity.Concrete
         public string Email { get => email; set => email = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
         public bool Deleted { get => deleted; set => deleted = value; }
+        public string FacultyId { get => facultyId; set => facultyId = value; }
     }
 }

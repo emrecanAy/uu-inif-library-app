@@ -17,9 +17,10 @@ namespace uu_library_app.Entity.Concrete
         private string remindingMailText;
         private string expiredMailHeader;
         private string expiredMailText;
+        private DateTime updatedAt;
 
         public Settings() { }
-        public Settings(string id, string senderEmail, string senderPassword, int remindingDay, int depositDay, string remindingMailHeader, string remindingMailText, string expiredMailHeader, string expiredMailText)
+        public Settings(string id, string senderEmail, string senderPassword, int remindingDay, int depositDay, string remindingMailHeader, string remindingMailText, string expiredMailHeader, string expiredMailText, DateTime updatedAt)
         {
             this.id = id;
             this.SenderEmail = senderEmail;
@@ -30,6 +31,7 @@ namespace uu_library_app.Entity.Concrete
             this.RemindingMailText = remindingMailText;
             this.ExpiredMailHeader = expiredMailHeader;
             this.ExpiredMailText = expiredMailText;
+            this.UpdatedAt = updatedAt;
         }
 
         public string Id { get => id; set => id = value; }
@@ -41,5 +43,6 @@ namespace uu_library_app.Entity.Concrete
         public string RemindingMailText { get => remindingMailText; set => remindingMailText = value; }
         public string ExpiredMailHeader { get => expiredMailHeader; set => expiredMailHeader = value; }
         public string ExpiredMailText { get => expiredMailText; set => expiredMailText = value; }
+        public DateTime UpdatedAt { get => updatedAt; set => updatedAt = value; }
     }
 }

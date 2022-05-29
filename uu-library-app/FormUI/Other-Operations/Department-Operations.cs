@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,11 +62,22 @@ namespace uu_library_app
                     MessageBox.Show("Geçerli bir değer giriniz!");
                     return;
                 }
-                manager.Update(departmentToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToUpdate.Id + " | " + departmentToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+              "Uyarı!",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(departmentToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToUpdate.Id + " | " + departmentToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+                
             }
             catch (Exception)
             {
@@ -132,12 +144,20 @@ namespace uu_library_app
             }
             try
             {
-                Department department = new Department(txtId.Text, txtAd.Text);
-                manager.Delete(department);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + department.Id + " | " + department.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Department department = new Department(txtId.Text, txtAd.Text);
+                    manager.Delete(department);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + department.Id + " | " + department.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }    
             }
             catch (Exception)
             {

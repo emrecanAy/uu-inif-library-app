@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,7 @@ namespace uu_library_app.FormUI.Other_Operations
                 manager.Add(facultyToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + facultyToAdd.Id + " | " + facultyToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                listDataToTable();
             }
             catch (Exception)
             {
@@ -64,6 +66,7 @@ namespace uu_library_app.FormUI.Other_Operations
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.ScrollBars = ScrollBars.None;
+            listDataToTable();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -75,12 +78,21 @@ namespace uu_library_app.FormUI.Other_Operations
             }
             try
             {
-                Faculty faculty = new Faculty(txtId.Text, txtAd.Text); 
-                manager.Delete(faculty);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Faculty faculty = new Faculty(txtId.Text, txtAd.Text);
+                    manager.Delete(faculty);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+                
             }
             catch (Exception)
             {
@@ -92,7 +104,7 @@ namespace uu_library_app.FormUI.Other_Operations
         private void listDataToTable()
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Department WHERE deleted=false", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Faculty WHERE deleted=false", conn);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[1].HeaderText = "";
@@ -121,17 +133,34 @@ namespace uu_library_app.FormUI.Other_Operations
                     MessageBox.Show("Geçerli bir değer giriniz!");
                     return;
                 }
-                manager.Update(faculty);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                listDataToTable();
-                clearAllFields();
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(faculty);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+                
             }
             catch (Exception)
             {
                 MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

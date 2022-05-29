@@ -15,7 +15,7 @@ using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
-using uu_library_app.FormUI.Settings;
+using uu_library_app.FormUI.MailSettings;
 
 namespace uu_library_app.FormUI
 {
@@ -90,7 +90,7 @@ namespace uu_library_app.FormUI
 
             try
             {
-                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text, "CARD-ID", txtOkulNo.Text);
+                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text, "CARD-ID", txtOkulNo.Text);
                 manager.Add(studentToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
@@ -114,15 +114,25 @@ namespace uu_library_app.FormUI
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
+            MySqlCommand commandToFaculties = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
+            MySqlDataAdapter daFaculty = new MySqlDataAdapter(commandToFaculties);
             DataSet ds = new DataSet();
+            DataSet dsFaculty = new DataSet();
             da.Fill(ds);
+            daFaculty.Fill(dsFaculty);
             commandToGetAll.ExecuteNonQuery();
+            commandToFaculties.ExecuteNonQuery();
             conn.Close();
 
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
+
+            cmbFakulte.DataSource = ds.Tables[0];
+            cmbFakulte.DisplayMember = "name";
+            cmbFakulte.ValueMember = "id";
+
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,7 +146,7 @@ namespace uu_library_app.FormUI
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
 
             ToolTip Aciklama = new ToolTip();
-            Aciklama.ToolTipTitle = "Kitap Adı Giriniz !";
+            Aciklama.ToolTipTitle = "Kitap Adı Giriniz!";
             Aciklama.ToolTipIcon = ToolTipIcon.Info;
             Aciklama.IsBalloon = true;
             Aciklama.SetToolTip(wehTextBox1, "    ");

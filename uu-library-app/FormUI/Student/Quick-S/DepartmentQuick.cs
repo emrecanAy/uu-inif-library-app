@@ -12,7 +12,7 @@ using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
 
-namespace uu_library_app.FormUI.Settings
+namespace uu_library_app.FormUI.MailSettings
 {
     public partial class DepartmentQuick : Form
     {
