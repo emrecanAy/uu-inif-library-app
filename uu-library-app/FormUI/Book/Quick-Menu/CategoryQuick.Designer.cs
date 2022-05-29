@@ -168,6 +168,7 @@ namespace uu_library_app.FormUI.Settings
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryQuick";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryQuick";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

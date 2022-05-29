@@ -168,6 +168,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LanguageQuick";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LanguageQuick";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
