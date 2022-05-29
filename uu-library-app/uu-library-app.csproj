@@ -308,6 +308,18 @@
     <Compile Include="FormUI\Book\Quick-Menu\CategoryQuick.Designer.cs">
       <DependentUpon>CategoryQuick.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\Register-Login\NewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Register-Login\NewLogin.Designer.cs">
+      <DependentUpon>NewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Register-Login\NewRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Register-Login\NewRegister.Designer.cs">
+      <DependentUpon>NewRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Student\Quick-S\DepartmentQuick.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +504,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\Quick-Menu\CategoryQuick.resx">
       <DependentUpon>CategoryQuick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Register-Login\NewLogin.resx">
+      <DependentUpon>NewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Register-Login\NewRegister.resx">
+      <DependentUpon>NewRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student\Quick-S\DepartmentQuick.resx">
       <DependentUpon>DepartmentQuick.cs</DependentUpon>

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using uu_library_app.FormUI;
 using uu_library_app.FormUI.Other_Operations;
+using uu_library_app.FormUI.Register_Login;
 
 namespace uu_library_app
 {
@@ -19,7 +20,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new wLogin());
+            Application.Run(new NewLogin());
         }
     }
 }
