@@ -72,7 +72,7 @@ namespace uu_library_app.FormUI
             this.loginTextBox1.PlaceholderText = "Eposta";
             this.loginTextBox1.Size = new System.Drawing.Size(429, 46);
             this.loginTextBox1.TabIndex = 0;
-            this.loginTextBox1.Texts = "";
+            this.loginTextBox1.Text = "";
             this.loginTextBox1.UnderlinedStyle = false;
             // 
             // label1
@@ -105,7 +105,7 @@ namespace uu_library_app.FormUI
             this.loginTextBox2.PlaceholderText = "Eposta";
             this.loginTextBox2.Size = new System.Drawing.Size(429, 46);
             this.loginTextBox2.TabIndex = 3;
-            this.loginTextBox2.Texts = "";
+            this.loginTextBox2.Text = "";
             this.loginTextBox2.UnderlinedStyle = false;
             // 
             // label2

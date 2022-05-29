@@ -37,12 +37,12 @@ namespace uu_library_app.FormUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtPassword = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
-            this.txtEmail = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtSifre = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
+            this.txtEmail = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,50 +126,6 @@ namespace uu_library_app.FormUI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txtPassword.BorderColor = System.Drawing.Color.White;
-            this.txtPassword.BorderFocusColor = System.Drawing.Color.Silver;
-            this.txtPassword.BorderRadius = 5;
-            this.txtPassword.BorderSize = 2;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(88, 291);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(7);
-            this.txtPassword.PasswordChar = true;
-            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.PlaceholderText = "Parola";
-            this.txtPassword.Size = new System.Drawing.Size(253, 31);
-            this.txtPassword.TabIndex = 19;
-            this.txtPassword.Texts = "";
-            this.txtPassword.UnderlinedStyle = false;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txtEmail.BorderColor = System.Drawing.Color.White;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 5;
-            this.txtEmail.BorderSize = 2;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(88, 235);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "E-Posta";
-            this.txtEmail.Size = new System.Drawing.Size(253, 31);
-            this.txtEmail.TabIndex = 20;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -214,12 +170,56 @@ namespace uu_library_app.FormUI
             this.label3.Text = "ASSEMSOFT";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // txtSifre
+            // 
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtSifre.BorderColor = System.Drawing.Color.White;
+            this.txtSifre.BorderFocusColor = System.Drawing.Color.Silver;
+            this.txtSifre.BorderRadius = 5;
+            this.txtSifre.BorderSize = 2;
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSifre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSifre.Location = new System.Drawing.Point(86, 288);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifre.Multiline = false;
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSifre.PasswordChar = true;
+            this.txtSifre.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSifre.PlaceholderText = "Şifre ";
+            this.txtSifre.Size = new System.Drawing.Size(253, 31);
+            this.txtSifre.TabIndex = 29;
+            this.txtSifre.UnderlinedStyle = false;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtEmail.BorderColor = System.Drawing.Color.White;
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderRadius = 5;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.Location = new System.Drawing.Point(86, 233);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.txtEmail.PasswordChar = false;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.PlaceholderText = "E-Posta";
+            this.txtEmail.Size = new System.Drawing.Size(253, 31);
+            this.txtEmail.TabIndex = 28;
+            this.txtEmail.UnderlinedStyle = false;
+            // 
             // wLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(389, 519);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
@@ -228,8 +228,6 @@ namespace uu_library_app.FormUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -254,11 +252,11 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private TextBoxHelper.LoginTextBox txtPassword;
-        private TextBoxHelper.LoginTextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private TextBoxHelper.LoginTextBox txtEmail;
+        private TextBoxHelper.LoginTextBox txtSifre;
     }
 }

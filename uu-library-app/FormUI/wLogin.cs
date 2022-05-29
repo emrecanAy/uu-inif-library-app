@@ -35,10 +35,10 @@ namespace uu_library_app.FormUI
         {
             try
             {
-                if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Texts, txtPassword.Texts))
+                if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtSifre.Text))
                 {
                     this.Hide();
-                    LibrarianInterface librarianInterface = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Texts));
+                    LibrarianInterface librarianInterface = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
                     librarianInterface.Show();
                 }
                 else

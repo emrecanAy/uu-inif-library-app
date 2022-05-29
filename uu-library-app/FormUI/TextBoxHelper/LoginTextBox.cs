@@ -131,7 +131,7 @@ namespace uu_library_app.FormUI.TextBoxHelper
             }
         }
         [Category("RJ Code Advance")]
-        public string Texts
+        public string Text
         {
             get
             {
@@ -309,12 +309,27 @@ namespace uu_library_app.FormUI.TextBoxHelper
 
 
         //Change border color in focus mode
+   
+
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
+
         private void textBox1_Enter(object sender, EventArgs e)
         {
             isFocused = true;
             this.Invalidate();
             RemovePlaceholder();
+
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnKeyPress(e);
+        }
+
         private void textBox1_Leave(object sender, EventArgs e)
         {
             isFocused = false;
@@ -322,59 +337,14 @@ namespace uu_library_app.FormUI.TextBoxHelper
             SetPlaceholder();
         }
 
-        //TextBox events
-        /// <summary>
-        /// textbox events attached to user control events
-        /// </summary>
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            this.OnClick(e);
-        }
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
             this.OnMouseEnter(e);
         }
+
         private void textBox1_MouseLeave(object sender, EventArgs e)
         {
             this.OnMouseLeave(e);
-        }
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            this.OnKeyPress(e);
-        }
-
-        private void textBox1_Enter_1(object sender, EventArgs e)
-        {
-            isFocused = true;
-            this.Invalidate();
-            RemovePlaceholder();
-        }
-
-        private void textBox1_Leave_1(object sender, EventArgs e)
-        {
-            isFocused = false;
-            this.Invalidate();
-            SetPlaceholder();
-        }
-
-        private void textBox1_Click_1(object sender, EventArgs e)
-        {
-            this.OnClick(e);
-        }
-
-        private void textBox1_MouseEnter_1(object sender, EventArgs e)
-        {
-            this.OnMouseEnter(e);
-        }
-
-        private void textBox1_MouseLeave_1(object sender, EventArgs e)
-        {
-            this.OnMouseLeave(e);
-        }
-
-        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            this.OnKeyPress(e);
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -382,5 +352,18 @@ namespace uu_library_app.FormUI.TextBoxHelper
             if (_TextChanged != null)
                 _TextChanged.Invoke(sender, e);
         }
+
+
+
+
+        //TextBox events
+        /// <summary>
+        /// textbox events attached to user control events
+        /// </summary>
+
+
+
+
+
     }
 }
