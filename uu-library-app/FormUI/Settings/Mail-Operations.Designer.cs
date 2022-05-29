@@ -43,12 +43,6 @@ namespace uu_library_app.FormUI.Settings
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel22 = new System.Windows.Forms.Panel();
             this.btnReminding = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -69,17 +63,11 @@ namespace uu_library_app.FormUI.Settings
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -87,6 +75,22 @@ namespace uu_library_app.FormUI.Settings
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -177,17 +181,19 @@ namespace uu_library_app.FormUI.Settings
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel27);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel14);
+            this.panel2.Controls.Add(this.panel13);
+            this.panel2.Controls.Add(this.panel12);
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.panel22);
             this.panel2.Controls.Add(this.btnReminding);
-            this.panel2.Controls.Add(this.panel15);
-            this.panel2.Controls.Add(this.panel14);
-            this.panel2.Controls.Add(this.panel13);
-            this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.pictureBox6);
@@ -263,48 +269,6 @@ namespace uu_library_app.FormUI.Settings
             this.btnReminding.TabIndex = 268;
             this.btnReminding.Text = "Ayarları Kaydet";
             this.btnReminding.UseVisualStyleBackColor = false;
-            // 
-            // panel15
-            // 
-            this.panel15.Location = new System.Drawing.Point(394, 130);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(23, 10);
-            this.panel15.TabIndex = 266;
-            // 
-            // panel14
-            // 
-            this.panel14.Location = new System.Drawing.Point(394, 111);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 20);
-            this.panel14.TabIndex = 267;
-            // 
-            // panel13
-            // 
-            this.panel13.Location = new System.Drawing.Point(411, 111);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(5, 20);
-            this.panel13.TabIndex = 266;
-            // 
-            // panel12
-            // 
-            this.panel12.Location = new System.Drawing.Point(248, 112);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1, 20);
-            this.panel12.TabIndex = 266;
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(248, 131);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(167, 1);
-            this.panel10.TabIndex = 266;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(249, 112);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(167, 1);
-            this.panel11.TabIndex = 267;
             // 
             // label10
             // 
@@ -429,6 +393,15 @@ namespace uu_library_app.FormUI.Settings
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel15);
+            this.panel1.Controls.Add(this.panel16);
+            this.panel1.Controls.Add(this.panel17);
+            this.panel1.Controls.Add(this.panel18);
+            this.panel1.Controls.Add(this.panel19);
+            this.panel1.Controls.Add(this.panel24);
+            this.panel1.Controls.Add(this.panel25);
+            this.panel1.Controls.Add(this.panel26);
+            this.panel1.Controls.Add(this.numericUpDown2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnExpired);
             this.panel1.Controls.Add(this.textBox1);
@@ -437,17 +410,11 @@ namespace uu_library_app.FormUI.Settings
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.panel17);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.panel18);
             this.panel1.Controls.Add(this.panel23);
-            this.panel1.Controls.Add(this.panel19);
             this.panel1.Controls.Add(this.panel21);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -455,7 +422,6 @@ namespace uu_library_app.FormUI.Settings
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel20);
-            this.panel1.Controls.Add(this.numericUpDown2);
             this.panel1.Location = new System.Drawing.Point(633, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 790);
@@ -547,13 +513,6 @@ namespace uu_library_app.FormUI.Settings
             this.label9.TabIndex = 89;
             this.label9.Text = "Gecikme";
             // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(393, 130);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(23, 10);
-            this.panel4.TabIndex = 288;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -568,13 +527,6 @@ namespace uu_library_app.FormUI.Settings
             this.richTextBox1.TabIndex = 88;
             this.richTextBox1.Text = "";
             // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(393, 111);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 20);
-            this.panel8.TabIndex = 289;
-            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -586,13 +538,6 @@ namespace uu_library_app.FormUI.Settings
             this.textBox3.Size = new System.Drawing.Size(287, 27);
             this.textBox3.TabIndex = 281;
             // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(410, 111);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(5, 20);
-            this.panel16.TabIndex = 287;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
@@ -602,13 +547,6 @@ namespace uu_library_app.FormUI.Settings
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 273;
             this.pictureBox7.TabStop = false;
-            // 
-            // panel17
-            // 
-            this.panel17.Location = new System.Drawing.Point(247, 112);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1, 20);
-            this.panel17.TabIndex = 285;
             // 
             // label12
             // 
@@ -622,13 +560,6 @@ namespace uu_library_app.FormUI.Settings
             this.label12.TabIndex = 274;
             this.label12.Text = "Gecikme Süresi:";
             // 
-            // panel18
-            // 
-            this.panel18.Location = new System.Drawing.Point(247, 131);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(167, 1);
-            this.panel18.TabIndex = 284;
-            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.White;
@@ -636,13 +567,6 @@ namespace uu_library_app.FormUI.Settings
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(205, 1);
             this.panel23.TabIndex = 275;
-            // 
-            // panel19
-            // 
-            this.panel19.Location = new System.Drawing.Point(248, 112);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(167, 1);
-            this.panel19.TabIndex = 290;
             // 
             // panel21
             // 
@@ -717,6 +641,118 @@ namespace uu_library_app.FormUI.Settings
             this.panel20.Size = new System.Drawing.Size(331, 1);
             this.panel20.TabIndex = 286;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(248, 105);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(167, 5);
+            this.panel4.TabIndex = 266;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(244, 134);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(167, 5);
+            this.panel8.TabIndex = 267;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(248, 109);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1, 29);
+            this.panel10.TabIndex = 266;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(396, 109);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(3, 29);
+            this.panel11.TabIndex = 267;
+            // 
+            // panel12
+            // 
+            this.panel12.Location = new System.Drawing.Point(410, 109);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(7, 29);
+            this.panel12.TabIndex = 268;
+            // 
+            // panel13
+            // 
+            this.panel13.Location = new System.Drawing.Point(399, 134);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(15, 3);
+            this.panel13.TabIndex = 266;
+            // 
+            // panel14
+            // 
+            this.panel14.Location = new System.Drawing.Point(395, 103);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(20, 5);
+            this.panel14.TabIndex = 267;
+            // 
+            // panel27
+            // 
+            this.panel27.Location = new System.Drawing.Point(246, 109);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(5, 29);
+            this.panel27.TabIndex = 269;
+            // 
+            // panel15
+            // 
+            this.panel15.Location = new System.Drawing.Point(245, 109);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 29);
+            this.panel15.TabIndex = 303;
+            // 
+            // panel16
+            // 
+            this.panel16.Location = new System.Drawing.Point(243, 134);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(167, 5);
+            this.panel16.TabIndex = 299;
+            // 
+            // panel17
+            // 
+            this.panel17.Location = new System.Drawing.Point(394, 103);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(20, 5);
+            this.panel17.TabIndex = 300;
+            // 
+            // panel18
+            // 
+            this.panel18.Location = new System.Drawing.Point(398, 134);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(15, 3);
+            this.panel18.TabIndex = 296;
+            // 
+            // panel19
+            // 
+            this.panel19.Location = new System.Drawing.Point(409, 109);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(7, 29);
+            this.panel19.TabIndex = 302;
+            // 
+            // panel24
+            // 
+            this.panel24.Location = new System.Drawing.Point(395, 109);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(3, 29);
+            this.panel24.TabIndex = 301;
+            // 
+            // panel25
+            // 
+            this.panel25.Location = new System.Drawing.Point(247, 109);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(1, 29);
+            this.panel25.TabIndex = 297;
+            // 
+            // panel26
+            // 
+            this.panel26.Location = new System.Drawing.Point(247, 105);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(167, 5);
+            this.panel26.TabIndex = 298;
+            // 
             // numericUpDown2
             // 
             this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -725,7 +761,7 @@ namespace uu_library_app.FormUI.Settings
             this.numericUpDown2.Location = new System.Drawing.Point(247, 108);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(167, 29);
-            this.numericUpDown2.TabIndex = 280;
+            this.numericUpDown2.TabIndex = 295;
             // 
             // Mail_Operations
             // 
@@ -785,12 +821,6 @@ namespace uu_library_app.FormUI.Settings
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button btnReminding;
         private System.Windows.Forms.Button btnExpired;
         private System.Windows.Forms.Label label11;
@@ -801,16 +831,10 @@ namespace uu_library_app.FormUI.Settings
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -818,6 +842,22 @@ namespace uu_library_app.FormUI.Settings
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }

@@ -52,7 +52,6 @@ namespace uu_library_app
                     this.Hide();
                     LibrarianInterface openApp = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
                     openApp.Show();
-                    MessageBox.Show("Giriş Başarılı");
                 }
                 else { MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre !"); }
             }
