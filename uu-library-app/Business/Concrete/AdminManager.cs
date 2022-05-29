@@ -18,40 +18,6 @@ namespace uu_library_app.Business.Concrete
             _service = service;
         }
 
-        public bool checkIfEmailEqualsToPassword(string eMail, string password)
-        {
-            Admin admin = _service.getByEmail(eMail);
-            if (StringEncoder.Decrypt(admin.Password) != password)
-            {
-                return false;
-            }
-            return true;
-
-        }
-        public bool checkIfEmailVerificated(string code, string verificationCode)
-        {
-            if(verificationCode == code)
-            {
-                return true;
-            }
-            return false;
-        }
-
-       
-        public void sendEmailVerificationCode(string email, string code)
-        {
-            //string code = EmailVerificator.GenerateCode();
-            try
-            {
-                MailSender.SendMail(email, code);          
-            }
-            catch (Exception)
-            {
-                
-                throw;
-            }
-            
-        }
         public void Add(Admin admin, string verificationCode)
         {
             if (admin.FirstName != null || admin.LastName != null || admin.EMail != null || admin.Password != null || admin.Id != null)
@@ -91,6 +57,61 @@ namespace uu_library_app.Business.Concrete
         public Admin GetById(string id)
         {
             return _service.GetById(id);
+        }
+
+        public bool isValidSchoolMail(string email) //Utils'e koy.
+        {
+            string ending = email.Substring(email.IndexOf("@") + 1);
+            if (ending != "ogr.uludag.edu.tr")
+            {
+                return false;
+            }
+            return true;
+
+        }
+
+        public bool checkIfEmailExist(string email) //email'lere regex eklenecek.
+        {
+            if (_service.getByEmail(email) != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool checkIfEmailEqualsToPassword(string eMail, string password)
+        {
+            Admin admin = _service.getByEmail(eMail);
+            if (StringEncoder.Decrypt(admin.Password) != password)
+            {
+                return false;
+            }
+            return true;
+
+        }
+        public bool checkIfEmailVerificated(string code, string verificationCode)
+        {
+            if (verificationCode == code)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        public void sendEmailVerificationCode(string email, string code)
+        {
+            //string code = EmailVerificator.GenerateCode();
+            try
+            {
+                MailSender.SendMail(email, code);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }

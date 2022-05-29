@@ -120,7 +120,7 @@ namespace uu_library_app
             }
 
             Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
-            Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] güncellendi! -Tarih: " + DateTime.Now);
+            Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
             try
             {
                 bookManager.Update(bookToUpdate);

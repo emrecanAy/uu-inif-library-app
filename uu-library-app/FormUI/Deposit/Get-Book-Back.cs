@@ -67,6 +67,7 @@ namespace uu_library_app
             dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dgvDahaOnceAlinanKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvDahaOnceAlinanKitaplar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvDahaOnceAlinanKitaplar.ScrollBars = ScrollBars.None;
         }
 
        
@@ -117,7 +118,7 @@ namespace uu_library_app
             try
             {
                 depositBookManager.depositBook(txtDepositBookId.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBook.Id + " | KitapId:" + depositBook.BookId + " ] teslim alındı! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBook.Id + " | KitapId:" + depositBook.BookId + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından teslim alındı! -Tarih: " + DateTime.Now);
                 logger.Log(log);   
                 MessageBox.Show("Kitap başarıyla teslim alındı...");
                 listDataToTable();

@@ -78,7 +78,7 @@ namespace uu_library_app
             try
             {
                 Book bookToDelete = new Book(txtId.Text, txtAd.Text, txtDil.Text, txtYazar.Text, txtKategori.Text, txtYayinevi.Text, txtKonum.Text, Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(txtYayinlanmaTarihi.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToDelete.Id + " | " + bookToDelete.BookName + " ] silindi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToDelete.Id + " | " + bookToDelete.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                 bookManager.Delete(bookToDelete);
                 logger.Log(log);
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -22,6 +24,7 @@ namespace uu_library_app.FormUI.Other_Operations
             _admin = admin;
         }
 
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LoggerManager logger = new LoggerManager(new LoggerDal());
         FacultyManager manager = new FacultyManager(new FacultyDal());
 
@@ -61,6 +64,74 @@ namespace uu_library_app.FormUI.Other_Operations
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.ScrollBars = ScrollBars.None;
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Silmek istediğiniz bölümü seçin!");
+                return;
+            }
+            try
+            {
+                Faculty faculty = new Faculty(txtId.Text, txtAd.Text); 
+                manager.Delete(faculty);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
+        }
+
+        private void listDataToTable()
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Department WHERE deleted=false", conn);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns[1].HeaderText = "";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+        private void clearAllFields()
+        {
+            txtId.Clear();
+            txtAd.Clear();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            Faculty faculty = new Faculty(txtId.Text, txtAd.Text);
+
+            try
+            {
+                if (txtAd.Text == "")
+                {
+                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    return;
+                }
+                manager.Update(faculty);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + faculty.Id + " | " + faculty.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

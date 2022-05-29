@@ -42,7 +42,7 @@ namespace uu_library_app
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[4].Visible = false;
-            //dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.ColumnHeadersVisible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }

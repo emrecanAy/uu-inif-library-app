@@ -46,13 +46,13 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtId
@@ -90,6 +90,7 @@ namespace uu_library_app
             this.btnSil.TabIndex = 84;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnEkle
             // 
@@ -216,24 +217,6 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 91;
             // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtId);
-            this.panel4.Controls.Add(this.btnGuncelle);
-            this.panel4.Controls.Add(this.btnSil);
-            this.panel4.Controls.Add(this.btnEkle);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.picboxAd);
-            this.panel4.Controls.Add(this.pnlAd);
-            this.panel4.Controls.Add(this.txtAd);
-            this.panel4.Controls.Add(this.lblAd);
-            this.panel4.Location = new System.Drawing.Point(897, 121);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(312, 767);
-            this.panel4.TabIndex = 92;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -262,6 +245,24 @@ namespace uu_library_app
             this.dataGridView1.Size = new System.Drawing.Size(815, 725);
             this.dataGridView1.TabIndex = 88;
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtId);
+            this.panel4.Controls.Add(this.btnGuncelle);
+            this.panel4.Controls.Add(this.btnSil);
+            this.panel4.Controls.Add(this.btnEkle);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.picboxAd);
+            this.panel4.Controls.Add(this.pnlAd);
+            this.panel4.Controls.Add(this.txtAd);
+            this.panel4.Controls.Add(this.lblAd);
+            this.panel4.Location = new System.Drawing.Point(897, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(312, 767);
+            this.panel4.TabIndex = 92;
+            // 
             // Department_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,9 +281,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

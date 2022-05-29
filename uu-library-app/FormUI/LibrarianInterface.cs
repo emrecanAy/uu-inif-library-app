@@ -100,7 +100,7 @@ namespace uu_library_app.FormUI
         #region Buttons Click Events
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            openChildForm(new Dashboard());
+            openChildForm(new Gosterge_Paneli());
             pnlNewNav.Height = btnDashboard.Height;
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;

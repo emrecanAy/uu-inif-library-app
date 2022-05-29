@@ -44,43 +44,10 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
         }
-
         private void clearAllFields()
         {
             txtId.Clear();
             txtAd.Clear();
-        }
-       
-
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-            if (txtId.Text == "")
-            {
-                MessageBox.Show("Silmek istediğiniz bölümü seçin!");
-                return;
-            }
-            try
-            {
-                Department department = new Department(txtId.Text, txtAd.Text);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + department.Id + " | " + department.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                manager.Delete(department);
-                //buraya log yapılacak
-                listDataToTable();
-                clearAllFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
-            
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -152,6 +119,29 @@ namespace uu_library_app
             catch (Exception)
             {
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Silmek istediğiniz bölümü seçin!");
+                return;
+            }
+            try
+            {
+                Department department = new Department(txtId.Text, txtAd.Text);
+                manager.Delete(department);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + department.Id + " | " + department.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                listDataToTable();
+                clearAllFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
         }

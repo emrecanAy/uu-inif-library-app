@@ -56,6 +56,7 @@ namespace uu_library_app
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView2.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvDeneme.ScrollBars = ScrollBars.None;
 
         }
 
@@ -90,11 +91,11 @@ namespace uu_library_app
                 Book book = bookManager.getById(txtKitapId.Text);
                 Console.WriteLine(book.BookName);
                 DepositBook depositBookToAdd = new DepositBook(createGUID, txtOgrenciId.Text, txtKitapId.Text, DateTime.Now);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBookToAdd.Id + " | KitapId:" + depositBookToAdd.BookId + " ] ödünç verildi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBookToAdd.Id + " | KitapId:" + depositBookToAdd.BookId + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından ödünç verildi! -Tarih: " + DateTime.Now);
 
                 if (book.StockCount == 0)
                 {
-                    MessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları ödünç verildi!");
+                    MessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları daha önce ödünç verildiği için kütüphanede aktif olarak yoktur!");
                     return;
                 }
                 depositBookManager.Add(depositBookToAdd);
