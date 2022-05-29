@@ -312,7 +312,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Height = btnSettings.Height;
             pnlNewNav.Top = btnSettings.Top;
             pnlNewNav.Left = btnSettings.Left;
-            btnBooks.BackColor = Color.FromArgb(46, 51, 73);
+            btnSettings.BackColor = Color.FromArgb(46, 51, 73);
             showSubMenu(panel3);
         }
 

@@ -44,6 +44,9 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtKonum = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +56,9 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.cmbKategori);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label4);
@@ -211,6 +217,27 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.lblAd.TabIndex = 55;
             this.lblAd.Text = "Konum :";
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(58, 158);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 1);
+            this.panel2.TabIndex = 248;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(58, 188);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(164, 1);
+            this.panel3.TabIndex = 249;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(58, 159);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 31);
+            this.panel6.TabIndex = 250;
+            // 
             // LocationQuick
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +275,8 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
         private System.Windows.Forms.TextBox txtKonum;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.ComboBox cmbKategori;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
