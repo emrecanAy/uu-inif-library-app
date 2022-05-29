@@ -35,15 +35,29 @@ namespace uu_library_app.FormUI
         {
             try
             {
-                if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtSifre.Text))
+                if(txtEmail.Text == "" || txtSifre.Text == "")
                 {
-                    this.Hide();
-                    LibrarianInterface librarianInterface = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
-                    librarianInterface.Show();
+                    wehMessageBox.Show("Tüm alanları doldurun!",
+                   "Uyarı!",
+                   MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                    return;
                 }
                 else
                 {
-
+                    if (adminManager.checkIfEmailEqualsToPassword(txtEmail.Text, txtSifre.Text))
+                    {
+                        this.Hide();
+                        LibrarianInterface librarianInterface = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
+                        librarianInterface.Show();
+                    }
+                    else
+                    {
+                        wehMessageBox.Show("Eposta ve parola birbiriyle uyuşmuyor!",
+                        "Uyarı!",
+                        MessageBoxButtons.OK,
+                         MessageBoxIcon.Warning);
+                    }
                 }
             }
             catch (Exception ex)
@@ -51,6 +65,12 @@ namespace uu_library_app.FormUI
                 MessageBox.Show("Oh wait !");
                 throw;
             }
+        }
+
+        private void wLogin_Load(object sender, EventArgs e)
+        {
+            txtEmail.Text = "test@gmail.com";
+            txtSifre.Text = "123";
         }
     }
 }

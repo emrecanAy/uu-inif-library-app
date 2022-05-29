@@ -267,6 +267,27 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        public static void listInnerJoinAllStudentsDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0 AND DATE(Student.createdAt) BETWEEN @p1 AND @p2 ORDER BY Student.createdAt ASC", conn);
+            command.Parameters.AddWithValue("@p1", startDate);
+            command.Parameters.AddWithValue("@p2", endDate);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[1].HeaderText = "Öğrenci";
+            dataGrid.Columns[2].HeaderText = "Okul No";
+            dataGrid.Columns[3].HeaderText = "Eposta";
+            dataGrid.Columns[4].HeaderText = "Bölüm";
+            dataGrid.Columns[5].HeaderText = "Kayıt Tarihi";
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
         public static void listInnerJoinAllStudentsNotConcatDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();
@@ -322,6 +343,34 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[4].Visible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+        }
+
+        public static void listInnerJoinAllBooksDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0 AND DATE(Book.createdAt) BETWEEN @p1 AND @p2 ORDER BY Book.createdAt ASC", conn);
+            command.Parameters.AddWithValue("@p1", startDate);
+            command.Parameters.AddWithValue("@p2", endDate);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[1].HeaderText = "Kitap Adı";
+            dataGrid.Columns[2].HeaderText = "Yazar";
+            dataGrid.Columns[3].HeaderText = "Yayınevi";
+            dataGrid.Columns[4].HeaderText = "Dil";
+            dataGrid.Columns[5].HeaderText = "Kategori";
+            dataGrid.Columns[6].HeaderText = "Sayfa Sayısı";
+            dataGrid.Columns[7].HeaderText = "ISBN";
+            dataGrid.Columns[8].HeaderText = "Yayın Tarihi";
+            dataGrid.Columns[9].HeaderText = "Stok";
+            dataGrid.Columns[10].HeaderText = "Konum";
+            dataGrid.Columns[11].HeaderText = "Çevirmen";
+            dataGrid.Columns[12].HeaderText = "Oluşturulma Tarihi";
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
         }
 
     }
