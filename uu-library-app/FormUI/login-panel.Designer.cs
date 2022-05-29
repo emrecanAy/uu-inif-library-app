@@ -159,6 +159,7 @@ namespace uu_library_app
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(164, 24);
             this.txtEmail.TabIndex = 57;
+            this.txtEmail.Text = "test@gmail.com";
             // 
             // txtPassword
             // 
@@ -171,6 +172,7 @@ namespace uu_library_app
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(164, 24);
             this.txtPassword.TabIndex = 61;
+            this.txtPassword.Text = "123";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel7

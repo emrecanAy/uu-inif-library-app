@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,12 +18,15 @@ namespace uu_library_app
 {
     public partial class Delete_Student : Form
     {
-        public Delete_Student()
+        Admin _admin;
+        public Delete_Student(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
 
         private void listDataToTable()
@@ -75,8 +79,21 @@ namespace uu_library_app
 
             try
             {
-                Student student = new Student(txtId.Text, txtBolum.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
-                manager.Delete(student);
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Student student = new Student(txtId.Text, txtBolum.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    manager.Delete(student);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + student.Id + " | " + student.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                }
+
+                
                 listDataToTable();
                 MessageBox.Show("Başarılı bir şekilde silindi.");
             }

@@ -231,7 +231,7 @@ namespace uu_library_app.FormUI
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Delete_Student());
+            openChildForm(new Delete_Student(_admin));
             hideSubMenu();
         }
 

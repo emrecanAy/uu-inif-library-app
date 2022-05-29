@@ -91,7 +91,7 @@ namespace uu_library_app.FormUI
             {
                 Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text, "CARD-ID", txtOkulNo.Text);
                 manager.Add(studentToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 clearAllFields();
                 listDataToTable();

@@ -35,7 +35,6 @@ namespace CustomMessageBox.Private
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelCaption = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -87,7 +86,6 @@ namespace CustomMessageBox.Private
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelTitleBar.Controls.Add(this.labelCaption);
-            this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -104,22 +102,6 @@ namespace CustomMessageBox.Private
             this.labelCaption.Size = new System.Drawing.Size(86, 17);
             this.labelCaption.TabIndex = 4;
             this.labelCaption.Text = "labelCaption";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(79)))), ((int)(((byte)(95)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(310, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 35);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // panelButtons
             // 
@@ -204,7 +186,6 @@ namespace CustomMessageBox.Private
         private System.Windows.Forms.PictureBox pictureBoxIcon;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label labelCaption;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

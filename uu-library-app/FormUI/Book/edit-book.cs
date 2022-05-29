@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,16 +119,26 @@ namespace uu_library_app
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
             }
-
-            Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
-            Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+         
             try
             {
-                bookManager.Update(bookToUpdate);
-                logger.Log(log);
-                MessageBox.Show("Başarıyla güncellendi!");
-                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
-                clearAllFields();
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    bookManager.Update(bookToUpdate);
+                    logger.Log(log);
+                    MessageBox.Show("Başarıyla güncellendi!");
+                    DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                    clearAllFields();
+
+                }
+                
             }
             catch (Exception)
             {
@@ -150,6 +161,7 @@ namespace uu_library_app
             txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString(); //ciltNo eklenecek
             txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            dateTime1.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();

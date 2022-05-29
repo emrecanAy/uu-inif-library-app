@@ -91,7 +91,7 @@ namespace CustomMessageBox.Private
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);//Set border size
             this.labelMessage.MaximumSize = new Size(550, 0);
-            this.btnClose.DialogResult = DialogResult.Cancel;
+            //this.btnClose.DialogResult = DialogResult.Cancel;
             this.button1.DialogResult = DialogResult.OK;
             this.button1.Visible = false;
             this.button2.Visible = false;
@@ -261,7 +261,7 @@ namespace CustomMessageBox.Private
                 case MessageBoxIcon.Error: //Error
                     this.pictureBoxIcon.Image = uu_library_app.Properties.Resources.error;
                     PrimaryColor = Color.FromArgb(224, 79, 95);
-                    this.btnClose.FlatAppearance.MouseOverBackColor = Color.Crimson;
+                    //this.btnClose.FlatAppearance.MouseOverBackColor = Color.Crimson;
                     break;
                 case MessageBoxIcon.Information: //Information
                     this.pictureBoxIcon.Image = uu_library_app.Properties.Resources.info;

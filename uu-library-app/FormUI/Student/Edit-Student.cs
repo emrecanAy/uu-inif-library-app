@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MessageBoxDenemesi;
 using MySql;
 using MySql.Data.MySqlClient;
 using uu_library_app.Business.Concrete;
@@ -88,13 +89,21 @@ namespace uu_library_app
 
             try
             {
-                Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
-                manager.Update(studentToUpdate);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                MessageBox.Show("Başarıyla güncellendi!");
-                clearAllFields();
-                DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    manager.Update(studentToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                    
+                }  
             }
             catch (Exception)
             {
@@ -107,6 +116,11 @@ namespace uu_library_app
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void txtOkulNo_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
         }
     }
     }
