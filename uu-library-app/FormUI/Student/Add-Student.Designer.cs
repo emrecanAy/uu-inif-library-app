@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Student));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAd = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -53,6 +53,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.cmbFakulte = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -69,13 +76,6 @@
             this.btnHızlıBolum = new System.Windows.Forms.Button();
             this.btnHızlıFakulte = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.cmbFakulte = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -83,12 +83,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAd
@@ -372,6 +372,71 @@
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 34;
             // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(57, 600);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1, 31);
+            this.panel9.TabIndex = 56;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(57, 630);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(445, 1);
+            this.panel10.TabIndex = 53;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(57, 600);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(445, 1);
+            this.panel11.TabIndex = 55;
+            // 
+            // cmbFakulte
+            // 
+            this.cmbFakulte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbFakulte.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFakulte.ForeColor = System.Drawing.Color.White;
+            this.cmbFakulte.FormattingEnabled = true;
+            this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
+            this.cmbFakulte.Name = "cmbFakulte";
+            this.cmbFakulte.Size = new System.Drawing.Size(445, 31);
+            this.cmbFakulte.TabIndex = 54;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 569);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Fakülte :";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(21, 636);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(481, 1);
+            this.panel12.TabIndex = 51;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(21, 600);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.Location = new System.Drawing.Point(57, 492);
@@ -456,14 +521,14 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -535,6 +600,7 @@
             this.btnHızlıBolum.TabIndex = 256;
             this.btnHızlıBolum.Text = "Bölüm Ekle";
             this.btnHızlıBolum.UseVisualStyleBackColor = true;
+            this.btnHızlıBolum.Click += new System.EventHandler(this.btnHızlıBolum_Click);
             // 
             // btnHızlıFakulte
             // 
@@ -547,6 +613,7 @@
             this.btnHızlıFakulte.TabIndex = 255;
             this.btnHızlıFakulte.Text = "Fakülte Ekle";
             this.btnHızlıFakulte.UseVisualStyleBackColor = true;
+            this.btnHızlıFakulte.Click += new System.EventHandler(this.btnHızlıFakulte_Click);
             // 
             // textBox1
             // 
@@ -559,71 +626,6 @@
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 259;
             this.textBox1.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(57, 600);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1, 31);
-            this.panel9.TabIndex = 56;
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(57, 630);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(445, 1);
-            this.panel10.TabIndex = 53;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(57, 600);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(445, 1);
-            this.panel11.TabIndex = 55;
-            // 
-            // cmbFakulte
-            // 
-            this.cmbFakulte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbFakulte.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFakulte.ForeColor = System.Drawing.Color.White;
-            this.cmbFakulte.FormattingEnabled = true;
-            this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
-            this.cmbFakulte.Name = "cmbFakulte";
-            this.cmbFakulte.Size = new System.Drawing.Size(445, 31);
-            this.cmbFakulte.TabIndex = 54;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 569);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Fakülte :";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(21, 636);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(481, 1);
-            this.panel12.TabIndex = 51;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(21, 600);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
             // 
             // Add_Student
             // 
@@ -652,12 +654,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel24.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

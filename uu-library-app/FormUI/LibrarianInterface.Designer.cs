@@ -67,6 +67,7 @@ namespace uu_library_app.FormUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
+            this.btnFakulte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlDigerSubMenu.SuspendLayout();
@@ -104,7 +105,7 @@ namespace uu_library_app.FormUI
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
             this.panel3.Controls.Add(this.btnMailSettings);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 853);
+            this.panel3.Location = new System.Drawing.Point(0, 881);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(186, 28);
             this.panel3.TabIndex = 17;
@@ -135,7 +136,7 @@ namespace uu_library_app.FormUI
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 816);
+            this.btnSettings.Location = new System.Drawing.Point(0, 844);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 37);
             this.btnSettings.TabIndex = 16;
@@ -148,6 +149,7 @@ namespace uu_library_app.FormUI
             // pnlDigerSubMenu
             // 
             this.pnlDigerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDigerSubMenu.Controls.Add(this.btnFakulte);
             this.pnlDigerSubMenu.Controls.Add(this.btnKonum);
             this.pnlDigerSubMenu.Controls.Add(this.btnBolum);
             this.pnlDigerSubMenu.Controls.Add(this.btnKategori);
@@ -157,7 +159,7 @@ namespace uu_library_app.FormUI
             this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 648);
             this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
-            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 168);
+            this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 196);
             this.pnlDigerSubMenu.TabIndex = 15;
             // 
             // btnKonum
@@ -676,6 +678,24 @@ namespace uu_library_app.FormUI
             this.panelChildFormNew.TabIndex = 9;
             this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
             // 
+            // btnFakulte
+            // 
+            this.btnFakulte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFakulte.FlatAppearance.BorderSize = 0;
+            this.btnFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFakulte.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnFakulte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnFakulte.Image = ((System.Drawing.Image)(resources.GetObject("btnFakulte.Image")));
+            this.btnFakulte.Location = new System.Drawing.Point(0, 168);
+            this.btnFakulte.Name = "btnFakulte";
+            this.btnFakulte.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.btnFakulte.Size = new System.Drawing.Size(186, 28);
+            this.btnFakulte.TabIndex = 6;
+            this.btnFakulte.Text = "Fakülte İşlemleri";
+            this.btnFakulte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFakulte.UseVisualStyleBackColor = true;
+            this.btnFakulte.Click += new System.EventHandler(this.btnFakulte_Click);
+            // 
             // LibrarianInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -742,5 +762,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnMailSettings;
+        private System.Windows.Forms.Button btnFakulte;
     }
 }

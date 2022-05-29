@@ -296,7 +296,11 @@ namespace uu_library_app.FormUI
             openChildForm(new Mail_Operations());
             hideSubMenu();
         }
-
+        private void btnFakulte_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Faculty_Operations(_admin));
+            hideSubMenu();
+        }
 
 
 
@@ -320,5 +324,7 @@ namespace uu_library_app.FormUI
         {
             btnSettings.BackColor = Color.FromArgb(24, 30, 54);
         }
+
+       
     }
 }

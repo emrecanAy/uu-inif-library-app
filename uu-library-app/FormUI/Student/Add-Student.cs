@@ -15,6 +15,7 @@ using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Settings;
 
 namespace uu_library_app.FormUI
 {
@@ -161,6 +162,18 @@ namespace uu_library_app.FormUI
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
               string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void btnHızlıFakulte_Click(object sender, EventArgs e)
+        {
+            FacultyQuick quick = new FacultyQuick(_admin);
+            quick.Show();
+        }
+
+        private void btnHızlıBolum_Click(object sender, EventArgs e)
+        {
+            DepartmentQuick quick = new DepartmentQuick(_admin);
+            quick.Show();
         }
     }
 }
