@@ -20,6 +20,7 @@ namespace uu_library_app.FormUI
         private void Login_Load(object sender, EventArgs e)
         {
             panelForeGround.BackColor = Color.FromArgb(150, 0, 0, 0);
+            
         }
     }
 }

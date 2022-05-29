@@ -102,7 +102,7 @@ namespace uu_library_app
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-      string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Text);
+      string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }

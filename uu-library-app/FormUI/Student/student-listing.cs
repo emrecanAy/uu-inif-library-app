@@ -47,7 +47,7 @@ namespace uu_library_app
         {
             string value = cmbAranacakAlan.SelectedValue.ToString();
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Text);
+            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }
