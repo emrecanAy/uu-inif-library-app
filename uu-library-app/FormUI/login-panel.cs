@@ -53,7 +53,12 @@ namespace uu_library_app
                     LibrarianInterface openApp = new LibrarianInterface(adminManager.getbyEmail(txtEmail.Text));
                     openApp.Show();
                 }
-                else { MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre !"); }
+                else
+                {
+                    
+                   
+                    
+                }
             }
             catch (Exception ex)
             {

@@ -31,39 +31,41 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelForeGround = new System.Windows.Forms.Panel();
-            this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.loginTextBox1 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             this.panelForeGround.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelForeGround
             // 
             this.panelForeGround.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panelForeGround.Controls.Add(this.wehTextBox2);
+            this.panelForeGround.Controls.Add(this.loginTextBox1);
             this.panelForeGround.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panelForeGround.Location = new System.Drawing.Point(-5, -18);
             this.panelForeGround.Name = "panelForeGround";
             this.panelForeGround.Size = new System.Drawing.Size(581, 709);
             this.panelForeGround.TabIndex = 0;
             // 
-            // wehTextBox2
+            // loginTextBox1
             // 
-            this.wehTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.wehTextBox2.BorderRadius = 10;
-            this.wehTextBox2.BorderSize = 2;
-            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.wehTextBox2.Location = new System.Drawing.Point(111, 225);
-            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox2.Multiline = false;
-            this.wehTextBox2.Name = "wehTextBox2";
-            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.wehTextBox2.PasswordChar = false;
-            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.wehTextBox2.PlaceholderText = "Email";
-            this.wehTextBox2.Size = new System.Drawing.Size(313, 46);
-            this.wehTextBox2.TabIndex = 1;
-            this.wehTextBox2.Texts = "";
-            this.wehTextBox2.UnderlinedStyle = false;
+            this.loginTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.loginTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.loginTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.loginTextBox1.BorderRadius = 0;
+            this.loginTextBox1.BorderSize = 2;
+            this.loginTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.loginTextBox1.Location = new System.Drawing.Point(107, 218);
+            this.loginTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.loginTextBox1.Multiline = false;
+            this.loginTextBox1.Name = "loginTextBox1";
+            this.loginTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.loginTextBox1.PasswordChar = false;
+            this.loginTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.loginTextBox1.PlaceholderText = "login textbox hazır";
+            this.loginTextBox1.Size = new System.Drawing.Size(261, 40);
+            this.loginTextBox1.TabIndex = 0;
+            this.loginTextBox1.Texts = "";
+            this.loginTextBox1.UnderlinedStyle = false;
             // 
             // Login
             // 
@@ -85,6 +87,6 @@ namespace uu_library_app.FormUI
         #endregion
 
         private System.Windows.Forms.Panel panelForeGround;
-        private TextBoxHelper.WehTextBox wehTextBox2;
+        private TextBoxHelper.LoginTextBox loginTextBox1;
     }
 }
