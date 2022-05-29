@@ -66,9 +66,16 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnHızlıYazar = new System.Windows.Forms.Button();
+            this.btnHızlıBolum = new System.Windows.Forms.Button();
+            this.btnHızlıFakulte = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.cmbFakulte = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -81,6 +88,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAd
@@ -283,7 +291,7 @@
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(178, 600);
+            this.btnEkle.Location = new System.Drawing.Point(178, 677);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(148, 35);
             this.btnEkle.TabIndex = 29;
@@ -326,6 +334,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Controls.Add(this.cmbFakulte);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.panel12);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel7);
@@ -502,36 +517,36 @@
             // 
             // panel24
             // 
-            this.panel24.Controls.Add(this.button1);
-            this.panel24.Controls.Add(this.btnHızlıYazar);
+            this.panel24.Controls.Add(this.btnHızlıBolum);
+            this.panel24.Controls.Add(this.btnHızlıFakulte);
             this.panel24.Location = new System.Drawing.Point(1051, 16);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(192, 35);
             this.panel24.TabIndex = 260;
             // 
-            // button1
+            // btnHızlıBolum
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(95, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
-            this.button1.TabIndex = 256;
-            this.button1.Text = "Bölüm Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHızlıBolum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıBolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıBolum.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıBolum.Location = new System.Drawing.Point(95, 0);
+            this.btnHızlıBolum.Name = "btnHızlıBolum";
+            this.btnHızlıBolum.Size = new System.Drawing.Size(95, 35);
+            this.btnHızlıBolum.TabIndex = 256;
+            this.btnHızlıBolum.Text = "Bölüm Ekle";
+            this.btnHızlıBolum.UseVisualStyleBackColor = true;
             // 
-            // btnHızlıYazar
+            // btnHızlıFakulte
             // 
-            this.btnHızlıYazar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHızlıYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHızlıYazar.ForeColor = System.Drawing.Color.White;
-            this.btnHızlıYazar.Location = new System.Drawing.Point(0, 0);
-            this.btnHızlıYazar.Name = "btnHızlıYazar";
-            this.btnHızlıYazar.Size = new System.Drawing.Size(95, 35);
-            this.btnHızlıYazar.TabIndex = 255;
-            this.btnHızlıYazar.Text = "Departman Ekle";
-            this.btnHızlıYazar.UseVisualStyleBackColor = true;
+            this.btnHızlıFakulte.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHızlıFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHızlıFakulte.ForeColor = System.Drawing.Color.White;
+            this.btnHızlıFakulte.Location = new System.Drawing.Point(0, 0);
+            this.btnHızlıFakulte.Name = "btnHızlıFakulte";
+            this.btnHızlıFakulte.Size = new System.Drawing.Size(95, 35);
+            this.btnHızlıFakulte.TabIndex = 255;
+            this.btnHızlıFakulte.Text = "Fakülte Ekle";
+            this.btnHızlıFakulte.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -544,6 +559,71 @@
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 259;
             this.textBox1.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(57, 600);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1, 31);
+            this.panel9.TabIndex = 56;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(57, 630);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(445, 1);
+            this.panel10.TabIndex = 53;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(57, 600);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(445, 1);
+            this.panel11.TabIndex = 55;
+            // 
+            // cmbFakulte
+            // 
+            this.cmbFakulte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbFakulte.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFakulte.ForeColor = System.Drawing.Color.White;
+            this.cmbFakulte.FormattingEnabled = true;
+            this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
+            this.cmbFakulte.Name = "cmbFakulte";
+            this.cmbFakulte.Size = new System.Drawing.Size(445, 31);
+            this.cmbFakulte.TabIndex = 54;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 569);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Fakülte :";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(21, 636);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(481, 1);
+            this.panel12.TabIndex = 51;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(21, 600);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
             // 
             // Add_Student
             // 
@@ -577,6 +657,7 @@
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel24.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -620,8 +701,15 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private TextBoxHelper.WehTextBox wehTextBox1;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Button btnHızlıYazar;
+        private System.Windows.Forms.Button btnHızlıFakulte;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHızlıBolum;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.ComboBox cmbFakulte;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
