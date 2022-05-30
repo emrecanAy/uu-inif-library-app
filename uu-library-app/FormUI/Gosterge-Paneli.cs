@@ -56,8 +56,8 @@ namespace uu_library_app.FormUI
                 Department d1 = arrDepartment[0];
                 Department d2 = arrDepartment[1];
                 Department d3 = arrDepartment[2];
-                Department d4 = arrDepartment[3];
-                Department d5 = arrDepartment[4];
+                //Department d4 = arrDepartment[3];
+                //Department d5 = arrDepartment[4];
 
                 lblUye1.Text = s1.FirstName;
                 lblUye2.Text = s2.FirstName;
@@ -74,14 +74,14 @@ namespace uu_library_app.FormUI
                 lblBolum1.Text = d1.Name;
                 lblBolum2.Text = d2.Name;
                 lblBolum3.Text = d3.Name;
-                lblBolum4.Text = d4.Name;
-                lblBolum5.Text = d5.Name;
+                //lblBolum4.Text = d4.Name;
+                //lblBolum5.Text = d5.Name;
 
                 lblBolum1OkumaSayisi.Text = d1.Id.ToString();
                 lblBolum2OkumaSayisi.Text = d2.Id.ToString();
                 lblBolum3OkumaSayisi.Text = d3.Id.ToString();
-                lblBolum4OkumaSayisi.Text = d4.Id.ToString();
-                lblBolum5OkumaSayisi.Text = d5.Id.ToString();
+                //lblBolum4OkumaSayisi.Text = d4.Id.ToString();
+                //lblBolum5OkumaSayisi.Text = d5.Id.ToString();
 
 
                 DataTable dt = new DataTable();

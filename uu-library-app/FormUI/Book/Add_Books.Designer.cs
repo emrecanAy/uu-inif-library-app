@@ -29,7 +29,7 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -170,14 +170,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -1054,6 +1054,7 @@ namespace uu_library_app
             this.btnHizliKonum.Text = "Konum Ekle";
             this.btnHizliKonum.UseVisualStyleBackColor = true;
             this.btnHizliKonum.Click += new System.EventHandler(this.btnHizliKonum_Click);
+            this.btnHizliKonum.Leave += new System.EventHandler(this.btnHizliKonum_Leave);
             // 
             // btnHizliKategori
             // 
@@ -1068,6 +1069,7 @@ namespace uu_library_app
             this.btnHizliKategori.Text = "Kategori Ekle";
             this.btnHizliKategori.UseVisualStyleBackColor = true;
             this.btnHizliKategori.Click += new System.EventHandler(this.btnHizliKategori_Click);
+            this.btnHizliKategori.Leave += new System.EventHandler(this.btnHizliKategori_Leave);
             // 
             // btnHizliDil
             // 
@@ -1082,6 +1084,7 @@ namespace uu_library_app
             this.btnHizliDil.Text = "Dil Ekle";
             this.btnHizliDil.UseVisualStyleBackColor = true;
             this.btnHizliDil.Click += new System.EventHandler(this.btnHizliDil_Click);
+            this.btnHizliDil.Leave += new System.EventHandler(this.btnHizliDil_Leave);
             // 
             // btnHizliYayinevi
             // 
@@ -1096,6 +1099,7 @@ namespace uu_library_app
             this.btnHizliYayinevi.Text = "Yayınevi Ekle";
             this.btnHizliYayinevi.UseVisualStyleBackColor = true;
             this.btnHizliYayinevi.Click += new System.EventHandler(this.btnHizliYayinevi_Click);
+            this.btnHizliYayinevi.Leave += new System.EventHandler(this.btnHizliYayinevi_Leave);
             // 
             // btnHizliYazar
             // 
@@ -1110,6 +1114,7 @@ namespace uu_library_app
             this.btnHizliYazar.Text = "Yazar Ekle";
             this.btnHizliYazar.UseVisualStyleBackColor = true;
             this.btnHizliYazar.Click += new System.EventHandler(this.btnHizliYazar_Click);
+            this.btnHizliYazar.Leave += new System.EventHandler(this.btnHizliYazar_Leave);
             // 
             // Add_Books
             // 

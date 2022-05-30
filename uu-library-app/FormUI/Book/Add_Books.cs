@@ -30,6 +30,70 @@ namespace uu_library_app
         BookManager bookManager = new BookManager(new BookDal());
         LoggerManager logger = new LoggerManager(new LoggerDal());
         AdminManager adminManager = new AdminManager(new AdminDal());
+
+        public void fillData()
+        {
+            try
+            {
+                conn.Open();
+                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
+                MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
+                MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn));
+                MySqlDataAdapter daLanguages = new MySqlDataAdapter(SqlCommandHelper.getLanguagesCommand(conn));
+                MySqlDataAdapter daPublishers = new MySqlDataAdapter(SqlCommandHelper.getPublishersCommand(conn));
+                DataSet dsCategories = new DataSet();
+                DataSet dsLocations = new DataSet();
+                DataSet dsAuthors = new DataSet();
+                DataSet dsLanguages = new DataSet();
+                DataSet dsPublishers = new DataSet();
+                daCategories.Fill(dsCategories);
+                daLocations.Fill(dsLocations);
+                daAuthors.Fill(dsAuthors);
+                daLanguages.Fill(dsLanguages);
+                daPublishers.Fill(dsPublishers);
+                SqlCommandHelper.getCategoriesCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getLocationsCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn).ExecuteNonQuery();
+                SqlCommandHelper.getLanguagesCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getPublishersCommand(conn).ExecuteNonQuery();
+                conn.Close();
+
+                //Kategori
+                cmbKategori.DataSource = dsCategories.Tables[0];
+                cmbKategori.DisplayMember = "name";
+                cmbKategori.ValueMember = "id";
+                cmbKategori.Text = "";
+
+                //Konum
+                cmbKonum.DataSource = dsLocations.Tables[0];
+                cmbKonum.DisplayMember = "shelf";
+                cmbKonum.ValueMember = "id";
+
+                //Yazar
+                cmbYazar.DataSource = dsAuthors.Tables[0];
+                cmbYazar.DisplayMember = "fullName";
+                cmbYazar.ValueMember = "id";
+
+                //Dil
+                cmbDil.DataSource = dsLanguages.Tables[0];
+                cmbDil.DisplayMember = "language";
+                cmbDil.ValueMember = "id";
+
+                //Yayınevi
+                cmbYayinevi.DataSource = dsPublishers.Tables[0];
+                cmbYayinevi.DisplayMember = "name";
+                cmbYayinevi.ValueMember = "id";
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+                return;
+            }
+        }
+
         private void clearAllFields()
         {
             txtId.Clear();
@@ -47,9 +111,6 @@ namespace uu_library_app
             cmbYazar.Text = "";
             cmbDil.ResetText();
         }
-
-
-
         private void Add_Books_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -176,30 +237,40 @@ namespace uu_library_app
         {
             AuthorQuick quick = new AuthorQuick(_admin);
             quick.Show();
+            fillData();
+            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliYayinevi_Click(object sender, EventArgs e)
         {
             PublisherQuick quick = new PublisherQuick(_admin);
             quick.Show();
+            fillData();
+            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliDil_Click(object sender, EventArgs e)
         {
             LanguageQuick quick = new LanguageQuick(_admin);
             quick.Show();
+            fillData();
+            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliKategori_Click(object sender, EventArgs e)
         {
             CategoryQuick quick = new CategoryQuick(_admin);
             quick.Show();
+            fillData();
+            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliKonum_Click(object sender, EventArgs e)
         {
             LocationQuick quick = new LocationQuick(_admin);
             quick.Show();
+            fillData();
+            MessageBox.Show("Eklendi!");
         }
 
         //private void txtCevirmen_Click(object sender, EventArgs e)
@@ -230,6 +301,31 @@ namespace uu_library_app
         private void txtDemirbasNo_Click(object sender, EventArgs e)
         {
             this.txtDemirbasNo.Select(0, 0);
+        }
+
+        private void btnHizliYazar_Leave(object sender, EventArgs e)
+        {
+            fillData();
+        }
+
+        private void btnHizliYayinevi_Leave(object sender, EventArgs e)
+        {
+            fillData();
+        }
+
+        private void btnHizliDil_Leave(object sender, EventArgs e)
+        {
+            fillData();
+        }
+
+        private void btnHizliKategori_Leave(object sender, EventArgs e)
+        {
+            fillData();
+        }
+
+        private void btnHizliKonum_Leave(object sender, EventArgs e)
+        {
+            fillData();
         }
     }
 }
