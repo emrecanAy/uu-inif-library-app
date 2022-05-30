@@ -35,6 +35,7 @@ namespace uu_library_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtOkulNo = new System.Windows.Forms.MaskedTextBox();
             this.lblOkulNo = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.pnlOkulNo = new System.Windows.Forms.Panel();
@@ -72,7 +73,6 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.txtOkulNo = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -179,6 +179,21 @@ namespace uu_library_app
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 268;
             // 
+            // txtOkulNo
+            // 
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(57, 270);
+            this.txtOkulNo.Mask = "000000000000000000000000000000000000000000000000";
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.PromptChar = ' ';
+            this.txtOkulNo.Size = new System.Drawing.Size(445, 27);
+            this.txtOkulNo.TabIndex = 3;
+            this.txtOkulNo.Click += new System.EventHandler(this.txtOkulNo_Click);
+            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged);
+            // 
             // lblOkulNo
             // 
             this.lblOkulNo.AutoSize = true;
@@ -250,7 +265,7 @@ namespace uu_library_app
             this.txtEmail.Location = new System.Drawing.Point(57, 384);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(439, 27);
-            this.txtEmail.TabIndex = 51;
+            this.txtEmail.TabIndex = 4;
             // 
             // panel5
             // 
@@ -284,7 +299,7 @@ namespace uu_library_app
             this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
             this.cmbFakulte.Name = "cmbFakulte";
             this.cmbFakulte.Size = new System.Drawing.Size(445, 31);
-            this.cmbFakulte.TabIndex = 47;
+            this.cmbFakulte.TabIndex = 6;
             // 
             // label2
             // 
@@ -349,7 +364,7 @@ namespace uu_library_app
             this.comboBox1.Location = new System.Drawing.Point(57, 492);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(445, 31);
-            this.comboBox1.TabIndex = 40;
+            this.comboBox1.TabIndex = 5;
             // 
             // label3
             // 
@@ -467,7 +482,7 @@ namespace uu_library_app
             this.btnGuncelle.Location = new System.Drawing.Point(178, 677);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(148, 35);
-            this.btnGuncelle.TabIndex = 29;
+            this.btnGuncelle.TabIndex = 7;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -564,21 +579,6 @@ namespace uu_library_app
             this.wehTextBox1.Texts = "";
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
-            // 
-            // txtOkulNo
-            // 
-            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(57, 270);
-            this.txtOkulNo.Mask = "000000000000000000000000000000000000000000000000";
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.PromptChar = ' ';
-            this.txtOkulNo.Size = new System.Drawing.Size(445, 27);
-            this.txtOkulNo.TabIndex = 58;
-            this.txtOkulNo.Click += new System.EventHandler(this.txtOkulNo_Click);
-            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged);
             // 
             // Edit_Student
             // 

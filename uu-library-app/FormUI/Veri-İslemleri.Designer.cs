@@ -30,7 +30,7 @@ namespace uu_library_app.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veri_İslemleri));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
@@ -42,7 +42,6 @@ namespace uu_library_app.FormUI
             this.btnPDFOgr = new button.Toolbox.RadiusButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,10 +54,11 @@ namespace uu_library_app.FormUI
             this.btnPDF = new button.Toolbox.RadiusButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbVeriOgr = new System.Windows.Forms.ComboBox();
+            this.cmbVeri = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
@@ -97,14 +97,14 @@ namespace uu_library_app.FormUI
             this.dgvDeneme.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeneme.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeneme.GridColor = System.Drawing.Color.White;
             this.dgvDeneme.Location = new System.Drawing.Point(3, 42);
             this.dgvDeneme.Name = "dgvDeneme";
@@ -250,16 +250,6 @@ namespace uu_library_app.FormUI
             this.label2.TabIndex = 272;
             this.label2.Text = "İstenilen Veri Türünü Seçiniz :";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(41, 160);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(496, 28);
-            this.comboBox2.TabIndex = 271;
-            // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -274,6 +264,7 @@ namespace uu_library_app.FormUI
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cmbVeriOgr);
             this.panel2.Controls.Add(this.btnXMLOgr);
             this.panel2.Controls.Add(this.btnJSONOgr);
             this.panel2.Controls.Add(this.btnCSVOgr);
@@ -281,7 +272,6 @@ namespace uu_library_app.FormUI
             this.panel2.Controls.Add(this.btnPDFOgr);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.dgvLogOgr);
@@ -431,16 +421,6 @@ namespace uu_library_app.FormUI
             this.label1.TabIndex = 1;
             this.label1.Text = "İstenilen Veri Türünü Seçiniz :";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(36, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(496, 28);
-            this.comboBox1.TabIndex = 0;
-            // 
             // picboxBack
             // 
             this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -466,6 +446,7 @@ namespace uu_library_app.FormUI
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbVeri);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.dgvLog);
             this.panel1.Controls.Add(this.btnXML);
@@ -475,11 +456,36 @@ namespace uu_library_app.FormUI
             this.panel1.Controls.Add(this.btnPDF);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Location = new System.Drawing.Point(33, 113);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(583, 775);
             this.panel1.TabIndex = 272;
+            // 
+            // cmbVeriOgr
+            // 
+            this.cmbVeriOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbVeriOgr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVeriOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbVeriOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbVeriOgr.ForeColor = System.Drawing.Color.White;
+            this.cmbVeriOgr.FormattingEnabled = true;
+            this.cmbVeriOgr.Location = new System.Drawing.Point(42, 138);
+            this.cmbVeriOgr.Name = "cmbVeriOgr";
+            this.cmbVeriOgr.Size = new System.Drawing.Size(496, 28);
+            this.cmbVeriOgr.TabIndex = 279;
+            // 
+            // cmbVeri
+            // 
+            this.cmbVeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbVeri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbVeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbVeri.ForeColor = System.Drawing.Color.White;
+            this.cmbVeri.FormattingEnabled = true;
+            this.cmbVeri.Location = new System.Drawing.Point(36, 84);
+            this.cmbVeri.Name = "cmbVeri";
+            this.cmbVeri.Size = new System.Drawing.Size(496, 28);
+            this.cmbVeri.TabIndex = 280;
             // 
             // Veri_İslemleri
             // 
@@ -523,7 +529,6 @@ namespace uu_library_app.FormUI
         private button.Toolbox.RadiusButton btnPDFOgr;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -536,9 +541,10 @@ namespace uu_library_app.FormUI
         private button.Toolbox.RadiusButton btnPDF;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cmbVeriOgr;
+        private System.Windows.Forms.ComboBox cmbVeri;
     }
 }

@@ -221,7 +221,7 @@ namespace uu_library_app
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.ReadOnly = true;
             this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
-            this.txtOkulNo.TabIndex = 47;
+            this.txtOkulNo.TabIndex = 3;
             // 
             // picboxOkulNo
             // 
@@ -263,7 +263,7 @@ namespace uu_library_app
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(439, 27);
-            this.txtEmail.TabIndex = 48;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtFakulte
             // 
@@ -275,7 +275,7 @@ namespace uu_library_app
             this.txtFakulte.Name = "txtFakulte";
             this.txtFakulte.ReadOnly = true;
             this.txtFakulte.Size = new System.Drawing.Size(445, 27);
-            this.txtFakulte.TabIndex = 46;
+            this.txtFakulte.TabIndex = 6;
             // 
             // panel9
             // 
@@ -339,7 +339,7 @@ namespace uu_library_app
             this.txtBolum.Name = "txtBolum";
             this.txtBolum.ReadOnly = true;
             this.txtBolum.Size = new System.Drawing.Size(445, 27);
-            this.txtBolum.TabIndex = 39;
+            this.txtBolum.TabIndex = 5;
             // 
             // panel8
             // 
@@ -480,7 +480,7 @@ namespace uu_library_app
             this.btnSil.Location = new System.Drawing.Point(178, 677);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(148, 35);
-            this.btnSil.TabIndex = 29;
+            this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);

@@ -143,7 +143,7 @@ namespace uu_library_app
             this.btnSil.Location = new System.Drawing.Point(197, 707);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(148, 34);
-            this.btnSil.TabIndex = 308;
+            this.btnSil.TabIndex = 14;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -233,7 +233,7 @@ namespace uu_library_app
             this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 334);
             this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
             this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinlanmaTarihi.TabIndex = 389;
+            this.txtYayinlanmaTarihi.TabIndex = 8;
             // 
             // txtKonum
             // 
@@ -244,7 +244,7 @@ namespace uu_library_app
             this.txtKonum.Location = new System.Drawing.Point(78, 235);
             this.txtKonum.Name = "txtKonum";
             this.txtKonum.Size = new System.Drawing.Size(164, 27);
-            this.txtKonum.TabIndex = 388;
+            this.txtKonum.TabIndex = 5;
             // 
             // txtYayinevi
             // 
@@ -255,7 +255,7 @@ namespace uu_library_app
             this.txtYayinevi.Location = new System.Drawing.Point(336, 144);
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinevi.TabIndex = 387;
+            this.txtYayinevi.TabIndex = 4;
             // 
             // txtKategori
             // 
@@ -266,7 +266,7 @@ namespace uu_library_app
             this.txtKategori.Location = new System.Drawing.Point(79, 146);
             this.txtKategori.Name = "txtKategori";
             this.txtKategori.Size = new System.Drawing.Size(164, 27);
-            this.txtKategori.TabIndex = 386;
+            this.txtKategori.TabIndex = 3;
             // 
             // txtDil
             // 
@@ -277,7 +277,7 @@ namespace uu_library_app
             this.txtDil.Location = new System.Drawing.Point(337, 50);
             this.txtDil.Name = "txtDil";
             this.txtDil.Size = new System.Drawing.Size(164, 27);
-            this.txtDil.TabIndex = 385;
+            this.txtDil.TabIndex = 2;
             // 
             // txtDemirbasNo
             // 
@@ -290,7 +290,7 @@ namespace uu_library_app
             this.txtDemirbasNo.Name = "txtDemirbasNo";
             this.txtDemirbasNo.PromptChar = ' ';
             this.txtDemirbasNo.Size = new System.Drawing.Size(164, 27);
-            this.txtDemirbasNo.TabIndex = 384;
+            this.txtDemirbasNo.TabIndex = 13;
             // 
             // pictureBox1
             // 
@@ -333,7 +333,7 @@ namespace uu_library_app
             this.txtCiltNo.Name = "txtCiltNo";
             this.txtCiltNo.PromptChar = ' ';
             this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
-            this.txtCiltNo.TabIndex = 380;
+            this.txtCiltNo.TabIndex = 12;
             // 
             // txtSayfaSayisi
             // 
@@ -346,7 +346,7 @@ namespace uu_library_app
             this.txtSayfaSayisi.Name = "txtSayfaSayisi";
             this.txtSayfaSayisi.PromptChar = ' ';
             this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
-            this.txtSayfaSayisi.TabIndex = 379;
+            this.txtSayfaSayisi.TabIndex = 10;
             // 
             // txtStokAdet
             // 
@@ -359,7 +359,7 @@ namespace uu_library_app
             this.txtStokAdet.Name = "txtStokAdet";
             this.txtStokAdet.PromptChar = ' ';
             this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
-            this.txtStokAdet.TabIndex = 378;
+            this.txtStokAdet.TabIndex = 9;
             // 
             // txtIsbn
             // 
@@ -372,7 +372,7 @@ namespace uu_library_app
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.PromptChar = ' ';
             this.txtIsbn.Size = new System.Drawing.Size(164, 27);
-            this.txtIsbn.TabIndex = 339;
+            this.txtIsbn.TabIndex = 7;
             // 
             // panel14
             // 
@@ -514,7 +514,7 @@ namespace uu_library_app
             this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
             this.txtCevirmen.Name = "txtCevirmen";
             this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
-            this.txtCevirmen.TabIndex = 353;
+            this.txtCevirmen.TabIndex = 6;
             // 
             // label11
             // 
@@ -675,7 +675,7 @@ namespace uu_library_app
             this.txtYazar.Location = new System.Drawing.Point(82, 545);
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.Size = new System.Drawing.Size(164, 27);
-            this.txtYazar.TabIndex = 336;
+            this.txtYazar.TabIndex = 11;
             // 
             // label10
             // 
@@ -854,7 +854,7 @@ namespace uu_library_app
             this.txtAd.Location = new System.Drawing.Point(78, 51);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 27);
-            this.txtAd.TabIndex = 317;
+            this.txtAd.TabIndex = 1;
             // 
             // lblSoyad
             // 

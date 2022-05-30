@@ -30,7 +30,7 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(edit_book));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -243,7 +243,7 @@ namespace uu_library_app
             this.txtDemirbasNo.Name = "txtDemirbasNo";
             this.txtDemirbasNo.PromptChar = ' ';
             this.txtDemirbasNo.Size = new System.Drawing.Size(164, 27);
-            this.txtDemirbasNo.TabIndex = 315;
+            this.txtDemirbasNo.TabIndex = 13;
             this.txtDemirbasNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDemirbasNo_MaskInputRejected);
             this.txtDemirbasNo.Click += new System.EventHandler(this.txtDemirbasNo_Click);
             // 
@@ -288,7 +288,7 @@ namespace uu_library_app
             this.txtCiltNo.Name = "txtCiltNo";
             this.txtCiltNo.PromptChar = ' ';
             this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
-            this.txtCiltNo.TabIndex = 311;
+            this.txtCiltNo.TabIndex = 12;
             this.txtCiltNo.Click += new System.EventHandler(this.txtCiltNo_Click);
             // 
             // txtSayfaSayisi
@@ -302,7 +302,7 @@ namespace uu_library_app
             this.txtSayfaSayisi.Name = "txtSayfaSayisi";
             this.txtSayfaSayisi.PromptChar = ' ';
             this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
-            this.txtSayfaSayisi.TabIndex = 310;
+            this.txtSayfaSayisi.TabIndex = 10;
             this.txtSayfaSayisi.Click += new System.EventHandler(this.txtSayfaSayisi_Click);
             // 
             // txtStokAdet
@@ -316,7 +316,7 @@ namespace uu_library_app
             this.txtStokAdet.Name = "txtStokAdet";
             this.txtStokAdet.PromptChar = ' ';
             this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
-            this.txtStokAdet.TabIndex = 309;
+            this.txtStokAdet.TabIndex = 9;
             this.txtStokAdet.Click += new System.EventHandler(this.txtStokAdet_Click);
             // 
             // btnGuncelle
@@ -331,7 +331,7 @@ namespace uu_library_app
             this.btnGuncelle.Location = new System.Drawing.Point(197, 707);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(148, 34);
-            this.btnGuncelle.TabIndex = 308;
+            this.btnGuncelle.TabIndex = 14;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -347,7 +347,7 @@ namespace uu_library_app
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.PromptChar = ' ';
             this.txtIsbn.Size = new System.Drawing.Size(164, 27);
-            this.txtIsbn.TabIndex = 268;
+            this.txtIsbn.TabIndex = 7;
             this.txtIsbn.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtIsbn_MaskInputRejected);
             this.txtIsbn.Click += new System.EventHandler(this.txtIsbn_Click);
             // 
@@ -467,6 +467,7 @@ namespace uu_library_app
             // cmbYazar
             // 
             this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYazar.ForeColor = System.Drawing.Color.White;
@@ -474,11 +475,12 @@ namespace uu_library_app
             this.cmbYazar.Location = new System.Drawing.Point(79, 545);
             this.cmbYazar.Name = "cmbYazar";
             this.cmbYazar.Size = new System.Drawing.Size(164, 31);
-            this.cmbYazar.TabIndex = 307;
+            this.cmbYazar.TabIndex = 11;
             // 
             // cmbKonum
             // 
             this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbKonum.ForeColor = System.Drawing.Color.White;
@@ -486,11 +488,12 @@ namespace uu_library_app
             this.cmbKonum.Location = new System.Drawing.Point(78, 236);
             this.cmbKonum.Name = "cmbKonum";
             this.cmbKonum.Size = new System.Drawing.Size(164, 31);
-            this.cmbKonum.TabIndex = 306;
+            this.cmbKonum.TabIndex = 5;
             // 
             // cmbYayinevi
             // 
             this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
@@ -498,7 +501,7 @@ namespace uu_library_app
             this.cmbYayinevi.Location = new System.Drawing.Point(336, 143);
             this.cmbYayinevi.Name = "cmbYayinevi";
             this.cmbYayinevi.Size = new System.Drawing.Size(164, 31);
-            this.cmbYayinevi.TabIndex = 305;
+            this.cmbYayinevi.TabIndex = 4;
             // 
             // cmbKategori
             // 
@@ -511,11 +514,12 @@ namespace uu_library_app
             this.cmbKategori.Location = new System.Drawing.Point(78, 143);
             this.cmbKategori.Name = "cmbKategori";
             this.cmbKategori.Size = new System.Drawing.Size(164, 31);
-            this.cmbKategori.TabIndex = 304;
+            this.cmbKategori.TabIndex = 3;
             // 
             // cmbDil
             // 
             this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
             this.cmbDil.ForeColor = System.Drawing.Color.White;
@@ -523,7 +527,7 @@ namespace uu_library_app
             this.cmbDil.Location = new System.Drawing.Point(336, 48);
             this.cmbDil.Name = "cmbDil";
             this.cmbDil.Size = new System.Drawing.Size(164, 31);
-            this.cmbDil.TabIndex = 303;
+            this.cmbDil.TabIndex = 2;
             // 
             // dateTime1
             // 
@@ -535,7 +539,7 @@ namespace uu_library_app
             this.dateTime1.Name = "dateTime1";
             this.dateTime1.Size = new System.Drawing.Size(191, 35);
             this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 287;
+            this.dateTime1.TabIndex = 8;
             this.dateTime1.TextColor = System.Drawing.Color.White;
             // 
             // pictureBox11
@@ -565,7 +569,7 @@ namespace uu_library_app
             this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
             this.txtCevirmen.Name = "txtCevirmen";
             this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
-            this.txtCevirmen.TabIndex = 284;
+            this.txtCevirmen.TabIndex = 6;
             this.txtCevirmen.Click += new System.EventHandler(this.txtCevirmen_Click);
             // 
             // label11
@@ -906,7 +910,7 @@ namespace uu_library_app
             this.txtAd.Location = new System.Drawing.Point(78, 51);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(164, 27);
-            this.txtAd.TabIndex = 245;
+            this.txtAd.TabIndex = 1;
             // 
             // lblSoyad
             // 
@@ -963,14 +967,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
