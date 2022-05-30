@@ -98,5 +98,29 @@ namespace uu_library_app.DataAccess.Concrete
 
             conn.Close();
         }
+
+        public Faculty FindById(string id)
+        {
+            Faculty faculty = new Faculty();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Faculty WHERE id=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", id);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    faculty.Id = reader[0].ToString();
+                    faculty.Name = reader[1].ToString();
+                }
+                conn.Close();
+                return faculty;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

@@ -27,6 +27,11 @@ namespace uu_library_app.Business.Concrete
             _service.Delete(faculty);
         }
 
+        public Faculty FindById(string id)
+        {
+            return _service.FindById(id);
+        }
+
         public List<Faculty> GetAll()
         {
             return this._service.GetAll();

@@ -122,6 +122,28 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        public static void listUndepositBooksDataToTableConcat(DataGridView dataGrid, MySqlConnection conn, string studentId)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, CONCAT(Author.firstName,' ', Author.lastName) as authorFullName, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE Student.id=@p1 AND DepositBook.status=0", conn);
+            command.Parameters.AddWithValue("@p1", studentId);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[1].Visible = false;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[2].Visible = false;
+            dataGrid.Columns[3].Visible = false;
+            dataGrid.Columns[4].HeaderText = "Kitap Adı";
+            dataGrid.Columns[5].HeaderText = "Yazar";
+            dataGrid.Columns[6].HeaderText = "Tarih";
+            dataGrid.ColumnHeadersVisible = false;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
         public static void listDepositBooksDataToTable(DataGridView dataGrid, MySqlConnection conn, string studentId)
         {
             DataTable dt = new DataTable();

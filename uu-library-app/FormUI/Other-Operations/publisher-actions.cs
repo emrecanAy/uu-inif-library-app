@@ -50,44 +50,6 @@ namespace uu_library_app
             txtAd.Clear();
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-            if (txtId.Text == "")
-            {
-                MessageBox.Show("Silmek istediğiniz yayınevini seçin!");
-                return;
-            }
-            try
-            {
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
-               "Uyarı!",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Publisher publisher = new Publisher(txtId.Text, txtAd.Text);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisher.Id + " | " + publisher.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    manager.Delete(publisher);
-                    MessageBox.Show("Başarıyla silindi!");
-                    listDataToTable();
-                    clearAllFields();
-                }
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
-        }
-
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             Publisher publisherToUpdate = new Publisher(txtId.Text, txtAd.Text);
@@ -120,12 +82,6 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
         private void publisher_actions_Load(object sender, EventArgs e)
@@ -169,6 +125,45 @@ namespace uu_library_app
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Silmek istediğiniz yayınevini seçin!");
+                return;
+            }
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu yayınevine ait olan bütün kitapları da silecektir!",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Publisher publisher = new Publisher(txtId.Text, txtAd.Text);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisher.Id + " | " + publisher.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    manager.Delete(publisher);
+                    MessageBox.Show("Başarıyla silindi!");
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

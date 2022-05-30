@@ -252,7 +252,7 @@ namespace uu_library_app.Core.Helpers
         {
             DataTable dt = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             dataGrid.DataSource = dt;
@@ -261,6 +261,7 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[2].HeaderText = "Okul No";
             dataGrid.Columns[3].HeaderText = "Eposta";
             dataGrid.Columns[4].HeaderText = "Bölüm";
+            dataGrid.Columns[6].HeaderText = "Fakülte";
             dataGrid.Columns[5].HeaderText = "Kayıt Tarihi";
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -271,7 +272,7 @@ namespace uu_library_app.Core.Helpers
         {
             DataTable dt = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0 AND DATE(Student.createdAt) BETWEEN @p1 AND @p2 ORDER BY Student.createdAt ASC", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0 AND DATE(Student.createdAt) BETWEEN @p1 AND @p2 ORDER BY Student.createdAt ASC", conn);
             command.Parameters.AddWithValue("@p1", startDate);
             command.Parameters.AddWithValue("@p2", endDate);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
@@ -292,7 +293,7 @@ namespace uu_library_app.Core.Helpers
         {
             DataTable dt = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Student.eMail, Department.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Student.eMail, Department.name, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             dataGrid.DataSource = dt;
@@ -302,6 +303,7 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[3].HeaderText = "Okul No";
             dataGrid.Columns[4].HeaderText = "Eposta";
             dataGrid.Columns[5].HeaderText = "Bölüm";
+            dataGrid.Columns[6].HeaderText = "Fakülte";
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 

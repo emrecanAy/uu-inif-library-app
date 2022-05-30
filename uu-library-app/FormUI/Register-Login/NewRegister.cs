@@ -16,5 +16,18 @@ namespace uu_library_app.FormUI.Register_Login
         {
             InitializeComponent();
         }
+
+        private void NewRegister_Load(object sender, EventArgs e)
+        {
+            loginTextBox3.ForeColor = Color.White;
+            loginTextBox4.ForeColor = Color.White;
+            loginTextBox1.ForeColor = Color.White;
+            loginTextBox2.ForeColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

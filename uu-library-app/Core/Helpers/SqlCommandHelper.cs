@@ -27,6 +27,12 @@ namespace uu_library_app.Core.Helpers
             return commandToGetAllAuthors;
         }
 
+        public static MySqlCommand getAuthorsCommandConcatFirstNameAndLastName(MySqlConnection conn)
+        {
+            MySqlCommand commandToGetAllAuthors = new MySqlCommand("SELECT id, CONCAT(firstName,' ',lastName) as fullName FROM Author WHERE deleted=false", conn);
+            return commandToGetAllAuthors;
+        }
+
         public static MySqlCommand getLanguagesCommand(MySqlConnection conn)
         {
             MySqlCommand commandToGetAllLanguages = new MySqlCommand("SELECT * FROM Language WHERE deleted=false", conn);

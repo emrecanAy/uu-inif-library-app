@@ -46,10 +46,15 @@ namespace uu_library_app
             DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
+            MySqlCommand allFaculty = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
+            MySqlDataAdapter daFaculty = new MySqlDataAdapter(allFaculty);
             DataSet ds = new DataSet();
+            DataSet dsFaculty = new DataSet();
             da.Fill(ds);
+            daFaculty.Fill(dsFaculty);
             commandToGetAll.ExecuteNonQuery();
+            allFaculty.ExecuteNonQuery();
             conn.Close();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -62,9 +67,14 @@ namespace uu_library_app
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
+
+            cmbFakulte.DataSource = dsFaculty.Tables[0];
+            cmbFakulte.DisplayMember = "name";
+            cmbFakulte.ValueMember = "id";
         }
 
     

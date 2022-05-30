@@ -58,6 +58,11 @@ namespace uu_library_app.FormUI.MailSettings
                 settingsManager.Update(settings);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + settings.Id + " | " + settings.SenderEmail + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından mail ayarları güncellendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+
+                wehMessageBox.Show("Başarıyla güncellendi!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
             }
             
         }

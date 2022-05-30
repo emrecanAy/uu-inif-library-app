@@ -33,6 +33,11 @@ namespace uu_library_app.Business.Concrete
             }       
         }
 
+        public Department FindById(string id)
+        {
+            return _department.FindById(id);
+        }
+
         public List<Department> getAll()
         {
             return _department.getAll();

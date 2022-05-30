@@ -99,13 +99,6 @@ namespace uu_library_app
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-        }
-
         private void author_actions_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -192,6 +185,13 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
                 throw;
             }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

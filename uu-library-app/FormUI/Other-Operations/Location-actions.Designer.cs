@@ -163,6 +163,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.btnSil.TabIndex = 84;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnEkle
             // 
@@ -317,6 +318,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(815, 725);
             this.dataGridView1.TabIndex = 88;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // panel4
             // 

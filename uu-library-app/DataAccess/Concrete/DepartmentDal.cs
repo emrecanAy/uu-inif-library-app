@@ -101,5 +101,29 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
 
             conn.Close();
         }
+
+        public Department FindById(string id)
+        {
+            Department department = new Department();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE id=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", id);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    department.Id = reader[0].ToString();
+                    department.Name = reader[1].ToString();
+                }
+                conn.Close();
+                return department;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

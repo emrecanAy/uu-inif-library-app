@@ -110,12 +110,6 @@ namespace uu_library_app
             conn.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-        }
-
         private void btnSil_Click_1(object sender, EventArgs e)
         {
             try
@@ -126,7 +120,7 @@ namespace uu_library_app
                     return;
                 }
 
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu dile ait olan bütün kitapları da silecektir!",
                "Uyarı!",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning);
@@ -172,6 +166,12 @@ namespace uu_library_app
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

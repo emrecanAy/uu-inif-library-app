@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Helpers;
+using uu_library_app.DataAccess.Concrete;
+using uu_library_app.DataAccess.Concrete.EntityFramework;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app
 {
@@ -17,6 +24,10 @@ namespace uu_library_app
             InitializeComponent();
         }
 
+        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        StudentManager studentManager = new StudentManager(new StudentDal());
+        DepartmentManager departmentManager = new DepartmentManager(new DepartmentDal());
+        FacultyManager facultyManager = new FacultyManager(new FacultyDal());
         private void Student_Affairs_Load(object sender, EventArgs e)
         {
             /*
@@ -33,6 +44,70 @@ namespace uu_library_app
              
              */
 
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(txtOgrNo.Text == "")
+            {
+                wehMessageBox.Show("Lütfen bir öğrenci numarası girin!",
+                  "Uyarı!",
+                  MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                Student student = studentManager.findByNumber(txtOgrNo.Text);
+
+                if(student.FirstName == "" || student.FirstName == null)
+                {
+                    wehMessageBox.Show("Bu numaraya ait öğrenci bulunamadı!",
+                  "Uyarı!",
+                  MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning);
+                    return;
+                }
+                txtAd.Text = student.FirstName;
+                txtSoyad.Text = student.LastName;
+                txtEmail.Text = student.Email;
+                txtFakulte.Text = facultyManager.FindById(student.FacultyId).Name;
+                txtBolum.Text = departmentManager.FindById(student.DepartmentId).Name;
+
+                DataListerHelper.listUndepositBooksDataToTableConcat(dataGridView1, conn, student.Id);
+
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bu numaraya ait öğrenci bulunamadı!",
+                  "Uyarı!",
+                  MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning);
+                return;
+            }
+            
+            
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDepositId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

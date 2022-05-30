@@ -78,7 +78,7 @@ namespace uu_library_app.FormUI.Other_Operations
             }
             try
             {
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu fakülteye ait olan bütün öğrencileri de silecektir!",
                "Uyarı!",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning);

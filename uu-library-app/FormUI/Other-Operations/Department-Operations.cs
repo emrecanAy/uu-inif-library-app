@@ -104,12 +104,6 @@ namespace uu_library_app
             conn.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-        }
-
         private void btnEkle_Click_1(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
@@ -144,7 +138,7 @@ namespace uu_library_app
             }
             try
             {
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu bölüme ait olan bütün öğrencileri de silecektir!",
                "Uyarı!",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning);
@@ -164,6 +158,12 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

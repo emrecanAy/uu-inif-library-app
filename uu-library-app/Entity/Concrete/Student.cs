@@ -21,12 +21,12 @@ namespace uu_library_app.Entity.Concrete
         {
             this.Id = id;
             this.DepartmentId = departmentId;
+            this.FacultyId = facultyId;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Number = number;
             this.Card = card;
-            this.Email = email;
-            this.FacultyId = facultyId;
+            this.Email = email;    
         }
 
         public string Id { get => id; set => id = value; }

@@ -129,7 +129,7 @@ namespace uu_library_app.FormUI
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
 
-            cmbFakulte.DataSource = ds.Tables[0];
+            cmbFakulte.DataSource = dsFaculty.Tables[0];
             cmbFakulte.DisplayMember = "name";
             cmbFakulte.ValueMember = "id";
 

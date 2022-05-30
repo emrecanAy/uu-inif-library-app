@@ -31,7 +31,6 @@ namespace uu_library_app.FormUI.Register_Login
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewRegister));
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.loginTextBox2 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
@@ -65,22 +64,14 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox6.TabIndex = 51;
             this.pictureBox6.TabStop = false;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(443, 54);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 1);
-            this.panel5.TabIndex = 50;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.label1.Location = new System.Drawing.Point(466, 11);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(453, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 36);
+            this.label1.Size = new System.Drawing.Size(136, 40);
             this.label1.TabIndex = 49;
             this.label1.Text = "Kayıt Ol";
             // 
@@ -144,6 +135,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.button2.TabIndex = 35;
             this.button2.Text = "Kayıt Ol";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -269,7 +261,6 @@ namespace uu_library_app.FormUI.Register_Login
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(739, 384);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.loginTextBox2);
@@ -288,6 +279,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewRegister";
             this.Text = "NewRegister";
+            this.Load += new System.EventHandler(this.NewRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -302,7 +294,6 @@ namespace uu_library_app.FormUI.Register_Login
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private TextBoxHelper.LoginTextBox loginTextBox2;

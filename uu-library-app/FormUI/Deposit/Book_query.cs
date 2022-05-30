@@ -23,9 +23,6 @@ namespace uu_library_app.FormUI.Deposit
 
         private void Book_query_Load(object sender, EventArgs e)
         {
-
-            //DataListerHelper.listStudentDataToTable(dgvOgrenci, conn);
-            //DataListerHelper.listStudentDataToTable(dgvDeneme, conn);
             dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDeneme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

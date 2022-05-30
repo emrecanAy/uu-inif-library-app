@@ -10,6 +10,7 @@ namespace uu_library_app.Business.Abstract
     public interface IFacultyService
     {
         List<Faculty> GetAll();
+        Faculty FindById(string id);
         void Add(Faculty faculty);
         void Update(Faculty faculty);
         void Delete(Faculty faculty);

@@ -50,45 +50,6 @@ namespace uu_library_app.FormUI.Other_Operations
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtId.Text == "")
-                {
-                    MessageBox.Show("Lütfen silinecek dili seçin...");
-                    return;
-                }
-
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
-               "Uyarı!",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + location.Id + " | " + location.Shelf + " | KategoriId: " + location.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    manager.Delete(location);
-                    listDataToTable();
-                    clearAllFields();
-                }
-
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
-        }
-
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             Location locationToUpdate = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
@@ -150,13 +111,6 @@ namespace uu_library_app.FormUI.Other_Operations
             conn.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-        }
-
         private void btnEkle_Click_1(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
@@ -180,6 +134,47 @@ namespace uu_library_app.FormUI.Other_Operations
                 MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
                 throw;
             }
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "")
+                {
+                    MessageBox.Show("Lütfen silinecek dili seçin...");
+                    return;
+                }
+
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu konuma ait olan bütün kitapları da silecektir!",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Location location = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + location.Id + " | " + location.Shelf + " | KategoriId: " + location.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    manager.Delete(location);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

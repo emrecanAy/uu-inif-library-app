@@ -74,7 +74,7 @@ namespace uu_library_app
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
                 MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
-                MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommand(conn));
+                MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn));
                 MySqlDataAdapter daLanguages = new MySqlDataAdapter(SqlCommandHelper.getLanguagesCommand(conn));
                 MySqlDataAdapter daPublishers = new MySqlDataAdapter(SqlCommandHelper.getPublishersCommand(conn));
                 DataSet dsCategories = new DataSet();
@@ -89,7 +89,7 @@ namespace uu_library_app
                 daPublishers.Fill(dsPublishers);
                 SqlCommandHelper.getCategoriesCommand(conn).ExecuteNonQuery();
                 SqlCommandHelper.getLocationsCommand(conn).ExecuteNonQuery();
-                SqlCommandHelper.getAuthorsCommand(conn).ExecuteNonQuery();
+                SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn).ExecuteNonQuery();
                 SqlCommandHelper.getLanguagesCommand(conn).ExecuteNonQuery();
                 SqlCommandHelper.getPublishersCommand(conn).ExecuteNonQuery();
                 conn.Close();
@@ -107,7 +107,7 @@ namespace uu_library_app
 
                 //Yazar
                 cmbYazar.DataSource = dsAuthors.Tables[0];
-                cmbYazar.DisplayMember = "firstName"; //Tekrar bakılacak. Ad ve soyad comboboxta yanyana yazması lazım.
+                cmbYazar.DisplayMember = "fullName";
                 cmbYazar.ValueMember = "id";
 
                 //Dil

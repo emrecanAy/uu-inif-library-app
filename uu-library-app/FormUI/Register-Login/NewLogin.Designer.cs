@@ -33,7 +33,6 @@ namespace uu_library_app.FormUI.Register_Login
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.button1.TabIndex = 66;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -85,22 +85,14 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox6.TabIndex = 64;
             this.pictureBox6.TabStop = false;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(443, 55);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 1);
-            this.panel5.TabIndex = 63;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.label1.Location = new System.Drawing.Point(459, 16);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(445, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 36);
+            this.label1.Size = new System.Drawing.Size(149, 40);
             this.label1.TabIndex = 62;
             this.label1.Text = "Giriş Yap";
             // 
@@ -129,17 +121,17 @@ namespace uu_library_app.FormUI.Register_Login
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(313, 223);
+            this.panel3.Location = new System.Drawing.Point(345, 222);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(390, 2);
+            this.panel3.Size = new System.Drawing.Size(348, 2);
             this.panel3.TabIndex = 60;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(313, 140);
+            this.panel4.Location = new System.Drawing.Point(345, 139);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(390, 2);
+            this.panel4.Size = new System.Drawing.Size(348, 2);
             this.panel4.TabIndex = 59;
             // 
             // loginTextBox3
@@ -151,7 +143,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.loginTextBox3.BorderSize = 2;
             this.loginTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.loginTextBox3.Location = new System.Drawing.Point(352, 185);
+            this.loginTextBox3.Location = new System.Drawing.Point(384, 184);
             this.loginTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.loginTextBox3.Multiline = false;
             this.loginTextBox3.Name = "loginTextBox3";
@@ -159,7 +151,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.loginTextBox3.PasswordChar = true;
             this.loginTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.loginTextBox3.PlaceholderText = "Şifre";
-            this.loginTextBox3.Size = new System.Drawing.Size(351, 31);
+            this.loginTextBox3.Size = new System.Drawing.Size(309, 31);
             this.loginTextBox3.TabIndex = 57;
             this.loginTextBox3.UnderlinedStyle = false;
             // 
@@ -172,7 +164,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.loginTextBox4.BorderSize = 2;
             this.loginTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.loginTextBox4.Location = new System.Drawing.Point(352, 102);
+            this.loginTextBox4.Location = new System.Drawing.Point(384, 101);
             this.loginTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.loginTextBox4.Multiline = false;
             this.loginTextBox4.Name = "loginTextBox4";
@@ -180,14 +172,14 @@ namespace uu_library_app.FormUI.Register_Login
             this.loginTextBox4.PasswordChar = false;
             this.loginTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.loginTextBox4.PlaceholderText = "E-Posta";
-            this.loginTextBox4.Size = new System.Drawing.Size(351, 31);
+            this.loginTextBox4.Size = new System.Drawing.Size(309, 31);
             this.loginTextBox4.TabIndex = 58;
             this.loginTextBox4.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(313, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(345, 184);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +189,7 @@ namespace uu_library_app.FormUI.Register_Login
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(313, 102);
+            this.pictureBox4.Location = new System.Drawing.Point(345, 101);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +205,6 @@ namespace uu_library_app.FormUI.Register_Login
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button2);
@@ -226,6 +217,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewLogin";
             this.Text = "NewLogin";
+            this.Load += new System.EventHandler(this.NewLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -240,7 +232,6 @@ namespace uu_library_app.FormUI.Register_Login
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button2;
