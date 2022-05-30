@@ -129,6 +129,14 @@ namespace uu_library_app
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
         }
 
+      
+
+        private void txtOkulNo_Click(object sender, EventArgs e)
+        {
+            this.txtOkulNo.Select(0, 0);
+
+        }
+
         private void txtOkulNo_TextChanged(object sender, EventArgs e)
         {
             txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";

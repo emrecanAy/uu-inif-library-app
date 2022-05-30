@@ -418,6 +418,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormUI\Toolbox\WehMessageBox.cs" />
+    <Compile Include="FormUI\Veri-İslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Veri-İslemleri.Designer.cs">
+      <DependentUpon>Veri-İslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\wLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -557,6 +563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\TextBoxHelper\WehTextBox.resx">
       <DependentUpon>WehTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Veri-İslemleri.resx">
+      <DependentUpon>Veri-İslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\wLogin.resx">
       <DependentUpon>wLogin.cs</DependentUpon>

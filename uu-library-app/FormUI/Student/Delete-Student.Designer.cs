@@ -35,6 +35,14 @@ namespace uu_library_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblOkulNo = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.pnlOkulNo = new System.Windows.Forms.Panel();
+            this.txtOkulNo = new System.Windows.Forms.TextBox();
+            this.picboxOkulNo = new System.Windows.Forms.PictureBox();
+            this.picboxEmail = new System.Windows.Forms.PictureBox();
+            this.pnlEmail = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFakulte = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -65,17 +73,11 @@ namespace uu_library_app
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.lblOkulNo = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.pnlOkulNo = new System.Windows.Forms.Panel();
-            this.txtOkulNo = new System.Windows.Forms.TextBox();
-            this.picboxOkulNo = new System.Windows.Forms.PictureBox();
-            this.picboxEmail = new System.Windows.Forms.PictureBox();
-            this.pnlEmail = new System.Windows.Forms.Panel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
@@ -83,8 +85,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -178,6 +178,92 @@ namespace uu_library_app
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 260;
+            // 
+            // lblOkulNo
+            // 
+            this.lblOkulNo.AutoSize = true;
+            this.lblOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblOkulNo.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.lblOkulNo.ForeColor = System.Drawing.Color.White;
+            this.lblOkulNo.Location = new System.Drawing.Point(16, 361);
+            this.lblOkulNo.Name = "lblOkulNo";
+            this.lblOkulNo.Size = new System.Drawing.Size(134, 25);
+            this.lblOkulNo.TabIndex = 54;
+            this.lblOkulNo.Text = "E-Mail Adresi :";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(16, 246);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(137, 25);
+            this.lblEmail.TabIndex = 49;
+            this.lblEmail.Text = "Okul Numarası";
+            // 
+            // pnlOkulNo
+            // 
+            this.pnlOkulNo.BackColor = System.Drawing.Color.White;
+            this.pnlOkulNo.Location = new System.Drawing.Point(21, 427);
+            this.pnlOkulNo.Name = "pnlOkulNo";
+            this.pnlOkulNo.Size = new System.Drawing.Size(481, 1);
+            this.pnlOkulNo.TabIndex = 53;
+            // 
+            // txtOkulNo
+            // 
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(57, 277);
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.ReadOnly = true;
+            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
+            this.txtOkulNo.TabIndex = 47;
+            // 
+            // picboxOkulNo
+            // 
+            this.picboxOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxOkulNo.Image = ((System.Drawing.Image)(resources.GetObject("picboxOkulNo.Image")));
+            this.picboxOkulNo.Location = new System.Drawing.Point(21, 391);
+            this.picboxOkulNo.Name = "picboxOkulNo";
+            this.picboxOkulNo.Size = new System.Drawing.Size(30, 30);
+            this.picboxOkulNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxOkulNo.TabIndex = 52;
+            this.picboxOkulNo.TabStop = false;
+            // 
+            // picboxEmail
+            // 
+            this.picboxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxEmail.Image = ((System.Drawing.Image)(resources.GetObject("picboxEmail.Image")));
+            this.picboxEmail.Location = new System.Drawing.Point(21, 277);
+            this.picboxEmail.Name = "picboxEmail";
+            this.picboxEmail.Size = new System.Drawing.Size(30, 30);
+            this.picboxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxEmail.TabIndex = 50;
+            this.picboxEmail.TabStop = false;
+            // 
+            // pnlEmail
+            // 
+            this.pnlEmail.BackColor = System.Drawing.Color.White;
+            this.pnlEmail.Location = new System.Drawing.Point(21, 313);
+            this.pnlEmail.Name = "pnlEmail";
+            this.pnlEmail.Size = new System.Drawing.Size(481, 1);
+            this.pnlEmail.TabIndex = 51;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(57, 391);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(439, 27);
+            this.txtEmail.TabIndex = 48;
             // 
             // txtFakulte
             // 
@@ -492,90 +578,6 @@ namespace uu_library_app
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
-            // lblOkulNo
-            // 
-            this.lblOkulNo.AutoSize = true;
-            this.lblOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblOkulNo.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.lblOkulNo.ForeColor = System.Drawing.Color.White;
-            this.lblOkulNo.Location = new System.Drawing.Point(16, 361);
-            this.lblOkulNo.Name = "lblOkulNo";
-            this.lblOkulNo.Size = new System.Drawing.Size(134, 25);
-            this.lblOkulNo.TabIndex = 54;
-            this.lblOkulNo.Text = "E-Mail Adresi :";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(16, 246);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(137, 25);
-            this.lblEmail.TabIndex = 49;
-            this.lblEmail.Text = "Okul Numarası";
-            // 
-            // pnlOkulNo
-            // 
-            this.pnlOkulNo.BackColor = System.Drawing.Color.White;
-            this.pnlOkulNo.Location = new System.Drawing.Point(21, 427);
-            this.pnlOkulNo.Name = "pnlOkulNo";
-            this.pnlOkulNo.Size = new System.Drawing.Size(481, 1);
-            this.pnlOkulNo.TabIndex = 53;
-            // 
-            // txtOkulNo
-            // 
-            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(57, 277);
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
-            this.txtOkulNo.TabIndex = 47;
-            // 
-            // picboxOkulNo
-            // 
-            this.picboxOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxOkulNo.Image = ((System.Drawing.Image)(resources.GetObject("picboxOkulNo.Image")));
-            this.picboxOkulNo.Location = new System.Drawing.Point(21, 391);
-            this.picboxOkulNo.Name = "picboxOkulNo";
-            this.picboxOkulNo.Size = new System.Drawing.Size(30, 30);
-            this.picboxOkulNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxOkulNo.TabIndex = 52;
-            this.picboxOkulNo.TabStop = false;
-            // 
-            // picboxEmail
-            // 
-            this.picboxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxEmail.Image = ((System.Drawing.Image)(resources.GetObject("picboxEmail.Image")));
-            this.picboxEmail.Location = new System.Drawing.Point(21, 277);
-            this.picboxEmail.Name = "picboxEmail";
-            this.picboxEmail.Size = new System.Drawing.Size(30, 30);
-            this.picboxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxEmail.TabIndex = 50;
-            this.picboxEmail.TabStop = false;
-            // 
-            // pnlEmail
-            // 
-            this.pnlEmail.BackColor = System.Drawing.Color.White;
-            this.pnlEmail.Location = new System.Drawing.Point(21, 313);
-            this.pnlEmail.Name = "pnlEmail";
-            this.pnlEmail.Size = new System.Drawing.Size(481, 1);
-            this.pnlEmail.TabIndex = 51;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(57, 391);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(439, 27);
-            this.txtEmail.TabIndex = 48;
-            // 
             // Delete_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,6 +600,8 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
@@ -605,8 +609,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxOkulNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
