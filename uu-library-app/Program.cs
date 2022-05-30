@@ -20,7 +20,7 @@ namespace uu_library_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewLogin());
+            Application.Run(new login_panel());
         }
     }
 }

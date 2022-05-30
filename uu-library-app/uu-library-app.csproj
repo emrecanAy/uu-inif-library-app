@@ -127,6 +127,7 @@
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />
+    <Compile Include="Core\Logger\FileLogger\FileLogger.cs" />
     <Compile Include="Core\Results\DataResult.cs" />
     <Compile Include="Core\Results\ErrorDataResult.cs" />
     <Compile Include="Core\Results\ErrorResult.cs" />

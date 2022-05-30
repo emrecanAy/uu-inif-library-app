@@ -144,7 +144,7 @@ namespace uu_library_app
 
             try
             {
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz? Bu işlem bu yazarın sahip olduğu bütün kitapları da silecektir!",
                "Uyarı!",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning);
@@ -153,6 +153,8 @@ namespace uu_library_app
                 {
                     Author authorToDelete = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToDelete.Id + " " + authorToDelete.LastName + " ]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    
+                    
                     manager.Delete(authorToDelete);
                     logger.Log(log);
                     clearAllFields();
