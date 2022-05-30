@@ -593,6 +593,7 @@
             // 
             // btnHızlıBolum
             // 
+            this.btnHızlıBolum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHızlıBolum.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHızlıBolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHızlıBolum.ForeColor = System.Drawing.Color.White;
@@ -606,6 +607,7 @@
             // 
             // btnHızlıFakulte
             // 
+            this.btnHızlıFakulte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHızlıFakulte.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHızlıFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHızlıFakulte.ForeColor = System.Drawing.Color.White;

@@ -115,7 +115,7 @@ namespace uu_library_app
             txtKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             txtYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
         }

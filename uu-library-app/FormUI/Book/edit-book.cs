@@ -166,7 +166,7 @@ namespace uu_library_app
             cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 

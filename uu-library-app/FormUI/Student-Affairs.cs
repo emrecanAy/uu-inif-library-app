@@ -62,6 +62,7 @@ namespace uu_library_app
 
         }
 
+       
         private void button2_Click(object sender, EventArgs e)
         {
             if(txtOgrNo.Text == "")
@@ -89,6 +90,8 @@ namespace uu_library_app
                 txtEmail.Text = student.Email;
                 txtFakulte.Text = facultyManager.FindById(student.FacultyId).Name;
                 txtBolum.Text = departmentManager.FindById(student.DepartmentId).Name;
+                txtOgrenciId.Text = student.Id;
+                button1.Enabled = true;
 
                 DataListerHelper.listUndepositBooksDataToTableConcat(dataGridView1, conn, student.Id);
 
@@ -107,7 +110,31 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtDepositId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = wehMessageBox.Show("Öğrenciyi silmek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Student student = studentManager.findByNumber(txtOgrenciId.Text);
+                studentManager.Delete(student);
+                txtAd.Text = "";
+                txtBolum.Text = "";
+                txtEmail.Text = "";
+                txtFakulte.Text = "";
+                txtSoyad.Text = "";
+                txtOgrenciId.Text = "";
+                txtOgrNo.Text = "";
+                
+
+            }
+            
         }
     }
 }

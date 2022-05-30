@@ -652,7 +652,7 @@ namespace uu_library_app
             this.dgvDeneme.Name = "dgvDeneme";
             this.dgvDeneme.ReadOnly = true;
             this.dgvDeneme.RowHeadersVisible = false;
-            this.dgvDeneme.RowTemplate.Height = 30;
+            this.dgvDeneme.RowTemplate.Height = 45;
             this.dgvDeneme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeneme.Size = new System.Drawing.Size(477, 37);
             this.dgvDeneme.TabIndex = 273;

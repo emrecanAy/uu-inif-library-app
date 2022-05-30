@@ -29,7 +29,7 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -170,14 +170,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -1043,6 +1043,7 @@ namespace uu_library_app
             // 
             // btnHizliKonum
             // 
+            this.btnHizliKonum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHizliKonum.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHizliKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizliKonum.ForeColor = System.Drawing.Color.White;
@@ -1056,6 +1057,7 @@ namespace uu_library_app
             // 
             // btnHizliKategori
             // 
+            this.btnHizliKategori.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHizliKategori.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHizliKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizliKategori.ForeColor = System.Drawing.Color.White;
@@ -1069,6 +1071,7 @@ namespace uu_library_app
             // 
             // btnHizliDil
             // 
+            this.btnHizliDil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHizliDil.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHizliDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizliDil.ForeColor = System.Drawing.Color.White;
@@ -1082,6 +1085,7 @@ namespace uu_library_app
             // 
             // btnHizliYayinevi
             // 
+            this.btnHizliYayinevi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHizliYayinevi.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHizliYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizliYayinevi.ForeColor = System.Drawing.Color.White;
@@ -1095,6 +1099,7 @@ namespace uu_library_app
             // 
             // btnHizliYazar
             // 
+            this.btnHizliYazar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHizliYazar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHizliYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizliYazar.ForeColor = System.Drawing.Color.White;

@@ -108,7 +108,7 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE id=@p1", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE id=@p1 AND deleted=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", id);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())

@@ -45,6 +45,7 @@ namespace uu_library_app
             dgvDeneme.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
             DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView2, conn);
+            dgvDeneme.RowTemplate.Height = 50;
 
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

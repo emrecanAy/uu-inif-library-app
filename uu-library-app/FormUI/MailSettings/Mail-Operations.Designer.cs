@@ -46,6 +46,11 @@ namespace uu_library_app.FormUI.MailSettings
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.numericHatirlatma = new System.Windows.Forms.NumericUpDown();
+            this.picboxEmail = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richHatirlatma = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSenderPassword = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -55,11 +60,6 @@ namespace uu_library_app.FormUI.MailSettings
             this.txtSenderEmail = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.numericHatirlatma = new System.Windows.Forms.NumericUpDown();
-            this.picboxEmail = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richHatirlatma = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -88,11 +88,11 @@ namespace uu_library_app.FormUI.MailSettings
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericHatirlatma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericGecikme)).BeginInit();
@@ -256,105 +256,6 @@ namespace uu_library_app.FormUI.MailSettings
             this.panel4.Size = new System.Drawing.Size(167, 5);
             this.panel4.TabIndex = 266;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(459, 142);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 25);
-            this.label11.TabIndex = 270;
-            this.label11.Text = "Şifre:";
-            // 
-            // txtSenderPassword
-            // 
-            this.txtSenderPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSenderPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenderPassword.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSenderPassword.ForeColor = System.Drawing.Color.White;
-            this.txtSenderPassword.Location = new System.Drawing.Point(562, 137);
-            this.txtSenderPassword.Name = "txtSenderPassword";
-            this.txtSenderPassword.Size = new System.Drawing.Size(221, 27);
-            this.txtSenderPassword.TabIndex = 269;
-            this.txtSenderPassword.UseSystemPasswordChar = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(526, 137);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 271;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.White;
-            this.panel22.Location = new System.Drawing.Point(526, 170);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(257, 1);
-            this.panel22.TabIndex = 272;
-            // 
-            // btnReminding
-            // 
-            this.btnReminding.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnReminding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReminding.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReminding.ForeColor = System.Drawing.Color.White;
-            this.btnReminding.Location = new System.Drawing.Point(562, 847);
-            this.btnReminding.Name = "btnReminding";
-            this.btnReminding.Size = new System.Drawing.Size(131, 41);
-            this.btnReminding.TabIndex = 268;
-            this.btnReminding.Text = "Ayarları Kaydet";
-            this.btnReminding.UseVisualStyleBackColor = false;
-            this.btnReminding.Click += new System.EventHandler(this.btnReminding_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(24, 146);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 25);
-            this.label10.TabIndex = 264;
-            this.label10.Text = "Bildirim Epostası: ";
-            // 
-            // txtSenderEmail
-            // 
-            this.txtSenderEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSenderEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenderEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSenderEmail.ForeColor = System.Drawing.Color.White;
-            this.txtSenderEmail.Location = new System.Drawing.Point(229, 137);
-            this.txtSenderEmail.Name = "txtSenderEmail";
-            this.txtSenderEmail.Size = new System.Drawing.Size(210, 27);
-            this.txtSenderEmail.TabIndex = 263;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(190, 141);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 265;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(190, 171);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(254, 1);
-            this.panel9.TabIndex = 266;
-            // 
             // numericHatirlatma
             // 
             this.numericHatirlatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -410,6 +311,105 @@ namespace uu_library_app.FormUI.MailSettings
             this.richHatirlatma.Size = new System.Drawing.Size(607, 339);
             this.richHatirlatma.TabIndex = 88;
             this.richHatirlatma.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(539, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 25);
+            this.label11.TabIndex = 270;
+            this.label11.Text = "Şifre:";
+            // 
+            // txtSenderPassword
+            // 
+            this.txtSenderPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSenderPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenderPassword.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSenderPassword.ForeColor = System.Drawing.Color.White;
+            this.txtSenderPassword.Location = new System.Drawing.Point(642, 137);
+            this.txtSenderPassword.Name = "txtSenderPassword";
+            this.txtSenderPassword.Size = new System.Drawing.Size(205, 27);
+            this.txtSenderPassword.TabIndex = 269;
+            this.txtSenderPassword.UseSystemPasswordChar = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(606, 137);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 271;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.Location = new System.Drawing.Point(606, 170);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(241, 1);
+            this.panel22.TabIndex = 272;
+            // 
+            // btnReminding
+            // 
+            this.btnReminding.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnReminding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReminding.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReminding.ForeColor = System.Drawing.Color.White;
+            this.btnReminding.Location = new System.Drawing.Point(562, 847);
+            this.btnReminding.Name = "btnReminding";
+            this.btnReminding.Size = new System.Drawing.Size(131, 41);
+            this.btnReminding.TabIndex = 268;
+            this.btnReminding.Text = "Ayarları Kaydet";
+            this.btnReminding.UseVisualStyleBackColor = false;
+            this.btnReminding.Click += new System.EventHandler(this.btnReminding_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(24, 146);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 25);
+            this.label10.TabIndex = 264;
+            this.label10.Text = "Bildirim Epostası: ";
+            // 
+            // txtSenderEmail
+            // 
+            this.txtSenderEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSenderEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenderEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSenderEmail.ForeColor = System.Drawing.Color.White;
+            this.txtSenderEmail.Location = new System.Drawing.Point(229, 137);
+            this.txtSenderEmail.Name = "txtSenderEmail";
+            this.txtSenderEmail.Size = new System.Drawing.Size(280, 27);
+            this.txtSenderEmail.TabIndex = 263;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(190, 141);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 265;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(190, 171);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(324, 1);
+            this.panel9.TabIndex = 266;
             // 
             // label3
             // 
@@ -650,7 +650,7 @@ namespace uu_library_app.FormUI.MailSettings
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(810, 142);
+            this.label1.Location = new System.Drawing.Point(872, 142);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 25);
             this.label1.TabIndex = 274;
@@ -662,25 +662,25 @@ namespace uu_library_app.FormUI.MailSettings
             this.txtControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtControl.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.txtControl.ForeColor = System.Drawing.Color.White;
-            this.txtControl.Location = new System.Drawing.Point(970, 139);
+            this.txtControl.Location = new System.Drawing.Point(1032, 139);
             this.txtControl.Name = "txtControl";
-            this.txtControl.Size = new System.Drawing.Size(241, 27);
+            this.txtControl.Size = new System.Drawing.Size(207, 27);
             this.txtControl.TabIndex = 273;
             this.txtControl.UseSystemPasswordChar = true;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(934, 172);
+            this.panel3.Location = new System.Drawing.Point(996, 172);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(277, 1);
+            this.panel3.Size = new System.Drawing.Size(243, 1);
             this.panel3.TabIndex = 276;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(934, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(996, 139);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -716,11 +716,11 @@ namespace uu_library_app.FormUI.MailSettings
             this.Load += new System.EventHandler(this.Mail_Operations_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericHatirlatma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

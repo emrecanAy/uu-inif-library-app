@@ -62,5 +62,10 @@ namespace uu_library_app.FormUI.Register_Login
                 throw;
             }
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

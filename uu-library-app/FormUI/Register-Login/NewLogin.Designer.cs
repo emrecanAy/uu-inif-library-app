@@ -38,10 +38,10 @@ namespace uu_library_app.FormUI.Register_Login
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.loginTextBox3 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
-            this.loginTextBox4 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.loginTextBox3 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
+            this.loginTextBox4 = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.button1.Location = new System.Drawing.Point(422, 332);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 32);
-            this.button1.TabIndex = 66;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,13 +70,14 @@ namespace uu_library_app.FormUI.Register_Login
             this.linkLabel1.Location = new System.Drawing.Point(595, 231);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(108, 17);
-            this.linkLabel1.TabIndex = 65;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Şifremi Unuttum";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DimGray;
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(710, 0);
             this.pictureBox6.Name = "pictureBox6";
@@ -84,6 +85,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 64;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label1
             // 
@@ -134,48 +136,6 @@ namespace uu_library_app.FormUI.Register_Login
             this.panel4.Size = new System.Drawing.Size(348, 2);
             this.panel4.TabIndex = 59;
             // 
-            // loginTextBox3
-            // 
-            this.loginTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.loginTextBox3.BorderColor = System.Drawing.Color.White;
-            this.loginTextBox3.BorderFocusColor = System.Drawing.Color.Silver;
-            this.loginTextBox3.BorderRadius = 5;
-            this.loginTextBox3.BorderSize = 2;
-            this.loginTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.loginTextBox3.Location = new System.Drawing.Point(384, 184);
-            this.loginTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.loginTextBox3.Multiline = false;
-            this.loginTextBox3.Name = "loginTextBox3";
-            this.loginTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.loginTextBox3.PasswordChar = true;
-            this.loginTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.loginTextBox3.PlaceholderText = "Şifre";
-            this.loginTextBox3.Size = new System.Drawing.Size(309, 31);
-            this.loginTextBox3.TabIndex = 57;
-            this.loginTextBox3.UnderlinedStyle = false;
-            // 
-            // loginTextBox4
-            // 
-            this.loginTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.loginTextBox4.BorderColor = System.Drawing.Color.White;
-            this.loginTextBox4.BorderFocusColor = System.Drawing.Color.Silver;
-            this.loginTextBox4.BorderRadius = 5;
-            this.loginTextBox4.BorderSize = 2;
-            this.loginTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.loginTextBox4.Location = new System.Drawing.Point(384, 101);
-            this.loginTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.loginTextBox4.Multiline = false;
-            this.loginTextBox4.Name = "loginTextBox4";
-            this.loginTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.loginTextBox4.PasswordChar = false;
-            this.loginTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.loginTextBox4.PlaceholderText = "E-Posta";
-            this.loginTextBox4.Size = new System.Drawing.Size(309, 31);
-            this.loginTextBox4.TabIndex = 58;
-            this.loginTextBox4.UnderlinedStyle = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -195,6 +155,48 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 55;
             this.pictureBox4.TabStop = false;
+            // 
+            // loginTextBox3
+            // 
+            this.loginTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.loginTextBox3.BorderColor = System.Drawing.Color.White;
+            this.loginTextBox3.BorderFocusColor = System.Drawing.Color.Silver;
+            this.loginTextBox3.BorderRadius = 5;
+            this.loginTextBox3.BorderSize = 2;
+            this.loginTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.loginTextBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.loginTextBox3.Location = new System.Drawing.Point(384, 182);
+            this.loginTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.loginTextBox3.Multiline = false;
+            this.loginTextBox3.Name = "loginTextBox3";
+            this.loginTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.loginTextBox3.PasswordChar = true;
+            this.loginTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.loginTextBox3.PlaceholderText = "Şifre";
+            this.loginTextBox3.Size = new System.Drawing.Size(309, 35);
+            this.loginTextBox3.TabIndex = 2;
+            this.loginTextBox3.UnderlinedStyle = false;
+            // 
+            // loginTextBox4
+            // 
+            this.loginTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.loginTextBox4.BorderColor = System.Drawing.Color.White;
+            this.loginTextBox4.BorderFocusColor = System.Drawing.Color.Silver;
+            this.loginTextBox4.BorderRadius = 5;
+            this.loginTextBox4.BorderSize = 2;
+            this.loginTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.loginTextBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.loginTextBox4.Location = new System.Drawing.Point(384, 99);
+            this.loginTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.loginTextBox4.Multiline = false;
+            this.loginTextBox4.Name = "loginTextBox4";
+            this.loginTextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.loginTextBox4.PasswordChar = false;
+            this.loginTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.loginTextBox4.PlaceholderText = "E-Posta";
+            this.loginTextBox4.Size = new System.Drawing.Size(309, 35);
+            this.loginTextBox4.TabIndex = 1;
+            this.loginTextBox4.UnderlinedStyle = false;
             // 
             // NewLogin
             // 
@@ -216,6 +218,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewLogin";
             this.Load += new System.EventHandler(this.NewLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

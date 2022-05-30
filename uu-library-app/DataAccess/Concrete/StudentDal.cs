@@ -104,7 +104,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
                 }
                 conn.Close();
                 return student;
@@ -134,7 +134,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                 }
                 conn.Close();
@@ -165,7 +165,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                     students.Add(student);
                 }
@@ -196,7 +196,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                     students.Add(student);
                 }
@@ -227,7 +227,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                     students.Add(student);
                 }
@@ -259,7 +259,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                 }
                 conn.Close();
@@ -290,7 +290,7 @@ namespace uu_library_app.DataAccess.Concrete
                     student.Card = reader[4].ToString();
                     student.Email = reader[5].ToString();
                     student.DepartmentId = reader[6].ToString();
-                    student.FacultyId = reader[7].ToString();
+                    student.FacultyId = reader[9].ToString();
 
                 }
                 conn.Close();

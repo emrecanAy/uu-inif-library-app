@@ -13,8 +13,8 @@ namespace uu_library_app.Entity.Concrete
         public Faculty() { }
         public Faculty(string id, string name)
         {
-            this.Id = id;
-            this.Name = name;
+            this.id = id;
+            this.name = name;
         }
 
         public string Id { get => id; set => id = value; }
