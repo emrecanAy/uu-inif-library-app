@@ -47,6 +47,7 @@ namespace uu_library_app.FormUI
             pnlDepositSubMenu.Visible = false;
             pnlDigerSubMenu.Visible = false;
             panel3.Visible = false;
+            panel4.Visible = false;
             
         }
         private void hideSubMenu()
@@ -61,6 +62,8 @@ namespace uu_library_app.FormUI
                 pnlDigerSubMenu.Visible = false;
             if (panel3.Visible == true)
                 panel3.Visible = false;
+            if (panel4.Visible == true)
+                panel4.Visible = false;
 
 
         }
@@ -302,6 +305,14 @@ namespace uu_library_app.FormUI
             hideSubMenu();
         }
 
+        private void btnVeriCikti_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Veri_İslemleri());
+            hideSubMenu();
+        }
+
+
+
 
 
         #endregion
@@ -325,6 +336,18 @@ namespace uu_library_app.FormUI
             btnSettings.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-       
+        private void btnDosya_Click(object sender, EventArgs e)
+        {
+            pnlNewNav.Height = btnDosya.Height;
+            pnlNewNav.Top = btnDosya.Top;
+            pnlNewNav.Left = btnDosya.Left;
+            btnDosya.BackColor = Color.FromArgb(46, 51, 73);
+            showSubMenu(panel4);
+        }
+
+        private void btnDosya_Leave(object sender, EventArgs e)
+        {
+            btnDosya.BackColor = Color.FromArgb(24, 30, 54);
+        }
     }
 }
