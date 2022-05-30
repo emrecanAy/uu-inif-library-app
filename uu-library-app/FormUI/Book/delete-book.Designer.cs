@@ -232,6 +232,7 @@ namespace uu_library_app
             this.txtYayinlanmaTarihi.ForeColor = System.Drawing.Color.White;
             this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 334);
             this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
+            this.txtYayinlanmaTarihi.ReadOnly = true;
             this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
             this.txtYayinlanmaTarihi.TabIndex = 8;
             // 
@@ -243,6 +244,7 @@ namespace uu_library_app
             this.txtKonum.ForeColor = System.Drawing.Color.White;
             this.txtKonum.Location = new System.Drawing.Point(78, 235);
             this.txtKonum.Name = "txtKonum";
+            this.txtKonum.ReadOnly = true;
             this.txtKonum.Size = new System.Drawing.Size(164, 27);
             this.txtKonum.TabIndex = 5;
             // 
@@ -254,6 +256,7 @@ namespace uu_library_app
             this.txtYayinevi.ForeColor = System.Drawing.Color.White;
             this.txtYayinevi.Location = new System.Drawing.Point(336, 144);
             this.txtYayinevi.Name = "txtYayinevi";
+            this.txtYayinevi.ReadOnly = true;
             this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
             this.txtYayinevi.TabIndex = 4;
             // 
@@ -265,6 +268,7 @@ namespace uu_library_app
             this.txtKategori.ForeColor = System.Drawing.Color.White;
             this.txtKategori.Location = new System.Drawing.Point(79, 146);
             this.txtKategori.Name = "txtKategori";
+            this.txtKategori.ReadOnly = true;
             this.txtKategori.Size = new System.Drawing.Size(164, 27);
             this.txtKategori.TabIndex = 3;
             // 
@@ -276,6 +280,7 @@ namespace uu_library_app
             this.txtDil.ForeColor = System.Drawing.Color.White;
             this.txtDil.Location = new System.Drawing.Point(337, 50);
             this.txtDil.Name = "txtDil";
+            this.txtDil.ReadOnly = true;
             this.txtDil.Size = new System.Drawing.Size(164, 27);
             this.txtDil.TabIndex = 2;
             // 
@@ -289,6 +294,7 @@ namespace uu_library_app
             this.txtDemirbasNo.Mask = "000000000000000000000000000000";
             this.txtDemirbasNo.Name = "txtDemirbasNo";
             this.txtDemirbasNo.PromptChar = ' ';
+            this.txtDemirbasNo.ReadOnly = true;
             this.txtDemirbasNo.Size = new System.Drawing.Size(164, 27);
             this.txtDemirbasNo.TabIndex = 13;
             // 
@@ -332,6 +338,7 @@ namespace uu_library_app
             this.txtCiltNo.Mask = "000000000000000000000000000000";
             this.txtCiltNo.Name = "txtCiltNo";
             this.txtCiltNo.PromptChar = ' ';
+            this.txtCiltNo.ReadOnly = true;
             this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
             this.txtCiltNo.TabIndex = 12;
             // 
@@ -345,6 +352,7 @@ namespace uu_library_app
             this.txtSayfaSayisi.Mask = "000000000000000000000000000000";
             this.txtSayfaSayisi.Name = "txtSayfaSayisi";
             this.txtSayfaSayisi.PromptChar = ' ';
+            this.txtSayfaSayisi.ReadOnly = true;
             this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
             this.txtSayfaSayisi.TabIndex = 10;
             // 
@@ -358,6 +366,7 @@ namespace uu_library_app
             this.txtStokAdet.Mask = "000000000000000000000000000000";
             this.txtStokAdet.Name = "txtStokAdet";
             this.txtStokAdet.PromptChar = ' ';
+            this.txtStokAdet.ReadOnly = true;
             this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
             this.txtStokAdet.TabIndex = 9;
             // 
@@ -371,6 +380,7 @@ namespace uu_library_app
             this.txtIsbn.Mask = "000000000000000000000000000000";
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.PromptChar = ' ';
+            this.txtIsbn.ReadOnly = true;
             this.txtIsbn.Size = new System.Drawing.Size(164, 27);
             this.txtIsbn.TabIndex = 7;
             // 
@@ -513,6 +523,7 @@ namespace uu_library_app
             this.txtCevirmen.ForeColor = System.Drawing.Color.White;
             this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
             this.txtCevirmen.Name = "txtCevirmen";
+            this.txtCevirmen.ReadOnly = true;
             this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
             this.txtCevirmen.TabIndex = 6;
             // 
@@ -674,6 +685,7 @@ namespace uu_library_app
             this.txtYazar.ForeColor = System.Drawing.Color.White;
             this.txtYazar.Location = new System.Drawing.Point(82, 545);
             this.txtYazar.Name = "txtYazar";
+            this.txtYazar.ReadOnly = true;
             this.txtYazar.Size = new System.Drawing.Size(164, 27);
             this.txtYazar.TabIndex = 11;
             // 
@@ -853,6 +865,7 @@ namespace uu_library_app
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(78, 51);
             this.txtAd.Name = "txtAd";
+            this.txtAd.ReadOnly = true;
             this.txtAd.Size = new System.Drawing.Size(164, 27);
             this.txtAd.TabIndex = 1;
             // 
@@ -986,7 +999,7 @@ namespace uu_library_app
             this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.wehTextBox1.PasswordChar = false;
             this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girip Üzerine Tıklayınız !";
+            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girerek Seçiniz !";
             this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
             this.wehTextBox1.TabIndex = 236;
             this.wehTextBox1.Texts = "";
