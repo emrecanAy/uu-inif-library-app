@@ -36,6 +36,18 @@ namespace uu_library_app.FormUI
             dgvLogOgr.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvLogOgr.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
             dgvLogOgr.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+
+            Dictionary<string, string> comboSourceDataTypes = new Dictionary<string, string>();
+            comboSourceDataTypes.Add("tumOgrenciler", "Tüm Öğrenciler");
+            comboSourceDataTypes.Add("tumKitaplar", "Tüm Kitaplar");
+            comboSourceDataTypes.Add("teslimTarihiGecmisOgrenciler", "Teslim Tarihi Geçmiş Öğrenciler");
+            comboSourceDataTypes.Add("enCokOkunanKitaplarAsc", "En Çok Okunan Kitaplar");
+            comboSourceDataTypes.Add("tumSilinmisOgrenciler", "Tüm Silinmiş Öğrenciler");
+            comboSourceDataTypes.Add("tumSilinmisKitaplar", "Tüm Silinmiş Kitaplar");
+
+            cmbVeri.DataSource = new BindingSource(comboSourceDataTypes, null);
+            cmbVeri.DisplayMember = "Value";
+            cmbVeri.ValueMember = "Key";
         }
     }
 }
