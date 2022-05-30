@@ -307,7 +307,7 @@ namespace uu_library_app.FormUI
 
         private void btnVeriCikti_Click(object sender, EventArgs e)
         {
-            openChildForm(new Veri_İslemleri());
+            openChildForm(new Veri_İslemleri(_admin));
             hideSubMenu();
         }
 
