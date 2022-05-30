@@ -30,14 +30,14 @@ namespace uu_library_app.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gosterge_Paneli));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lblOduncSayi = new System.Windows.Forms.Label();
             this.lblToplamUye = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -109,6 +109,8 @@ namespace uu_library_app.FormUI
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.lblToplamYayinevi = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -141,6 +143,8 @@ namespace uu_library_app.FormUI
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel14.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOduncSayi
@@ -184,10 +188,10 @@ namespace uu_library_app.FormUI
             this.panel5.Controls.Add(this.lblBolum2OkumaSayisi);
             this.panel5.Controls.Add(this.lblBolum3OkumaSayisi);
             this.panel5.Controls.Add(this.lblBolum3);
-            this.panel5.Location = new System.Drawing.Point(313, 510);
+            this.panel5.Location = new System.Drawing.Point(304, 19);
             this.panel5.Margin = new System.Windows.Forms.Padding(5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(291, 367);
+            this.panel5.Size = new System.Drawing.Size(291, 360);
             this.panel5.TabIndex = 262;
             // 
             // pictureBox3
@@ -367,7 +371,7 @@ namespace uu_library_app.FormUI
             this.panel6.Controls.Add(this.pictureBox8);
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.lblOduncVerilen);
-            this.panel6.Location = new System.Drawing.Point(620, 510);
+            this.panel6.Location = new System.Drawing.Point(600, 19);
             this.panel6.Margin = new System.Windows.Forms.Padding(5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(246, 173);
@@ -412,7 +416,7 @@ namespace uu_library_app.FormUI
             this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Controls.Add(this.label21);
             this.panel7.Controls.Add(this.lblTeslimAlinan);
-            this.panel7.Location = new System.Drawing.Point(620, 704);
+            this.panel7.Location = new System.Drawing.Point(600, 206);
             this.panel7.Margin = new System.Windows.Forms.Padding(5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(246, 173);
@@ -469,10 +473,10 @@ namespace uu_library_app.FormUI
             this.panel4.Controls.Add(this.lblUye1OkumaSayisi);
             this.panel4.Controls.Add(this.lblUye1);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(12, 510);
+            this.panel4.Location = new System.Drawing.Point(5, 19);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(291, 367);
+            this.panel4.Size = new System.Drawing.Size(291, 357);
             this.panel4.TabIndex = 258;
             // 
             // pictureBox16
@@ -682,17 +686,17 @@ namespace uu_library_app.FormUI
             // chartTopBooks
             // 
             this.chartTopBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartTopBooks.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            legend1.ForeColor = System.Drawing.Color.Silver;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chartTopBooks.Legends.Add(legend1);
-            this.chartTopBooks.Location = new System.Drawing.Point(907, 103);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            chartArea3.Name = "ChartArea1";
+            this.chartTopBooks.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            legend3.ForeColor = System.Drawing.Color.Silver;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            this.chartTopBooks.Legends.Add(legend3);
+            this.chartTopBooks.Location = new System.Drawing.Point(25, 7);
             this.chartTopBooks.Margin = new System.Windows.Forms.Padding(5);
             this.chartTopBooks.Name = "chartTopBooks";
             this.chartTopBooks.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -703,43 +707,43 @@ namespace uu_library_app.FormUI
         System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(220)))), ((int)(((byte)(205))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            series1.BorderWidth = 5;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartTopBooks.Series.Add(series1);
-            this.chartTopBooks.Size = new System.Drawing.Size(320, 376);
+            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            series3.BorderWidth = 5;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartTopBooks.Series.Add(series3);
+            this.chartTopBooks.Size = new System.Drawing.Size(320, 378);
             this.chartTopBooks.TabIndex = 267;
             this.chartTopBooks.Text = "chartTopBooks";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title1.ForeColor = System.Drawing.Color.White;
-            title1.Name = "Title1";
-            title1.Text = "En Çok Okunan 5 Kitap :";
-            this.chartTopBooks.Titles.Add(title1);
+            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title3.ForeColor = System.Drawing.Color.White;
+            title3.Name = "Title1";
+            title3.Text = "En Çok Okunan 5 Kitap :";
+            this.chartTopBooks.Titles.Add(title3);
             // 
             // chartTopCategories
             // 
             this.chartTopCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartTopCategories.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            legend2.ForeColor = System.Drawing.Color.Silver;
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chartTopCategories.Legends.Add(legend2);
-            this.chartTopCategories.Location = new System.Drawing.Point(907, 501);
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            chartArea4.Name = "ChartArea1";
+            this.chartTopCategories.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            legend4.ForeColor = System.Drawing.Color.Silver;
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.chartTopCategories.Legends.Add(legend4);
+            this.chartTopCategories.Location = new System.Drawing.Point(25, 392);
             this.chartTopCategories.Margin = new System.Windows.Forms.Padding(5);
             this.chartTopCategories.Name = "chartTopCategories";
             this.chartTopCategories.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -750,28 +754,28 @@ namespace uu_library_app.FormUI
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(188)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(160)))), ((int)(((byte)(139)))))};
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            series2.BorderWidth = 5;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartTopCategories.Series.Add(series2);
-            this.chartTopCategories.Size = new System.Drawing.Size(320, 376);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            series4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            series4.BorderWidth = 5;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series4.IsValueShownAsLabel = true;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartTopCategories.Series.Add(series4);
+            this.chartTopCategories.Size = new System.Drawing.Size(320, 378);
             this.chartTopCategories.TabIndex = 269;
             this.chartTopCategories.Text = "chart1";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title2.ForeColor = System.Drawing.Color.White;
-            title2.Name = "Title1";
-            title2.Text = "En Popüler 5 Kategori :";
-            this.chartTopCategories.Titles.Add(title2);
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title4.ForeColor = System.Drawing.Color.White;
+            title4.Name = "Title1";
+            title4.Text = "En Popüler 5 Kategori :";
+            this.chartTopCategories.Titles.Add(title4);
             // 
             // panel8
             // 
@@ -1000,6 +1004,7 @@ namespace uu_library_app.FormUI
             // 
             // panel14
             // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.panel10);
             this.panel14.Controls.Add(this.panel11);
             this.panel14.Controls.Add(this.panel12);
@@ -1011,19 +1016,37 @@ namespace uu_library_app.FormUI
             this.panel14.Size = new System.Drawing.Size(854, 385);
             this.panel14.TabIndex = 275;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Location = new System.Drawing.Point(12, 495);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(854, 393);
+            this.panel1.TabIndex = 276;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.chartTopCategories);
+            this.panel2.Controls.Add(this.chartTopBooks);
+            this.panel2.Location = new System.Drawing.Point(872, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 785);
+            this.panel2.TabIndex = 277;
+            // 
             // Gosterge_Paneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel14);
-            this.Controls.Add(this.chartTopCategories);
-            this.Controls.Add(this.chartTopBooks);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1072,6 +1095,8 @@ namespace uu_library_app.FormUI
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel14.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1149,5 +1174,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Label lblUye2;
         private System.Windows.Forms.Label lblUye1OkumaSayisi;
         private System.Windows.Forms.Label lblUye1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

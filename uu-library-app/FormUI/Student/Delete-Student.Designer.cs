@@ -215,12 +215,12 @@ namespace uu_library_app
             // 
             this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(57, 277);
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.ReadOnly = true;
-            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
+            this.txtOkulNo.Size = new System.Drawing.Size(439, 25);
             this.txtOkulNo.TabIndex = 3;
             // 
             // picboxOkulNo
@@ -257,24 +257,24 @@ namespace uu_library_app
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtEmail.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(57, 391);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(439, 27);
+            this.txtEmail.Size = new System.Drawing.Size(439, 25);
             this.txtEmail.TabIndex = 4;
             // 
             // txtFakulte
             // 
             this.txtFakulte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtFakulte.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFakulte.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtFakulte.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtFakulte.ForeColor = System.Drawing.Color.White;
             this.txtFakulte.Location = new System.Drawing.Point(57, 602);
             this.txtFakulte.Name = "txtFakulte";
             this.txtFakulte.ReadOnly = true;
-            this.txtFakulte.Size = new System.Drawing.Size(445, 27);
+            this.txtFakulte.Size = new System.Drawing.Size(445, 25);
             this.txtFakulte.TabIndex = 6;
             // 
             // panel9
@@ -333,12 +333,12 @@ namespace uu_library_app
             // 
             this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtBolum.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtBolum.ForeColor = System.Drawing.Color.White;
             this.txtBolum.Location = new System.Drawing.Point(57, 494);
             this.txtBolum.Name = "txtBolum";
             this.txtBolum.ReadOnly = true;
-            this.txtBolum.Size = new System.Drawing.Size(445, 27);
+            this.txtBolum.Size = new System.Drawing.Size(445, 25);
             this.txtBolum.TabIndex = 5;
             // 
             // panel8
@@ -429,12 +429,12 @@ namespace uu_library_app
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAd.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(57, 154);
             this.txtAd.Name = "txtAd";
             this.txtAd.ReadOnly = true;
-            this.txtAd.Size = new System.Drawing.Size(164, 27);
+            this.txtAd.Size = new System.Drawing.Size(164, 25);
             this.txtAd.TabIndex = 1;
             // 
             // pictureBox1
@@ -460,12 +460,12 @@ namespace uu_library_app
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSoyad.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
             this.txtSoyad.Location = new System.Drawing.Point(332, 154);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.ReadOnly = true;
-            this.txtSoyad.Size = new System.Drawing.Size(164, 27);
+            this.txtSoyad.Size = new System.Drawing.Size(164, 25);
             this.txtSoyad.TabIndex = 2;
             // 
             // btnSil

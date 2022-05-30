@@ -117,11 +117,11 @@ namespace uu_library_app.FormUI.MailSettings
             // 
             this.txtHatirlatmaBaslik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtHatirlatmaBaslik.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHatirlatmaBaslik.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtHatirlatmaBaslik.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtHatirlatmaBaslik.ForeColor = System.Drawing.Color.White;
             this.txtHatirlatmaBaslik.Location = new System.Drawing.Point(249, 170);
             this.txtHatirlatmaBaslik.Name = "txtHatirlatmaBaslik";
-            this.txtHatirlatmaBaslik.Size = new System.Drawing.Size(295, 27);
+            this.txtHatirlatmaBaslik.Size = new System.Drawing.Size(295, 25);
             this.txtHatirlatmaBaslik.TabIndex = 258;
             // 
             // pnlEmail
@@ -302,7 +302,7 @@ namespace uu_library_app.FormUI.MailSettings
             // 
             this.richHatirlatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.richHatirlatma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richHatirlatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richHatirlatma.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richHatirlatma.ForeColor = System.Drawing.Color.White;
             this.richHatirlatma.Location = new System.Drawing.Point(3, 294);
             this.richHatirlatma.MaxLength = 1000;
@@ -562,7 +562,7 @@ namespace uu_library_app.FormUI.MailSettings
             // 
             this.richGecikme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.richGecikme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richGecikme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richGecikme.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richGecikme.ForeColor = System.Drawing.Color.White;
             this.richGecikme.Location = new System.Drawing.Point(3, 294);
             this.richGecikme.MaxLength = 1000;
@@ -625,11 +625,11 @@ namespace uu_library_app.FormUI.MailSettings
             // 
             this.txtGecikmeBaslik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtGecikmeBaslik.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGecikmeBaslik.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtGecikmeBaslik.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtGecikmeBaslik.ForeColor = System.Drawing.Color.White;
             this.txtGecikmeBaslik.Location = new System.Drawing.Point(249, 170);
             this.txtGecikmeBaslik.Name = "txtGecikmeBaslik";
-            this.txtGecikmeBaslik.Size = new System.Drawing.Size(295, 27);
+            this.txtGecikmeBaslik.Size = new System.Drawing.Size(295, 25);
             this.txtGecikmeBaslik.TabIndex = 276;
             // 
             // label7

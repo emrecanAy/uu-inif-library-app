@@ -253,12 +253,12 @@ namespace uu_library_app
             // 
             this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(112, 657);
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.ReadOnly = true;
-            this.txtOkulNo.Size = new System.Drawing.Size(164, 27);
+            this.txtOkulNo.Size = new System.Drawing.Size(164, 24);
             this.txtOkulNo.TabIndex = 267;
             // 
             // panel13
@@ -296,12 +296,12 @@ namespace uu_library_app
             // 
             this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBolum.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtBolum.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtBolum.ForeColor = System.Drawing.Color.White;
             this.txtBolum.Location = new System.Drawing.Point(111, 552);
             this.txtBolum.Name = "txtBolum";
             this.txtBolum.ReadOnly = true;
-            this.txtBolum.Size = new System.Drawing.Size(164, 27);
+            this.txtBolum.Size = new System.Drawing.Size(164, 24);
             this.txtBolum.TabIndex = 263;
             // 
             // panel12
@@ -339,12 +339,12 @@ namespace uu_library_app
             // 
             this.txtAdSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAdSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAdSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAdSoyad.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtAdSoyad.ForeColor = System.Drawing.Color.White;
             this.txtAdSoyad.Location = new System.Drawing.Point(111, 460);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.ReadOnly = true;
-            this.txtAdSoyad.Size = new System.Drawing.Size(164, 27);
+            this.txtAdSoyad.Size = new System.Drawing.Size(164, 24);
             this.txtAdSoyad.TabIndex = 259;
             // 
             // panel11
@@ -396,12 +396,12 @@ namespace uu_library_app
             // 
             this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYazar.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYazar.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtYazar.ForeColor = System.Drawing.Color.White;
             this.txtYazar.Location = new System.Drawing.Point(112, 352);
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.ReadOnly = true;
-            this.txtYazar.Size = new System.Drawing.Size(164, 27);
+            this.txtYazar.Size = new System.Drawing.Size(164, 24);
             this.txtYazar.TabIndex = 255;
             // 
             // label10
@@ -438,12 +438,12 @@ namespace uu_library_app
             // 
             this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIsbn.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtIsbn.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtIsbn.ForeColor = System.Drawing.Color.White;
             this.txtIsbn.Location = new System.Drawing.Point(112, 257);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.ReadOnly = true;
-            this.txtIsbn.Size = new System.Drawing.Size(164, 27);
+            this.txtIsbn.Size = new System.Drawing.Size(164, 24);
             this.txtIsbn.TabIndex = 251;
             // 
             // label6
@@ -462,12 +462,12 @@ namespace uu_library_app
             // 
             this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinevi.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtYayinevi.ForeColor = System.Drawing.Color.White;
             this.txtYayinevi.Location = new System.Drawing.Point(111, 162);
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.ReadOnly = true;
-            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinevi.Size = new System.Drawing.Size(164, 24);
             this.txtYayinevi.TabIndex = 249;
             // 
             // panel28
@@ -562,12 +562,12 @@ namespace uu_library_app
             // 
             this.txtKitapAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtKitapAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKitapAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKitapAd.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtKitapAd.ForeColor = System.Drawing.Color.White;
             this.txtKitapAd.Location = new System.Drawing.Point(111, 70);
             this.txtKitapAd.Name = "txtKitapAd";
             this.txtKitapAd.ReadOnly = true;
-            this.txtKitapAd.Size = new System.Drawing.Size(164, 27);
+            this.txtKitapAd.Size = new System.Drawing.Size(164, 24);
             this.txtKitapAd.TabIndex = 240;
             // 
             // lblAd

@@ -30,27 +30,34 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(edit_book));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.txtDemirbasNo = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCiltNo = new System.Windows.Forms.MaskedTextBox();
             this.txtSayfaSayisi = new System.Windows.Forms.MaskedTextBox();
             this.txtStokAdet = new System.Windows.Forms.MaskedTextBox();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.txtIsbn = new System.Windows.Forms.MaskedTextBox();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -95,7 +102,7 @@ namespace uu_library_app
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.picboxSoyad = new System.Windows.Forms.PictureBox();
             this.picboxAd = new System.Windows.Forms.PictureBox();
@@ -104,15 +111,12 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -127,10 +131,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -158,23 +158,22 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel20);
+            this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.txtDemirbasNo);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel24);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtCiltNo);
             this.panel1.Controls.Add(this.txtSayfaSayisi);
             this.panel1.Controls.Add(this.txtStokAdet);
-            this.panel1.Controls.Add(this.btnGuncelle);
             this.panel1.Controls.Add(this.txtIsbn);
-            this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.panel27);
             this.panel1.Controls.Add(this.panel28);
             this.panel1.Controls.Add(this.panel29);
             this.panel1.Controls.Add(this.panel30);
             this.panel1.Controls.Add(this.panel32);
             this.panel1.Controls.Add(this.panel26);
-            this.panel1.Controls.Add(this.panel20);
             this.panel1.Controls.Add(this.panel21);
             this.panel1.Controls.Add(this.panel22);
             this.panel1.Controls.Add(this.panel15);
@@ -218,7 +217,7 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel25);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.picboxSoyad);
             this.panel1.Controls.Add(this.picboxAd);
@@ -227,714 +226,11 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.txtAd);
             this.panel1.Controls.Add(this.lblSoyad);
             this.panel1.Controls.Add(this.lblAd);
+            this.panel1.Controls.Add(this.btnGuncelle);
             this.panel1.Location = new System.Drawing.Point(12, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 756);
             this.panel1.TabIndex = 264;
-            // 
-            // txtDemirbasNo
-            // 
-            this.txtDemirbasNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtDemirbasNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDemirbasNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtDemirbasNo.ForeColor = System.Drawing.Color.White;
-            this.txtDemirbasNo.Location = new System.Drawing.Point(212, 634);
-            this.txtDemirbasNo.Mask = "000000000000000000000000000000";
-            this.txtDemirbasNo.Name = "txtDemirbasNo";
-            this.txtDemirbasNo.PromptChar = ' ';
-            this.txtDemirbasNo.Size = new System.Drawing.Size(164, 27);
-            this.txtDemirbasNo.TabIndex = 13;
-            this.txtDemirbasNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDemirbasNo_MaskInputRejected);
-            this.txtDemirbasNo.Click += new System.EventHandler(this.txtDemirbasNo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(177, 635);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 314;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.White;
-            this.panel24.Location = new System.Drawing.Point(177, 671);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(200, 1);
-            this.panel24.TabIndex = 313;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(172, 603);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
-            this.label1.TabIndex = 312;
-            this.label1.Text = "Demirbaş No:";
-            // 
-            // txtCiltNo
-            // 
-            this.txtCiltNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtCiltNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCiltNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtCiltNo.ForeColor = System.Drawing.Color.White;
-            this.txtCiltNo.Location = new System.Drawing.Point(336, 543);
-            this.txtCiltNo.Mask = "000000000000000000000000000000";
-            this.txtCiltNo.Name = "txtCiltNo";
-            this.txtCiltNo.PromptChar = ' ';
-            this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
-            this.txtCiltNo.TabIndex = 12;
-            this.txtCiltNo.Click += new System.EventHandler(this.txtCiltNo_Click);
-            // 
-            // txtSayfaSayisi
-            // 
-            this.txtSayfaSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtSayfaSayisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSayfaSayisi.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtSayfaSayisi.ForeColor = System.Drawing.Color.White;
-            this.txtSayfaSayisi.Location = new System.Drawing.Point(336, 437);
-            this.txtSayfaSayisi.Mask = "000000000000000000000000000000";
-            this.txtSayfaSayisi.Name = "txtSayfaSayisi";
-            this.txtSayfaSayisi.PromptChar = ' ';
-            this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
-            this.txtSayfaSayisi.TabIndex = 10;
-            this.txtSayfaSayisi.Click += new System.EventHandler(this.txtSayfaSayisi_Click);
-            // 
-            // txtStokAdet
-            // 
-            this.txtStokAdet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtStokAdet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStokAdet.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtStokAdet.ForeColor = System.Drawing.Color.White;
-            this.txtStokAdet.Location = new System.Drawing.Point(78, 437);
-            this.txtStokAdet.Mask = "000000000000000000000000000000";
-            this.txtStokAdet.Name = "txtStokAdet";
-            this.txtStokAdet.PromptChar = ' ';
-            this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
-            this.txtStokAdet.TabIndex = 9;
-            this.txtStokAdet.Click += new System.EventHandler(this.txtStokAdet_Click);
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGuncelle.FlatAppearance.BorderSize = 2;
-            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(197, 707);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(148, 34);
-            this.btnGuncelle.TabIndex = 14;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = false;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // txtIsbn
-            // 
-            this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIsbn.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtIsbn.ForeColor = System.Drawing.Color.White;
-            this.txtIsbn.Location = new System.Drawing.Point(78, 337);
-            this.txtIsbn.Mask = "000000000000000000000000000000";
-            this.txtIsbn.Name = "txtIsbn";
-            this.txtIsbn.PromptChar = ' ';
-            this.txtIsbn.Size = new System.Drawing.Size(164, 27);
-            this.txtIsbn.TabIndex = 7;
-            this.txtIsbn.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtIsbn_MaskInputRejected);
-            this.txtIsbn.Click += new System.EventHandler(this.txtIsbn_Click);
-            // 
-            // panel14
-            // 
-            this.panel14.Location = new System.Drawing.Point(79, 575);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(164, 1);
-            this.panel14.TabIndex = 302;
-            // 
-            // panel27
-            // 
-            this.panel27.Location = new System.Drawing.Point(78, 143);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(1, 31);
-            this.panel27.TabIndex = 295;
-            // 
-            // panel28
-            // 
-            this.panel28.Location = new System.Drawing.Point(78, 235);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(1, 31);
-            this.panel28.TabIndex = 288;
-            // 
-            // panel29
-            // 
-            this.panel29.Location = new System.Drawing.Point(336, 144);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(1, 31);
-            this.panel29.TabIndex = 289;
-            // 
-            // panel30
-            // 
-            this.panel30.Location = new System.Drawing.Point(336, 49);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(1, 31);
-            this.panel30.TabIndex = 290;
-            // 
-            // panel32
-            // 
-            this.panel32.Location = new System.Drawing.Point(79, 546);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(1, 31);
-            this.panel32.TabIndex = 291;
-            // 
-            // panel26
-            // 
-            this.panel26.Location = new System.Drawing.Point(78, 266);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(164, 1);
-            this.panel26.TabIndex = 293;
-            // 
-            // panel20
-            // 
-            this.panel20.Location = new System.Drawing.Point(336, 173);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(164, 1);
-            this.panel20.TabIndex = 294;
-            // 
-            // panel21
-            // 
-            this.panel21.Location = new System.Drawing.Point(79, 173);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(164, 1);
-            this.panel21.TabIndex = 292;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Location = new System.Drawing.Point(336, 78);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(164, 1);
-            this.panel22.TabIndex = 296;
-            // 
-            // panel23
-            // 
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(164, 1);
-            this.panel23.TabIndex = 234;
-            // 
-            // panel15
-            // 
-            this.panel15.Location = new System.Drawing.Point(78, 545);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(164, 1);
-            this.panel15.TabIndex = 301;
-            // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(78, 236);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(164, 1);
-            this.panel16.TabIndex = 298;
-            // 
-            // panel17
-            // 
-            this.panel17.Location = new System.Drawing.Point(336, 143);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(164, 1);
-            this.panel17.TabIndex = 299;
-            // 
-            // panel18
-            // 
-            this.panel18.Location = new System.Drawing.Point(79, 143);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(164, 1);
-            this.panel18.TabIndex = 300;
-            // 
-            // panel19
-            // 
-            this.panel19.Location = new System.Drawing.Point(336, 48);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(164, 1);
-            this.panel19.TabIndex = 297;
-            // 
-            // cmbYazar
-            // 
-            this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYazar.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbYazar.ForeColor = System.Drawing.Color.White;
-            this.cmbYazar.FormattingEnabled = true;
-            this.cmbYazar.Location = new System.Drawing.Point(79, 545);
-            this.cmbYazar.Name = "cmbYazar";
-            this.cmbYazar.Size = new System.Drawing.Size(164, 31);
-            this.cmbYazar.TabIndex = 11;
-            // 
-            // cmbKonum
-            // 
-            this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKonum.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbKonum.ForeColor = System.Drawing.Color.White;
-            this.cmbKonum.FormattingEnabled = true;
-            this.cmbKonum.Location = new System.Drawing.Point(78, 236);
-            this.cmbKonum.Name = "cmbKonum";
-            this.cmbKonum.Size = new System.Drawing.Size(164, 31);
-            this.cmbKonum.TabIndex = 5;
-            // 
-            // cmbYayinevi
-            // 
-            this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYayinevi.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
-            this.cmbYayinevi.FormattingEnabled = true;
-            this.cmbYayinevi.Location = new System.Drawing.Point(336, 143);
-            this.cmbYayinevi.Name = "cmbYayinevi";
-            this.cmbYayinevi.Size = new System.Drawing.Size(164, 31);
-            this.cmbYayinevi.TabIndex = 4;
-            // 
-            // cmbKategori
-            // 
-            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbKategori.ForeColor = System.Drawing.Color.White;
-            this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(78, 143);
-            this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
-            this.cmbKategori.TabIndex = 3;
-            // 
-            // cmbDil
-            // 
-            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDil.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.cmbDil.ForeColor = System.Drawing.Color.White;
-            this.cmbDil.FormattingEnabled = true;
-            this.cmbDil.Location = new System.Drawing.Point(336, 48);
-            this.cmbDil.Name = "cmbDil";
-            this.cmbDil.Size = new System.Drawing.Size(164, 31);
-            this.cmbDil.TabIndex = 2;
-            // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(336, 332);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(191, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 8;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(301, 237);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 286;
-            this.pictureBox11.TabStop = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(301, 273);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 1);
-            this.panel11.TabIndex = 285;
-            // 
-            // txtCevirmen
-            // 
-            this.txtCevirmen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtCevirmen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCevirmen.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtCevirmen.ForeColor = System.Drawing.Color.White;
-            this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
-            this.txtCevirmen.Name = "txtCevirmen";
-            this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
-            this.txtCevirmen.TabIndex = 6;
-            this.txtCevirmen.Click += new System.EventHandler(this.txtCevirmen_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(296, 205);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 25);
-            this.label11.TabIndex = 283;
-            this.label11.Text = "Çevirmen :";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(42, 236);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 282;
-            this.pictureBox12.TabStop = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(42, 271);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 1);
-            this.panel12.TabIndex = 281;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(37, 203);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 25);
-            this.label12.TabIndex = 280;
-            this.label12.Text = "Konum :";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(42, 437);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 279;
-            this.pictureBox13.TabStop = false;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(43, 472);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(200, 1);
-            this.panel13.TabIndex = 278;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(37, 404);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 25);
-            this.label13.TabIndex = 276;
-            this.label13.Text = "Stok Adedi :";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(301, 544);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 275;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(301, 580);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 1);
-            this.panel7.TabIndex = 274;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(296, 512);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 25);
-            this.label7.TabIndex = 272;
-            this.label7.Text = "Cilt No :";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(301, 436);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 271;
-            this.pictureBox8.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(301, 472);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 1);
-            this.panel8.TabIndex = 270;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(296, 404);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 25);
-            this.label8.TabIndex = 268;
-            this.label8.Text = "Sayfa Sayısı :";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(42, 545);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 267;
-            this.pictureBox10.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(42, 580);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 1);
-            this.panel10.TabIndex = 266;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(82, 546);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 27);
-            this.textBox10.TabIndex = 265;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(37, 512);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 25);
-            this.label10.TabIndex = 264;
-            this.label10.Text = "Yazar :";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(301, 332);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 263;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(301, 369);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 1);
-            this.panel5.TabIndex = 262;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(296, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 25);
-            this.label5.TabIndex = 261;
-            this.label5.Text = "Yayımlanma Tarihi :";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(42, 337);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 260;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(42, 370);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 1);
-            this.panel6.TabIndex = 259;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(37, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 25);
-            this.label6.TabIndex = 257;
-            this.label6.Text = "ISBN :";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(301, 141);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 256;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(301, 177);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 1);
-            this.panel3.TabIndex = 255;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(296, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
-            this.label3.TabIndex = 254;
-            this.label3.Text = "Yayınevi :";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(301, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 253;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(301, 84);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 1);
-            this.panel2.TabIndex = 252;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(296, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 25);
-            this.label2.TabIndex = 251;
-            this.label2.Text = "Dil :";
-            // 
-            // picboxSoyad
-            // 
-            this.picboxSoyad.Image = ((System.Drawing.Image)(resources.GetObject("picboxSoyad.Image")));
-            this.picboxSoyad.Location = new System.Drawing.Point(43, 144);
-            this.picboxSoyad.Name = "picboxSoyad";
-            this.picboxSoyad.Size = new System.Drawing.Size(30, 30);
-            this.picboxSoyad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSoyad.TabIndex = 250;
-            this.picboxSoyad.TabStop = false;
-            // 
-            // picboxAd
-            // 
-            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
-            this.picboxAd.Location = new System.Drawing.Point(42, 50);
-            this.picboxAd.Name = "picboxAd";
-            this.picboxAd.Size = new System.Drawing.Size(30, 30);
-            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxAd.TabIndex = 249;
-            this.picboxAd.TabStop = false;
-            // 
-            // pnlSoyad
-            // 
-            this.pnlSoyad.BackColor = System.Drawing.Color.White;
-            this.pnlSoyad.Location = new System.Drawing.Point(42, 179);
-            this.pnlSoyad.Name = "pnlSoyad";
-            this.pnlSoyad.Size = new System.Drawing.Size(200, 1);
-            this.pnlSoyad.TabIndex = 248;
-            // 
-            // pnlAd
-            // 
-            this.pnlAd.BackColor = System.Drawing.Color.White;
-            this.pnlAd.Location = new System.Drawing.Point(42, 85);
-            this.pnlAd.Name = "pnlAd";
-            this.pnlAd.Size = new System.Drawing.Size(200, 1);
-            this.pnlAd.TabIndex = 247;
-            // 
-            // txtAd
-            // 
-            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(78, 51);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 27);
-            this.txtAd.TabIndex = 1;
-            // 
-            // lblSoyad
-            // 
-            this.lblSoyad.AutoSize = true;
-            this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblSoyad.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.lblSoyad.ForeColor = System.Drawing.Color.White;
-            this.lblSoyad.Location = new System.Drawing.Point(37, 111);
-            this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(92, 25);
-            this.lblSoyad.TabIndex = 246;
-            this.lblSoyad.Text = "Kategori :";
-            // 
-            // lblAd
-            // 
-            this.lblAd.AutoSize = true;
-            this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(40, 16);
-            this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(51, 28);
-            this.lblAd.TabIndex = 244;
-            this.lblAd.Text = "Adı :";
             // 
             // txtId
             // 
@@ -967,14 +263,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -1038,6 +334,702 @@ namespace uu_library_app
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 309;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuncelle.FlatAppearance.BorderSize = 2;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(197, 707);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(148, 34);
+            this.btnGuncelle.TabIndex = 14;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // panel20
+            // 
+            this.panel20.Location = new System.Drawing.Point(337, 176);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(168, 1);
+            this.panel20.TabIndex = 439;
+            // 
+            // panel14
+            // 
+            this.panel14.Location = new System.Drawing.Point(78, 578);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(168, 1);
+            this.panel14.TabIndex = 447;
+            // 
+            // txtDemirbasNo
+            // 
+            this.txtDemirbasNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtDemirbasNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDemirbasNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtDemirbasNo.ForeColor = System.Drawing.Color.White;
+            this.txtDemirbasNo.Location = new System.Drawing.Point(212, 637);
+            this.txtDemirbasNo.Mask = "000000000000000000000000000000";
+            this.txtDemirbasNo.Name = "txtDemirbasNo";
+            this.txtDemirbasNo.PromptChar = ' ';
+            this.txtDemirbasNo.Size = new System.Drawing.Size(164, 24);
+            this.txtDemirbasNo.TabIndex = 395;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(177, 638);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 450;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(177, 674);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 1);
+            this.panel2.TabIndex = 449;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(172, 603);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.TabIndex = 448;
+            this.label1.Text = "Demirbaş No:";
+            // 
+            // txtCiltNo
+            // 
+            this.txtCiltNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtCiltNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCiltNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtCiltNo.ForeColor = System.Drawing.Color.White;
+            this.txtCiltNo.Location = new System.Drawing.Point(336, 543);
+            this.txtCiltNo.Mask = "000000000000000000000000000000";
+            this.txtCiltNo.Name = "txtCiltNo";
+            this.txtCiltNo.PromptChar = ' ';
+            this.txtCiltNo.Size = new System.Drawing.Size(164, 24);
+            this.txtCiltNo.TabIndex = 394;
+            // 
+            // txtSayfaSayisi
+            // 
+            this.txtSayfaSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtSayfaSayisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSayfaSayisi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtSayfaSayisi.ForeColor = System.Drawing.Color.White;
+            this.txtSayfaSayisi.Location = new System.Drawing.Point(336, 437);
+            this.txtSayfaSayisi.Mask = "000000000000000000000000000000";
+            this.txtSayfaSayisi.Name = "txtSayfaSayisi";
+            this.txtSayfaSayisi.PromptChar = ' ';
+            this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 24);
+            this.txtSayfaSayisi.TabIndex = 392;
+            // 
+            // txtStokAdet
+            // 
+            this.txtStokAdet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtStokAdet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStokAdet.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtStokAdet.ForeColor = System.Drawing.Color.White;
+            this.txtStokAdet.Location = new System.Drawing.Point(78, 437);
+            this.txtStokAdet.Mask = "000000000000000000000000000000";
+            this.txtStokAdet.Name = "txtStokAdet";
+            this.txtStokAdet.PromptChar = ' ';
+            this.txtStokAdet.Size = new System.Drawing.Size(164, 24);
+            this.txtStokAdet.TabIndex = 391;
+            // 
+            // txtIsbn
+            // 
+            this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIsbn.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtIsbn.ForeColor = System.Drawing.Color.White;
+            this.txtIsbn.Location = new System.Drawing.Point(78, 337);
+            this.txtIsbn.Mask = "000000000000000000000000000000";
+            this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.PromptChar = ' ';
+            this.txtIsbn.Size = new System.Drawing.Size(164, 24);
+            this.txtIsbn.TabIndex = 389;
+            // 
+            // panel27
+            // 
+            this.panel27.Location = new System.Drawing.Point(78, 143);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1, 33);
+            this.panel27.TabIndex = 440;
+            // 
+            // panel28
+            // 
+            this.panel28.Location = new System.Drawing.Point(78, 235);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(1, 34);
+            this.panel28.TabIndex = 433;
+            // 
+            // panel29
+            // 
+            this.panel29.Location = new System.Drawing.Point(336, 144);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(1, 33);
+            this.panel29.TabIndex = 434;
+            // 
+            // panel30
+            // 
+            this.panel30.Location = new System.Drawing.Point(336, 49);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(1, 33);
+            this.panel30.TabIndex = 435;
+            // 
+            // panel32
+            // 
+            this.panel32.Location = new System.Drawing.Point(79, 546);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(1, 33);
+            this.panel32.TabIndex = 436;
+            // 
+            // panel26
+            // 
+            this.panel26.Location = new System.Drawing.Point(77, 269);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(164, 1);
+            this.panel26.TabIndex = 438;
+            // 
+            // panel21
+            // 
+            this.panel21.Location = new System.Drawing.Point(78, 176);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(164, 1);
+            this.panel21.TabIndex = 437;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(336, 81);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(164, 1);
+            this.panel22.TabIndex = 441;
+            // 
+            // panel23
+            // 
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(164, 1);
+            this.panel23.TabIndex = 234;
+            // 
+            // panel15
+            // 
+            this.panel15.Location = new System.Drawing.Point(78, 545);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(164, 1);
+            this.panel15.TabIndex = 446;
+            // 
+            // panel16
+            // 
+            this.panel16.Location = new System.Drawing.Point(78, 236);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(164, 1);
+            this.panel16.TabIndex = 443;
+            // 
+            // panel17
+            // 
+            this.panel17.Location = new System.Drawing.Point(336, 143);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(164, 1);
+            this.panel17.TabIndex = 444;
+            // 
+            // panel18
+            // 
+            this.panel18.Location = new System.Drawing.Point(79, 143);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(164, 1);
+            this.panel18.TabIndex = 445;
+            // 
+            // panel19
+            // 
+            this.panel19.Location = new System.Drawing.Point(336, 48);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(164, 1);
+            this.panel19.TabIndex = 442;
+            // 
+            // cmbYazar
+            // 
+            this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYazar.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbYazar.ForeColor = System.Drawing.Color.White;
+            this.cmbYazar.FormattingEnabled = true;
+            this.cmbYazar.Location = new System.Drawing.Point(79, 545);
+            this.cmbYazar.Name = "cmbYazar";
+            this.cmbYazar.Size = new System.Drawing.Size(164, 34);
+            this.cmbYazar.TabIndex = 393;
+            // 
+            // cmbKonum
+            // 
+            this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKonum.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKonum.ForeColor = System.Drawing.Color.White;
+            this.cmbKonum.FormattingEnabled = true;
+            this.cmbKonum.Location = new System.Drawing.Point(78, 236);
+            this.cmbKonum.Name = "cmbKonum";
+            this.cmbKonum.Size = new System.Drawing.Size(164, 34);
+            this.cmbKonum.TabIndex = 387;
+            // 
+            // cmbYayinevi
+            // 
+            this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYayinevi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
+            this.cmbYayinevi.FormattingEnabled = true;
+            this.cmbYayinevi.Location = new System.Drawing.Point(336, 143);
+            this.cmbYayinevi.Name = "cmbYayinevi";
+            this.cmbYayinevi.Size = new System.Drawing.Size(164, 34);
+            this.cmbYayinevi.TabIndex = 386;
+            // 
+            // cmbKategori
+            // 
+            this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKategori.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKategori.ForeColor = System.Drawing.Color.White;
+            this.cmbKategori.FormattingEnabled = true;
+            this.cmbKategori.Location = new System.Drawing.Point(78, 143);
+            this.cmbKategori.Name = "cmbKategori";
+            this.cmbKategori.Size = new System.Drawing.Size(164, 34);
+            this.cmbKategori.TabIndex = 385;
+            // 
+            // cmbDil
+            // 
+            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDil.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbDil.ForeColor = System.Drawing.Color.White;
+            this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.Location = new System.Drawing.Point(336, 48);
+            this.cmbDil.Name = "cmbDil";
+            this.cmbDil.Size = new System.Drawing.Size(164, 34);
+            this.cmbDil.TabIndex = 384;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.dateTime1.Location = new System.Drawing.Point(336, 332);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(191, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 390;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(301, 237);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 432;
+            this.pictureBox11.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(301, 273);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(200, 1);
+            this.panel11.TabIndex = 431;
+            // 
+            // txtCevirmen
+            // 
+            this.txtCevirmen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtCevirmen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCevirmen.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtCevirmen.ForeColor = System.Drawing.Color.White;
+            this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
+            this.txtCevirmen.Name = "txtCevirmen";
+            this.txtCevirmen.Size = new System.Drawing.Size(164, 24);
+            this.txtCevirmen.TabIndex = 388;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(296, 205);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(101, 25);
+            this.label11.TabIndex = 430;
+            this.label11.Text = "Çevirmen :";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(42, 236);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 429;
+            this.pictureBox12.TabStop = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(42, 271);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 1);
+            this.panel12.TabIndex = 428;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(37, 203);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 25);
+            this.label12.TabIndex = 427;
+            this.label12.Text = "Konum :";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(42, 437);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 426;
+            this.pictureBox13.TabStop = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(43, 472);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 1);
+            this.panel13.TabIndex = 425;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(37, 404);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 25);
+            this.label13.TabIndex = 424;
+            this.label13.Text = "Stok Adedi :";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(301, 544);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 423;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(301, 580);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 1);
+            this.panel7.TabIndex = 422;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(296, 512);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 25);
+            this.label7.TabIndex = 421;
+            this.label7.Text = "Cilt No :";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(301, 436);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 420;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(301, 472);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 1);
+            this.panel8.TabIndex = 419;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(296, 404);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 25);
+            this.label8.TabIndex = 418;
+            this.label8.Text = "Sayfa Sayısı :";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(42, 545);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 417;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Location = new System.Drawing.Point(42, 580);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 1);
+            this.panel10.TabIndex = 416;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.textBox10.ForeColor = System.Drawing.Color.White;
+            this.textBox10.Location = new System.Drawing.Point(82, 546);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(164, 27);
+            this.textBox10.TabIndex = 415;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(37, 512);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 25);
+            this.label10.TabIndex = 414;
+            this.label10.Text = "Yazar :";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(301, 332);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 413;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(301, 369);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 1);
+            this.panel5.TabIndex = 412;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(296, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(173, 25);
+            this.label5.TabIndex = 411;
+            this.label5.Text = "Yayımlanma Tarihi :";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(42, 337);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 410;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(42, 370);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 1);
+            this.panel6.TabIndex = 409;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(37, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 25);
+            this.label6.TabIndex = 408;
+            this.label6.Text = "ISBN :";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(301, 141);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 407;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(301, 177);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 1);
+            this.panel3.TabIndex = 406;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(296, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 25);
+            this.label3.TabIndex = 405;
+            this.label3.Text = "Yayınevi :";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(301, 48);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 404;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.White;
+            this.panel25.Location = new System.Drawing.Point(301, 84);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(200, 1);
+            this.panel25.TabIndex = 403;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(296, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 25);
+            this.label2.TabIndex = 402;
+            this.label2.Text = "Dil :";
+            // 
+            // picboxSoyad
+            // 
+            this.picboxSoyad.Image = ((System.Drawing.Image)(resources.GetObject("picboxSoyad.Image")));
+            this.picboxSoyad.Location = new System.Drawing.Point(43, 144);
+            this.picboxSoyad.Name = "picboxSoyad";
+            this.picboxSoyad.Size = new System.Drawing.Size(30, 30);
+            this.picboxSoyad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxSoyad.TabIndex = 401;
+            this.picboxSoyad.TabStop = false;
+            // 
+            // picboxAd
+            // 
+            this.picboxAd.Image = ((System.Drawing.Image)(resources.GetObject("picboxAd.Image")));
+            this.picboxAd.Location = new System.Drawing.Point(42, 50);
+            this.picboxAd.Name = "picboxAd";
+            this.picboxAd.Size = new System.Drawing.Size(30, 30);
+            this.picboxAd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxAd.TabIndex = 400;
+            this.picboxAd.TabStop = false;
+            // 
+            // pnlSoyad
+            // 
+            this.pnlSoyad.BackColor = System.Drawing.Color.White;
+            this.pnlSoyad.Location = new System.Drawing.Point(42, 179);
+            this.pnlSoyad.Name = "pnlSoyad";
+            this.pnlSoyad.Size = new System.Drawing.Size(200, 1);
+            this.pnlSoyad.TabIndex = 399;
+            // 
+            // pnlAd
+            // 
+            this.pnlAd.BackColor = System.Drawing.Color.White;
+            this.pnlAd.Location = new System.Drawing.Point(42, 85);
+            this.pnlAd.Name = "pnlAd";
+            this.pnlAd.Size = new System.Drawing.Size(200, 1);
+            this.pnlAd.TabIndex = 398;
+            // 
+            // txtAd
+            // 
+            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAd.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtAd.ForeColor = System.Drawing.Color.White;
+            this.txtAd.Location = new System.Drawing.Point(78, 51);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(164, 24);
+            this.txtAd.TabIndex = 383;
+            // 
+            // lblSoyad
+            // 
+            this.lblSoyad.AutoSize = true;
+            this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblSoyad.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.lblSoyad.ForeColor = System.Drawing.Color.White;
+            this.lblSoyad.Location = new System.Drawing.Point(37, 111);
+            this.lblSoyad.Name = "lblSoyad";
+            this.lblSoyad.Size = new System.Drawing.Size(92, 25);
+            this.lblSoyad.TabIndex = 397;
+            this.lblSoyad.Text = "Kategori :";
+            // 
+            // lblAd
+            // 
+            this.lblAd.AutoSize = true;
+            this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblAd.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAd.ForeColor = System.Drawing.Color.White;
+            this.lblAd.Location = new System.Drawing.Point(40, 16);
+            this.lblAd.Name = "lblAd";
+            this.lblAd.Size = new System.Drawing.Size(51, 28);
+            this.lblAd.TabIndex = 396;
+            this.lblAd.Text = "Adı :";
+            // 
             // edit_book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1059,6 +1051,10 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1073,10 +1069,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1086,15 +1078,30 @@ namespace uu_library_app
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.MaskedTextBox txtDemirbasNo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtCiltNo;
+        private System.Windows.Forms.MaskedTextBox txtSayfaSayisi;
+        private System.Windows.Forms.MaskedTextBox txtStokAdet;
+        private System.Windows.Forms.MaskedTextBox txtIsbn;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
@@ -1103,6 +1110,12 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.ComboBox cmbYazar;
+        private System.Windows.Forms.ComboBox cmbKonum;
+        private System.Windows.Forms.ComboBox cmbYayinevi;
+        private System.Windows.Forms.ComboBox cmbKategori;
+        private System.Windows.Forms.ComboBox cmbDil;
+        private FormUI.Toolbox.DateTime dateTime1;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox txtCevirmen;
@@ -1133,7 +1146,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picboxSoyad;
         private System.Windows.Forms.PictureBox picboxAd;
@@ -1142,26 +1155,5 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblAd;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
-        private FormUI.Toolbox.DateTime dateTime1;
-        private System.Windows.Forms.ComboBox cmbYayinevi;
-        private System.Windows.Forms.ComboBox cmbDil;
-        private System.Windows.Forms.ComboBox cmbYazar;
-        private System.Windows.Forms.ComboBox cmbKonum;
-        private System.Windows.Forms.ComboBox cmbKategori;
-        private System.Windows.Forms.MaskedTextBox txtCiltNo;
-        private System.Windows.Forms.MaskedTextBox txtSayfaSayisi;
-        private System.Windows.Forms.MaskedTextBox txtStokAdet;
-        private System.Windows.Forms.MaskedTextBox txtIsbn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox txtDemirbasNo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label label1;
     }
 }

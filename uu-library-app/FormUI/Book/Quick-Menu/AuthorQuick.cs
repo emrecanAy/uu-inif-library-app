@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,11 +16,22 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
 {
     public partial class AuthorQuick : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+               int nLeftRect,
+               int nTopRect,
+               int nRightRect,
+               int nBottomRect,
+               int nWidthEllipse,
+               int nHeightEllipse
+               );
         private Admin _admin;
         public AuthorQuick(Admin admin)
         {
             InitializeComponent();
             _admin = admin;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+
         }
 
         AuthorManager manager = new AuthorManager(new AuthorDal());

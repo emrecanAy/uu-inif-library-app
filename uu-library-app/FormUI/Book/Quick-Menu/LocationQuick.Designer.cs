@@ -31,6 +31,9 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocationQuick));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtKonum = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,8 +56,8 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.cmbKategori);
             this.panel4.Controls.Add(this.pictureBox2);
@@ -77,16 +77,38 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.panel4.Size = new System.Drawing.Size(239, 279);
             this.panel4.TabIndex = 90;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(44, 191);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(177, 1);
+            this.panel3.TabIndex = 249;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(58, 159);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 33);
+            this.panel6.TabIndex = 250;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(58, 158);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 1);
+            this.panel2.TabIndex = 248;
+            // 
             // cmbKategori
             // 
             this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKategori.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.cmbKategori.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.cmbKategori.ForeColor = System.Drawing.Color.White;
             this.cmbKategori.FormattingEnabled = true;
             this.cmbKategori.Location = new System.Drawing.Point(58, 158);
             this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(164, 31);
+            this.cmbKategori.Size = new System.Drawing.Size(164, 34);
             this.cmbKategori.TabIndex = 247;
             // 
             // pictureBox2
@@ -198,11 +220,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // 
             this.txtKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtKonum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKonum.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtKonum.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtKonum.ForeColor = System.Drawing.Color.White;
             this.txtKonum.Location = new System.Drawing.Point(58, 79);
             this.txtKonum.Name = "txtKonum";
-            this.txtKonum.Size = new System.Drawing.Size(164, 22);
+            this.txtKonum.Size = new System.Drawing.Size(164, 24);
             this.txtKonum.TabIndex = 56;
             // 
             // lblAd
@@ -216,27 +238,6 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.lblAd.Size = new System.Drawing.Size(81, 25);
             this.lblAd.TabIndex = 55;
             this.lblAd.Text = "Konum :";
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(58, 158);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 1);
-            this.panel2.TabIndex = 248;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(58, 188);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 1);
-            this.panel3.TabIndex = 249;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(58, 159);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 31);
-            this.panel6.TabIndex = 250;
             // 
             // LocationQuick
             // 

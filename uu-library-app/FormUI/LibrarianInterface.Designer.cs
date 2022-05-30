@@ -31,6 +31,9 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianInterface));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnVeriCikti = new System.Windows.Forms.Button();
+            this.btnDosya = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMailSettings = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -68,10 +71,8 @@ namespace uu_library_app.FormUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
-            this.btnDosya = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVeriCikti = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlDigerSubMenu.SuspendLayout();
             this.pnlDepositSubMenu.SuspendLayout();
@@ -79,7 +80,6 @@ namespace uu_library_app.FormUI
             this.panelBookSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,6 +106,52 @@ namespace uu_library_app.FormUI
             this.panel1.Size = new System.Drawing.Size(186, 900);
             this.panel1.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.panel4.Controls.Add(this.btnVeriCikti);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 1010);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(186, 28);
+            this.panel4.TabIndex = 19;
+            // 
+            // btnVeriCikti
+            // 
+            this.btnVeriCikti.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVeriCikti.FlatAppearance.BorderSize = 0;
+            this.btnVeriCikti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeriCikti.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnVeriCikti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnVeriCikti.Image = ((System.Drawing.Image)(resources.GetObject("btnVeriCikti.Image")));
+            this.btnVeriCikti.Location = new System.Drawing.Point(0, 0);
+            this.btnVeriCikti.Name = "btnVeriCikti";
+            this.btnVeriCikti.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnVeriCikti.Size = new System.Drawing.Size(186, 28);
+            this.btnVeriCikti.TabIndex = 0;
+            this.btnVeriCikti.Text = "Mail Ayarları";
+            this.btnVeriCikti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVeriCikti.UseVisualStyleBackColor = true;
+            this.btnVeriCikti.Click += new System.EventHandler(this.btnVeriCikti_Click);
+            // 
+            // btnDosya
+            // 
+            this.btnDosya.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDosya.FlatAppearance.BorderSize = 0;
+            this.btnDosya.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDosya.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDosya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDosya.Image = ((System.Drawing.Image)(resources.GetObject("btnDosya.Image")));
+            this.btnDosya.Location = new System.Drawing.Point(0, 965);
+            this.btnDosya.Name = "btnDosya";
+            this.btnDosya.Size = new System.Drawing.Size(186, 45);
+            this.btnDosya.TabIndex = 18;
+            this.btnDosya.Text = "      Ayarlar       ";
+            this.btnDosya.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDosya.UseVisualStyleBackColor = true;
+            this.btnDosya.Click += new System.EventHandler(this.btnDosya_Click);
+            this.btnDosya.Leave += new System.EventHandler(this.btnDosya_Leave);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
@@ -129,7 +175,7 @@ namespace uu_library_app.FormUI
             this.btnMailSettings.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnMailSettings.Size = new System.Drawing.Size(186, 28);
             this.btnMailSettings.TabIndex = 0;
-            this.btnMailSettings.Text = "Mail Ayarları";
+            this.btnMailSettings.Text = "Veri Çıktı İşlemleri";
             this.btnMailSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMailSettings.UseVisualStyleBackColor = true;
             this.btnMailSettings.Click += new System.EventHandler(this.btnMailSettings_Click);
@@ -147,7 +193,7 @@ namespace uu_library_app.FormUI
             this.btnSettings.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(186, 45);
             this.btnSettings.TabIndex = 16;
-            this.btnSettings.Text = "      Ayarlar       ";
+            this.btnSettings.Text = "Dosya İşlemleri";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
@@ -704,52 +750,6 @@ namespace uu_library_app.FormUI
             this.panelChildFormNew.TabIndex = 9;
             this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
             // 
-            // btnDosya
-            // 
-            this.btnDosya.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDosya.FlatAppearance.BorderSize = 0;
-            this.btnDosya.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDosya.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDosya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDosya.Image = ((System.Drawing.Image)(resources.GetObject("btnDosya.Image")));
-            this.btnDosya.Location = new System.Drawing.Point(0, 965);
-            this.btnDosya.Name = "btnDosya";
-            this.btnDosya.Size = new System.Drawing.Size(186, 45);
-            this.btnDosya.TabIndex = 18;
-            this.btnDosya.Text = "Dosya İşlemleri ";
-            this.btnDosya.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDosya.UseVisualStyleBackColor = true;
-            this.btnDosya.Click += new System.EventHandler(this.btnDosya_Click);
-            this.btnDosya.Leave += new System.EventHandler(this.btnDosya_Leave);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.panel4.Controls.Add(this.btnVeriCikti);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 1010);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(186, 28);
-            this.panel4.TabIndex = 19;
-            // 
-            // btnVeriCikti
-            // 
-            this.btnVeriCikti.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVeriCikti.FlatAppearance.BorderSize = 0;
-            this.btnVeriCikti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVeriCikti.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnVeriCikti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnVeriCikti.Image = ((System.Drawing.Image)(resources.GetObject("btnVeriCikti.Image")));
-            this.btnVeriCikti.Location = new System.Drawing.Point(0, 0);
-            this.btnVeriCikti.Name = "btnVeriCikti";
-            this.btnVeriCikti.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnVeriCikti.Size = new System.Drawing.Size(186, 28);
-            this.btnVeriCikti.TabIndex = 0;
-            this.btnVeriCikti.Text = "Veri Çıktı İşlemleri";
-            this.btnVeriCikti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVeriCikti.UseVisualStyleBackColor = true;
-            this.btnVeriCikti.Click += new System.EventHandler(this.btnVeriCikti_Click);
-            // 
             // LibrarianInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,6 +765,7 @@ namespace uu_library_app.FormUI
             this.Text = "LibrarianInterface";
             this.Load += new System.EventHandler(this.LibrarianInterface_Load);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlDigerSubMenu.ResumeLayout(false);
             this.pnlDepositSubMenu.ResumeLayout(false);
@@ -773,7 +774,6 @@ namespace uu_library_app.FormUI
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

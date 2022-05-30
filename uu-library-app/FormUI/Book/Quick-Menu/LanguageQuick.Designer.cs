@@ -140,11 +140,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // 
             this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtDil.Font = new System.Drawing.Font("Montserrat", 14.25F);
             this.txtDil.ForeColor = System.Drawing.Color.White;
             this.txtDil.Location = new System.Drawing.Point(58, 73);
             this.txtDil.Name = "txtDil";
-            this.txtDil.Size = new System.Drawing.Size(164, 22);
+            this.txtDil.Size = new System.Drawing.Size(164, 24);
             this.txtDil.TabIndex = 56;
             // 
             // lblAd
