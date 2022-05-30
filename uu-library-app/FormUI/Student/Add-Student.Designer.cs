@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Student));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAd = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -119,11 +119,11 @@
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtAd.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(57, 154);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 27);
+            this.txtAd.Size = new System.Drawing.Size(164, 25);
             this.txtAd.TabIndex = 1;
             // 
             // pnlAd
@@ -146,11 +146,11 @@
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtSoyad.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
             this.txtSoyad.Location = new System.Drawing.Point(332, 154);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(164, 27);
+            this.txtSoyad.Size = new System.Drawing.Size(164, 25);
             this.txtSoyad.TabIndex = 2;
             // 
             // picboxAd
@@ -229,11 +229,11 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtEmail.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(57, 380);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(439, 27);
+            this.txtEmail.Size = new System.Drawing.Size(439, 25);
             this.txtEmail.TabIndex = 4;
             // 
             // lblOkulNo
@@ -322,16 +322,16 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.txtOkulNo);
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.cmbFakulte);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label3);
@@ -364,13 +364,13 @@
             // 
             this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 15F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(57, 266);
             this.txtOkulNo.Mask = "000000000000000000000000000000000000000000000000";
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.PromptChar = ' ';
-            this.txtOkulNo.Size = new System.Drawing.Size(445, 27);
+            this.txtOkulNo.Size = new System.Drawing.Size(445, 25);
             this.txtOkulNo.TabIndex = 3;
             this.txtOkulNo.Click += new System.EventHandler(this.txtOkulNo_Click);
             // 
@@ -378,12 +378,12 @@
             // 
             this.panel9.Location = new System.Drawing.Point(57, 600);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1, 31);
+            this.panel9.Size = new System.Drawing.Size(1, 35);
             this.panel9.TabIndex = 56;
             // 
             // panel10
             // 
-            this.panel10.Location = new System.Drawing.Point(57, 630);
+            this.panel10.Location = new System.Drawing.Point(56, 634);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(445, 1);
             this.panel10.TabIndex = 53;
@@ -400,12 +400,12 @@
             this.cmbFakulte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFakulte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbFakulte.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFakulte.Font = new System.Drawing.Font("Montserrat", 15F);
             this.cmbFakulte.ForeColor = System.Drawing.Color.White;
             this.cmbFakulte.FormattingEnabled = true;
             this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
             this.cmbFakulte.Name = "cmbFakulte";
-            this.cmbFakulte.Size = new System.Drawing.Size(445, 31);
+            this.cmbFakulte.Size = new System.Drawing.Size(445, 35);
             this.cmbFakulte.TabIndex = 6;
             // 
             // label2
@@ -443,12 +443,12 @@
             // 
             this.panel8.Location = new System.Drawing.Point(57, 492);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 31);
+            this.panel8.Size = new System.Drawing.Size(1, 35);
             this.panel8.TabIndex = 36;
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(57, 521);
+            this.panel6.Location = new System.Drawing.Point(56, 525);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(445, 1);
             this.panel6.TabIndex = 36;
@@ -465,12 +465,12 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 15F);
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(57, 491);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(445, 31);
+            this.comboBox1.Size = new System.Drawing.Size(445, 35);
             this.comboBox1.TabIndex = 5;
             // 
             // label3
@@ -523,14 +523,14 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";

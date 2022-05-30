@@ -50,9 +50,10 @@ namespace uu_library_app
             string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Texts);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void radiusButton1_Click(object sender, EventArgs e)
         {
-            DataListerToTableHelper.listInnerJoinAllStudentsDataToTableBetweenDates(dataGridView1, conn,  dateTime1.Value, dateTime2.Value);
+            DataListerToTableHelper.listInnerJoinAllStudentsDataToTableBetweenDates(dataGridView1, conn, dateTime1.Value, dateTime2.Value);
+
         }
     }
 }

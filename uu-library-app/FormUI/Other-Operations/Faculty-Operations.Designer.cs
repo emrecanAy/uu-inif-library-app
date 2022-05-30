@@ -168,11 +168,11 @@ namespace uu_library_app.FormUI.Other_Operations
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtAd.Font = new System.Drawing.Font("Montserrat", 14F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(87, 250);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 22);
+            this.txtAd.Size = new System.Drawing.Size(164, 23);
             this.txtAd.TabIndex = 56;
             // 
             // lblAd

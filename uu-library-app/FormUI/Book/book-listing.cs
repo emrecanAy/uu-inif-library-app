@@ -57,9 +57,10 @@ namespace uu_library_app
             string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Texts);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void radiusButton1_Click(object sender, EventArgs e)
         {
             DataListerToTableHelper.listInnerJoinAllBooksDataToTableBetweenDates(dataGridView1, conn, dateTimeStart.Value, dateTimeEnd.Value);
+
         }
     }
 }

@@ -54,10 +54,10 @@ namespace uu_library_app.FormUI.Register_Login
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(422, 332);
+            this.button1.Location = new System.Drawing.Point(422, 282);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 32);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,7 +70,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.linkLabel1.Location = new System.Drawing.Point(595, 231);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(108, 17);
-            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Şifremi Unuttum";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DimGray;
@@ -113,7 +113,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.button2.Location = new System.Drawing.Point(422, 278);
+            this.button2.Location = new System.Drawing.Point(422, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 32);
             this.button2.TabIndex = 54;
@@ -131,7 +131,7 @@ namespace uu_library_app.FormUI.Register_Login
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(345, 139);
+            this.panel4.Location = new System.Drawing.Point(345, 146);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(348, 2);
             this.panel4.TabIndex = 59;
@@ -149,7 +149,7 @@ namespace uu_library_app.FormUI.Register_Login
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(345, 101);
+            this.pictureBox4.Location = new System.Drawing.Point(345, 108);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +186,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.loginTextBox4.BorderSize = 2;
             this.loginTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.loginTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.loginTextBox4.Location = new System.Drawing.Point(384, 99);
+            this.loginTextBox4.Location = new System.Drawing.Point(384, 106);
             this.loginTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.loginTextBox4.Multiline = false;
             this.loginTextBox4.Name = "loginTextBox4";

@@ -150,11 +150,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoyad.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtSoyad.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtSoyad.Location = new System.Drawing.Point(58, 168);
+            this.txtSoyad.Location = new System.Drawing.Point(55, 166);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(164, 22);
+            this.txtSoyad.Size = new System.Drawing.Size(164, 24);
             this.txtSoyad.TabIndex = 68;
             // 
             // label2
@@ -191,11 +191,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtAd.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(58, 73);
+            this.txtAd.Location = new System.Drawing.Point(55, 71);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 22);
+            this.txtAd.Size = new System.Drawing.Size(164, 24);
             this.txtAd.TabIndex = 56;
             // 
             // lblAd

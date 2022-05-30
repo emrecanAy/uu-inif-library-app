@@ -108,6 +108,7 @@ namespace uu_library_app.FormUI
             pnlNewNav.Top = btnDashboard.Top;
             pnlNewNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            hideSubMenu();
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
@@ -296,7 +297,7 @@ namespace uu_library_app.FormUI
         }
         private void btnMailSettings_Click(object sender, EventArgs e)
         {
-            openChildForm(new Mail_Operations(_admin));
+            openChildForm(new Veri_İslemleri(_admin));
             hideSubMenu();
         }
         private void btnFakulte_Click(object sender, EventArgs e)
@@ -307,7 +308,8 @@ namespace uu_library_app.FormUI
 
         private void btnVeriCikti_Click(object sender, EventArgs e)
         {
-            openChildForm(new Veri_İslemleri());
+           
+            openChildForm(new Mail_Operations(_admin));
             hideSubMenu();
         }
 
