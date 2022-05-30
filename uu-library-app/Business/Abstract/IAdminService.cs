@@ -9,6 +9,7 @@ namespace uu_library_app.Business.Abstract
 {
     public interface IAdminService
     {
+        //
         List<Admin> getAll();
         void Add(Admin admin, string verificationCode);
         void Update(Admin admin);
