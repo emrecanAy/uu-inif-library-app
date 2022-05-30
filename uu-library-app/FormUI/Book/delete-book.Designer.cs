@@ -29,18 +29,15 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(delete_book));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSil = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblBaslik = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.txtYayinlanmaTarihi = new System.Windows.Forms.TextBox();
+            this.txtKonum = new System.Windows.Forms.TextBox();
+            this.txtYayinevi = new System.Windows.Forms.TextBox();
+            this.txtKategori = new System.Windows.Forms.TextBox();
+            this.txtDil = new System.Windows.Forms.TextBox();
             this.txtDemirbasNo = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -83,7 +80,7 @@ namespace uu_library_app
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtYazar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -104,17 +101,15 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
-            this.txtDil = new System.Windows.Forms.TextBox();
-            this.txtKategori = new System.Windows.Forms.TextBox();
-            this.txtYayinevi = new System.Windows.Forms.TextBox();
-            this.txtKonum = new System.Windows.Forms.TextBox();
-            this.txtYayinlanmaTarihi = new System.Windows.Forms.TextBox();
+            this.lblBaslik = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -129,6 +124,11 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSil
@@ -197,7 +197,7 @@ namespace uu_library_app
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.Controls.Add(this.txtYazar);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.panel5);
@@ -224,118 +224,60 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 756);
             this.panel1.TabIndex = 256;
             // 
-            // lblBaslik
+            // txtYayinlanmaTarihi
             // 
-            this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(98, 30);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(172, 40);
-            this.lblBaslik.TabIndex = 254;
-            this.lblBaslik.Text = "Kitap Silme";
+            this.txtYayinlanmaTarihi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYayinlanmaTarihi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYayinlanmaTarihi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinlanmaTarihi.ForeColor = System.Drawing.Color.White;
+            this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 334);
+            this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
+            this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinlanmaTarihi.TabIndex = 389;
             // 
-            // txtId
+            // txtKonum
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(350, 12);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(164, 27);
-            this.txtId.TabIndex = 258;
-            this.txtId.Visible = false;
+            this.txtKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKonum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKonum.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKonum.ForeColor = System.Drawing.Color.White;
+            this.txtKonum.Location = new System.Drawing.Point(78, 235);
+            this.txtKonum.Name = "txtKonum";
+            this.txtKonum.Size = new System.Drawing.Size(164, 27);
+            this.txtKonum.TabIndex = 388;
             // 
-            // panel4
+            // txtYayinevi
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Location = new System.Drawing.Point(569, 98);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(674, 756);
-            this.panel4.TabIndex = 257;
+            this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYayinevi.ForeColor = System.Drawing.Color.White;
+            this.txtYayinevi.Location = new System.Drawing.Point(336, 144);
+            this.txtYayinevi.Name = "txtYayinevi";
+            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
+            this.txtYayinevi.TabIndex = 387;
             // 
-            // dataGridView1
+            // txtKategori
             // 
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(666, 748);
-            this.dataGridView1.TabIndex = 85;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.txtKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtKategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKategori.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtKategori.ForeColor = System.Drawing.Color.White;
+            this.txtKategori.Location = new System.Drawing.Point(79, 146);
+            this.txtKategori.Name = "txtKategori";
+            this.txtKategori.Size = new System.Drawing.Size(164, 27);
+            this.txtKategori.TabIndex = 386;
             // 
-            // picboxBack
+            // txtDil
             // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 255;
-            this.picboxBack.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.pictureBox4);
-            this.panel9.Controls.Add(this.wehTextBox1);
-            this.panel9.Location = new System.Drawing.Point(755, 52);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(488, 40);
-            this.panel9.TabIndex = 268;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 272;
-            this.pictureBox4.TabStop = false;
-            // 
-            // wehTextBox1
-            // 
-            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox1.BorderRadius = 5;
-            this.wehTextBox1.BorderSize = 1;
-            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
-            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox1.Multiline = false;
-            this.wehTextBox1.Name = "wehTextBox1";
-            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox1.PasswordChar = false;
-            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girip Üzerine Tıklayınız !";
-            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
-            this.wehTextBox1.TabIndex = 236;
-            this.wehTextBox1.Texts = "";
-            this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtDil.ForeColor = System.Drawing.Color.White;
+            this.txtDil.Location = new System.Drawing.Point(337, 50);
+            this.txtDil.Name = "txtDil";
+            this.txtDil.Size = new System.Drawing.Size(164, 27);
+            this.txtDil.TabIndex = 385;
             // 
             // txtDemirbasNo
             // 
@@ -724,16 +666,16 @@ namespace uu_library_app
             this.panel10.Size = new System.Drawing.Size(200, 1);
             this.panel10.TabIndex = 337;
             // 
-            // textBox10
+            // txtYazar
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(82, 545);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 27);
-            this.textBox10.TabIndex = 336;
+            this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYazar.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtYazar.ForeColor = System.Drawing.Color.White;
+            this.txtYazar.Location = new System.Drawing.Point(82, 545);
+            this.txtYazar.Name = "txtYazar";
+            this.txtYazar.Size = new System.Drawing.Size(164, 27);
+            this.txtYazar.TabIndex = 336;
             // 
             // label10
             // 
@@ -938,60 +880,118 @@ namespace uu_library_app
             this.lblAd.TabIndex = 316;
             this.lblAd.Text = "Adı :";
             // 
-            // txtDil
+            // lblBaslik
             // 
-            this.txtDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtDil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDil.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtDil.ForeColor = System.Drawing.Color.White;
-            this.txtDil.Location = new System.Drawing.Point(337, 50);
-            this.txtDil.Name = "txtDil";
-            this.txtDil.Size = new System.Drawing.Size(164, 27);
-            this.txtDil.TabIndex = 385;
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lblBaslik.ForeColor = System.Drawing.Color.White;
+            this.lblBaslik.Location = new System.Drawing.Point(98, 30);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(172, 40);
+            this.lblBaslik.TabIndex = 254;
+            this.lblBaslik.Text = "Kitap Silme";
             // 
-            // txtKategori
+            // txtId
             // 
-            this.txtKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtKategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKategori.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtKategori.ForeColor = System.Drawing.Color.White;
-            this.txtKategori.Location = new System.Drawing.Point(79, 146);
-            this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(164, 27);
-            this.txtKategori.TabIndex = 386;
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(350, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(164, 27);
+            this.txtId.TabIndex = 258;
+            this.txtId.Visible = false;
             // 
-            // txtYayinevi
+            // panel4
             // 
-            this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinevi.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtYayinevi.ForeColor = System.Drawing.Color.White;
-            this.txtYayinevi.Location = new System.Drawing.Point(336, 144);
-            this.txtYayinevi.Name = "txtYayinevi";
-            this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinevi.TabIndex = 387;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(569, 98);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(674, 756);
+            this.panel4.TabIndex = 257;
             // 
-            // txtKonum
+            // dataGridView1
             // 
-            this.txtKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtKonum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKonum.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtKonum.ForeColor = System.Drawing.Color.White;
-            this.txtKonum.Location = new System.Drawing.Point(78, 235);
-            this.txtKonum.Name = "txtKonum";
-            this.txtKonum.Size = new System.Drawing.Size(164, 27);
-            this.txtKonum.TabIndex = 388;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(666, 748);
+            this.dataGridView1.TabIndex = 85;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtYayinlanmaTarihi
+            // picboxBack
             // 
-            this.txtYayinlanmaTarihi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtYayinlanmaTarihi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinlanmaTarihi.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtYayinlanmaTarihi.ForeColor = System.Drawing.Color.White;
-            this.txtYayinlanmaTarihi.Location = new System.Drawing.Point(337, 334);
-            this.txtYayinlanmaTarihi.Name = "txtYayinlanmaTarihi";
-            this.txtYayinlanmaTarihi.Size = new System.Drawing.Size(164, 27);
-            this.txtYayinlanmaTarihi.TabIndex = 389;
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 255;
+            this.picboxBack.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.pictureBox4);
+            this.panel9.Controls.Add(this.wehTextBox1);
+            this.panel9.Location = new System.Drawing.Point(755, 52);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(488, 40);
+            this.panel9.TabIndex = 268;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 272;
+            this.pictureBox4.TabStop = false;
+            // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Lütfen Silmek İstediğiniz Kitabın Adını Girip Üzerine Tıklayınız !";
+            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
             // delete_book
             // 
@@ -1011,11 +1011,6 @@ namespace uu_library_app
             this.Load += new System.EventHandler(this.delete_book_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1030,6 +1025,11 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1089,7 +1089,7 @@ namespace uu_library_app
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtYazar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel5;

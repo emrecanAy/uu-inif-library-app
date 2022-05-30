@@ -29,7 +29,7 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Books));
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -37,16 +37,6 @@ namespace uu_library_app
             this.btnEkle = new System.Windows.Forms.Button();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblBaslik = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.btnHizliKonum = new System.Windows.Forms.Button();
-            this.btnHizliKategori = new System.Windows.Forms.Button();
-            this.btnHizliDil = new System.Windows.Forms.Button();
-            this.btnHizliYayinevi = new System.Windows.Forms.Button();
-            this.btnHizliYazar = new System.Windows.Forms.Button();
             this.txtDemirbasNo = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -116,13 +106,20 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
+            this.lblBaslik = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.btnHizliKonum = new System.Windows.Forms.Button();
+            this.btnHizliKategori = new System.Windows.Forms.Button();
+            this.btnHizliDil = new System.Windows.Forms.Button();
+            this.btnHizliYayinevi = new System.Windows.Forms.Button();
+            this.btnHizliYazar = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -137,6 +134,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel24.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtId
@@ -170,14 +170,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -293,135 +293,6 @@ namespace uu_library_app
             this.panel1.Size = new System.Drawing.Size(544, 756);
             this.panel1.TabIndex = 247;
             // 
-            // lblBaslik
-            // 
-            this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(98, 30);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(195, 40);
-            this.lblBaslik.TabIndex = 245;
-            this.lblBaslik.Text = "Kitap Ekleme";
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.pictureBox4);
-            this.panel9.Controls.Add(this.wehTextBox1);
-            this.panel9.Location = new System.Drawing.Point(755, 52);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(488, 40);
-            this.panel9.TabIndex = 253;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 272;
-            this.pictureBox4.TabStop = false;
-            // 
-            // wehTextBox1
-            // 
-            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox1.BorderRadius = 5;
-            this.wehTextBox1.BorderSize = 1;
-            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
-            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox1.Multiline = false;
-            this.wehTextBox1.Name = "wehTextBox1";
-            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox1.PasswordChar = false;
-            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Lütfen Aramak İstediğiniz Kitabın Adını Giriniz !";
-            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
-            this.wehTextBox1.TabIndex = 236;
-            this.wehTextBox1.Texts = "";
-            this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.btnHizliKonum);
-            this.panel24.Controls.Add(this.btnHizliKategori);
-            this.panel24.Controls.Add(this.btnHizliDil);
-            this.panel24.Controls.Add(this.btnHizliYayinevi);
-            this.panel24.Controls.Add(this.btnHizliYazar);
-            this.panel24.Location = new System.Drawing.Point(833, 12);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(410, 35);
-            this.panel24.TabIndex = 255;
-            // 
-            // btnHizliKonum
-            // 
-            this.btnHizliKonum.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHizliKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHizliKonum.ForeColor = System.Drawing.Color.White;
-            this.btnHizliKonum.Location = new System.Drawing.Point(328, 0);
-            this.btnHizliKonum.Name = "btnHizliKonum";
-            this.btnHizliKonum.Size = new System.Drawing.Size(80, 35);
-            this.btnHizliKonum.TabIndex = 260;
-            this.btnHizliKonum.Text = "Konum Ekle";
-            this.btnHizliKonum.UseVisualStyleBackColor = true;
-            this.btnHizliKonum.Click += new System.EventHandler(this.btnHizliKonum_Click);
-            // 
-            // btnHizliKategori
-            // 
-            this.btnHizliKategori.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHizliKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHizliKategori.ForeColor = System.Drawing.Color.White;
-            this.btnHizliKategori.Location = new System.Drawing.Point(246, 0);
-            this.btnHizliKategori.Name = "btnHizliKategori";
-            this.btnHizliKategori.Size = new System.Drawing.Size(82, 35);
-            this.btnHizliKategori.TabIndex = 258;
-            this.btnHizliKategori.Text = "Kategori Ekle";
-            this.btnHizliKategori.UseVisualStyleBackColor = true;
-            this.btnHizliKategori.Click += new System.EventHandler(this.btnHizliKategori_Click);
-            // 
-            // btnHizliDil
-            // 
-            this.btnHizliDil.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHizliDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHizliDil.ForeColor = System.Drawing.Color.White;
-            this.btnHizliDil.Location = new System.Drawing.Point(164, 0);
-            this.btnHizliDil.Name = "btnHizliDil";
-            this.btnHizliDil.Size = new System.Drawing.Size(82, 35);
-            this.btnHizliDil.TabIndex = 257;
-            this.btnHizliDil.Text = "Dil Ekle";
-            this.btnHizliDil.UseVisualStyleBackColor = true;
-            this.btnHizliDil.Click += new System.EventHandler(this.btnHizliDil_Click);
-            // 
-            // btnHizliYayinevi
-            // 
-            this.btnHizliYayinevi.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHizliYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHizliYayinevi.ForeColor = System.Drawing.Color.White;
-            this.btnHizliYayinevi.Location = new System.Drawing.Point(82, 0);
-            this.btnHizliYayinevi.Name = "btnHizliYayinevi";
-            this.btnHizliYayinevi.Size = new System.Drawing.Size(82, 35);
-            this.btnHizliYayinevi.TabIndex = 256;
-            this.btnHizliYayinevi.Text = "Yayınevi Ekle";
-            this.btnHizliYayinevi.UseVisualStyleBackColor = true;
-            this.btnHizliYayinevi.Click += new System.EventHandler(this.btnHizliYayinevi_Click);
-            // 
-            // btnHizliYazar
-            // 
-            this.btnHizliYazar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHizliYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHizliYazar.ForeColor = System.Drawing.Color.White;
-            this.btnHizliYazar.Location = new System.Drawing.Point(0, 0);
-            this.btnHizliYazar.Name = "btnHizliYazar";
-            this.btnHizliYazar.Size = new System.Drawing.Size(82, 35);
-            this.btnHizliYazar.TabIndex = 255;
-            this.btnHizliYazar.Text = "Yazar Ekle";
-            this.btnHizliYazar.UseVisualStyleBackColor = true;
-            this.btnHizliYazar.Click += new System.EventHandler(this.btnHizliYazar_Click);
-            // 
             // txtDemirbasNo
             // 
             this.txtDemirbasNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -434,6 +305,7 @@ namespace uu_library_app
             this.txtDemirbasNo.PromptChar = ' ';
             this.txtDemirbasNo.Size = new System.Drawing.Size(164, 27);
             this.txtDemirbasNo.TabIndex = 383;
+            this.txtDemirbasNo.Click += new System.EventHandler(this.txtDemirbasNo_Click);
             // 
             // pictureBox1
             // 
@@ -477,6 +349,7 @@ namespace uu_library_app
             this.txtCiltNo.PromptChar = ' ';
             this.txtCiltNo.Size = new System.Drawing.Size(164, 27);
             this.txtCiltNo.TabIndex = 379;
+            this.txtCiltNo.Click += new System.EventHandler(this.txtCiltNo_Click);
             // 
             // txtSayfaSayisi
             // 
@@ -490,6 +363,7 @@ namespace uu_library_app
             this.txtSayfaSayisi.PromptChar = ' ';
             this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 27);
             this.txtSayfaSayisi.TabIndex = 378;
+            this.txtSayfaSayisi.Click += new System.EventHandler(this.txtSayfaSayisi_Click);
             // 
             // txtStokAdet
             // 
@@ -503,6 +377,7 @@ namespace uu_library_app
             this.txtStokAdet.PromptChar = ' ';
             this.txtStokAdet.Size = new System.Drawing.Size(164, 27);
             this.txtStokAdet.TabIndex = 377;
+            this.txtStokAdet.Click += new System.EventHandler(this.txtStokAdet_Click);
             // 
             // txtIsbn
             // 
@@ -516,6 +391,7 @@ namespace uu_library_app
             this.txtIsbn.PromptChar = ' ';
             this.txtIsbn.Size = new System.Drawing.Size(164, 27);
             this.txtIsbn.TabIndex = 340;
+            this.txtIsbn.Click += new System.EventHandler(this.txtIsbn_Click);
             // 
             // panel14
             // 
@@ -732,6 +608,7 @@ namespace uu_library_app
             this.txtCevirmen.Name = "txtCevirmen";
             this.txtCevirmen.Size = new System.Drawing.Size(164, 27);
             this.txtCevirmen.TabIndex = 353;
+//            this.txtCevirmen.Click += new System.EventHandler(this.txtCevirmen_Click);
             // 
             // label11
             // 
@@ -1097,6 +974,135 @@ namespace uu_library_app
             this.lblAd.TabIndex = 316;
             this.lblAd.Text = "Adı :";
             // 
+            // lblBaslik
+            // 
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lblBaslik.ForeColor = System.Drawing.Color.White;
+            this.lblBaslik.Location = new System.Drawing.Point(98, 30);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(195, 40);
+            this.lblBaslik.TabIndex = 245;
+            this.lblBaslik.Text = "Kitap Ekleme";
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.pictureBox4);
+            this.panel9.Controls.Add(this.wehTextBox1);
+            this.panel9.Location = new System.Drawing.Point(755, 52);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(488, 40);
+            this.panel9.TabIndex = 253;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 272;
+            this.pictureBox4.TabStop = false;
+            // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Lütfen Aramak İstediğiniz Kitabın Adını Giriniz !";
+            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.btnHizliKonum);
+            this.panel24.Controls.Add(this.btnHizliKategori);
+            this.panel24.Controls.Add(this.btnHizliDil);
+            this.panel24.Controls.Add(this.btnHizliYayinevi);
+            this.panel24.Controls.Add(this.btnHizliYazar);
+            this.panel24.Location = new System.Drawing.Point(833, 12);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(410, 35);
+            this.panel24.TabIndex = 255;
+            // 
+            // btnHizliKonum
+            // 
+            this.btnHizliKonum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHizliKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHizliKonum.ForeColor = System.Drawing.Color.White;
+            this.btnHizliKonum.Location = new System.Drawing.Point(328, 0);
+            this.btnHizliKonum.Name = "btnHizliKonum";
+            this.btnHizliKonum.Size = new System.Drawing.Size(80, 35);
+            this.btnHizliKonum.TabIndex = 260;
+            this.btnHizliKonum.Text = "Konum Ekle";
+            this.btnHizliKonum.UseVisualStyleBackColor = true;
+            this.btnHizliKonum.Click += new System.EventHandler(this.btnHizliKonum_Click);
+            // 
+            // btnHizliKategori
+            // 
+            this.btnHizliKategori.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHizliKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHizliKategori.ForeColor = System.Drawing.Color.White;
+            this.btnHizliKategori.Location = new System.Drawing.Point(246, 0);
+            this.btnHizliKategori.Name = "btnHizliKategori";
+            this.btnHizliKategori.Size = new System.Drawing.Size(82, 35);
+            this.btnHizliKategori.TabIndex = 258;
+            this.btnHizliKategori.Text = "Kategori Ekle";
+            this.btnHizliKategori.UseVisualStyleBackColor = true;
+            this.btnHizliKategori.Click += new System.EventHandler(this.btnHizliKategori_Click);
+            // 
+            // btnHizliDil
+            // 
+            this.btnHizliDil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHizliDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHizliDil.ForeColor = System.Drawing.Color.White;
+            this.btnHizliDil.Location = new System.Drawing.Point(164, 0);
+            this.btnHizliDil.Name = "btnHizliDil";
+            this.btnHizliDil.Size = new System.Drawing.Size(82, 35);
+            this.btnHizliDil.TabIndex = 257;
+            this.btnHizliDil.Text = "Dil Ekle";
+            this.btnHizliDil.UseVisualStyleBackColor = true;
+            this.btnHizliDil.Click += new System.EventHandler(this.btnHizliDil_Click);
+            // 
+            // btnHizliYayinevi
+            // 
+            this.btnHizliYayinevi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHizliYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHizliYayinevi.ForeColor = System.Drawing.Color.White;
+            this.btnHizliYayinevi.Location = new System.Drawing.Point(82, 0);
+            this.btnHizliYayinevi.Name = "btnHizliYayinevi";
+            this.btnHizliYayinevi.Size = new System.Drawing.Size(82, 35);
+            this.btnHizliYayinevi.TabIndex = 256;
+            this.btnHizliYayinevi.Text = "Yayınevi Ekle";
+            this.btnHizliYayinevi.UseVisualStyleBackColor = true;
+            this.btnHizliYayinevi.Click += new System.EventHandler(this.btnHizliYayinevi_Click);
+            // 
+            // btnHizliYazar
+            // 
+            this.btnHizliYazar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHizliYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHizliYazar.ForeColor = System.Drawing.Color.White;
+            this.btnHizliYazar.Location = new System.Drawing.Point(0, 0);
+            this.btnHizliYazar.Name = "btnHizliYazar";
+            this.btnHizliYazar.Size = new System.Drawing.Size(82, 35);
+            this.btnHizliYazar.TabIndex = 255;
+            this.btnHizliYazar.Text = "Yazar Ekle";
+            this.btnHizliYazar.UseVisualStyleBackColor = true;
+            this.btnHizliYazar.Click += new System.EventHandler(this.btnHizliYazar_Click);
+            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1119,9 +1125,6 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel24.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1136,6 +1139,9 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel24.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

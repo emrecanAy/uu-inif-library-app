@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Student));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAd = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -39,7 +39,6 @@
             this.picboxAd = new System.Windows.Forms.PictureBox();
             this.picboxSoyad = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.picboxEmail = new System.Windows.Forms.PictureBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
             this.pnlOkulNo = new System.Windows.Forms.Panel();
@@ -53,6 +52,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtOkulNo = new System.Windows.Forms.MaskedTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -186,18 +186,6 @@
             this.lblEmail.Size = new System.Drawing.Size(137, 25);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Okul Numarası";
-            // 
-            // txtOkulNo
-            // 
-            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(57, 266);
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.Size = new System.Drawing.Size(439, 27);
-            this.txtOkulNo.TabIndex = 3;
-            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged);
             // 
             // picboxEmail
             // 
@@ -334,6 +322,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtOkulNo);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel11);
@@ -362,7 +351,6 @@
             this.panel2.Controls.Add(this.lblOkulNo);
             this.panel2.Controls.Add(this.lblEmail);
             this.panel2.Controls.Add(this.pnlOkulNo);
-            this.panel2.Controls.Add(this.txtOkulNo);
             this.panel2.Controls.Add(this.picboxOkulNo);
             this.panel2.Controls.Add(this.picboxEmail);
             this.panel2.Controls.Add(this.pnlEmail);
@@ -371,6 +359,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 34;
+            // 
+            // txtOkulNo
+            // 
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(57, 266);
+            this.txtOkulNo.Mask = "000000000000000000000000000000000000000000000000";
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.PromptChar = ' ';
+            this.txtOkulNo.Size = new System.Drawing.Size(445, 27);
+            this.txtOkulNo.TabIndex = 57;
+            this.txtOkulNo.Click += new System.EventHandler(this.txtOkulNo_Click);
             // 
             // panel9
             // 
@@ -521,14 +523,14 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -676,7 +678,6 @@
         private System.Windows.Forms.PictureBox picboxAd;
         private System.Windows.Forms.PictureBox picboxSoyad;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtOkulNo;
         private System.Windows.Forms.PictureBox picboxEmail;
         private System.Windows.Forms.Panel pnlEmail;
         private System.Windows.Forms.Panel pnlOkulNo;
@@ -713,5 +714,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.MaskedTextBox txtOkulNo;
     }
 }

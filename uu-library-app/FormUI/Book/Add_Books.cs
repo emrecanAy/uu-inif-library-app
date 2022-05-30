@@ -212,5 +212,35 @@ namespace uu_library_app
             LocationQuick quick = new LocationQuick(_admin);
             quick.Show();
         }
+
+        //private void txtCevirmen_Click(object sender, EventArgs e)
+        //{
+        //    this.txtCevirmen.Select(0, 0);
+        //}
+
+        private void txtIsbn_Click(object sender, EventArgs e)
+        {
+            this.txtIsbn.Select(0, 0);
+        }
+
+        private void txtSayfaSayisi_Click(object sender, EventArgs e)
+        {
+            this.txtSayfaSayisi.Select(0, 0);
+        }
+
+        private void txtStokAdet_Click(object sender, EventArgs e)
+        {
+            this.txtStokAdet.Select(0, 0);
+        }
+
+        private void txtCiltNo_Click(object sender, EventArgs e)
+        {
+            this.txtCiltNo.Select(0, 0);
+        }
+
+        private void txtDemirbasNo_Click(object sender, EventArgs e)
+        {
+            this.txtDemirbasNo.Select(0, 0);
+        }
     }
 }

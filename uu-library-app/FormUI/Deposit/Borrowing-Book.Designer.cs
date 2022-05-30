@@ -30,8 +30,8 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borrowing_Book));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -139,14 +139,14 @@ namespace uu_library_app
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
             this.dataGridView2.Location = new System.Drawing.Point(8, 33);
             this.dataGridView2.Name = "dataGridView2";
@@ -257,6 +257,7 @@ namespace uu_library_app
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(112, 657);
             this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.ReadOnly = true;
             this.txtOkulNo.Size = new System.Drawing.Size(164, 27);
             this.txtOkulNo.TabIndex = 267;
             // 
@@ -299,6 +300,7 @@ namespace uu_library_app
             this.txtBolum.ForeColor = System.Drawing.Color.White;
             this.txtBolum.Location = new System.Drawing.Point(111, 552);
             this.txtBolum.Name = "txtBolum";
+            this.txtBolum.ReadOnly = true;
             this.txtBolum.Size = new System.Drawing.Size(164, 27);
             this.txtBolum.TabIndex = 263;
             // 
@@ -341,6 +343,7 @@ namespace uu_library_app
             this.txtAdSoyad.ForeColor = System.Drawing.Color.White;
             this.txtAdSoyad.Location = new System.Drawing.Point(111, 460);
             this.txtAdSoyad.Name = "txtAdSoyad";
+            this.txtAdSoyad.ReadOnly = true;
             this.txtAdSoyad.Size = new System.Drawing.Size(164, 27);
             this.txtAdSoyad.TabIndex = 259;
             // 
@@ -397,6 +400,7 @@ namespace uu_library_app
             this.txtYazar.ForeColor = System.Drawing.Color.White;
             this.txtYazar.Location = new System.Drawing.Point(112, 352);
             this.txtYazar.Name = "txtYazar";
+            this.txtYazar.ReadOnly = true;
             this.txtYazar.Size = new System.Drawing.Size(164, 27);
             this.txtYazar.TabIndex = 255;
             // 
@@ -438,6 +442,7 @@ namespace uu_library_app
             this.txtIsbn.ForeColor = System.Drawing.Color.White;
             this.txtIsbn.Location = new System.Drawing.Point(112, 257);
             this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.ReadOnly = true;
             this.txtIsbn.Size = new System.Drawing.Size(164, 27);
             this.txtIsbn.TabIndex = 251;
             // 
@@ -461,6 +466,7 @@ namespace uu_library_app
             this.txtYayinevi.ForeColor = System.Drawing.Color.White;
             this.txtYayinevi.Location = new System.Drawing.Point(111, 162);
             this.txtYayinevi.Name = "txtYayinevi";
+            this.txtYayinevi.ReadOnly = true;
             this.txtYayinevi.Size = new System.Drawing.Size(164, 27);
             this.txtYayinevi.TabIndex = 249;
             // 
@@ -560,6 +566,7 @@ namespace uu_library_app
             this.txtKitapAd.ForeColor = System.Drawing.Color.White;
             this.txtKitapAd.Location = new System.Drawing.Point(111, 70);
             this.txtKitapAd.Name = "txtKitapAd";
+            this.txtKitapAd.ReadOnly = true;
             this.txtKitapAd.Size = new System.Drawing.Size(164, 27);
             this.txtKitapAd.TabIndex = 240;
             // 
@@ -632,14 +639,14 @@ namespace uu_library_app
             this.dgvDeneme.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeneme.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeneme.GridColor = System.Drawing.Color.White;
             this.dgvDeneme.Location = new System.Drawing.Point(3, 42);
             this.dgvDeneme.Name = "dgvDeneme";

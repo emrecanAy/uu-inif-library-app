@@ -185,5 +185,10 @@ namespace uu_library_app.FormUI
             DepartmentQuick quick = new DepartmentQuick(_admin);
             quick.Show();
         }
+
+        private void txtOkulNo_Click(object sender, EventArgs e)
+        {
+            this.txtOkulNo.Select(0, 0);
+        }
     }
 }
