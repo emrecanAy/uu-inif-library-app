@@ -22,10 +22,11 @@ namespace uu_library_app.Entity.Concrete
         private int stockCount;
         private bool status;
         private string interpreter;
+        private string fixtureNo;
 
         public Book() { }
 
-        public Book(string id, string bookName, string languageId, string authorId, string categoryId, string publisherId, string locationId, int pageCount, string isbnNumber, DateTime publishDate, int publishCount, int stockCount, string interpreter)
+        public Book(string id, string bookName, string languageId, string authorId, string categoryId, string publisherId, string locationId, int pageCount, string isbnNumber, DateTime publishDate, int publishCount, int stockCount, string interpreter, string fixtureNo)
         {
             this.Id = id;
             this.BookName = bookName;
@@ -40,6 +41,7 @@ namespace uu_library_app.Entity.Concrete
             this.PublishCount = publishCount;
             this.StockCount = stockCount;
             this.Interpreter = interpreter;
+            this.FixtureNo = fixtureNo;
         }
 
         public string Id { get => id; set => id = value; }
@@ -58,7 +60,6 @@ namespace uu_library_app.Entity.Concrete
         public string Interpreter { get => interpreter; set => interpreter = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
         public bool Deleted { get => deleted; set => deleted = value; }
-
-
+        public string FixtureNo { get => fixtureNo; set => fixtureNo = value; }
     }
 }

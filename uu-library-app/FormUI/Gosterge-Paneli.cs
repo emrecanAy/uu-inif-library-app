@@ -44,32 +44,44 @@ namespace uu_library_app.FormUI
                 lblOduncSayi.Text = depositBookManager.getAll().Count().ToString();
                 lblOduncVerilen.Text = depositBookManager.getAllUndeposited().Count().ToString();
                 lblTeslimAlinan.Text = depositBookManager.getAllDeposited().Count().ToString();
-                Student[] arrStudent = dashboardDataHelper.GetTopThreeReaders().ToArray();
-                Department[] arrDepartment = dashboardDataHelper.GetTopThreeReaderDepartments().ToArray();
+                Student[] arrStudent = dashboardDataHelper.GetTopFiveReaders().ToArray();
+                Department[] arrDepartment = dashboardDataHelper.GetTopFiveReaderDepartments().ToArray();
 
                 Student s1 = arrStudent[0];
                 Student s2 = arrStudent[1];
                 Student s3 = arrStudent[2];
+                Student s4 = arrStudent[3];
+                Student s5 = arrStudent[4];
 
                 Department d1 = arrDepartment[0];
                 Department d2 = arrDepartment[1];
                 Department d3 = arrDepartment[2];
+                Department d4 = arrDepartment[3];
+                Department d5 = arrDepartment[4];
 
                 lblUye1.Text = s1.FirstName;
                 lblUye2.Text = s2.FirstName;
                 lblUye3.Text = s3.FirstName;
+                lblUye4.Text = s4.FirstName;
+                lblUye5.Text = s5.FirstName;
 
                 lblUye1OkumaSayisi.Text = s1.Number;
                 lblUye2OkumaSayisi.Text = s2.Number;
                 lblUye3OkumaSayisi.Text = s3.Number;
+                lblUye4OkumaSayisi.Text = s4.Number;
+                lblUye5OkumaSayisi.Text = s5.Number;
 
                 lblBolum1.Text = d1.Name;
                 lblBolum2.Text = d2.Name;
                 lblBolum3.Text = d3.Name;
+                lblBolum4.Text = d4.Name;
+                lblBolum5.Text = d5.Name;
 
-                lblBolum1Sayi.Text = d1.Id.ToString();
-                lblBolum2Sayi.Text = d2.Id.ToString();
-                lblBolum3Sayi.Text = d3.Id.ToString();
+                lblBolum1OkumaSayisi.Text = d1.Id.ToString();
+                lblBolum2OkumaSayisi.Text = d2.Id.ToString();
+                lblBolum3OkumaSayisi.Text = d3.Id.ToString();
+                lblBolum4OkumaSayisi.Text = d4.Id.ToString();
+                lblBolum5OkumaSayisi.Text = d5.Id.ToString();
 
 
                 DataTable dt = new DataTable();
@@ -89,14 +101,6 @@ namespace uu_library_app.FormUI
                 chartTopCategories.Series[0].YValueMembers = "count";
                 chartTopCategories.DataBind();
                 conn.Close();
-
-                
-
-
-
-
-
-
             }
             catch (Exception)
             {
@@ -111,34 +115,13 @@ namespace uu_library_app.FormUI
 
         private void btnLast7Days_Click(object sender, EventArgs e)
         {
-            DateTime startDate = DateTime.Now.AddDays(-7);
-            DataTable dtDeposit = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT DepositBook.id,count(*)'count', Book.bookName FROM DepositBook INNER JOIN Book ON DepositBook.bookId=Book.id WHERE DATE(DepositBook.depositDate) BETWEEN @p1 AND @p2 GROUP BY DepositBook.id", conn);
-            command.Parameters.AddWithValue("@p1", startDate);
-            command.Parameters.AddWithValue("@p2", DateTime.Now);
-            MySqlDataAdapter daDeposit = new MySqlDataAdapter(command);
-            daDeposit.Fill(dtDeposit);
-            chartDepositBook.DataSource = dtDeposit;
-            chartDepositBook.Series[0].XValueMember = "bookName";
-            chartDepositBook.Series[0].YValueMembers = "count";
-            chartDepositBook.DataBind();
-            
+         
 
         }
 
         private void btnLast30Days_Click(object sender, EventArgs e)
         {
-            DateTime startDate = DateTime.Now.AddDays(-30);
-            DataTable dtDeposit = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT id,count(*)'count' FROM DepositBook WHERE DATE(depositDate) BETWEEN @p1 AND @p2 GROUP BY id", conn);
-            command.Parameters.AddWithValue("@p1", startDate);
-            command.Parameters.AddWithValue("@p2", DateTime.Now);
-            MySqlDataAdapter daDeposit = new MySqlDataAdapter(command);
-            daDeposit.Fill(dtDeposit);
-            chartDepositBook.DataSource = dtDeposit;
-            chartDepositBook.Series[0].XValueMember = "count";
-            chartDepositBook.Series[0].YValueMembers = "count";
-            chartDepositBook.DataBind();
+          
         }
 
         private void label27_Click(object sender, EventArgs e)

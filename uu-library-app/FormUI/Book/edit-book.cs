@@ -114,7 +114,7 @@ namespace uu_library_app
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "")
+            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "")
             {
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
@@ -129,7 +129,7 @@ namespace uu_library_app
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
+                    Book bookToUpdate = new Book(txtId.Text, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     bookManager.Update(bookToUpdate);
                     logger.Log(log);

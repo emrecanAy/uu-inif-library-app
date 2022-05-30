@@ -17,12 +17,12 @@ namespace uu_library_app.Core.Helpers
     {
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         List<Student> topStudents = new List<Student>();
-        public List<Student> GetTopThreeReaders()
+        public List<Student> GetTopFiveReaders()
         {
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT studentId,count(*), Student.firstName, Student.lastName FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id GROUP BY studentId ORDER BY count(*) DESC LIMIT 3", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT studentId,count(*), Student.firstName, Student.lastName FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id GROUP BY studentId ORDER BY count(*) DESC LIMIT 5", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
@@ -43,12 +43,12 @@ namespace uu_library_app.Core.Helpers
         }
 
         List<Department> topDepartments = new List<Department>();
-        public List<Department> GetTopThreeReaderDepartments()
+        public List<Department> GetTopFiveReaderDepartments()
         {
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT Student.departmentId, count(*), Department.name FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Department ON Student.departmentId= Department.id GROUP BY Department.id ORDER BY count(*) DESC LIMIT 3", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT Student.departmentId, count(*), Department.name FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Department ON Student.departmentId= Department.id GROUP BY Department.id ORDER BY count(*) DESC LIMIT 5", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {

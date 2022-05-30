@@ -143,13 +143,13 @@ namespace uu_library_app
         private void btnEkle_Click(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
-            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "")
+            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "")
             {
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
             }
 
-            Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text);
+            Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
             try
             {
                 bookManager.Add(bookToAdd);
@@ -164,17 +164,6 @@ namespace uu_library_app
                 MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
                 throw;
             }
-
-
-            /*
-              Kütüphaneci yeni kitap eklerken ekleyeceği kitabı öncelikle kitaplar kısmında arayacak.
-              Varsa güncelle kısmından countunu artıracak.
-              Yoksa da yeni ekleyecek.
-            */
-
-            /*
-             Kitap ekle kısmında ufak bir buton olacak. O butona tıkladığında yeni form açılacak.
-             */
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

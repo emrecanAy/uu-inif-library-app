@@ -17,7 +17,7 @@ namespace uu_library_app.DataAccess.Concrete
         {
             conn.Open();
 
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter, fixtureNo) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", book.Id);
@@ -34,6 +34,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToAdd.Parameters.AddWithValue("@p12", book.LocationId);
                 commandToAdd.Parameters.AddWithValue("@p13", book.Status);
                 commandToAdd.Parameters.AddWithValue("@p14", book.Interpreter);
+                commandToAdd.Parameters.AddWithValue("@p15", book.FixtureNo);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Successfully added!");
             }
@@ -50,7 +51,7 @@ namespace uu_library_app.DataAccess.Concrete
         {
             conn.Open();
 
-            MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Book SET bookName=@p2, languageId=@p3, authorId=@p4, categoryId=@p5, publisherId=@p6, pageCount=@p7, isbnNumber=@p8, publishDate=@p9, publishCount=@p10, stockCount=@p11, locationId=@p12, status=@p13, interpreter=@p14 WHERE id=@p1", conn);
+            MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Book SET bookName=@p2, languageId=@p3, authorId=@p4, categoryId=@p5, publisherId=@p6, pageCount=@p7, isbnNumber=@p8, publishDate=@p9, publishCount=@p10, stockCount=@p11, locationId=@p12, status=@p13, interpreter=@p14, fixtureNo=@p15 WHERE id=@p1", conn);
             try
             {
                 commandToUpdate.Parameters.AddWithValue("@p1", book.Id);
@@ -67,6 +68,7 @@ namespace uu_library_app.DataAccess.Concrete
                 commandToUpdate.Parameters.AddWithValue("@p12", book.LocationId);
                 commandToUpdate.Parameters.AddWithValue("@p13", book.Status);
                 commandToUpdate.Parameters.AddWithValue("@p14", book.Interpreter);
+                commandToUpdate.Parameters.AddWithValue("@p15", book.FixtureNo);
                 commandToUpdate.ExecuteNonQuery();
                 Console.WriteLine("Successfully added!");
             }
@@ -126,6 +128,7 @@ namespace uu_library_app.DataAccess.Concrete
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
                     book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
                     books.Add(book);
                 }
                 conn.Close();
@@ -165,6 +168,7 @@ namespace uu_library_app.DataAccess.Concrete
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
                     book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
                     books.Add(book);
                 }
                 conn.Close();
@@ -203,6 +207,7 @@ namespace uu_library_app.DataAccess.Concrete
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
                     book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
                     books.Add(book);
                 }
                 conn.Close();
@@ -241,6 +246,7 @@ namespace uu_library_app.DataAccess.Concrete
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
                     book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
                     books.Add(book);
                 }
                 conn.Close();
@@ -282,6 +288,7 @@ namespace uu_library_app.DataAccess.Concrete
                     book.CreatedAt = Convert.ToDateTime(reader[13]);
                     book.Interpreter = reader[14].ToString();
                     book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
                 }
                 conn.Close();
                 return book;
