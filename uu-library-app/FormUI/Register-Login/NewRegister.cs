@@ -90,5 +90,10 @@ namespace uu_library_app.FormUI.Register_Login
                 MessageBox.Show("Onay kodu hatalı! Tekrar giriniz...");
             }
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

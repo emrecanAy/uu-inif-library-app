@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,10 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
                 manager.Add(locationToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToAdd.Id + " | " + locationToAdd.Shelf + " | KategoriId: " + locationToAdd.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                wehMessageBox.Show("Başarıyla eklendi!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
             }
             catch (Exception)
             {

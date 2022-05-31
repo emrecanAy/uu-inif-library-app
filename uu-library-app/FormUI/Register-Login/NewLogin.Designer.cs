@@ -121,6 +121,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.button2.TabIndex = 54;
             this.button2.Text = "Kayıt Ol";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 

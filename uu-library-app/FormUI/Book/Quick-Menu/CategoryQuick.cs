@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessageBoxDenemesi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,6 +53,10 @@ namespace uu_library_app.FormUI.MailSettings
                 manager.Add(categoryToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                wehMessageBox.Show("Başarıyla eklendi!",
+               "Başarılı",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

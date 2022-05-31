@@ -41,7 +41,7 @@ namespace uu_library_app.FormUI
             dgvLog.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvLog.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvLog.DefaultCellStyle.ForeColor = Color.Black;
+            //dgvLog.DefaultCellStyle.ForeColor = Color.Black;
 
             dgvLogOgr.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

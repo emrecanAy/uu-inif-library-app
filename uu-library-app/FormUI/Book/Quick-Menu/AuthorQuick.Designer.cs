@@ -117,6 +117,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             // btnEkle
             // 
             this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnEkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessageBoxDenemesi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,6 +53,10 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
                 manager.Add(languageToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                wehMessageBox.Show("Ödünç verildi!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
             }
             catch (Exception)
             {

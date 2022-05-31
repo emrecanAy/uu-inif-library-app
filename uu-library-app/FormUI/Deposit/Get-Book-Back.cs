@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,8 +122,11 @@ namespace uu_library_app
             {
                 depositBookManager.depositBook(txtDepositBookId.Text);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBook.Id + " | KitapId:" + depositBook.BookId + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından teslim alındı! -Tarih: " + DateTime.Now);
-                logger.Log(log);   
-                MessageBox.Show("Kitap başarıyla teslim alındı...");
+                logger.Log(log);
+                wehMessageBox.Show("Teslim alındı!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
                 listDataToTable();
             }
             catch (Exception)

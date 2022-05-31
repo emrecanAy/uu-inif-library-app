@@ -79,5 +79,12 @@ namespace uu_library_app.FormUI.Register_Login
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NewRegister newRegister = new NewRegister();
+            newRegister.Show();
+            this.Hide();
+        }
     }
 }

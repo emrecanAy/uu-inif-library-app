@@ -50,11 +50,11 @@ namespace uu_library_app.FormUI.Register_Login
             this.txtSifreTekrar = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panelOnay = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnOnayKodu = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtOnayKodu = new uu_library_app.FormUI.TextBoxHelper.LoginTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnOnayKodu = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -68,6 +68,7 @@ namespace uu_library_app.FormUI.Register_Login
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(710, 0);
             this.pictureBox6.Name = "pictureBox6";
@@ -75,6 +76,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 51;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label1
             // 
@@ -318,6 +320,32 @@ namespace uu_library_app.FormUI.Register_Login
             this.panelOnay.TabIndex = 52;
             this.panelOnay.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(267, 32);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Lütfen e-posta adresinizi kontrol ederek\r\n gelen onay kodunu giriniz...";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnOnayKodu
+            // 
+            this.btnOnayKodu.BackColor = System.Drawing.Color.White;
+            this.btnOnayKodu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOnayKodu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOnayKodu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnOnayKodu.Location = new System.Drawing.Point(58, 114);
+            this.btnOnayKodu.Name = "btnOnayKodu";
+            this.btnOnayKodu.Size = new System.Drawing.Size(198, 29);
+            this.btnOnayKodu.TabIndex = 53;
+            this.btnOnayKodu.Text = "Onay";
+            this.btnOnayKodu.UseVisualStyleBackColor = false;
+            this.btnOnayKodu.Click += new System.EventHandler(this.btnOnayKodu_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -357,32 +385,6 @@ namespace uu_library_app.FormUI.Register_Login
             this.pictureBox8.TabIndex = 48;
             this.pictureBox8.TabStop = false;
             // 
-            // btnOnayKodu
-            // 
-            this.btnOnayKodu.BackColor = System.Drawing.Color.White;
-            this.btnOnayKodu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOnayKodu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOnayKodu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnOnayKodu.Location = new System.Drawing.Point(58, 114);
-            this.btnOnayKodu.Name = "btnOnayKodu";
-            this.btnOnayKodu.Size = new System.Drawing.Size(198, 29);
-            this.btnOnayKodu.TabIndex = 53;
-            this.btnOnayKodu.Text = "Onay";
-            this.btnOnayKodu.UseVisualStyleBackColor = false;
-            this.btnOnayKodu.Click += new System.EventHandler(this.btnOnayKodu_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 32);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Lütfen e-posta adresinizi kontrol ederek\r\n gelen onay kodunu giriniz...";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // NewRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +413,7 @@ namespace uu_library_app.FormUI.Register_Login
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewRegister";
             this.Load += new System.EventHandler(this.NewRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

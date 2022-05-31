@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessageBoxDenemesi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,10 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
                 manager.Add(authorToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToAdd.Id + " | " + authorToAdd.FirstName + " " + authorToAdd.LastName + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                wehMessageBox.Show("Başarıyla eklendi!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
             }
             catch (Exception)
             {

@@ -203,7 +203,7 @@ namespace uu_library_app
         private void btnEkle_Click(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
-            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "")
+            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "" || cmbDil.SelectedValue.ToString() == "" || cmbKategori.SelectedValue.ToString() == "" || cmbKonum.SelectedValue.ToString() == "" || cmbYayinevi.SelectedValue.ToString() == "" || cmbYazar.SelectedValue.ToString() == "")
             {
                 MessageBox.Show("Tüm değerleri giriniz...");
                 return;
@@ -237,7 +237,6 @@ namespace uu_library_app
             AuthorQuick quick = new AuthorQuick(_admin);
             quick.Show();
             fillData();
-            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliYayinevi_Click(object sender, EventArgs e)
@@ -245,7 +244,6 @@ namespace uu_library_app
             PublisherQuick quick = new PublisherQuick(_admin);
             quick.Show();
             fillData();
-            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliDil_Click(object sender, EventArgs e)
@@ -253,7 +251,6 @@ namespace uu_library_app
             LanguageQuick quick = new LanguageQuick(_admin);
             quick.Show();
             fillData();
-            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliKategori_Click(object sender, EventArgs e)
@@ -261,7 +258,6 @@ namespace uu_library_app
             CategoryQuick quick = new CategoryQuick(_admin);
             quick.Show();
             fillData();
-            MessageBox.Show("Eklendi!");
         }
 
         private void btnHizliKonum_Click(object sender, EventArgs e)
@@ -269,13 +265,7 @@ namespace uu_library_app
             LocationQuick quick = new LocationQuick(_admin);
             quick.Show();
             fillData();
-            MessageBox.Show("Eklendi!");
         }
-
-        //private void txtCevirmen_Click(object sender, EventArgs e)
-        //{
-        //    this.txtCevirmen.Select(0, 0);
-        //}
 
         private void txtIsbn_Click(object sender, EventArgs e)
         {
