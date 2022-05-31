@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Core.Helpers;
+using uu_library_app.Core.Logger.FileLogger;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.Entity.Concrete.DTO;
 
@@ -27,6 +28,7 @@ namespace uu_library_app.FormUI
         }
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        FileLoggerManager fileLoggerManager = new FileLoggerManager(new FileLoggerDal());
         private void Veri_İslemleri_Load(object sender, EventArgs e)
         {
             dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -74,17 +76,6 @@ namespace uu_library_app.FormUI
             cmbVeri.DisplayMember = "Value";
             cmbVeri.ValueMember = "Key";
 
-            Dictionary<string, string> comboSourceFileTypes = new Dictionary<string, string>();
-            comboSourceFileTypes.Add("excel", "EXCEL");
-            comboSourceFileTypes.Add("pdf", "PDF");
-            comboSourceFileTypes.Add("csv", "CSV");
-            comboSourceFileTypes.Add("xml", "XML");
-            comboSourceFileTypes.Add("json", "JSON");
-
-            cmbDosyaTuru.DataSource = new BindingSource(comboSourceFileTypes, null);
-            cmbDosyaTuru.DisplayMember = "Value";
-            cmbDosyaTuru.ValueMember = "Key";
-
         }
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -111,6 +102,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
             if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
@@ -135,6 +128,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Gecikmiş Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
         }
@@ -157,6 +152,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
         }
@@ -179,6 +176,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
         }
@@ -203,6 +202,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
         }
@@ -227,6 +228,8 @@ namespace uu_library_app.FormUI
                     "Başarılı",
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
                 }
             }
         }
