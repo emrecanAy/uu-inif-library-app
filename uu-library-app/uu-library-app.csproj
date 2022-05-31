@@ -235,12 +235,6 @@
     </Compile>
     <Compile Include="Business\Abstract\IDepositBookService.cs" />
     <Compile Include="Business\Concrete\DepositBookManager.cs" />
-    <Compile Include="FormUI\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataAccess\Abstract\IDepositBookDal.cs" />
     <Compile Include="DataAccess\Concrete\DepositBookDal.cs" />
     <Compile Include="FormUI\Gosterge-Paneli.cs">
@@ -248,12 +242,6 @@
     </Compile>
     <Compile Include="FormUI\Gosterge-Paneli.Designer.cs">
       <DependentUpon>Gosterge-Paneli.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUI\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\Other-Operations\Department-Operations.cs">
       <SubType>Form</SubType>
@@ -390,12 +378,6 @@
     <Compile Include="FormUI\Book\Add_Books.Designer.cs">
       <DependentUpon>Add_Books.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\login-panel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\login-panel.Designer.cs">
-      <DependentUpon>login-panel.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUI\Deposit\Get-Book-Back.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,12 +435,6 @@
     <Compile Include="FormUI\Other-Operations\publisher-actions.Designer.cs">
       <DependentUpon>publisher-actions.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Sign-Up.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\Sign-Up.Designer.cs">
-      <DependentUpon>Sign-Up.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUI\Student-Affairs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,14 +468,8 @@
     <EmbeddedResource Include="FormUI\Deposit\Borrowing-Book.resx">
       <DependentUpon>Borrowing-Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Gosterge-Paneli.resx">
       <DependentUpon>Gosterge-Paneli.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Department-Operations.resx">
       <DependentUpon>Department-Operations.cs</DependentUpon>
@@ -509,9 +479,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\edit-book.resx">
       <DependentUpon>edit-book.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\login-panel.resx">
-      <DependentUpon>login-panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Category-Operations.resx">
       <DependentUpon>Category-Operations.cs</DependentUpon>
@@ -594,9 +561,6 @@
     </Compile>
     <EmbeddedResource Include="FormUI\Other-Operations\publisher-actions.resx">
       <DependentUpon>publisher-actions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Sign-Up.resx">
-      <DependentUpon>Sign-Up.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Student-Affairs.resx">
       <DependentUpon>Student-Affairs.cs</DependentUpon>

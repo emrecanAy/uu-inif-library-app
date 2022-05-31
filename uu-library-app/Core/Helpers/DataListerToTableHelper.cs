@@ -268,6 +268,7 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        //İstenilen tarihler arası
         public static void listInnerJoinAllStudentsDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
         {
             DataTable dt = new DataTable();
@@ -348,6 +349,7 @@ namespace uu_library_app.Core.Helpers
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
+        //İstenilen tarihler arası
         public static void listInnerJoinAllBooksDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
         {
             DataTable dt = new DataTable();

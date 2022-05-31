@@ -142,5 +142,16 @@ namespace uu_library_app
             txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void wehTextBox2__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView2.DataSource as DataTable).DefaultView.RowFilter =
+           string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox2.Texts);
+        }
     }
 }
