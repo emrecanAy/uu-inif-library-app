@@ -90,12 +90,12 @@ namespace uu_library_app.FormUI
 
             try
             {
-                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text, "CARD-ID", txtOkulNo.Text);
+                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
                 manager.Add(studentToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 clearAllFields();
-                listDataToTable();
+                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             }
             catch (Exception)
             {
@@ -109,8 +109,6 @@ namespace uu_library_app.FormUI
         {
 
             conn.Open();
-
-            listDataToTable();
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
@@ -165,7 +163,7 @@ namespace uu_library_app.FormUI
    
         private void txtOkulNo_TextChanged(object sender, EventArgs e)
         {
-            txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
+            
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
@@ -189,6 +187,11 @@ namespace uu_library_app.FormUI
         private void txtOkulNo_Click(object sender, EventArgs e)
         {
             this.txtOkulNo.Select(0, 0);
+        }
+
+        private void txtOkulNo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
         }
     }
 }

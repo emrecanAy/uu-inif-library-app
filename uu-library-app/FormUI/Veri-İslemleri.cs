@@ -39,6 +39,9 @@ namespace uu_library_app.FormUI
             dgvLog.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvLog.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
             dgvLog.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvLog.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvLog.DefaultCellStyle.ForeColor = Color.Black;
 
             dgvLogOgr.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -75,6 +78,27 @@ namespace uu_library_app.FormUI
             cmbVeri.DataSource = new BindingSource(comboSourceDataTypes, null);
             cmbVeri.DisplayMember = "Value";
             cmbVeri.ValueMember = "Key";
+
+            Dictionary<string, string> comboSourceDataTypesOgr = new Dictionary<string, string>();
+            comboSourceDataTypesOgr.Add("oduncAlinan", "Ödünç Aldığı Kitaplar");
+            comboSourceDataTypesOgr.Add("teslimAlinan", "Teslim Ettiği Kitaplar");
+            comboSourceDataTypesOgr.Add("geciken", "Teslim Tarihi Geciken Kitaplar");
+
+            cmbVeriOgr.DataSource = new BindingSource(comboSourceDataTypesOgr, null);
+            cmbVeriOgr.DisplayMember = "Value";
+            cmbVeriOgr.ValueMember = "Key";
+
+            DataTable dtFileLog = new DataTable();
+            MySqlDataAdapter daFileLog = new MySqlDataAdapter("Select * From FileLog", conn);
+            daFileLog.Fill(dtFileLog);
+            dgvLog.DataSource = dtFileLog;
+            dgvLog.ColumnHeadersVisible = false;
+            dgvLog.Columns[0].Visible = false;
+            dgvLog.Columns[1].Visible = false;
+            dgvLog.Columns[2].HeaderText = "Log Message";
+            dgvLog.Columns[3].Visible = false;
+            dgvLog.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+            
 
         }
 
@@ -232,6 +256,12 @@ namespace uu_library_app.FormUI
                     fileLoggerManager.Log(fileLogger);
                 }
             }
+        }
+
+        private void wehTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            (dgvDeneme.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Student));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAd = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -52,16 +52,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.txtOkulNo = new System.Windows.Forms.MaskedTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.cmbFakulte = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -360,6 +360,20 @@
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 34;
             // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(56, 525);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(445, 1);
+            this.panel6.TabIndex = 36;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(56, 634);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(445, 1);
+            this.panel10.TabIndex = 53;
+            // 
             // txtOkulNo
             // 
             this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -372,6 +386,7 @@
             this.txtOkulNo.PromptChar = ' ';
             this.txtOkulNo.Size = new System.Drawing.Size(445, 25);
             this.txtOkulNo.TabIndex = 3;
+            this.txtOkulNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtOkulNo_MaskInputRejected);
             this.txtOkulNo.Click += new System.EventHandler(this.txtOkulNo_Click);
             // 
             // panel9
@@ -380,13 +395,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1, 35);
             this.panel9.TabIndex = 56;
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(56, 634);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(445, 1);
-            this.panel10.TabIndex = 53;
             // 
             // panel11
             // 
@@ -445,13 +453,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 35);
             this.panel8.TabIndex = 36;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(56, 525);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(445, 1);
-            this.panel6.TabIndex = 36;
             // 
             // panel7
             // 
@@ -523,14 +524,14 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";

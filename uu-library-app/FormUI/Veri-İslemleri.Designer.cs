@@ -164,11 +164,12 @@ namespace uu_library_app.FormUI
             this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.wehTextBox1.PasswordChar = false;
             this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Öğrenci Adını Giriniz !";
+            this.wehTextBox1.PlaceholderText = "Öğrenci Numarasını Giriniz!";
             this.wehTextBox1.Size = new System.Drawing.Size(529, 29);
             this.wehTextBox1.TabIndex = 236;
             this.wehTextBox1.Texts = "";
             this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
             // panel2
             // 
