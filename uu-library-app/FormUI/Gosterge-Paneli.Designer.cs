@@ -30,14 +30,14 @@ namespace uu_library_app.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gosterge_Paneli));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lblOduncSayi = new System.Windows.Forms.Label();
             this.lblToplamUye = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -103,7 +103,7 @@ namespace uu_library_app.FormUI
             this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.lblDil = new System.Windows.Forms.Label();
+            this.lblToplamKategori = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -686,16 +686,16 @@ namespace uu_library_app.FormUI
             // chartTopBooks
             // 
             this.chartTopBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea3.Name = "ChartArea1";
-            this.chartTopBooks.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            legend3.ForeColor = System.Drawing.Color.Silver;
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            this.chartTopBooks.Legends.Add(legend3);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            chartArea1.Name = "ChartArea1";
+            this.chartTopBooks.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            legend1.ForeColor = System.Drawing.Color.Silver;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartTopBooks.Legends.Add(legend1);
             this.chartTopBooks.Location = new System.Drawing.Point(25, 7);
             this.chartTopBooks.Margin = new System.Windows.Forms.Padding(5);
             this.chartTopBooks.Name = "chartTopBooks";
@@ -707,42 +707,42 @@ namespace uu_library_app.FormUI
         System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(220)))), ((int)(((byte)(205))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
-            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            series3.BorderWidth = 5;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series3.IsValueShownAsLabel = true;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartTopBooks.Series.Add(series3);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            series1.BorderWidth = 5;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTopBooks.Series.Add(series1);
             this.chartTopBooks.Size = new System.Drawing.Size(320, 378);
             this.chartTopBooks.TabIndex = 267;
             this.chartTopBooks.Text = "chartTopBooks";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title3.ForeColor = System.Drawing.Color.White;
-            title3.Name = "Title1";
-            title3.Text = "En Çok Okunan 5 Kitap :";
-            this.chartTopBooks.Titles.Add(title3);
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "Title1";
+            title1.Text = "En Çok Okunan 5 Kitap :";
+            this.chartTopBooks.Titles.Add(title1);
             // 
             // chartTopCategories
             // 
             this.chartTopCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            chartArea4.Name = "ChartArea1";
-            this.chartTopCategories.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            legend4.ForeColor = System.Drawing.Color.Silver;
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            this.chartTopCategories.Legends.Add(legend4);
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            chartArea2.Name = "ChartArea1";
+            this.chartTopCategories.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            legend2.ForeColor = System.Drawing.Color.Silver;
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.chartTopCategories.Legends.Add(legend2);
             this.chartTopCategories.Location = new System.Drawing.Point(25, 392);
             this.chartTopCategories.Margin = new System.Windows.Forms.Padding(5);
             this.chartTopCategories.Name = "chartTopCategories";
@@ -754,28 +754,28 @@ namespace uu_library_app.FormUI
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(188)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(160)))), ((int)(((byte)(139)))))};
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
-            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            series4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            series4.BorderWidth = 5;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series4.IsValueShownAsLabel = true;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartTopCategories.Series.Add(series4);
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            series2.BorderWidth = 5;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartTopCategories.Series.Add(series2);
             this.chartTopCategories.Size = new System.Drawing.Size(320, 378);
             this.chartTopCategories.TabIndex = 269;
             this.chartTopCategories.Text = "chart1";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title4.ForeColor = System.Drawing.Color.White;
-            title4.Name = "Title1";
-            title4.Text = "En Popüler 5 Kategori :";
-            this.chartTopCategories.Titles.Add(title4);
+            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title2.ForeColor = System.Drawing.Color.White;
+            title2.Name = "Title1";
+            title2.Text = "En Popüler 5 Kategori :";
+            this.chartTopCategories.Titles.Add(title2);
             // 
             // panel8
             // 
@@ -931,7 +931,7 @@ namespace uu_library_app.FormUI
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel12.Controls.Add(this.pictureBox14);
-            this.panel12.Controls.Add(this.lblDil);
+            this.panel12.Controls.Add(this.lblToplamKategori);
             this.panel12.Controls.Add(this.label13);
             this.panel12.Location = new System.Drawing.Point(299, 209);
             this.panel12.Name = "panel12";
@@ -948,16 +948,16 @@ namespace uu_library_app.FormUI
             this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
             // 
-            // lblDil
+            // lblToplamKategori
             // 
-            this.lblDil.AutoSize = true;
-            this.lblDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblDil.Location = new System.Drawing.Point(78, 64);
-            this.lblDil.Name = "lblDil";
-            this.lblDil.Size = new System.Drawing.Size(37, 39);
-            this.lblDil.TabIndex = 1;
-            this.lblDil.Text = "0";
+            this.lblToplamKategori.AutoSize = true;
+            this.lblToplamKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamKategori.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamKategori.Name = "lblToplamKategori";
+            this.lblToplamKategori.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamKategori.TabIndex = 1;
+            this.lblToplamKategori.Text = "0";
             // 
             // label13
             // 
@@ -966,9 +966,9 @@ namespace uu_library_app.FormUI
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(19, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 25);
+            this.label13.Size = new System.Drawing.Size(149, 25);
             this.label13.TabIndex = 0;
-            this.label13.Text = "Toplam Yazar";
+            this.label13.Text = "Toplam Kategori";
             // 
             // panel13
             // 
@@ -1135,7 +1135,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Label lblDil;
+        private System.Windows.Forms.Label lblToplamKategori;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox15;

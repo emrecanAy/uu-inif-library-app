@@ -52,36 +52,7 @@ namespace uu_library_app.FormUI.Other_Operations
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Location locationToUpdate = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
-
-            try
-            {
-                if (txtAd.Text == "")
-                {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
-                    return;
-                }
-
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
-               "Uyarı!",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    manager.Update(locationToUpdate);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    listDataToTable();
-                    clearAllFields();
-                }
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+           
         }
 
         private void Location_actions_Load(object sender, EventArgs e)
@@ -175,6 +146,40 @@ namespace uu_library_app.FormUI.Other_Operations
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            Location locationToUpdate = new Location(txtId.Text, txtAd.Text, cmbKategori.SelectedValue.ToString());
+
+            try
+            {
+                if (txtAd.Text == "")
+                {
+                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    return;
+                }
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(locationToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ KonumId: " + locationToUpdate.Id + " | " + locationToUpdate.Shelf + " | KategoriId: " + locationToUpdate.CategoryId + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

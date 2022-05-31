@@ -44,6 +44,7 @@ namespace uu_library_app
             cmbYayinevi.Text = "";
             cmbYazar.Text = "";
             cmbDil.ResetText();
+            txtDemirbasNo.Clear();
         }
 
         private void edit_book_Load(object sender, EventArgs e)
@@ -168,6 +169,7 @@ namespace uu_library_app
             cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
         }
 
         private void txtCevirmen_Click(object sender, EventArgs e)

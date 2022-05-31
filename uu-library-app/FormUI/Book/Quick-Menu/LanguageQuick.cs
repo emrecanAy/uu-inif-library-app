@@ -50,7 +50,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             try
             {
                 manager.Add(languageToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
             }
             catch (Exception)

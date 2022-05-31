@@ -50,7 +50,7 @@ namespace uu_library_app.FormUI.MailSettings
             {
                 Category categoryToAdd = new Category(createGUID, txtAd.Text);
                 manager.Add(categoryToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToAdd.Id + " | " + categoryToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
             }
             catch (Exception ex)

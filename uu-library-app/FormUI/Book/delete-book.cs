@@ -117,6 +117,7 @@ namespace uu_library_app
             txtYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
 
         }
 

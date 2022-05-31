@@ -29,6 +29,7 @@ namespace uu_library_app.FormUI
         CategoryManager categoryManager = new CategoryManager(new CategoryDal());
         BookManager bookManager = new BookManager(new BookDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+        PublisherManager publisherManager = new PublisherManager(new PublisherDal());
         DataListerHelper dataListerHelper = new DataListerHelper();
         DashboardDataHelper dashboardDataHelper = new DashboardDataHelper();
 
@@ -38,11 +39,13 @@ namespace uu_library_app.FormUI
             {
                 conn.Open();
                 lblToplamUye.Text = studentManager.getAll().Count().ToString();
-                //lblToplamYazar.Text = authorManager.getAll().Count().ToString();
-                //lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
+                lblToplamYazar.Text = authorManager.getAll().Count().ToString();
+                lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
                 lblToplamKitap.Text = bookManager.getAll().Count().ToString();
+                lblToplamYazar.Text = authorManager.getAll().Count().ToString();
                 lblOduncSayi.Text = depositBookManager.getAll().Count().ToString();
                 lblOduncVerilen.Text = depositBookManager.getAllUndeposited().Count().ToString();
+                lblToplamYayinevi.Text = publisherManager.getAll().Count().ToString();
                 lblTeslimAlinan.Text = depositBookManager.getAllDeposited().Count().ToString();
                 Student[] arrStudent = dashboardDataHelper.GetTopFiveReaders().ToArray();
                 Department[] arrDepartment = dashboardDataHelper.GetTopFiveReaderDepartments().ToArray();
@@ -56,8 +59,8 @@ namespace uu_library_app.FormUI
                 Department d1 = arrDepartment[0];
                 Department d2 = arrDepartment[1];
                 Department d3 = arrDepartment[2];
-                //Department d4 = arrDepartment[3];
-                //Department d5 = arrDepartment[4];
+                Department d4 = arrDepartment[3];
+                Department d5 = arrDepartment[4];
 
                 lblUye1.Text = s1.FirstName;
                 lblUye2.Text = s2.FirstName;
@@ -74,14 +77,14 @@ namespace uu_library_app.FormUI
                 lblBolum1.Text = d1.Name;
                 lblBolum2.Text = d2.Name;
                 lblBolum3.Text = d3.Name;
-                //lblBolum4.Text = d4.Name;
-                //lblBolum5.Text = d5.Name;
+                lblBolum4.Text = d4.Name;
+                lblBolum5.Text = d5.Name;
 
                 lblBolum1OkumaSayisi.Text = d1.Id.ToString();
                 lblBolum2OkumaSayisi.Text = d2.Id.ToString();
                 lblBolum3OkumaSayisi.Text = d3.Id.ToString();
-                //lblBolum4OkumaSayisi.Text = d4.Id.ToString();
-                //lblBolum5OkumaSayisi.Text = d5.Id.ToString();
+                lblBolum4OkumaSayisi.Text = d4.Id.ToString();
+                lblBolum5OkumaSayisi.Text = d5.Id.ToString();
 
 
                 DataTable dt = new DataTable();

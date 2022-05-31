@@ -76,38 +76,7 @@ namespace uu_library_app
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Category categoryToUpdate = new Category(txtId.Text, txtAd.Text);
-
-            try
-            {
-                if (txtAd.Text == "")
-                {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
-                    return;
-                
-                }
-
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
-                "Uyarı!",
-                  MessageBoxButtons.YesNo,
-                  MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    manager.Update(categoryToUpdate);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    listDataToTable();
-                    clearAllFields();
-                }
-
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+            
         }
 
         private void btnEkle_Click_1(object sender, EventArgs e)
@@ -172,6 +141,42 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            Category categoryToUpdate = new Category(txtId.Text, txtAd.Text);
+
+            try
+            {
+                if (txtAd.Text == "")
+                {
+                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    return;
+
+                }
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(categoryToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + categoryToUpdate.Id + " | " + categoryToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

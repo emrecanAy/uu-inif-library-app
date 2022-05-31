@@ -60,36 +60,7 @@ namespace uu_library_app
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Language languageToUpdate = new Language(txtId.Text, txtDil.Text);
-
-            try
-            {
-                if (txtDil.Text == "" && txtDil.Text.Length < 3)
-                {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
-                    return;
-                }
-
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
-               "Uyarı!",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    manager.Update(languageToUpdate);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    listDataToTable();
-                    clearAllFields();
-                }
-               
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
-                throw;
-            }
+           
         }
 
         private void Language_Operations_Load(object sender, EventArgs e)
@@ -172,6 +143,40 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            Language languageToUpdate = new Language(txtId.Text, txtDil.Text);
+
+            try
+            {
+                if (txtDil.Text == "" && txtDil.Text.Length < 3)
+                {
+                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    return;
+                }
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(languageToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToUpdate.Id + " | " + languageToUpdate.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

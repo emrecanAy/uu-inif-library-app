@@ -67,6 +67,7 @@ namespace uu_library_app
             this.btnGuncelle.TabIndex = 89;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click_1);
             // 
             // btnSil
             // 

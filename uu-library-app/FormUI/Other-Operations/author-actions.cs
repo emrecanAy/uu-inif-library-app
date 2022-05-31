@@ -54,51 +54,6 @@ namespace uu_library_app
             txtSoyad.Clear();
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            if(txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
-            {
-                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
-                return;
-            }
-
-            Author authorToUpdate = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
-            try
-            {
-                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
-               "Uyarı!",
-                 MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    manager.Update(authorToUpdate);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToUpdate.Id + " | " + authorToUpdate.FirstName + " " + authorToUpdate.LastName + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    listDataToTable();
-                    clearAllFields();
-                }
-
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
-                throw;
-            }
-        }
-
         private void author_actions_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -192,6 +147,40 @@ namespace uu_library_app
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
+            {
+                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
+                return;
+            }
+
+            Author authorToUpdate = new Author(txtId.Text, txtAd.Text, txtSoyad.Text);
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(authorToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + authorToUpdate.Id + " | " + authorToUpdate.FirstName + " " + authorToUpdate.LastName + "" + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                throw;
+            }
         }
     }
 }

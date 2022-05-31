@@ -96,7 +96,6 @@ namespace uu_library_app
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ScrollBars = ScrollBars.None;
             conn.Open();
             listDataToTable();
             conn.Close();
@@ -164,6 +163,40 @@ namespace uu_library_app
         {
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            Publisher publisherToUpdate = new Publisher(txtId.Text, txtAd.Text);
+
+            try
+            {
+                if (txtAd.Text == "")
+                {
+                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    return;
+                }
+
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+               "Uyarı!",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    manager.Update(publisherToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToUpdate.Id + " | " + publisherToUpdate.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    listDataToTable();
+                    clearAllFields();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                throw;
+            }
         }
     }
 }

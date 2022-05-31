@@ -312,7 +312,7 @@ namespace uu_library_app.Core.Helpers
         public static void listInnerJoinSomeBookDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Language.language, Category.name, Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter, Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Language.language, Category.name, Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter, Book.createdAt, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
             da.Fill(dt);
             dataGrid.DataSource = dt;
             dataGrid.Columns[0].Visible = false;

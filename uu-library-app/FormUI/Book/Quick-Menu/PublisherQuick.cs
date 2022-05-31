@@ -49,7 +49,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             try
             {
                 manager.Add(publisherToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisherToAdd.Id + " | " + publisherToAdd.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
             }
             catch (Exception)
