@@ -23,6 +23,10 @@ namespace uu_library_app.Business.Concrete
                 _depositBook.Add(depositBook);
             }
         }
+        public DepositBook findById(string id)
+        {
+            return _depositBook.findById(id);
+        }
 
         public void Delete(DepositBook depositBook)
         {

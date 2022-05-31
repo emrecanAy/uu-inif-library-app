@@ -1,15 +1,19 @@
-﻿using MySql.Data.MySqlClient;
+﻿using FastMember;
+using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Core.Helpers;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.Entity.Concrete.DTO;
 
 namespace uu_library_app.FormUI
 {
@@ -70,11 +74,161 @@ namespace uu_library_app.FormUI
             cmbVeri.DisplayMember = "Value";
             cmbVeri.ValueMember = "Key";
 
+            Dictionary<string, string> comboSourceFileTypes = new Dictionary<string, string>();
+            comboSourceFileTypes.Add("excel", "EXCEL");
+            comboSourceFileTypes.Add("pdf", "PDF");
+            comboSourceFileTypes.Add("csv", "CSV");
+            comboSourceFileTypes.Add("xml", "XML");
+            comboSourceFileTypes.Add("json", "JSON");
+
+            cmbDosyaTuru.DataSource = new BindingSource(comboSourceFileTypes, null);
+            cmbDosyaTuru.DisplayMember = "Value";
+            cmbDosyaTuru.ValueMember = "Key";
+
         }
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
+            {
+                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
+            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
+            {
+                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNames();
+                DataTable table = new DataTable();
+                using (var reader = ObjectReader.Create(data))
+                {
+                    table.Load(reader);
+                }
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(table, Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "EXCEL dosyası|*.xlsx";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ToEXCEL(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnCSV_Click(object sender, EventArgs e)
+        {
+            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "CSV dosyası|*.csv";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ToCSV(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnJSON_Click(object sender, EventArgs e)
+        {
+            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "JSON dosyası|*.json";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    DataSet ds = new DataSet();
+                    ds.Tables.Add(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn));
+                    FileWriter.ToJSON(ds, Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnXML_Click(object sender, EventArgs e)
+        {
+            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "XML dosyası|*.xml";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    DataSet ds = new DataSet();
+                    ds.Tables.Add(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn));
+                    FileWriter.ToXML(ds, Path.GetFullPath(save.FileName), "Ogrenciler");
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

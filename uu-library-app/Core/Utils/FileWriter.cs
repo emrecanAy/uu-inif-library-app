@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ namespace uu_library_app.Core.Helpers
     {
         public static void ToCSV(this DataTable dtDataTable, string strFilePath)
         {
-            StreamWriter sw = new StreamWriter(strFilePath + ".csv", false);
+            StreamWriter sw = new StreamWriter(strFilePath, false);
             //headers    
             for (int i = 0; i < dtDataTable.Columns.Count; i++)
             {
@@ -52,10 +54,10 @@ namespace uu_library_app.Core.Helpers
             sw.Close();
         }
 
-        public static void ToXML(DataSet ds, string filePath, string fileName, string rootName)
+        public static void ToXML(DataSet ds, string filePath, string rootName)
         {
             ds.DataSetName = rootName;
-            ds.WriteXml(filePath + ".xml");
+            ds.WriteXml(filePath);
 
         }
 
@@ -66,7 +68,7 @@ namespace uu_library_app.Core.Helpers
             int endIndex = json.IndexOf("]") + 1;
             int length = endIndex - startIndex + 1;
             json = json.Substring(startIndex, length);
-            File.WriteAllText(fileName + ".json", json);
+            File.WriteAllText(fileName, json);
 
         }
 
@@ -87,7 +89,48 @@ namespace uu_library_app.Core.Helpers
 
             lines.AddRange(valueLines);
 
-            File.WriteAllLines(fileName + ".xlsx", lines);
+            File.WriteAllLines(fileName, lines);
+        }
+
+        public static void ExportToPdf(DataTable dt, string strFilePath)
+        {
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(strFilePath, FileMode.Create));
+            document.Open();
+            iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
+
+            PdfPTable table = new PdfPTable(dt.Columns.Count);
+            PdfPRow row = null;
+            float[] widths = new float[dt.Columns.Count];
+            for (int i = 0; i < dt.Columns.Count; i++)
+                widths[i] = 4f;
+
+            table.SetWidths(widths);
+
+            table.WidthPercentage = 100;
+            int iCol = 0;
+            string colname = "";
+            PdfPCell cell = new PdfPCell(new Phrase("Products"));
+
+            cell.Colspan = dt.Columns.Count;
+
+            foreach (DataColumn c in dt.Columns)
+            {
+                table.AddCell(new Phrase(c.ColumnName, font5));
+            }
+
+            foreach (DataRow r in dt.Rows)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    for (int h = 0; h < dt.Columns.Count; h++)
+                    {
+                        table.AddCell(new Phrase(r[h].ToString(), font5));
+                    }
+                }
+            }
+            document.Add(table);
+            document.Close();
         }
 
 

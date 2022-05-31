@@ -30,7 +30,7 @@ namespace uu_library_app.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veri_İslemleri));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
@@ -61,6 +61,7 @@ namespace uu_library_app.FormUI
             this.btnPDF = new button.Toolbox.RadiusButton();
             this.txtOgrenciId = new System.Windows.Forms.TextBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.cmbDosyaTuru = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
@@ -100,14 +101,14 @@ namespace uu_library_app.FormUI
             this.dgvDeneme.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeneme.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeneme.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDeneme.GridColor = System.Drawing.Color.White;
             this.dgvDeneme.Location = new System.Drawing.Point(3, 42);
             this.dgvDeneme.Name = "dgvDeneme";
@@ -368,6 +369,7 @@ namespace uu_library_app.FormUI
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbDosyaTuru);
             this.panel1.Controls.Add(this.cmbVeri);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.dgvLog);
@@ -414,6 +416,7 @@ namespace uu_library_app.FormUI
             this.btnXML.Text = "XML";
             this.btnXML.TextColor = System.Drawing.Color.White;
             this.btnXML.UseVisualStyleBackColor = false;
+            this.btnXML.Click += new System.EventHandler(this.btnXML_Click);
             // 
             // btnJSON
             // 
@@ -433,6 +436,7 @@ namespace uu_library_app.FormUI
             this.btnJSON.Text = "JSON";
             this.btnJSON.TextColor = System.Drawing.Color.White;
             this.btnJSON.UseVisualStyleBackColor = false;
+            this.btnJSON.Click += new System.EventHandler(this.btnJSON_Click);
             // 
             // btnCSV
             // 
@@ -452,6 +456,7 @@ namespace uu_library_app.FormUI
             this.btnCSV.Text = "CSV";
             this.btnCSV.TextColor = System.Drawing.Color.White;
             this.btnCSV.UseVisualStyleBackColor = false;
+            this.btnCSV.Click += new System.EventHandler(this.btnCSV_Click);
             // 
             // btnExcel
             // 
@@ -471,6 +476,7 @@ namespace uu_library_app.FormUI
             this.btnExcel.Text = "Excel";
             this.btnExcel.TextColor = System.Drawing.Color.White;
             this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnPDF
             // 
@@ -490,6 +496,15 @@ namespace uu_library_app.FormUI
             this.btnPDF.Text = "PDF";
             this.btnPDF.TextColor = System.Drawing.Color.White;
             this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
+            // txtOgrenciId
+            // 
+            this.txtOgrenciId.Location = new System.Drawing.Point(672, 32);
+            this.txtOgrenciId.Name = "txtOgrenciId";
+            this.txtOgrenciId.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciId.TabIndex = 274;
+            this.txtOgrenciId.Visible = false;
             // 
             // txtOgrenciId
             // 
@@ -507,6 +522,19 @@ namespace uu_library_app.FormUI
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(162, 44);
             this.dgvData.TabIndex = 280;
+            // 
+            // cmbDosyaTuru
+            // 
+            this.cmbDosyaTuru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDosyaTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDosyaTuru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDosyaTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbDosyaTuru.ForeColor = System.Drawing.Color.White;
+            this.cmbDosyaTuru.FormattingEnabled = true;
+            this.cmbDosyaTuru.Location = new System.Drawing.Point(36, 118);
+            this.cmbDosyaTuru.Name = "cmbDosyaTuru";
+            this.cmbDosyaTuru.Size = new System.Drawing.Size(496, 28);
+            this.cmbDosyaTuru.TabIndex = 281;
             // 
             // Veri_İslemleri
             // 
@@ -572,5 +600,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.ComboBox cmbVeri;
         private System.Windows.Forms.TextBox txtOgrenciId;
         private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.ComboBox cmbDosyaTuru;
     }
 }

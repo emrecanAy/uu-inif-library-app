@@ -7,14 +7,17 @@ using uu_library_app.Entity.Abstract;
 
 namespace uu_library_app.Entity.Concrete
 {
-    public class DepositBook : IBaseModelWithIdAndDate
+    public class DepositBook
     {
+        private string id;
         private string studentId;
         private string bookId;
         private DateTime depositDate;
         private bool status;
         private DateTime escrowDate;
         private DateTime dateShouldBeEscrow;
+        private DateTime createdAt;
+        private bool deleted;
         public DepositBook() { }
         public DepositBook(string id, string studentId, string bookId, DateTime depositDate)
         {

@@ -18,6 +18,7 @@ namespace uu_library_app.Business.Abstract
         void Delete(DepositBook depositBook);
         void depositBook(string id);
         List<DepositBook> findAllByStudentId(string studentId);
+        DepositBook findById(string id);
 
     }
 }

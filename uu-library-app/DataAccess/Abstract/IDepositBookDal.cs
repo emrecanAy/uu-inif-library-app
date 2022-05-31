@@ -18,6 +18,7 @@ namespace uu_library_app.DataAccess.Abstract
         void Delete(DepositBook depositBook);
         void depositBook(string id);
         List<DepositBook> findAllByStudentId(string studentId);
+        DepositBook findById(string id);
 
 
     }

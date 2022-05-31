@@ -35,11 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -127,6 +133,7 @@
     <Compile Include="Core\Helpers\DashboardDataHelper.cs" />
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
+    <Compile Include="Core\Helpers\ExportFileDataHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />
     <Compile Include="Core\Logger\FileLogger\Abstract\IFileLoggerDal.cs" />
     <Compile Include="Core\Logger\FileLogger\Abstract\IFileLoggerService.cs" />
@@ -151,6 +158,7 @@
     <Compile Include="DataAccess\Concrete\FacultyDal.cs" />
     <Compile Include="DataAccess\Concrete\LoggerDal.cs" />
     <Compile Include="DataAccess\Concrete\SettingsDal.cs" />
+    <Compile Include="Entity\Concrete\DTO\DepositBookDto.cs" />
     <Compile Include="Entity\Concrete\Faculty.cs" />
     <Compile Include="Entity\Concrete\Logger.cs" />
     <Compile Include="Entity\Concrete\Settings.cs" />
