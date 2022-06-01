@@ -545,7 +545,7 @@ namespace uu_library_app.FormUI
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(186, 45);
             this.btnMembers.TabIndex = 10;
-            this.btnMembers.Text = "   Öğrenciler";
+            this.btnMembers.Text = "     Üyeler";
             this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);

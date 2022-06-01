@@ -52,33 +52,7 @@ namespace uu_library_app
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "")
-            {
-                wehMessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
-                "Uyarı!",
-                  MessageBoxButtons.YesNo,
-                  MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Student student = new Student(txtId.Text, txtBolum.Text, txtFakulte.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
-                    manager.Delete(student);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + student.Id + " | " + student.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                    logger.Log(log);
-                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
-                }    
-            }
-            catch (Exception)
-            {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
-            }
+           
         }
 
      

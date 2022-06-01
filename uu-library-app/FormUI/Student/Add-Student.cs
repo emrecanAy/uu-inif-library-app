@@ -65,7 +65,7 @@ namespace uu_library_app.FormUI
             dataGridView1.Columns[6].HeaderText = "Bölüm";
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
+            //dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
@@ -77,6 +77,7 @@ namespace uu_library_app.FormUI
             txtEmail.Clear();
             txtSoyad.Clear();
             comboBox1.ResetText();
+            cmbFakulte.ResetText();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -193,6 +194,82 @@ namespace uu_library_app.FormUI
         private void txtOkulNo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || txtOkulNo.Text == "" || comboBox1.Text == "")
+            {
+                wehMessageBox.Show("Lütfen geçerli değerler giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    manager.Update(studentToUpdate);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+
+                }
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                throw;
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                wehMessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Student student = new Student(txtId.Text, comboBox1.Text, cmbFakulte.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    manager.Delete(student);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + student.Id + " | " + student.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                }
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                throw;
+            }
         }
     }
 }
