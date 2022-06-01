@@ -414,6 +414,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormUI\Toolbox\WehMessageBox.cs" />
+    <Compile Include="FormUI\Toolbox\wehPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormUI\Veri-İslemleri.cs">
       <SubType>Form</SubType>
     </Compile>

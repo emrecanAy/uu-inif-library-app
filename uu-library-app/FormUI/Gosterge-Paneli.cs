@@ -64,7 +64,7 @@ namespace uu_library_app.FormUI
                 Department d4 = arrDepartment[3];
                 Department d5 = arrDepartment[4];
 
-                lblUye1.Text = s1.FirstName;
+                this.lblUye1.Text = s1.FirstName;
                 lblUye2.Text = s2.FirstName;
                 lblUye3.Text = s3.FirstName;
                 lblUye4.Text = s4.FirstName;
