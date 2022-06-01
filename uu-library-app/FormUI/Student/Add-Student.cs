@@ -45,10 +45,6 @@ namespace uu_library_app.FormUI
         LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
 
-        private void Add_Student_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void listDataToTable()
         {
@@ -65,7 +61,6 @@ namespace uu_library_app.FormUI
             dataGridView1.Columns[6].HeaderText = "Bölüm";
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
-            //dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
@@ -97,7 +92,7 @@ namespace uu_library_app.FormUI
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
                 clearAllFields();
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
+                DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             }
             catch (Exception)
             {
@@ -112,7 +107,7 @@ namespace uu_library_app.FormUI
 
             conn.Open();
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-            DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlCommand commandToFaculties = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
@@ -151,22 +146,7 @@ namespace uu_library_app.FormUI
             Aciklama.IsBalloon = true;
             Aciklama.SetToolTip(wehTextBox1, "    ");
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
    
-        private void txtOkulNo_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
@@ -270,6 +250,11 @@ namespace uu_library_app.FormUI
                 wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
+        }
+
+        private void txtOkulNo_TextChanged_1(object sender, EventArgs e)
+        {
+            txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
         }
     }
 }
