@@ -54,6 +54,8 @@ namespace uu_library_app.FormUI.Deposit
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtOgrenciId = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cmbDil = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlinanKitaplar)).BeginInit();
             this.panel4.SuspendLayout();
@@ -64,6 +66,7 @@ namespace uu_library_app.FormUI.Deposit
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilmeyenKitaplar)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -357,12 +360,35 @@ namespace uu_library_app.FormUI.Deposit
             this.txtOgrenciId.TabIndex = 271;
             this.txtOgrenciId.Visible = false;
             // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.cmbDil);
+            this.panel9.Location = new System.Drawing.Point(489, 12);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(243, 45);
+            this.panel9.TabIndex = 272;
+            // 
+            // cmbDil
+            // 
+            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDil.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbDil.ForeColor = System.Drawing.Color.White;
+            this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.Location = new System.Drawing.Point(3, 4);
+            this.cmbDil.Name = "cmbDil";
+            this.cmbDil.Size = new System.Drawing.Size(235, 34);
+            this.cmbDil.TabIndex = 245;
+            // 
             // Book_query
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.txtOgrenciId);
             this.Controls.Add(this.panel7);
@@ -388,6 +414,7 @@ namespace uu_library_app.FormUI.Deposit
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeslimEdilenKitaplar)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +442,7 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.DataGridView dgvTeslimEdilenKitaplar;
         private System.Windows.Forms.DataGridView dgvDeneme;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.ComboBox cmbDil;
     }
 }
