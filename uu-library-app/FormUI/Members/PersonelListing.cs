@@ -32,7 +32,7 @@ namespace uu_library_app
         private void Delete_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable2(dataGridView1, conn);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -44,16 +44,19 @@ namespace uu_library_app
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+
+
+            Dictionary<string, string> comboSource = new Dictionary<string, string>();
+            comboSource.Add("firstName", "Personel Adı");
+            comboSource.Add("Email", "E-Posta");
+            comboSource.Add("departmentName", "Bölüm");
+            comboSource.Add("facultyName", "Fakülte");
+            cmbAranacakAlan.DataSource = new BindingSource(comboSource, null);
+            cmbAranacakAlan.DisplayMember = "Value";
+            cmbAranacakAlan.ValueMember = "Key";
+
             conn.Close();
         }    
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {}
-
-        private void btnSil_Click(object sender, EventArgs e)
-        {
-           
-        }
 
      
 
@@ -64,8 +67,19 @@ namespace uu_library_app
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void wehTextBox1__TextChanged_1(object sender, EventArgs e)
+        {
+            string value = cmbAranacakAlan.SelectedValue.ToString();
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-      string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void radiusButton1_Click(object sender, EventArgs e)
+        {
+            DataListerToTableHelper.listInnerJoinAllPersonnelsDataToTableBetweenDates(dataGridView1, conn, dateTime1.Value, dateTime2.Value);
         }
     }
 }

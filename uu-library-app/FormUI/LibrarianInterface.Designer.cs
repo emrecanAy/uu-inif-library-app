@@ -72,6 +72,7 @@ namespace uu_library_app.FormUI
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +82,8 @@ namespace uu_library_app.FormUI
             this.panelBookSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -753,13 +756,25 @@ namespace uu_library_app.FormUI
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Location = new System.Drawing.Point(192, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1446, 13);
+            this.panel5.Size = new System.Drawing.Size(1446, 29);
             this.panel5.TabIndex = 1;
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
             this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1217, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // LibrarianInterface
             // 
@@ -786,6 +801,8 @@ namespace uu_library_app.FormUI
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -834,5 +851,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnVeriCikti;
         private System.Windows.Forms.Button btnDosya;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

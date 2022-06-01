@@ -30,6 +30,7 @@ namespace uu_library_app.FormUI
         BookManager bookManager = new BookManager(new BookDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         PublisherManager publisherManager = new PublisherManager(new PublisherDal());
+        PersonnelManager personnelManager = new PersonnelManager(new PersonnelDal());
         DataListerHelper dataListerHelper = new DataListerHelper();
         DashboardDataHelper dashboardDataHelper = new DashboardDataHelper();
 
@@ -38,7 +39,8 @@ namespace uu_library_app.FormUI
             try
             {
                 conn.Open();
-                lblToplamUye.Text = studentManager.getAll().Count().ToString();
+                int test = personnelManager.getAll().Count();
+                lblToplamUye.Text = (studentManager.getAll().Count() + personnelManager.getAll().Count()).ToString();
                 lblToplamYazar.Text = authorManager.getAll().Count().ToString();
                 lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
                 lblToplamKitap.Text = bookManager.getAll().Count().ToString();

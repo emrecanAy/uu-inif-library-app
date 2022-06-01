@@ -29,12 +29,15 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Student));
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +48,7 @@ namespace uu_library_app
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDepartman = new System.Windows.Forms.ComboBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
@@ -68,9 +71,6 @@ namespace uu_library_app
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,14 +103,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -151,7 +151,7 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbDepartman);
             this.panel2.Controls.Add(this.lblAd);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblSoyad);
@@ -173,6 +173,57 @@ namespace uu_library_app
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 268;
+            // 
+            // btnSil
+            // 
+            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSil.FlatAppearance.BorderSize = 2;
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnSil.ForeColor = System.Drawing.Color.White;
+            this.btnSil.Location = new System.Drawing.Point(187, 628);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(148, 38);
+            this.btnSil.TabIndex = 89;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuncelle.FlatAppearance.BorderSize = 2;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(354, 628);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(148, 38);
+            this.btnGuncelle.TabIndex = 88;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click_1);
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEkle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEkle.FlatAppearance.BorderSize = 2;
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(21, 628);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(148, 38);
+            this.btnEkle.TabIndex = 87;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // panel6
             // 
@@ -260,18 +311,18 @@ namespace uu_library_app
             this.panel7.Size = new System.Drawing.Size(445, 1);
             this.panel7.TabIndex = 80;
             // 
-            // comboBox1
+            // cmbDepartman
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 394);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(445, 35);
-            this.comboBox1.TabIndex = 64;
+            this.cmbDepartman.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDepartman.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbDepartman.ForeColor = System.Drawing.Color.White;
+            this.cmbDepartman.FormattingEnabled = true;
+            this.cmbDepartman.Location = new System.Drawing.Point(57, 394);
+            this.cmbDepartman.Name = "cmbDepartman";
+            this.cmbDepartman.Size = new System.Drawing.Size(445, 35);
+            this.cmbDepartman.TabIndex = 64;
             // 
             // lblAd
             // 
@@ -512,54 +563,6 @@ namespace uu_library_app
             this.wehTextBox1.UnderlinedStyle = false;
             this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
-            // btnSil
-            // 
-            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSil.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSil.FlatAppearance.BorderSize = 2;
-            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSil.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(187, 628);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(148, 38);
-            this.btnSil.TabIndex = 89;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = false;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGuncelle.FlatAppearance.BorderSize = 2;
-            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuncelle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(354, 628);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(148, 38);
-            this.btnGuncelle.TabIndex = 88;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEkle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEkle.FlatAppearance.BorderSize = 2;
-            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Font = new System.Drawing.Font("Nirmala UI", 12.25F);
-            this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(21, 628);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(148, 38);
-            this.btnEkle.TabIndex = 87;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = false;
-            // 
             // Edit_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,7 +618,7 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDepartman;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSoyad;

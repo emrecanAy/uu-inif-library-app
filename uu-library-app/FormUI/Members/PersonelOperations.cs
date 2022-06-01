@@ -28,7 +28,7 @@ namespace uu_library_app
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LoggerManager logger = new LoggerManager(new LoggerDal());
-        StudentManager manager = new StudentManager(new StudentDal());
+        PersonnelManager manager = new PersonnelManager(new PersonnelDal());
 
         private void clearAllFields()
         {
@@ -36,13 +36,13 @@ namespace uu_library_app
             txtAd.Clear();
             txtEmail.Clear();
             txtSoyad.Clear();
-            comboBox1.ResetText();
+            cmbDepartman.ResetText();
         }
      
         private void Edit_Student_Load(object sender, EventArgs e)
         {
             conn.Open();
-            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlCommand allFaculty = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
@@ -67,9 +67,9 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
 
-            comboBox1.DataSource = ds.Tables[0];
-            comboBox1.DisplayMember = "name";
-            comboBox1.ValueMember = "id";
+            cmbDepartman.DataSource = ds.Tables[0];
+            cmbDepartman.DisplayMember = "name";
+            cmbDepartman.ValueMember = "id";
 
             cmbFakulte.DataSource = dsFaculty.Tables[0];
             cmbFakulte.DisplayMember = "name";
@@ -83,9 +83,9 @@ namespace uu_library_app
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbDepartman.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -97,7 +97,98 @@ namespace uu_library_app
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
-        } 
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            string createGUID = System.Guid.NewGuid().ToString();
+
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || cmbDepartman.Text == "")
+            {
+                wehMessageBox.Show("Lütfen geçerli değerler giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                Personnel personnel = new Personnel(createGUID, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                manager.Add(personnel);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
+                logger.Log(log);
+                clearAllFields();
+                DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                throw;
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                wehMessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                    manager.Delete(personnel);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
+                }
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                throw;
+            }
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "")
+            {
+                wehMessageBox.Show("Lütfen geçerli değerler giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
+                "Uyarı!",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                    manager.Update(personnel);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
+
+                }
+            }
+            catch (Exception)
+            {
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                throw;
+            }
+        }
     }
     }
 

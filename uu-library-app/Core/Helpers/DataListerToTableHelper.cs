@@ -65,15 +65,22 @@ namespace uu_library_app.Core.Helpers
             MySqlDataAdapter da = new MySqlDataAdapter("Select * From Student WHERE deleted=false", conn);
             da.Fill(dt);
             dataGrid.DataSource = dt;
-            //dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            //dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            //dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            //dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
-            //dataGrid.EnableHeadersVisualStyles = false;
-            //dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            //dataGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            //dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
-            //dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
+        public static void listBorrowingBookPersonnelDataToTable(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, CONCAT( Personnel.firstName, ' ', Personnel.lastName ) AS personnelFullName, Department.name, Personnel.eMail, Faculty.name FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[1].HeaderText = "Öğrenci";
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[2].HeaderText = "";
+            dataGrid.Columns[3].Visible = false;
+            dataGrid.ColumnHeadersVisible = false;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
         }
 
@@ -90,7 +97,6 @@ namespace uu_library_app.Core.Helpers
             dataGrid.ColumnHeadersVisible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-
         }
 
         public static void listAllTakenBooksDataToTable(DataGridView dataGrid, MySqlConnection conn, string studentId)
@@ -134,6 +140,37 @@ namespace uu_library_app.Core.Helpers
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
+        }
+
+        public static void listInnerJoinAllPersonnelsNotConcatDataToTable(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[2].HeaderText = "";
+            dataGrid.Columns[4].Visible = false;
+            dataGrid.Columns[5].Visible = false;
+            dataGrid.ColumnHeadersVisible = false;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+        }
+
+        public static void listInnerJoinAllPersonnelsNotConcatDataToTable2(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[1].HeaderText = "Ad";
+            dataGrid.Columns[2].HeaderText = "Soyad";
+            dataGrid.Columns[3].HeaderText = "E-Posta";
+            dataGrid.Columns[4].HeaderText = "Bölüm";
+            dataGrid.Columns[5].HeaderText = "Fakülte";
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
         public static void listUndepositBooksDataToTable(DataGridView dataGrid, MySqlConnection conn, string studentId)
@@ -288,6 +325,24 @@ namespace uu_library_app.Core.Helpers
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
+        }
+
+        public static void listInnerJoinAllPersonnelsDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
+        {
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0 AND DATE(Personnels.createdAt) BETWEEN @p1 AND @p2 ORDER BY Personnels.createdAt ASC", conn);
+            command.Parameters.AddWithValue("@p1", startDate);
+            command.Parameters.AddWithValue("@p2", endDate);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[2].HeaderText = "";
+            dataGrid.Columns[4].Visible = false;
+            dataGrid.Columns[5].Visible = false;
+            dataGrid.ColumnHeadersVisible = false;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
         public static void listInnerJoinAllStudentsNotConcatDataToTable(DataGridView dataGrid, MySqlConnection conn)

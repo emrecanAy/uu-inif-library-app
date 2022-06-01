@@ -125,9 +125,11 @@
     <Compile Include="Business\Abstract\IEntityService.cs" />
     <Compile Include="Business\Abstract\IFacultyService.cs" />
     <Compile Include="Business\Abstract\ILoggerService.cs" />
+    <Compile Include="Business\Abstract\IPersonnelService.cs" />
     <Compile Include="Business\Abstract\ISettingsService.cs" />
     <Compile Include="Business\Concrete\FacultyManager.cs" />
     <Compile Include="Business\Concrete\LoggerManager.cs" />
+    <Compile Include="Business\Concrete\PersonnelManager.cs" />
     <Compile Include="Business\Concrete\SettingsManager.cs" />
     <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DashboardDataHelper.cs" />
@@ -154,13 +156,16 @@
     <Compile Include="Core\Utils\StringEncoder.cs" />
     <Compile Include="DataAccess\Abstract\IFacultyDal.cs" />
     <Compile Include="DataAccess\Abstract\ILoggerDal.cs" />
+    <Compile Include="DataAccess\Abstract\IPersonnelDal.cs" />
     <Compile Include="DataAccess\Abstract\ISettingsDal.cs" />
     <Compile Include="DataAccess\Concrete\FacultyDal.cs" />
     <Compile Include="DataAccess\Concrete\LoggerDal.cs" />
+    <Compile Include="DataAccess\Concrete\PersonnelDal.cs" />
     <Compile Include="DataAccess\Concrete\SettingsDal.cs" />
     <Compile Include="Entity\Concrete\DTO\DepositBookDto.cs" />
     <Compile Include="Entity\Concrete\Faculty.cs" />
     <Compile Include="Entity\Concrete\Logger.cs" />
+    <Compile Include="Entity\Concrete\Personnel.cs" />
     <Compile Include="Entity\Concrete\Settings.cs" />
     <Compile Include="FormUI\Book\book-listing.cs">
       <SubType>Form</SubType>

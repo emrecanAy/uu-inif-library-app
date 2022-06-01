@@ -60,6 +60,13 @@ namespace uu_library_app
             dataGridView2.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDeneme.ScrollBars = ScrollBars.None;
 
+            Dictionary<string, string> comboSourceDataTypes = new Dictionary<string, string>();
+            comboSourceDataTypes.Add("student", "Öğrenci");
+            comboSourceDataTypes.Add("personnel", "Personel");
+            cmbKisi.DataSource = new BindingSource(comboSourceDataTypes, null);
+            cmbKisi.DisplayMember = "Value";
+            cmbKisi.ValueMember = "Key";
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -75,10 +82,9 @@ namespace uu_library_app
         DataView dataView = new DataView();
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
-            if(txtKitapId.Text == "" || txtKitapAd.Text == "")
+            if (txtKitapId.Text == "" || txtKitapAd.Text == "")
             {
-                wehMessageBox.Show("Ödünç verilecek kitabı seçin...","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                wehMessageBox.Show("Ödünç verilecek kitabı seçin...", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtOgrenciId.Text == "" || txtAdSoyad.Text == "")
@@ -93,27 +99,27 @@ namespace uu_library_app
                 Book book = bookManager.getById(txtKitapId.Text);
                 Console.WriteLine(book.BookName);
                 DepositBook depositBookToAdd = new DepositBook(createGUID, txtOgrenciId.Text, txtKitapId.Text, DateTime.Now);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ ÖdünçId:" + depositBookToAdd.Id + " | KitapId:" + depositBookToAdd.BookId + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından ödünç verildi! -Tarih: " + DateTime.Now);
+                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[KitapId:" + depositBookToAdd.BookId + "| ÖğrenciId:" + depositBookToAdd.StudentId + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından ödünç verildi! -Tarih: " + DateTime.Now);
 
                 if (book.StockCount == 0)
                 {
-                   wehMessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları daha önce ödünç verildiği için kütüphanede aktif olarak yoktur!","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    wehMessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları daha önce ödünç verildiği için kütüphanede aktif olarak yoktur!", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 depositBookManager.Add(depositBookToAdd);
                 logger.Log(log);
-                wehMessageBox.Show("Kitap başarıyla ödünç verildi!","Başarılı",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                wehMessageBox.Show("Kitap başarıyla ödünç verildi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 book.StockCount = book.StockCount - 1;
                 bookManager.Update(book);
-                Console.WriteLine("Stok adet: "+book.StockCount);
+                Console.WriteLine("Stok adet: " + book.StockCount);
 
             }
             catch (Exception)
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
-
+  
         }
 
         private void txtKitapId_TextChanged(object sender, EventArgs e)
@@ -153,6 +159,22 @@ namespace uu_library_app
         {
             (dataGridView2.DataSource as DataTable).DefaultView.RowFilter =
            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox2.Texts);
+        }
+
+        private void cmbKisi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbKisi.SelectedValue.ToString() == "personnel")
+            {
+                lblOkulNo.Text = "Fakülte";
+                DataListerToTableHelper.listBorrowingBookPersonnelDataToTable(dgvDeneme, conn);
+
+            }
+            if (cmbKisi.SelectedValue.ToString() == "student")
+            {
+                lblOkulNo.Text = "Okul No";
+                DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
+            }
+
         }
     }
 }

@@ -378,5 +378,10 @@ namespace uu_library_app.FormUI
         {
             move.mov = 0;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

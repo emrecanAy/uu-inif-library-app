@@ -42,7 +42,7 @@ namespace uu_library_app
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblOkulNo = new System.Windows.Forms.Label();
             this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -83,7 +83,7 @@ namespace uu_library_app
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbDil = new System.Windows.Forms.ComboBox();
+            this.cmbKisi = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -221,7 +221,7 @@ namespace uu_library_app
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnEkle);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.lblOkulNo);
             this.panel2.Controls.Add(this.txtOkulNo);
             this.panel2.Controls.Add(this.panel13);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -277,17 +277,17 @@ namespace uu_library_app
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // label8
+            // lblOkulNo
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(68, 623);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 28);
-            this.label8.TabIndex = 266;
-            this.label8.Text = "Okul Numarası :";
+            this.lblOkulNo.AutoSize = true;
+            this.lblOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblOkulNo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOkulNo.ForeColor = System.Drawing.Color.White;
+            this.lblOkulNo.Location = new System.Drawing.Point(68, 623);
+            this.lblOkulNo.Name = "lblOkulNo";
+            this.lblOkulNo.Size = new System.Drawing.Size(150, 28);
+            this.lblOkulNo.TabIndex = 266;
+            this.lblOkulNo.Text = "Okul Numarası :";
             // 
             // txtOkulNo
             // 
@@ -723,24 +723,25 @@ namespace uu_library_app
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmbDil);
-            this.panel1.Location = new System.Drawing.Point(498, 9);
+            this.panel1.Controls.Add(this.cmbKisi);
+            this.panel1.Location = new System.Drawing.Point(549, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 45);
+            this.panel1.Size = new System.Drawing.Size(192, 51);
             this.panel1.TabIndex = 272;
             // 
-            // cmbDil
+            // cmbKisi
             // 
-            this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDil.Font = new System.Drawing.Font("Montserrat", 14.25F);
-            this.cmbDil.ForeColor = System.Drawing.Color.White;
-            this.cmbDil.FormattingEnabled = true;
-            this.cmbDil.Location = new System.Drawing.Point(3, 4);
-            this.cmbDil.Name = "cmbDil";
-            this.cmbDil.Size = new System.Drawing.Size(235, 34);
-            this.cmbDil.TabIndex = 245;
+            this.cmbKisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbKisi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKisi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKisi.ForeColor = System.Drawing.Color.White;
+            this.cmbKisi.FormattingEnabled = true;
+            this.cmbKisi.Location = new System.Drawing.Point(3, 9);
+            this.cmbKisi.Name = "cmbKisi";
+            this.cmbKisi.Size = new System.Drawing.Size(184, 34);
+            this.cmbKisi.TabIndex = 245;
+            this.cmbKisi.SelectedIndexChanged += new System.EventHandler(this.cmbKisi_SelectedIndexChanged);
             // 
             // Borrowing_Book
             // 
@@ -813,7 +814,7 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox txtYazar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblOkulNo;
         private System.Windows.Forms.TextBox txtOkulNo;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -836,6 +837,6 @@ namespace uu_library_app
         private System.Windows.Forms.PictureBox pictureBox7;
         private FormUI.TextBoxHelper.WehTextBox wehTextBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbDil;
+        private System.Windows.Forms.ComboBox cmbKisi;
     }
 }
