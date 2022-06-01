@@ -71,6 +71,7 @@ namespace uu_library_app.FormUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNewNav = new System.Windows.Forms.Panel();
             this.panelChildFormNew = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -744,11 +745,21 @@ namespace uu_library_app.FormUI
             // panelChildFormNew
             // 
             this.panelChildFormNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelChildFormNew.Location = new System.Drawing.Point(181, 0);
+            this.panelChildFormNew.Location = new System.Drawing.Point(181, 12);
             this.panelChildFormNew.Name = "panelChildFormNew";
-            this.panelChildFormNew.Size = new System.Drawing.Size(1255, 900);
+            this.panelChildFormNew.Size = new System.Drawing.Size(1255, 888);
             this.panelChildFormNew.TabIndex = 9;
             this.panelChildFormNew.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormNew_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(192, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1446, 13);
+            this.panel5.TabIndex = 1;
+            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
+            this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
+            this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseUp);
             // 
             // LibrarianInterface
             // 
@@ -756,9 +767,10 @@ namespace uu_library_app.FormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1440, 900);
-            this.Controls.Add(this.panelChildFormNew);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pnlNewNav);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelChildFormNew);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrarianInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -821,5 +833,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnVeriCikti;
         private System.Windows.Forms.Button btnDosya;
+        private System.Windows.Forms.Panel panel5;
     }
 }

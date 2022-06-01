@@ -28,6 +28,7 @@ namespace uu_library_app.FormUI
             );
 
         private Admin _admin;
+        MovementBar move = new MovementBar();
         public LibrarianInterface(Admin admin)
         {
             InitializeComponent();
@@ -92,7 +93,13 @@ namespace uu_library_app.FormUI
             panelChildFormNew.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
 
+       public class MovementBar
+        {
+            public int mov;
+            public int movX;
+            public int movY;
         }
 #endregion
         private void LibrarianInterface_Load(object sender, EventArgs e)
@@ -350,6 +357,26 @@ namespace uu_library_app.FormUI
         private void btnDosya_Leave(object sender, EventArgs e)
         {
             btnDosya.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            move.mov = 1;
+            move.movX = e.X;
+            move.movY = e.Y;
+        }
+
+        private void panel5_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move.mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - move.movX, MousePosition.Y - move.movY);
+            }
+        }
+
+        private void panel5_MouseUp(object sender, MouseEventArgs e)
+        {
+            move.mov = 0;
         }
     }
 }
