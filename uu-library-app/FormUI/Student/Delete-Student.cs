@@ -54,7 +54,7 @@ namespace uu_library_app
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!");
+                wehMessageBox.Show("Silmek istediğiniz öğrenciyi seçiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -76,7 +76,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

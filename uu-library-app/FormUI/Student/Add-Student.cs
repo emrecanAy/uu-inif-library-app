@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,7 +85,7 @@ namespace uu_library_app.FormUI
 
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtOkulNo.Text == "" || txtEmail.Text == "" || comboBox1.Text == "")
             {
-                MessageBox.Show("Lütfen geçerli değerler giriniz!");
+                wehMessageBox.Show("Lütfen geçerli değerler giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -99,7 +100,7 @@ namespace uu_library_app.FormUI
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
             

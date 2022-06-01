@@ -45,7 +45,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtKonum.Text == "")
             {
-                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen geçerli bir değer giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             }
             catch (Exception)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }

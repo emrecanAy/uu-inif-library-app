@@ -116,7 +116,7 @@ namespace uu_library_app
         {
             if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "")
             {
-                MessageBox.Show("Tüm değerleri giriniz...");
+                wehMessageBox.Show("Lütfen tüm değerleri giriniz !", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -141,7 +141,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

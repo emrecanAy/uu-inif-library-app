@@ -43,7 +43,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtDil.Text == "" || txtDil.Text.Length < 3)
             {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen en az üç harf çeren geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             Language languageToAdd = new Language(createGUID, txtDil.Text);
@@ -53,14 +53,14 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
                 manager.Add(languageToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + languageToAdd.Id + " | " + languageToAdd.LanguageName + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
-                wehMessageBox.Show("Ödünç verildi!",
+                wehMessageBox.Show("Başarıyla Eklendi!",
                 "Başarılı",
                   MessageBoxButtons.OK,
                   MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken Bir hata oluştu. Tekrar deneyin...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

@@ -114,7 +114,7 @@ namespace uu_library_app
 
             if (txtDepositBookId.Text == "")
             {
-                MessageBox.Show("Lütfen bir kitap seçiniz!");
+                wehMessageBox.Show("Lütfen bir kitap seçiniz!","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 

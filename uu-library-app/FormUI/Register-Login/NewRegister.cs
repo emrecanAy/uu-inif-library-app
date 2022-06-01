@@ -51,12 +51,12 @@ namespace uu_library_app.FormUI.Register_Login
             admin = new Admin(createGUID, txtAd.Text, txtSoyad.Text, txtEmail.Text, StringEncoder.Encrypt(txtSifre.Text));
             if (txtSifre.Text != txtSifreTekrar.Text)
             {
-                MessageBox.Show("Parolalar uyuşmuyor!");
+                wehMessageBox.Show("Parolalar uyuşmuyor!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || txtSifre.Text == "")
             {
-                MessageBox.Show("Tüm alanları doldurun!");
+                wehMessageBox.Show("Tüm alanları doldurun!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             adminManager.sendEmailVerificationCode(txtEmail.Text, code);
@@ -87,7 +87,7 @@ namespace uu_library_app.FormUI.Register_Login
             }
             else
             {
-                MessageBox.Show("Onay kodu hatalı! Tekrar giriniz...");
+                wehMessageBox.Show("Onay kodu hatalı! Tekrar giriniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

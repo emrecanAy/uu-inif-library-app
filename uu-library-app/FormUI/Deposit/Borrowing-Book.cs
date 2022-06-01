@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MessageBoxDenemesi;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,12 +78,12 @@ namespace uu_library_app
 
             if(txtKitapId.Text == "" || txtKitapAd.Text == "")
             {
-                MessageBox.Show("Ödünç verilecek kitabı seçin...");
+                wehMessageBox.Show("Ödünç verilecek kitabı seçin...","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
             if (txtOgrenciId.Text == "" || txtAdSoyad.Text == "")
             {
-                MessageBox.Show("Ödünç verilecek öğrenciyi seçin...");
+                wehMessageBox.Show("Ödünç verilecek öğrenciyi seçin...", "Dikkat!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -96,12 +97,12 @@ namespace uu_library_app
 
                 if (book.StockCount == 0)
                 {
-                    MessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları daha önce ödünç verildiği için kütüphanede aktif olarak yoktur!");
+                   wehMessageBox.Show("Kütüphanede bulunan tüm " + book.BookName + " kitapları daha önce ödünç verildiği için kütüphanede aktif olarak yoktur!","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
                 depositBookManager.Add(depositBookToAdd);
                 logger.Log(log);
-                MessageBox.Show("Kitap başarıyla ödünç verildi!");
+                wehMessageBox.Show("Kitap başarıyla ödünç verildi!","Başarılı",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 book.StockCount = book.StockCount - 1;
                 bookManager.Update(book);
                 Console.WriteLine("Stok adet: "+book.StockCount);
@@ -109,7 +110,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
 

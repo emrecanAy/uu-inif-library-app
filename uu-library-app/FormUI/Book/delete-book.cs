@@ -71,7 +71,7 @@ namespace uu_library_app
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Lütfen silmek istediğiniz kitabı seçiniz!");
+                wehMessageBox.Show("Lütfen silmek istedğiniz kitabı seçiniz!", "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -95,7 +95,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

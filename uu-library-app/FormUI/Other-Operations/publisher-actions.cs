@@ -79,7 +79,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -106,7 +106,7 @@ namespace uu_library_app
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "")
             {
-                MessageBox.Show("Lütfen geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             Publisher publisherToAdd = new Publisher(createGUID, txtAd.Text);
@@ -121,7 +121,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -130,7 +130,7 @@ namespace uu_library_app
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Silmek istediğiniz yayınevini seçin!");
+                wehMessageBox.Show("Silmek istediğiniz yayınevini seçin!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -146,7 +146,7 @@ namespace uu_library_app
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + publisher.Id + " | " + publisher.Name + "]" + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
                     manager.Delete(publisher);
-                    MessageBox.Show("Başarıyla silindi!");
+                    wehMessageBox.Show("Başarıyla silindi!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     listDataToTable();
                     clearAllFields();
                 }
@@ -154,7 +154,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -173,7 +173,7 @@ namespace uu_library_app
             {
                 if (txtAd.Text == "")
                 {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    wehMessageBox.Show("Geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -194,7 +194,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

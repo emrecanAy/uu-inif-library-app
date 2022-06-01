@@ -14,6 +14,7 @@ using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.Book.Quick_Menu;
 using uu_library_app.FormUI.MailSettings;
+using MessageBoxDenemesi;
 
 namespace uu_library_app
 {
@@ -88,7 +89,10 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
+                "Sunucuya bağlanırken bir hata oluştu!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
                 Application.Exit();
                 return;
             }
@@ -183,7 +187,10 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...", "Sunucuya bağlanırken bir hata oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
+                "Sunucuya bağlanırken bir hata oluştu!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
                 Application.Exit();
                 return;
             }
@@ -205,7 +212,7 @@ namespace uu_library_app
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "" || cmbDil.SelectedValue.ToString() == "" || cmbKategori.SelectedValue.ToString() == "" || cmbKonum.SelectedValue.ToString() == "" || cmbYayinevi.SelectedValue.ToString() == "" || cmbYazar.SelectedValue.ToString() == "")
             {
-                MessageBox.Show("Tüm değerleri giriniz...");
+                wehMessageBox.Show("Lütfen tüm değerleri giriniz !", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -215,13 +222,13 @@ namespace uu_library_app
                 bookManager.Add(bookToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] "+_admin.FirstName+" "+_admin.LastName+" tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
-                MessageBox.Show("Başarıyla eklendi!");
+                wehMessageBox.Show("Kitap Başarıyla Eklendi!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyin!");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyin!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

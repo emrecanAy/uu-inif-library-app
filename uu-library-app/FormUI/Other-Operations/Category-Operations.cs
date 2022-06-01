@@ -83,7 +83,7 @@ namespace uu_library_app
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtAd.Text.Length < 3)
             {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             Category categoryToAdd = new Category(createGUID, txtAd.Text);
@@ -98,7 +98,7 @@ namespace uu_library_app
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw ex;
             }
         }
@@ -108,7 +108,7 @@ namespace uu_library_app
 
             if (txtId.Text == "")
             {
-                MessageBox.Show("Silmek istediğiniz bölümü seçin!");
+                wehMessageBox.Show("Silmek istediğiniz bölümü seçin!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -131,7 +131,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -150,7 +150,7 @@ namespace uu_library_app
             {
                 if (txtAd.Text == "")
                 {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    wehMessageBox.Show("Geçerli bir değer giriniz!","Dikkat",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
 
                 }
@@ -173,7 +173,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }

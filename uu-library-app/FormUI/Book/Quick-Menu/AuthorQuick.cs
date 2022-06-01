@@ -44,7 +44,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
 
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
             {
-                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
+                wehMessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz","Uyarı!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -61,7 +61,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

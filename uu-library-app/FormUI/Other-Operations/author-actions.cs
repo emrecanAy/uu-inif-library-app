@@ -110,7 +110,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -121,7 +121,7 @@ namespace uu_library_app
 
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
             {
-                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
+                wehMessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -136,7 +136,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -152,7 +152,7 @@ namespace uu_library_app
         {
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
             {
-                MessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz");
+                wehMessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -177,7 +177,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
+                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

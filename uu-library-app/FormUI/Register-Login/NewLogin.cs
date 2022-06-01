@@ -70,7 +70,10 @@ namespace uu_library_app.FormUI.Register_Login
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Oh wait !");
+                wehMessageBox.Show("Lütfen internet bağlantınızı kontrol edin.\nSorun devam ediyorsa bir yetkiliyle iletişime geçin...",
+                "Sunucuya bağlanırken bir hata oluştu!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
                 throw;
             }
         }

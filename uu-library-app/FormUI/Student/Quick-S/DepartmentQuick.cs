@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessageBoxDenemesi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,7 @@ namespace uu_library_app.FormUI.MailSettings
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtAd.Text.Length < 3)
             {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
             Department departmentToAdd = new Department(createGUID, txtAd.Text);
@@ -55,7 +56,7 @@ namespace uu_library_app.FormUI.MailSettings
             }
             catch (Exception)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }

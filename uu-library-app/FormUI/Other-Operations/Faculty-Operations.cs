@@ -34,7 +34,7 @@ namespace uu_library_app.FormUI.Other_Operations
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtAd.Text.Length < 3)
             {
-                MessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!");
+                wehMessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             Faculty facultyToAdd = new Faculty(createGUID, txtAd.Text);
@@ -48,7 +48,7 @@ namespace uu_library_app.FormUI.Other_Operations
             }
             catch (Exception)
             {
-                MessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Eklerken bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -73,7 +73,7 @@ namespace uu_library_app.FormUI.Other_Operations
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Silmek istediğiniz bölümü seçin!");
+                wehMessageBox.Show("Silmek istediğiniz bölümü seçin!","Dikkat!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -96,7 +96,7 @@ namespace uu_library_app.FormUI.Other_Operations
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }
@@ -130,7 +130,7 @@ namespace uu_library_app.FormUI.Other_Operations
             {
                 if (txtAd.Text == "")
                 {
-                    MessageBox.Show("Geçerli bir değer giriniz!");
+                    wehMessageBox.Show("Geçerli bir değer giriniz!","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -152,7 +152,7 @@ namespace uu_library_app.FormUI.Other_Operations
             }
             catch (Exception)
             {
-                MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...");
+                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 throw;
             }
         }
