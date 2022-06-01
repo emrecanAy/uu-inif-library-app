@@ -1,7 +1,7 @@
 ﻿
 namespace uu_library_app
 {
-    partial class student_listing
+    partial class Delete_Student
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,14 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(student_listing));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete_Student));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.radiusButton1 = new button.Toolbox.RadiusButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dateTime2 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
@@ -45,21 +51,94 @@ namespace uu_library_app
             this.panel2 = new System.Windows.Forms.Panel();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dateTime2 = new uu_library_app.FormUI.Toolbox.DateTime();
-            this.dateTime1 = new uu_library_app.FormUI.Toolbox.DateTime();
-            this.radiusButton1 = new button.Toolbox.RadiusButton();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.radiusButton1);
+            this.panel7.Controls.Add(this.pictureBox2);
+            this.panel7.Controls.Add(this.dateTime2);
+            this.panel7.Controls.Add(this.dateTime1);
+            this.panel7.Location = new System.Drawing.Point(749, 43);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(496, 68);
+            this.panel7.TabIndex = 305;
+            // 
+            // radiusButton1
+            // 
+            this.radiusButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radiusButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radiusButton1.BorderColor = System.Drawing.Color.White;
+            this.radiusButton1.BorderRadius = 10;
+            this.radiusButton1.BorderSize = 1;
+            this.radiusButton1.FlatAppearance.BorderSize = 0;
+            this.radiusButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radiusButton1.ForeColor = System.Drawing.Color.White;
+            this.radiusButton1.Location = new System.Drawing.Point(408, 21);
+            this.radiusButton1.Name = "radiusButton1";
+            this.radiusButton1.Size = new System.Drawing.Size(75, 30);
+            this.radiusButton1.TabIndex = 292;
+            this.radiusButton1.Text = "Getir";
+            this.radiusButton1.TextColor = System.Drawing.Color.White;
+            this.radiusButton1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(197, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 291;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dateTime2
+            // 
+            this.dateTime2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime2.BorderSize = 0;
+            this.dateTime2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime2.Location = new System.Drawing.Point(217, 19);
+            this.dateTime2.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime2.Name = "dateTime2";
+            this.dateTime2.Size = new System.Drawing.Size(194, 35);
+            this.dateTime2.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime2.TabIndex = 289;
+            this.dateTime2.TextColor = System.Drawing.Color.White;
+            // 
+            // dateTime1
+            // 
+            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateTime1.BorderSize = 0;
+            this.dateTime1.CustomFormat = "";
+            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime1.Location = new System.Drawing.Point(-5, 19);
+            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(201, 35);
+            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dateTime1.TabIndex = 288;
+            this.dateTime1.TextColor = System.Drawing.Color.White;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 13F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(745, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 21);
+            this.label2.TabIndex = 304;
+            this.label2.Text = "Tarih Aralığı";
             // 
             // panel4
             // 
@@ -68,7 +147,7 @@ namespace uu_library_app
             this.panel4.Location = new System.Drawing.Point(749, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(496, 37);
-            this.panel4.TabIndex = 245;
+            this.panel4.TabIndex = 303;
             // 
             // panel8
             // 
@@ -100,7 +179,6 @@ namespace uu_library_app
             this.wehTextBox1.TabIndex = 291;
             this.wehTextBox1.Texts = "";
             this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
             // pictureBox3
             // 
@@ -125,7 +203,7 @@ namespace uu_library_app
             this.panel1.Location = new System.Drawing.Point(12, 111);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1233, 777);
-            this.panel1.TabIndex = 244;
+            this.panel1.TabIndex = 302;
             // 
             // panel6
             // 
@@ -171,14 +249,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 39);
             this.dataGridView1.Name = "dataGridView1";
@@ -216,7 +294,7 @@ namespace uu_library_app
             this.picboxBack.Name = "picboxBack";
             this.picboxBack.Size = new System.Drawing.Size(80, 80);
             this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 243;
+            this.picboxBack.TabIndex = 301;
             this.picboxBack.TabStop = false;
             // 
             // label1
@@ -226,106 +304,30 @@ namespace uu_library_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(98, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 40);
-            this.label1.TabIndex = 242;
-            this.label1.Text = "Öğrenci Listeleme";
+            this.label1.Size = new System.Drawing.Size(273, 40);
+            this.label1.TabIndex = 300;
+            this.label1.Text = "Personel Listeleme";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 13F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(749, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 21);
-            this.label2.TabIndex = 291;
-            this.label2.Text = "Tarih Aralığı";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.radiusButton1);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.dateTime2);
-            this.panel7.Controls.Add(this.dateTime1);
-            this.panel7.Location = new System.Drawing.Point(753, 43);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(492, 68);
-            this.panel7.TabIndex = 292;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(186, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 291;
-            this.pictureBox2.TabStop = false;
-            // 
-            // dateTime2
-            // 
-            this.dateTime2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime2.BorderSize = 0;
-            this.dateTime2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime2.Location = new System.Drawing.Point(217, 19);
-            this.dateTime2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime2.Name = "dateTime2";
-            this.dateTime2.Size = new System.Drawing.Size(185, 35);
-            this.dateTime2.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime2.TabIndex = 289;
-            this.dateTime2.TextColor = System.Drawing.Color.White;
-            // 
-            // dateTime1
-            // 
-            this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateTime1.BorderSize = 0;
-            this.dateTime1.CustomFormat = "";
-            this.dateTime1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime1.Location = new System.Drawing.Point(-1, 19);
-            this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTime1.Name = "dateTime1";
-            this.dateTime1.Size = new System.Drawing.Size(181, 35);
-            this.dateTime1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dateTime1.TabIndex = 288;
-            this.dateTime1.TextColor = System.Drawing.Color.White;
-            // 
-            // radiusButton1
-            // 
-            this.radiusButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radiusButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radiusButton1.BorderColor = System.Drawing.Color.White;
-            this.radiusButton1.BorderRadius = 10;
-            this.radiusButton1.BorderSize = 1;
-            this.radiusButton1.FlatAppearance.BorderSize = 0;
-            this.radiusButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radiusButton1.ForeColor = System.Drawing.Color.White;
-            this.radiusButton1.Location = new System.Drawing.Point(403, 21);
-            this.radiusButton1.Name = "radiusButton1";
-            this.radiusButton1.Size = new System.Drawing.Size(80, 30);
-            this.radiusButton1.TabIndex = 292;
-            this.radiusButton1.Text = "Getir";
-            this.radiusButton1.TextColor = System.Drawing.Color.White;
-            this.radiusButton1.UseVisualStyleBackColor = false;
-            this.radiusButton1.Click += new System.EventHandler(this.radiusButton1_Click);
-            // 
-            // student_listing
+            // Delete_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "student_listing";
-            this.Text = "student_listing";
-            this.Load += new System.EventHandler(this.student_listing_Load);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Delete_Student";
+            this.Text = "Delete_Student";
+            this.Load += new System.EventHandler(this.Delete_Student_Load);
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -333,8 +335,6 @@ namespace uu_library_app
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +342,16 @@ namespace uu_library_app
 
         #endregion
 
+        private System.Windows.Forms.Panel panel7;
+        private button.Toolbox.RadiusButton radiusButton1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FormUI.Toolbox.DateTime dateTime2;
+        private FormUI.Toolbox.DateTime dateTime1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel8;
+        private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
@@ -353,14 +362,5 @@ namespace uu_library_app
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picboxBack;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private FormUI.Toolbox.DateTime dateTime2;
-        private FormUI.Toolbox.DateTime dateTime1;
-        private System.Windows.Forms.Panel panel8;
-        private FormUI.TextBoxHelper.WehTextBox wehTextBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private button.Toolbox.RadiusButton radiusButton1;
     }
 }

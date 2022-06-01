@@ -52,6 +52,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtOkulNo = new System.Windows.Forms.TextBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -72,12 +73,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btnHızlıBolum = new System.Windows.Forms.Button();
             this.btnHızlıFakulte = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtOkulNo = new System.Windows.Forms.TextBox();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -236,7 +236,7 @@
             this.txtEmail.Location = new System.Drawing.Point(57, 380);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(439, 25);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 44;
             // 
             // lblOkulNo
             // 
@@ -257,9 +257,9 @@
             this.lblBaslik.ForeColor = System.Drawing.Color.White;
             this.lblBaslik.Location = new System.Drawing.Point(85, 28);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(364, 40);
+            this.lblBaslik.Size = new System.Drawing.Size(250, 40);
             this.lblBaslik.TabIndex = 26;
-            this.lblBaslik.Text = "Öğrenci Ekleme İşlemleri ";
+            this.lblBaslik.Text = "Öğrenci İşlemleri";
             // 
             // picboxBack
             // 
@@ -364,6 +364,18 @@
             this.panel2.Size = new System.Drawing.Size(524, 756);
             this.panel2.TabIndex = 34;
             // 
+            // txtOkulNo
+            // 
+            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
+            this.txtOkulNo.Location = new System.Drawing.Point(56, 266);
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.Size = new System.Drawing.Size(439, 25);
+            this.txtOkulNo.TabIndex = 3;
+            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged_1);
+            // 
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -437,7 +449,7 @@
             this.cmbFakulte.Location = new System.Drawing.Point(57, 600);
             this.cmbFakulte.Name = "cmbFakulte";
             this.cmbFakulte.Size = new System.Drawing.Size(445, 35);
-            this.cmbFakulte.TabIndex = 6;
+            this.cmbFakulte.TabIndex = 5;
             // 
             // label2
             // 
@@ -495,7 +507,7 @@
             this.comboBox1.Location = new System.Drawing.Point(57, 491);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(445, 35);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 4;
             // 
             // label3
             // 
@@ -504,9 +516,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 21);
+            this.label3.Size = new System.Drawing.Size(194, 21);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Yeni üye/öğrenci kayıt İşlemleri :";
+            this.label3.Text = "Üye/öğrenci İşlemleri :";
             // 
             // panel4
             // 
@@ -585,6 +597,28 @@
             this.pictureBox4.TabIndex = 272;
             this.pictureBox4.TabStop = false;
             // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Lütfen Aramak İstediğiniz Öğrencinin Numarasını Giriniz !";
+            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            // 
             // panel24
             // 
             this.panel24.Controls.Add(this.btnHızlıBolum);
@@ -633,40 +667,6 @@
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 259;
             this.textBox1.Visible = false;
-            // 
-            // txtOkulNo
-            // 
-            this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.txtOkulNo.ForeColor = System.Drawing.Color.White;
-            this.txtOkulNo.Location = new System.Drawing.Point(56, 266);
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.Size = new System.Drawing.Size(439, 25);
-            this.txtOkulNo.TabIndex = 59;
-            this.txtOkulNo.TextChanged += new System.EventHandler(this.txtOkulNo_TextChanged_1);
-            // 
-            // wehTextBox1
-            // 
-            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox1.BorderRadius = 5;
-            this.wehTextBox1.BorderSize = 1;
-            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(34, 5);
-            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox1.Multiline = false;
-            this.wehTextBox1.Name = "wehTextBox1";
-            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox1.PasswordChar = false;
-            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Lütfen Aramak İstediğiniz Öğrencinin Numarasını Giriniz !";
-            this.wehTextBox1.Size = new System.Drawing.Size(448, 29);
-            this.wehTextBox1.TabIndex = 236;
-            this.wehTextBox1.Texts = "";
-            this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
             // Add_Student
             // 

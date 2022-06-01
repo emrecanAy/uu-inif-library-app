@@ -73,6 +73,8 @@ namespace uu_library_app.FormUI
             txtSoyad.Clear();
             comboBox1.ResetText();
             cmbFakulte.ResetText();
+            comboBox1.SelectedIndex = -1;
+            cmbFakulte.SelectedIndex = -1;
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

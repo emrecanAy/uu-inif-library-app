@@ -467,7 +467,7 @@ namespace uu_library_app.FormUI
             this.btnUyeListele.Image = ((System.Drawing.Image)(resources.GetObject("btnUyeListele.Image")));
             this.btnUyeListele.Location = new System.Drawing.Point(0, 84);
             this.btnUyeListele.Name = "btnUyeListele";
-            this.btnUyeListele.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUyeListele.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnUyeListele.Size = new System.Drawing.Size(186, 28);
             this.btnUyeListele.TabIndex = 3;
             this.btnUyeListele.Text = " Öğrenci Listele";
@@ -489,7 +489,7 @@ namespace uu_library_app.FormUI
             this.btnEditMember.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnEditMember.Size = new System.Drawing.Size(186, 28);
             this.btnEditMember.TabIndex = 2;
-            this.btnEditMember.Text = " Öğrenci Düzenle";
+            this.btnEditMember.Text = " Personel Listele";
             this.btnEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditMember.UseVisualStyleBackColor = true;
@@ -505,10 +505,10 @@ namespace uu_library_app.FormUI
             this.btnDeleteMember.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteMember.Image")));
             this.btnDeleteMember.Location = new System.Drawing.Point(0, 28);
             this.btnDeleteMember.Name = "btnDeleteMember";
-            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDeleteMember.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnDeleteMember.Size = new System.Drawing.Size(186, 28);
             this.btnDeleteMember.TabIndex = 1;
-            this.btnDeleteMember.Text = " Öğrenci Sil";
+            this.btnDeleteMember.Text = " Personel İşlemleri";
             this.btnDeleteMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteMember.UseVisualStyleBackColor = true;
@@ -524,10 +524,10 @@ namespace uu_library_app.FormUI
             this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
             this.btnAddMember.Location = new System.Drawing.Point(0, 0);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnAddMember.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
             this.btnAddMember.Size = new System.Drawing.Size(186, 28);
             this.btnAddMember.TabIndex = 0;
-            this.btnAddMember.Text = " Öğrenci Ekle";
+            this.btnAddMember.Text = " Öğrenci İşlemleri";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddMember.UseVisualStyleBackColor = true;

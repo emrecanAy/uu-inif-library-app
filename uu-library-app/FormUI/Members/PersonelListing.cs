@@ -59,13 +59,7 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

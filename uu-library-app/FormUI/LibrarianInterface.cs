@@ -235,13 +235,13 @@ namespace uu_library_app.FormUI
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Delete_Student(_admin));
+            openChildForm(new Edit_Student(_admin));
             hideSubMenu();
         }
 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
-            openChildForm(new Edit_Student(_admin));
+            openChildForm(new Delete_Student(_admin));
             hideSubMenu();
         }
 

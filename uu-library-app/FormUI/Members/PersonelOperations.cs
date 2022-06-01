@@ -35,7 +35,6 @@ namespace uu_library_app
             txtId.Clear();
             txtAd.Clear();
             txtEmail.Clear();
-            txtOkulNo.Clear();
             txtSoyad.Clear();
             comboBox1.ResetText();
         }
@@ -84,7 +83,6 @@ namespace uu_library_app
             txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -99,20 +97,7 @@ namespace uu_library_app
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
-        }
-
-      
-
-        private void txtOkulNo_Click(object sender, EventArgs e)
-        {
-            this.txtOkulNo.Select(0, 0);
-
-        }
-
-        private void txtOkulNo_TextChanged(object sender, EventArgs e)
-        {
-            txtEmail.Text = txtOkulNo.Text + "@ogr.uludag.edu.tr";
-        }
+        } 
     }
     }
 

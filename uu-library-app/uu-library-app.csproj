@@ -322,16 +322,16 @@
     <Compile Include="FormUI\Register-Login\NewRegister.Designer.cs">
       <DependentUpon>NewRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Student\Quick-S\DepartmentQuick.cs">
+    <Compile Include="FormUI\Members\Quick-S\DepartmentQuick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\Quick-S\DepartmentQuick.Designer.cs">
+    <Compile Include="FormUI\Members\Quick-S\DepartmentQuick.Designer.cs">
       <DependentUpon>DepartmentQuick.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Student\Quick-S\FacultyQuick.cs">
+    <Compile Include="FormUI\Members\Quick-S\FacultyQuick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\Quick-S\FacultyQuick.Designer.cs">
+    <Compile Include="FormUI\Members\Quick-S\FacultyQuick.Designer.cs">
       <DependentUpon>FacultyQuick.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\MailSettings\Mail-Operations.cs">
@@ -340,25 +340,25 @@
     <Compile Include="FormUI\MailSettings\Mail-Operations.Designer.cs">
       <DependentUpon>Mail-Operations.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Student\Delete-Student.cs">
+    <Compile Include="FormUI\Members\PersonelListing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\Delete-Student.Designer.cs">
-      <DependentUpon>Delete-Student.cs</DependentUpon>
+    <Compile Include="FormUI\Members\PersonelListing.Designer.cs">
+      <DependentUpon>PersonelListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Student\Edit-Student.cs">
+    <Compile Include="FormUI\Members\PersonelOperations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\Edit-Student.Designer.cs">
-      <DependentUpon>Edit-Student.cs</DependentUpon>
+    <Compile Include="FormUI\Members\PersonelOperations.Designer.cs">
+      <DependentUpon>PersonelOperations.cs</DependentUpon>
     </Compile>
     <Compile Include="Entity\Concrete\Book.cs" />
     <Compile Include="Entity\Concrete\Department.cs" />
-    <Compile Include="FormUI\Student\Add-Student.cs">
+    <Compile Include="FormUI\Members\StudentOperations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\Add-Student.Designer.cs">
-      <DependentUpon>Add-Student.cs</DependentUpon>
+    <Compile Include="FormUI\Members\StudentOperations.Designer.cs">
+      <DependentUpon>StudentOperations.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\LibrarianInterface.cs">
       <SubType>Form</SubType>
@@ -441,10 +441,10 @@
     <Compile Include="FormUI\Student-Affairs.Designer.cs">
       <DependentUpon>Student-Affairs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\Student\student-listing.cs">
+    <Compile Include="FormUI\Members\student-listing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\Student\student-listing.Designer.cs">
+    <Compile Include="FormUI\Members\student-listing.Designer.cs">
       <DependentUpon>student-listing.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormUI\Book\book-listing.resx">
@@ -498,26 +498,26 @@
     <EmbeddedResource Include="FormUI\Register-Login\NewRegister.resx">
       <DependentUpon>NewRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\Quick-S\DepartmentQuick.resx">
+    <EmbeddedResource Include="FormUI\Members\Quick-S\DepartmentQuick.resx">
       <DependentUpon>DepartmentQuick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\Quick-S\FacultyQuick.resx">
+    <EmbeddedResource Include="FormUI\Members\Quick-S\FacultyQuick.resx">
       <DependentUpon>FacultyQuick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\MailSettings\Mail-Operations.resx">
       <DependentUpon>Mail-Operations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\Add-Student.resx">
-      <DependentUpon>Add-Student.cs</DependentUpon>
+    <EmbeddedResource Include="FormUI\Members\StudentOperations.resx">
+      <DependentUpon>StudentOperations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\author-actions.resx">
       <DependentUpon>author-actions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\Delete-Student.resx">
-      <DependentUpon>Delete-Student.cs</DependentUpon>
+    <EmbeddedResource Include="FormUI\Members\PersonelListing.resx">
+      <DependentUpon>PersonelListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\Edit-Student.resx">
-      <DependentUpon>Edit-Student.cs</DependentUpon>
+    <EmbeddedResource Include="FormUI\Members\PersonelOperations.resx">
+      <DependentUpon>PersonelOperations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\LibrarianInterface.resx">
       <DependentUpon>LibrarianInterface.cs</DependentUpon>
@@ -531,7 +531,7 @@
     <EmbeddedResource Include="FormUI\Deposit\Get-Book-Back.resx">
       <DependentUpon>Get-Book-Back.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\Student\student-listing.resx">
+    <EmbeddedResource Include="FormUI\Members\student-listing.resx">
       <DependentUpon>student-listing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\TextBoxHelper\LoginTextBox.resx">
