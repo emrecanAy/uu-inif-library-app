@@ -247,10 +247,9 @@ namespace uu_library_app.FormUI
                     DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

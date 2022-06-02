@@ -108,10 +108,9 @@ namespace uu_library_app
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show(ex.Message,"Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
@@ -180,6 +179,12 @@ namespace uu_library_app
                 wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
+        }
+
+        private void wehTextBox2__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+           string.Format("firstName LIKE '{0}%' OR firstName LIKE '% {0}%'", wehTextBox2.Texts);
         }
     }
 }

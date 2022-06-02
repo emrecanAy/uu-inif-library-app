@@ -30,7 +30,7 @@ namespace uu_library_app.FormUI.Other_Operations
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Location_actions));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -55,12 +55,15 @@ namespace uu_library_app.FormUI.Other_Operations
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSoyad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel27
@@ -268,7 +271,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 13F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Location = new System.Drawing.Point(3, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(378, 21);
             this.label3.TabIndex = 81;
@@ -277,7 +280,7 @@ namespace uu_library_app.FormUI.Other_Operations
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel2.Location = new System.Drawing.Point(-1, 30);
+            this.panel2.Location = new System.Drawing.Point(-1, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(823, 1);
             this.panel2.TabIndex = 81;
@@ -285,7 +288,9 @@ namespace uu_library_app.FormUI.Other_Operations
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.wehTextBox2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(13, 124);
@@ -303,22 +308,22 @@ namespace uu_library_app.FormUI.Other_Operations
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(815, 725);
+            this.dataGridView1.Size = new System.Drawing.Size(815, 710);
             this.dataGridView1.TabIndex = 88;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -347,6 +352,37 @@ namespace uu_library_app.FormUI.Other_Operations
             this.panel4.Size = new System.Drawing.Size(312, 767);
             this.panel4.TabIndex = 92;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(406, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox7.TabIndex = 285;
+            this.pictureBox7.TabStop = false;
+            // 
+            // wehTextBox2
+            // 
+            this.wehTextBox2.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox2.BorderRadius = 5;
+            this.wehTextBox2.BorderSize = 1;
+            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox2.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox2.Location = new System.Drawing.Point(441, 7);
+            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox2.Multiline = false;
+            this.wehTextBox2.Name = "wehTextBox2";
+            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox2.PasswordChar = false;
+            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox2.PlaceholderText = "Fakülte";
+            this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
+            this.wehTextBox2.TabIndex = 284;
+            this.wehTextBox2.Texts = "";
+            this.wehTextBox2.UnderlinedStyle = false;
+            this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
+            // 
             // Location_actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +405,7 @@ namespace uu_library_app.FormUI.Other_Operations
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +437,7 @@ namespace uu_library_app.FormUI.Other_Operations
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private TextBoxHelper.WehTextBox wehTextBox2;
     }
 }

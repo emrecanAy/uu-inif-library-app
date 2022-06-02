@@ -18,28 +18,44 @@ namespace uu_library_app.Core.Helpers
         static MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         static DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         static SettingsManager settingsManager = new SettingsManager(new SettingsDal());
+
+        public static DataTable listInnerJoinAllBooksDataToTable()
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+            
+        }
         public static DataTable listInnerJoinAllStudentsDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
+            conn.Open();
             DataTable dt = new DataTable();
             MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS AdSoyad, Student.number'OkulNo', Student.eMail'E-Posta', Department.name'Bolum', Student.createdAt'OlusturulmaTarihi', Faculty.name'Fakulte' FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             return dt;
+            conn.Close();
         }
 
         public static void listUndepositBooksConcatAuthorNameDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
+            conn.Open();
             DataTable dt = new DataTable();
 
             MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, CONCAT(Student.firstName, Student.lastName) as Ogrenci, Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.status=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
+            conn.Close();
 
         }
         public static List<DepositBook> getExpiredBooks()
         {
             List<DepositBook> expiredBooks = new List<DepositBook>();
-            List<DepositBook> depositBooksList = depositBookManager.getAll();
+            List<DepositBook> depositBooksList = depositBookManager.getAllUndeposited();
             foreach (DepositBook depositBook in depositBooksList)
             {
                 TimeSpan ts = depositBook.DepositDate - DateTime.Now;
@@ -47,7 +63,7 @@ namespace uu_library_app.Core.Helpers
                 if (howManyDaysPast.StartsWith("-"))
                 {
                     int daysPast = Convert.ToInt32(howManyDaysPast);
-                    if (daysPast == -settingsManager.getSettings().DepositDay)
+                    if (daysPast <= -settingsManager.getSettings().DepositDay)
                     {
                         expiredBooks.Add(depositBook);
                     }
@@ -58,14 +74,12 @@ namespace uu_library_app.Core.Helpers
 
         public static List<DepositBookDto> getExpiredBookWithNames()
         {
-            List<DataTable> dataTableList = new List<DataTable>();
             List<DepositBookDto> depositBookDtoList = new List<DepositBookDto>();
-            DataTable dt = new DataTable();
             foreach (DepositBook depositBook in getExpiredBooks())
             {
                 conn.Open();
                 DepositBookDto depositBookDto = new DepositBookDto();
-                MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1", conn);
+                MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1 AND DepositBook.status=0", conn);
                 command.Parameters.AddWithValue("@p1", depositBook.Id);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -85,6 +99,7 @@ namespace uu_library_app.Core.Helpers
 
         public static DataTable listDepositBooksDataToTable(DataGridView dataGrid, MySqlConnection conn, string depositBookId)
         {
+            conn.Open();
             DataTable dt = new DataTable();
 
             MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, Author.firstName'authorFirstName', Author.lastName'authorLastName' FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1", conn);
@@ -92,6 +107,7 @@ namespace uu_library_app.Core.Helpers
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             return dt;
+            conn.Close();
         }
 
     }

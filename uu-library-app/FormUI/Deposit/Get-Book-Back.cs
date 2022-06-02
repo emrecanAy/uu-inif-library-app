@@ -68,7 +68,6 @@ namespace uu_library_app
             dgvDahaOnceAlinanKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
             dgvDahaOnceAlinanKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvDahaOnceAlinanKitaplar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvDahaOnceAlinanKitaplar.ScrollBars = ScrollBars.None;
 
         }
 

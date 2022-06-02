@@ -156,6 +156,26 @@ namespace uu_library_app.FormUI
                     fileLoggerManager.Log(fileLogger);
                 }
             }
+            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+            }
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -179,6 +199,28 @@ namespace uu_library_app.FormUI
                     FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
                     fileLoggerManager.Log(fileLogger);
                 }
+            }
+            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "EXCEL dosyası|*.xlsx";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    DataTable dtDbDto = FileWriter.ToDataTable<DepositBookDto>(ExportFileDataHelper.getExpiredBookWithNames());
+                    FileWriter.ToEXCEL(dtDbDto, Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Geçmiş Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+                
             }
         }
 
@@ -253,6 +295,33 @@ namespace uu_library_app.FormUI
                      MessageBoxButtons.OK,
                      MessageBoxIcon.Information);
                     FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+
+            }
+            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
+            {
+                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNames();
+                DataTable table = new DataTable();
+                using (var reader = ObjectReader.Create(data))
+                {
+                    table.Load(reader);
+                }
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(table, Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Gecikmiş Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
                     fileLoggerManager.Log(fileLogger);
                 }
             }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
 using uu_library_app.DataAccess.Abstract;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Concrete
@@ -27,7 +28,10 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Department department)
         {
-            if(department != null)
+            if (checkIfExistInStudents(department.Id))
+            {
+                throw new Exception("Bu bölüm; öğrencilerde bulunan bir öğrenciye veya öğrencilere ait olduğu için öncelikle öğrencilere giderek bu bölüme ait olan öğrenciyi veya öğrencileri silmeniz gerekmektedir!");
+            }
             {
                 _department.Delete(department);
             }       
@@ -50,6 +54,16 @@ namespace uu_library_app.Business.Concrete
                 _department.Update(department);
             }
             
+        }
+
+        public bool checkIfExistInStudents(string departmentId)
+        {
+            StudentManager studentManager = new StudentManager(new StudentDal());
+            if (studentManager.GetByDepartmentId(departmentId) != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

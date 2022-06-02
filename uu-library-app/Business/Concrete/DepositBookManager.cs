@@ -18,7 +18,11 @@ namespace uu_library_app.Business.Concrete
         }
         public void Add(DepositBook depositBook)
         {
-            if (depositBook.DepositDate != null || depositBook.StudentId != null || depositBook.BookId != null)
+            if (checkIfItHasAlready(depositBook.StudentId))
+            {
+                throw new Exception("Aynı kitap zaten elinizde mevcut!");
+            }
+            else
             {
                 _depositBook.Add(depositBook);
             }
@@ -68,6 +72,25 @@ namespace uu_library_app.Business.Concrete
         public void Update(DepositBook depositBook)
         {
             _depositBook.Update(depositBook);
+        }
+
+        public DepositBook getByBookId(string bookId)
+        {
+            return _depositBook.getByBookId(bookId);
+        }
+
+        public DepositBook getByStudentId(string studentId)
+        {
+            return _depositBook.getByStudentId(studentId);
+        }
+
+        public bool checkIfItHasAlready(string studentId)
+        {
+            if(_depositBook.getByStudentId(studentId) != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

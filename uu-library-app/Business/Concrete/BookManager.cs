@@ -36,10 +36,15 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Book book)
         {
-            if(book != null)
+            if (checkIfExistInDepositBooks(book.Id))
+            {
+                throw new Exception("Bu kitap; ödünç verilen kitaplarda bulunan bir öğrenciye veya öğrencilere ait olduğu için öncelikle ödünç kitaplara giderek bu kitaba ait olan ödünç kitabı veya kitapları silmeniz veya teslim almanız gerekmektedir!");
+            }
+            else
             {
                 _service.Delete(book);
             }
+
         }
 
         public List<Book> getAll()
@@ -67,6 +72,39 @@ namespace uu_library_app.Business.Concrete
             return _service.getById(id);
         }
 
-        
+        public Book getByCategoryId(string categoryId)
+        {
+            return _service.getByCategoryId(categoryId);
+        }
+
+        public Book getByAuthorId(string authorId)
+        {
+            return _service.getByAuthorId(authorId);
+        }
+
+        public Book getByLanguageId(string languageId)
+        {
+            return _service.getByLanguageId(languageId);
+        }
+
+        public Book getByLocationId(string locationId)
+        {
+            return _service.getByLocationId(locationId);
+        }
+
+        public Book getByPublisherId(string publisherId)
+        {
+            return _service.getByPublisherId(publisherId);
+        }
+
+        bool checkIfExistInDepositBooks(string bookId)
+        {
+            DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+            if(depositBookManager.getByBookId(bookId) != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

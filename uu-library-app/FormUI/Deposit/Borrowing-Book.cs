@@ -114,10 +114,9 @@ namespace uu_library_app
                 Console.WriteLine("Stok adet: " + book.StockCount);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
   
         }
@@ -144,10 +143,21 @@ namespace uu_library_app
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
+            if(cmbKisi.SelectedValue.ToString() == "student")
+            {
+                txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+            else
+            {
+                txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+           
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -163,6 +173,9 @@ namespace uu_library_app
 
         private void cmbKisi_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtAdSoyad.Text = "";
+            txtBolum.Text = "";
+            txtOkulNo.Text = "";
             if(cmbKisi.SelectedValue.ToString() == "personnel")
             {
                 lblOkulNo.Text = "Fakülte";

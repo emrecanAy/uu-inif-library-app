@@ -92,7 +92,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE firstName=@p1", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE firstName=@p1 AND deleted=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", name);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
@@ -122,7 +122,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE number=@p1", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE number=@p1 AND deleted=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", number);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
@@ -153,7 +153,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=0", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
@@ -184,7 +184,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false ORDER BY createdAt ASC", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=0 ORDER BY createdAt ASC", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
@@ -215,7 +215,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=false ORDER BY firstName ASC", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE deleted=0 ORDER BY firstName ASC", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
@@ -247,7 +247,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE id=@p1", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE id=@p1 AND deleted=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", id);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
@@ -278,7 +278,7 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE eMail=@p1 AND deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE eMail=@p1 AND deleted=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", email);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
@@ -303,6 +303,68 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
+        public Student GetByDepartmentId(string departmentId)
+        {
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE departmentId=@p1 AND deleted=0", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", departmentId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[9].ToString();
 
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        public Student GetByFacultyId(string facultyId)
+        {
+            Student student = new Student();
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Student WHERE facultyId=@p1 AND deleted=0", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", facultyId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    student.Id = reader[0].ToString();
+                    student.FirstName = reader[1].ToString();
+                    student.LastName = reader[2].ToString();
+                    student.Number = reader[3].ToString();
+                    student.Card = reader[4].ToString();
+                    student.Email = reader[5].ToString();
+                    student.DepartmentId = reader[6].ToString();
+                    student.FacultyId = reader[9].ToString();
+                    student.CreatedAt = Convert.ToDateTime(reader["createdAt"]);
+                    student.Deleted = Convert.ToBoolean(reader["deleted"]);
+
+                }
+                conn.Close();
+                return student;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

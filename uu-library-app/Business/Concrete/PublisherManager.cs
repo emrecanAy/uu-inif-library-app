@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
 using uu_library_app.DataAccess.Abstract;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Concrete
@@ -35,7 +36,11 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Publisher publisher)
         {
-            if(publisher != null)
+            if(checkIfExistInBooks(publisher.id))
+            {
+                throw new Exception("Bu yayınevi; kitaplarda bulunan bir kitaba veya kitaplara ait olduğu için öncelikle kitaplara giderek bu yayınevine ait olan kitabı veya kitapları silmeniz gerekmektedir!");
+            }
+            else
             {
                 _publisher.Delete(publisher);
             }
@@ -45,7 +50,16 @@ namespace uu_library_app.Business.Concrete
         {
             return _publisher.getAll();
         }
+        public bool checkIfExistInBooks(string publisherId)
+        {
+            BookManager bookManager = new BookManager(new BookDal());
+            if (bookManager.getByPublisherId(publisherId) != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
-       
+
     }
 }

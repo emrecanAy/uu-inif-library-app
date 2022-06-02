@@ -106,10 +106,9 @@ namespace uu_library_app
                 }
                 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

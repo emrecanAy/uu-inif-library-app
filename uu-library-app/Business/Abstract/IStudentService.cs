@@ -19,5 +19,8 @@ namespace uu_library_app.Business.Abstract
         Student findByName(string name);
         Student findByEmail(string email);
         Student findByNumber(string number);
+        Student GetByDepartmentId(string departmentId);
+        Student GetByFacultyId(string facultyId);
+       
     }
 }

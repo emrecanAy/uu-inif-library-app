@@ -85,6 +85,32 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
+        public List<DepositBook> getAllUndeposit()
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=0 AND status=0 ORDER BY depositDate ASC", conn);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    DepositBook depositBook = new DepositBook();
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    depositBooks.Add(depositBook);
+                }
+                conn.Close();
+                return depositBooks;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
         List<DepositBook> undepositedBooks = new List<DepositBook>();
         public List<DepositBook> getAllUndeposited()
         {
@@ -169,7 +195,6 @@ namespace uu_library_app.DataAccess.Concrete
 
         public DepositBook findById(string id)
         {
-
             conn.Open();
             try
             {
@@ -236,6 +261,64 @@ namespace uu_library_app.DataAccess.Concrete
             }
 
             conn.Close();
+        }
+
+        public DepositBook getByBookId(string bookId)
+        {
+            conn.Open();
+            try
+            {
+                DepositBook depositBook = new DepositBook();
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=0 AND status=0 AND bookId=@p1 ", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", bookId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    depositBook.CreatedAt = Convert.ToDateTime(reader["createdAt"]);
+                    depositBook.Deleted = Convert.ToBoolean(reader["deleted"]);
+                    depositBook.DateShouldBeEscrow = Convert.ToDateTime(reader["dateShouldBeEscrow"]);
+                }
+                conn.Close();
+                return depositBook;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
+        public DepositBook getByStudentId(string studentId)
+        {
+            conn.Open();
+            try
+            {
+                DepositBook depositBook = new DepositBook();
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1 AND status=0", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", studentId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    depositBook.CreatedAt = Convert.ToDateTime(reader["createdAt"]);
+                    depositBook.Deleted = Convert.ToBoolean(reader["deleted"]);
+                    depositBook.DateShouldBeEscrow = Convert.ToDateTime(reader["dateShouldBeEscrow"]);
+                }
+                conn.Close();
+                return depositBook;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
         }
     }
 }

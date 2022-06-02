@@ -70,7 +70,6 @@ namespace uu_library_app.Core.Utils
         public static void SendMailReminding(Student student, Book book, Author author, DepositBook depositBook, string pastDays)
         {
             Settings settings = settingsManager.getSettings();
-            DateTime date1 = new DateTime(0, 0, 0);
             DateTime dateShouldBeEscrow = depositBook.DepositDate.AddDays(6);
 
             try

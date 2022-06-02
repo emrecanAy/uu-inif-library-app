@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
 using uu_library_app.DataAccess.Abstract;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Concrete
@@ -28,7 +29,11 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Language language)
         {
-            if(language != null)
+            if(checkIfExistInBooks(language.id))
+            {
+                throw new Exception("Bu dil; kitaplarda bulunan bir kitaba veya kitaplara ait olduğu için öncelikle kitaplara giderek bu dile ait olan kitabı veya kitapları silmeniz gerekmektedir!");
+            }
+            else
             {
                 _service.Delete(language);
             }
@@ -46,6 +51,16 @@ namespace uu_library_app.Business.Concrete
             {
                 _service.Update(language);
             }
+        }
+
+        public bool checkIfExistInBooks(string languageId)
+        {
+            BookManager bookManager = new BookManager(new BookDal());
+            if (bookManager.getByLanguageId(languageId) != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

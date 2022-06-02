@@ -13,9 +13,15 @@ namespace uu_library_app.Business.Abstract
         List<Book> getAllByCategory(string categoryId);
         List<Book> getAllSortedByName();
         List<Book> getAllSortedByAddedDate();
+        Book getById(string id);
+        Book getByCategoryId(string categoryId);
+        Book getByAuthorId(string authorId);
+        Book getByLanguageId(string languageId);
+        Book getByLocationId(string locationId);
+        Book getByPublisherId(string publisherId);
         void Add(Book book);
         void Update(Book book);
         void Delete(Book book);
-        Book getById(string id);
+        
     }
 }

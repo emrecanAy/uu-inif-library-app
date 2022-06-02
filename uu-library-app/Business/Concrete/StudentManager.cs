@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
 using uu_library_app.DataAccess.Abstract;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Concrete
@@ -30,10 +31,15 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Student student)
         {
-            if(student != null)
+            if (checkIfExistInDepositBook(student.Id))
+            {
+                throw new Exception("Bu öğrencinin ödünç almış olduğu bir kitap veya kitaplar olduğu için öncelikle ödünç kitaplar listesinden o ödünç kitabı silmeniz veya kitabı teslim almanız gerekmektedir!");
+            }
+            else
             {
                 _service.Delete(student);
             }
+
         }
 
         public Student findByName(string name)
@@ -121,5 +127,24 @@ namespace uu_library_app.Business.Concrete
             return false;
         }
 
+        public Student GetByDepartmentId(string departmentId)
+        {
+            return _service.GetByDepartmentId(departmentId);
+        }
+
+        public Student GetByFacultyId(string facultyId)
+        {
+            return _service.GetByFacultyId(facultyId);
+        }
+
+        public bool checkIfExistInDepositBook(string studentId)
+        {
+            DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+            if (depositBookManager.getByStudentId(studentId) != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

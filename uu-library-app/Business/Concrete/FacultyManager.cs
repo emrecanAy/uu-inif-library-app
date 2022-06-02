@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
 using uu_library_app.DataAccess.Abstract;
+using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.Business.Concrete
@@ -24,7 +25,16 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Faculty faculty)
         {
-            _service.Delete(faculty);
+            if (checkIfExistInStudents(faculty.Id))
+            {
+                throw new Exception("Bu fakülte; öğrencilerde bulunan bir öğrenciye veya öğrencilere ait olduğu için öncelikle öğrencilere giderek bu fakülteye ait olan öğrenciyi veya öğrencileri silmeniz gerekmektedir!");
+            }
+            else
+            {
+                _service.Delete(faculty);
+            }
+
+  
         }
 
         public Faculty FindById(string id)
@@ -41,5 +51,21 @@ namespace uu_library_app.Business.Concrete
         {
             _service.Update(faculty);
         }
+
+        bool checkIfExistInStudents(string facultyId)
+        {
+            StudentManager studentManager = new StudentManager(new StudentDal());
+            if (studentManager.GetByFacultyId(facultyId) != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+       
+     
+       
+
+        
     }
 }

@@ -40,6 +40,7 @@ namespace uu_library_app
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[2].Visible = false;
             dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
             dataGridView1.ColumnHeadersVisible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -122,10 +123,9 @@ namespace uu_library_app
                     clearAllFields();
                 }    
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -168,6 +168,12 @@ namespace uu_library_app
                 wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 throw;
             }
+        }
+
+        private void wehTextBox2__TextChanged(object sender, EventArgs e)
+        {
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+           string.Format("name LIKE '{0}%' OR name LIKE '% {0}%'", wehTextBox2.Texts);
         }
     }
 }
