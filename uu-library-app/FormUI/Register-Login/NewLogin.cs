@@ -37,8 +37,7 @@ namespace uu_library_app.FormUI.Register_Login
         {
             loginTextBox3.ForeColor = Color.White;
             loginTextBox4.ForeColor = Color.White;
-            loginTextBox4.Text = "test@gmail.com";
-            loginTextBox3.Text = "123";
+ 
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace uu_library_app
             dgvDeneme.EnableHeadersVisualStyles = false;
             dgvDeneme.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvDeneme.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
             dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvDeneme.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
