@@ -14,6 +14,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.Core.RoutinCustomJobs;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Deposit;
 
 namespace uu_library_app.FormUI
 {
@@ -137,6 +138,12 @@ namespace uu_library_app.FormUI
         private void label27_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WhoHasThatBook book = new WhoHasThatBook();
+            book.Show();
         }
     }
 }

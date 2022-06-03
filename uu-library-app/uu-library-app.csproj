@@ -166,6 +166,7 @@
     <Compile Include="DataAccess\Concrete\PersonnelDal.cs" />
     <Compile Include="DataAccess\Concrete\SettingsDal.cs" />
     <Compile Include="Entity\Concrete\DTO\DepositBookDto.cs" />
+    <Compile Include="Entity\Concrete\DTO\StudentDto.cs" />
     <Compile Include="Entity\Concrete\Faculty.cs" />
     <Compile Include="Entity\Concrete\Logger.cs" />
     <Compile Include="Entity\Concrete\Personnel.cs" />
@@ -245,6 +246,12 @@
     <Compile Include="Business\Concrete\DepositBookManager.cs" />
     <Compile Include="DataAccess\Abstract\IDepositBookDal.cs" />
     <Compile Include="DataAccess\Concrete\DepositBookDal.cs" />
+    <Compile Include="FormUI\Deposit\WhoHasThatBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Deposit\WhoHasThatBook.Designer.cs">
+      <DependentUpon>WhoHasThatBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Gosterge-Paneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Deposit\Borrowing-Book.resx">
       <DependentUpon>Borrowing-Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Deposit\WhoHasThatBook.resx">
+      <DependentUpon>WhoHasThatBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Gosterge-Paneli.resx">
       <DependentUpon>Gosterge-Paneli.cs</DependentUpon>

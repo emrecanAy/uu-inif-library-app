@@ -13,6 +13,7 @@ namespace uu_library_app.Business.Abstract
         List<DepositBook> getAll();
         List<DepositBook> getAllUndeposited();
         List<DepositBook> getAllDeposited();
+        List<DepositBook> getAllByBookId(string bookId);
         void Add(DepositBook depositBook);
         void Update(DepositBook depositBook);
         void Delete(DepositBook depositBook);

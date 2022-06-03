@@ -96,11 +96,9 @@ namespace uu_library_app.Core.Helpers
         public static void ExportToPdf(DataTable dt, string strFilePath)
         {
             Document document = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(strFilePath, FileMode.Create));
             document.Open();
             iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
             PdfPTable table = new PdfPTable(dt.Columns.Count);
-            PdfPRow row = null;
             float[] widths = new float[dt.Columns.Count];
             for (int i = 0; i < dt.Columns.Count; i++)
                 widths[i] = 4f;
@@ -108,8 +106,6 @@ namespace uu_library_app.Core.Helpers
             table.SetWidths(widths);
 
             table.WidthPercentage = 100;
-            int iCol = 0;
-            string colname = "";
             PdfPCell cell = new PdfPCell(new Phrase("Products"));
 
             cell.Colspan = dt.Columns.Count;

@@ -82,5 +82,10 @@ namespace uu_library_app.Business.Concrete
         {
             return _depositBook.getByStudentIdAndBookId(depositBook);
         }
+
+        public List<DepositBook> getAllByBookId(string bookId)
+        {
+            return _depositBook.getAllByBookId(bookId);
+        }
     }
 }

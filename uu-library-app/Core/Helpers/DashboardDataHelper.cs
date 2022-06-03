@@ -83,8 +83,6 @@ namespace uu_library_app.Core.Helpers
         {
             DateTime startDate = DateTime.Now.AddDays(-7);
 
-
-
         }
 
 

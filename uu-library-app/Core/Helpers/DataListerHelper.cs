@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.Entity.Concrete.DTO;
 
 namespace uu_library_app.Core.Helpers
 {
@@ -122,6 +123,29 @@ namespace uu_library_app.Core.Helpers
 
         }
 
+        public static void listUndepositBooksDataToTable2(DataGridView dataGrid, MySqlConnection conn, string studentId)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, Author.firstName'authorFirstName', Author.lastName'authorLastName', DepositBook.depositDate FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE Student.id=@p1 AND DepositBook.status=0", conn);
+            command.Parameters.AddWithValue("@p1", studentId);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[1].Visible = false;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[2].Visible = false;
+            dataGrid.Columns[3].Visible = false;
+            dataGrid.Columns[4].HeaderText = "Kitap Adı";
+            dataGrid.Columns[5].HeaderText = "Yazar Ad";
+            dataGrid.Columns[6].HeaderText = "Yazar Soyad";
+            dataGrid.Columns[7].HeaderText = "Alınma Tarihi";
+            dataGrid.ColumnHeadersVisible = false;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
         public static void listUndepositBooksDataToTableConcat(DataGridView dataGrid, MySqlConnection conn, string studentId)
         {
             DataTable dt = new DataTable();
@@ -214,6 +238,26 @@ namespace uu_library_app.Core.Helpers
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
         }
+        public static StudentDto listInnerJoinStudentDataToTableByStudentId(MySqlConnection conn, string studentId, DateTime dateTime)
+        {
+            conn.Open();
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Department.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0 AND Student.id=@p1", conn);
+            command.Parameters.AddWithValue("@p1", studentId);
+            MySqlDataReader reader = command.ExecuteReader();
+            StudentDto student = new StudentDto();
+            while (reader.Read())
+            {
+                student.Id = reader[0].ToString();
+                student.FullName = reader[1].ToString() + " "+ reader[2].ToString();
+                student.Number = reader[3].ToString();
+                student.DepartmentName = reader[4].ToString();
+                student.DateNeedToGet = dateTime;
+            }
+            conn.Close();
+
+            return student;
+        }
+
 
         public static void listInnerJoinSomeBookDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {

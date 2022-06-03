@@ -43,31 +43,9 @@ namespace uu_library_app.FormUI
             this.chartTopBooks = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTopCategories = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.wehPanel6 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.lblToplamYayinevi = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.wehPanel5 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.lblToplamKategori = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.wehPanel4 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lblOduncSayi = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.wehPanel3 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.lblToplamYazar = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.wehPanel2 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.lblToplamKitap = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.wehPanel1 = new uu_library_app.FormUI.Toolbox.wehPanel();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.lblToplamUye = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.wehPanel10 = new uu_library_app.FormUI.Toolbox.wehPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -110,24 +88,36 @@ namespace uu_library_app.FormUI
             this.lblUye1OkumaSayisi = new System.Windows.Forms.Label();
             this.lblUye1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.wehPanel6 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.lblToplamYayinevi = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.wehPanel5 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.lblToplamKategori = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.wehPanel4 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblOduncSayi = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.wehPanel3 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.lblToplamYazar = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.wehPanel2 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.lblToplamKitap = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.wehPanel1 = new uu_library_app.FormUI.Toolbox.wehPanel();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.lblToplamUye = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopCategories)).BeginInit();
             this.panel14.SuspendLayout();
-            this.wehPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.wehPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.wehPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.wehPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.wehPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.wehPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.wehPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.wehPanel9.SuspendLayout();
@@ -144,7 +134,18 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.wehPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.wehPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.wehPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.wehPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.wehPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.wehPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -281,276 +282,6 @@ namespace uu_library_app.FormUI
             this.panel14.Size = new System.Drawing.Size(854, 385);
             this.panel14.TabIndex = 275;
             // 
-            // wehPanel6
-            // 
-            this.wehPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel6.BorderColor = System.Drawing.Color.White;
-            this.wehPanel6.Controls.Add(this.pictureBox14);
-            this.wehPanel6.Controls.Add(this.lblToplamYayinevi);
-            this.wehPanel6.Controls.Add(this.label12);
-            this.wehPanel6.Edge = 20;
-            this.wehPanel6.Location = new System.Drawing.Point(584, 209);
-            this.wehPanel6.Name = "wehPanel6";
-            this.wehPanel6.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel6.TabIndex = 281;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox14.TabIndex = 6;
-            this.pictureBox14.TabStop = false;
-            // 
-            // lblToplamYayinevi
-            // 
-            this.lblToplamYayinevi.AutoSize = true;
-            this.lblToplamYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamYayinevi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblToplamYayinevi.Location = new System.Drawing.Point(78, 64);
-            this.lblToplamYayinevi.Name = "lblToplamYayinevi";
-            this.lblToplamYayinevi.Size = new System.Drawing.Size(37, 39);
-            this.lblToplamYayinevi.TabIndex = 5;
-            this.lblToplamYayinevi.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(19, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 25);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Toplam Yayınevi";
-            // 
-            // wehPanel5
-            // 
-            this.wehPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel5.BorderColor = System.Drawing.Color.White;
-            this.wehPanel5.Controls.Add(this.pictureBox13);
-            this.wehPanel5.Controls.Add(this.lblToplamKategori);
-            this.wehPanel5.Controls.Add(this.label10);
-            this.wehPanel5.Edge = 20;
-            this.wehPanel5.Location = new System.Drawing.Point(299, 209);
-            this.wehPanel5.Name = "wehPanel5";
-            this.wehPanel5.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel5.TabIndex = 280;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox13.TabIndex = 6;
-            this.pictureBox13.TabStop = false;
-            // 
-            // lblToplamKategori
-            // 
-            this.lblToplamKategori.AutoSize = true;
-            this.lblToplamKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblToplamKategori.Location = new System.Drawing.Point(78, 64);
-            this.lblToplamKategori.Name = "lblToplamKategori";
-            this.lblToplamKategori.Size = new System.Drawing.Size(37, 39);
-            this.lblToplamKategori.TabIndex = 5;
-            this.lblToplamKategori.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(19, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 25);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Toplam Kategori";
-            // 
-            // wehPanel4
-            // 
-            this.wehPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel4.BorderColor = System.Drawing.Color.White;
-            this.wehPanel4.Controls.Add(this.pictureBox7);
-            this.wehPanel4.Controls.Add(this.lblOduncSayi);
-            this.wehPanel4.Controls.Add(this.label8);
-            this.wehPanel4.Edge = 20;
-            this.wehPanel4.Location = new System.Drawing.Point(12, 209);
-            this.wehPanel4.Name = "wehPanel4";
-            this.wehPanel4.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel4.TabIndex = 279;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // lblOduncSayi
-            // 
-            this.lblOduncSayi.AutoSize = true;
-            this.lblOduncSayi.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOduncSayi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblOduncSayi.Location = new System.Drawing.Point(78, 64);
-            this.lblOduncSayi.Name = "lblOduncSayi";
-            this.lblOduncSayi.Size = new System.Drawing.Size(36, 39);
-            this.lblOduncSayi.TabIndex = 5;
-            this.lblOduncSayi.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(4, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(251, 25);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Toplam Ödünç Verilen Kitap ";
-            // 
-            // wehPanel3
-            // 
-            this.wehPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel3.BorderColor = System.Drawing.Color.White;
-            this.wehPanel3.Controls.Add(this.pictureBox11);
-            this.wehPanel3.Controls.Add(this.lblToplamYazar);
-            this.wehPanel3.Controls.Add(this.label6);
-            this.wehPanel3.Edge = 20;
-            this.wehPanel3.Location = new System.Drawing.Point(584, 25);
-            this.wehPanel3.Name = "wehPanel3";
-            this.wehPanel3.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel3.TabIndex = 280;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox11.TabIndex = 6;
-            this.pictureBox11.TabStop = false;
-            // 
-            // lblToplamYazar
-            // 
-            this.lblToplamYazar.AutoSize = true;
-            this.lblToplamYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamYazar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.lblToplamYazar.Location = new System.Drawing.Point(78, 64);
-            this.lblToplamYazar.Name = "lblToplamYazar";
-            this.lblToplamYazar.Size = new System.Drawing.Size(37, 39);
-            this.lblToplamYazar.TabIndex = 5;
-            this.lblToplamYazar.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Toplam Yazar";
-            // 
-            // wehPanel2
-            // 
-            this.wehPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel2.BorderColor = System.Drawing.Color.White;
-            this.wehPanel2.Controls.Add(this.pictureBox12);
-            this.wehPanel2.Controls.Add(this.lblToplamKitap);
-            this.wehPanel2.Controls.Add(this.label4);
-            this.wehPanel2.Edge = 20;
-            this.wehPanel2.Location = new System.Drawing.Point(299, 25);
-            this.wehPanel2.Name = "wehPanel2";
-            this.wehPanel2.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel2.TabIndex = 279;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox12.TabIndex = 6;
-            this.pictureBox12.TabStop = false;
-            // 
-            // lblToplamKitap
-            // 
-            this.lblToplamKitap.AutoSize = true;
-            this.lblToplamKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblToplamKitap.Location = new System.Drawing.Point(78, 64);
-            this.lblToplamKitap.Name = "lblToplamKitap";
-            this.lblToplamKitap.Size = new System.Drawing.Size(36, 39);
-            this.lblToplamKitap.TabIndex = 5;
-            this.lblToplamKitap.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Toplam Kitap ";
-            // 
-            // wehPanel1
-            // 
-            this.wehPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.wehPanel1.BorderColor = System.Drawing.Color.White;
-            this.wehPanel1.Controls.Add(this.pictureBox19);
-            this.wehPanel1.Controls.Add(this.lblToplamUye);
-            this.wehPanel1.Controls.Add(this.label3);
-            this.wehPanel1.Edge = 20;
-            this.wehPanel1.Location = new System.Drawing.Point(12, 25);
-            this.wehPanel1.Name = "wehPanel1";
-            this.wehPanel1.Size = new System.Drawing.Size(258, 150);
-            this.wehPanel1.TabIndex = 278;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(180, 43);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox19.TabIndex = 6;
-            this.pictureBox19.TabStop = false;
-            // 
-            // lblToplamUye
-            // 
-            this.lblToplamUye.AutoSize = true;
-            this.lblToplamUye.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblToplamUye.Location = new System.Drawing.Point(78, 64);
-            this.lblToplamUye.Name = "lblToplamUye";
-            this.lblToplamUye.Size = new System.Drawing.Size(36, 39);
-            this.lblToplamUye.TabIndex = 5;
-            this.lblToplamUye.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(19, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Toplam Üye ";
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -562,6 +293,26 @@ namespace uu_library_app.FormUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 393);
             this.panel1.TabIndex = 276;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.chartTopCategories);
+            this.panel2.Controls.Add(this.chartTopBooks);
+            this.panel2.Location = new System.Drawing.Point(872, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 785);
+            this.panel2.TabIndex = 277;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(656, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 23);
+            this.button1.TabIndex = 278;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // wehPanel10
             // 
@@ -1047,15 +798,275 @@ namespace uu_library_app.FormUI
             this.label19.TabIndex = 30;
             this.label19.Text = "En Çok Okuyan 5 Üye";
             // 
-            // panel2
+            // wehPanel6
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.chartTopCategories);
-            this.panel2.Controls.Add(this.chartTopBooks);
-            this.panel2.Location = new System.Drawing.Point(872, 103);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 785);
-            this.panel2.TabIndex = 277;
+            this.wehPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel6.BorderColor = System.Drawing.Color.White;
+            this.wehPanel6.Controls.Add(this.pictureBox14);
+            this.wehPanel6.Controls.Add(this.lblToplamYayinevi);
+            this.wehPanel6.Controls.Add(this.label12);
+            this.wehPanel6.Edge = 20;
+            this.wehPanel6.Location = new System.Drawing.Point(584, 209);
+            this.wehPanel6.Name = "wehPanel6";
+            this.wehPanel6.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel6.TabIndex = 281;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox14.TabIndex = 6;
+            this.pictureBox14.TabStop = false;
+            // 
+            // lblToplamYayinevi
+            // 
+            this.lblToplamYayinevi.AutoSize = true;
+            this.lblToplamYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamYayinevi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamYayinevi.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamYayinevi.Name = "lblToplamYayinevi";
+            this.lblToplamYayinevi.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamYayinevi.TabIndex = 5;
+            this.lblToplamYayinevi.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(19, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(146, 25);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Toplam Yayınevi";
+            // 
+            // wehPanel5
+            // 
+            this.wehPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel5.BorderColor = System.Drawing.Color.White;
+            this.wehPanel5.Controls.Add(this.pictureBox13);
+            this.wehPanel5.Controls.Add(this.lblToplamKategori);
+            this.wehPanel5.Controls.Add(this.label10);
+            this.wehPanel5.Edge = 20;
+            this.wehPanel5.Location = new System.Drawing.Point(299, 209);
+            this.wehPanel5.Name = "wehPanel5";
+            this.wehPanel5.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel5.TabIndex = 280;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox13.TabIndex = 6;
+            this.pictureBox13.TabStop = false;
+            // 
+            // lblToplamKategori
+            // 
+            this.lblToplamKategori.AutoSize = true;
+            this.lblToplamKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamKategori.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamKategori.Name = "lblToplamKategori";
+            this.lblToplamKategori.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamKategori.TabIndex = 5;
+            this.lblToplamKategori.Text = "0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(19, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(149, 25);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Toplam Kategori";
+            // 
+            // wehPanel4
+            // 
+            this.wehPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel4.BorderColor = System.Drawing.Color.White;
+            this.wehPanel4.Controls.Add(this.pictureBox7);
+            this.wehPanel4.Controls.Add(this.lblOduncSayi);
+            this.wehPanel4.Controls.Add(this.label8);
+            this.wehPanel4.Edge = 20;
+            this.wehPanel4.Location = new System.Drawing.Point(12, 209);
+            this.wehPanel4.Name = "wehPanel4";
+            this.wehPanel4.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel4.TabIndex = 279;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // lblOduncSayi
+            // 
+            this.lblOduncSayi.AutoSize = true;
+            this.lblOduncSayi.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOduncSayi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.lblOduncSayi.Location = new System.Drawing.Point(78, 64);
+            this.lblOduncSayi.Name = "lblOduncSayi";
+            this.lblOduncSayi.Size = new System.Drawing.Size(36, 39);
+            this.lblOduncSayi.TabIndex = 5;
+            this.lblOduncSayi.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(4, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(251, 25);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Toplam Ödünç Verilen Kitap ";
+            // 
+            // wehPanel3
+            // 
+            this.wehPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel3.BorderColor = System.Drawing.Color.White;
+            this.wehPanel3.Controls.Add(this.pictureBox11);
+            this.wehPanel3.Controls.Add(this.lblToplamYazar);
+            this.wehPanel3.Controls.Add(this.label6);
+            this.wehPanel3.Edge = 20;
+            this.wehPanel3.Location = new System.Drawing.Point(584, 25);
+            this.wehPanel3.Name = "wehPanel3";
+            this.wehPanel3.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel3.TabIndex = 280;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox11.TabIndex = 6;
+            this.pictureBox11.TabStop = false;
+            // 
+            // lblToplamYazar
+            // 
+            this.lblToplamYazar.AutoSize = true;
+            this.lblToplamYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamYazar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblToplamYazar.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamYazar.Name = "lblToplamYazar";
+            this.lblToplamYazar.Size = new System.Drawing.Size(37, 39);
+            this.lblToplamYazar.TabIndex = 5;
+            this.lblToplamYazar.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(19, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 25);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Toplam Yazar";
+            // 
+            // wehPanel2
+            // 
+            this.wehPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel2.BorderColor = System.Drawing.Color.White;
+            this.wehPanel2.Controls.Add(this.pictureBox12);
+            this.wehPanel2.Controls.Add(this.lblToplamKitap);
+            this.wehPanel2.Controls.Add(this.label4);
+            this.wehPanel2.Edge = 20;
+            this.wehPanel2.Location = new System.Drawing.Point(299, 25);
+            this.wehPanel2.Name = "wehPanel2";
+            this.wehPanel2.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel2.TabIndex = 279;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox12.TabIndex = 6;
+            this.pictureBox12.TabStop = false;
+            // 
+            // lblToplamKitap
+            // 
+            this.lblToplamKitap.AutoSize = true;
+            this.lblToplamKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamKitap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.lblToplamKitap.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamKitap.Name = "lblToplamKitap";
+            this.lblToplamKitap.Size = new System.Drawing.Size(36, 39);
+            this.lblToplamKitap.TabIndex = 5;
+            this.lblToplamKitap.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(19, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Toplam Kitap ";
+            // 
+            // wehPanel1
+            // 
+            this.wehPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.wehPanel1.BorderColor = System.Drawing.Color.White;
+            this.wehPanel1.Controls.Add(this.pictureBox19);
+            this.wehPanel1.Controls.Add(this.lblToplamUye);
+            this.wehPanel1.Controls.Add(this.label3);
+            this.wehPanel1.Edge = 20;
+            this.wehPanel1.Location = new System.Drawing.Point(12, 25);
+            this.wehPanel1.Name = "wehPanel1";
+            this.wehPanel1.Size = new System.Drawing.Size(258, 150);
+            this.wehPanel1.TabIndex = 278;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(180, 43);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox19.TabIndex = 6;
+            this.pictureBox19.TabStop = false;
+            // 
+            // lblToplamUye
+            // 
+            this.lblToplamUye.AutoSize = true;
+            this.lblToplamUye.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.lblToplamUye.Location = new System.Drawing.Point(78, 64);
+            this.lblToplamUye.Name = "lblToplamUye";
+            this.lblToplamUye.Size = new System.Drawing.Size(36, 39);
+            this.lblToplamUye.TabIndex = 5;
+            this.lblToplamUye.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Toplam Üye ";
             // 
             // Gosterge_Paneli
             // 
@@ -1063,6 +1074,7 @@ namespace uu_library_app.FormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel14);
@@ -1076,25 +1088,8 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.chartTopBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopCategories)).EndInit();
             this.panel14.ResumeLayout(false);
-            this.wehPanel6.ResumeLayout(false);
-            this.wehPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.wehPanel5.ResumeLayout(false);
-            this.wehPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.wehPanel4.ResumeLayout(false);
-            this.wehPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.wehPanel3.ResumeLayout(false);
-            this.wehPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.wehPanel2.ResumeLayout(false);
-            this.wehPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.wehPanel1.ResumeLayout(false);
-            this.wehPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.wehPanel10.ResumeLayout(false);
             this.wehPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1115,7 +1110,24 @@ namespace uu_library_app.FormUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.wehPanel6.ResumeLayout(false);
+            this.wehPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.wehPanel5.ResumeLayout(false);
+            this.wehPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.wehPanel4.ResumeLayout(false);
+            this.wehPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.wehPanel3.ResumeLayout(false);
+            this.wehPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.wehPanel2.ResumeLayout(false);
+            this.wehPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.wehPanel1.ResumeLayout(false);
+            this.wehPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1195,5 +1207,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTeslimAlinan;
+        private System.Windows.Forms.Button button1;
     }
 }

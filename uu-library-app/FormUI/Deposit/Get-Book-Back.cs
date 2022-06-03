@@ -16,7 +16,7 @@ using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app
 {
-    public partial class Get_Book_Back : Form
+    public partial class Get_Book_Back: Form
     {
         private Admin _admin;
         public Get_Book_Back(Admin admin)

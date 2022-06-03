@@ -95,6 +95,7 @@ namespace uu_library_app.Core.Helpers
                     depositBookDto.GecikmeGunu = ts.Days;
 
                 }
+
                 depositBookDtoList.Add(depositBookDto);
                 conn.Close();
             }
