@@ -65,6 +65,7 @@ namespace uu_library_app.Core.Helpers
                     int daysPast = Convert.ToInt32(howManyDaysPast);
                     if (daysPast <= -settingsManager.getSettings().DepositDay)
                     {
+                        Console.WriteLine(depositBook.Id + " Gecikme Gunu Sayısı: " + daysPast);
                         expiredBooks.Add(depositBook);
                     }
                 }
@@ -78,18 +79,21 @@ namespace uu_library_app.Core.Helpers
             foreach (DepositBook depositBook in getExpiredBooks())
             {
                 conn.Open();
-                DepositBookDto depositBookDto = new DepositBookDto();
+                TimeSpan ts = depositBook.DepositDate - DateTime.Now; 
                 MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1 AND DepositBook.status=0", conn);
                 command.Parameters.AddWithValue("@p1", depositBook.Id);
                 MySqlDataReader reader = command.ExecuteReader();
+                DepositBookDto depositBookDto = new DepositBookDto();
                 while (reader.Read())
                 {
                     depositBookDto.Id = reader[0].ToString();
                     depositBookDto.OgrenciNo = reader[1].ToString();
                     depositBookDto.Ogrenci = reader[2].ToString();
                     depositBookDto.Kitap = reader[3].ToString();
-                    depositBookDto.Yazar = reader[4].ToString();
+                    depositBookDto.Yazar = reader[4].ToString(); 
                     depositBookDto.OlusturulmaTarihi = Convert.ToDateTime(reader[5]);
+                    depositBookDto.GecikmeGunu = ts.Days;
+
                 }
                 depositBookDtoList.Add(depositBookDto);
                 conn.Close();
@@ -101,13 +105,13 @@ namespace uu_library_app.Core.Helpers
         {
             conn.Open();
             DataTable dt = new DataTable();
-
             MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, Author.firstName'authorFirstName', Author.lastName'authorLastName' FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1", conn);
             command.Parameters.AddWithValue("@p1", depositBookId);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
+            conn.Close();
             da.Fill(dt);
             return dt;
-            conn.Close();
+            
         }
 
     }

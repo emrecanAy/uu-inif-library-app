@@ -14,10 +14,11 @@ namespace uu_library_app.Entity.Concrete.DTO
         private string book;
         private string author;
         private DateTime createdAt;
+        private int expiredDay;
 
         public DepositBookDto() { }
 
-        public DepositBookDto(string id, string studentNo, string studentFullName, string book, string author, DateTime createdAt)
+        public DepositBookDto(string id, string studentNo, string studentFullName, string book, string author, DateTime createdAt, int expiredDay)
         {
             this.Id = id;
             this.OgrenciNo = studentNo;
@@ -25,6 +26,7 @@ namespace uu_library_app.Entity.Concrete.DTO
             this.Kitap = book;
             this.Yazar = author;
             this.OlusturulmaTarihi = createdAt;
+            this.GecikmeGunu = expiredDay;
         }
 
         public string Id { get => id; set => id = value; }
@@ -33,5 +35,6 @@ namespace uu_library_app.Entity.Concrete.DTO
         public string Yazar { get => author; set => author = value; }
         public DateTime OlusturulmaTarihi { get => createdAt; set => createdAt = value; }
         public string OgrenciNo { get => studentNo; set => studentNo = value; }
+        public int GecikmeGunu { get => expiredDay; set => expiredDay = value; }
     }
 }
