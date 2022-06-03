@@ -101,7 +101,7 @@ namespace uu_library_app.Business.Concrete
         bool checkIfExistInDepositBooks(Book book)
         {
             DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
-            if(depositBookManager.getByBookId(book.Id) != null)
+            if(depositBookManager.getByBookId(book.Id).Id != null)
             {
                 return true;
             }
