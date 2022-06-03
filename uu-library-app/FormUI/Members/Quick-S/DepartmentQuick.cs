@@ -53,6 +53,11 @@ namespace uu_library_app.FormUI.MailSettings
                 manager.Add(departmentToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + departmentToAdd.Id + " | " + departmentToAdd.Name + "] eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
+                wehMessageBox.Show("Başarıyla eklendi!",
+                "Başarılı",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
+                this.Hide();
             }
             catch (Exception)
             {

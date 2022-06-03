@@ -56,6 +56,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
                 "Başarılı",
                   MessageBoxButtons.OK,
                   MessageBoxIcon.Information);
+                this.Hide();
             }
             catch (Exception)
             {

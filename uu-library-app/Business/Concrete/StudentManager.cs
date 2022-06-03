@@ -140,7 +140,7 @@ namespace uu_library_app.Business.Concrete
         public bool checkIfExistInDepositBook(string studentId)
         {
             DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
-            if (depositBookManager.getByStudentId(studentId) != null)
+            if (depositBookManager.getByStudentId(studentId).Id != null)
             {
                 return true;
             }

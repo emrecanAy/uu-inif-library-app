@@ -18,14 +18,6 @@ namespace uu_library_app.Business.Concrete
         }
         public void Add(DepositBook depositBook)
         {
-            /*
-             eğer bu kişide aynı kitaptan varsa bir daha verilemez.
-             Bunun için checkIfExistInDepositBooks metodu yazacağız.
-             Parametre olarak o öğrencinin id'si ile kitapId'yi alacağız.
-             öğrenciId ve kitapId'ye göre sorgu atacağız.
-             null gelirse alabilir, dolu gelirse alamaz. çünkü aynı kitaptan aynı öğrenciede var demektir.
-             */
-
             if (getByStudentIdAndBookId(depositBook).Id != null)
             {
                 throw new Exception("Aynı kitap aynı öğrenciye daha önce ödünç verilmiştir. Öncelikle almış olduğu kitabı teslim etmesi gerekmektedir.");
@@ -40,11 +32,7 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(DepositBook depositBook)
         {
-            if(depositBook != null)
-            {
-                _depositBook.Delete(depositBook);
-            }
-            
+            _depositBook.Delete(depositBook);
         }
 
         public void depositBook(string id)

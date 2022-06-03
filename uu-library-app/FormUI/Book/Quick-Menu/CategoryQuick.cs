@@ -57,6 +57,7 @@ namespace uu_library_app.FormUI.MailSettings
                "Başarılı",
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Information);
+                this.Hide();
             }
             catch (Exception ex)
             {

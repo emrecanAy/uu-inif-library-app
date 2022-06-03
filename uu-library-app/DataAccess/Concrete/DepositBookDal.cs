@@ -298,7 +298,7 @@ namespace uu_library_app.DataAccess.Concrete
             try
             {
                 DepositBook depositBook = new DepositBook();
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1 AND status=0 AND id=@p2", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1 AND status=0", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", studentId);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
