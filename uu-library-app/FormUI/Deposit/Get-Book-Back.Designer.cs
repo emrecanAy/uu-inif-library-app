@@ -211,7 +211,7 @@ namespace uu_library_app
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Location = new System.Drawing.Point(726, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(517, 129);
+            this.panel4.Size = new System.Drawing.Size(517, 189);
             this.panel4.TabIndex = 243;
             // 
             // dgvDahaOnceAlinanKitaplar
@@ -239,7 +239,7 @@ namespace uu_library_app
             this.dgvDahaOnceAlinanKitaplar.RowHeadersVisible = false;
             this.dgvDahaOnceAlinanKitaplar.RowTemplate.Height = 30;
             this.dgvDahaOnceAlinanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDahaOnceAlinanKitaplar.Size = new System.Drawing.Size(509, 83);
+            this.dgvDahaOnceAlinanKitaplar.Size = new System.Drawing.Size(509, 143);
             this.dgvDahaOnceAlinanKitaplar.TabIndex = 290;
             this.dgvDahaOnceAlinanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -301,9 +301,9 @@ namespace uu_library_app
             this.panel2.Controls.Add(this.lblAd);
             this.panel2.Controls.Add(this.txtAd);
             this.panel2.Controls.Add(this.pnlAd);
-            this.panel2.Location = new System.Drawing.Point(727, 246);
+            this.panel2.Location = new System.Drawing.Point(727, 297);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(516, 642);
+            this.panel2.Size = new System.Drawing.Size(516, 591);
             this.panel2.TabIndex = 244;
             // 
             // pictureBox10

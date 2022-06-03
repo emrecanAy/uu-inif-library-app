@@ -18,14 +18,20 @@ namespace uu_library_app.Business.Concrete
         }
         public void Add(DepositBook depositBook)
         {
-            if (checkIfItHasAlready(depositBook.StudentId))
+            /*
+             eğer bu kişide aynı kitaptan varsa bir daha verilemez.
+             Bunun için checkIfExistInDepositBooks metodu yazacağız.
+             Parametre olarak o öğrencinin id'si ile kitapId'yi alacağız.
+             öğrenciId ve kitapId'ye göre sorgu atacağız.
+             null gelirse alabilir, dolu gelirse alamaz. çünkü aynı kitaptan aynı öğrenciede var demektir.
+             */
+
+            if (getByStudentIdAndBookId(depositBook).Id != null)
             {
-                throw new Exception("Aynı kitap zaten elinizde mevcut!");
+                throw new Exception("Aynı kitap aynı öğrenciye daha önce ödünç verilmiştir. Öncelikle almış olduğu kitabı teslim etmesi gerekmektedir.");
             }
-            else
-            {
-                _depositBook.Add(depositBook);
-            }
+            _depositBook.Add(depositBook);
+
         }
         public DepositBook findById(string id)
         {
@@ -84,13 +90,9 @@ namespace uu_library_app.Business.Concrete
             return _depositBook.getByStudentId(studentId);
         }
 
-        public bool checkIfItHasAlready(string studentId)
+        public DepositBook getByStudentIdAndBookId(DepositBook depositBook)
         {
-            if(_depositBook.getByStudentId(studentId) != null)
-            {
-                return true;
-            }
-            return false;
+            return _depositBook.getByStudentIdAndBookId(depositBook);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace uu_library_app.Business.Abstract
         DepositBook findById(string id);
         DepositBook getByBookId(string bookId);
         DepositBook getByStudentId(string studentId);
+        DepositBook getByStudentIdAndBookId(DepositBook depositBook);
 
     }
 }

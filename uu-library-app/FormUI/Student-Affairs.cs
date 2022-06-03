@@ -1,10 +1,14 @@
-﻿using MessageBoxDenemesi;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MessageBoxDenemesi;
 using MySql.Data.MySqlClient;
+using SautinSoft.Document;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +18,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
+using Color = System.Drawing.Color;
 
 namespace uu_library_app
 {
@@ -43,7 +48,7 @@ namespace uu_library_app
             Belge Tasarımı. İçerik: Öğrenci Görev: Windows Form'da kullanılabilecek PdfExport yöntemlerini araştır ve PDF'e yazı yazabilmeyi araştır.
              
              */
-
+            
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -51,7 +56,7 @@ namespace uu_library_app
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
@@ -113,6 +118,7 @@ namespace uu_library_app
             
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = wehMessageBox.Show("Öğrenciyi silmek istediğinize emin misiniz?",
@@ -135,6 +141,67 @@ namespace uu_library_app
 
             }
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Student student = studentManager.findByNumber(txtOgrenciId.Text);
+            //string filePath = @"C:\Users\Emrecan\Desktop\test.PDF";
+            //string fileResult = @"Result.pdf";
+            //DocumentCore dc = DocumentCore.Load(filePath);
+
+            //// Find a position to insert text. Before this text: "> in this position".
+            //ContentRange cr = dc.Content.Find(">").FirstOrDefault();
+
+            //// Insert new text.
+            //if (cr != null)
+            //    cr.Start.Insert(student.FirstName + " " + student.LastName);
+            //dc.Save(fileResult);
+            //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
+            //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileResult) { UseShellExecute = true });
+
+            string oldFile = @"C:\Users\Emrecan\Desktop\test.pdf";
+            string newFile = "newFile.pdf";
+
+            // open the reader
+            PdfReader reader = new PdfReader(oldFile);
+            iTextSharp.text.Rectangle size = reader.GetPageSizeWithRotation(1);
+            Document document = new Document(size);
+
+            // open the writer
+            FileStream fs = new FileStream(newFile, FileMode.Create, FileAccess.Write);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+            // the pdf content
+            PdfContentByte cb = writer.DirectContent;
+
+            // select the font properties
+            BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            cb.SetColorFill(BaseColor.DARK_GRAY);
+            cb.SetFontAndSize(bf, 50);
+
+            // write the text in the pdf content
+            cb.BeginText();
+            string text = "Some random blablablabla sedkfjgsnıudfjkngmslıjdkfjgnsılkdfljgmnılsjdnfglıdsöfngıkdfgnıkdjfnghıkdfgmhdfögnhkdjfömgnhkdjföngh...";
+            // put the alignment and coordinates here
+            cb.ShowTextAligned(1, text, 300, 520, 0);
+            cb.EndText();
+            cb.BeginText();
+            text = "Other random blabla...";
+            // put the alignment and coordinates here
+            cb.ShowTextAligned(2, text, 100, 200, 0);
+            cb.EndText();
+
+            // create the new page and add it to the pdf
+            PdfImportedPage page = writer.GetImportedPage(reader, 1);
+            cb.AddTemplate(page, 0, 0);
+
+            // close the streams and voilá the file should be changed :)
+            document.Close();
+            fs.Close();
+            writer.Close();
+            reader.Close();
         }
     }
 }

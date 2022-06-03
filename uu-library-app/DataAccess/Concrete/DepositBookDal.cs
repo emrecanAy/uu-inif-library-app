@@ -298,7 +298,7 @@ namespace uu_library_app.DataAccess.Concrete
             try
             {
                 DepositBook depositBook = new DepositBook();
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1 AND status=0", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND studentId=@p1 AND status=0 AND id=@p2", conn);
                 commandToGetAll.Parameters.AddWithValue("@p1", studentId);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
@@ -308,8 +308,6 @@ namespace uu_library_app.DataAccess.Concrete
                     depositBook.StudentId = reader[2].ToString();
                     depositBook.BookId = reader[3].ToString();
                     depositBook.CreatedAt = Convert.ToDateTime(reader["createdAt"]);
-                    depositBook.Deleted = Convert.ToBoolean(reader["deleted"]);
-                    depositBook.DateShouldBeEscrow = Convert.ToDateTime(reader["dateShouldBeEscrow"]);
                 }
                 conn.Close();
                 return depositBook;
@@ -320,6 +318,34 @@ namespace uu_library_app.DataAccess.Concrete
                 throw;
             }
         }
+
+        public DepositBook getByStudentIdAndBookId(DepositBook depositBook)
+        {
+            conn.Open();
+            try
+            {
+                DepositBook depositBookNew = new DepositBook();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM DepositBook WHERE status=0 AND studentId=@p1 AND bookId=@p2", conn);
+                command.Parameters.AddWithValue("@p1", depositBook.StudentId);
+                command.Parameters.AddWithValue("@p2", depositBook.BookId);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    depositBookNew.Id = reader[0].ToString();
+                    depositBookNew.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBookNew.StudentId = reader[2].ToString();
+                    depositBookNew.BookId = reader[3].ToString();
+                }
+                conn.Close();
+                return depositBookNew;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
+
     }
 }
 

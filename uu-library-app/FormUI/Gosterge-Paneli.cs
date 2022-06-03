@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
+using uu_library_app.Core.RoutinCustomJobs;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -39,6 +40,10 @@ namespace uu_library_app.FormUI
             try
             {
                 conn.Open();
+
+                //MailSenderJob job = new MailSenderJob();
+                //job.everyDayCheckAndSendMail();
+
                 int test = personnelManager.getAll().Count();
                 lblToplamUye.Text = (studentManager.getAll().Count() + personnelManager.getAll().Count()).ToString();
                 lblToplamYazar.Text = authorManager.getAll().Count().ToString();

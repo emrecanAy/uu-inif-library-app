@@ -26,10 +26,10 @@ namespace uu_library_app.Core.Utils
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                 mail.From = new MailAddress(senderMailAddress);
                 mail.To.Add(email);
-                mail.Subject = "INIF-AssemSoft Email Doğrulama";
+                mail.Subject = "dfgsdfgsdfg";
                 mail.Body = "Eposta doğrulama kodunuz: " + verificationCode;
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(senderMailAddress, "PassWord_123"); //bunlar globals diye klasör açılıp orada bir class'da tutulup oradan getirilecek.
+                SmtpServer.Credentials = new System.Net.NetworkCredential(senderMailAddress, "PassWord_123");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 Console.WriteLine("Mail sent at" + DateTime.Now);
@@ -55,7 +55,7 @@ namespace uu_library_app.Core.Utils
                 mail.Subject = settings.ExpiredMailHeader;       
                 mail.Body = "Emanet Bilgileri\n--------------\nKitap: "+book.BookName+ "\nYazar: " + author.FirstName +" "+ author.LastName +"\nEmanet Alma Tarihi: "+depositBook.DepositDate+"\nTeslim Edilmesi Gereken Tarih: "+dateShouldBeEscrow+"\nGeciken Gün: "+pastDays + "\n"+ settings.ExpiredMailText;
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(settings.SenderEmail, settings.SenderPassword);
+                SmtpServer.Credentials = new System.Net.NetworkCredential(settings.SenderEmail, StringEncoder.Decrypt(settings.SenderPassword));
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 Console.WriteLine("Mail sent at" + DateTime.Now);

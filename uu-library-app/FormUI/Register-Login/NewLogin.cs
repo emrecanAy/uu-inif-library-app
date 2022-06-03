@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.Utils;
 using uu_library_app.DataAccess.Concrete;
+using uu_library_app.Entity.Concrete;
 
 namespace uu_library_app.FormUI.Register_Login
 {
@@ -75,7 +77,6 @@ namespace uu_library_app.FormUI.Register_Login
                 "Sunucuya bağlanırken bir hata oluştu!",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
-                throw;
             }
         }
 
@@ -89,6 +90,66 @@ namespace uu_library_app.FormUI.Register_Login
             NewRegister newRegister = new NewRegister();
             newRegister.Show();
             this.Hide();
+        }
+
+        string code = EmailVerificator.GenerateCode();
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
+               "ONAY",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Warning);
+            adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
+            panelOnay.Visible = true;
+        }
+
+        private void btnOnayKodu_Click(object sender, EventArgs e)
+        {
+            if (txtOnayKodu.Text == code)
+            {
+                wehMessageBox.Show("Başarılı! Lütfen yeni şifrenizi giriniz...",
+                 "Yeni Şifre!",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Warning);
+                System.Threading.Thread.Sleep(4000);
+                panelYeniSifre.Visible = true;
+
+            }
+            else
+            {
+                wehMessageBox.Show("Onay kodu hatalı! Tekrar giriniz...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnYeniSifre_Click(object sender, EventArgs e)
+        {
+            Admin admin = adminManager.getbyEmail(loginTextBox4.Text);
+            if(loginTextBox1.Text != loginTextBox2.Text)
+            {
+                wehMessageBox.Show("Şifreler uyuşmuyor!",
+                "UYARI!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+                return;
+            }
+            admin.Password = loginTextBox1.Text;
+            try
+            {
+                adminManager.Update(admin);
+                wehMessageBox.Show("Şifre başarıyla güncellendi! Giriş sayfasına yönlendiriliyorsunuz...",
+                "Bilgi!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+                this.Hide();
+                NewLogin login = new NewLogin();
+                login.Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
+
         }
     }
 }

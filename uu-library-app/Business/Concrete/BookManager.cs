@@ -22,6 +22,7 @@ namespace uu_library_app.Business.Concrete
         {
             if(book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PageCount != null && book.PublisherId != null && book.StockCount != null)
             {
+           
                 _service.Add(book);
             }
         }
@@ -36,7 +37,7 @@ namespace uu_library_app.Business.Concrete
 
         public void Delete(Book book)
         {
-            if (checkIfExistInDepositBooks(book.Id))
+            if (checkIfExistInDepositBooks(book))
             {
                 throw new Exception("Bu kitap; ödünç verilen kitaplarda bulunan bir öğrenciye veya öğrencilere ait olduğu için öncelikle ödünç kitaplara giderek bu kitaba ait olan ödünç kitabı veya kitapları silmeniz veya teslim almanız gerekmektedir!");
             }
@@ -97,10 +98,10 @@ namespace uu_library_app.Business.Concrete
             return _service.getByPublisherId(publisherId);
         }
 
-        bool checkIfExistInDepositBooks(string bookId)
+        bool checkIfExistInDepositBooks(Book book)
         {
             DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
-            if(depositBookManager.getByBookId(bookId) != null)
+            if(depositBookManager.getByBookId(book.Id) != null)
             {
                 return true;
             }

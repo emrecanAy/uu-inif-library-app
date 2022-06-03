@@ -99,11 +99,12 @@ namespace uu_library_app.Business.Concrete
         }
 
 
+        string code;
         public void sendEmailVerificationCode(string email, string code)
         {
-            //string code = EmailVerificator.GenerateCode();
             try
             {
+                code = EmailVerificator.GenerateCode();
                 MailSender.SendMail(email, code);
             }
             catch (Exception)
