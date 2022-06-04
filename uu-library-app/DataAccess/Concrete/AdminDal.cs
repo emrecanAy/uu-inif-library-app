@@ -16,26 +16,34 @@ namespace uu_library_app.DataAccess.Concrete
 
         public void Add(Admin admin)
         {
-            conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Admin (id,firstName,lastName,eMail,password) VALUES (@p1, @p2, @p3, @p4,@p5)", conn);
             try
             {
-                commandToAdd.Parameters.AddWithValue("@p1", admin.Id);
-                commandToAdd.Parameters.AddWithValue("@p2", admin.FirstName);
-                commandToAdd.Parameters.AddWithValue("@p3", admin.LastName);
-                commandToAdd.Parameters.AddWithValue("@p4", admin.EMail);
-                commandToAdd.Parameters.AddWithValue("@p5", admin.Password);
+                conn.Open();
+                MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Admin (id,firstName,lastName,eMail,password) VALUES (@p1, @p2, @p3, @p4,@p5)", conn);
+                try
+                {
+                    commandToAdd.Parameters.AddWithValue("@p1", admin.Id);
+                    commandToAdd.Parameters.AddWithValue("@p2", admin.FirstName);
+                    commandToAdd.Parameters.AddWithValue("@p3", admin.LastName);
+                    commandToAdd.Parameters.AddWithValue("@p4", admin.EMail);
+                    commandToAdd.Parameters.AddWithValue("@p5", admin.Password);
 
-                commandToAdd.ExecuteNonQuery();
-                Console.WriteLine("Başarıyla eklendi!");
+                    commandToAdd.ExecuteNonQuery();
+                    Console.WriteLine("Başarıyla eklendi!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Hatalı ekleme!");
+                }
+                conn.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Hatalı ekleme!");
-                throw;
+                throw new Exception("Lütfen internet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.");
             }
+           
 
-            conn.Close();
+            
         }
 
         public void Delete(string id)

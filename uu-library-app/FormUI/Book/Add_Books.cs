@@ -15,6 +15,7 @@ using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.Book.Quick_Menu;
 using uu_library_app.FormUI.MailSettings;
 using MessageBoxDenemesi;
+using uu_library_app.Core.Exceptions;
 
 namespace uu_library_app
 {
@@ -210,15 +211,9 @@ namespace uu_library_app
         private void btnEkle_Click(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
-            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "" || cmbDil.SelectedValue.ToString() == "" || cmbKategori.SelectedValue.ToString() == "" || cmbKonum.SelectedValue.ToString() == "" || cmbYayinevi.SelectedValue.ToString() == "" || cmbYazar.SelectedValue.ToString() == "")
-            {
-                wehMessageBox.Show("Lütfen tüm değerleri giriniz !", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
             try
             {
+                Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
                 bookManager.Add(bookToAdd);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] "+_admin.FirstName+" "+_admin.LastName+" tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
@@ -226,10 +221,13 @@ namespace uu_library_app
                 DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
                 clearAllFields();
             }
+            catch(NotNullException ex)
+            {
+                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             catch (Exception)
             {
-                wehMessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyin!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show("İnternet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.", "Bağlantı Hatası!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

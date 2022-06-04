@@ -113,13 +113,7 @@ namespace uu_library_app
             #endregion
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            if (txtAd.Text == "" || txtIsbn.Text == "" || txtSayfaSayisi.Text == "" || txtStokAdet.Text == "" || cmbDil.Text == "" || cmbKategori.Text == "" || cmbKonum.Text == "" || cmbYayinevi.Text == "" || cmbYazar.Text == "" || txtDemirbasNo.Text == "")
-            {
-                wehMessageBox.Show("Lütfen tüm değerleri giriniz !", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
+        {    
             try
             {
                 DialogResult dialogResult = wehMessageBox.Show("Güncellemek istediğinize emin misiniz?",
@@ -141,8 +135,7 @@ namespace uu_library_app
             }
             catch (Exception)
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyin!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show("Lütfen gerekli tüm alanları doldurun!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

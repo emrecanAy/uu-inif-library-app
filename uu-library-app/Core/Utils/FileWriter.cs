@@ -15,7 +15,7 @@ namespace uu_library_app.Core.Helpers
 {
     public static class FileWriter
     {
-        public static void ToCSV(this DataTable dtDataTable, string strFilePath)
+        public static void ExportToCSV(this DataTable dtDataTable, string strFilePath)
         {
             StreamWriter sw = new StreamWriter(strFilePath, false);
             //headers    
@@ -55,14 +55,14 @@ namespace uu_library_app.Core.Helpers
             sw.Close();
         }
 
-        public static void ToXML(DataSet ds, string filePath, string rootName)
+        public static void ExportToXML(DataSet ds, string filePath, string rootName)
         {
             ds.DataSetName = rootName;
             ds.WriteXml(filePath);
 
         }
 
-        public static void ToJSON(DataSet ds, string fileName)
+        public static void ExportToJSON(DataSet ds, string fileName)
         {
             string json = JsonConvert.SerializeObject(ds, Formatting.Indented);
             int startIndex = json.IndexOf("[") - 1;
@@ -73,7 +73,7 @@ namespace uu_library_app.Core.Helpers
 
         }
 
-        public static void ToEXCEL(DataTable dt, string fileName)
+        public static void ExportToEXCEL(DataTable dt, string fileName)
         {
             var lines = new List<string>();
 
@@ -96,9 +96,11 @@ namespace uu_library_app.Core.Helpers
         public static void ExportToPdf(DataTable dt, string strFilePath)
         {
             Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(strFilePath, FileMode.Create));
             document.Open();
             iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
             PdfPTable table = new PdfPTable(dt.Columns.Count);
+            PdfPRow row = null;
             float[] widths = new float[dt.Columns.Count];
             for (int i = 0; i < dt.Columns.Count; i++)
                 widths[i] = 4f;
@@ -106,7 +108,9 @@ namespace uu_library_app.Core.Helpers
             table.SetWidths(widths);
 
             table.WidthPercentage = 100;
-            PdfPCell cell = new PdfPCell(new Phrase("Products"));
+            int iCol = 0;
+            string colname = "";
+            PdfPCell cell = new PdfPCell(new Phrase("Export"));
 
             cell.Colspan = dt.Columns.Count;
 

@@ -30,6 +30,28 @@ namespace uu_library_app.Core.Helpers
             return dt;
             
         }
+        public static DataTable listInnerJoinAllDeletedBooksDataToTable()
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=1", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+
+        }
+
+        public static DataTable listInnerJoinMostFrequentTenBooks()
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT bookId'Id',count(*)'Sayı', Book.bookName'Kitap' FROM DepositBook INNER JOIN Book ON DepositBook.bookId=Book.id GROUP BY DepositBook.bookId ORDER BY count(*) DESC LIMIT 10", conn);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
         public static DataTable listInnerJoinAllStudentsDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             conn.Open();
@@ -37,8 +59,20 @@ namespace uu_library_app.Core.Helpers
             MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS AdSoyad, Student.number'OkulNo', Student.eMail'E-Posta', Department.name'Bolum', Student.createdAt'OlusturulmaTarihi', Faculty.name'Fakulte' FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
-            return dt;
             conn.Close();
+            return dt;
+            
+        }
+
+        public static DataTable listInnerJoinAllDeletedStudentsDataToTable(DataGridView dataGrid, MySqlConnection conn)
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS AdSoyad, Student.number'OkulNo', Student.eMail'E-Posta', Department.name'Bolum', Student.createdAt'OlusturulmaTarihi', Faculty.name'Fakulte' FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=1", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
         }
 
         public static void listUndepositBooksConcatAuthorNameDataToTable(DataGridView dataGrid, MySqlConnection conn)

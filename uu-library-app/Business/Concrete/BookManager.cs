@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using uu_library_app.Business.Abstract;
+using uu_library_app.Core.Exceptions;
 using uu_library_app.DataAccess.Abstract;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
@@ -20,18 +21,26 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(Book book)
         {
-            if(book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PageCount != null && book.PublisherId != null && book.StockCount != null)
+            if(book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PageCount != 0 && book.PublisherId != null && book.StockCount != 0 && book.FixtureNo != null && book.PublishDate != null) 
             {
-           
                 _service.Add(book);
+                return;
+            }
+            else
+            {
+                throw new Exception("Lütfen gerekli tüm alanları doldurun!");
             }
         }
 
         public void Update(Book book)
         {
-            if (book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PageCount != null && book.PublisherId != null && book.StockCount != null)
+            if (book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PublisherId != null && book.StockCount != 0 && book.FixtureNo != null && book.PublishDate != null)
             {
                 _service.Update(book);
+            }
+            else
+            {
+                throw new NotNullException("Lütfen gerekli tüm alanları doldurun!");
             }
         }
 
@@ -43,9 +52,17 @@ namespace uu_library_app.Business.Concrete
             }
             else
             {
-                _service.Delete(book);
+                if(book.Id != null && book.BookName != null)
+                {
+                    _service.Delete(book);
+                    return;
+                }
+                else
+                {
+                    throw new NotNullException("Lütfen silmek için bir kitap seçin!");
+                }
+                
             }
-
         }
 
         public List<Book> getAll()

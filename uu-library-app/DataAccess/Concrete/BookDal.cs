@@ -15,36 +15,43 @@ namespace uu_library_app.DataAccess.Concrete
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         public void Add(Book book)
         {
-            conn.Open();
-
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter, fixtureNo) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)", conn);
             try
             {
-                commandToAdd.Parameters.AddWithValue("@p1", book.Id);
-                commandToAdd.Parameters.AddWithValue("@p2", book.BookName);
-                commandToAdd.Parameters.AddWithValue("@p3", book.LanguageId);
-                commandToAdd.Parameters.AddWithValue("@p4", book.AuthorId);
-                commandToAdd.Parameters.AddWithValue("@p5", book.CategoryId);
-                commandToAdd.Parameters.AddWithValue("@p6", book.PublisherId);
-                commandToAdd.Parameters.AddWithValue("@p7", book.PageCount);
-                commandToAdd.Parameters.AddWithValue("@p8", book.IsbnNumber);
-                commandToAdd.Parameters.AddWithValue("@p9", book.PublishDate);
-                commandToAdd.Parameters.AddWithValue("@p10", book.PublishCount);
-                commandToAdd.Parameters.AddWithValue("@p11", book.StockCount);
-                commandToAdd.Parameters.AddWithValue("@p12", book.LocationId);
-                commandToAdd.Parameters.AddWithValue("@p13", book.Status);
-                commandToAdd.Parameters.AddWithValue("@p14", book.Interpreter);
-                commandToAdd.Parameters.AddWithValue("@p15", book.FixtureNo);
-                commandToAdd.ExecuteNonQuery();
-                Console.WriteLine("Successfully added!");
+                conn.Open();
+
+                MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Book (id, bookName, languageId, authorId, categoryId, publisherId, pageCount, isbnNumber, publishDate, publishCount, stockCount, locationId, status, interpreter, fixtureNo) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)", conn);
+                try
+                {
+                    commandToAdd.Parameters.AddWithValue("@p1", book.Id);
+                    commandToAdd.Parameters.AddWithValue("@p2", book.BookName);
+                    commandToAdd.Parameters.AddWithValue("@p3", book.LanguageId);
+                    commandToAdd.Parameters.AddWithValue("@p4", book.AuthorId);
+                    commandToAdd.Parameters.AddWithValue("@p5", book.CategoryId);
+                    commandToAdd.Parameters.AddWithValue("@p6", book.PublisherId);
+                    commandToAdd.Parameters.AddWithValue("@p7", book.PageCount);
+                    commandToAdd.Parameters.AddWithValue("@p8", book.IsbnNumber);
+                    commandToAdd.Parameters.AddWithValue("@p9", book.PublishDate);
+                    commandToAdd.Parameters.AddWithValue("@p10", book.PublishCount);
+                    commandToAdd.Parameters.AddWithValue("@p11", book.StockCount);
+                    commandToAdd.Parameters.AddWithValue("@p12", book.LocationId);
+                    commandToAdd.Parameters.AddWithValue("@p13", book.Status);
+                    commandToAdd.Parameters.AddWithValue("@p14", book.Interpreter);
+                    commandToAdd.Parameters.AddWithValue("@p15", book.FixtureNo);
+                    commandToAdd.ExecuteNonQuery();
+                    Console.WriteLine("Successfully added!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Something went wrong!");
+                }
+
+                conn.Close();
             }
             catch (Exception)
             {
-                Console.WriteLine("Something went wrong!");
-                throw;
+                throw new Exception("Lütfen internet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.");
             }
-
-            conn.Close();
+            
         }
 
         public void Update(Book book)

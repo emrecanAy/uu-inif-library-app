@@ -69,12 +69,6 @@ namespace uu_library_app
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "")
-            {
-                wehMessageBox.Show("Lütfen silmek istedğiniz kitabı seçiniz!", "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             try
             {
                 DialogResult dialogResult = wehMessageBox.Show("Silmek istediğinize emin misiniz?",
@@ -93,9 +87,9 @@ namespace uu_library_app
 
                 }         
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                wehMessageBox.Show("Lütfen gerekli tüm alanları doldurun!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
