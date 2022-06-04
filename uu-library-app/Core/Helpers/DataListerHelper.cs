@@ -126,7 +126,7 @@ namespace uu_library_app.Core.Helpers
         public static void listUndepositBooksDataToTable2(DataGridView dataGrid, MySqlConnection conn, string studentId)
         {
             DataTable dt = new DataTable();
-
+            SettingsManager settingsManager = new SettingsManager(new SettingsDal());
             MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, Author.firstName'authorFirstName', Author.lastName'authorLastName', DepositBook.depositDate FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE Student.id=@p1 AND DepositBook.status=0", conn);
             command.Parameters.AddWithValue("@p1", studentId);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
@@ -140,6 +140,17 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[5].HeaderText = "Yazar Ad";
             dataGrid.Columns[6].HeaderText = "Yazar Soyad";
             dataGrid.Columns[7].HeaderText = "Alınma Tarihi";
+            foreach (DataGridViewRow row in dataGrid.Rows) {
+                Console.WriteLine(row.Cells[0].ToString());
+                //TimeSpan ts = Convert.ToDateTime(row.Cells[7]) - DateTime.Now;
+                //int howManyDaysExpired = ts.Days;
+                //bool test = true;
+                //if (-howManyDaysExpired <= settingsManager.getSettings().DepositDay) 
+                //{
+                //    row.DefaultCellStyle.BackColor = Color.Red;
+                //}
+            }
+                
             dataGrid.ColumnHeadersVisible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);

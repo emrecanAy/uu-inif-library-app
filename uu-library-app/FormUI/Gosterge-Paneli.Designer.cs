@@ -29,7 +29,6 @@ namespace uu_library_app.FormUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gosterge_Paneli));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -38,14 +37,15 @@ namespace uu_library_app.FormUI
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gosterge_Paneli));
             this.lblBaslik = new System.Windows.Forms.Label();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.chartTopBooks = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTopCategories = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.wehPanel10 = new uu_library_app.FormUI.Toolbox.wehPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -112,12 +112,13 @@ namespace uu_library_app.FormUI
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.lblToplamUye = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopCategories)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.wehPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.wehPanel9.SuspendLayout();
@@ -158,17 +159,6 @@ namespace uu_library_app.FormUI
             this.lblBaslik.Size = new System.Drawing.Size(255, 45);
             this.lblBaslik.TabIndex = 264;
             this.lblBaslik.Text = "Gösterge Paneli";
-            // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 265;
-            this.picboxBack.TabStop = false;
             // 
             // chartTopBooks
             // 
@@ -313,6 +303,17 @@ namespace uu_library_app.FormUI
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 265;
+            this.picboxBack.TabStop = false;
             // 
             // wehPanel10
             // 
@@ -1068,12 +1069,23 @@ namespace uu_library_app.FormUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Toplam Üye ";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(830, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 23);
+            this.button2.TabIndex = 279;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Gosterge_Paneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1084,12 +1096,12 @@ namespace uu_library_app.FormUI
             this.Name = "Gosterge_Paneli";
             this.Text = "Gosterge_Paneli";
             this.Load += new System.EventHandler(this.Gosterge_Paneli_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopCategories)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.wehPanel10.ResumeLayout(false);
             this.wehPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1208,5 +1220,6 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTeslimAlinan;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

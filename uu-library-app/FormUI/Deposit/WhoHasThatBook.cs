@@ -41,8 +41,18 @@ namespace uu_library_app.FormUI.Deposit
             dgvKitaplar.Columns[10].Visible = false;
             dgvKitaplar.Columns[11].Visible = false;
             dgvKitaplar.Columns[12].Visible = false;
+            this.dgvKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvKitaplar.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvKitaplar.EnableHeadersVisualStyles = false;
+            dgvKitaplar.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvKitaplar.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvKitaplar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvKitaplar.DefaultCellStyle.ForeColor = Color.White;
 
-            
+
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
@@ -52,10 +62,8 @@ namespace uu_library_app.FormUI.Deposit
         }
 
         
-        private void GetStudentsWhoHasThatBook()
+        public void GetStudentsWhoHasThatBook()
         {
-     
-
             List<StudentDto> studentList = new List<StudentDto>();
             studentList.Clear();
 

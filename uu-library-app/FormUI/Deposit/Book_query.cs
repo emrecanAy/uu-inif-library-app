@@ -60,10 +60,6 @@ namespace uu_library_app.FormUI.Deposit
 
         private void dgvOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
-            DataListerHelper.listAllTakenBooksDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listUndepositBooksDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
-            DataListerHelper.listDepositBooksDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
         }
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)

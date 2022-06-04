@@ -79,25 +79,28 @@ namespace uu_library_app.Core.Helpers
             foreach (DepositBook depositBook in getExpiredBooks())
             {
                 conn.Open();
-                TimeSpan ts = depositBook.DepositDate - DateTime.Now; 
-                MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1 AND DepositBook.status=0", conn);
-                command.Parameters.AddWithValue("@p1", depositBook.Id);
-                MySqlDataReader reader = command.ExecuteReader();
-                DepositBookDto depositBookDto = new DepositBookDto();
-                while (reader.Read())
+                TimeSpan ts = depositBook.DepositDate - DateTime.Now;
+                if (ts.Days <= settingsManager.getSettings().DepositDay)
                 {
-                    depositBookDto.Id = reader[0].ToString();
-                    depositBookDto.OgrenciNo = reader[1].ToString();
-                    depositBookDto.Ogrenci = reader[2].ToString();
-                    depositBookDto.Kitap = reader[3].ToString();
-                    depositBookDto.Yazar = reader[4].ToString(); 
-                    depositBookDto.OlusturulmaTarihi = Convert.ToDateTime(reader[5]);
-                    depositBookDto.GecikmeGunu = ts.Days;
+                    MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1 AND DepositBook.status=0", conn);
+                    command.Parameters.AddWithValue("@p1", depositBook.Id);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    DepositBookDto depositBookDto = new DepositBookDto();
+                    while (reader.Read())
+                    {
+                        depositBookDto.Id = reader[0].ToString();
+                        depositBookDto.OgrenciNo = reader[1].ToString();
+                        depositBookDto.Ogrenci = reader[2].ToString();
+                        depositBookDto.Kitap = reader[3].ToString();
+                        depositBookDto.Yazar = reader[4].ToString();
+                        depositBookDto.OlusturulmaTarihi = Convert.ToDateTime(reader[5]);
+                        depositBookDto.GecikmeGunu = ts.Days;
 
+                    }
+                    depositBookDtoList.Add(depositBookDto);
+                    conn.Close();
                 }
-
-                depositBookDtoList.Add(depositBookDto);
-                conn.Close();
+                
             }
             return depositBookDtoList;
         }

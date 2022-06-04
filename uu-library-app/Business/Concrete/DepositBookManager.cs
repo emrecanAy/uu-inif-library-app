@@ -9,7 +9,7 @@ using uu_library_app.DataAccess.Abstract;
 using uu_library_app.Entity.Concrete;
 namespace uu_library_app.Business.Concrete
 {
-    internal class DepositBookManager : IDepositBookService
+    public class DepositBookManager : IDepositBookService
     {
         IDepositBookDal _depositBook;
         public DepositBookManager(IDepositBookDal depositBook)

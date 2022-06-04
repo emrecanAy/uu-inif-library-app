@@ -45,25 +45,6 @@ namespace uu_library_app.FormUI
         LoggerManager logger = new LoggerManager(new LoggerDal());
         StudentManager manager = new StudentManager(new StudentDal());
 
-
-        private void listDataToTable()
-        {
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Student WHERE deleted=false", conn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Ad";
-            dataGridView1.Columns[2].HeaderText = "Soyad";
-            dataGridView1.Columns[3].HeaderText = "Okul No";
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].HeaderText = "Eposta";
-            dataGridView1.Columns[6].HeaderText = "Bölüm";
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-        }
-
         private void clearAllFields()
         {
             txtId.Clear();
@@ -130,7 +111,6 @@ namespace uu_library_app.FormUI
             cmbFakulte.DisplayMember = "name";
             cmbFakulte.ValueMember = "id";
 
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);

@@ -14,6 +14,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.Core.RoutinCustomJobs;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Book;
 using uu_library_app.FormUI.Deposit;
 
 namespace uu_library_app.FormUI
@@ -144,6 +145,12 @@ namespace uu_library_app.FormUI
         {
             WhoHasThatBook book = new WhoHasThatBook();
             book.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Expired_Books expired_Books = new Expired_Books();
+            expired_Books.Show();
         }
     }
 }

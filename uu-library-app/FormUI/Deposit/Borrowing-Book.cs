@@ -14,6 +14,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
+using uu_library_app.FormUI.Deposit;
 
 namespace uu_library_app
 {
@@ -31,7 +32,8 @@ namespace uu_library_app
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         StudentManager studentManager = new StudentManager(new StudentDal());
         BookManager bookManager = new BookManager(new BookDal());
-     
+        SettingsManager settingsManager = new SettingsManager(new SettingsDal());
+
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
             dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -128,9 +130,13 @@ namespace uu_library_app
         {
             txtKitapId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtKitapAd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtIsbn.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtYayinevi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtYazar.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            DataListerToTableHelper.GetStudentsWhoHasThatBook(depositBookManager, settingsManager, conn, dgvUyeler, txtKitapId.Text);
+            dgvUyeler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvUyeler.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
@@ -145,14 +151,12 @@ namespace uu_library_app
             {
                 txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
             else
             {
                 txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtBolum.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
            
@@ -172,7 +176,6 @@ namespace uu_library_app
         private void cmbKisi_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtAdSoyad.Text = "";
-            txtBolum.Text = "";
             txtOkulNo.Text = "";
             if(cmbKisi.SelectedValue.ToString() == "personnel")
             {

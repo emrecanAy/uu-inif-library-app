@@ -206,6 +206,12 @@
     <Compile Include="Entity\Concrete\Category.cs" />
     <Compile Include="Entity\Concrete\Location.cs" />
     <Compile Include="Entity\Concrete\Publisher.cs" />
+    <Compile Include="FormUI\Book\Expired-Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Book\Expired-Books.Designer.cs">
+      <DependentUpon>Expired-Books.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\Book\Quick-Menu\AuthorQuick.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -467,6 +473,9 @@
     </Compile>
     <EmbeddedResource Include="FormUI\Book\book-listing.resx">
       <DependentUpon>book-listing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Book\Expired-Books.resx">
+      <DependentUpon>Expired-Books.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Book\Quick-Menu\AuthorQuick.resx">
       <DependentUpon>AuthorQuick.cs</DependentUpon>

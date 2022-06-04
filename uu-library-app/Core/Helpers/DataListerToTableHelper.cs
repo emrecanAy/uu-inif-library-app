@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uu_library_app.Business.Concrete;
+using uu_library_app.Entity.Concrete;
+using uu_library_app.Entity.Concrete.DTO;
 
 namespace uu_library_app.Core.Helpers
 {
@@ -56,6 +59,28 @@ namespace uu_library_app.Core.Helpers
             dataGrid.ColumnHeadersVisible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
+        public static void GetStudentsWhoHasThatBook(DepositBookManager depositBookManager, SettingsManager settingsManager, MySqlConnection conn, DataGridView dataGridView ,string bookId)
+        {
+            List<StudentDto> studentList = new List<StudentDto>();
+            studentList.Clear();
+
+            List<DepositBook> depositBooksList = depositBookManager.getAllByBookId(bookId);
+            foreach (DepositBook depositBook in depositBooksList)
+            {
+                DateTime dt = depositBook.DepositDate.AddDays(settingsManager.getSettings().DepositDay);
+                studentList.Add(DataListerHelper.listInnerJoinStudentDataToTableByStudentId(conn, depositBook.StudentId, dt));
+            }
+
+            dataGridView.DataSource = studentList;
+            dataGridView.Columns[0].Visible = false;
+            dataGridView.Columns[1].HeaderText = "Öğrenci";
+            dataGridView.Columns[2].HeaderText = "Numara";
+            dataGridView.Columns[3].HeaderText = "Bölüm";
+            dataGridView.Columns[4].HeaderText = "G.Tarih";
+            depositBooksList.Clear();
 
         }
 
