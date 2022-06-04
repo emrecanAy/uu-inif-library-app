@@ -134,6 +134,11 @@
     <Compile Include="Business\Concrete\LoggerManager.cs" />
     <Compile Include="Business\Concrete\PersonnelManager.cs" />
     <Compile Include="Business\Concrete\SettingsManager.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportFileToCsv.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportFileToExcel.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportFileToJson.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportFileToPdf.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportFileToXml.cs" />
     <Compile Include="Core\Exceptions\NotNullException.cs" />
     <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DashboardDataHelper.cs" />

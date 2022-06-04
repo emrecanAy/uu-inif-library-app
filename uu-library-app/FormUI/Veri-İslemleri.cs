@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uu_library_app.Core.DataExportFileTypes;
 using uu_library_app.Core.Helpers;
 using uu_library_app.Core.Logger.FileLogger;
 using uu_library_app.Entity.Concrete;
@@ -31,29 +32,9 @@ namespace uu_library_app.FormUI
         FileLoggerManager fileLoggerManager = new FileLoggerManager(new FileLoggerDal());
         private void Veri_İslemleri_Load(object sender, EventArgs e)
         {
-            dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLog.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
-            dgvLog.EnableHeadersVisualStyles = false;
-            dgvLog.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvLog.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            dgvLog.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
-            dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvLog.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            //dgvLog.DefaultCellStyle.ForeColor = Color.Black;
-
-            dgvLogOgr.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLogOgr.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
-            dgvLogOgr.EnableHeadersVisualStyles = false;
-            dgvLogOgr.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvLogOgr.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            dgvLogOgr.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
-
+            #region Students
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("Select * From Student WHERE deleted=false", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(SqlCommandHelper.getStudentsCommand(conn));
             da.Fill(dt);
             dgvDeneme.DataSource = dt;
             dgvDeneme.ColumnHeadersVisible = false;
@@ -66,6 +47,18 @@ namespace uu_library_app.FormUI
             dgvDeneme.Columns[3].Visible = false;
             dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
             dgvDeneme.ScrollBars = ScrollBars.None;
+            #endregion
+            #region LeftLog
+            dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLog.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvLog.EnableHeadersVisualStyles = false;
+            dgvLog.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvLog.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvLog.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvLog.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvLog.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             Dictionary<string, string> comboSourceDataTypes = new Dictionary<string, string>();
             comboSourceDataTypes.Add("tumOgrenciler", "Tüm Öğrenciler");
@@ -78,6 +71,17 @@ namespace uu_library_app.FormUI
             cmbVeri.DataSource = new BindingSource(comboSourceDataTypes, null);
             cmbVeri.DisplayMember = "Value";
             cmbVeri.ValueMember = "Key";
+            #endregion
+            #region RightLog
+
+            dgvLogOgr.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLogOgr.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvLogOgr.EnableHeadersVisualStyles = false;
+            dgvLogOgr.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvLogOgr.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvLogOgr.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
 
             Dictionary<string, string> comboSourceDataTypesOgr = new Dictionary<string, string>();
             comboSourceDataTypesOgr.Add("oduncAlinan", "Ödünç Aldığı Kitaplar");
@@ -98,8 +102,7 @@ namespace uu_library_app.FormUI
             dgvLog.Columns[2].HeaderText = "Log Message";
             dgvLog.Columns[3].Visible = false;
             dgvLog.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-            
-
+            #endregion
         }
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,677 +112,27 @@ namespace uu_library_app.FormUI
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
-            {
-                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNames();
-                DataTable table = new DataTable();
-                using (var reader = ObjectReader.Create(data))
-                {
-                    table.Load(reader);
-                }
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(table, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Gecikmiş Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllDeletedStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Öğrenciler - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("enCokOkunanOnKitap"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinMostFrequentTenBooks(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ En Çok Okunan 10 Kitap - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllDeletedBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+            ExportFileToPdf.Export(cmbVeri, dgvData, conn, fileLoggerManager, _admin);
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToEXCEL(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataTable dtDbDto = FileWriter.ToDataTable<DepositBookDto>(ExportFileDataHelper.getExpiredBookWithNames());
-                    FileWriter.ExportToEXCEL(dtDbDto, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Geçmiş Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }   
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToEXCEL(ExportFileDataHelper.listInnerJoinAllDeletedStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Öğrenciler - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToEXCEL(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("enCokOkunanOnKitap"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToEXCEL(ExportFileDataHelper.listInnerJoinMostFrequentTenBooks(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ En Çok Okunan 10 Kitap - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "EXCEL dosyası|*.xlsx";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToEXCEL(ExportFileDataHelper.listInnerJoinAllDeletedBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Kitaplar - EXCEL ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+            ExportFileToExcel.Export(cmbVeri, dgvData, conn, fileLoggerManager, _admin);
         }
 
         private void btnCSV_Click(object sender, EventArgs e)
         {
-            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataTable dtDbDto = FileWriter.ToDataTable<DepositBookDto>(ExportFileDataHelper.getExpiredBookWithNames());
-                    FileWriter.ExportToCSV(dtDbDto, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Geçmiş Öğrenciler - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllDeletedStudentsDataToTable(dgvData, conn), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Öğrenciler - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("enCokOkunanOnKitap"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinMostFrequentTenBooks(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ En Çok Okunan 10 Kitap - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "CSV dosyası|*.csv";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllDeletedBooksDataToTable(), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Kitaplar - CSV ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+            ExportFileToCsv.Export(cmbVeri, dgvData, conn, fileLoggerManager, _admin);
         }
 
         private void btnJSON_Click(object sender, EventArgs e)
         {
-            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    ds.Tables.Add(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn));
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable dtDbDto = FileWriter.ToDataTable<DepositBookDto>(ExportFileDataHelper.getExpiredBookWithNames());
-                    ds.Tables.Add(dtDbDto);
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Geçmiş Öğrenciler - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllDeletedStudentsDataToTable(dgvData, conn);
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Öğrenciler - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTable();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("enCokOkunanOnKitap"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinMostFrequentTenBooks();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ En Çok Okunan 10 Kitap - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "JSON dosyası|*.json";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllDeletedBooksDataToTable();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Kitaplar - JSON ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+            ExportFileToJson.Export(cmbVeri, dgvData, conn, fileLoggerManager, _admin);
         }
 
         private void btnXML_Click(object sender, EventArgs e)
         {
-            if (cmbVeri.SelectedValue.ToString().Equals("tumOgrenciler"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    ds.Tables.Add(ExportFileDataHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn));
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Ogrenciler");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Öğrenciler - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("teslimTarihiGecmisOgrenciler"))
-            {
-                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNames();
-                DataTable table = new DataTable();
-                using (var reader = ObjectReader.Create(data))
-                {
-                    table.Load(reader);
-                }
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable dtDbDto = FileWriter.ToDataTable<DepositBookDto>(ExportFileDataHelper.getExpiredBookWithNames());
-                    ds.Tables.Add(dtDbDto);
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Ogrenciler");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Teslim Tarihi Gecikmiş Öğrenciler - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
-            {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllDeletedStudentsDataToTable(dgvData, conn);
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Ogrenciler");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Öğrenciler - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTable();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Kitaplar");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Kitaplar - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("enCokOkunanOnKitap"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinMostFrequentTenBooks();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Kitaplar");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ En Çok Okunan 10 Kitap - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisKitaplar"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "XML dosyası|*.xml";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllDeletedBooksDataToTable();
-                    ds.Tables.Add(data);
-                    FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Kitaplar");
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Tüm Silinmiş Kitaplar - XML ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+            ExportFileToXml.Export(cmbVeri, dgvData, conn, fileLoggerManager, _admin);
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

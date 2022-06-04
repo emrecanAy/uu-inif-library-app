@@ -45,5 +45,13 @@ namespace uu_library_app.Core.Helpers
             return commandToGetAllPublishers;
         }
 
+        public static MySqlCommand getStudentsCommand(MySqlConnection conn)
+        {
+            MySqlCommand commandToGetAllStudents = new MySqlCommand("SELECT * FROM Student WHERE deleted=false", conn);
+            return commandToGetAllStudents;
+        }
+
+        
+
     }
 }
