@@ -127,7 +127,6 @@ namespace uu_library_app.Core.Helpers
         public static void listAllTakenBooksDataToTable(DataGridView dataGrid, MySqlConnection conn, string studentId)
         {
             DataTable dt = new DataTable();
-
             MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.firstName, Student.lastName, Book.id, Book.bookName, Author.firstName'authorFirstName', Author.lastName'authorLastName' FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE Student.id=@p1", conn);
             command.Parameters.AddWithValue("@p1", studentId);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
@@ -143,7 +142,16 @@ namespace uu_library_app.Core.Helpers
             dataGrid.ColumnHeadersVisible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+        }
 
+        public static DataTable listAllTakenBooksDataToTableByStudentId(MySqlConnection conn, string studentId)
+        {
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT DepositBook.id'Id', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT( Author.firstName, ' ', Author.lastName ) AS Yazar, DepositBook.depositDate'AlinmaTarihi' FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE Student.id=@p1", conn);
+            command.Parameters.AddWithValue("@p1", studentId);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            return dt;
         }
 
         public static void listAllTakenBooksConcatAuthorNameDataToTable(DataGridView dataGrid, MySqlConnection conn, string studentId)
@@ -289,6 +297,33 @@ namespace uu_library_app.Core.Helpers
             DataTable dt = new DataTable();
 
             MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGrid.DataSource = dt;
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[1].HeaderText = "Kitap Adı";
+            dataGrid.Columns[2].HeaderText = "Yazar";
+            dataGrid.Columns[3].HeaderText = "Yayınevi";
+            dataGrid.Columns[4].HeaderText = "Dil";
+            dataGrid.Columns[5].HeaderText = "Kategori";
+            dataGrid.Columns[6].HeaderText = "Sayfa Sayısı";
+            dataGrid.Columns[7].HeaderText = "ISBN";
+            dataGrid.Columns[8].HeaderText = "Yayın Tarihi";
+            dataGrid.Columns[9].HeaderText = "Stok";
+            dataGrid.Columns[10].HeaderText = "Konum";
+            dataGrid.Columns[11].HeaderText = "Çevirmen";
+            dataGrid.Columns[12].HeaderText = "Oluşturulma Tarihi";
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+        }
+
+        //?
+        public static void listInnerJoinAllDepositBooksDataToTableByStudentId(DataGridView dataGrid, MySqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0 AND DepositBook.studentId", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             dataGrid.DataSource = dt;

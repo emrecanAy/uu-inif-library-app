@@ -372,6 +372,34 @@ namespace uu_library_app.DataAccess.Concrete
                 throw;
             }
         }
+
+        List<DepositBook> undepositedBooksByStudentId = new List<DepositBook>();
+        public List<DepositBook> getAllUndepositedByStudentId(string studentId)
+        {
+            conn.Open();
+            try
+            {
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM DepositBook WHERE deleted=false AND status=0 AND studentId=@p1", conn);
+                commandToGetAll.Parameters.AddWithValue("@p1", studentId);
+                MySqlDataReader reader = commandToGetAll.ExecuteReader();
+                while (reader.Read())
+                {
+                    DepositBook depositBook = new DepositBook();
+                    depositBook.Id = reader[0].ToString();
+                    depositBook.DepositDate = Convert.ToDateTime(reader[1]);
+                    depositBook.StudentId = reader[2].ToString();
+                    depositBook.BookId = reader[3].ToString();
+                    undepositedBooksByStudentId.Add(depositBook);
+                }
+                conn.Close();
+                return undepositedBooksByStudentId;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }
 

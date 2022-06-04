@@ -102,12 +102,21 @@ namespace uu_library_app.FormUI
             dgvLog.Columns[2].HeaderText = "Log Message";
             dgvLog.Columns[3].Visible = false;
             dgvLog.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+
+            dgvLogOgr.DataSource = dtFileLog;
+            dgvLogOgr.ColumnHeadersVisible = false;
+            dgvLogOgr.Columns[0].Visible = false;
+            dgvLogOgr.Columns[1].Visible = false;
+            dgvLogOgr.Columns[2].HeaderText = "Log Message";
+            dgvLogOgr.Columns[3].Visible = false;
+            dgvLogOgr.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
             #endregion
         }
-
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtOgrenciAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString() + dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString(); ;
         }
 
         private void btnPDF_Click(object sender, EventArgs e)
@@ -139,6 +148,76 @@ namespace uu_library_app.FormUI
         {
             (dgvDeneme.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+        }
+
+        private void btnPDFOgr_Click(object sender, EventArgs e)
+        {
+            if (cmbVeriOgr.SelectedValue.ToString().Equals("oduncAlinan"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(DataListerToTableHelper.listAllTakenBooksDataToTableByStudentId(conn, txtOgrenciId.Text), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: "+txtOgrenciAdSoyad.Text+"  | Tüm Ödünç Alınan Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+            }
+            if (cmbVeriOgr.SelectedValue.ToString().Equals("teslimAlinan"))
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(DataListerHelper.listDepositBooksDataToTableByStudentId(dgvData, conn, txtOgrenciId.Text), Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: " + txtOgrenciAdSoyad.Text + "  | Tüm Teslim Edilen Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+            }
+            if (cmbVeriOgr.SelectedValue.ToString().Equals("geciken"))
+            {
+                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNamesByStudentId(txtOgrenciId.Text);
+                DataTable table = new DataTable();
+                using (var reader = ObjectReader.Create(data))
+                {
+                    table.Load(reader);
+                }
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Pdf Dosyası|*.pdf";
+                save.OverwritePrompt = true;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"C:\";
+                save.Title = "Kaydet";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileWriter.ExportToPdf(table, Path.GetFullPath(save.FileName));
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: " + txtOgrenciAdSoyad.Text + "  | Tüm Teslim Tarihi Geciken Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
+                    fileLoggerManager.Log(fileLogger);
+                }
+            }
         }
     }
 }

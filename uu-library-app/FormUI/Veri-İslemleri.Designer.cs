@@ -31,8 +31,8 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veri_İslemleri));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -62,7 +62,8 @@ namespace uu_library_app.FormUI
             this.btnPDF = new button.Toolbox.RadiusButton();
             this.txtOgrenciId = new System.Windows.Forms.TextBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
+            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
+            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
             this.panel6.SuspendLayout();
@@ -71,16 +72,8 @@ namespace uu_library_app.FormUI
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvLogOgr
-            // 
-            this.dgvLogOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLogOgr.Location = new System.Drawing.Point(2, 273);
-            this.dgvLogOgr.Name = "dgvLogOgr";
-            this.dgvLogOgr.Size = new System.Drawing.Size(577, 500);
-            this.dgvLogOgr.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -175,6 +168,7 @@ namespace uu_library_app.FormUI
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dgvLogOgr);
             this.panel2.Controls.Add(this.cmbVeriOgr);
             this.panel2.Controls.Add(this.btnXMLOgr);
             this.panel2.Controls.Add(this.btnJSONOgr);
@@ -185,7 +179,6 @@ namespace uu_library_app.FormUI
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.dgvLogOgr);
             this.panel2.Location = new System.Drawing.Point(634, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(583, 775);
@@ -298,6 +291,7 @@ namespace uu_library_app.FormUI
             this.btnPDFOgr.Text = "PDF";
             this.btnPDFOgr.TextColor = System.Drawing.Color.White;
             this.btnPDFOgr.UseVisualStyleBackColor = false;
+            this.btnPDFOgr.Click += new System.EventHandler(this.btnPDFOgr_Click);
             // 
             // panel5
             // 
@@ -386,14 +380,14 @@ namespace uu_library_app.FormUI
             this.dgvLog.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLog.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLog.GridColor = System.Drawing.Color.White;
             this.dgvLog.Location = new System.Drawing.Point(3, 276);
             this.dgvLog.Name = "dgvLog";
@@ -535,12 +529,49 @@ namespace uu_library_app.FormUI
             this.dgvData.TabIndex = 280;
             this.dgvData.Visible = false;
             // 
+            // txtOgrenciAdSoyad
+            // 
+            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(672, 58);
+            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
+            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciAdSoyad.TabIndex = 281;
+            this.txtOgrenciAdSoyad.Visible = false;
+            // 
+            // dgvLogOgr
+            // 
+            this.dgvLogOgr.AllowUserToResizeRows = false;
+            this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLogOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvLogOgr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLogOgr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvLogOgr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogOgr.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLogOgr.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLogOgr.GridColor = System.Drawing.Color.White;
+            this.dgvLogOgr.Location = new System.Drawing.Point(7, 276);
+            this.dgvLogOgr.Name = "dgvLogOgr";
+            this.dgvLogOgr.ReadOnly = true;
+            this.dgvLogOgr.RowHeadersVisible = false;
+            this.dgvLogOgr.RowTemplate.Height = 30;
+            this.dgvLogOgr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLogOgr.Size = new System.Drawing.Size(566, 494);
+            this.dgvLogOgr.TabIndex = 281;
+            // 
             // Veri_İslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.txtOgrenciAdSoyad);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.txtOgrenciId);
             this.Controls.Add(this.panel2);
@@ -551,7 +582,6 @@ namespace uu_library_app.FormUI
             this.Name = "Veri_İslemleri";
             this.Text = "Veri_İslemleri";
             this.Load += new System.EventHandler(this.Veri_İslemleri_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -562,14 +592,13 @@ namespace uu_library_app.FormUI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvLogOgr;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvDeneme;
         private TextBoxHelper.WehTextBox wehTextBox1;
@@ -599,5 +628,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.TextBox txtOgrenciId;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.DataGridView dgvLog;
+        private System.Windows.Forms.TextBox txtOgrenciAdSoyad;
+        private System.Windows.Forms.DataGridView dgvLogOgr;
     }
 }
