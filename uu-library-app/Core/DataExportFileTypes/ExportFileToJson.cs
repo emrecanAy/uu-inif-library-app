@@ -67,7 +67,6 @@ namespace uu_library_app.Core.DataExportFileTypes
             }
             if (cmbVeri.SelectedValue.ToString().Equals("tumSilinmisOgrenciler"))
             {
-                DataListerToTableHelper.listInnerJoinAllStudentsDataToTable(dgvData, conn);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "JSON dosyası|*.json";
                 save.OverwritePrompt = true;
@@ -101,7 +100,7 @@ namespace uu_library_app.Core.DataExportFileTypes
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTable();
+                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTableWithTrNames();
                     ds.Tables.Add(data);
                     FileWriter.ExportToJSON(ds, Path.GetFullPath(save.FileName));
                     wehMessageBox.Show("Dosya başarıyla oluşturuldu...",

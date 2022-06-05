@@ -99,7 +99,7 @@ namespace uu_library_app.Core.DataExportFileTypes
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
+                    FileWriter.ExportToPdf(ExportFileDataHelper.listInnerJoinAllBooksDataToTableWithTrNames(), Path.GetFullPath(save.FileName));
                     wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
                     "Başarılı",
                      MessageBoxButtons.OK,

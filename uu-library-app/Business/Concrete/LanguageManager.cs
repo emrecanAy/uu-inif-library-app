@@ -56,7 +56,7 @@ namespace uu_library_app.Business.Concrete
         public bool checkIfExistInBooks(string languageId)
         {
             BookManager bookManager = new BookManager(new BookDal());
-            if (bookManager.getByLanguageId(languageId) != null)
+            if (bookManager.getByLanguageId(languageId).Id != null)
             {
                 return true;
             }

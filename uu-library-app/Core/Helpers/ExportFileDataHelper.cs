@@ -27,14 +27,24 @@ namespace uu_library_app.Core.Helpers
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             conn.Close();
+            return dt;          
+        }
+
+        public static DataTable listInnerJoinAllBooksDataToTableWithTrNames()
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Book.id'Id', Book.bookName'Kitap', CONCAT( Author.firstName, ' ', Author.lastName ) AS 'Yazar', Publisher.name'Yayınevi', Language.language'Dil', Category.name'Kategori', Location.shelf'Konum', Book.pageCount'Sayfa Sayısı', Book.fixtureNo'Demirbaş No', Book.isbnNumber'ISBN', Book.publishDate'Yayın Tarihi', Book.stockCount'Stok Sayısı', Book.interpreter'Çevirmen', Book.createdAt'Oluşturulma Tarihi' FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            conn.Close();
             return dt;
-            
         }
         public static DataTable listInnerJoinAllDeletedBooksDataToTable()
         {
             conn.Open();
             DataTable dt = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=1", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Book.id'Id', Book.bookName'Kitap', CONCAT( Author.firstName, ' ', Author.lastName ) AS 'Yazar', Publisher.name'Yayınevi', Language.language'Dil', Category.name'Kategori', Location.shelf'Konum', Book.pageCount'Sayfa Sayısı', Book.fixtureNo'Demirbaş No', Book.isbnNumber'ISBN', Book.publishDate'Yayın Tarihi', Book.stockCount'Stok Sayısı', Book.interpreter'Çevirmen', Book.createdAt'Oluşturulma Tarihi' FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=1", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             conn.Close();

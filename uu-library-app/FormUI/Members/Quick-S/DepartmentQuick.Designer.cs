@@ -155,9 +155,9 @@ namespace uu_library_app.FormUI.MailSettings
             this.lblAd.ForeColor = System.Drawing.Color.White;
             this.lblAd.Location = new System.Drawing.Point(14, 43);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(149, 25);
+            this.lblAd.Size = new System.Drawing.Size(108, 25);
             this.lblAd.TabIndex = 55;
-            this.lblAd.Text = "Departman Adı :";
+            this.lblAd.Text = "Bölüm Adı :";
             // 
             // DepartmentQuick
             // 

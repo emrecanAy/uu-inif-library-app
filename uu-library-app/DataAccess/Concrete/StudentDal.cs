@@ -147,9 +147,10 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<Student> students=new List<Student>();
+        
         public List<Student> getAll()
         {
+            List<Student> students = new List<Student>();
             conn.Open();
             try
             {
@@ -181,6 +182,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<Student> getAllSortedByAddedDate()
         {
+            List<Student> students = new List<Student>();
             conn.Open();
             try
             {
@@ -212,6 +214,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<Student> getAllSortedByName()
         {
+            List<Student> students = new List<Student>();
             conn.Open();
             try
             {

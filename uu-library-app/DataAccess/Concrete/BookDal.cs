@@ -107,10 +107,11 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Book> books=new List<Book>();
+        
         
         public List<Book> getAll()
         {
+            List<Book> books = new List<Book>();
             conn.Open();
             try
             {
@@ -150,6 +151,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<Book> getAllByCategory(string categoryId)
         {
+            List<Book> books = new List<Book>();
             conn.Open();
             try
             {
@@ -190,6 +192,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<Book> getAllSortedByAddedDate()
         {
+            List<Book> books = new List<Book>();
             conn.Open();
             try
             {
@@ -229,6 +232,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<Book> getAllSortedByName()
         {
+            List<Book> books = new List<Book>();
             conn.Open();
             try
             {

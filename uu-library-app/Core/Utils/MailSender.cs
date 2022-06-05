@@ -13,7 +13,8 @@ namespace uu_library_app.Core.Utils
     public static class MailSender
     {
         static SettingsManager settingsManager = new SettingsManager(new SettingsDal());
-        
+        static Settings settings = settingsManager.getSettings();
+
         public static void SendMail(string email, string verificationCode)
         {
             
@@ -26,10 +27,10 @@ namespace uu_library_app.Core.Utils
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                 mail.From = new MailAddress(senderMailAddress);
                 mail.To.Add(email);
-                mail.Subject = "dfgsdfgsdfg";
-                mail.Body = "Eposta doğrulama kodunuz: " + verificationCode;
+                mail.Subject = "INIF-Assemsoft Kütüphane Yönetim Sistemi Kayıt İşlemi";
+                mail.Body = "INIF-Assemsoft Kütüphane Yönetim Sistemi'ne Hoşgeldiniz!\nE-Posta doğrulama kodunuz: " + verificationCode;
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(senderMailAddress, "PassWord_123");
+                SmtpServer.Credentials = new System.Net.NetworkCredential(settings.SenderEmail, StringEncoder.Decrypt(settings.SenderPassword));
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 Console.WriteLine("Mail sent at" + DateTime.Now);
@@ -42,7 +43,6 @@ namespace uu_library_app.Core.Utils
         }
         public static void SendMailForExpired(Student student, Book book, Author author, DepositBook depositBook, string pastDays)
         {
-            Settings settings = settingsManager.getSettings();
             DateTime dateShouldBeEscrow = depositBook.DepositDate.AddDays(6);
 
             try

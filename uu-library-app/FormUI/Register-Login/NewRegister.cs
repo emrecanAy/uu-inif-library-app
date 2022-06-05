@@ -44,9 +44,11 @@ namespace uu_library_app.FormUI.Register_Login
 
         AdminManager adminManager = new AdminManager(new AdminDal());
         Admin admin;
-        string code = EmailVerificator.GenerateCode();
+        string code;
         private void button2_Click(object sender, EventArgs e)
         {
+            code = EmailVerificator.GenerateCode();
+            Console.WriteLine(code);
             string createGUID = System.Guid.NewGuid().ToString();
             admin = new Admin(createGUID, txtAd.Text, txtSoyad.Text, txtEmail.Text, StringEncoder.Encrypt(txtSifre.Text));
             if (txtSifre.Text != txtSifreTekrar.Text)

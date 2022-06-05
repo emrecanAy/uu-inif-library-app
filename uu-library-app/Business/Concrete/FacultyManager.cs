@@ -55,7 +55,7 @@ namespace uu_library_app.Business.Concrete
         bool checkIfExistInStudents(string facultyId)
         {
             StudentManager studentManager = new StudentManager(new StudentDal());
-            if (studentManager.GetByFacultyId(facultyId) != null)
+            if (studentManager.GetByFacultyId(facultyId).Id != null)
             {
                 return true;
             }

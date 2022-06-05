@@ -152,72 +152,28 @@ namespace uu_library_app.FormUI
 
         private void btnPDFOgr_Click(object sender, EventArgs e)
         {
-            if (cmbVeriOgr.SelectedValue.ToString().Equals("oduncAlinan"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
+            ExportStudentFileToPdf.Export(cmbVeriOgr, fileLoggerManager, conn, dgvData, _admin, txtOgrenciId.Text, txtOgrenciAdSoyad.Text);
+        }
 
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(DataListerToTableHelper.listAllTakenBooksDataToTableByStudentId(conn, txtOgrenciId.Text), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: "+txtOgrenciAdSoyad.Text+"  | Tüm Ödünç Alınan Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeriOgr.SelectedValue.ToString().Equals("teslimAlinan"))
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
+        private void btnExcelOgr_Click(object sender, EventArgs e)
+        {
+            ExportStudentFileToExcel.Export(cmbVeriOgr, fileLoggerManager, conn, dgvData, _admin, txtOgrenciId.Text, txtOgrenciAdSoyad.Text);
+        }
 
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(DataListerHelper.listDepositBooksDataToTableByStudentId(dgvData, conn, txtOgrenciId.Text), Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: " + txtOgrenciAdSoyad.Text + "  | Tüm Teslim Edilen Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
-            if (cmbVeriOgr.SelectedValue.ToString().Equals("geciken"))
-            {
-                IEnumerable<DepositBookDto> data = ExportFileDataHelper.getExpiredBookWithNamesByStudentId(txtOgrenciId.Text);
-                DataTable table = new DataTable();
-                using (var reader = ObjectReader.Create(data))
-                {
-                    table.Load(reader);
-                }
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Pdf Dosyası|*.pdf";
-                save.OverwritePrompt = true;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"C:\";
-                save.Title = "Kaydet";
+        private void btnCSVOgr_Click(object sender, EventArgs e)
+        {
+            ExportStudentFileToCsv.Export(cmbVeriOgr, fileLoggerManager, conn, dgvData, _admin, txtOgrenciId.Text, txtOgrenciAdSoyad.Text);
+        }
 
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    FileWriter.ExportToPdf(table, Path.GetFullPath(save.FileName));
-                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
-                    "Başarılı",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information);
-                    FileLogger fileLogger = new FileLogger(System.Guid.NewGuid().ToString(), _admin.Id, "[ Öğrenci: " + txtOgrenciAdSoyad.Text + "  | Tüm Teslim Tarihi Geciken Kitaplar - PDF ] " + _admin.FirstName + " " + _admin.LastName + " tarafından oluşturuldu! -Tarih: " + DateTime.Now);
-                    fileLoggerManager.Log(fileLogger);
-                }
-            }
+        private void btnJSONOgr_Click(object sender, EventArgs e)
+        {
+            ExportStudentFileToJson.Export(cmbVeriOgr, fileLoggerManager, conn, dgvData, _admin, txtOgrenciId.Text, txtOgrenciAdSoyad.Text);
+        }
+
+        private void btnXMLOgr_Click(object sender, EventArgs e)
+        {
+            ExportStudentFileToXml.Export(cmbVeriOgr, fileLoggerManager, conn, dgvData, _admin, txtOgrenciId.Text, txtOgrenciAdSoyad.Text);
+
         }
     }
 }

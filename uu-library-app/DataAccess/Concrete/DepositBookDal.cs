@@ -57,10 +57,11 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
         
-        List<DepositBook> depositBooks = new List<DepositBook>();
+        
         
         public List<DepositBook> getAll()
         {
+            List<DepositBook> depositBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -87,6 +88,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<DepositBook> getAllUndeposit()
         {
+            List<DepositBook> depositBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -111,9 +113,10 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<DepositBook> undepositedBooks = new List<DepositBook>();
+        
         public List<DepositBook> getAllUndeposited()
         {
+            List<DepositBook> undepositedBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -138,9 +141,10 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<DepositBook> depositedBooks = new List<DepositBook>();
+        
         public List<DepositBook> getAllDeposited()
         {
+            List<DepositBook> depositedBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -164,10 +168,9 @@ namespace uu_library_app.DataAccess.Concrete
                 throw;
             }
         }
-
-        BindingList<DepositBook> deposits = new BindingList<DepositBook>();
         public List<DepositBook> findAllByStudentId(string studentId)
         {
+            List<DepositBook> depositBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -348,6 +351,7 @@ namespace uu_library_app.DataAccess.Concrete
 
         public List<DepositBook> getAllByBookId(string bookId)
         {
+            List<DepositBook> depositBooks = new List<DepositBook>();
             conn.Open();
             try
             {
@@ -373,9 +377,10 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<DepositBook> undepositedBooksByStudentId = new List<DepositBook>();
+        
         public List<DepositBook> getAllUndepositedByStudentId(string studentId)
         {
+            List<DepositBook> undepositedBooksByStudentId = new List<DepositBook>();
             conn.Open();
             try
             {

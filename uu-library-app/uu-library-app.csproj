@@ -139,6 +139,11 @@
     <Compile Include="Core\DataExportFileTypes\ExportFileToJson.cs" />
     <Compile Include="Core\DataExportFileTypes\ExportFileToPdf.cs" />
     <Compile Include="Core\DataExportFileTypes\ExportFileToXml.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportStudentFileToCsv.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportStudentFileToExcel.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportStudentFileToJson.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportStudentFileToPdf.cs" />
+    <Compile Include="Core\DataExportFileTypes\ExportStudentFileToXml.cs" />
     <Compile Include="Core\Exceptions\NotNullException.cs" />
     <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DashboardDataHelper.cs" />

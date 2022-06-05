@@ -108,7 +108,7 @@ namespace uu_library_app.Core.DataExportFileTypes
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     DataSet ds = new DataSet();
-                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTable();
+                    DataTable data = ExportFileDataHelper.listInnerJoinAllBooksDataToTableWithTrNames();
                     ds.Tables.Add(data);
                     FileWriter.ExportToXML(ds, Path.GetFullPath(save.FileName), "Kitaplar");
                     wehMessageBox.Show("Dosya başarıyla oluşturuldu...",

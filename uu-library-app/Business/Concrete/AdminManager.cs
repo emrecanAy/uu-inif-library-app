@@ -72,7 +72,7 @@ namespace uu_library_app.Business.Concrete
 
         public bool checkIfEmailExist(string email) //email'lere regex eklenecek.
         {
-            if (_service.getByEmail(email) != null)
+            if (_service.getByEmail(email).Id != null)
             {
                 return true;
             }

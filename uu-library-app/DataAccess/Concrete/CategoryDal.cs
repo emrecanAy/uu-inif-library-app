@@ -52,9 +52,10 @@ namespace uu_library_app.DataAccess.Concrete
 
             conn.Close();
         }
-        List<Category> categories=new List<Category>();
+        
         public List<Category> getAll()
         {
+            List<Category> categories = new List<Category>();
             conn.Open();
             try
             {

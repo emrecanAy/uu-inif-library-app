@@ -53,7 +53,7 @@ namespace uu_library_app.Business.Concrete
         public bool checkIfExistInBooks(string publisherId)
         {
             BookManager bookManager = new BookManager(new BookDal());
-            if (bookManager.getByPublisherId(publisherId) != null)
+            if (bookManager.getByPublisherId(publisherId).Id != null)
             {
                 return true;
             }

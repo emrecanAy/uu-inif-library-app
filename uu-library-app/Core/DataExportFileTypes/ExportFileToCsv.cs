@@ -93,7 +93,7 @@ namespace uu_library_app.Core.DataExportFileTypes
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllBooksDataToTable(), Path.GetFullPath(save.FileName));
+                    FileWriter.ExportToCSV(ExportFileDataHelper.listInnerJoinAllBooksDataToTableWithTrNames(), Path.GetFullPath(save.FileName));
                     wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
                     "Başarılı",
                      MessageBoxButtons.OK,

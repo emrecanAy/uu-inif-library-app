@@ -55,9 +55,10 @@ namespace uu_library_app.DataAccess.Concrete.EntityFramework
             conn.Close();
         }
 
-        List<Department> departments=new List<Department>();
+        
         public List<Department> getAll()
         {
+            List<Department> departments = new List<Department>();
             conn.Open();
             try
             {
