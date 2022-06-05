@@ -96,7 +96,7 @@ namespace uu_library_app.Core.Helpers
         public static void listBorrowingBookPersonnelDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, CONCAT( Personnel.firstName, ' ', Personnel.lastName ) AS personnelFullName, Department.name, Personnel.eMail, Faculty.name FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, CONCAT( Personnel.firstName, ' ', Personnel.lastName ) AS personnelFullName, Personnel.registrationNumber, Personnel.eMail, Faculty.name FROM Personnel INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
             da.Fill(dt);
             dataGrid.DataSource = dt;
             dataGrid.Columns[1].HeaderText = "Öğrenci";
@@ -178,7 +178,7 @@ namespace uu_library_app.Core.Helpers
         public static void listInnerJoinAllPersonnelsNotConcatDataToTable(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Personnel.registrationNumber, Faculty.name'facultyName' FROM Personnel INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
             da.Fill(dt);
             dataGrid.DataSource = dt;
             dataGrid.Columns[0].Visible = false;
@@ -193,7 +193,7 @@ namespace uu_library_app.Core.Helpers
         public static void listInnerJoinAllPersonnelsNotConcatDataToTable2(DataGridView dataGrid, MySqlConnection conn)
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Personnel.registrationNumber, Faculty.name'facultyName' FROM Personnel INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0", conn);
             da.Fill(dt);
             dataGrid.DataSource = dt;
             dataGrid.Columns[0].Visible = false;
@@ -390,7 +390,7 @@ namespace uu_library_app.Core.Helpers
         public static void listInnerJoinAllPersonnelsDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
         {
             DataTable dt = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Department.name'departmentName', Faculty.name'facultyName' FROM Personnel INNER JOIN Department ON Personnel.departmentId = Department.id INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0 AND DATE(Personnels.createdAt) BETWEEN @p1 AND @p2 ORDER BY Personnels.createdAt ASC", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Personnel.id, Personnel.firstName, Personnel.lastName, Personnel.eMail, Personnel.registrationNumber, Faculty.name'facultyName' FROM Personnel INNER JOIN Faculty ON Personnel.facultyId = Faculty.id WHERE Personnel.deleted=0 AND DATE(Personnels.createdAt) BETWEEN @p1 AND @p2 ORDER BY Personnels.createdAt ASC", conn);
             command.Parameters.AddWithValue("@p1", startDate);
             command.Parameters.AddWithValue("@p2", endDate);
             MySqlDataAdapter da = new MySqlDataAdapter(command);

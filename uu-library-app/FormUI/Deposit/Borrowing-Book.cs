@@ -200,9 +200,8 @@ namespace uu_library_app
             {
                 txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[4].Value.ToString();
-            }
-           
+                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }      
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -222,7 +221,7 @@ namespace uu_library_app
             txtOkulNo.Text = "";
             if(cmbKisi.SelectedValue.ToString() == "personnel")
             {
-                lblOkulNo.Text = "Fakülte";
+                lblOkulNo.Text = "Sicil No";
                 DataListerToTableHelper.listBorrowingBookPersonnelDataToTable(dgvDeneme, conn);
 
             }

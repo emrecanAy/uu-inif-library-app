@@ -10,7 +10,7 @@ namespace uu_library_app.Entity.Concrete
     {
         private string id;
         private string facultyId;
-        private string departmentId;
+        private string registrationNumber;
         private string firstName;
         private string lastName;
         private string email;
@@ -18,11 +18,11 @@ namespace uu_library_app.Entity.Concrete
         private bool deleted;
 
         public Personnel() { }
-        public Personnel(string id, string facultyId, string departmentId, string firstName, string lastName, string email)
+        public Personnel(string id, string facultyId, string registrationNumber, string firstName, string lastName, string email)
         {
             this.Id = id;
             this.FacultyId = facultyId;
-            this.DepartmentId = departmentId;
+            this.RegistrationNumber = registrationNumber;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Email = email;
@@ -30,7 +30,7 @@ namespace uu_library_app.Entity.Concrete
 
         public string Id { get => id; set => id = value; }
         public string FacultyId { get => facultyId; set => facultyId = value; }
-        public string DepartmentId { get => departmentId; set => departmentId = value; }
+        public string RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string Email { get => email; set => email = value; }

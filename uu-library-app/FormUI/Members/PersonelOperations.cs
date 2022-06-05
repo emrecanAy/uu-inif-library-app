@@ -36,7 +36,7 @@ namespace uu_library_app
             txtAd.Clear();
             txtEmail.Clear();
             txtSoyad.Clear();
-            cmbDepartman.ResetText();
+            txtSicilNo.Clear();
         }
      
         private void Edit_Student_Load(object sender, EventArgs e)
@@ -44,15 +44,10 @@ namespace uu_library_app
             conn.Open();
             DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-            MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
             MySqlCommand allFaculty = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
-            MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
             MySqlDataAdapter daFaculty = new MySqlDataAdapter(allFaculty);
-            DataSet ds = new DataSet();
             DataSet dsFaculty = new DataSet();
-            da.Fill(ds);
             daFaculty.Fill(dsFaculty);
-            commandToGetAll.ExecuteNonQuery();
             allFaculty.ExecuteNonQuery();
             conn.Close();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -67,10 +62,6 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
 
-            cmbDepartman.DataSource = ds.Tables[0];
-            cmbDepartman.DisplayMember = "name";
-            cmbDepartman.ValueMember = "id";
-
             cmbFakulte.DataSource = dsFaculty.Tables[0];
             cmbFakulte.DisplayMember = "name";
             cmbFakulte.ValueMember = "id";
@@ -84,7 +75,7 @@ namespace uu_library_app
             txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbDepartman.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtSicilNo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
@@ -103,7 +94,7 @@ namespace uu_library_app
         {
             string createGUID = System.Guid.NewGuid().ToString();
 
-            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || cmbDepartman.Text == "")
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtEmail.Text == "" || txtSicilNo.Text == "")
             {
                 wehMessageBox.Show("Lütfen geçerli değerler giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
@@ -111,7 +102,7 @@ namespace uu_library_app
 
             try
             {
-                Personnel personnel = new Personnel(createGUID, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                Personnel personnel = new Personnel(createGUID, cmbFakulte.SelectedValue.ToString(), txtSicilNo.Text, txtAd.Text, txtSoyad.Text, txtEmail.Text);
                 manager.Add(personnel);
                 Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                 logger.Log(log);
@@ -142,7 +133,7 @@ namespace uu_library_app
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), txtSicilNo.Text, txtAd.Text, txtSoyad.Text, txtEmail.Text);
                     manager.Delete(personnel);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
@@ -174,7 +165,7 @@ namespace uu_library_app
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), cmbDepartman.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                    Personnel personnel = new Personnel(txtId.Text, cmbFakulte.SelectedValue.ToString(), txtSicilNo.Text, txtAd.Text, txtSoyad.Text, txtEmail.Text);
                     manager.Update(personnel);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);

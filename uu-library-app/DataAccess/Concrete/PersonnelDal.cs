@@ -17,14 +17,14 @@ namespace uu_library_app.DataAccess.Concrete
         public void Add(Personnel personnel)
         {
             conn.Open();
-            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Personnel (id, firstName, lastName, eMail, departmentId, facultyId) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)", conn);
+            MySqlCommand commandToAdd = new MySqlCommand("INSERT INTO Personnel (id, firstName, lastName, eMail, registrationNumber, facultyId) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)", conn);
             try
             {
                 commandToAdd.Parameters.AddWithValue("@p1", personnel.Id);
                 commandToAdd.Parameters.AddWithValue("@p2", personnel.FirstName);
                 commandToAdd.Parameters.AddWithValue("@p3", personnel.LastName);
                 commandToAdd.Parameters.AddWithValue("@p4", personnel.Email);
-                commandToAdd.Parameters.AddWithValue("@p5", personnel.DepartmentId);
+                commandToAdd.Parameters.AddWithValue("@p5", personnel.RegistrationNumber);
                 commandToAdd.Parameters.AddWithValue("@p6", personnel.FacultyId);
                 commandToAdd.ExecuteNonQuery();
                 Console.WriteLine("Başarıyla eklendi!");
@@ -43,12 +43,12 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Open();
             try
             {
-                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Personnel SET firstName=@p2, lastName=@p3, eMail=@p4, departmentId=@p5, facultyId=@p6 WHERE id=@p1 ", conn);
+                MySqlCommand commandToUpdate = new MySqlCommand("UPDATE Personnel SET firstName=@p2, lastName=@p3, eMail=@p4, registrationNumber=@p5, facultyId=@p6 WHERE id=@p1 ", conn);
                 commandToUpdate.Parameters.AddWithValue("@p1", personnel.Id);
                 commandToUpdate.Parameters.AddWithValue("@p2", personnel.FirstName);
                 commandToUpdate.Parameters.AddWithValue("@p3", personnel.LastName);
                 commandToUpdate.Parameters.AddWithValue("@p4", personnel.Email);
-                commandToUpdate.Parameters.AddWithValue("@p5", personnel.DepartmentId);
+                commandToUpdate.Parameters.AddWithValue("@p5", personnel.RegistrationNumber);
                 commandToUpdate.Parameters.AddWithValue("@p6", personnel.FacultyId);
                 commandToUpdate.ExecuteNonQuery();
 
@@ -96,7 +96,7 @@ namespace uu_library_app.DataAccess.Concrete
                     personnel.FirstName = reader[1].ToString();
                     personnel.LastName = reader[2].ToString();
                     personnel.Email = reader[3].ToString();
-                    personnel.DepartmentId = reader[4].ToString();
+                    personnel.RegistrationNumber = reader[4].ToString();
                     personnel.FacultyId = reader[5].ToString();
                     personnel.CreatedAt = Convert.ToDateTime(reader[6]);
                     personnel.Deleted = Convert.ToBoolean(reader[7]);
@@ -126,7 +126,7 @@ namespace uu_library_app.DataAccess.Concrete
                     personnel.FirstName = reader[1].ToString();
                     personnel.LastName = reader[2].ToString();
                     personnel.Email = reader[3].ToString();
-                    personnel.DepartmentId = reader[4].ToString();
+                    personnel.RegistrationNumber = reader[4].ToString();
                     personnel.FacultyId = reader[5].ToString();
                     personnel.CreatedAt = Convert.ToDateTime(reader[6]);
                     personnel.Deleted = Convert.ToBoolean(reader[7]);
@@ -157,7 +157,7 @@ namespace uu_library_app.DataAccess.Concrete
                     personnel.FirstName = reader[1].ToString();
                     personnel.LastName = reader[2].ToString();
                     personnel.Email = reader[3].ToString();
-                    personnel.DepartmentId = reader[4].ToString();
+                    personnel.RegistrationNumber = reader[4].ToString();
                     personnel.FacultyId = reader[5].ToString();
                     personnel.CreatedAt = Convert.ToDateTime(reader[6]);
                     personnel.Deleted = Convert.ToBoolean(reader[7]);
@@ -188,7 +188,7 @@ namespace uu_library_app.DataAccess.Concrete
                     personnel.FirstName = reader[1].ToString();
                     personnel.LastName = reader[2].ToString();
                     personnel.Email = reader[3].ToString();
-                    personnel.DepartmentId = reader[4].ToString();
+                    personnel.RegistrationNumber = reader[4].ToString();
                     personnel.FacultyId = reader[5].ToString();
                     personnel.CreatedAt = Convert.ToDateTime(reader[6]);
                     personnel.Deleted = Convert.ToBoolean(reader[7]);
