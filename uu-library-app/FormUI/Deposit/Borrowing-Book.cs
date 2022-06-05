@@ -1,5 +1,6 @@
 ﻿using MessageBoxDenemesi;
 using MySql.Data.MySqlClient;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,10 +31,13 @@ namespace uu_library_app
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LoggerManager logger = new LoggerManager(new LoggerDal());
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
-        StudentManager studentManager = new StudentManager(new StudentDal());
         BookManager bookManager = new BookManager(new BookDal());
         SettingsManager settingsManager = new SettingsManager(new SettingsDal());
 
+
+        MySqlDataAdapter pageAdapter;
+        DataSet pageDS;
+        int scollVal;
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
             dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -45,8 +49,23 @@ namespace uu_library_app
             dgvDeneme.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
             dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
             DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
-            DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView2, conn);
             dgvDeneme.RowTemplate.Height = 50;
+            //
+            //DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView2, conn);
+            //
+            pageAdapter = new MySqlDataAdapter("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Book.isbnNumber FROM Book INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Book.deleted=0", conn);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            dataGridView2.DataSource = pageDS;
+            dataGridView2.DataMember = "book";
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].HeaderText = "Kitap";
+            dataGridView2.Columns[2].HeaderText = "Yazar";
+            dataGridView2.Columns[3].Visible = false;
+            dataGridView2.Columns[4].Visible = false;
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+        
 
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -66,7 +85,30 @@ namespace uu_library_app
             cmbKisi.DataSource = new BindingSource(comboSourceDataTypes, null);
             cmbKisi.DisplayMember = "Value";
             cmbKisi.ValueMember = "Key";
+            
+            
 
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal + 20;
+            if (scollVal > 50)
+            {
+                scollVal = bookManager.getAll().Count();
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal - 20;
+            if (scollVal <= 0)
+            {
+                scollVal = 0;
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -188,8 +230,11 @@ namespace uu_library_app
             {
                 lblOkulNo.Text = "Okul No";
                 DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
+              
             }
 
         }
+
+       
     }
 }

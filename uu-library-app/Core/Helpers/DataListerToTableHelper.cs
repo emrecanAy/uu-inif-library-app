@@ -464,6 +464,26 @@ namespace uu_library_app.Core.Helpers
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
+        public static List<Book> listInnerJoinBorrowingBookDataToTable2Test(MySqlConnection conn)
+        {
+            conn.Open();
+            List<Book> books = new List<Book>();
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Book.isbnNumber FROM Book INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Book.deleted=0", conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Book book = new Book();
+                book.Id = reader[0].ToString();
+                book.BookName = reader[1].ToString();
+                book.AuthorId = reader[2].ToString();
+                book.PublisherId = reader[3].ToString();
+                book.IsbnNumber = reader[4].ToString();
+                books.Add(book);
+            }
+            conn.Close();
+            return books;
+        }
+
         //İstenilen tarihler arası
         public static void listInnerJoinAllBooksDataToTableBetweenDates(DataGridView dataGrid, MySqlConnection conn, DateTime startDate, DateTime endDate)
         {
