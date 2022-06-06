@@ -47,15 +47,15 @@ namespace uu_library_app.FormUI.Other_Operations
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -263,17 +263,6 @@ namespace uu_library_app.FormUI.Other_Operations
             this.panel3.TabIndex = 95;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 94;
-            this.picboxBack.TabStop = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
@@ -305,6 +294,17 @@ namespace uu_library_app.FormUI.Other_Operations
             this.wehTextBox2.UnderlinedStyle = false;
             this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
             // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 94;
+            this.picboxBack.TabStop = false;
+            // 
             // Faculty_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +316,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Faculty_Operations";
             this.Text = "Faculty_Operations";
             this.Load += new System.EventHandler(this.Faculty_Operations_Load);
@@ -325,8 +326,8 @@ namespace uu_library_app.FormUI.Other_Operations
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

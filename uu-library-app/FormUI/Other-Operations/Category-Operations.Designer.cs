@@ -29,8 +29,8 @@ namespace uu_library_app
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category_Operations));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -38,7 +38,9 @@ namespace uu_library_app
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,14 +50,12 @@ namespace uu_library_app
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlAd = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuncelle
@@ -148,6 +148,15 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 87;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(406, 4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox7.TabIndex = 279;
+            this.pictureBox7.TabStop = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -176,6 +185,28 @@ namespace uu_library_app
             this.dataGridView1.Size = new System.Drawing.Size(815, 710);
             this.dataGridView1.TabIndex = 88;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            // 
+            // wehTextBox2
+            // 
+            this.wehTextBox2.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox2.BorderRadius = 5;
+            this.wehTextBox2.BorderSize = 1;
+            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox2.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox2.Location = new System.Drawing.Point(441, 4);
+            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox2.Multiline = false;
+            this.wehTextBox2.Name = "wehTextBox2";
+            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox2.PasswordChar = false;
+            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox2.PlaceholderText = "Kategori";
+            this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
+            this.wehTextBox2.TabIndex = 278;
+            this.wehTextBox2.Texts = "";
+            this.wehTextBox2.UnderlinedStyle = false;
+            this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
             // 
             // label3
             // 
@@ -273,37 +304,6 @@ namespace uu_library_app
             this.pnlAd.Size = new System.Drawing.Size(203, 1);
             this.pnlAd.TabIndex = 57;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(406, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
-            this.pictureBox7.TabIndex = 279;
-            this.pictureBox7.TabStop = false;
-            // 
-            // wehTextBox2
-            // 
-            this.wehTextBox2.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox2.BorderRadius = 5;
-            this.wehTextBox2.BorderSize = 1;
-            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox2.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox2.Location = new System.Drawing.Point(441, 4);
-            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox2.Multiline = false;
-            this.wehTextBox2.Name = "wehTextBox2";
-            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox2.PasswordChar = false;
-            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox2.PlaceholderText = "Kategori";
-            this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
-            this.wehTextBox2.TabIndex = 278;
-            this.wehTextBox2.Texts = "";
-            this.wehTextBox2.UnderlinedStyle = false;
-            this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
-            // 
             // Category_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,17 +315,18 @@ namespace uu_library_app
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Category_Operations";
             this.Text = "Category_Operations";
             this.Load += new System.EventHandler(this.Category_Operations_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

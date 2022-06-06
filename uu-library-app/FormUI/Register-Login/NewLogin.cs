@@ -112,6 +112,7 @@ namespace uu_library_app.FormUI.Register_Login
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Warning);
                 System.Threading.Thread.Sleep(4000);
+                panelOnay.Visible = false;
                 panelYeniSifre.Visible = true;
 
             }
@@ -132,7 +133,7 @@ namespace uu_library_app.FormUI.Register_Login
                 MessageBoxIcon.Warning);
                 return;
             }
-            admin.Password = loginTextBox1.Text;
+            admin.Password = StringEncoder.Encrypt(loginTextBox1.Text);
             try
             {
                 adminManager.Update(admin);
@@ -144,12 +145,24 @@ namespace uu_library_app.FormUI.Register_Login
                 NewLogin login = new NewLogin();
                 login.Show();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                wehMessageBox.Show("Şifre güncellenirken bir hata oluştu! Tekrar deneyiniz...",
+                "Uyarı!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
             }
             
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            string crew = "Emrecan Ay @Team Lead (Fullstack Developer) ayemrecan.info@gmail.com \nŞenol Şen @UI Lead (UI Developer) \nMelike Yıldız @Contributor \nŞaban Dönmez @Contributor \nUmut Kozan @Contributor \nAriq Naufal @Contributor";
+            DialogResult dialogResult = wehMessageBox.Show(crew,
+                "AssemSoft!",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Asterisk);
         }
     }
 }

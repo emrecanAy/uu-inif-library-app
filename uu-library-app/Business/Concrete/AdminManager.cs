@@ -98,13 +98,10 @@ namespace uu_library_app.Business.Concrete
             return false;
         }
 
-
-        string code;
         public void sendEmailVerificationCode(string email, string code)
         {
             try
             {
-                code = EmailVerificator.GenerateCode();
                 MailSender.SendMail(email, code);
             }
             catch (Exception)

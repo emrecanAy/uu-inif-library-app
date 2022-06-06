@@ -583,6 +583,7 @@ namespace uu_library_app.FormUI.Deposit
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WhoHasThatBook";
             this.Text = "WhoHasThatBook";
             this.Load += new System.EventHandler(this.WhoHasThatBook_Load);

@@ -573,6 +573,7 @@ namespace uu_library_app
             this.Controls.Add(this.txtOgrNo);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Student_Affairs";
             this.Text = "Student_Affairs";
             this.Load += new System.EventHandler(this.Student_Affairs_Load);

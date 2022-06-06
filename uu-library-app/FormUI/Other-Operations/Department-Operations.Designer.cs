@@ -46,16 +46,16 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -226,6 +226,15 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 91;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(406, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox7.TabIndex = 281;
+            this.pictureBox7.TabStop = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -255,33 +264,6 @@ namespace uu_library_app
             this.dataGridView1.TabIndex = 88;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtId);
-            this.panel4.Controls.Add(this.btnGuncelle);
-            this.panel4.Controls.Add(this.btnSil);
-            this.panel4.Controls.Add(this.btnEkle);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.picboxAd);
-            this.panel4.Controls.Add(this.pnlAd);
-            this.panel4.Controls.Add(this.txtAd);
-            this.panel4.Controls.Add(this.lblAd);
-            this.panel4.Location = new System.Drawing.Point(897, 121);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(312, 767);
-            this.panel4.TabIndex = 92;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(406, 7);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
-            this.pictureBox7.TabIndex = 281;
-            this.pictureBox7.TabStop = false;
-            // 
             // wehTextBox2
             // 
             this.wehTextBox2.BorderColor = System.Drawing.Color.White;
@@ -304,6 +286,24 @@ namespace uu_library_app
             this.wehTextBox2.UnderlinedStyle = false;
             this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtId);
+            this.panel4.Controls.Add(this.btnGuncelle);
+            this.panel4.Controls.Add(this.btnSil);
+            this.panel4.Controls.Add(this.btnEkle);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.picboxAd);
+            this.panel4.Controls.Add(this.pnlAd);
+            this.panel4.Controls.Add(this.txtAd);
+            this.panel4.Controls.Add(this.lblAd);
+            this.panel4.Location = new System.Drawing.Point(897, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(312, 767);
+            this.panel4.TabIndex = 92;
+            // 
             // Department_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +315,7 @@ namespace uu_library_app
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Department_Operations";
             this.Text = "Department_Operations";
             this.Load += new System.EventHandler(this.Department_Operations_Load);
@@ -322,10 +323,10 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

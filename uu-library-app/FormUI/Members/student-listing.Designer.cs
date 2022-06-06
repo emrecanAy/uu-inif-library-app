@@ -323,6 +323,7 @@ namespace uu_library_app
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "student_listing";
             this.Text = "student_listing";
             this.Load += new System.EventHandler(this.student_listing_Load);

@@ -593,6 +593,7 @@ namespace uu_library_app
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Get_Book_Back";
             this.Text = "Get_Book_Back";
             this.Load += new System.EventHandler(this.Get_Book_Back_Load);

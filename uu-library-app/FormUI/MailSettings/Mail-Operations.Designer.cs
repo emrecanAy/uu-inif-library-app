@@ -727,6 +727,7 @@ namespace uu_library_app.FormUI.MailSettings
             this.Controls.Add(this.panel22);
             this.Controls.Add(this.pictureBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mail_Operations";
             this.Text = "Mail_Operations";
             this.Load += new System.EventHandler(this.Mail_Operations_Load);

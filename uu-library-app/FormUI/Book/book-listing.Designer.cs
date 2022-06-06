@@ -30,7 +30,7 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(book_listing));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,10 +46,10 @@ namespace uu_library_app
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.radiusButton1 = new button.Toolbox.RadiusButton();
             this.dateTimeEnd = new uu_library_app.FormUI.Toolbox.DateTime();
             this.dateTimeStart = new uu_library_app.FormUI.Toolbox.DateTime();
             this.label2 = new System.Windows.Forms.Label();
-            this.radiusButton1 = new button.Toolbox.RadiusButton();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -140,14 +140,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 39);
             this.dataGridView1.Name = "dataGridView1";
@@ -242,6 +242,25 @@ namespace uu_library_app
             this.pictureBox2.TabIndex = 291;
             this.pictureBox2.TabStop = false;
             // 
+            // radiusButton1
+            // 
+            this.radiusButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radiusButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radiusButton1.BorderColor = System.Drawing.Color.White;
+            this.radiusButton1.BorderRadius = 10;
+            this.radiusButton1.BorderSize = 1;
+            this.radiusButton1.FlatAppearance.BorderSize = 0;
+            this.radiusButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radiusButton1.ForeColor = System.Drawing.Color.White;
+            this.radiusButton1.Location = new System.Drawing.Point(416, 22);
+            this.radiusButton1.Name = "radiusButton1";
+            this.radiusButton1.Size = new System.Drawing.Size(80, 30);
+            this.radiusButton1.TabIndex = 291;
+            this.radiusButton1.Text = "Getir";
+            this.radiusButton1.TextColor = System.Drawing.Color.White;
+            this.radiusButton1.UseVisualStyleBackColor = false;
+            this.radiusButton1.Click += new System.EventHandler(this.radiusButton1_Click);
+            // 
             // dateTimeEnd
             // 
             this.dateTimeEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -280,25 +299,6 @@ namespace uu_library_app
             this.label2.TabIndex = 244;
             this.label2.Text = "Tarih Aralığı ";
             // 
-            // radiusButton1
-            // 
-            this.radiusButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radiusButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radiusButton1.BorderColor = System.Drawing.Color.White;
-            this.radiusButton1.BorderRadius = 10;
-            this.radiusButton1.BorderSize = 1;
-            this.radiusButton1.FlatAppearance.BorderSize = 0;
-            this.radiusButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radiusButton1.ForeColor = System.Drawing.Color.White;
-            this.radiusButton1.Location = new System.Drawing.Point(416, 22);
-            this.radiusButton1.Name = "radiusButton1";
-            this.radiusButton1.Size = new System.Drawing.Size(80, 30);
-            this.radiusButton1.TabIndex = 291;
-            this.radiusButton1.Text = "Getir";
-            this.radiusButton1.TextColor = System.Drawing.Color.White;
-            this.radiusButton1.UseVisualStyleBackColor = false;
-            this.radiusButton1.Click += new System.EventHandler(this.radiusButton1_Click);
-            // 
             // book_listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +312,7 @@ namespace uu_library_app
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "book_listing";
             this.Text = "book_listing";
             this.Load += new System.EventHandler(this.book_listing_Load);

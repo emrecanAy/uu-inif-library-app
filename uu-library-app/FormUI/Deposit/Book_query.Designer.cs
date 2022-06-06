@@ -398,6 +398,7 @@ namespace uu_library_app.FormUI.Deposit
             this.Controls.Add(this.picboxBack);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Book_query";
             this.Text = "Book_query";
             this.Load += new System.EventHandler(this.Book_query_Load);

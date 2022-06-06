@@ -46,16 +46,16 @@ namespace uu_library_app
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // picboxBack
@@ -233,6 +233,37 @@ namespace uu_library_app
             this.panel3.Size = new System.Drawing.Size(823, 764);
             this.panel3.TabIndex = 91;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(406, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox7.TabIndex = 287;
+            this.pictureBox7.TabStop = false;
+            // 
+            // wehTextBox2
+            // 
+            this.wehTextBox2.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox2.BorderRadius = 5;
+            this.wehTextBox2.BorderSize = 1;
+            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox2.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox2.Location = new System.Drawing.Point(440, 7);
+            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox2.Multiline = false;
+            this.wehTextBox2.Name = "wehTextBox2";
+            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox2.PasswordChar = false;
+            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox2.PlaceholderText = "Yayınevi";
+            this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
+            this.wehTextBox2.TabIndex = 286;
+            this.wehTextBox2.Texts = "";
+            this.wehTextBox2.UnderlinedStyle = false;
+            this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -273,37 +304,6 @@ namespace uu_library_app
             this.label1.TabIndex = 89;
             this.label1.Text = "Yayınevi İşlemleri ";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(406, 7);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 30);
-            this.pictureBox7.TabIndex = 287;
-            this.pictureBox7.TabStop = false;
-            // 
-            // wehTextBox2
-            // 
-            this.wehTextBox2.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox2.BorderRadius = 5;
-            this.wehTextBox2.BorderSize = 1;
-            this.wehTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox2.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox2.Location = new System.Drawing.Point(440, 7);
-            this.wehTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox2.Multiline = false;
-            this.wehTextBox2.Name = "wehTextBox2";
-            this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox2.PasswordChar = false;
-            this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox2.PlaceholderText = "Yayınevi";
-            this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
-            this.wehTextBox2.TabIndex = 286;
-            this.wehTextBox2.Texts = "";
-            this.wehTextBox2.UnderlinedStyle = false;
-            this.wehTextBox2._TextChanged += new System.EventHandler(this.wehTextBox2__TextChanged);
-            // 
             // publisher_actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +315,7 @@ namespace uu_library_app
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "publisher_actions";
             this.Text = "publisher_actions";
             this.Load += new System.EventHandler(this.publisher_actions_Load);
@@ -324,8 +325,8 @@ namespace uu_library_app
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -684,6 +684,7 @@
             this.Controls.Add(this.lblBaslik);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_Student";
             this.Text = "Add_Book";
             this.Load += new System.EventHandler(this.Add_Student_Load_1);
