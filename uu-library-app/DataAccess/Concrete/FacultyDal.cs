@@ -52,9 +52,10 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Faculty> faculties = new List<Faculty>();
+       
         public List<Faculty> GetAll()
         {
+            List<Faculty> faculties = new List<Faculty>();
             conn.Open();
             try
             {

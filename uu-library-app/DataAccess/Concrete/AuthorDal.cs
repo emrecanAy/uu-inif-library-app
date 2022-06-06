@@ -53,9 +53,10 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Author> authors=new List<Author>();
+       
         public List<Author> getAll()
         {
+            List<Author> authors = new List<Author>();
             conn.Open();
             try
             {

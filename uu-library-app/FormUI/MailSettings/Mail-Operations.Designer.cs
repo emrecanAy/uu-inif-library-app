@@ -87,6 +87,7 @@ namespace uu_library_app.FormUI.MailSettings
             this.txtControl = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericHatirlatma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxEmail)).BeginInit();
@@ -361,7 +362,7 @@ namespace uu_library_app.FormUI.MailSettings
             this.btnReminding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReminding.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReminding.ForeColor = System.Drawing.Color.White;
-            this.btnReminding.Location = new System.Drawing.Point(562, 847);
+            this.btnReminding.Location = new System.Drawing.Point(562, 846);
             this.btnReminding.Name = "btnReminding";
             this.btnReminding.Size = new System.Drawing.Size(131, 41);
             this.btnReminding.TabIndex = 268;
@@ -687,12 +688,27 @@ namespace uu_library_app.FormUI.MailSettings
             this.pictureBox1.TabIndex = 275;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1117, 846);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 41);
+            this.button1.TabIndex = 277;
+            this.button1.Text = "Direkt Gönder";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mail_Operations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtControl);
             this.Controls.Add(this.panel3);
@@ -791,5 +807,6 @@ namespace uu_library_app.FormUI.MailSettings
         private System.Windows.Forms.TextBox txtControl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

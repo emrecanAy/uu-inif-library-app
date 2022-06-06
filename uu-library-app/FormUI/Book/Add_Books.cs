@@ -33,6 +33,10 @@ namespace uu_library_app
         LoggerManager logger = new LoggerManager(new LoggerDal());
         AdminManager adminManager = new AdminManager(new AdminDal());
 
+        MySqlDataAdapter pageAdapter;
+        DataSet pageDS;
+        int scollVal;
+
         public void fillData()
         {
             try
@@ -59,6 +63,8 @@ namespace uu_library_app
                 SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn).ExecuteNonQuery();
                 SqlCommandHelper.getLanguagesCommand(conn).ExecuteNonQuery();
                 SqlCommandHelper.getPublishersCommand(conn).ExecuteNonQuery();
+
+                
                 conn.Close();
 
                 //Kategori
@@ -129,14 +135,17 @@ namespace uu_library_app
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             cmbKategori.Text = "";
-            if (cmbKategori.Text == "")
-                cmbKategori.Text = "Select one of the answers";
+
+            
 
             #region crud1
             try
             {
                 conn.Open();
-                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+                pageDS = new DataSet();
+                pageAdapter.Fill(pageDS, scollVal, 20, "book");
+                dataGridView1.DataSource = pageDS;
                 MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
                 MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
                 MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn));
@@ -195,13 +204,29 @@ namespace uu_library_app
                 Application.Exit();
                 return;
             }
-            
-
-            
-
             #endregion
         }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal + 20;
+            if (scollVal > 50)
+            {
+                scollVal = bookManager.getAll().Count();
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
 
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal - 20;
+            if (scollVal <= 0)
+            {
+                scollVal = 0;
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
@@ -230,7 +255,6 @@ namespace uu_library_app
                 wehMessageBox.Show("İnternet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.", "Bağlantı Hatası!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
@@ -321,5 +345,7 @@ namespace uu_library_app
         {
             fillData();
         }
+
+       
     }
 }

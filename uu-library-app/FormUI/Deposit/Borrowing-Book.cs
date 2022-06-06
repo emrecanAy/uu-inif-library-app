@@ -50,10 +50,8 @@ namespace uu_library_app
             dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
             DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
             dgvDeneme.RowTemplate.Height = 50;
-            //
-            //DataListerToTableHelper.listInnerJoinBorrowingBookDataToTable(dataGridView2, conn);
-            //
-            pageAdapter = new MySqlDataAdapter("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Book.isbnNumber FROM Book INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Book.deleted=0", conn);
+
+            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
             pageDS = new DataSet();
             pageAdapter.Fill(pageDS, scollVal, 20, "book");
             dataGridView2.DataSource = pageDS;

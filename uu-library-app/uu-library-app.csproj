@@ -151,6 +151,7 @@
     <Compile Include="Core\Helpers\ArrayFindersHelper.cs" />
     <Compile Include="Core\Helpers\DashboardDataHelper.cs" />
     <Compile Include="Core\Helpers\DataListerHelper.cs" />
+    <Compile Include="Core\Helpers\DataListerToDataAdapter.cs" />
     <Compile Include="Core\Helpers\DataListerToTableHelper.cs" />
     <Compile Include="Core\Helpers\ExportFileDataHelper.cs" />
     <Compile Include="Core\Helpers\MailSenderHelper.cs" />

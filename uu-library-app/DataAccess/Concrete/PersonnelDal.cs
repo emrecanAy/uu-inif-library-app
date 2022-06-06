@@ -141,10 +141,11 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-        List<Personnel> personnels = new List<Personnel>();
+        
         public List<Personnel> getAll()
         {
-            
+            List<Personnel> personnels = new List<Personnel>();
+
             conn.Open();
             try
             {

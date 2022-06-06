@@ -54,9 +54,10 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Language> languages=new List<Language>();
+        
         public List<Language> getAll()
         {
+            List<Language> languages = new List<Language>();
             conn.Open();
             try
             {

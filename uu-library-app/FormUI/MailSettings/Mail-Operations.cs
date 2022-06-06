@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
+using uu_library_app.Core.RoutinCustomJobs;
 using uu_library_app.Core.Utils;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
@@ -79,6 +80,12 @@ namespace uu_library_app.FormUI.MailSettings
             numericGecikme.Value = settings.DepositDay;
             numericHatirlatma.Value = settings.RemindingDay;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MailSenderJob job = new MailSenderJob();
+            job.everyDayCheckAndSendMail();
         }
     }
 }

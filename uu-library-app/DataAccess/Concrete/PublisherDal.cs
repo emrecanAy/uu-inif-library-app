@@ -53,13 +53,14 @@ namespace uu_library_app.DataAccess.Concrete
             conn.Close();
         }
 
-        List<Publisher> publishers=new List<Publisher>();
+        
         public List<Publisher> getAll()
         {
+            List<Publisher> publishers = new List<Publisher>();
             conn.Open();
             try
             {
-                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
+                MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=0", conn);
                 MySqlDataReader reader = commandToGetAll.ExecuteReader();
                 while (reader.Read())
                 {
