@@ -95,12 +95,23 @@ namespace uu_library_app.FormUI.Register_Login
         string code = EmailVerificator.GenerateCode();
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
-               "ONAY",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Warning);
-            adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
-            panelOnay.Visible = true;
+            if(loginTextBox4.Text != "")
+            {
+                wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
+              "ONAY",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Warning);
+                adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
+                panelOnay.Visible = true;
+            }
+            else
+            {
+                wehMessageBox.Show("Lütfen geçerli bir e-posta adresi girin...",
+              "UYARI",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Warning);
+            }
+           
         }
 
         private void btnOnayKodu_Click(object sender, EventArgs e)

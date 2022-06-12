@@ -31,22 +31,15 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veri_İslemleri));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             this.cmbVeriOgr = new System.Windows.Forms.ComboBox();
-            this.btnXMLOgr = new button.Toolbox.RadiusButton();
-            this.btnJSONOgr = new button.Toolbox.RadiusButton();
-            this.btnCSVOgr = new button.Toolbox.RadiusButton();
-            this.btnExcelOgr = new button.Toolbox.RadiusButton();
-            this.btnPDFOgr = new button.Toolbox.RadiusButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,23 +49,30 @@ namespace uu_library_app.FormUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLog = new System.Windows.Forms.DataGridView();
             this.cmbVeri = new System.Windows.Forms.ComboBox();
+            this.txtOgrenciId = new System.Windows.Forms.TextBox();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
+            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
+            this.btnXMLOgr = new button.Toolbox.RadiusButton();
+            this.btnJSONOgr = new button.Toolbox.RadiusButton();
+            this.btnCSVOgr = new button.Toolbox.RadiusButton();
+            this.btnExcelOgr = new button.Toolbox.RadiusButton();
+            this.btnPDFOgr = new button.Toolbox.RadiusButton();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.btnXML = new button.Toolbox.RadiusButton();
             this.btnJSON = new button.Toolbox.RadiusButton();
             this.btnCSV = new button.Toolbox.RadiusButton();
             this.btnExcel = new button.Toolbox.RadiusButton();
             this.btnPDF = new button.Toolbox.RadiusButton();
-            this.txtOgrenciId = new System.Windows.Forms.TextBox();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -143,28 +143,6 @@ namespace uu_library_app.FormUI
             this.panel6.Size = new System.Drawing.Size(575, 84);
             this.panel6.TabIndex = 270;
             // 
-            // wehTextBox1
-            // 
-            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox1.BorderRadius = 5;
-            this.wehTextBox1.BorderSize = 1;
-            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(40, 8);
-            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox1.Multiline = false;
-            this.wehTextBox1.Name = "wehTextBox1";
-            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox1.PasswordChar = false;
-            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Öğrenci Numarasını Giriniz!";
-            this.wehTextBox1.Size = new System.Drawing.Size(529, 29);
-            this.wehTextBox1.TabIndex = 236;
-            this.wehTextBox1.Texts = "";
-            this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -184,34 +162,6 @@ namespace uu_library_app.FormUI
             this.panel2.Size = new System.Drawing.Size(583, 775);
             this.panel2.TabIndex = 273;
             // 
-            // dgvLogOgr
-            // 
-            this.dgvLogOgr.AllowUserToResizeRows = false;
-            this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLogOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dgvLogOgr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvLogOgr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgvLogOgr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLogOgr.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLogOgr.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLogOgr.GridColor = System.Drawing.Color.White;
-            this.dgvLogOgr.Location = new System.Drawing.Point(7, 276);
-            this.dgvLogOgr.Name = "dgvLogOgr";
-            this.dgvLogOgr.ReadOnly = true;
-            this.dgvLogOgr.RowHeadersVisible = false;
-            this.dgvLogOgr.RowTemplate.Height = 30;
-            this.dgvLogOgr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLogOgr.Size = new System.Drawing.Size(566, 494);
-            this.dgvLogOgr.TabIndex = 281;
-            // 
             // cmbVeriOgr
             // 
             this.cmbVeriOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -224,106 +174,6 @@ namespace uu_library_app.FormUI
             this.cmbVeriOgr.Name = "cmbVeriOgr";
             this.cmbVeriOgr.Size = new System.Drawing.Size(496, 35);
             this.cmbVeriOgr.TabIndex = 279;
-            // 
-            // btnXMLOgr
-            // 
-            this.btnXMLOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnXMLOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnXMLOgr.BorderColor = System.Drawing.Color.White;
-            this.btnXMLOgr.BorderRadius = 25;
-            this.btnXMLOgr.BorderSize = 1;
-            this.btnXMLOgr.FlatAppearance.BorderSize = 0;
-            this.btnXMLOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXMLOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXMLOgr.ForeColor = System.Drawing.Color.White;
-            this.btnXMLOgr.Location = new System.Drawing.Point(444, 210);
-            this.btnXMLOgr.Name = "btnXMLOgr";
-            this.btnXMLOgr.Size = new System.Drawing.Size(94, 40);
-            this.btnXMLOgr.TabIndex = 278;
-            this.btnXMLOgr.Text = "XML";
-            this.btnXMLOgr.TextColor = System.Drawing.Color.White;
-            this.btnXMLOgr.UseVisualStyleBackColor = false;
-            this.btnXMLOgr.Click += new System.EventHandler(this.btnXMLOgr_Click);
-            // 
-            // btnJSONOgr
-            // 
-            this.btnJSONOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnJSONOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnJSONOgr.BorderColor = System.Drawing.Color.White;
-            this.btnJSONOgr.BorderRadius = 25;
-            this.btnJSONOgr.BorderSize = 1;
-            this.btnJSONOgr.FlatAppearance.BorderSize = 0;
-            this.btnJSONOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJSONOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJSONOgr.ForeColor = System.Drawing.Color.White;
-            this.btnJSONOgr.Location = new System.Drawing.Point(344, 210);
-            this.btnJSONOgr.Name = "btnJSONOgr";
-            this.btnJSONOgr.Size = new System.Drawing.Size(94, 40);
-            this.btnJSONOgr.TabIndex = 277;
-            this.btnJSONOgr.Text = "JSON";
-            this.btnJSONOgr.TextColor = System.Drawing.Color.White;
-            this.btnJSONOgr.UseVisualStyleBackColor = false;
-            this.btnJSONOgr.Click += new System.EventHandler(this.btnJSONOgr_Click);
-            // 
-            // btnCSVOgr
-            // 
-            this.btnCSVOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnCSVOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnCSVOgr.BorderColor = System.Drawing.Color.White;
-            this.btnCSVOgr.BorderRadius = 25;
-            this.btnCSVOgr.BorderSize = 1;
-            this.btnCSVOgr.FlatAppearance.BorderSize = 0;
-            this.btnCSVOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCSVOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCSVOgr.ForeColor = System.Drawing.Color.White;
-            this.btnCSVOgr.Location = new System.Drawing.Point(244, 210);
-            this.btnCSVOgr.Name = "btnCSVOgr";
-            this.btnCSVOgr.Size = new System.Drawing.Size(94, 40);
-            this.btnCSVOgr.TabIndex = 276;
-            this.btnCSVOgr.Text = "CSV";
-            this.btnCSVOgr.TextColor = System.Drawing.Color.White;
-            this.btnCSVOgr.UseVisualStyleBackColor = false;
-            this.btnCSVOgr.Click += new System.EventHandler(this.btnCSVOgr_Click);
-            // 
-            // btnExcelOgr
-            // 
-            this.btnExcelOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnExcelOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnExcelOgr.BorderColor = System.Drawing.Color.White;
-            this.btnExcelOgr.BorderRadius = 25;
-            this.btnExcelOgr.BorderSize = 1;
-            this.btnExcelOgr.FlatAppearance.BorderSize = 0;
-            this.btnExcelOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcelOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcelOgr.ForeColor = System.Drawing.Color.White;
-            this.btnExcelOgr.Location = new System.Drawing.Point(144, 210);
-            this.btnExcelOgr.Name = "btnExcelOgr";
-            this.btnExcelOgr.Size = new System.Drawing.Size(94, 40);
-            this.btnExcelOgr.TabIndex = 275;
-            this.btnExcelOgr.Text = "Excel";
-            this.btnExcelOgr.TextColor = System.Drawing.Color.White;
-            this.btnExcelOgr.UseVisualStyleBackColor = false;
-            this.btnExcelOgr.Click += new System.EventHandler(this.btnExcelOgr_Click);
-            // 
-            // btnPDFOgr
-            // 
-            this.btnPDFOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnPDFOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnPDFOgr.BorderColor = System.Drawing.Color.White;
-            this.btnPDFOgr.BorderRadius = 25;
-            this.btnPDFOgr.BorderSize = 1;
-            this.btnPDFOgr.FlatAppearance.BorderSize = 0;
-            this.btnPDFOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPDFOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDFOgr.ForeColor = System.Drawing.Color.White;
-            this.btnPDFOgr.Location = new System.Drawing.Point(44, 210);
-            this.btnPDFOgr.Name = "btnPDFOgr";
-            this.btnPDFOgr.Size = new System.Drawing.Size(94, 40);
-            this.btnPDFOgr.TabIndex = 274;
-            this.btnPDFOgr.Text = "PDF";
-            this.btnPDFOgr.TextColor = System.Drawing.Color.White;
-            this.btnPDFOgr.UseVisualStyleBackColor = false;
-            this.btnPDFOgr.Click += new System.EventHandler(this.btnPDFOgr_Click);
             // 
             // panel5
             // 
@@ -427,7 +277,7 @@ namespace uu_library_app.FormUI
             this.dgvLog.RowHeadersVisible = false;
             this.dgvLog.RowTemplate.Height = 30;
             this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLog.Size = new System.Drawing.Size(566, 494);
+            this.dgvLog.Size = new System.Drawing.Size(575, 494);
             this.dgvLog.TabIndex = 274;
             // 
             // cmbVeri
@@ -442,6 +292,183 @@ namespace uu_library_app.FormUI
             this.cmbVeri.Name = "cmbVeri";
             this.cmbVeri.Size = new System.Drawing.Size(496, 35);
             this.cmbVeri.TabIndex = 280;
+            // 
+            // txtOgrenciId
+            // 
+            this.txtOgrenciId.Location = new System.Drawing.Point(672, 32);
+            this.txtOgrenciId.Name = "txtOgrenciId";
+            this.txtOgrenciId.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciId.TabIndex = 274;
+            this.txtOgrenciId.Visible = false;
+            // 
+            // dgvData
+            // 
+            this.dgvData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Location = new System.Drawing.Point(752, 12);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(162, 44);
+            this.dgvData.TabIndex = 280;
+            this.dgvData.Visible = false;
+            // 
+            // txtOgrenciAdSoyad
+            // 
+            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(672, 58);
+            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
+            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciAdSoyad.TabIndex = 281;
+            this.txtOgrenciAdSoyad.Visible = false;
+            // 
+            // dgvLogOgr
+            // 
+            this.dgvLogOgr.AllowUserToResizeRows = false;
+            this.dgvLogOgr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLogOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvLogOgr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLogOgr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvLogOgr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvLogOgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogOgr.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLogOgr.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLogOgr.GridColor = System.Drawing.Color.White;
+            this.dgvLogOgr.Location = new System.Drawing.Point(7, 276);
+            this.dgvLogOgr.Name = "dgvLogOgr";
+            this.dgvLogOgr.ReadOnly = true;
+            this.dgvLogOgr.RowHeadersVisible = false;
+            this.dgvLogOgr.RowTemplate.Height = 30;
+            this.dgvLogOgr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLogOgr.Size = new System.Drawing.Size(566, 494);
+            this.dgvLogOgr.TabIndex = 281;
+            this.dgvLogOgr.Visible = false;
+            // 
+            // btnXMLOgr
+            // 
+            this.btnXMLOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnXMLOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnXMLOgr.BorderColor = System.Drawing.Color.White;
+            this.btnXMLOgr.BorderRadius = 25;
+            this.btnXMLOgr.BorderSize = 1;
+            this.btnXMLOgr.FlatAppearance.BorderSize = 0;
+            this.btnXMLOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXMLOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXMLOgr.ForeColor = System.Drawing.Color.White;
+            this.btnXMLOgr.Location = new System.Drawing.Point(444, 210);
+            this.btnXMLOgr.Name = "btnXMLOgr";
+            this.btnXMLOgr.Size = new System.Drawing.Size(94, 40);
+            this.btnXMLOgr.TabIndex = 278;
+            this.btnXMLOgr.Text = "XML";
+            this.btnXMLOgr.TextColor = System.Drawing.Color.White;
+            this.btnXMLOgr.UseVisualStyleBackColor = false;
+            this.btnXMLOgr.Click += new System.EventHandler(this.btnXMLOgr_Click);
+            // 
+            // btnJSONOgr
+            // 
+            this.btnJSONOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnJSONOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnJSONOgr.BorderColor = System.Drawing.Color.White;
+            this.btnJSONOgr.BorderRadius = 25;
+            this.btnJSONOgr.BorderSize = 1;
+            this.btnJSONOgr.FlatAppearance.BorderSize = 0;
+            this.btnJSONOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJSONOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJSONOgr.ForeColor = System.Drawing.Color.White;
+            this.btnJSONOgr.Location = new System.Drawing.Point(344, 210);
+            this.btnJSONOgr.Name = "btnJSONOgr";
+            this.btnJSONOgr.Size = new System.Drawing.Size(94, 40);
+            this.btnJSONOgr.TabIndex = 277;
+            this.btnJSONOgr.Text = "JSON";
+            this.btnJSONOgr.TextColor = System.Drawing.Color.White;
+            this.btnJSONOgr.UseVisualStyleBackColor = false;
+            this.btnJSONOgr.Click += new System.EventHandler(this.btnJSONOgr_Click);
+            // 
+            // btnCSVOgr
+            // 
+            this.btnCSVOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnCSVOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnCSVOgr.BorderColor = System.Drawing.Color.White;
+            this.btnCSVOgr.BorderRadius = 25;
+            this.btnCSVOgr.BorderSize = 1;
+            this.btnCSVOgr.FlatAppearance.BorderSize = 0;
+            this.btnCSVOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCSVOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCSVOgr.ForeColor = System.Drawing.Color.White;
+            this.btnCSVOgr.Location = new System.Drawing.Point(244, 210);
+            this.btnCSVOgr.Name = "btnCSVOgr";
+            this.btnCSVOgr.Size = new System.Drawing.Size(94, 40);
+            this.btnCSVOgr.TabIndex = 276;
+            this.btnCSVOgr.Text = "CSV";
+            this.btnCSVOgr.TextColor = System.Drawing.Color.White;
+            this.btnCSVOgr.UseVisualStyleBackColor = false;
+            this.btnCSVOgr.Click += new System.EventHandler(this.btnCSVOgr_Click);
+            // 
+            // btnExcelOgr
+            // 
+            this.btnExcelOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnExcelOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnExcelOgr.BorderColor = System.Drawing.Color.White;
+            this.btnExcelOgr.BorderRadius = 25;
+            this.btnExcelOgr.BorderSize = 1;
+            this.btnExcelOgr.FlatAppearance.BorderSize = 0;
+            this.btnExcelOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcelOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcelOgr.ForeColor = System.Drawing.Color.White;
+            this.btnExcelOgr.Location = new System.Drawing.Point(144, 210);
+            this.btnExcelOgr.Name = "btnExcelOgr";
+            this.btnExcelOgr.Size = new System.Drawing.Size(94, 40);
+            this.btnExcelOgr.TabIndex = 275;
+            this.btnExcelOgr.Text = "Excel";
+            this.btnExcelOgr.TextColor = System.Drawing.Color.White;
+            this.btnExcelOgr.UseVisualStyleBackColor = false;
+            this.btnExcelOgr.Click += new System.EventHandler(this.btnExcelOgr_Click);
+            // 
+            // btnPDFOgr
+            // 
+            this.btnPDFOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnPDFOgr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnPDFOgr.BorderColor = System.Drawing.Color.White;
+            this.btnPDFOgr.BorderRadius = 25;
+            this.btnPDFOgr.BorderSize = 1;
+            this.btnPDFOgr.FlatAppearance.BorderSize = 0;
+            this.btnPDFOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDFOgr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDFOgr.ForeColor = System.Drawing.Color.White;
+            this.btnPDFOgr.Location = new System.Drawing.Point(44, 210);
+            this.btnPDFOgr.Name = "btnPDFOgr";
+            this.btnPDFOgr.Size = new System.Drawing.Size(94, 40);
+            this.btnPDFOgr.TabIndex = 274;
+            this.btnPDFOgr.Text = "PDF";
+            this.btnPDFOgr.TextColor = System.Drawing.Color.White;
+            this.btnPDFOgr.UseVisualStyleBackColor = false;
+            this.btnPDFOgr.Click += new System.EventHandler(this.btnPDFOgr_Click);
+            // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(40, 8);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Öğrenci Numarasını Giriniz!";
+            this.wehTextBox1.Size = new System.Drawing.Size(529, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
             // 
             // btnXML
             // 
@@ -543,32 +570,6 @@ namespace uu_library_app.FormUI
             this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
-            // txtOgrenciId
-            // 
-            this.txtOgrenciId.Location = new System.Drawing.Point(672, 32);
-            this.txtOgrenciId.Name = "txtOgrenciId";
-            this.txtOgrenciId.Size = new System.Drawing.Size(53, 20);
-            this.txtOgrenciId.TabIndex = 274;
-            this.txtOgrenciId.Visible = false;
-            // 
-            // dgvData
-            // 
-            this.dgvData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(752, 12);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(162, 44);
-            this.dgvData.TabIndex = 280;
-            this.dgvData.Visible = false;
-            // 
-            // txtOgrenciAdSoyad
-            // 
-            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(672, 58);
-            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
-            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(53, 20);
-            this.txtOgrenciAdSoyad.TabIndex = 281;
-            this.txtOgrenciAdSoyad.Visible = false;
-            // 
             // Veri_İslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,12 +593,12 @@ namespace uu_library_app.FormUI
             this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

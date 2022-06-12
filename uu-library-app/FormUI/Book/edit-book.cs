@@ -25,9 +25,13 @@ namespace uu_library_app
             _admin = admin;
         }
 
-        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+        static MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LoggerManager logger = new LoggerManager(new LoggerDal());
         BookManager bookManager = new BookManager(new BookDal());
+
+        MySqlDataAdapter pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+        DataSet pageDS;
+        int scollVal;
         private void clearAllFields()
         {
             txtId.Clear();
@@ -60,9 +64,32 @@ namespace uu_library_app
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
+
             #region crud1
             conn.Open();
-            DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            dataGridView1.DataSource = pageDS;
+            dataGridView1.DataMember = "book";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Kitap";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
+
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
             MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
             MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
             MySqlDataAdapter daAuthors = new MySqlDataAdapter(SqlCommandHelper.getAuthorsCommandConcatFirstNameAndLastName(conn));
@@ -141,8 +168,28 @@ namespace uu_library_app
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-          string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            dataGridView1.DataSource = pageDS;
+
+            pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
+            dataGridView1.DataSource = pageDS.Tables[0];
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Kitap";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -202,6 +249,28 @@ namespace uu_library_app
         private void txtDemirbasNo_Click(object sender, EventArgs e)
         {
             this.txtDemirbasNo.Select(0, 0);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal + 20;
+            if (scollVal > 50)
+            {
+                scollVal = bookManager.getAll().Count();
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal - 20;
+            if (scollVal <= 0)
+            {
+                scollVal = 0;
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
         }
     }
  }

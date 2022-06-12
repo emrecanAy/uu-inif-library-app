@@ -689,7 +689,7 @@ namespace uu_library_app.FormUI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 24);
             this.label1.TabIndex = 45;
-            this.label1.Text = "En Çok Okuyan 3 Bölüm";
+            this.label1.Text = "En Çok Okuyan 5 Bölüm";
             // 
             // lblBolum5OkumaSayisi
             // 

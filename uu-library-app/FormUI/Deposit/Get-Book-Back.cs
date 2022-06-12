@@ -30,6 +30,9 @@ namespace uu_library_app
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
         BookManager bookManager = new BookManager(new BookDal());
 
+        MySqlDataAdapter pageAdapter;
+        DataSet pageDS;
+        int scollVal;
         private void listDataToTable()
         {
             DataTable dt = new DataTable();
@@ -85,10 +88,6 @@ namespace uu_library_app
         {
             
         }
-
-      
-
-      
 
         private void dgvDahaOnceAlinanKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,6 +164,7 @@ namespace uu_library_app
         {
             (dgvOgrenci.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("number LIKE '{0}%' OR number LIKE '% {0}%'", wehTextBox1.Texts);
+
         }
     }
 }

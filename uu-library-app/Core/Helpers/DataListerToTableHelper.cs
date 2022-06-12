@@ -56,6 +56,7 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[6].Visible = false;
             dataGrid.Columns[7].Visible = false;
             dataGrid.Columns[8].Visible = false;
+            dataGrid.Columns[9].Visible = false;
             dataGrid.ColumnHeadersVisible = false;
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);

@@ -61,7 +61,15 @@ namespace uu_library_app
             dataGridView2.Columns[2].HeaderText = "Yazar";
             dataGridView2.Columns[3].Visible = false;
             dataGridView2.Columns[4].Visible = false;
-            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.Columns[5].Visible = false;
+            dataGridView2.Columns[6].Visible = false;
+            dataGridView2.Columns[7].Visible = false;
+            dataGridView2.Columns[8].Visible = false;
+            dataGridView2.Columns[9].Visible = false;
+            dataGridView2.Columns[10].Visible = false;
+            dataGridView2.Columns[11].Visible = false;
+            dataGridView2.Columns[12].Visible = false;
+            dataGridView2.Columns[13].Visible = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         
 
@@ -209,8 +217,22 @@ namespace uu_library_app
 
         private void wehTextBox2__TextChanged(object sender, EventArgs e)
         {
-            (dataGridView2.DataSource as DataTable).DefaultView.RowFilter =
-           string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox2.Texts);
+
+            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            dataGridView2.DataSource = pageDS;
+
+            pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox2.Texts);
+            dataGridView2.DataSource = pageDS.Tables[0];
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].HeaderText = "Kitap";
+            dataGridView2.Columns[2].HeaderText = "Yazar";
+            dataGridView2.Columns[3].Visible = false;
+            dataGridView2.Columns[4].Visible = false;
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
         }
 
         private void cmbKisi_SelectedIndexChanged(object sender, EventArgs e)

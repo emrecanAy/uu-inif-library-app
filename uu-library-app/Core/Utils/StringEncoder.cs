@@ -9,10 +9,10 @@ namespace uu_library_app.Core.Utils
 {
     public static class StringEncoder
     {
-        static string hash = "c0demrec@n";
+        static string hash = "c0demrec@n"; //hash'i güncelle.
         public static string Encrypt(string text)
         {
-            byte[] data = UTF8Encoding.UTF8.GetBytes(text);//dinamik gelecek text.
+            byte[] data = UTF8Encoding.UTF8.GetBytes(text);
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
                 byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));

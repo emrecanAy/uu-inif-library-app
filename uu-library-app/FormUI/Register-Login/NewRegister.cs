@@ -95,7 +95,9 @@ namespace uu_library_app.FormUI.Register_Login
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            NewLogin newLogin = new NewLogin();
+            newLogin.Show();
         }
     }
 }
