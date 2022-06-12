@@ -1,5 +1,4 @@
-# uu-inif-library-app
-App that we'll use in Uludag University Faculty of Management library. 
+# INIF-Assemsoft
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -32,7 +31,7 @@ App that we'll use in Uludag University Faculty of Management library.
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://uludag.edu.tr/img/swglogolar/inegolIsletmeFak.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
