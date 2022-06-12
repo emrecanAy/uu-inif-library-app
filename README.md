@@ -30,7 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a>
     <img src="https://uludag.edu.tr/img/swglogolar/inegolIsletmeFak.svg" alt="Logo" width="80" height="80">
   </a>
 
