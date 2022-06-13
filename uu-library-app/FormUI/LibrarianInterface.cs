@@ -12,6 +12,7 @@ using uu_library_app.FormUI.Other_Operations;
 using uu_library_app.FormUI.Deposit;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.MailSettings;
+using uu_library_app.FormUI.Book;
 
 namespace uu_library_app.FormUI
 {
@@ -354,6 +355,16 @@ namespace uu_library_app.FormUI
             showSubMenu(panel4);
         }
 
+        private void btnOduncVerilenUye_Click(object sender, EventArgs e)
+        {
+            openChildForm(new WhoHasThatBook());
+            hideSubMenu();
+        }
+        private void btnTeslimGecikmis_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Expired_Books());
+            hideSubMenu();
+        }
         private void btnDosya_Leave(object sender, EventArgs e)
         {
             btnDosya.BackColor = Color.FromArgb(24, 30, 54);
@@ -383,5 +394,7 @@ namespace uu_library_app.FormUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }

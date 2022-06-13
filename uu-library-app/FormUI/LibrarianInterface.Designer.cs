@@ -47,6 +47,8 @@ namespace uu_library_app.FormUI
             this.btnYazar = new System.Windows.Forms.Button();
             this.btnDigerislemler = new System.Windows.Forms.Button();
             this.pnlDepositSubMenu = new System.Windows.Forms.Panel();
+            this.btnTeslimGecikmis = new System.Windows.Forms.Button();
+            this.btnOduncVerilenUye = new System.Windows.Forms.Button();
             this.btnTeslimSorgu = new System.Windows.Forms.Button();
             this.btnReceive = new System.Windows.Forms.Button();
             this.btnLending = new System.Windows.Forms.Button();
@@ -115,7 +117,7 @@ namespace uu_library_app.FormUI
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
             this.panel4.Controls.Add(this.btnVeriCikti);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 1010);
+            this.panel4.Location = new System.Drawing.Point(0, 1066);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(186, 28);
             this.panel4.TabIndex = 19;
@@ -146,7 +148,7 @@ namespace uu_library_app.FormUI
             this.btnDosya.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDosya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDosya.Image = ((System.Drawing.Image)(resources.GetObject("btnDosya.Image")));
-            this.btnDosya.Location = new System.Drawing.Point(0, 965);
+            this.btnDosya.Location = new System.Drawing.Point(0, 1021);
             this.btnDosya.Name = "btnDosya";
             this.btnDosya.Size = new System.Drawing.Size(186, 45);
             this.btnDosya.TabIndex = 18;
@@ -161,7 +163,7 @@ namespace uu_library_app.FormUI
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
             this.panel3.Controls.Add(this.btnMailSettings);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 937);
+            this.panel3.Location = new System.Drawing.Point(0, 993);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(186, 28);
             this.panel3.TabIndex = 17;
@@ -192,7 +194,7 @@ namespace uu_library_app.FormUI
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 892);
+            this.btnSettings.Location = new System.Drawing.Point(0, 948);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(186, 45);
@@ -214,7 +216,7 @@ namespace uu_library_app.FormUI
             this.pnlDigerSubMenu.Controls.Add(this.btnYayinevi);
             this.pnlDigerSubMenu.Controls.Add(this.btnYazar);
             this.pnlDigerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 696);
+            this.pnlDigerSubMenu.Location = new System.Drawing.Point(0, 752);
             this.pnlDigerSubMenu.Name = "pnlDigerSubMenu";
             this.pnlDigerSubMenu.Size = new System.Drawing.Size(186, 196);
             this.pnlDigerSubMenu.TabIndex = 15;
@@ -353,7 +355,7 @@ namespace uu_library_app.FormUI
             this.btnDigerislemler.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDigerislemler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDigerislemler.Image = ((System.Drawing.Image)(resources.GetObject("btnDigerislemler.Image")));
-            this.btnDigerislemler.Location = new System.Drawing.Point(0, 651);
+            this.btnDigerislemler.Location = new System.Drawing.Point(0, 707);
             this.btnDigerislemler.Name = "btnDigerislemler";
             this.btnDigerislemler.Size = new System.Drawing.Size(186, 45);
             this.btnDigerislemler.TabIndex = 14;
@@ -366,14 +368,52 @@ namespace uu_library_app.FormUI
             // pnlDepositSubMenu
             // 
             this.pnlDepositSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.pnlDepositSubMenu.Controls.Add(this.btnTeslimGecikmis);
+            this.pnlDepositSubMenu.Controls.Add(this.btnOduncVerilenUye);
             this.pnlDepositSubMenu.Controls.Add(this.btnTeslimSorgu);
             this.pnlDepositSubMenu.Controls.Add(this.btnReceive);
             this.pnlDepositSubMenu.Controls.Add(this.btnLending);
             this.pnlDepositSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDepositSubMenu.Location = new System.Drawing.Point(0, 565);
             this.pnlDepositSubMenu.Name = "pnlDepositSubMenu";
-            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 86);
+            this.pnlDepositSubMenu.Size = new System.Drawing.Size(186, 142);
             this.pnlDepositSubMenu.TabIndex = 13;
+            // 
+            // btnTeslimGecikmis
+            // 
+            this.btnTeslimGecikmis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeslimGecikmis.FlatAppearance.BorderSize = 0;
+            this.btnTeslimGecikmis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeslimGecikmis.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTeslimGecikmis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTeslimGecikmis.Image = ((System.Drawing.Image)(resources.GetObject("btnTeslimGecikmis.Image")));
+            this.btnTeslimGecikmis.Location = new System.Drawing.Point(0, 112);
+            this.btnTeslimGecikmis.Name = "btnTeslimGecikmis";
+            this.btnTeslimGecikmis.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTeslimGecikmis.Size = new System.Drawing.Size(186, 28);
+            this.btnTeslimGecikmis.TabIndex = 4;
+            this.btnTeslimGecikmis.Text = "Teslim Gecikmis Kita";
+            this.btnTeslimGecikmis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeslimGecikmis.UseVisualStyleBackColor = true;
+            this.btnTeslimGecikmis.Click += new System.EventHandler(this.btnTeslimGecikmis_Click);
+            // 
+            // btnOduncVerilenUye
+            // 
+            this.btnOduncVerilenUye.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOduncVerilenUye.FlatAppearance.BorderSize = 0;
+            this.btnOduncVerilenUye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOduncVerilenUye.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnOduncVerilenUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnOduncVerilenUye.Image = ((System.Drawing.Image)(resources.GetObject("btnOduncVerilenUye.Image")));
+            this.btnOduncVerilenUye.Location = new System.Drawing.Point(0, 84);
+            this.btnOduncVerilenUye.Name = "btnOduncVerilenUye";
+            this.btnOduncVerilenUye.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnOduncVerilenUye.Size = new System.Drawing.Size(186, 28);
+            this.btnOduncVerilenUye.TabIndex = 3;
+            this.btnOduncVerilenUye.Text = "Ödünç Verilen Üye";
+            this.btnOduncVerilenUye.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOduncVerilenUye.UseVisualStyleBackColor = true;
+            this.btnOduncVerilenUye.Click += new System.EventHandler(this.btnOduncVerilenUye_Click);
             // 
             // btnTeslimSorgu
             // 
@@ -854,5 +894,7 @@ namespace uu_library_app.FormUI
         private System.Windows.Forms.Button btnDosya;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnOduncVerilenUye;
+        private System.Windows.Forms.Button btnTeslimGecikmis;
     }
 }
