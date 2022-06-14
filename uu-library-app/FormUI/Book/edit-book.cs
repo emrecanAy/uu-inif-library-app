@@ -194,21 +194,25 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString(); //ciltNo eklenecek
-            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            dateTime1.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+                txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                dateTime1.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cmbKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cmbKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            }
+                
         }
 
         private void txtCevirmen_Click(object sender, EventArgs e)

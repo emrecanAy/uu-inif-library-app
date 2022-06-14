@@ -116,23 +116,23 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtYayinlanmaTarihi.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
-            txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            txtKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
-
-            
-
+            if(e.RowIndex >= 0)
+            {
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtSayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtIsbn.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtYayinlanmaTarihi.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtCiltNo.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+                txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            }
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

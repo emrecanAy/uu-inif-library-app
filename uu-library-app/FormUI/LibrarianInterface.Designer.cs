@@ -392,7 +392,7 @@ namespace uu_library_app.FormUI
             this.btnTeslimGecikmis.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnTeslimGecikmis.Size = new System.Drawing.Size(186, 28);
             this.btnTeslimGecikmis.TabIndex = 4;
-            this.btnTeslimGecikmis.Text = "Teslim Gecikmis Kita";
+            this.btnTeslimGecikmis.Text = "Gecikmiş Kitaplar";
             this.btnTeslimGecikmis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeslimGecikmis.UseVisualStyleBackColor = true;
             this.btnTeslimGecikmis.Click += new System.EventHandler(this.btnTeslimGecikmis_Click);
@@ -811,7 +811,7 @@ namespace uu_library_app.FormUI
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1217, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;

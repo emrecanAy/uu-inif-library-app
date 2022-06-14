@@ -91,12 +91,16 @@ namespace uu_library_app
 
         private void dgvDahaOnceAlinanKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtKitapId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[9].Value.ToString();
-            txtAd.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtYayinevi.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txtIsbn.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtYazar.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[6].Value.ToString()+" "+dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtDepositBookId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[10].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                txtKitapId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtAd.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtYayinevi.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtIsbn.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtYazar.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[6].Value.ToString() + " " + dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtDepositBookId.Text = dgvDahaOnceAlinanKitaplar.Rows[e.RowIndex].Cells[10].Value.ToString();
+            }
+                
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

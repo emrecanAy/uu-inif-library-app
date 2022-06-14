@@ -177,14 +177,18 @@ namespace uu_library_app
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtKitapId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtKitapAd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtYayinevi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtYazar.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if(e.RowIndex >= 0)
+            {
+                txtKitapId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtKitapAd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtYayinevi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtYazar.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
 
-            DataListerToTableHelper.GetStudentsWhoHasThatBook(depositBookManager, settingsManager, conn, dgvUyeler, txtKitapId.Text);
-            dgvUyeler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvUyeler.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                DataListerToTableHelper.GetStudentsWhoHasThatBook(depositBookManager, settingsManager, conn, dgvUyeler, txtKitapId.Text);
+                dgvUyeler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dgvUyeler.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            }
+            
 
         }
 
@@ -196,18 +200,23 @@ namespace uu_library_app
 
         private void dgvDeneme_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(cmbKisi.SelectedValue.ToString() == "student")
+            if(e.RowIndex >= 0)
             {
-                txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
+                if (cmbKisi.SelectedValue.ToString() == "student")
+                {
+                    txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                }
+                else
+                {
+                    txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
+                }
             }
-            else
-            {
-                txtOgrenciId.Text = dgvDeneme.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtAdSoyad.Text = dgvDeneme.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtOkulNo.Text = dgvDeneme.Rows[e.RowIndex].Cells[2].Value.ToString();
-            }      
+           
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

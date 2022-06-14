@@ -160,8 +160,11 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if(e.RowIndex >= 0)
+            {
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }      
         }
 
         private void btnGuncelle_Click_1(object sender, EventArgs e)

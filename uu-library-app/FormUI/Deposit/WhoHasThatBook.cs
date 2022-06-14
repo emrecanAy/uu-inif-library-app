@@ -26,12 +26,25 @@ namespace uu_library_app.FormUI.Deposit
 
         MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         DepositBookManager depositBookManager = new DepositBookManager(new DepositBookDal());
+        BookManager bookManager = new BookManager(new BookDal());
         SettingsManager settingsManager = new SettingsManager(new SettingsDal());
 
+        MySqlDataAdapter pageAdapter;
+        DataSet pageDS;
+        int scollVal;
         private void WhoHasThatBook_Load(object sender, EventArgs e)
         {
-            DataListerHelper.listInnerJoinAllBooksDataToTable(dgvKitaplar, conn);
+            //DataListerHelper.listInnerJoinAllBooksDataToTable(dgvKitaplar, conn);
+            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            dgvKitaplar.DataSource = pageDS;
+            dgvKitaplar.DataMember = "book";
             dgvKitaplar.Columns[3].Width = 50;
+            dgvKitaplar.Columns[0].Visible = false;
+            dgvKitaplar.Columns[1].HeaderText = "Kitap";
+            dgvKitaplar.Columns[2].HeaderText = "Yazar";
+            dgvKitaplar.Columns[3].HeaderText = "Yayınevi";
             dgvKitaplar.Columns[8].Visible = false;
             dgvKitaplar.Columns[4].Visible = false;
             dgvKitaplar.Columns[5].Visible = false;
@@ -41,13 +54,15 @@ namespace uu_library_app.FormUI.Deposit
             dgvKitaplar.Columns[10].Visible = false;
             dgvKitaplar.Columns[11].Visible = false;
             dgvKitaplar.Columns[12].Visible = false;
+            dgvKitaplar.Columns[13].Visible = false;
             this.dgvKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvKitaplar.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
             dgvKitaplar.EnableHeadersVisualStyles = false;
             dgvKitaplar.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvKitaplar.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
-            dgvKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            //dgvKitaplar.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
+            dgvKitaplar.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
             dgvKitaplar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvKitaplar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvKitaplar.DefaultCellStyle.ForeColor = Color.White;
@@ -86,21 +101,44 @@ namespace uu_library_app.FormUI.Deposit
 
         private void dgvKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          
-            txtBookId.Text = dgvKitaplar.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dgvKitaplar.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtYayinevi.Text = dgvKitaplar.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtIsbn.Text = dgvKitaplar.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtYazar.Text = dgvKitaplar.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if(e.RowIndex >= 0)
+            {
+                txtBookId.Text = dgvKitaplar.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAd.Text = dgvKitaplar.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtYayinevi.Text = dgvKitaplar.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtIsbn.Text = dgvKitaplar.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtYazar.Text = dgvKitaplar.Rows[e.RowIndex].Cells[2].Value.ToString();
 
-            GetStudentsWhoHasThatBook();
-
+                GetStudentsWhoHasThatBook();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dgvUyeler.DataSource = null;
 
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal + 20;
+            if (scollVal > 50)
+            {
+                scollVal = bookManager.getAll().Count();
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            scollVal = scollVal - 20;
+            if (scollVal <= 0)
+            {
+                scollVal = 0;
+            }
+            pageDS.Clear();
+            pageAdapter.Fill(pageDS, scollVal, 20, "book");
         }
     }
 }

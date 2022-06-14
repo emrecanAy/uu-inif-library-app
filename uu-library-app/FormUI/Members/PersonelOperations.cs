@@ -71,12 +71,15 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtSicilNo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            if(e.RowIndex > 0)
+            {
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtSicilNo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
