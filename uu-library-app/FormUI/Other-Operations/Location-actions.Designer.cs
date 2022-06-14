@@ -351,7 +351,7 @@ namespace uu_library_app.FormUI.Other_Operations
             this.wehTextBox2.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.wehTextBox2.PasswordChar = false;
             this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox2.PlaceholderText = "Fakülte";
+            this.wehTextBox2.PlaceholderText = "Konum";
             this.wehTextBox2.Size = new System.Drawing.Size(376, 29);
             this.wehTextBox2.TabIndex = 284;
             this.wehTextBox2.Texts = "";

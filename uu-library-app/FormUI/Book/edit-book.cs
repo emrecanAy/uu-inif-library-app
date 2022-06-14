@@ -86,6 +86,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
 
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -154,7 +155,11 @@ namespace uu_library_app
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToUpdate.Id + " | " + bookToUpdate.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     bookManager.Update(bookToUpdate);
                     logger.Log(log);
-                    DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
+                    pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+                    pageDS = new DataSet();
+                    pageAdapter.Fill(pageDS, scollVal, 20, "book");
+                    dataGridView1.DataSource = pageDS;
+                    wehMessageBox.Show("Başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
 
                 }
@@ -188,6 +193,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
@@ -210,7 +216,7 @@ namespace uu_library_app
                 cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
             }
                 
         }

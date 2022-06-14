@@ -76,6 +76,7 @@ namespace uu_library_app.FormUI
                     manager.Add(studentToAdd);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
+                    wehMessageBox.Show("Başarıyla eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
                     DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
                 }
@@ -90,6 +91,49 @@ namespace uu_library_app.FormUI
                 wehMessageBox.Show("E-posta; 'ogr.uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }     
+        }
+
+        public void fillData()
+        {
+            conn.Open();
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+            MySqlCommand commandToGetAll = new MySqlCommand("SELECT * FROM Department WHERE deleted=false", conn);
+            MySqlCommand commandToFaculties = new MySqlCommand("SELECT * FROM Faculty WHERE deleted=false", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAll);
+            MySqlDataAdapter daFaculty = new MySqlDataAdapter(commandToFaculties);
+            DataSet ds = new DataSet();
+            DataSet dsFaculty = new DataSet();
+            da.Fill(ds);
+            daFaculty.Fill(dsFaculty);
+            commandToGetAll.ExecuteNonQuery();
+            commandToFaculties.ExecuteNonQuery();
+            conn.Close();
+
+            comboBox1.DataSource = ds.Tables[0];
+            comboBox1.DisplayMember = "name";
+            comboBox1.ValueMember = "id";
+
+            cmbFakulte.DataSource = dsFaculty.Tables[0];
+            cmbFakulte.DisplayMember = "name";
+            cmbFakulte.ValueMember = "id";
+
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+
+            ToolTip Aciklama = new ToolTip();
+            Aciklama.ToolTipTitle = "Kitap Adı Giriniz!";
+            Aciklama.ToolTipIcon = ToolTipIcon.Info;
+            Aciklama.IsBalloon = true;
+            Aciklama.SetToolTip(wehTextBox1, "    ");
         }
 
         private void Add_Student_Load_1(object sender, EventArgs e)
@@ -147,12 +191,14 @@ namespace uu_library_app.FormUI
         {
             FacultyQuick quick = new FacultyQuick(_admin);
             quick.Show();
+            fillData();
         }
 
         private void btnHızlıBolum_Click(object sender, EventArgs e)
         {
             DepartmentQuick quick = new DepartmentQuick(_admin);
             quick.Show();
+            fillData();
         }
 
         private void txtOkulNo_Click(object sender, EventArgs e)
@@ -200,6 +246,7 @@ namespace uu_library_app.FormUI
                     manager.Update(studentToUpdate);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
+                    wehMessageBox.Show("Başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
                     DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
 

@@ -141,16 +141,5 @@ namespace uu_library_app.FormUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            WhoHasThatBook book = new WhoHasThatBook();
-            book.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Expired_Books expired_Books = new Expired_Books();
-            expired_Books.Show();
-        }
     }
 }

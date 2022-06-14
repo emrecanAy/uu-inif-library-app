@@ -184,7 +184,8 @@ namespace uu_library_app.Core.Helpers
             da.Fill(dt);
             dataGrid.DataSource = dt;
             dataGrid.Columns[0].Visible = false;
-            dataGrid.Columns[2].HeaderText = "";
+            dataGrid.Columns[1].HeaderText = "Ad";
+            dataGrid.Columns[2].HeaderText = "Soyad";
             dataGrid.Columns[4].Visible = false;
             dataGrid.Columns[5].Visible = false;
             dataGrid.ColumnHeadersVisible = false;

@@ -16,16 +16,13 @@ namespace uu_library_app.Core.Utils
         static Settings settings = settingsManager.getSettings();
 
         public static void SendMail(string email, string verificationCode)
-        {
-            
-            string senderMailAddress = "inif.assemsoft@gmail.com"; //bunlar globals diye klasör açılıp oradan getirilecek. UI'dan set edilebilecek.
-
+        {         
             try
             {
                 Console.WriteLine("Method call at" + DateTime.Now);
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress(senderMailAddress);
+                mail.From = new MailAddress(settings.SenderEmail);
                 mail.To.Add(email);
                 mail.Subject = "INIF-Assemsoft Kütüphane Yönetim Sistemi Kayıt İşlemi";
                 mail.Body = "INIF-Assemsoft Kütüphane Yönetim Sistemi'ne Hoşgeldiniz!\nE-Posta doğrulama kodunuz: " + verificationCode;

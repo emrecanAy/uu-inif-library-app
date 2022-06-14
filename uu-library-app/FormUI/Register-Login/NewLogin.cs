@@ -64,12 +64,17 @@ namespace uu_library_app.FormUI.Register_Login
                     }
                     else
                     {
+                        throw new Exception("Eposta ve parola birbiriyle uyuşmuyor!");
                         wehMessageBox.Show("Eposta ve parola birbiriyle uyuşmuyor!",
                         "Uyarı!",
                         MessageBoxButtons.OK,
                          MessageBoxIcon.Warning);
                     }
                 }
+            }
+            catch(ArgumentNullException ex)
+            {
+                wehMessageBox.Show("E-posta ve parola birbiriyle uyuşmuyor!");
             }
             catch (Exception ex)
             {
@@ -95,22 +100,28 @@ namespace uu_library_app.FormUI.Register_Login
         string code = EmailVerificator.GenerateCode();
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(loginTextBox4.Text != "" && EmailVerificator.isValidPersonnelMail(loginTextBox4.Text))
-            {
-                wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
+            //if(loginTextBox4.Text != "" && EmailVerificator.isValidPersonnelMail(loginTextBox4.Text))
+            //{
+            //    wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
+            //  "ONAY",
+            //  MessageBoxButtons.OK,
+            //  MessageBoxIcon.Warning);
+            //    adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
+            //    panelOnay.Visible = true;
+            //}
+            wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
               "ONAY",
               MessageBoxButtons.OK,
               MessageBoxIcon.Warning);
-                adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
-                panelOnay.Visible = true;
-            }
-            else
-            {
-                wehMessageBox.Show("E-posta; 'uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!",
-              "UYARI",
-              MessageBoxButtons.OK,
-              MessageBoxIcon.Warning);
-            }
+            adminManager.sendEmailVerificationCode(loginTextBox4.Text, code);
+            panelOnay.Visible = true;
+            //else
+            //{
+            //    wehMessageBox.Show("E-posta; 'uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!",
+            //  "UYARI",
+            //  MessageBoxButtons.OK,
+            //  MessageBoxIcon.Warning);
+            //}
            
         }
 

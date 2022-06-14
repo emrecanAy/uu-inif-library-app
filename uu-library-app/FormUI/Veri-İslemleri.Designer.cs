@@ -31,15 +31,22 @@ namespace uu_library_app.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veri_İslemleri));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDeneme = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
             this.cmbVeriOgr = new System.Windows.Forms.ComboBox();
+            this.btnXMLOgr = new button.Toolbox.RadiusButton();
+            this.btnJSONOgr = new button.Toolbox.RadiusButton();
+            this.btnCSVOgr = new button.Toolbox.RadiusButton();
+            this.btnExcelOgr = new button.Toolbox.RadiusButton();
+            this.btnPDFOgr = new button.Toolbox.RadiusButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,30 +56,23 @@ namespace uu_library_app.FormUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLog = new System.Windows.Forms.DataGridView();
             this.cmbVeri = new System.Windows.Forms.ComboBox();
-            this.txtOgrenciId = new System.Windows.Forms.TextBox();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
-            this.dgvLogOgr = new System.Windows.Forms.DataGridView();
-            this.btnXMLOgr = new button.Toolbox.RadiusButton();
-            this.btnJSONOgr = new button.Toolbox.RadiusButton();
-            this.btnCSVOgr = new button.Toolbox.RadiusButton();
-            this.btnExcelOgr = new button.Toolbox.RadiusButton();
-            this.btnPDFOgr = new button.Toolbox.RadiusButton();
-            this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.btnXML = new button.Toolbox.RadiusButton();
             this.btnJSON = new button.Toolbox.RadiusButton();
             this.btnCSV = new button.Toolbox.RadiusButton();
             this.btnExcel = new button.Toolbox.RadiusButton();
             this.btnPDF = new button.Toolbox.RadiusButton();
+            this.txtOgrenciId = new System.Windows.Forms.TextBox();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.txtOgrenciAdSoyad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeneme)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -143,6 +143,28 @@ namespace uu_library_app.FormUI
             this.panel6.Size = new System.Drawing.Size(575, 84);
             this.panel6.TabIndex = 270;
             // 
+            // wehTextBox1
+            // 
+            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
+            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.wehTextBox1.BorderRadius = 5;
+            this.wehTextBox1.BorderSize = 1;
+            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
+            this.wehTextBox1.Location = new System.Drawing.Point(40, 8);
+            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.wehTextBox1.Multiline = false;
+            this.wehTextBox1.Name = "wehTextBox1";
+            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.wehTextBox1.PasswordChar = false;
+            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.wehTextBox1.PlaceholderText = "Öğrenci Numarasını Giriniz!";
+            this.wehTextBox1.Size = new System.Drawing.Size(529, 29);
+            this.wehTextBox1.TabIndex = 236;
+            this.wehTextBox1.Texts = "";
+            this.wehTextBox1.UnderlinedStyle = false;
+            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -159,165 +181,8 @@ namespace uu_library_app.FormUI
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Location = new System.Drawing.Point(634, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(583, 775);
+            this.panel2.Size = new System.Drawing.Size(583, 271);
             this.panel2.TabIndex = 273;
-            // 
-            // cmbVeriOgr
-            // 
-            this.cmbVeriOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbVeriOgr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVeriOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbVeriOgr.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.cmbVeriOgr.ForeColor = System.Drawing.Color.White;
-            this.cmbVeriOgr.FormattingEnabled = true;
-            this.cmbVeriOgr.Location = new System.Drawing.Point(42, 138);
-            this.cmbVeriOgr.Name = "cmbVeriOgr";
-            this.cmbVeriOgr.Size = new System.Drawing.Size(496, 35);
-            this.cmbVeriOgr.TabIndex = 279;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.ForeColor = System.Drawing.Color.DimGray;
-            this.panel5.Location = new System.Drawing.Point(2, 269);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(583, 1);
-            this.panel5.TabIndex = 11;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.ForeColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(0, 269);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(583, 1);
-            this.panel4.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(76, 50);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(404, 1);
-            this.panel3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(96, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "İstenilen Veri Türünü Seçiniz :";
-            // 
-            // picboxBack
-            // 
-            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
-            this.picboxBack.Location = new System.Drawing.Point(12, 12);
-            this.picboxBack.Name = "picboxBack";
-            this.picboxBack.Size = new System.Drawing.Size(80, 80);
-            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxBack.TabIndex = 271;
-            this.picboxBack.TabStop = false;
-            // 
-            // lblBaslik
-            // 
-            this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lblBaslik.ForeColor = System.Drawing.Color.White;
-            this.lblBaslik.Location = new System.Drawing.Point(98, 32);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(234, 40);
-            this.lblBaslik.TabIndex = 270;
-            this.lblBaslik.Text = "Dosya İşlemleri ";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgvLog);
-            this.panel1.Controls.Add(this.cmbVeri);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnXML);
-            this.panel1.Controls.Add(this.btnJSON);
-            this.panel1.Controls.Add(this.btnCSV);
-            this.panel1.Controls.Add(this.btnExcel);
-            this.panel1.Controls.Add(this.btnPDF);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(33, 113);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(583, 775);
-            this.panel1.TabIndex = 272;
-            // 
-            // dgvLog
-            // 
-            this.dgvLog.AllowUserToResizeRows = false;
-            this.dgvLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLog.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dgvLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvLog.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgvLog.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLog.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLog.GridColor = System.Drawing.Color.White;
-            this.dgvLog.Location = new System.Drawing.Point(3, 276);
-            this.dgvLog.Name = "dgvLog";
-            this.dgvLog.ReadOnly = true;
-            this.dgvLog.RowHeadersVisible = false;
-            this.dgvLog.RowTemplate.Height = 30;
-            this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLog.Size = new System.Drawing.Size(575, 494);
-            this.dgvLog.TabIndex = 274;
-            // 
-            // cmbVeri
-            // 
-            this.cmbVeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbVeri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbVeri.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.cmbVeri.ForeColor = System.Drawing.Color.White;
-            this.cmbVeri.FormattingEnabled = true;
-            this.cmbVeri.Location = new System.Drawing.Point(36, 84);
-            this.cmbVeri.Name = "cmbVeri";
-            this.cmbVeri.Size = new System.Drawing.Size(496, 35);
-            this.cmbVeri.TabIndex = 280;
-            // 
-            // txtOgrenciId
-            // 
-            this.txtOgrenciId.Location = new System.Drawing.Point(672, 32);
-            this.txtOgrenciId.Name = "txtOgrenciId";
-            this.txtOgrenciId.Size = new System.Drawing.Size(53, 20);
-            this.txtOgrenciId.TabIndex = 274;
-            this.txtOgrenciId.Visible = false;
-            // 
-            // dgvData
-            // 
-            this.dgvData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(752, 12);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(162, 44);
-            this.dgvData.TabIndex = 280;
-            this.dgvData.Visible = false;
-            // 
-            // txtOgrenciAdSoyad
-            // 
-            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(672, 58);
-            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
-            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(53, 20);
-            this.txtOgrenciAdSoyad.TabIndex = 281;
-            this.txtOgrenciAdSoyad.Visible = false;
             // 
             // dgvLogOgr
             // 
@@ -347,6 +212,19 @@ namespace uu_library_app.FormUI
             this.dgvLogOgr.Size = new System.Drawing.Size(566, 494);
             this.dgvLogOgr.TabIndex = 281;
             this.dgvLogOgr.Visible = false;
+            // 
+            // cmbVeriOgr
+            // 
+            this.cmbVeriOgr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbVeriOgr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVeriOgr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbVeriOgr.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbVeriOgr.ForeColor = System.Drawing.Color.White;
+            this.cmbVeriOgr.FormattingEnabled = true;
+            this.cmbVeriOgr.Location = new System.Drawing.Point(42, 138);
+            this.cmbVeriOgr.Name = "cmbVeriOgr";
+            this.cmbVeriOgr.Size = new System.Drawing.Size(496, 35);
+            this.cmbVeriOgr.TabIndex = 279;
             // 
             // btnXMLOgr
             // 
@@ -448,27 +326,122 @@ namespace uu_library_app.FormUI
             this.btnPDFOgr.UseVisualStyleBackColor = false;
             this.btnPDFOgr.Click += new System.EventHandler(this.btnPDFOgr_Click);
             // 
-            // wehTextBox1
+            // panel5
             // 
-            this.wehTextBox1.BorderColor = System.Drawing.Color.White;
-            this.wehTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.wehTextBox1.BorderRadius = 5;
-            this.wehTextBox1.BorderSize = 1;
-            this.wehTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wehTextBox1.ForeColor = System.Drawing.Color.White;
-            this.wehTextBox1.Location = new System.Drawing.Point(40, 8);
-            this.wehTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wehTextBox1.Multiline = false;
-            this.wehTextBox1.Name = "wehTextBox1";
-            this.wehTextBox1.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
-            this.wehTextBox1.PasswordChar = false;
-            this.wehTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.wehTextBox1.PlaceholderText = "Öğrenci Numarasını Giriniz!";
-            this.wehTextBox1.Size = new System.Drawing.Size(529, 29);
-            this.wehTextBox1.TabIndex = 236;
-            this.wehTextBox1.Texts = "";
-            this.wehTextBox1.UnderlinedStyle = false;
-            this.wehTextBox1._TextChanged += new System.EventHandler(this.wehTextBox1__TextChanged);
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.ForeColor = System.Drawing.Color.DimGray;
+            this.panel5.Location = new System.Drawing.Point(2, 269);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(583, 1);
+            this.panel5.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.ForeColor = System.Drawing.Color.DimGray;
+            this.panel4.Location = new System.Drawing.Point(0, 269);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(583, 1);
+            this.panel4.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(76, 50);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(404, 1);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(96, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(374, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "İstenilen Veri Türünü Seçiniz :";
+            // 
+            // picboxBack
+            // 
+            this.picboxBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.picboxBack.Image = ((System.Drawing.Image)(resources.GetObject("picboxBack.Image")));
+            this.picboxBack.Location = new System.Drawing.Point(12, 12);
+            this.picboxBack.Name = "picboxBack";
+            this.picboxBack.Size = new System.Drawing.Size(80, 80);
+            this.picboxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxBack.TabIndex = 271;
+            this.picboxBack.TabStop = false;
+            // 
+            // lblBaslik
+            // 
+            this.lblBaslik.AutoSize = true;
+            this.lblBaslik.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lblBaslik.ForeColor = System.Drawing.Color.White;
+            this.lblBaslik.Location = new System.Drawing.Point(98, 32);
+            this.lblBaslik.Name = "lblBaslik";
+            this.lblBaslik.Size = new System.Drawing.Size(234, 40);
+            this.lblBaslik.TabIndex = 270;
+            this.lblBaslik.Text = "Dosya İşlemleri ";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbVeri);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnXML);
+            this.panel1.Controls.Add(this.btnJSON);
+            this.panel1.Controls.Add(this.btnCSV);
+            this.panel1.Controls.Add(this.btnExcel);
+            this.panel1.Controls.Add(this.btnPDF);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(33, 113);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(583, 271);
+            this.panel1.TabIndex = 272;
+            // 
+            // dgvLog
+            // 
+            this.dgvLog.AllowUserToResizeRows = false;
+            this.dgvLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLog.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLog.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvLog.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLog.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLog.GridColor = System.Drawing.Color.White;
+            this.dgvLog.Location = new System.Drawing.Point(33, 394);
+            this.dgvLog.Name = "dgvLog";
+            this.dgvLog.ReadOnly = true;
+            this.dgvLog.RowHeadersVisible = false;
+            this.dgvLog.RowTemplate.Height = 30;
+            this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLog.Size = new System.Drawing.Size(1184, 494);
+            this.dgvLog.TabIndex = 274;
+            // 
+            // cmbVeri
+            // 
+            this.cmbVeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbVeri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbVeri.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbVeri.ForeColor = System.Drawing.Color.White;
+            this.cmbVeri.FormattingEnabled = true;
+            this.cmbVeri.Location = new System.Drawing.Point(36, 84);
+            this.cmbVeri.Name = "cmbVeri";
+            this.cmbVeri.Size = new System.Drawing.Size(496, 35);
+            this.cmbVeri.TabIndex = 280;
             // 
             // btnXML
             // 
@@ -570,12 +543,39 @@ namespace uu_library_app.FormUI
             this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
+            // txtOgrenciId
+            // 
+            this.txtOgrenciId.Location = new System.Drawing.Point(672, 32);
+            this.txtOgrenciId.Name = "txtOgrenciId";
+            this.txtOgrenciId.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciId.TabIndex = 274;
+            this.txtOgrenciId.Visible = false;
+            // 
+            // dgvData
+            // 
+            this.dgvData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Location = new System.Drawing.Point(752, 12);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(162, 44);
+            this.dgvData.TabIndex = 280;
+            this.dgvData.Visible = false;
+            // 
+            // txtOgrenciAdSoyad
+            // 
+            this.txtOgrenciAdSoyad.Location = new System.Drawing.Point(672, 58);
+            this.txtOgrenciAdSoyad.Name = "txtOgrenciAdSoyad";
+            this.txtOgrenciAdSoyad.Size = new System.Drawing.Size(53, 20);
+            this.txtOgrenciAdSoyad.TabIndex = 281;
+            this.txtOgrenciAdSoyad.Visible = false;
+            // 
             // Veri_İslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1255, 900);
+            this.Controls.Add(this.dgvLog);
             this.Controls.Add(this.txtOgrenciAdSoyad);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.txtOgrenciId);
@@ -593,12 +593,12 @@ namespace uu_library_app.FormUI
             this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogOgr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

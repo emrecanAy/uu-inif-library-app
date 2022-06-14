@@ -84,6 +84,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
@@ -99,18 +100,25 @@ namespace uu_library_app
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Book bookToDelete = new Book(txtId.Text, txtAd.Text, txtDil.Text, txtYazar.Text, txtKategori.Text, txtYayinevi.Text, txtKonum.Text, Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(txtYayinlanmaTarihi.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
-                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToDelete.Id + " | " + bookToDelete.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
-                    bookManager.Delete(bookToDelete);
-                    logger.Log(log);
-                    DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
-                    clearAllFields();
+              
+                    
+                        Book bookToDelete = new Book(txtId.Text, txtAd.Text, txtDil.Text, txtYazar.Text, txtKategori.Text, txtYayinevi.Text, txtKonum.Text, Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(txtYayinlanmaTarihi.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
+                        Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToDelete.Id + " | " + bookToDelete.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
+                        bookManager.Delete(bookToDelete);
+                        logger.Log(log);
+                        pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+                        pageDS = new DataSet();
+                        pageAdapter.Fill(pageDS, scollVal, 20, "book");
+                        dataGridView1.DataSource = pageDS;
+                        clearAllFields();
+                   
+
 
                 }         
             }
             catch (Exception)
             {
-                wehMessageBox.Show("Lütfen gerekli tüm alanları doldurun!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                wehMessageBox.Show("Bu kitap; ödünç verilen kitaplarda bulunan bir öğrenciye veya öğrencilere ait olduğu için öncelikle ödünç kitaplara giderek bu kitaba ait olan ödünç kitabı veya kitapları silmeniz veya teslim almanız gerekmektedir!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -131,7 +139,7 @@ namespace uu_library_app
                 txtStokAdet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
                 txtKonum.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
                 txtCevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
             }
         }
 
@@ -157,7 +165,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
-
+            dataGridView1.Columns[14].Visible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }

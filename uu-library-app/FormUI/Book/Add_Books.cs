@@ -119,6 +119,7 @@ namespace uu_library_app
             cmbKonum.Text = "";
             cmbYayinevi.Text = "";
             cmbYazar.Text = "";
+            txtDemirbasNo.Text = "";
             cmbDil.ResetText();
         }
         private void Add_Books_Load(object sender, EventArgs e)
@@ -159,6 +160,7 @@ namespace uu_library_app
                 dataGridView1.Columns[11].Visible = false;
                 dataGridView1.Columns[12].Visible = false;
                 dataGridView1.Columns[13].Visible = false;
+                dataGridView1.Columns[14].Visible = false;
 
                 dataGridView1.RowHeadersVisible = false;
                 dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -252,25 +254,34 @@ namespace uu_library_app
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            string createGUID = System.Guid.NewGuid().ToString();
-            try
+            if(txtAd.Text != "" && txtIsbn.Text != "" && txtSayfaSayisi.Text != "" && txtStokAdet.Text != "" && txtDemirbasNo.Text != "" && txtCiltNo.Text != "")
             {
-                Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
-                bookManager.Add(bookToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] "+_admin.FirstName+" "+_admin.LastName+" tarafından eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                wehMessageBox.Show("Kitap Başarıyla Eklendi!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataListerToTableHelper.listInnerJoinSomeBookDataToTable(dataGridView1, conn);
-                clearAllFields();
+                string createGUID = System.Guid.NewGuid().ToString();
+                try
+                {
+                    Book bookToAdd = new Book(createGUID, txtAd.Text, cmbDil.SelectedValue.ToString(), cmbYazar.SelectedValue.ToString(), cmbKategori.SelectedValue.ToString(), cmbYayinevi.SelectedValue.ToString(), cmbKonum.SelectedValue.ToString(), Convert.ToInt32(txtSayfaSayisi.Text), txtIsbn.Text, Convert.ToDateTime(dateTime1.Text), Convert.ToInt32(txtCiltNo.Text), Convert.ToInt32(txtStokAdet.Text), txtCevirmen.Text, txtDemirbasNo.Text);
+                    bookManager.Add(bookToAdd);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + bookToAdd.Id + " | " + bookToAdd.BookName + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    wehMessageBox.Show("Kitap başarıyla eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+                    pageDS = new DataSet();
+                    pageAdapter.Fill(pageDS, scollVal, 20, "book");
+                    dataGridView1.DataSource = pageDS;
+                    clearAllFields();
+                }
+                catch (Exception)
+                {
+                    wehMessageBox.Show("İnternet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.", "Bağlantı Hatası!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            catch(NotNullException ex)
+            else
             {
-                wehMessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                wehMessageBox.Show("Gerekli alanları doldurun...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            catch (Exception)
-            {
-                wehMessageBox.Show("İnternet bağlantınızı kontrol ederek tekrar deneyiniz. Sorunun devam etmesi durumunda bir yetkiliyle iletişime geçiniz.", "Bağlantı Hatası!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
         }
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
@@ -296,6 +307,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }

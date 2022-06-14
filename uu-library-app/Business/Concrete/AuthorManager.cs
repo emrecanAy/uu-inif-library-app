@@ -59,10 +59,10 @@ namespace uu_library_app.Business.Concrete
             
         }
 
-        public bool checkIfExistInBooks(string categoryId)
+        public bool checkIfExistInBooks(string authorId)
         {
             BookManager bookManager = new BookManager(new BookDal());
-            if (bookManager.getByCategoryId(categoryId).Id != null)
+            if (bookManager.getByAuthorId(authorId).Id != null)
             {
                 return true;
             }

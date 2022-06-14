@@ -53,7 +53,7 @@ namespace uu_library_app
 
             pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
             pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            pageAdapter.Fill(pageDS, scollVal, 40, "book");
             dataGridView2.DataSource = pageDS;
             dataGridView2.DataMember = "book";
             dataGridView2.Columns[0].Visible = false;
@@ -70,6 +70,7 @@ namespace uu_library_app
             dataGridView2.Columns[11].Visible = false;
             dataGridView2.Columns[12].Visible = false;
             dataGridView2.Columns[13].Visible = false;
+            dataGridView2.Columns[14].Visible = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         
 
@@ -103,7 +104,7 @@ namespace uu_library_app
                 scollVal = bookManager.getAll().Count();
             }
             pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            pageAdapter.Fill(pageDS, scollVal, 40, "book");
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace uu_library_app
                 scollVal = 0;
             }
             pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            pageAdapter.Fill(pageDS, scollVal, 40, "book");
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -239,7 +240,16 @@ namespace uu_library_app
             dataGridView2.Columns[2].HeaderText = "Yazar";
             dataGridView2.Columns[3].Visible = false;
             dataGridView2.Columns[4].Visible = false;
-            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.Columns[5].Visible = false;
+            dataGridView2.Columns[6].Visible = false;
+            dataGridView2.Columns[7].Visible = false;
+            dataGridView2.Columns[8].Visible = false;
+            dataGridView2.Columns[9].Visible = false;
+            dataGridView2.Columns[10].Visible = false;
+            dataGridView2.Columns[11].Visible = false;
+            dataGridView2.Columns[12].Visible = false;
+            dataGridView2.Columns[13].Visible = false;
+            dataGridView2.Columns[14].Visible = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 
         }

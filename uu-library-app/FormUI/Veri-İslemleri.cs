@@ -45,6 +45,7 @@ namespace uu_library_app.FormUI
             dgvDeneme.Columns[7].Visible = false;
             dgvDeneme.Columns[8].Visible = false;
             dgvDeneme.Columns[3].Visible = false;
+            dgvDeneme.Columns[9].Visible = false;
             dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
             dgvDeneme.ScrollBars = ScrollBars.None;
             #endregion
@@ -93,7 +94,7 @@ namespace uu_library_app.FormUI
             cmbVeriOgr.ValueMember = "Key";
 
             DataTable dtFileLog = new DataTable();
-            MySqlDataAdapter daFileLog = new MySqlDataAdapter("Select * From FileLog", conn);
+            MySqlDataAdapter daFileLog = new MySqlDataAdapter("Select * From FileLog LIMIT 20", conn);
             daFileLog.Fill(dtFileLog);
             dgvLog.DataSource = dtFileLog;
             dgvLog.ColumnHeadersVisible = false;

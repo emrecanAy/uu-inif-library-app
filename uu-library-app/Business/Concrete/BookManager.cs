@@ -34,7 +34,7 @@ namespace uu_library_app.Business.Concrete
 
         public void Update(Book book)
         {
-            if (book.AuthorId != null && book.BookName != null && book.CategoryId != null && book.IsbnNumber != null && book.LanguageId != null && book.PublisherId != null && book.StockCount != 0 && book.FixtureNo != null && book.PublishDate != null)
+            if (book!=null)
             {
                 _service.Update(book);
             }

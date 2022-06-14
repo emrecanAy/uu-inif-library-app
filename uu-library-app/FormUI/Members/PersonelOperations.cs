@@ -51,7 +51,6 @@ namespace uu_library_app
             daFaculty.Fill(dsFaculty);
             allFaculty.ExecuteNonQuery();
             conn.Close();
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
@@ -62,6 +61,7 @@ namespace uu_library_app
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersVisible = true;
 
             cmbFakulte.DataSource = dsFaculty.Tables[0];
             cmbFakulte.DisplayMember = "name";
@@ -72,7 +72,7 @@ namespace uu_library_app
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > 0)
+            if(e.RowIndex >= 0)
             {
                 txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -112,6 +112,7 @@ namespace uu_library_app
                     manager.Add(personnel);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
+                    wehMessageBox.Show("Başarıyla eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
                     DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
                 }
@@ -151,6 +152,8 @@ namespace uu_library_app
                     manager.Delete(personnel);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
+                    wehMessageBox.Show("Başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
                     clearAllFields();
                     DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
                 }
@@ -183,6 +186,7 @@ namespace uu_library_app
                     manager.Update(personnel);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
+                    wehMessageBox.Show("Başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
                     DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
 
