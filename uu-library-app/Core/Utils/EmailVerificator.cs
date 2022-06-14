@@ -28,5 +28,24 @@ namespace uu_library_app.Core.Utils
 
 
         }
+
+        public static bool isValidSchoolMail(string email)
+        {
+            string ending = email.Substring(email.IndexOf("@") + 1);
+            if (ending != "ogr.uludag.edu.tr")
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool isValidPersonnelMail(string email)
+        {
+            string ending = email.Substring(email.IndexOf("@") + 1);
+            if (ending != "uludag.edu.tr")
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

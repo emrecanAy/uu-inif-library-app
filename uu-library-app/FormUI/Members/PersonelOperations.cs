@@ -12,6 +12,7 @@ using MySql;
 using MySql.Data.MySqlClient;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
+using uu_library_app.Core.Utils;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 
@@ -103,20 +104,30 @@ namespace uu_library_app
                 return;
             }
 
-            try
+            if (EmailVerificator.isValidPersonnelMail(txtEmail.Text))
             {
-                Personnel personnel = new Personnel(createGUID, cmbFakulte.SelectedValue.ToString(), txtSicilNo.Text, txtAd.Text, txtSoyad.Text, txtEmail.Text);
-                manager.Add(personnel);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                clearAllFields();
-                DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
+                try
+                {
+                    Personnel personnel = new Personnel(createGUID, cmbFakulte.SelectedValue.ToString(), txtSicilNo.Text, txtAd.Text, txtSoyad.Text, txtEmail.Text);
+                    manager.Add(personnel);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + personnel.Id + " | " + personnel.Email + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllPersonnelsNotConcatDataToTable(dataGridView1, conn);
+                }
+                catch (Exception)
+                {
+                    wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    throw;
+                }
             }
-            catch (Exception)
+            else
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                throw;
+                wehMessageBox.Show("E-posta; 'uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+           
         }
 
         private void btnSil_Click(object sender, EventArgs e)

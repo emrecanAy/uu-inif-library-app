@@ -22,11 +22,17 @@ namespace uu_library_app.Business.Concrete
 
         public void Add(Student student)
         {
-            if (student.FirstName != null || student.LastName != null || student.Email != null || student.Number != null || student.Card != null || student.Id != null)
+            if (isValidSchoolMail(student.Email))
             {
-                _service.Add(student);
+                if (student.FirstName != null || student.LastName != null || student.Email != null || student.Number != null || student.Card != null || student.Id != null)
+                {
+                    _service.Add(student);
+                }
             }
-
+            else
+            {
+                throw new Exception("E-posta; 'ogr.uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!");
+            }
         }
 
         public void Delete(Student student)
@@ -107,7 +113,7 @@ namespace uu_library_app.Business.Concrete
                 return false;
         }
 
-        public bool isValidSchoolMail(string email) //Utils'e koy.
+        public bool isValidSchoolMail(string email)
         {
             string ending = email.Substring(email.IndexOf("@") + 1);
             if (ending != "ogr.uludag.edu.tr")

@@ -95,7 +95,7 @@ namespace uu_library_app.FormUI.Register_Login
         string code = EmailVerificator.GenerateCode();
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(loginTextBox4.Text != "")
+            if(loginTextBox4.Text != "" && EmailVerificator.isValidPersonnelMail(loginTextBox4.Text))
             {
                 wehMessageBox.Show("E-Posta adresinize gelen onaylama e-postasını kontrol ederek onay kodunu giriniz...",
               "ONAY",
@@ -106,7 +106,7 @@ namespace uu_library_app.FormUI.Register_Login
             }
             else
             {
-                wehMessageBox.Show("Lütfen geçerli bir e-posta adresi girin...",
+                wehMessageBox.Show("E-posta; 'uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!",
               "UYARI",
               MessageBoxButtons.OK,
               MessageBoxIcon.Warning);

@@ -61,19 +61,26 @@ namespace uu_library_app.FormUI.Register_Login
                 wehMessageBox.Show("Tüm alanları doldurun!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            adminManager.sendEmailVerificationCode(txtEmail.Text, code);
-            panelOnay.Visible = true;
-            button2.Enabled = false;
-            txtAd.Enabled = false;
-            txtSoyad.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSifre.Enabled = false;
-            txtSifreTekrar.Enabled = false;
+            if (EmailVerificator.isValidPersonnelMail(txtEmail.Text))
+            {
+                adminManager.sendEmailVerificationCode(txtEmail.Text, code);
+                panelOnay.Visible = true;
+                button2.Enabled = false;
+                txtAd.Enabled = false;
+                txtSoyad.Enabled = false;
+                txtEmail.Enabled = false;
+                txtSifre.Enabled = false;
+                txtSifreTekrar.Enabled = false;
+            }
+            else{
+                wehMessageBox.Show("E-posta; 'uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
         }
 
         private void btnOnayKodu_Click(object sender, EventArgs e)
         {
-            
             if (txtOnayKodu.Text == code)
             {
                 adminManager.Add(admin, txtOnayKodu.Text);

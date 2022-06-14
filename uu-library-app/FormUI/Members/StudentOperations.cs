@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using uu_library_app.Business.Abstract;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
+using uu_library_app.Core.Utils;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.MailSettings;
@@ -67,22 +68,28 @@ namespace uu_library_app.FormUI
                 wehMessageBox.Show("Lütfen geçerli değerler giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
-
-            try
+            if (EmailVerificator.isValidSchoolMail(txtEmail.Text))
             {
-                Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
-                manager.Add(studentToAdd);
-                Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
-                logger.Log(log);
-                clearAllFields();
-                DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                try
+                {
+                    Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    manager.Add(studentToAdd);
+                    Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
+                    logger.Log(log);
+                    clearAllFields();
+                    DataListerToTableHelper.listInnerJoinAllStudentsNotConcatDataToTable(dataGridView1, conn);
+                }
+                catch (Exception)
+                {
+                    wehMessageBox.Show("Bilinmeyen bir hata oluştu!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    throw;
+                }
             }
-            catch (Exception)
+            else
             {
-                wehMessageBox.Show("Bir hata oluştu. Tekrar deneyiniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                throw;
-            }
-            
+                wehMessageBox.Show("E-posta; 'ogr.uludag.edu.tr' uzantısına sahip geçerli bir e-posta adresi olmalıdır!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }     
         }
 
         private void Add_Student_Load_1(object sender, EventArgs e)
