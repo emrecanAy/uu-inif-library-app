@@ -19,6 +19,8 @@ using uu_library_app.DataAccess.Concrete;
 using uu_library_app.DataAccess.Concrete.EntityFramework;
 using uu_library_app.Entity.Concrete;
 using Color = System.Drawing.Color;
+using Image = iTextSharp.text.Image;
+using Paragraph = iTextSharp.text.Paragraph;
 
 namespace uu_library_app
 {
@@ -33,6 +35,7 @@ namespace uu_library_app
         StudentManager studentManager = new StudentManager(new StudentDal());
         DepartmentManager departmentManager = new DepartmentManager(new DepartmentDal());
         FacultyManager facultyManager = new FacultyManager(new FacultyDal());
+        Student student;
         private void Student_Affairs_Load(object sender, EventArgs e)
         {
             /*
@@ -128,7 +131,7 @@ namespace uu_library_app
 
             if (dialogResult == DialogResult.Yes)
             {
-                Student student = studentManager.findByNumber(txtOgrenciId.Text);
+                student = studentManager.findByNumber(txtOgrNo.Text);
                 studentManager.Delete(student);
                 txtAd.Text = "";
                 txtBolum.Text = "";
@@ -145,63 +148,112 @@ namespace uu_library_app
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Student student = studentManager.findByNumber(txtOgrenciId.Text);
-            //string filePath = @"C:\Users\Emrecan\Desktop\test.PDF";
-            //string fileResult = @"Result.pdf";
-            //DocumentCore dc = DocumentCore.Load(filePath);
+            student = studentManager.findByNumber(txtOgrNo.Text);
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Pdf Dosyası|*.pdf";
+            save.OverwritePrompt = true;
+            save.CreatePrompt = true;
+            save.InitialDirectory = @"C:\Desktop";
+            save.Title = "Kaydet";
 
-            //// Find a position to insert text. Before this text: "> in this position".
-            //ContentRange cr = dc.Content.Find(">").FirstOrDefault();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                Document doc = new Document(PageSize.A4.Rotate());
+                try
+                {
+                    PdfWriter.GetInstance(doc, new FileStream(save.FileName, FileMode.Create));
+                    doc.Open();
+                    iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance("https://uludag.edu.tr/img/swglogolar/inegolIsletmeFak.svg");
+                    jpg.ScaleToFit(140f, 120f);
+                    jpg.SpacingBefore = 10f;
+                    jpg.SpacingAfter = 1f;
+                    jpg.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+                    doc.Add(jpg);
+                    doc.Add(new Paragraph("Uludağ Üniversitesi\nİnegöl İşletme Fakültesi"));
+                    doc.Add(new Paragraph(student.Number+" numaralı öğrencimiz "+student.FirstName+" "+student.LastName+" üzerinde kütüphanemize ait teslim edilmemiş kitap ve materyal yoktur."));
 
-            //// Insert new text.
-            //if (cr != null)
-            //    cr.Start.Insert(student.FirstName + " " + student.LastName);
-            //dc.Save(fileResult);
-            //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
-            //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileResult) { UseShellExecute = true });
+                    wehMessageBox.Show("Dosya başarıyla oluşturuldu...",
+                    "Başarılı",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+                catch (Exception)
+                {
 
-            string oldFile = @"C:\Users\Emrecan\Desktop\test.pdf";
-            string newFile = "newFile.pdf";
+                    throw;
+                }
 
-            // open the reader
-            PdfReader reader = new PdfReader(oldFile);
-            iTextSharp.text.Rectangle size = reader.GetPageSizeWithRotation(1);
-            Document document = new Document(size);
+       
 
-            // open the writer
-            FileStream fs = new FileStream(newFile, FileMode.Create, FileAccess.Write);
-            PdfWriter writer = PdfWriter.GetInstance(document, fs);
-            document.Open();
+                
+            }
 
-            // the pdf content
-            PdfContentByte cb = writer.DirectContent;
+            
 
-            // select the font properties
-            BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-            cb.SetColorFill(BaseColor.DARK_GRAY);
-            cb.SetFontAndSize(bf, 50);
 
-            // write the text in the pdf content
-            cb.BeginText();
-            string text = "Some random blablablabla sedkfjgsnıudfjkngmslıjdkfjgnsılkdfljgmnılsjdnfglıdsöfngıkdfgnıkdjfnghıkdfgmhdfögnhkdjfömgnhkdjföngh...";
-            // put the alignment and coordinates here
-            cb.ShowTextAligned(1, text, 300, 520, 0);
-            cb.EndText();
-            cb.BeginText();
-            text = "Other random blabla...";
-            // put the alignment and coordinates here
-            cb.ShowTextAligned(2, text, 100, 200, 0);
-            cb.EndText();
 
-            // create the new page and add it to the pdf
-            PdfImportedPage page = writer.GetImportedPage(reader, 1);
-            cb.AddTemplate(page, 0, 0);
 
-            // close the streams and voilá the file should be changed :)
-            document.Close();
-            fs.Close();
-            writer.Close();
-            reader.Close();
+
+
+
+
+            ////Student student = studentManager.findByNumber(txtOgrenciId.Text);
+            ////string filePath = @"C:\Users\Emrecan\Desktop\test.PDF";
+            ////string fileResult = @"Result.pdf";
+            ////DocumentCore dc = DocumentCore.Load(filePath);
+
+            ////// Find a position to insert text. Before this text: "> in this position".
+            ////ContentRange cr = dc.Content.Find(">").FirstOrDefault();
+
+            ////// Insert new text.
+            ////if (cr != null)
+            ////    cr.Start.Insert(student.FirstName + " " + student.LastName);
+            ////dc.Save(fileResult);
+            ////System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
+            ////System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileResult) { UseShellExecute = true });
+
+            //string oldFile = @"C:\Users\Emrecan\Desktop\test.pdf";
+            //string newFile = "newFile.pdf";
+
+            //// open the reader
+            //PdfReader reader = new PdfReader(oldFile);
+            //iTextSharp.text.Rectangle size = reader.GetPageSizeWithRotation(1);
+            //Document document = new Document(size);
+
+            //// open the writer
+            //FileStream fs = new FileStream(newFile, FileMode.Create, FileAccess.Write);
+            //PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            //document.Open();
+
+            //// the pdf content
+            //PdfContentByte cb = writer.DirectContent;
+
+            //// select the font properties
+            //BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            //cb.SetColorFill(BaseColor.DARK_GRAY);
+            //cb.SetFontAndSize(bf, 50);
+
+            //// write the text in the pdf content
+            //cb.BeginText();
+            //string text = "Some random blablablabla sedkfjgsnıudfjkngmslıjdkfjgnsılkdfljgmnılsjdnfglıdsöfngıkdfgnıkdjfnghıkdfgmhdfögnhkdjfömgnhkdjföngh...";
+            //// put the alignment and coordinates here
+            //cb.ShowTextAligned(1, text, 300, 520, 0);
+            //cb.EndText();
+            //cb.BeginText();
+            //text = "Other random blabla...";
+            //// put the alignment and coordinates here
+            //cb.ShowTextAligned(2, text, 100, 200, 0);
+            //cb.EndText();
+
+            //// create the new page and add it to the pdf
+            //PdfImportedPage page = writer.GetImportedPage(reader, 1);
+            //cb.AddTemplate(page, 0, 0);
+
+            //// close the streams and voilá the file should be changed :)
+            //document.Close();
+            //fs.Close();
+            //writer.Close();
+            //reader.Close();
         }
     }
 }
