@@ -68,6 +68,18 @@ namespace uu_library_app.FormUI.Deposit
             dgvKitaplar.DefaultCellStyle.ForeColor = Color.White;
 
 
+            this.dgvUyeler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUyeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUyeler.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvUyeler.EnableHeadersVisualStyles = false;
+            dgvUyeler.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvUyeler.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvUyeler.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+            dgvUyeler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvUyeler.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvUyeler.DefaultCellStyle.ForeColor = Color.White;
+
+
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)

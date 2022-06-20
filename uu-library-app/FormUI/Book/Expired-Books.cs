@@ -31,6 +31,15 @@ namespace uu_library_app.FormUI.Book
             cmbAranacakAlan.DataSource = new BindingSource(comboSource, null);
             cmbAranacakAlan.DisplayMember = "Value";
             cmbAranacakAlan.ValueMember = "Key";
+            this.dgvGecikmis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGecikmis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGecikmis.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
+            dgvGecikmis.EnableHeadersVisualStyles = false;
+            dgvGecikmis.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvGecikmis.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
+            dgvGecikmis.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold);
+            dgvGecikmis.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvGecikmis.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
