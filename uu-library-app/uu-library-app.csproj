@@ -522,6 +522,9 @@
     <EmbeddedResource Include="FormUI\Gosterge-Paneli.resx">
       <DependentUpon>Gosterge-Paneli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Ogrenci-Islemleri.resx">
+      <DependentUpon>Ogrenci-Islemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\Other-Operations\Department-Operations.resx">
       <DependentUpon>Department-Operations.cs</DependentUpon>
     </EmbeddedResource>
