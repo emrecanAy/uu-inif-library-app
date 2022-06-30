@@ -182,7 +182,7 @@ namespace uu_library_app.FormUI.Register_Login
         {
             string crew = "Emrecan Ay @Team Lead (Fullstack Developer) ayemrecan.info@gmail.com \nŞenol Şen @UI Lead (UI Developer) \nMelike Yıldız @Contributor \nŞaban Dönmez @Contributor \nUmut Kozan @Contributor \nAriq Naufal @Contributor";
             DialogResult dialogResult = wehMessageBox.Show(crew,
-                "AssemSoft!",
+                "KETEBE",
                   MessageBoxButtons.OK,
                   MessageBoxIcon.Asterisk);
         }

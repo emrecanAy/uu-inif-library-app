@@ -44,10 +44,14 @@ namespace uu_library_app.FormUI.Deposit
             dgvDeneme.Columns[8].Visible = false;
             dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
             dgvDeneme.ScrollBars = ScrollBars.None;
-
-
-
             dgvDeneme.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            Dictionary<string, string> comboSourceDataTypes = new Dictionary<string, string>();
+            comboSourceDataTypes.Add("student", "Öğrenci");
+            comboSourceDataTypes.Add("personnel", "Personel");
+            cmbKisi.DataSource = new BindingSource(comboSourceDataTypes, null);
+            cmbKisi.DisplayMember = "Value";
+            cmbKisi.ValueMember = "Key";
 
 
         }
@@ -68,6 +72,21 @@ namespace uu_library_app.FormUI.Deposit
             DataListerHelper.listAllTakenBooksDataToTable(dgvAlinanKitaplar, conn, txtOgrenciId.Text);
             DataListerHelper.listUndepositBooksDataToTable(dgvTeslimEdilmeyenKitaplar, conn, txtOgrenciId.Text);
             DataListerHelper.listDepositBooksDataToTable(dgvTeslimEdilenKitaplar, conn, txtOgrenciId.Text);
+        }
+
+        private void cmbKisi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtOgrenciId.Text = "";
+            if (cmbKisi.SelectedValue.ToString() == "personnel")
+            {
+                DataListerToTableHelper.listBorrowingBookPersonnelDataToTable(dgvDeneme, conn);
+
+            }
+            if (cmbKisi.SelectedValue.ToString() == "student")
+            {
+                DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
+
+            }
         }
     }
 }

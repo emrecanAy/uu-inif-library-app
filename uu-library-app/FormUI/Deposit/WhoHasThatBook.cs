@@ -111,6 +111,28 @@ namespace uu_library_app.FormUI.Deposit
 
         }
 
+        public void GetPersonnelsWhoHasThatBook()
+        {
+            List<StudentDto> studentList = new List<StudentDto>();
+            studentList.Clear();
+
+            List<DepositBook> depositBooksList = depositBookManager.getAllByBookId(txtBookId.Text);
+            foreach (DepositBook depositBook in depositBooksList)
+            {
+                DateTime dt = depositBook.DepositDate.AddDays(settingsManager.getSettings().DepositDay);
+                studentList.Add(DataListerHelper.listInnerJoinStudentDataToTableByStudentId(conn, depositBook.StudentId, dt));
+            }
+
+            dgvUyeler.DataSource = studentList;
+            dgvUyeler.Columns[0].Visible = false;
+            dgvUyeler.Columns[1].HeaderText = "Öğrenci";
+            dgvUyeler.Columns[2].HeaderText = "Numara";
+            dgvUyeler.Columns[3].HeaderText = "Bölüm";
+            dgvUyeler.Columns[4].HeaderText = "G.Tarih";
+            depositBooksList.Clear();
+
+        }
+
         private void dgvKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex >= 0)
@@ -151,6 +173,11 @@ namespace uu_library_app.FormUI.Deposit
             }
             pageDS.Clear();
             pageAdapter.Fill(pageDS, scollVal, 20, "book");
+        }
+
+        private void cmbDil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
