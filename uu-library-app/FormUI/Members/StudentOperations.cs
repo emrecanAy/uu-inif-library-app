@@ -63,7 +63,7 @@ namespace uu_library_app.FormUI
         {
             string createGUID = System.Guid.NewGuid().ToString();
 
-            if (txtAd.Text == "" || txtSoyad.Text == "" || txtOkulNo.Text == "" || txtEmail.Text == "" || comboBox1.Text == "")
+            if (txtAd.Text == "" || txtSoyad.Text == "" || txtOkulNo.Text == "" || txtEmail.Text == "" || comboBox1.Text == "" || txtTelefon.Text == "")
             {
                 wehMessageBox.Show("Lütfen geçerli değerler giriniz!","Hata!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
@@ -72,7 +72,7 @@ namespace uu_library_app.FormUI
             {
                 try
                 {
-                    Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    Student studentToAdd = new Student(createGUID, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text, txtTelefon.Text);
                     manager.Add(studentToAdd);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToAdd.Id + " | " + studentToAdd.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından eklendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
@@ -219,9 +219,10 @@ namespace uu_library_app.FormUI
                 txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtOkulNo.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtTelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             }   
         }
 
@@ -242,7 +243,7 @@ namespace uu_library_app.FormUI
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    Student studentToUpdate = new Student(txtId.Text, comboBox1.SelectedValue.ToString(), cmbFakulte.SelectedValue.ToString(), txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text, txtTelefon.Text);
                     manager.Update(studentToUpdate);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + studentToUpdate.Id + " | " + studentToUpdate.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından güncellendi! -Tarih: " + DateTime.Now);
                     logger.Log(log);
@@ -276,7 +277,7 @@ namespace uu_library_app.FormUI
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Student student = new Student(txtId.Text, comboBox1.Text, cmbFakulte.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text);
+                    Student student = new Student(txtId.Text, comboBox1.Text, cmbFakulte.Text, txtAd.Text, txtSoyad.Text, txtOkulNo.Text, "CARD-ID", txtEmail.Text, txtTelefon.Text);
                     manager.Delete(student);
                     Logger log = new Logger(System.Guid.NewGuid().ToString(), _admin.id, "[ " + student.Id + " | " + student.Number + " ] " + _admin.FirstName + " " + _admin.LastName + " tarafından silindi! -Tarih: " + DateTime.Now);
                     logger.Log(log);

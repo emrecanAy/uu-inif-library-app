@@ -412,7 +412,7 @@ namespace uu_library_app.Core.Helpers
         {
             DataTable dt = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Student.eMail, Department.name, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, Student.firstName, Student.lastName, Student.number, Student.eMail, Student.phoneNumber, Department.name, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             da.Fill(dt);
             dataGrid.DataSource = dt;
@@ -421,8 +421,9 @@ namespace uu_library_app.Core.Helpers
             dataGrid.Columns[2].HeaderText = "Soyad";
             dataGrid.Columns[3].HeaderText = "Okul No";
             dataGrid.Columns[4].HeaderText = "Eposta";
-            dataGrid.Columns[5].HeaderText = "Bölüm";
-            dataGrid.Columns[6].HeaderText = "Fakülte";
+            dataGrid.Columns[5].HeaderText = "Telefon";
+            dataGrid.Columns[6].HeaderText = "Bölüm";
+            dataGrid.Columns[7].HeaderText = "Fakülte";
             dataGrid.RowHeadersVisible = false;
             dataGrid.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
 

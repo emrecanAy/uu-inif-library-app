@@ -58,9 +58,19 @@ namespace uu_library_app.FormUI
                 Student[] arrStudent = dashboardDataHelper.GetTopFiveReaders().ToArray();
                 Department[] arrDepartment = dashboardDataHelper.GetTopFiveReaderDepartments().ToArray();
 
-                if(arrStudent.Length <= 6)
+                if(arrStudent.Length < 5)
                 {
-                    
+                    this.lblUye1.Text = "...";
+                    lblUye2.Text = "...";
+                    lblUye3.Text = "...";
+                    lblUye4.Text = "...";
+                    lblUye5.Text = "...";
+
+                    lblUye1OkumaSayisi.Text = "...";
+                    lblUye2OkumaSayisi.Text = "...";
+                    lblUye3OkumaSayisi.Text = "...";
+                    lblUye4OkumaSayisi.Text = "...";
+                    lblUye5OkumaSayisi.Text = "...";
                 }
                 else
                 {
@@ -86,9 +96,19 @@ namespace uu_library_app.FormUI
 
                 }
 
-                if(arrDepartment.Length <= 6)
+                if(arrDepartment.Length < 5)
                 {
-                    
+                    lblBolum1.Text = "...";
+                    lblBolum2.Text = "...";
+                    lblBolum3.Text = "...";
+                    lblBolum4.Text = "...";
+                    lblBolum5.Text = "...";
+
+                    lblBolum1OkumaSayisi.Text = "...";
+                    lblBolum2OkumaSayisi.Text = "...";
+                    lblBolum3OkumaSayisi.Text = "...";
+                    lblBolum4OkumaSayisi.Text = "...";
+                    lblBolum5OkumaSayisi.Text = "...";
                 }
                 else
                 {
