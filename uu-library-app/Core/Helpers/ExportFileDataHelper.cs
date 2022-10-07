@@ -141,11 +141,12 @@ namespace uu_library_app.Core.Helpers
         public static List<DepositBookDto> getExpiredBookWithNames()
         {
             List<DepositBookDto> depositBookDtoList = new List<DepositBookDto>();
+            int depositDay = settingsManager.getSettings().DepositDay;
             foreach (DepositBook depositBook in getExpiredBooks())
             {
                 conn.Open();
                 TimeSpan ts = depositBook.DepositDate - DateTime.Now;
-                if (ts.Days <= settingsManager.getSettings().DepositDay)
+                if (ts.Days <= depositDay)
                 {
                     MySqlCommand command = new MySqlCommand("SELECT DepositBook.id, Student.number'OkulNo', CONCAT(Student.firstName,' ',Student.lastName) as Ogrenci, Book.bookName'Kitap', CONCAT(Author.firstName,' ',Author.lastName) as Yazar, DepositBook.createdAt FROM DepositBook INNER JOIN Student ON DepositBook.studentId = Student.id INNER JOIN Book ON DepositBook.bookId = Book.id INNER JOIN Author ON Book.authorId = Author.id WHERE DepositBook.id=@p1 AND DepositBook.status=0", conn);
                     command.Parameters.AddWithValue("@p1", depositBook.Id);

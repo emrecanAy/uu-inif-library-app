@@ -16,6 +16,8 @@ namespace uu_library_app.Entity.Concrete
         private string card;
         private string email;
         private string facultyId;
+        // TODO: Add phone number field to call the students.
+
         public Student() { }
         public Student(string id, string departmentId, string facultyId, string firstName, string lastName, string number, string card, string email)
         {
@@ -26,7 +28,7 @@ namespace uu_library_app.Entity.Concrete
             this.LastName = lastName;
             this.Number = number;
             this.Card = card;
-            this.Email = email;    
+            this.Email = email;
         }
 
         public string Id { get => id; set => id = value; }

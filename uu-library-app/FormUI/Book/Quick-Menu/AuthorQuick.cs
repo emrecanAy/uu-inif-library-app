@@ -40,11 +40,21 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
             string createGUID = System.Guid.NewGuid().ToString();
 
             if (txtAd.Text == "" || txtSoyad.Text == "" || txtAd.Text.Length < 2 || txtSoyad.Text.Length < 2)
             {
-                wehMessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz","Uyarı!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                wehMessageBox.Show("Lütfen geçerli ve en az 2 karakter içeren değerler giriniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -67,7 +77,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }

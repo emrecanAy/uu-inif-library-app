@@ -46,7 +46,6 @@ namespace uu_library_app.FormUI
                 //MailSenderJob job = new MailSenderJob();
                 //job.everyDayCheckAndSendMail();
 
-                int test = personnelManager.getAll().Count();
                 lblToplamUye.Text = (studentManager.getAll().Count() + personnelManager.getAll().Count()).ToString();
                 lblToplamYazar.Text = authorManager.getAll().Count().ToString();
                 lblToplamKategori.Text = categoryManager.getAll().Count().ToString();
@@ -59,41 +58,58 @@ namespace uu_library_app.FormUI
                 Student[] arrStudent = dashboardDataHelper.GetTopFiveReaders().ToArray();
                 Department[] arrDepartment = dashboardDataHelper.GetTopFiveReaderDepartments().ToArray();
 
-                Student s1 = arrStudent[0];
-                Student s2 = arrStudent[1];
-                Student s3 = arrStudent[2];
-                Student s4 = arrStudent[3];
-                Student s5 = arrStudent[4];
+                if(arrStudent.Length <= 6)
+                {
+                    
+                }
+                else
+                {
+                    Student s1 = arrStudent[0];
+                    Student s2 = arrStudent[1];
+                    Student s3 = arrStudent[2];
+                    Student s4 = arrStudent[3];
+                    Student s5 = arrStudent[4];
 
-                Department d1 = arrDepartment[0];
-                Department d2 = arrDepartment[1];
-                Department d3 = arrDepartment[2];
-                Department d4 = arrDepartment[3];
-                Department d5 = arrDepartment[4];
+                   
 
-                this.lblUye1.Text = s1.FirstName;
-                lblUye2.Text = s2.FirstName;
-                lblUye3.Text = s3.FirstName;
-                lblUye4.Text = s4.FirstName;
-                lblUye5.Text = s5.FirstName;
+                    this.lblUye1.Text = s1.FirstName;
+                    lblUye2.Text = s2.FirstName;
+                    lblUye3.Text = s3.FirstName;
+                    lblUye4.Text = s4.FirstName;
+                    lblUye5.Text = s5.FirstName;
 
-                lblUye1OkumaSayisi.Text = s1.Number;
-                lblUye2OkumaSayisi.Text = s2.Number;
-                lblUye3OkumaSayisi.Text = s3.Number;
-                lblUye4OkumaSayisi.Text = s4.Number;
-                lblUye5OkumaSayisi.Text = s5.Number;
+                    lblUye1OkumaSayisi.Text = s1.Number;
+                    lblUye2OkumaSayisi.Text = s2.Number;
+                    lblUye3OkumaSayisi.Text = s3.Number;
+                    lblUye4OkumaSayisi.Text = s4.Number;
+                    lblUye5OkumaSayisi.Text = s5.Number;
 
-                lblBolum1.Text = d1.Name;
-                lblBolum2.Text = d2.Name;
-                lblBolum3.Text = d3.Name;
-                lblBolum4.Text = d4.Name;
-                lblBolum5.Text = d5.Name;
+                }
 
-                lblBolum1OkumaSayisi.Text = d1.Id.ToString();
-                lblBolum2OkumaSayisi.Text = d2.Id.ToString();
-                lblBolum3OkumaSayisi.Text = d3.Id.ToString();
-                lblBolum4OkumaSayisi.Text = d4.Id.ToString();
-                lblBolum5OkumaSayisi.Text = d5.Id.ToString();
+                if(arrDepartment.Length <= 6)
+                {
+                    
+                }
+                else
+                {
+                    Department d1 = arrDepartment[0];
+                    Department d2 = arrDepartment[1];
+                    Department d3 = arrDepartment[2];
+                    Department d4 = arrDepartment[3];
+                    Department d5 = arrDepartment[4];
+
+                    lblBolum1.Text = d1.Name;
+                    lblBolum2.Text = d2.Name;
+                    lblBolum3.Text = d3.Name;
+                    lblBolum4.Text = d4.Name;
+                    lblBolum5.Text = d5.Name;
+
+                    lblBolum1OkumaSayisi.Text = d1.Id.ToString();
+                    lblBolum2OkumaSayisi.Text = d2.Id.ToString();
+                    lblBolum3OkumaSayisi.Text = d3.Id.ToString();
+                    lblBolum4OkumaSayisi.Text = d4.Id.ToString();
+                    lblBolum5OkumaSayisi.Text = d5.Id.ToString();
+                }      
 
 
                 DataTable dt = new DataTable();

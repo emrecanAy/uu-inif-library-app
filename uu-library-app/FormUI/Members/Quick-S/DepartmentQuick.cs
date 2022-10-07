@@ -31,6 +31,7 @@ namespace uu_library_app.FormUI.MailSettings
         public DepartmentQuick(Admin admin)
         {
             InitializeComponent();
+            _admin = admin;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
         }

@@ -40,13 +40,23 @@ namespace uu_library_app.FormUI.MailSettings
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
             string createGUID = System.Guid.NewGuid().ToString();
             if (txtAd.Text == "" || txtAd.Text.Length < 3)
             {
                 wehMessageBox.Show("Lütfen en az üç harf içeren geçerli bir değer giriniz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
             try
             {
                 Category categoryToAdd = new Category(createGUID, txtAd.Text);
@@ -66,7 +76,7 @@ namespace uu_library_app.FormUI.MailSettings
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }

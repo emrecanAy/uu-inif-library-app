@@ -30,7 +30,6 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorQuick));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,22 +44,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pnlAd = new System.Windows.Forms.Panel();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.lblAd = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAd)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(2, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 329);
-            this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -79,10 +67,10 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.panel4.Controls.Add(this.pnlAd);
             this.panel4.Controls.Add(this.txtAd);
             this.panel4.Controls.Add(this.lblAd);
-            this.panel4.Location = new System.Drawing.Point(7, 8);
+            this.panel4.Location = new System.Drawing.Point(7, 6);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(248, 288);
-            this.panel4.TabIndex = 90;
+            this.panel4.TabIndex = 91;
             // 
             // pictureBox2
             // 
@@ -94,6 +82,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 90;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // label4
             // 
@@ -139,6 +128,7 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.btnEkle.TabIndex = 76;
             this.btnEkle.Text = "Ekle ";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // pictureBox1
             // 
@@ -228,12 +218,11 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(263, 300);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AuthorQuick";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthorQuick";
-            this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -245,7 +234,6 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;

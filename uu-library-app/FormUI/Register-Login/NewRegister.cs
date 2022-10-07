@@ -63,7 +63,8 @@ namespace uu_library_app.FormUI.Register_Login
             }
             if (EmailVerificator.isValidPersonnelMail(txtEmail.Text))
             {
-                adminManager.sendEmailVerificationCode(txtEmail.Text, code);
+                Console.WriteLine(code);
+                //adminManager.sendEmailVerificationCode(txtEmail.Text, code);
                 panelOnay.Visible = true;
                 button2.Enabled = false;
                 txtAd.Enabled = false;

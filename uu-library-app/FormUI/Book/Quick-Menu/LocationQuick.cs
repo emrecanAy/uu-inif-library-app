@@ -35,11 +35,25 @@ namespace uu_library_app.FormUI.Book.Quick_Menu
             _admin = admin;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
+            MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
+            DataSet dsCategories = new DataSet();
+            daCategories.Fill(dsCategories);
+
+            //Kategori
+            cmbKategori.DataSource = dsCategories.Tables[0];
+            cmbKategori.DisplayMember = "name";
+            cmbKategori.ValueMember = "id";
+            cmbKategori.Text = "";
+
         }
 
-        MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
+
+        static MySqlConnection conn = new MySqlConnection(DbConnection.connectionString);
         LocationManager manager = new LocationManager(new LocationDal());
         LoggerManager logger = new LoggerManager(new LoggerDal());
+        
+        
+
         private void btnEkle_Click(object sender, EventArgs e)
         {
             string createGUID = System.Guid.NewGuid().ToString();
