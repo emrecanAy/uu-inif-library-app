@@ -32,6 +32,7 @@ namespace uu_library_app
             comboSource.Add("language", "Dil");
             comboSource.Add("publisherName", "Yayınevi");
             comboSource.Add("isbnNumber", "ISBN");
+            comboSource.Add("fixtureNo", "Demirbaş");
             comboSource.Add("shelf", "Konum");
             comboSource.Add("interpreterName", "Çevirmen");
             cmbAranacakAlan.DataSource = new BindingSource(comboSource, null);
