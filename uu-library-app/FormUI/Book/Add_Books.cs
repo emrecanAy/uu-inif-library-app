@@ -151,7 +151,7 @@ namespace uu_library_app
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
-                dataGridView1.Columns[0].Visible = false;
+                //dataGridView1.Columns[0].Visible = false;
                 //dataGridView1.Columns[1].HeaderText = "Kitap";
                 //dataGridView1.Columns[2].HeaderText = "Yazar";
                 //dataGridView1.Columns[3].Visible = false;
@@ -165,7 +165,7 @@ namespace uu_library_app
                 //dataGridView1.Columns[11].Visible = false;
                 //dataGridView1.Columns[12].Visible = false;
                 //dataGridView1.Columns[13].Visible = false;
-                //dataGridView1.Columns[14].Visible = false;
+                ////dataGridView1.Columns[14].Visible = false;
 
                 dataGridView1.RowHeadersVisible = false;
                 dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
@@ -258,27 +258,7 @@ namespace uu_library_app
             dataGridView1.DataSource = dv.ToTable();
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal + 20;
-            if (scollVal > 50)
-            {
-                scollVal = bookManager.getAll().Count();
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal - 20;
-            if (scollVal <= 0)
-            {
-                scollVal = 0;
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-        }
+       
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {

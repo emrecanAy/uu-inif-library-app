@@ -30,7 +30,7 @@ namespace uu_library_app
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(edit_book));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -111,8 +111,6 @@ namespace uu_library_app
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -252,13 +250,13 @@ namespace uu_library_app
             // 
             this.txtDemirbasNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtDemirbasNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDemirbasNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtDemirbasNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtDemirbasNo.ForeColor = System.Drawing.Color.White;
             this.txtDemirbasNo.Location = new System.Drawing.Point(212, 637);
             this.txtDemirbasNo.Mask = "000000000000000000000000000000";
             this.txtDemirbasNo.Name = "txtDemirbasNo";
             this.txtDemirbasNo.PromptChar = ' ';
-            this.txtDemirbasNo.Size = new System.Drawing.Size(164, 24);
+            this.txtDemirbasNo.Size = new System.Drawing.Size(164, 22);
             this.txtDemirbasNo.TabIndex = 395;
             // 
             // pictureBox1
@@ -295,52 +293,52 @@ namespace uu_library_app
             // 
             this.txtCiltNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtCiltNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCiltNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtCiltNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtCiltNo.ForeColor = System.Drawing.Color.White;
             this.txtCiltNo.Location = new System.Drawing.Point(336, 543);
             this.txtCiltNo.Mask = "000000000000000000000000000000";
             this.txtCiltNo.Name = "txtCiltNo";
             this.txtCiltNo.PromptChar = ' ';
-            this.txtCiltNo.Size = new System.Drawing.Size(164, 24);
+            this.txtCiltNo.Size = new System.Drawing.Size(164, 22);
             this.txtCiltNo.TabIndex = 394;
             // 
             // txtSayfaSayisi
             // 
             this.txtSayfaSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtSayfaSayisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSayfaSayisi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtSayfaSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtSayfaSayisi.ForeColor = System.Drawing.Color.White;
             this.txtSayfaSayisi.Location = new System.Drawing.Point(336, 437);
             this.txtSayfaSayisi.Mask = "000000000000000000000000000000";
             this.txtSayfaSayisi.Name = "txtSayfaSayisi";
             this.txtSayfaSayisi.PromptChar = ' ';
-            this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 24);
+            this.txtSayfaSayisi.Size = new System.Drawing.Size(164, 22);
             this.txtSayfaSayisi.TabIndex = 392;
             // 
             // txtStokAdet
             // 
             this.txtStokAdet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtStokAdet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStokAdet.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtStokAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtStokAdet.ForeColor = System.Drawing.Color.White;
             this.txtStokAdet.Location = new System.Drawing.Point(78, 437);
             this.txtStokAdet.Mask = "000000000000000000000000000000";
             this.txtStokAdet.Name = "txtStokAdet";
             this.txtStokAdet.PromptChar = ' ';
-            this.txtStokAdet.Size = new System.Drawing.Size(164, 24);
+            this.txtStokAdet.Size = new System.Drawing.Size(164, 22);
             this.txtStokAdet.TabIndex = 391;
             // 
             // txtIsbn
             // 
             this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIsbn.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtIsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtIsbn.ForeColor = System.Drawing.Color.White;
             this.txtIsbn.Location = new System.Drawing.Point(78, 337);
             this.txtIsbn.Mask = "000000000000000000000000000000";
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.PromptChar = ' ';
-            this.txtIsbn.Size = new System.Drawing.Size(164, 24);
+            this.txtIsbn.Size = new System.Drawing.Size(164, 22);
             this.txtIsbn.TabIndex = 389;
             // 
             // panel27
@@ -447,12 +445,12 @@ namespace uu_library_app
             this.cmbYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbYazar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYazar.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbYazar.ForeColor = System.Drawing.Color.White;
             this.cmbYazar.FormattingEnabled = true;
             this.cmbYazar.Location = new System.Drawing.Point(79, 545);
             this.cmbYazar.Name = "cmbYazar";
-            this.cmbYazar.Size = new System.Drawing.Size(164, 34);
+            this.cmbYazar.Size = new System.Drawing.Size(164, 32);
             this.cmbYazar.TabIndex = 393;
             // 
             // cmbKonum
@@ -460,12 +458,12 @@ namespace uu_library_app
             this.cmbKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbKonum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKonum.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKonum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbKonum.ForeColor = System.Drawing.Color.White;
             this.cmbKonum.FormattingEnabled = true;
             this.cmbKonum.Location = new System.Drawing.Point(78, 236);
             this.cmbKonum.Name = "cmbKonum";
-            this.cmbKonum.Size = new System.Drawing.Size(164, 34);
+            this.cmbKonum.Size = new System.Drawing.Size(164, 32);
             this.cmbKonum.TabIndex = 387;
             // 
             // cmbYayinevi
@@ -473,12 +471,12 @@ namespace uu_library_app
             this.cmbYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbYayinevi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYayinevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYayinevi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbYayinevi.ForeColor = System.Drawing.Color.White;
             this.cmbYayinevi.FormattingEnabled = true;
             this.cmbYayinevi.Location = new System.Drawing.Point(336, 143);
             this.cmbYayinevi.Name = "cmbYayinevi";
-            this.cmbYayinevi.Size = new System.Drawing.Size(164, 34);
+            this.cmbYayinevi.Size = new System.Drawing.Size(164, 32);
             this.cmbYayinevi.TabIndex = 386;
             // 
             // cmbKategori
@@ -486,12 +484,12 @@ namespace uu_library_app
             this.cmbKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKategori.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbKategori.ForeColor = System.Drawing.Color.White;
             this.cmbKategori.FormattingEnabled = true;
             this.cmbKategori.Location = new System.Drawing.Point(78, 143);
             this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(164, 34);
+            this.cmbKategori.Size = new System.Drawing.Size(164, 32);
             this.cmbKategori.TabIndex = 385;
             // 
             // cmbDil
@@ -499,19 +497,19 @@ namespace uu_library_app
             this.cmbDil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDil.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbDil.ForeColor = System.Drawing.Color.White;
             this.cmbDil.FormattingEnabled = true;
             this.cmbDil.Location = new System.Drawing.Point(336, 48);
             this.cmbDil.Name = "cmbDil";
-            this.cmbDil.Size = new System.Drawing.Size(164, 34);
+            this.cmbDil.Size = new System.Drawing.Size(164, 32);
             this.cmbDil.TabIndex = 384;
             // 
             // dateTime1
             // 
             this.dateTime1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dateTime1.BorderSize = 0;
-            this.dateTime1.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.dateTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.dateTime1.Location = new System.Drawing.Point(336, 332);
             this.dateTime1.MinimumSize = new System.Drawing.Size(4, 35);
             this.dateTime1.Name = "dateTime1";
@@ -542,11 +540,11 @@ namespace uu_library_app
             // 
             this.txtCevirmen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtCevirmen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCevirmen.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtCevirmen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtCevirmen.ForeColor = System.Drawing.Color.White;
             this.txtCevirmen.Location = new System.Drawing.Point(341, 239);
             this.txtCevirmen.Name = "txtCevirmen";
-            this.txtCevirmen.Size = new System.Drawing.Size(164, 24);
+            this.txtCevirmen.Size = new System.Drawing.Size(164, 22);
             this.txtCevirmen.TabIndex = 388;
             // 
             // label11
@@ -882,11 +880,11 @@ namespace uu_library_app
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(78, 51);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(164, 24);
+            this.txtAd.Size = new System.Drawing.Size(164, 22);
             this.txtAd.TabIndex = 383;
             // 
             // lblSoyad
@@ -945,8 +943,6 @@ namespace uu_library_app
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnNext);
-            this.panel4.Controls.Add(this.btnPrevious);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Location = new System.Drawing.Point(569, 98);
             this.panel4.Name = "panel4";
@@ -963,14 +959,14 @@ namespace uu_library_app
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -1033,30 +1029,6 @@ namespace uu_library_app
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 27);
             this.textBox1.TabIndex = 309;
-            // 
-            // btnNext
-            // 
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNext.Location = new System.Drawing.Point(343, 724);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 282;
-            this.btnNext.Text = ">";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrevious.Location = new System.Drawing.Point(262, 724);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 281;
-            this.btnPrevious.Text = "<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // edit_book
             // 
@@ -1184,7 +1156,5 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblAd;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
     }
 }

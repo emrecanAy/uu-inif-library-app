@@ -67,11 +67,12 @@ namespace uu_library_app
 
             #region crud1
             conn.Open();
-            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-            pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-            dataGridView1.DataSource = pageDS;
-            dataGridView1.DataMember = "book";
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Kitap";
             dataGridView1.Columns[2].HeaderText = "Yazar";
@@ -86,7 +87,7 @@ namespace uu_library_app
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[14].Visible = false;
+            //dataGridView1.Columns[14].Visible = false;
 
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
