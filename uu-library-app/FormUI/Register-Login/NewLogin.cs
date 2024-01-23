@@ -180,7 +180,7 @@ namespace uu_library_app.FormUI.Register_Login
 
         private void label4_Click(object sender, EventArgs e)
         {
-            string crew = "Emrecan Ay @Team Lead (Fullstack Developer) ayemrecan.info@gmail.com \nŞenol Şen @UI Lead (Frontend Developer) \nMelike Yıldız @Contributor \nŞaban Dönmez @Contributor \nUmut Kozan @Contributor \nAriq Naufal @Contributor";
+            string crew = "Emrecan Ay @Team Lead (Fullstack Developer) ayemrecan.info@gmail.com \nŞenol Şen (Full-Stack Developer) senoltr@yandex.com \nMelike Yıldız @Front-end Developer \nŞaban Dönmez @Contributor \nAriq Naufal @Contributor";
             DialogResult dialogResult = wehMessageBox.Show(crew,
                 "KETEBE",
                   MessageBoxButtons.OK,
