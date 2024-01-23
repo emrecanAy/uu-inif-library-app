@@ -508,6 +508,45 @@ namespace uu_library_app.DataAccess.Concrete
             }
         }
 
-       
+        public List<Book> getAllByName(string name)
+        {
+            conn.Open();
+            try
+            {
+                List<Book> books = new List<Book>();
+                MySqlCommand commandToGetAllByCategory = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.publishCount, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.book LIKE %@p1% AND Book.deleted=0", conn);
+                commandToGetAllByCategory.Parameters.AddWithValue("@p1", name);
+                MySqlDataReader reader = commandToGetAllByCategory.ExecuteReader();
+                while (reader.Read())
+                {
+                    Book book = new Book();
+                    book.Id = reader[0].ToString();
+                    book.LanguageId = reader[2].ToString();
+                    book.AuthorId = reader[3].ToString();
+                    book.CategoryId = reader[4].ToString();
+                    book.PublisherId = reader[5].ToString();
+                    book.PageCount = Convert.ToInt32(reader[6]);
+                    book.IsbnNumber = reader[7].ToString();
+                    book.PublishDate = Convert.ToDateTime(reader[8]);
+                    book.PublishCount = Convert.ToInt32(reader[9]);
+                    book.StockCount = Convert.ToInt32(reader[10]);
+                    book.LocationId = reader[11].ToString();
+                    book.BookName = reader[1].ToString();
+                    book.Status = Convert.ToBoolean(reader[12]);
+                    book.CreatedAt = Convert.ToDateTime(reader[13]);
+                    book.Interpreter = reader[14].ToString();
+                    book.Deleted = Convert.ToBoolean(reader[15]);
+                    book.FixtureNo = reader[16].ToString();
+                    books.Add(book);
+                }
+                conn.Close();
+                return books;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                throw;
+            }
+        }
     }
 }

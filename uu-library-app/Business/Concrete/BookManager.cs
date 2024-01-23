@@ -125,5 +125,10 @@ namespace uu_library_app.Business.Concrete
             }
             return false;
         }
+
+        public List<Book> getAllByName(string name)
+        {
+           return this._service.getAllByName(name);
+        }
     }
 }

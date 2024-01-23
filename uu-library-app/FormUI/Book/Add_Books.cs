@@ -1,12 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using uu_library_app.Business.Concrete;
 using uu_library_app.Core.Helpers;
@@ -15,7 +11,6 @@ using uu_library_app.Entity.Concrete;
 using uu_library_app.FormUI.Book.Quick_Menu;
 using uu_library_app.FormUI.MailSettings;
 using MessageBoxDenemesi;
-using uu_library_app.Core.Exceptions;
 
 namespace uu_library_app
 {
@@ -136,34 +131,46 @@ namespace uu_library_app
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             cmbKategori.Text = "";
 
+
+
             #region crud1
             try
             {
                 conn.Open();
+                //DataListerToTableHelper.listInnerJoinAllBooksDataToTable(dataGridView1, conn);
+                //pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
+                //pageDS = new DataSet();
+                //pageAdapter.Fill(pageDS, scollVal, 20, "book");
+                //dataGridView1.DataSource = pageDS;
+                //dataGridView1.DataMember = "book";
 
-                pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-                pageDS = new DataSet();
-                pageAdapter.Fill(pageDS, scollVal, 20, "book");
-                dataGridView1.DataSource = pageDS;
-                dataGridView1.DataMember = "book";
+                DataTable dt = new DataTable();
+
+                MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
                 dataGridView1.Columns[0].Visible = false;
-                dataGridView1.Columns[1].HeaderText = "Kitap";
-                dataGridView1.Columns[2].HeaderText = "Yazar";
-                dataGridView1.Columns[3].Visible = false;
-                dataGridView1.Columns[4].Visible = false;
-                dataGridView1.Columns[5].Visible = false;
-                dataGridView1.Columns[6].Visible = false;
-                dataGridView1.Columns[7].Visible = false;
-                dataGridView1.Columns[8].Visible = false;
-                dataGridView1.Columns[9].Visible = false;
-                dataGridView1.Columns[10].Visible = false;
-                dataGridView1.Columns[11].Visible = false;
-                dataGridView1.Columns[12].Visible = false;
-                dataGridView1.Columns[13].Visible = false;
-                dataGridView1.Columns[14].Visible = false;
+                //dataGridView1.Columns[1].HeaderText = "Kitap";
+                //dataGridView1.Columns[2].HeaderText = "Yazar";
+                //dataGridView1.Columns[3].Visible = false;
+                //dataGridView1.Columns[4].Visible = false;
+                //dataGridView1.Columns[5].Visible = false;
+                //dataGridView1.Columns[6].Visible = false;
+                //dataGridView1.Columns[7].Visible = false;
+                //dataGridView1.Columns[8].Visible = false;
+                //dataGridView1.Columns[9].Visible = false;
+                //dataGridView1.Columns[10].Visible = false;
+                //dataGridView1.Columns[11].Visible = false;
+                //dataGridView1.Columns[12].Visible = false;
+                //dataGridView1.Columns[13].Visible = false;
+                //dataGridView1.Columns[14].Visible = false;
 
                 dataGridView1.RowHeadersVisible = false;
                 dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+                
 
                 MySqlDataAdapter daCategories = new MySqlDataAdapter(SqlCommandHelper.getCategoriesCommand(conn));
                 MySqlDataAdapter daLocations = new MySqlDataAdapter(SqlCommandHelper.getLocationsCommand(conn));
@@ -225,6 +232,32 @@ namespace uu_library_app
             }
             #endregion
         }
+
+        private void SearchByColumnName(string columnName, string searchText)
+        {
+            if (dataGridView1.DataSource == null)
+                return;
+
+            // DataGridView'daki veri kaynağını al
+            var dataSource = dataGridView1.DataSource as DataTable;
+
+            // Boşsa veya sütun adı geçersizse çık
+            if (dataSource == null || !dataSource.Columns.Contains(columnName))
+                return;
+
+            // Filtreleme yapmak için bir DataView oluştur
+            DataView dv = new DataView(dataSource);
+
+            // Filtreleme kriterini belirle
+            string filterExpression = string.Format("[{0}] LIKE '%{1}%'", columnName, searchText);
+
+            // DataView'i filtrele
+            dv.RowFilter = filterExpression;
+
+            // DataGridView'in veri kaynağını güncelle
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
             scollVal = scollVal + 20;
@@ -285,31 +318,34 @@ namespace uu_library_app
         }
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
-            pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-            dataGridView1.DataSource = pageDS;
+            SearchByColumnName("bookName", wehTextBox1.Texts);
 
-            pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
-            dataGridView1.DataSource = pageDS.Tables[0];
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Kitap";
-            dataGridView1.Columns[2].HeaderText = "Yazar";
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
-            dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[9].Visible = false;
-            dataGridView1.Columns[10].Visible = false;
-            dataGridView1.Columns[11].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[14].Visible = false;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
+            //pageDS = new DataSet();
+            //pageAdapter.Fill(pageDS, scollVal, 20, "book");
+            //dataGridView1.DataSource = pageDS;
+
+            //pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
+            //dataGridView1.DataSource = pageDS.Tables[0];
+            //dataGridView1.Columns[0].Visible = false;
+            //dataGridView1.Columns[1].HeaderText = "Kitap";
+            //dataGridView1.Columns[2].HeaderText = "Yazar";
+            //dataGridView1.Columns[3].Visible = false;
+            //dataGridView1.Columns[4].Visible = false;
+            //dataGridView1.Columns[3].Visible = false;
+            //dataGridView1.Columns[4].Visible = false;
+            //dataGridView1.Columns[5].Visible = false;
+            //dataGridView1.Columns[6].Visible = false;
+            //dataGridView1.Columns[7].Visible = false;
+            //dataGridView1.Columns[8].Visible = false;
+            //dataGridView1.Columns[9].Visible = false;
+            //dataGridView1.Columns[10].Visible = false;
+            //dataGridView1.Columns[11].Visible = false;
+            //dataGridView1.Columns[12].Visible = false;
+            //dataGridView1.Columns[13].Visible = false;
+            //dataGridView1.Columns[14].Visible = false;
+            //dataGridView1.RowHeadersVisible = false;
+            //dataGridView1.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         }
 
         private void btnHizliYazar_Click(object sender, EventArgs e)

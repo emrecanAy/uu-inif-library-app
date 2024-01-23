@@ -166,6 +166,8 @@
     <Compile Include="Core\Logger\FileLogger\Concrete\FileLogger.cs" />
     <Compile Include="Core\Logger\FileLogger\Concrete\FileLoggerDal.cs" />
     <Compile Include="Core\Logger\FileLogger\Concrete\FileLoggerManager.cs" />
+    <Compile Include="Core\Migration\AccessDBMigration\MigrationDA.cs" />
+    <Compile Include="Core\Migration\AccessDBMigration\OldBook.cs" />
     <Compile Include="Core\Results\DataResult.cs" />
     <Compile Include="Core\Results\ErrorDataResult.cs" />
     <Compile Include="Core\Results\ErrorResult.cs" />
@@ -654,6 +656,7 @@
   <ItemGroup>
     <Content Include="Globals\inegolIsletmeFak.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.4\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.4\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

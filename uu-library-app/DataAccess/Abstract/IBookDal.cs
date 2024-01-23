@@ -19,6 +19,8 @@ namespace uu_library_app.DataAccess.Abstract
         Book getByLanguageId(string languageId);
         Book getByLocationId(string locationId);
         Book getByPublisherId(string publisherId);
+
+        List<Book> getAllByName(string name);
         void Add(Book book);
         void Update(Book book);
         void Delete(Book book);

@@ -16,5 +16,13 @@ namespace uu_library_app.Core.Helpers
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             return da;
         }
+
+        public static MySqlDataAdapter findAndListBooksForPagination(MySqlConnection conn, string name)
+        {
+            MySqlCommand commandToGetAllByCategory = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.publishCount, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.bookName LIKE '%@p1%' AND Book.deleted=0", conn);
+            commandToGetAllByCategory.Parameters.AddWithValue("@p1", name); 
+            MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAllByCategory);
+            return da;
+        }
     }
 }
