@@ -31,6 +31,7 @@ namespace uu_library_app.FormUI.Book
             cmbAranacakAlan.DataSource = new BindingSource(comboSource, null);
             cmbAranacakAlan.DisplayMember = "Value";
             cmbAranacakAlan.ValueMember = "Key";
+            cmbAranacakAlan.SelectedIndex = 0;
             this.dgvGecikmis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGecikmis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvGecikmis.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
@@ -44,9 +45,7 @@ namespace uu_library_app.FormUI.Book
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
-            string value = cmbAranacakAlan.SelectedValue.ToString();
-            (dgvGecikmis.DataSource as DataTable).DefaultView.RowFilter =
-            string.Format("" + value + " LIKE '{0}%' OR " + value + " LIKE '% {0}%'", wehTextBox1.Texts);
+          
         }
     }
 }

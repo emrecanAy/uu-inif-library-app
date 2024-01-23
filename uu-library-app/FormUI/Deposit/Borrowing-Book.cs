@@ -48,9 +48,25 @@ namespace uu_library_app
             dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
             dgvDeneme.RowTemplate.Height = 50;
 
+            DataTable dt2 = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Student.number, Student.eMail, Department.name, Student.createdAt, Faculty.name FROM Student INNER JOIN Department ON Student.departmentId = Department.id INNER JOIN Faculty ON Student.facultyId=Faculty.id WHERE Student.deleted=0", conn);
+            MySqlDataAdapter da2 = new MySqlDataAdapter(command);
+            da2.Fill(dt2);
+            dgvDeneme.DataSource = dt2;
+            dgvDeneme.ColumnHeadersVisible = false;
+            dgvDeneme.Columns[0].Visible = false;
+            dgvDeneme.Columns[1].HeaderText = "Öğrenci";
+            dgvDeneme.Columns[2].Visible = false;
+            dgvDeneme.Columns[3].Visible = false;
+            dgvDeneme.Columns[4].Visible = false;
+            dgvDeneme.Columns[6].Visible =false;
+            dgvDeneme.Columns[5].Visible = false;
+            dgvDeneme.RowHeadersVisible = false;
+            dgvDeneme.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+
             DataTable dt = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Department.name, Student.number FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0", conn); // Bağlantı parametresi eklenmiş
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name, Book.isbnNumber FROM Book INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Publisher ON Book.publisherId = Publisher.id WHERE Book.deleted=0", conn);
             da.Fill(dt);
             dataGridView2.DataSource = dt;
 
@@ -59,17 +75,6 @@ namespace uu_library_app
             dataGridView2.Columns[1].HeaderText = "Kitap";
             dataGridView2.Columns[2].HeaderText = "Yazar";
             dataGridView2.Columns[3].Visible = false;
-            dataGridView2.Columns[4].Visible = false;
-            dataGridView2.Columns[5].Visible = false;
-            dataGridView2.Columns[6].Visible = false;
-            dataGridView2.Columns[7].Visible = false;
-            dataGridView2.Columns[8].Visible = false;
-            dataGridView2.Columns[9].Visible = false;
-            dataGridView2.Columns[10].Visible = false;
-            dataGridView2.Columns[11].Visible = false;
-            dataGridView2.Columns[12].Visible = false;
-            dataGridView2.Columns[13].Visible = false;
-            //dataGridView2.Columns[14].Visible = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         
 
@@ -206,63 +211,9 @@ namespace uu_library_app
 
         private void wehTextBox2__TextChanged(object sender, EventArgs e)
         {
-            if(txtKitapAra.Text == "")
-            {
-               
-                dataGridView2.Columns[0].Visible = false;
-                dataGridView2.Columns[1].HeaderText = "Kitap";
-                dataGridView2.Columns[2].HeaderText = "Yazar";
-                dataGridView2.Columns[3].Visible = false;
-                dataGridView2.Columns[4].Visible = false;
-                dataGridView2.Columns[5].Visible = false;
-                dataGridView2.Columns[6].Visible = false;
-                dataGridView2.Columns[7].Visible = false;
-                dataGridView2.Columns[8].Visible = false;
-                dataGridView2.Columns[9].Visible = false;
-                dataGridView2.Columns[10].Visible = false;
-                dataGridView2.Columns[11].Visible = false;
-                dataGridView2.Columns[12].Visible = false;
-                dataGridView2.Columns[13].Visible = false;
-                dataGridView2.Columns[14].Visible = false;
-                dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-            }
-            else
-            {
-                //DataTable dt = new DataTable();
-                //MySqlCommand commandToGetAllByName = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.publishCount, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.bookName LIKE '%' "+ txtKitapAra.Text +" '%' AND Book.deleted=0", conn);
-                ////commandToGetAllByName.Parameters.AddWithValue("@p1", txtKitapAra.Text);
-                //MySqlDataAdapter da = new MySqlDataAdapter(commandToGetAllByName);
-                //da.Fill(dt);
+            (dataGridView2.DataSource as DataTable).DefaultView.RowFilter =
+                string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox2.Texts);
 
-                ////pageAdapter = DataListerToDataAdapter.findAndListBooksForPagination(conn, txtKitapAra.Text);
-                ////pageDS = new DataSet();
-                //////pageAdapter.Fill(pageDS, scollVal, 20, "book");
-                //////dataGridView2.DataSource = pageDS;
-                ////DataTable dt = new DataTable();
-                ////pageAdapter.Fill(dt);
-                ////dataGridView2.DataSource = dt;
-
-                //////pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox2.Texts);
-                //////dataGridView2.DataSource = pageDS;
-                //dataGridView2.DataSource = dt;
-                //dataGridView2.Columns[0].Visible = false;
-                //dataGridView2.Columns[1].HeaderText = "Kitap";
-                //dataGridView2.Columns[2].HeaderText = "Yazar";
-                //dataGridView2.Columns[3].Visible = false;
-                //dataGridView2.Columns[4].Visible = false;
-                //dataGridView2.Columns[5].Visible = false;
-                //dataGridView2.Columns[6].Visible = false;
-                //dataGridView2.Columns[7].Visible = false;
-                //dataGridView2.Columns[8].Visible = false;
-                //dataGridView2.Columns[9].Visible = false;
-                //dataGridView2.Columns[10].Visible = false;
-                //dataGridView2.Columns[11].Visible = false;
-                //dataGridView2.Columns[12].Visible = false;
-                //dataGridView2.Columns[13].Visible = false;
-                //dataGridView2.Columns[14].Visible = false;
-                //dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
-            }
-            
 
         }
 

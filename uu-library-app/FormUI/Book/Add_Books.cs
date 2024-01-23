@@ -151,20 +151,25 @@ namespace uu_library_app
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
-                //dataGridView1.Columns[0].Visible = false;
-                //dataGridView1.Columns[1].HeaderText = "Kitap";
-                //dataGridView1.Columns[2].HeaderText = "Yazar";
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].HeaderText = "Kitap";
+                dataGridView1.Columns[2].HeaderText = "Yazar";
+                dataGridView1.Columns["shelf"].HeaderText = "Konum";
+                dataGridView1.Columns["publisherName"].HeaderText = "Yayınevi";
+                dataGridView1.Columns["categoryName"].HeaderText = "Kategori";
+                dataGridView1.Columns["pageCount"].HeaderText = "Sayfa";
                 //dataGridView1.Columns[3].Visible = false;
                 //dataGridView1.Columns[4].Visible = false;
                 //dataGridView1.Columns[5].Visible = false;
-                //dataGridView1.Columns[6].Visible = false;
-                //dataGridView1.Columns[7].Visible = false;
+                dataGridView1.Columns["language"].Visible = false;
+                dataGridView1.Columns["publishDate"].Visible = false;
+                dataGridView1.Columns[7].Visible = false;
                 //dataGridView1.Columns[8].Visible = false;
-                //dataGridView1.Columns[9].Visible = false;
+                dataGridView1.Columns[9].Visible = false;
                 //dataGridView1.Columns[10].Visible = false;
-                //dataGridView1.Columns[11].Visible = false;
-                //dataGridView1.Columns[12].Visible = false;
-                //dataGridView1.Columns[13].Visible = false;
+                dataGridView1.Columns[11].Visible = false;
+                dataGridView1.Columns[12].Visible = false;
+                dataGridView1.Columns[13].Visible = false;
                 ////dataGridView1.Columns[14].Visible = false;
 
                 dataGridView1.RowHeadersVisible = false;
@@ -278,10 +283,13 @@ namespace uu_library_app
                     logger.Log(log);
                     wehMessageBox.Show("Kitap başarıyla eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-                    pageDS = new DataSet();
-                    pageAdapter.Fill(pageDS, scollVal, 20, "book");
-                    dataGridView1.DataSource = pageDS;
+                    DataTable dt = new DataTable();
+
+                    MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+                    MySqlDataAdapter da = new MySqlDataAdapter(command);
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
                     clearAllFields();
                 }
                 catch (Exception)
@@ -299,6 +307,15 @@ namespace uu_library_app
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
             SearchByColumnName("bookName", wehTextBox1.Texts);
+            if(wehTextBox1.Texts == "")
+            {
+                DataTable dt = new DataTable();
+
+                MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT( Author.firstName, ' ', Author.lastName ) AS authorFullName, Publisher.name'publisherName', Language.language, Category.name'categoryName', Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter'interpreterName', Book.createdAt, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
 
 
             //pageDS = new DataSet();

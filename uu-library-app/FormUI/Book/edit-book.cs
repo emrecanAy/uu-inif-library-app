@@ -157,9 +157,6 @@ namespace uu_library_app
                     bookManager.Update(bookToUpdate);
                     logger.Log(log);
                     pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-                    pageDS = new DataSet();
-                    pageAdapter.Fill(pageDS, scollVal, 20, "book");
-                    dataGridView1.DataSource = pageDS;
                     wehMessageBox.Show("Başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     clearAllFields();
 
@@ -217,7 +214,6 @@ namespace uu_library_app
                 cmbYayinevi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cmbYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 cmbDil.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtDemirbasNo.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
             }
                 
         }

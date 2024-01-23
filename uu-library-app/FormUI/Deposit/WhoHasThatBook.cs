@@ -14,6 +14,7 @@ using uu_library_app.Core.Helpers;
 using uu_library_app.DataAccess.Concrete;
 using uu_library_app.Entity.Concrete;
 using uu_library_app.Entity.Concrete.DTO;
+using uu_library_app.FormUI.TextBoxHelper;
 
 namespace uu_library_app.FormUI.Deposit
 {
@@ -86,31 +87,8 @@ namespace uu_library_app.FormUI.Deposit
 
         private void wehTextBox1__TextChanged(object sender, EventArgs e)
         {
-            //pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-            //pageDS = new DataSet();
-            //pageAdapter.Fill(pageDS, scollVal, 20, "book");
-            //dgvKitaplar.DataSource = pageDS;
-
-            //pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
-            //dgvKitaplar.DataSource = pageDS;
-
-            
-            dgvKitaplar.Columns[0].Visible = false;
-            dgvKitaplar.Columns[1].HeaderText = "Kitap";
-            dgvKitaplar.Columns[2].HeaderText = "Yazar";
-            dgvKitaplar.Columns[3].Visible = false;
-            dgvKitaplar.Columns[4].Visible = false;
-            dgvKitaplar.Columns[5].Visible = false;
-            dgvKitaplar.Columns[6].Visible = false;
-            dgvKitaplar.Columns[7].Visible = false;
-            dgvKitaplar.Columns[8].Visible = false;
-            dgvKitaplar.Columns[9].Visible = false;
-            dgvKitaplar.Columns[10].Visible = false;
-            dgvKitaplar.Columns[11].Visible = false;
-            dgvKitaplar.Columns[12].Visible = false;
-            dgvKitaplar.Columns[13].Visible = false;
-            dgvKitaplar.Columns[14].Visible = false;
-            dgvKitaplar.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
+            (dgvKitaplar.DataSource as DataTable).DefaultView.RowFilter =
+                            string.Format("bookName LIKE '{0}%' OR bookName LIKE '% {0}%'", wehTextBox1.Texts);
         }
 
         

@@ -36,7 +36,6 @@ namespace uu_library_app
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -126,7 +125,6 @@ namespace uu_library_app
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.wehTextBox2);
             this.panel5.Controls.Add(this.dataGridView2);
@@ -137,23 +135,6 @@ namespace uu_library_app
             this.panel5.Size = new System.Drawing.Size(729, 786);
             this.panel5.TabIndex = 237;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(664, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 33);
-            this.button1.TabIndex = 270;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox7
             // 
@@ -180,7 +161,7 @@ namespace uu_library_app
             this.wehTextBox2.PasswordChar = false;
             this.wehTextBox2.PlaceholderColor = System.Drawing.Color.DimGray;
             this.wehTextBox2.PlaceholderText = "Aramak İstediğiniz Kitabın Adını Giriniz !";
-            this.wehTextBox2.Size = new System.Drawing.Size(517, 29);
+            this.wehTextBox2.Size = new System.Drawing.Size(581, 29);
             this.wehTextBox2.TabIndex = 274;
             this.wehTextBox2.Texts = "";
             this.wehTextBox2.UnderlinedStyle = false;
@@ -832,6 +813,5 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtKitapAra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button1;
     }
 }
