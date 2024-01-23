@@ -29,17 +29,19 @@ namespace uu_library_app.FormUI.Deposit
         BookManager bookManager = new BookManager(new BookDal());
         SettingsManager settingsManager = new SettingsManager(new SettingsDal());
 
-        MySqlDataAdapter pageAdapter;
-        DataSet pageDS;
-        int scollVal;
+      
         private void WhoHasThatBook_Load(object sender, EventArgs e)
         {
-            //DataListerHelper.listInnerJoinAllBooksDataToTable(dgvKitaplar, conn);
-            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-            pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-            dgvKitaplar.DataSource = pageDS;
-            dgvKitaplar.DataMember = "book";
+           conn.Open();
+
+            DataTable dt = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT Book.id, Book.bookName, CONCAT(Author.firstName, ' ', Author.lastName) AS authorFullName, Publisher.name AS publisherName, Language.language, Category.name AS categoryName, Book.pageCount, Book.isbnNumber, Book.publishDate, Book.stockCount, Location.shelf, Book.interpreter AS interpreterName, Book.createdAt, Book.publishCount, Book.fixtureNo FROM Book INNER JOIN Language ON Book.languageId = Language.id INNER JOIN Author ON Book.authorId = Author.id INNER JOIN Category ON Book.categoryId = Category.id INNER JOIN Publisher ON Book.publisherId = Publisher.id INNER JOIN Location ON Book.locationId = Location.id WHERE Book.deleted=0", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dgvKitaplar.DataSource = dt;
+
+
             dgvKitaplar.Columns[3].Width = 50;
             dgvKitaplar.Columns[0].Visible = false;
             dgvKitaplar.Columns[1].HeaderText = "Kitap";
@@ -78,7 +80,7 @@ namespace uu_library_app.FormUI.Deposit
             dgvUyeler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvUyeler.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvUyeler.DefaultCellStyle.ForeColor = Color.White;
-
+            conn.Close();
 
         }
 
@@ -92,13 +94,7 @@ namespace uu_library_app.FormUI.Deposit
             //pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
             //dgvKitaplar.DataSource = pageDS;
 
-            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-            pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-            dgvKitaplar.DataSource = pageDS;
-
-            pageDS.Tables[0].DefaultView.RowFilter = string.Format("bookName like '{0}%'", wehTextBox1.Texts);
-            dgvKitaplar.DataSource = pageDS.Tables[0];
+            
             dgvKitaplar.Columns[0].Visible = false;
             dgvKitaplar.Columns[1].HeaderText = "Kitap";
             dgvKitaplar.Columns[2].HeaderText = "Yazar";
@@ -182,27 +178,7 @@ namespace uu_library_app.FormUI.Deposit
 
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal + 20;
-            if (scollVal > 50)
-            {
-                scollVal = bookManager.getAll().Count();
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal - 20;
-            if (scollVal <= 0)
-            {
-                scollVal = 0;
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 20, "book");
-        }
+      
 
         private void cmbDil_SelectedIndexChanged(object sender, EventArgs e)
         {

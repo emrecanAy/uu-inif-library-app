@@ -62,8 +62,6 @@ namespace uu_library_app.FormUI.Deposit
             this.lblBaslik = new System.Windows.Forms.Label();
             this.dgvUyeler = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.wehTextBox1 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.dgvKitaplar = new System.Windows.Forms.DataGridView();
@@ -108,12 +106,12 @@ namespace uu_library_app.FormUI.Deposit
             // 
             this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYazar.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtYazar.ForeColor = System.Drawing.Color.White;
             this.txtYazar.Location = new System.Drawing.Point(129, 314);
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.ReadOnly = true;
-            this.txtYazar.Size = new System.Drawing.Size(288, 24);
+            this.txtYazar.Size = new System.Drawing.Size(288, 22);
             this.txtYazar.TabIndex = 274;
             // 
             // panel22
@@ -190,12 +188,12 @@ namespace uu_library_app.FormUI.Deposit
             // 
             this.txtIsbn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIsbn.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtIsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtIsbn.ForeColor = System.Drawing.Color.White;
             this.txtIsbn.Location = new System.Drawing.Point(129, 234);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.ReadOnly = true;
-            this.txtIsbn.Size = new System.Drawing.Size(288, 24);
+            this.txtIsbn.Size = new System.Drawing.Size(288, 22);
             this.txtIsbn.TabIndex = 270;
             // 
             // panel16
@@ -257,12 +255,12 @@ namespace uu_library_app.FormUI.Deposit
             // 
             this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinevi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtYayinevi.ForeColor = System.Drawing.Color.White;
             this.txtYayinevi.Location = new System.Drawing.Point(128, 158);
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.ReadOnly = true;
-            this.txtYayinevi.Size = new System.Drawing.Size(289, 24);
+            this.txtYayinevi.Size = new System.Drawing.Size(289, 22);
             this.txtYayinevi.TabIndex = 268;
             // 
             // txtBookId
@@ -333,12 +331,12 @@ namespace uu_library_app.FormUI.Deposit
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAd.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtAd.ForeColor = System.Drawing.Color.White;
             this.txtAd.Location = new System.Drawing.Point(128, 80);
             this.txtAd.Name = "txtAd";
             this.txtAd.ReadOnly = true;
-            this.txtAd.Size = new System.Drawing.Size(289, 24);
+            this.txtAd.Size = new System.Drawing.Size(289, 22);
             this.txtAd.TabIndex = 259;
             // 
             // pnlAd
@@ -421,8 +419,6 @@ namespace uu_library_app.FormUI.Deposit
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnNext);
-            this.panel5.Controls.Add(this.btnPrevious);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.wehTextBox1);
             this.panel5.Controls.Add(this.dgvKitaplar);
@@ -432,30 +428,6 @@ namespace uu_library_app.FormUI.Deposit
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(698, 786);
             this.panel5.TabIndex = 249;
-            // 
-            // btnNext
-            // 
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNext.Location = new System.Drawing.Point(346, 757);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 291;
-            this.btnNext.Text = ">";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrevious.Location = new System.Drawing.Point(265, 757);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 290;
-            this.btnPrevious.Text = "<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // pictureBox5
             // 
@@ -634,7 +606,5 @@ namespace uu_library_app.FormUI.Deposit
         private System.Windows.Forms.TextBox txtDepositBookId;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
     }
 }

@@ -36,8 +36,7 @@ namespace uu_library_app
             this.picboxBack = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.wehTextBox2 = new uu_library_app.FormUI.TextBoxHelper.WehTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -84,7 +83,6 @@ namespace uu_library_app
             this.txtKitapAra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBack)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -129,8 +127,6 @@ namespace uu_library_app
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.btnNext);
-            this.panel5.Controls.Add(this.btnPrevious);
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.wehTextBox2);
             this.panel5.Controls.Add(this.dataGridView2);
@@ -142,29 +138,22 @@ namespace uu_library_app
             this.panel5.TabIndex = 237;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // btnNext
+            // button1
             // 
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNext.Location = new System.Drawing.Point(350, 753);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 277;
-            this.btnNext.Text = ">";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrevious.Location = new System.Drawing.Point(269, 753);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 276;
-            this.btnPrevious.Text = "<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(664, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 33);
+            this.button1.TabIndex = 270;
+            this.button1.Text = "Ara";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox7
             // 
@@ -313,12 +302,12 @@ namespace uu_library_app
             // 
             this.txtOkulNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtOkulNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOkulNo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtOkulNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtOkulNo.ForeColor = System.Drawing.Color.White;
             this.txtOkulNo.Location = new System.Drawing.Point(117, 405);
             this.txtOkulNo.Name = "txtOkulNo";
             this.txtOkulNo.ReadOnly = true;
-            this.txtOkulNo.Size = new System.Drawing.Size(308, 24);
+            this.txtOkulNo.Size = new System.Drawing.Size(308, 22);
             this.txtOkulNo.TabIndex = 267;
             // 
             // panel13
@@ -356,12 +345,12 @@ namespace uu_library_app
             // 
             this.txtAdSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtAdSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAdSoyad.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtAdSoyad.ForeColor = System.Drawing.Color.White;
             this.txtAdSoyad.Location = new System.Drawing.Point(116, 324);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.ReadOnly = true;
-            this.txtAdSoyad.Size = new System.Drawing.Size(308, 24);
+            this.txtAdSoyad.Size = new System.Drawing.Size(308, 22);
             this.txtAdSoyad.TabIndex = 259;
             // 
             // panel11
@@ -413,12 +402,12 @@ namespace uu_library_app
             // 
             this.txtYazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYazar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYazar.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtYazar.ForeColor = System.Drawing.Color.White;
             this.txtYazar.Location = new System.Drawing.Point(118, 223);
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.ReadOnly = true;
-            this.txtYazar.Size = new System.Drawing.Size(307, 24);
+            this.txtYazar.Size = new System.Drawing.Size(307, 22);
             this.txtYazar.TabIndex = 255;
             // 
             // label10
@@ -437,12 +426,12 @@ namespace uu_library_app
             // 
             this.txtYayinevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtYayinevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYayinevi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtYayinevi.ForeColor = System.Drawing.Color.White;
             this.txtYayinevi.Location = new System.Drawing.Point(117, 145);
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.ReadOnly = true;
-            this.txtYayinevi.Size = new System.Drawing.Size(307, 24);
+            this.txtYayinevi.Size = new System.Drawing.Size(307, 22);
             this.txtYayinevi.TabIndex = 249;
             // 
             // panel28
@@ -537,12 +526,12 @@ namespace uu_library_app
             // 
             this.txtKitapAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtKitapAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKitapAd.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.txtKitapAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtKitapAd.ForeColor = System.Drawing.Color.White;
             this.txtKitapAd.Location = new System.Drawing.Point(117, 60);
             this.txtKitapAd.Name = "txtKitapAd";
             this.txtKitapAd.ReadOnly = true;
-            this.txtKitapAd.Size = new System.Drawing.Size(307, 24);
+            this.txtKitapAd.Size = new System.Drawing.Size(307, 22);
             this.txtKitapAd.TabIndex = 240;
             // 
             // lblAd
@@ -669,12 +658,12 @@ namespace uu_library_app
             this.cmbKisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbKisi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKisi.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.cmbKisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmbKisi.ForeColor = System.Drawing.Color.White;
             this.cmbKisi.FormattingEnabled = true;
             this.cmbKisi.Location = new System.Drawing.Point(3, 9);
             this.cmbKisi.Name = "cmbKisi";
-            this.cmbKisi.Size = new System.Drawing.Size(184, 34);
+            this.cmbKisi.Size = new System.Drawing.Size(184, 32);
             this.cmbKisi.TabIndex = 245;
             this.cmbKisi.SelectedIndexChanged += new System.EventHandler(this.cmbKisi_SelectedIndexChanged);
             // 
@@ -747,23 +736,6 @@ namespace uu_library_app
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(517, 1);
             this.panel8.TabIndex = 234;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(664, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 33);
-            this.button1.TabIndex = 270;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Borrowing_Book
             // 
@@ -860,8 +832,6 @@ namespace uu_library_app
         private System.Windows.Forms.TextBox txtKitapAra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button button1;
     }
 }

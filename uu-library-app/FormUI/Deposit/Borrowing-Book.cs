@@ -35,11 +35,9 @@ namespace uu_library_app
         SettingsManager settingsManager = new SettingsManager(new SettingsDal());
 
 
-        MySqlDataAdapter pageAdapter;
-        DataSet pageDS;
-        int scollVal;
         private void Borrowing_Book_Load(object sender, EventArgs e)
         {
+            conn.Open();
             dgvDeneme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDeneme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeneme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -48,14 +46,15 @@ namespace uu_library_app
             dgvDeneme.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvDeneme.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 51, 73);
             dgvDeneme.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold);
-            DataListerToTableHelper.listBorrowingBookStudentDataToTable(dgvDeneme, conn);
             dgvDeneme.RowTemplate.Height = 50;
 
-            pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-            pageDS = new DataSet();
-            pageAdapter.Fill(pageDS, scollVal, 40, "book");
-            dataGridView2.DataSource = pageDS;
-            dataGridView2.DataMember = "book";
+            DataTable dt = new DataTable();
+            MySqlCommand command = new MySqlCommand("SELECT Student.id, CONCAT( Student.firstName, ' ', Student.lastName ) AS studentFullName, Department.name, Student.number FROM Student INNER JOIN Department ON Student.departmentId = Department.id WHERE Student.deleted=0", conn); // Bağlantı parametresi eklenmiş
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+
+
             dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[1].HeaderText = "Kitap";
             dataGridView2.Columns[2].HeaderText = "Yazar";
@@ -70,7 +69,7 @@ namespace uu_library_app
             dataGridView2.Columns[11].Visible = false;
             dataGridView2.Columns[12].Visible = false;
             dataGridView2.Columns[13].Visible = false;
-            dataGridView2.Columns[14].Visible = false;
+            //dataGridView2.Columns[14].Visible = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Nirmala UI", 13);
         
 
@@ -92,31 +91,11 @@ namespace uu_library_app
             cmbKisi.DataSource = new BindingSource(comboSourceDataTypes, null);
             cmbKisi.DisplayMember = "Value";
             cmbKisi.ValueMember = "Key";
-            
-            
 
-        }
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal + 20;
-            if (scollVal > 50)
-            {
-                scollVal = bookManager.getAll().Count();
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 40, "book");
-        }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            scollVal = scollVal - 20;
-            if (scollVal <= 0)
-            {
-                scollVal = 0;
-            }
-            pageDS.Clear();
-            pageAdapter.Fill(pageDS, scollVal, 40, "book");
+            conn.Close();
         }
+   
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -229,11 +208,7 @@ namespace uu_library_app
         {
             if(txtKitapAra.Text == "")
             {
-                pageAdapter = DataListerToDataAdapter.listBooksForPagination(conn);
-                pageDS = new DataSet();
-                pageAdapter.Fill(pageDS, scollVal, 40, "book");
-                dataGridView2.DataSource = pageDS;
-                dataGridView2.DataMember = "book";
+               
                 dataGridView2.Columns[0].Visible = false;
                 dataGridView2.Columns[1].HeaderText = "Kitap";
                 dataGridView2.Columns[2].HeaderText = "Yazar";
